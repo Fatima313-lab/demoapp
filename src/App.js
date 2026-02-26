@@ -14,6 +14,7 @@ import BlogArticle from './pages/BlogArticle';
 import ProjectDetails from "./pages/ProjectDetails";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsofServices from './components/TermsofServices';
+import ApiDevelopmentServices from './pages/seo-pages/ApiDevelopmentServices';
 import './styles/global.css';
 import './App.css';
 import 'animate.css';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* Blog Article Routes */}
           <Route path="/blog/:slug" element={<BlogArticle />} />
+          <Route path="/api-development-services" element={<ApiDevelopmentServices />} />
         </Routes>
         <Footer />
         <WhatsAppButton />
