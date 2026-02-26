@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ceoImg from '../assets/CEO.jpg';
+import ceoImg from '../assets/ceo-qllmsoft.jpg';
 import {
   Eye,
   Target,
