@@ -47,19 +47,21 @@ const Home = () => {
             <div className={`about-image animate__animated ${aboutInView ? 'animate__fadeInLeft' : ''}`}>
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-                alt="Team collaboration"
+                alt="ASP.NET Core development team in Pakistan working on enterprise web applications"
                 loading="lazy"
               />
             </div>
 
             <div className={`about-text animate__animated ${aboutInView ? 'animate__fadeInRight' : ''}`}>
-              <h2 className="about-title">About QllmSoft</h2>
+            <h2 className="about-title">
+  Leading ASP.NET Core Development Company in Pakistan
+</h2>
 
-              <p>
-                We design scalable web, mobile, and enterprise software that helps businesses grow faster.
-                Our solutions combine modern architecture, performance optimization,
-                and user-centric design.
-              </p>
+<p>
+  QllmSoft is a Pakistan-based software development company specializing in 
+  ASP.NET Core development, custom web application development, and secure API development services. 
+  We build scalable, enterprise-grade solutions for startups and growing businesses worldwide.
+</p>
 
               <Link to="/about" className="btn btn-primary">
                 Learn More About Us
@@ -75,8 +77,13 @@ const Home = () => {
         <div className="container">
 
           <div className="section-title">
-            <h2>Software Development Services</h2>
-            <p>Solutions tailored to your business needs</p>
+          <h2>
+  ASP.NET Core, Web Application & API Development Services in Pakistan
+</h2>
+
+<p>
+  Custom-built enterprise solutions using Microsoft technologies, modern web frameworks, and secure API architecture.
+</p>
           </div>
 
           <div className="services-grid">
@@ -107,35 +114,59 @@ const Home = () => {
         <div className="container">
 
           <div className="section-title">
-            <h2>Why Choose QllmSoft</h2>
+          <h2>
+  Why Choose QllmSoft for ASP.NET Core Development in Pakistan?
+</h2>
           </div>
 
           <div className="why-grid">
 
             <div className="why-card">
-              <h4>Business-Focused Solutions</h4>
-              <p>Technology aligned with measurable outcomes.</p>
+            <h4>Expert ASP.NET Core Developers</h4>
+            <p>Experienced in building secure, scalable enterprise-grade web and API solutions.</p>
             </div>
 
             <div className="why-card">
-              <h4>Scalable Architecture</h4>
-              <p>Systems designed to grow with your company.</p>
+            <h4>Scalable Microsoft Architecture</h4>
+            <p>We design high-performance ASP.NET Core applications optimized for growth.</p>
             </div>
 
             <div className="why-card">
-              <h4>Transparent Communication</h4>
-              <p>Direct collaboration and progress visibility.</p>
+            <h4>Secure API Development</h4>
+            <p>RESTful API architecture with authentication, performance optimization, and integration capabilities.</p>
             </div>
 
             <div className="why-card">
-              <h4>Long-Term Partnership</h4>
-              <p>Support beyond deployment and launch.</p>
+            <h4>Long-Term Technical Partnership</h4>
+            <p>Ongoing maintenance and scaling support for your ASP.NET Core applications.</p>
             </div>
 
           </div>
 
         </div>
       </section>
+
+      <section className="section expertise-section">
+  <div className="container">
+
+    <div className="section-title">
+      <h2>Our ASP.NET Core Development Expertise</h2>
+    </div>
+
+    <p>
+      As a specialized ASP.NET Core development company in Pakistan, we deliver:
+    </p>
+
+    <ul>
+      <li>Custom enterprise web application development</li>
+      <li>RESTful API development and third-party integrations</li>
+      <li>Migration to ASP.NET Core from legacy systems</li>
+      <li>Cloud-ready and scalable architecture design</li>
+      <li>Performance optimization and security implementation</li>
+    </ul>
+
+  </div>
+</section>
 
       {/* Optional Stats — Enable if ready */}
       <StatsSection />
@@ -186,17 +217,19 @@ const Home = () => {
 
           <div className="cta-content">
 
-            <h2>Ready to Start Your Project?</h2>
+          <h2>
+  Hire ASP.NET Core Developers in Pakistan
+</h2>
 
-            <p>
-              Get expert consultation and project roadmap within 24 hours.
-            </p>
+<p>
+  Discuss your web application or API development project with our expert ASP.NET Core team today.
+</p>
 
             <div className="cta-buttons">
 
-              <Link to="/contact" className="btn btn-primary">
-                Get Free Quote
-              </Link>
+            <Link to="/asp-net-core-development-pakistan" className="btn btn-primary">
+  Get ASP.NET Core Consultation
+</Link>
            
             </div>
 
@@ -204,6 +237,36 @@ const Home = () => {
 
         </div>
       </section>
+
+      <section className="section faq-section">
+  <div className="container">
+
+    <div className="section-title">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div className="faq-content">
+
+      <h4>Why choose ASP.NET Core for enterprise applications?</h4>
+      <p>
+        ASP.NET Core offers high performance, security, scalability, and cross-platform capabilities,
+        making it ideal for enterprise web and API development.
+      </p>
+
+      <h4>Do you provide ASP.NET Core development services in Pakistan?</h4>
+      <p>
+        Yes, QllmSoft is a Pakistan-based ASP.NET Core development company serving clients locally and internationally.
+      </p>
+
+      <h4>Can I hire dedicated ASP.NET Core developers?</h4>
+      <p>
+        We provide dedicated ASP.NET Core developers for startups, SMEs, and enterprise projects.
+      </p>
+
+    </div>
+
+  </div>
+</section>
 
     </main>
   );

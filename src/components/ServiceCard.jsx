@@ -7,7 +7,11 @@ const ServiceCardDefault = ({ service }) => {
   return (
     <div className="service-card">
       <div className="service-card-image">
-        <img src={service.image} alt={service.name} loading="lazy" />
+      <img 
+  src={service.image} 
+  alt={`${service.name} provided by QllmSoft in Pakistan`} 
+  loading="lazy" 
+/>
         <div className="service-card-overlay">
           <Link to={service.link || '/services'} className="overlay-btn">
             Learn More
@@ -35,7 +39,11 @@ const ServiceCardDetailed = ({ service }) => {
   return (
     <div className="service-card-detailed">
       <div className="service-card-image">
-        <img src={service.image} alt={service.name} loading="lazy" />
+      <img 
+  src={service.image} 
+  alt={`${service.name} provided by QllmSoft in Pakistan`} 
+  loading="lazy" 
+/>
       </div>
       <div className="service-card-content">
         <h3 className="service-card-title">{service.name}</h3>

@@ -184,7 +184,7 @@ const About = () => {
               <h3>Message from the CEO</h3>
 
               <p>
-                At QLLMSoft, we believe technology should empower growth.
+                QllmSoft believes technology should empower growth.
                 Our focus is on delivering reliable, scalable, and
                 forward-thinking software solutions that help clients
                 succeed in a rapidly evolving digital world.

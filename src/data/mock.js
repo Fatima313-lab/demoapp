@@ -63,32 +63,32 @@ export const heroSlides = [
 export const homeServices = [
   {
     id: 1,
-    name: "Web Applications",
-    description: "We are expert in crafting and managing web applications with sleek interfaces and powerful back-end solutions.",
+    name: "ASP.NET Core Development Company in Pakistan",
+    description: "Professional ASP.NET Core development services delivering secure, scalable, and high-performance enterprise web applications tailored for startups and growing businesses.",
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
-    link: "/services"
+    link: "/asp-net-core-development-company-pakistan"
   },
   {
     id: 2,
-    name: "Mobile Applications",
-    description: "Designing sleek and user-friendly mobile apps for you that captivate your audience and can elevate your brand.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
-    link: "/services"
+    name: "Custom Web Application Development",
+    description: "End-to-end web application development using ASP.NET Core, React, and modern architectures designed for performance, scalability, and long-term growth.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    link: "/web-application-development-company-pakistan"
   },
   {
     id: 3,
-    name: "API Development Services",
-    description: "At QllmSoft, we build powerful APIs that streamline your systems and enable seamless integrations.",
+    name: "Secure API Development Services",
+    description: "Robust RESTful API development and third-party system integrations to power web, mobile, and enterprise platforms with reliability and security.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
-    link: "/services"
+    link: "/api-development-company-pakistan"
   },
   {
-  id: 4,
-  name: "Digital Marketing & SEO",
-  description: "Enhance your online presence with strategic SEO, targeted marketing campaigns, and creative design solutions that drive traffic, leads, and growth for your business.",
-  image: digitalmarketing,
-  link: "/services"
-}
+    id: 4,
+    name: "Enterprise Software & System Integration",
+    description: "Custom enterprise software development, legacy system modernization, and scalable Microsoft-based solutions built for complex business environments.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    link: "/enterprise-software-development-pakistan"
+  }
 ];
 
 export const servicesData = [

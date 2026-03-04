@@ -101,6 +101,7 @@ const HeroSlider = () => {
         muted
         loop
         playsInline
+        preload="metadata"
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
@@ -110,16 +111,20 @@ const HeroSlider = () => {
 
       {/* Content */}
       <div className="hero-content">
-      <h1 className="hero-title">
-        Scalable Software Solutions Built to Accelerate Your Growth
-      </h1>
 
-      <p className="hero-subtitle">
-       From startups to enterprises, we design secure, high-performance systems that evolve with your business.
-      </p>
-        <Link to="/contact" className="hero-btn">
-          Start Your Project
+        <h1 className="hero-title">
+          ASP.NET Core Development Company in Pakistan Delivering Scalable Web & API Solutions
+        </h1>
+
+        <p className="hero-subtitle">
+          QllmSoft provides enterprise-grade ASP.NET Core, custom web application development, 
+          and secure API development services for startups and businesses in Pakistan and worldwide.
+        </p>
+
+        <Link to="/asp-net-core-development-pakistan" className="hero-btn">
+          Explore ASP.NET Core Services
         </Link>
+
       </div>
 
     </section>
