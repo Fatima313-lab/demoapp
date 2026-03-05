@@ -120,10 +120,9 @@ const location = useLocation(); // <-- ADDED for hash scrolling
       {/* Hero Section */}
       <section className="services-hero reveal">
         <div className="container">
-          <h1>Our Services</h1>
+          <h1>Software Development Services for Web, Mobile & Enterprise Applications</h1>
           <p>
-            We provide comprehensive software development services tailored to meet 
-            your unique business needs and drive digital transformation.
+          QllmSoft provides custom software development services including ASP.NET web applications, mobile apps, enterprise software systems, and secure API development for businesses worldwide.
           </p>
         </div>
       </section>
@@ -132,8 +131,8 @@ const location = useLocation(); // <-- ADDED for hash scrolling
       <section className="section services-list">
         <div className="container">
           <div className="section-title">
-            <h2>What We Offer</h2>
-            <p>Expert solutions across web, mobile, and enterprise software development</p>
+            <h2>Our Software Development Services</h2>
+            <p>End-to-end development services for startups, businesses, and enterprise organizations.</p>
           </div>
           <div className="services-detailed-grid">
            {servicesData.map((service, index) => {

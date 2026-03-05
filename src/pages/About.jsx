@@ -58,22 +58,23 @@ const About = () => {
         <div className="container">
 
           <div className="section-title">
-            <h2>About QLLMSoft</h2>
+            <h2>About QllmSoft | Custom Software Development Company</h2>
           </div>
 
           <div className="story-card">
 
   <p>
-    Since <strong>2014</strong>,  <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "} has been a dedicated partner in
-    delivering high-performance, scalable, and secure technology solutions
-    to clients worldwide. As a specialized software development company,
-    we leverage the power of <strong>ASP.NET</strong> and cutting-edge
-    technologies to create custom web, desktop, and mobile applications
-    that empower businesses to thrive.
+    
+
+Since <strong>2015</strong>, we have helped startups, small businesses, and enterprises build scalable digital platforms using modern technologies such as <strong>ASP.NET</strong>, React, cloud infrastructure, and REST APIs.
+
+Our development approach focuses on performance, security, and long-term scalability. From business management systems and enterprise dashboards to complex API integrations and software modernization, we deliver solutions that streamline operations and accelerate digital transformation.
+
+With experience in international markets and diverse industries, QllmSoft provides reliable software engineering services tailored to each client’s technical and business needs.
   </p>
 
   <p>
-    At  <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "}, our small yet skilled team of ASP.NET experts brings deep
+    <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "} is small yet skilled team of ASP.NET experts brings deep
     expertise across multiple domains, including HR and financial
     applications, CRM systems, and custom integrations. We pride ourselves
     on our commitment to quality and innovation, combining technical
@@ -87,8 +88,7 @@ const About = () => {
   <ul className="story-list">
     <li>
       <strong>Custom Web Application Development:</strong>
-      Tailored ASP.NET solutions for businesses of all sizes,
-      from dynamic websites to complex enterprise-level applications.
+      We develop high-performance custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions range from startup platforms to enterprise-grade business systems.
     </li>
 
     <li>
@@ -99,8 +99,7 @@ const About = () => {
 
     <li>
       <strong>Legacy Application Migration and Modernization:</strong>
-      Transforming outdated software into modern, efficient applications
-      using the latest ASP.NET frameworks.
+      We build secure REST APIs and integrate third-party systems to enable seamless communication between web applications, mobile apps, and enterprise platforms.
     </li>
   </ul>
 
@@ -124,11 +123,11 @@ const About = () => {
           </div>
 
           <div className="features-grid">
-            <FeatureCard icon={Users} title="Tailored Development" description="Solutions aligned with strategy" />
-            <FeatureCard icon={Shield} title="Secure Architecture" description="Built for performance & safety" />
-            <FeatureCard icon={Zap} title="Modern Technologies" description="ASP.NET, React, Cloud" />
-            <FeatureCard icon={Check} title="Reliable Delivery" description="Transparent timelines" />
-            <FeatureCard icon={Headphones} title="Long-Term Support" description="Continuous maintenance" />
+            <FeatureCard icon={Users} title="Custom Software Development Solutions" description="Solutions aligned with strategy" />
+            <FeatureCard icon={Shield} title="Secure Enterprise Software Architecture" description="Built for performance & safety" />
+            <FeatureCard icon={Zap} title="ASP.NET, React & Cloud Technologies" description="ASP.NET, React, Cloud" />
+            <FeatureCard icon={Check} title="Agile Software Development Process" description="Transparent timelines" />
+            <FeatureCard icon={Headphones} title="Software Maintenance & Technical Support" description="Continuous maintenance" />
           </div>
         </div>
       </section>
@@ -184,20 +183,14 @@ const About = () => {
               <h3>Message from the CEO</h3>
 
               <p>
-                QllmSoft believes technology should empower growth.
-                Our focus is on delivering reliable, scalable, and
-                forward-thinking software solutions that help clients
-                succeed in a rapidly evolving digital world.
+              With years of experience in software engineering and international projects, our team focuses on building reliable digital solutions that help businesses grow in a competitive digital landscape.
               </p>
 
-              <p>
-                We value transparency, long-term partnerships,
-                and innovation in everything we build.
-              </p>
+          
               
               <div className="ceo-identity">
               <h4>Zain Ul Abedin</h4>
-              <span>Founder & CEO — QLLMSoft</span>
+              <span>Founder & CEO — QllmSoft</span>
             </div>
 
               <a
@@ -220,7 +213,7 @@ const About = () => {
         <div className="container">
           <div className="cta-content">
             <h2>Let’s Build Something Exceptional</h2>
-            <p>Partner with QLLMSoft today.</p>
+            <p>Partner with QllmSoft today.</p>
             <Link to="/contact" className="btn btn-primary">
               Contact Us
             </Link>

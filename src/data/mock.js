@@ -95,73 +95,71 @@ export const servicesData = [
   {
     id: 1,
     name: "Custom Web Application Development",
-    description: "Our web application development services transform complex workflows into intuitive, browser-based platforms. We build high-availability portals that offer seamless performance across all devices.",
+    description: "We develop scalable custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
     features: [
-      "Cloud-native scalability for high traffic.",
-      "Intuitive UX to reduce training costs.",
-      "Rapid deployment via Agile methodologies."
+      "• ASP.NET Core web application development",
+      "• SaaS platform development",
+      "• Enterprise web portals",
+      "• Cloud-ready architectures",
+      "• High-performance scalable systems"
     ]
   },
   {
     id: 2,
     name: "Mobile App Development (iOS & Android)",
     slug: "mobile-app-development",
-    description: "Strategic mobile app development services focused on business-critical tools. We specialize in cross-platform and native solutions that prioritize security and user engagement.",
+    description: "Our mobile app development services deliver high-performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
     features: [
-      "Offline-first capabilities for field teams.",
-      "Biometric security and data encryption.",
-      "High-performance Flutter & React Native builds."
+      "• iOS and Android app development",
+      "• Cross-platform Flutter apps",
+      "• React Native mobile applications",
+      "• Secure mobile backend APIs",
+      "• Performance-optimized mobile UI/UX"
     ]
   },
   {
     id: 3,
     name: "Enterprise & Custom Software Development",
     slug: "enterprise-custom-software-development",
-    description: "We architect robust enterprise software development solutions, including ERP, CRM, and HRMS platforms designed to centralize business intelligence and operational control.",
+    description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
     features: [
-      "Granular role-based access control (RBAC).",
-      "Scalable architecture for global deployments.",
-      "Modular design for long-term maintainability."
+      "• ERP & CRM software development",
+      "• Business process automation",
+      "• Enterprise dashboards",
+      "• Secure multi-user systems",
+      "• Integration with third-party tools"
     ]
   },
   {
     id: 4,
     name: "API Development & System Integration",
     slug: "api-development-system-integration",
-    description: "Eliminate silos with our API development services. We create secure REST/GraphQL layers that enable real-time data synchronization between your disparate software tools.",
+    description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
     features: [
-      "Secure third-party API orchestration.",
-      "Automated cross-platform data mapping.",
-      "Reduced manual entry and data duplication."
+      "• REST API development",
+      "• Third-party API integration",
+      "• Secure authentication systems",
+      "• Payment gateway integration",
+      "• Real-time data synchronization"
     ]
   },
   {
     id: 5,
     name: "Legacy Software Modernization",
-    description: "Future-proof your investment through legacy application modernization. We transition outdated systems to modern frameworks, eliminating technical debt without disrupting core operations.",
+    description: "We modernize outdated legacy systems by migrating them to modern architectures such as ASP.NET Core and cloud-ready environments. This improves performance, scalability, and long-term maintainability.",
     image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80",
     features: [
-      "Codebase refactoring for 2x performance.",
-      "Cloud migration (AWS/Azure/GCP).",
-      "Modern UI/UX skins for legacy logic."
+      "• Legacy application migration",
+      "• ASP.NET Core modernization",
+      "• Cloud infrastructure migration",
+      "• Codebase refactoring",
+      "• Performance optimization"
     ]
-  },
-  {
-  id: 6,
-  name: "Digital Marketing & SEO",
-  slug: "digital-marketing-seo-strategy",
-  description: "Accelerate your business growth with data-driven digital marketing and advanced SEO strategies. We help brands increase visibility, generate qualified leads, and dominate search rankings through performance marketing, technical SEO, and conversion-focused campaigns.",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80",
-  features: [
-    "Advanced Technical SEO & on-page optimization.",
-    "Performance marketing (Google Ads & social campaigns).",
-    "Conversion rate optimization (CRO) & analytics tracking."
-  ]
-}
+  }
 ];
 
 export const projectsData = [
@@ -392,8 +390,8 @@ export const blogPosts = [
 ];
 
 export const aboutContent = {
-  heroTitle: "Empowering Businesses with Smart Digital Solutions",
-  heroSubtitle: "Explore our specialized services in API development, software modernization, and enterprise-grade web apps—crafted for scalability, performance, and impact.",
+  heroTitle: "Custom Software Development Company Specializing in ASP.NET & Enterprise Web Applications",
+  heroSubtitle: "QllmSoft is a software development company delivering scalable ASP.NET web applications, secure APIs, and modern enterprise systems for startups and businesses worldwide.",
   mainContent: `QllmSoft is a trusted technology partner, delivering advanced web development, mobile app creation, and custom enterprise-level software solutions designed to boost efficiency and accelerate growth. Established in 2015, our mission has been clear, to help businesses adapt, compete, and excel in today's rapidly evolving digital world.
 
 Based in Lalamusa, Gujrat, Pakistan, our team of skilled ASP.NET experts and full-stack developers works tirelessly to craft scalable, secure, and innovative IT solutions. We proudly serve businesses across Pakistan and around the globe, ensuring every project we deliver is tailored to meet unique objectives and drive measurable success.
@@ -428,8 +426,8 @@ By leveraging powerful development frameworks like ASP.NET and the latest in web
       description: "We provide ongoing support and maintenance services to ensure your software stays up-to-date, secure, and performs optimally as your business evolves."
     }
   ],
-  vision: "We aim to grow into a trusted global name in intelligent, innovative, and sustainable digital solutions. Our goal is to build a connected world where technology supports human growth, strengthens businesses, and unlocks new possibilities for everyone.",
-  mission: "Our mission is to design, develop, and deliver secure, scalable, and user-friendly digital products that align perfectly with our clients' business goals. Whether it's a web application, enterprise-level system, or mobile app, we create solutions that inspire growth and innovation."
+  vision: "Our vision is to become a trusted global software development company known for building innovative and scalable digital platforms that empower businesses worldwide.",
+  mission: "Our mission is to design and deliver secure, scalable, and user-focused software solutions including web applications, enterprise systems, APIs, and cloud-ready platforms."
 };
 
 export const projects = [
