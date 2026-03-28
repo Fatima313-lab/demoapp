@@ -260,3 +260,49 @@
 .service-card-wrapper:hover img {
   transform: scale(1.05);
 }
+
+/* ─────────────────────────────────────────────
+   APPEND TO BOTTOM OF Services.css
+   New sections added for SEO (FAQ + Trust Band)
+───────────────────────────────────────────── */
+
+/* Trust Band responsive */
+@media (max-width: 576px) {
+  .trust-band-item {
+    flex: 0 0 50%;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+  .trust-band-item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+/* FAQ Section */
+.faq-seo-section {
+  padding: 80px 0;
+}
+
+.faq-seo-section .section-title {
+  margin-bottom: 40px;
+}
+
+.faq-seo-item button:hover {
+  background: rgba(30, 90, 168, 0.04);
+}
+
+.faq-seo-item button[aria-expanded="true"]:hover {
+  background: #1E5AA8;
+}
+
+/* Reveal delay helpers (used in process grid) */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.22s; }
+.reveal-delay-3 { transition-delay: 0.34s; }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .faq-seo-section {
+    padding: 50px 0;
+  }
+}

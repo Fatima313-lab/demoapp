@@ -1,0 +1,765 @@
+/* ═══════════════════════════════════════════════════════
+   CustomSoftwareDevelopment.css
+   Matches the QllmSoft design system (Home.css variables)
+═══════════════════════════════════════════════════════ */
+
+/* ── Shared Eyebrow label ─────────────────────────────── */
+.section-eyebrow {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #edb702;
+  margin-bottom: 10px;
+}
+
+/* ── Page wrapper ─────────────────────────────────────── */
+.csd-page {
+  overflow-x: hidden;
+}
+
+/* ══════════════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════════════ */
+.csd-hero {
+  background: linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%);
+  padding: 90px 0 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.csd-hero__eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #edb702;
+  margin-bottom: 16px;
+}
+
+.csd-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.csd-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 680px;
+  margin: 0 auto 30px;
+  line-height: 1.75;
+}
+
+.csd-hero__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Outline light button for dark backgrounds */
+.btn-outline-light {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.7);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+
+/* Outline dark button for light backgrounds */
+.btn-outline-dark {
+  background: transparent;
+  border: 2px solid #1A365D;
+  color: #1A365D;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+.btn-outline-dark:hover {
+  background: #1A365D;
+  color: #fff;
+}
+
+/* Hero Stats */
+.csd-hero__stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.csd-hero__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.csd-hero__stat-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #edb702;
+  line-height: 1;
+}
+
+.csd-hero__stat-label {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.8);
+  margin-top: 4px;
+}
+
+/* Hero Pills */
+.csd-hero__pills {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.csd-hero__pill {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 240px;
+}
+
+.csd-hero__pill .pill-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.csd-hero__pill strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.csd-hero__pill p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Hero tech tags */
+.csd-hero__tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.csd-tag {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════════
+   ABOUT
+══════════════════════════════════════════════════════ */
+.csd-about .about-content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.csd-about .about-text {
+  flex: 1.2;
+}
+
+.csd-about .about-text p {
+  color: #4A5568;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.csd-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.csd-badge {
+  background: #EBF8FF;
+  color: #1A365D;
+  border: 1px solid #BEE3F8;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* About stat cards on the right */
+.csd-about__stats {
+  flex: 0.8;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.csd-about__stat-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 3px solid #edb702;
+}
+
+.csd-about__stat-num {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1A365D;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.csd-about__stat-label {
+  font-size: 0.82rem;
+  color: #718096;
+  line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+  .csd-about .about-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .csd-about__stats {
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   SERVICES
+══════════════════════════════════════════════════════ */
+.csd-services {
+  background: #fff;
+}
+
+.csd-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .csd-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .csd-services__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.csd-service-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.csd-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.1);
+}
+
+.csd-service-card__icon {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.csd-service-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 12px;
+}
+
+.csd-service-card__desc {
+  font-size: 0.9rem;
+  color: #4A5568;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.csd-service-card__link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #2B6CB0;
+  text-decoration: none;
+  margin-top: auto;
+  transition: color 0.2s;
+}
+.csd-service-card__link:hover {
+  color: #edb702;
+}
+
+/* ══════════════════════════════════════════════════════
+   INDUSTRIES
+══════════════════════════════════════════════════════ */
+.csd-industries {
+  background: #F7FAFC;
+}
+
+.csd-industries__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .csd-industries__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .csd-industries__grid { grid-template-columns: 1fr; }
+}
+
+.csd-industry-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.csd-industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.09);
+}
+
+.csd-industry-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.csd-industry-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 10px;
+}
+
+.csd-industry-card__desc {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   PROCESS
+══════════════════════════════════════════════════════ */
+.csd-process {
+  background: #fff;
+}
+
+.csd-process__layout {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.csd-process__steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.csd-process__step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.csd-process__step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.csd-process__step-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 6px;
+}
+
+.csd-process__step-body p {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.csd-process__cta {
+  flex: 0 0 320px;
+  position: sticky;
+  top: 100px;
+}
+
+.csd-process__cta img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.csd-process__cta-box {
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  border-radius: 12px;
+  padding: 28px;
+  color: #fff;
+}
+
+.csd-process__cta-box h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.csd-process__cta-box p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 18px;
+  line-height: 1.65;
+}
+
+@media (max-width: 992px) {
+  .csd-process__layout {
+    flex-direction: column;
+  }
+  .csd-process__cta {
+    flex: unset;
+    width: 100%;
+    position: static;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   WHY CHOOSE US  (reuses .why-grid / .why-card from Home)
+══════════════════════════════════════════════════════ */
+.csd-why {
+  background: #F7FAFC;
+}
+
+/* ══════════════════════════════════════════════════════
+   TECH STACK
+══════════════════════════════════════════════════════ */
+.csd-tech {
+  background: #fff;
+}
+
+.csd-tech__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.csd-tech__pill {
+  background: #EBF8FF;
+  color: #1A365D;
+  border: 1px solid #BEE3F8;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.csd-tech__pill:hover {
+  background: #1A365D;
+  color: #fff;
+  border-color: #1A365D;
+}
+
+/* ══════════════════════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════════════════════ */
+.csd-testimonials {
+  background: #f0f4ff;
+}
+
+.csd-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .csd-testimonials__grid { grid-template-columns: 1fr; }
+}
+
+.csd-testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.csd-testimonial-card__stars {
+  color: #edb702;
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+  letter-spacing: 2px;
+}
+
+.csd-testimonial-card__text {
+  font-size: 0.92rem;
+  color: #4A5568;
+  line-height: 1.75;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.csd-testimonial-card__author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.csd-testimonial-card__author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #edb702;
+}
+
+.csd-testimonial-card__author strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #1A365D;
+}
+
+.csd-testimonial-card__author span {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+/* ══════════════════════════════════════════════════════
+   WHY CUSTOM (Case for Custom)
+══════════════════════════════════════════════════════ */
+.csd-case {
+  background: #fff;
+}
+
+.csd-case__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .csd-case__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 576px) {
+  .csd-case__grid { grid-template-columns: 1fr; }
+}
+
+.csd-case-card {
+  background: #F7FAFC;
+  border-radius: 12px;
+  padding: 28px;
+  border-left: 4px solid #edb702;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.csd-case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.07);
+}
+
+.csd-case-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.csd-case-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 10px;
+}
+
+.csd-case-card__desc {
+  font-size: 0.88rem;
+  color: #4A5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.csd-case__cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════════════
+   FAQ
+══════════════════════════════════════════════════════ */
+.csd-faq {
+  background: #F7FAFC;
+}
+
+.csd-faq__list {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #1A365D;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: #2B6CB0;
+}
+
+.faq-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: #edb702;
+  font-weight: 700;
+}
+
+.faq-answer {
+  padding: 0 0 20px;
+}
+
+.faq-answer p {
+  font-size: 0.92rem;
+  color: #4A5568;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════════════
+   FINAL CTA
+══════════════════════════════════════════════════════ */
+.csd-final-cta {
+  background: linear-gradient(135deg, #1E5AA8 0%, #0D3A6E 100%);
+  text-align: center;
+}
+
+.csd-final-cta__content h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.csd-final-cta__content p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 620px;
+  margin: 0 auto 30px;
+  line-height: 1.75;
+}
+
+.csd-final-cta__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.csd-final-cta__perks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.csd-final-cta__perks span {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 768px) {
+  .csd-final-cta__content h2 {
+    font-size: 1.6rem;
+  }
+  .csd-hero__stats {
+    gap: 30px;
+  }
+  .csd-hero__pills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .csd-hero__pill {
+    max-width: 100%;
+    width: 100%;
+  }
+}
