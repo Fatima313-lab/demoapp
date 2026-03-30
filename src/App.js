@@ -17,6 +17,7 @@ import TermsofServices from './components/TermsofServices';
 import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment';
 import WebsiteDevelopmentServices from './pages/WebsiteDevelopmentServices';
 import ApiDevelopmentServices from './pages/ApiDevelopmentServices';  // ✅ KEEP only this one
+import HireDotnetDevelopers from './pages/HireDotnetDevelopers';
 
 import './styles/global.css';
 import './App.css';
@@ -44,6 +45,7 @@ function App() {
             <Route path="/custom-software-development-services" element={<CustomSoftwareDevelopment />} />
             <Route path="/website-development-services" element={<WebsiteDevelopmentServices />} />
             <Route path="/api-development-services" element={<ApiDevelopmentServices />} />
+            <Route path="/hire-dotnet-developers-pakistan" element={<HireDotnetDevelopers />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
