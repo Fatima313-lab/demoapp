@@ -18,6 +18,7 @@ import CustomSoftwareDevelopment from './pages/CustomSoftwareDevelopment';
 import WebsiteDevelopmentServices from './pages/WebsiteDevelopmentServices';
 import ApiDevelopmentServices from './pages/ApiDevelopmentServices';  // ✅ KEEP only this one
 import HireDotnetDevelopers from './pages/HireDotnetDevelopers';
+import MobileAppDevelopment from './pages/MobileAppDevelopment';
 
 import './styles/global.css';
 import './App.css';
@@ -46,6 +47,7 @@ function App() {
             <Route path="/website-development-services" element={<WebsiteDevelopmentServices />} />
             <Route path="/api-development-services" element={<ApiDevelopmentServices />} />
             <Route path="/hire-dotnet-developers-pakistan" element={<HireDotnetDevelopers />} />
+            <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
