@@ -20,6 +20,7 @@ import ApiDevelopmentServices from './pages/ApiDevelopmentServices';  // ✅ KEE
 import HireDotnetDevelopers from './pages/HireDotnetDevelopers';
 import MobileAppDevelopment from './pages/MobileAppDevelopment';
 import OutsourceSoftwareDevelopment from './pages/OutsourceSoftwareDevelopment';
+import AiPoweredSoftware from './pages/AiPoweredSoftware';
 
 import './styles/global.css';
 import './App.css';
@@ -50,6 +51,7 @@ function App() {
             <Route path="/hire-dotnet-developers-pakistan" element={<HireDotnetDevelopers />} />
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/outsource-software-development-to-pakistan" element={<OutsourceSoftwareDevelopment />} />
+            <Route path="/ai-powered-software-solutions" element={<AiPoweredSoftware />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
