@@ -4,9 +4,6 @@ import { Calendar, ArrowLeft, User, Tag } from 'lucide-react';
 import blogPostsData from '../data/blogPostsData';
 import './BlogArticle.css';
 
-const SectionParagraph = ({ text }) => <p>{text}</p>;
-const SectionListItem = ({ text }) => <li>{text}</li>;
-
 // const BlogSection = ({ heading, paragraphs, list }) => (
 //   <div className="blog-article-section">
 //     {heading && <h2>{heading}</h2>}
@@ -30,6 +27,30 @@ const SectionListItem = ({ text }) => <li>{text}</li>;
 //     )}
 //   </div>
 // );
+const SectionListItem = ({ text }) => <li>{text}</li>;
+
+const SectionParagraph = ({ text }) => {
+  const isWorkflow =
+    typeof text === "string" &&
+    text.includes("Plan → Code → Test → Build → Deploy → Monitor");
+
+  if (!isWorkflow) {
+    return <p>{text}</p>;
+  }
+
+  const steps = text.split("→").map(s => s.trim());
+
+  return (
+    <div className="workflow-inline">
+      {steps.map(step => (
+        <span key={step} className="workflow-chip">
+          {step}
+        </span>
+      ))}
+    </div>
+  );
+};
+
 const BlogSection = ({ heading, paragraphs, list, html,table }) => (
   <div className="blog-article-section">
 
@@ -134,6 +155,15 @@ const BlogArticle = () => {
               {sections[3] && <BlogSection {...sections[3]} />}
               {sections[4] && <BlogSection {...sections[4]} />}
               {sections[5] && <BlogSection {...sections[5]} />}
+              {sections[6] && <BlogSection {...sections[6]} />}
+              {sections[7] && <BlogSection {...sections[7]} />}
+              {sections[8] && <BlogSection {...sections[8]} />}
+              {sections[9] && <BlogSection {...sections[9]} />}
+              {sections[10] && <BlogSection {...sections[10]} />}
+              {sections[11] && <BlogSection {...sections[11]} />}
+              {sections[12] && <BlogSection {...sections[12]} />}
+              {sections[13] && <BlogSection {...sections[13]} />}
+              {sections[14] && <BlogSection {...sections[14]} />}
             </article>
 
             {/* Sidebar */}
@@ -169,5 +199,6 @@ const BlogArticle = () => {
     </main>
   );
 };
+
 
 export default BlogArticle;
