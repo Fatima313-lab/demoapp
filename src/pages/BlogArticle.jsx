@@ -30,7 +30,7 @@ const SectionListItem = ({ text }) => <li>{text}</li>;
 //     )}
 //   </div>
 // );
-const BlogSection = ({ heading, paragraphs, list, html }) => (
+const BlogSection = ({ heading, paragraphs, list, html,table }) => (
   <div className="blog-article-section">
 
     {/* Render RAW HTML if provided */}
@@ -56,8 +56,31 @@ const BlogSection = ({ heading, paragraphs, list, html }) => (
             ))}
           </ul>
         )}
+
       </>
     )}
+    {table && (
+  <div className="blog-table-wrapper">
+    <table className="blog-table">
+      <thead>
+        <tr>
+          {table.headers.map((header, i) => (
+            <th key={i}>{header}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {table.rows.map((row, i) => (
+          <tr key={i}>
+            {row.map((cell, j) => (
+              <td key={j}>{cell}</td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+)}
 
   </div>
 );

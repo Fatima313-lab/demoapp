@@ -272,3 +272,33 @@
     font-size: 1.5rem;
   }
 }
+.blog-table-wrapper {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.blog-table thead tr {
+  background-color: #0f2a4a;
+  color: #ffffff;
+}
+
+.blog-table th,
+.blog-table td {
+  padding: 12px 16px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.blog-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.blog-table tbody tr:hover {
+  background-color: #eef2ff;
+}
