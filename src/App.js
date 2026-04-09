@@ -21,6 +21,9 @@ import HireDotnetDevelopers from './pages/HireDotnetDevelopers';
 import MobileAppDevelopment from './pages/MobileAppDevelopment';
 import OutsourceSoftwareDevelopment from './pages/OutsourceSoftwareDevelopment';
 import AiPoweredSoftware from './pages/AiPoweredSoftware';
+import HireReactDevelopers    from './pages/HireReactDevelopers';
+import HireAngularDevelopers  from './pages/HireAngularDevelopers';
+import HireDotnetDevelopersPak from './pages/HireDotnetDevelopersPak';
 
 import './styles/global.css';
 import './App.css';
@@ -52,6 +55,9 @@ function App() {
             <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
             <Route path="/outsource-software-development-to-pakistan" element={<OutsourceSoftwareDevelopment />} />
             <Route path="/ai-powered-software-solutions" element={<AiPoweredSoftware />} />
+            <Route path="/hire-react-developers-pakistan"   element={<HireReactDevelopers />} />
+<Route path="/hire-angular-developers-pakistan" element={<HireAngularDevelopers />} />
+<Route path="/hire-dotnet-developers-pakistan"  element={<HireDotnetDevelopersPak />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
