@@ -1,6 +1,8 @@
 /* Blog Article Page Styles */
 .blog-article-page {
   margin-top: 130px;
+  min-height: auto;
+  overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -78,12 +80,12 @@
   padding: 60px 0;
   background-color: #ffffff;
 }
-
 .blog-article-layout {
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 50px;
   align-items: start;
+  grid-auto-rows: auto;
 }
 
 /* Main Article */
@@ -91,11 +93,17 @@
   color: #4A5568;
   font-size: 1rem;
   line-height: 1.8;
+ 
 }
 
+/* .container {
+  height: auto !important;
+  overflow: visible !important;
+}
 .blog-article-section {
   margin-bottom: 35px;
 }
+*/
 
 .blog-article-section h2 {
   font-size: 1.5rem;
@@ -147,10 +155,9 @@
   border-radius: 50%;
 }
 
-/* Sidebar */
 .blog-article-sidebar {
-  position: sticky;
-  top: 150px;
+  position: static;
+  height: auto;
 }
 
 .sidebar-image {
@@ -215,6 +222,7 @@
   background: linear-gradient(135deg, #0D3A6E 0%, #1E5AA8 100%);
   padding: 60px 0;
   text-align: center;
+  clear: both;
 }
 
 .blog-article-cta h2 {
@@ -302,3 +310,115 @@
 .blog-table tbody tr:hover {
   background-color: #eef2ff;
 }
+a{
+  color: #2B6CB0;
+}
+
+
+.workflow-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 28px 0 42px;
+  perspective: none;
+}
+
+.workflow-chip {
+  background: linear-gradient(
+    145deg,
+    #041d58,
+    #102582
+  );
+  color: #e5e7eb;
+
+  padding: 12px 22px;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+
+  box-shadow:
+    0 1px 5px rgba(33, 26, 4, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  transform-style: preserve-3d;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.workflow-chip:hover {
+  transform: translateY(-6px) rotateX(6deg);
+  background: linear-gradient(
+    145deg,
+    #020617,
+    #0b1220
+  );
+  box-shadow:
+    0 18px 40px rgba(2, 6, 23, 0.95),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+
+.workflow-chip:active {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 18px rgba(2, 6, 23, 0.85);
+}
+
+.workflow-chip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.25s ease;
+}
+
+.workflow-chip:hover::after {
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.15);
+}
+
+
+
+
+
+
+/*  FORCE FULL RENDER FIX */
+
+
+.blog-article-page,
+.blog-article-content,
+.blog-article-layout,
+.blog-article-main,
+.blog-article-section {
+  transform: none !important;
+  perspective: none !important;
+  contain: none !important;
+}
+
+.blog-article-page,
+.blog-article-content,
+.blog-article-layout,
+.blog-article-main {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+.blog-article-layout {
+  grid-auto-rows: min-content !important;
+  align-items: start !important;
+}
+
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+
