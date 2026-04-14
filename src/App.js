@@ -24,6 +24,10 @@ import AiPoweredSoftware from './pages/AiPoweredSoftware';
 import HireReactDevelopers    from './pages/HireReactDevelopers';
 import HireAngularDevelopers  from './pages/HireAngularDevelopers';
 import HireDotnetDevelopersPak from './pages/HireDotnetDevelopersPak';
+import HealthcareSoftware from './pages/HealthcareSoftware';
+import EducationSoftware from './pages/EducationSoftware';
+import LegacyModernization from './pages/LegacyModernization';
+import OutsourceApiDevelopment from './pages/OutsourceApiDevelopment';
 
 import './styles/global.css';
 import './App.css';
@@ -56,8 +60,12 @@ function App() {
             <Route path="/outsource-software-development-to-pakistan" element={<OutsourceSoftwareDevelopment />} />
             <Route path="/ai-powered-software-solutions" element={<AiPoweredSoftware />} />
             <Route path="/hire-react-developers-pakistan"   element={<HireReactDevelopers />} />
-<Route path="/hire-angular-developers-pakistan" element={<HireAngularDevelopers />} />
-<Route path="/hire-dotnet-developers-pakistan"  element={<HireDotnetDevelopersPak />} />
+            <Route path="/hire-angular-developers-pakistan" element={<HireAngularDevelopers />} />
+            <Route path="/hire-dotnet-developers-pakistan"  element={<HireDotnetDevelopersPak />} />
+            <Route path="/healthcare-software-development-pakistan"  element={<HealthcareSoftware />} />
+            <Route path="/education-software-development-pakistan"  element={<EducationSoftware />} />
+            <Route path="/legacy-system-modernization-services"  element={<LegacyModernization />} />
+            <Route path="/outsource-api-development-to-pakistan"  element={<OutsourceApiDevelopment/>} />
           </Routes>
           <Footer />
           <WhatsAppButton />
