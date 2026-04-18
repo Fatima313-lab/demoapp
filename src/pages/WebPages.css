@@ -1,0 +1,365 @@
+/* ═══════════════════════════════════════════════════════════
+   WebPages.css  —  Supplemental styles for:
+   • WebAppDevelopment.jsx
+   • WebsiteDevelopmentCost.jsx
+   Extends IndustryPage.css (import both)
+   Brand colors: #1A365D · #2B6CB0 · #edb702 · #F7FAFC · #4A5568
+═══════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════
+   FRAMEWORK ADVANTAGE CARDS (WebApp page)
+══════════════════════════════════════════════════════ */
+.wapp-advantage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+@media (max-width: 992px) { .wapp-advantage__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) { .wapp-advantage__grid { grid-template-columns: 1fr; } }
+
+.wapp-advantage-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 14px;
+  padding: 26px;
+  transition: background 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.wapp-advantage-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #edb702, rgba(237,183,2,0));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s;
+}
+.wapp-advantage-card:hover {
+  background: rgba(255,255,255,0.13);
+  transform: translateY(-4px);
+}
+.wapp-advantage-card:hover::after { transform: scaleX(1); }
+.wapp-advantage-card__icon {
+  width: 48px; height: 48px;
+  background: rgba(237,183,2,0.15);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #edb702;
+  margin-bottom: 14px;
+}
+.wapp-advantage-card__title {
+  font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px;
+}
+.wapp-advantage-card__desc {
+  font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.65; margin-bottom: 14px;
+}
+.wapp-advantage-card__badge {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700;
+  color: #edb702; background: rgba(237,183,2,0.12);
+  border: 1px solid rgba(237,183,2,0.3);
+  padding: 3px 12px; border-radius: 20px;
+}
+
+/* ══════════════════════════════════════════════════════
+   TRUST STRIP (WebApp page)
+══════════════════════════════════════════════════════ */
+.wapp-trust-strip {
+  background: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.wapp-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.wapp-trust-item__num {
+  font-size: 1.8rem; font-weight: 800; color: #1A365D; line-height: 1;
+}
+.wapp-trust-item__label {
+  font-size: 0.76rem; color: #718096; font-weight: 600;
+}
+.wapp-trust-sep {
+  width: 1px; height: 40px; background: #E2E8F0; flex-shrink: 0;
+}
+@media (max-width: 576px) { .wapp-trust-sep { display: none; } }
+
+/* ══════════════════════════════════════════════════════
+   CASE STUDY (WebApp page)
+══════════════════════════════════════════════════════ */
+.wapp-case {
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+.wapp-case__steps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.wapp-case__step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.wapp-case__step-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  color: #edb702;
+  font-weight: 800; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.wapp-case__step-body h4 { font-size: 0.92rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.wapp-case__step-body p { font-size: 0.82rem; color: rgba(255,255,255,0.72); margin: 0; line-height: 1.55; }
+.wapp-case__results {
+  flex: 0 0 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.wapp-case__result {
+  background: rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px 12px;
+  text-align: center;
+}
+.wapp-case__result-num { display: block; font-size: 1.8rem; font-weight: 800; color: #edb702; line-height: 1; }
+.wapp-case__result-label { font-size: 0.72rem; color: rgba(255,255,255,0.75); margin-top: 4px; line-height: 1.3; }
+@media (max-width: 768px) { .wapp-case { flex-direction: column; } .wapp-case__results { flex: unset; width: 100%; } }
+
+/* ══════════════════════════════════════════════════════
+   COST PAGE — PRICING CARDS
+══════════════════════════════════════════════════════ */
+.cost-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+@media (max-width: 1100px) { .cost-pricing__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px)  { .cost-pricing__grid { grid-template-columns: 1fr; } }
+
+.cost-pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 2px solid #E2E8F0;
+  display: flex; flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  position: relative;
+}
+.cost-pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(26,54,93,0.11);
+  border-color: #2B6CB0;
+}
+.cost-pricing-card--featured {
+  border-color: #edb702;
+  background: linear-gradient(160deg, #fff 0%, #FFFBF0 100%);
+}
+.cost-pricing-card--featured:hover { border-color: #edb702; }
+.cost-pricing-card__badge {
+  position: absolute;
+  top: -13px; left: 50%;
+  transform: translateX(-50%);
+  background: #edb702; color: #1A365D;
+  font-size: 0.68rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 1px;
+  padding: 4px 14px; border-radius: 20px;
+  white-space: nowrap;
+}
+.cost-pricing-card__icon {
+  width: 50px; height: 50px;
+  background: #EBF8FF;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: #1A365D; margin-bottom: 14px;
+}
+.cost-pricing-card--featured .cost-pricing-card__icon { background: #FFF9DB; color: #92400E; }
+.cost-pricing-card__tier {
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  color: #2B6CB0; margin-bottom: 4px;
+}
+.cost-pricing-card--featured .cost-pricing-card__tier { color: #edb702; }
+.cost-pricing-card__name {
+  font-size: 1.05rem; font-weight: 700; color: #1A365D; margin-bottom: 8px;
+}
+.cost-pricing-card__price {
+  font-size: 1.5rem; font-weight: 800; color: #1A365D;
+  margin-bottom: 4px; line-height: 1;
+}
+.cost-pricing-card__usd {
+  font-size: 0.8rem; color: #718096; margin-bottom: 14px;
+}
+.cost-pricing-card__desc {
+  font-size: 0.84rem; color: #4A5568; line-height: 1.6;
+  margin-bottom: 16px; flex: 1;
+}
+.cost-pricing-card__features {
+  list-style: none; padding: 0; margin: 0 0 18px;
+  display: flex; flex-direction: column; gap: 8px;
+  border-top: 1px solid #EDF2F7; padding-top: 14px;
+}
+.cost-pricing-card__features li {
+  font-size: 0.82rem; color: #2D3748;
+  padding-left: 18px; position: relative;
+}
+.cost-pricing-card__features li::before {
+  content: '✓'; position: absolute; left: 0;
+  color: #276749; font-weight: 700;
+}
+.cost-pricing-card__cta {
+  display: block; text-align: center;
+  padding: 10px 18px; border-radius: 6px;
+  font-size: 0.88rem; font-weight: 700;
+  text-decoration: none; transition: all 0.25s;
+  background: #F7FAFC;
+  border: 2px solid #2B6CB0; color: #2B6CB0;
+  margin-top: auto;
+}
+.cost-pricing-card__cta:hover { background: #2B6CB0; color: #fff; }
+.cost-pricing-card--featured .cost-pricing-card__cta {
+  background: #edb702; border-color: #edb702; color: #1A365D;
+}
+.cost-pricing-card--featured .cost-pricing-card__cta:hover {
+  background: #d4a017; border-color: #d4a017;
+}
+
+/* ══════════════════════════════════════════════════════
+   COST FACTORS (icon list)
+══════════════════════════════════════════════════════ */
+.cost-factors__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 992px) { .cost-factors__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) { .cost-factors__grid { grid-template-columns: 1fr; } }
+
+.cost-factor-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  border: 1px solid #E2E8F0;
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: transform 0.25s, border-color 0.25s;
+}
+.cost-factor-card:hover { transform: translateY(-3px); border-color: #edb702; }
+.cost-factor-card__icon {
+  width: 44px; height: 44px;
+  background: #EBF8FF;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: #1A365D; flex-shrink: 0;
+  transition: background 0.25s, color 0.25s;
+}
+.cost-factor-card:hover .cost-factor-card__icon { background: #1A365D; color: #edb702; }
+.cost-factor-card h3 { font-size: 0.93rem; font-weight: 700; color: #1A365D; margin-bottom: 5px; }
+.cost-factor-card p { font-size: 0.83rem; color: #4A5568; line-height: 1.6; margin: 0; }
+
+/* ══════════════════════════════════════════════════════
+   COST PAGE — ROI CARDS (dark band)
+══════════════════════════════════════════════════════ */
+.cost-roi__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 992px) { .cost-roi__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 576px) { .cost-roi__grid { grid-template-columns: 1fr; } }
+
+.cost-roi-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 14px; padding: 24px;
+  transition: background 0.25s, transform 0.25s;
+}
+.cost-roi-card:hover { background: rgba(255,255,255,0.15); transform: translateY(-4px); }
+.cost-roi-card__metric {
+  font-size: 2.2rem; font-weight: 800; color: #edb702;
+  display: block; line-height: 1; margin-bottom: 6px;
+}
+.cost-roi-card__label { font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.cost-roi-card__desc { font-size: 0.82rem; color: rgba(255,255,255,0.7); line-height: 1.58; margin: 0; }
+
+/* ══════════════════════════════════════════════════════
+   COST ESTIMATION TOOL (interactive)
+══════════════════════════════════════════════════════ */
+.cost-estimator {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  max-width: 800px;
+  margin: 0 auto;
+}
+.cost-estimator h3 {
+  font-size: 1.2rem; font-weight: 700; color: #1A365D;
+  margin-bottom: 6px;
+}
+.cost-estimator__subtitle {
+  font-size: 0.88rem; color: #718096; margin-bottom: 28px;
+}
+.cost-estimator__options {
+  display: flex; flex-direction: column; gap: 20px;
+}
+.cost-estimator__group { display: flex; flex-direction: column; gap: 8px; }
+.cost-estimator__group label {
+  font-size: 0.86rem; font-weight: 700; color: #1A365D;
+}
+.cost-estimator__chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.cost-estimator__chip {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #E2E8F0;
+  background: #F7FAFC;
+  color: #4A5568;
+  font-size: 0.84rem; font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.cost-estimator__chip:hover,
+.cost-estimator__chip--selected {
+  border-color: #1A365D;
+  background: #EBF8FF;
+  color: #1A365D;
+}
+.cost-estimator__result {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cost-estimator__result-range {
+  font-size: 1.6rem; font-weight: 800; color: #edb702; flex: 1;
+}
+.cost-estimator__result-label {
+  font-size: 0.82rem; color: rgba(255,255,255,0.75);
+}

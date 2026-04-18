@@ -28,6 +28,8 @@ import HealthcareSoftware from './pages/HealthcareSoftware';
 import EducationSoftware from './pages/EducationSoftware';
 import LegacyModernization from './pages/LegacyModernization';
 import OutsourceApiDevelopment from './pages/OutsourceApiDevelopment';
+import WebAppDevelopment from './pages/WebAppDevelopment';
+import WebsiteDevelopmentCost from './pages/WebsiteDevelopmentCost';
 
 import './styles/global.css';
 import './App.css';
@@ -65,6 +67,8 @@ function App() {
             <Route path="/healthcare-software-development-pakistan"  element={<HealthcareSoftware />} />
             <Route path="/education-software-development-pakistan"  element={<EducationSoftware />} />
             <Route path="/legacy-system-modernization-services"  element={<LegacyModernization />} />
+            <Route path="/web-application-development-services"  element={<WebAppDevelopment/>} />
+            <Route path="/website-development-cost-in-pakistan"  element={<WebsiteDevelopmentCost/>} />
             <Route path="/outsource-api-development-to-pakistan"  element={<OutsourceApiDevelopment/>} />
           </Routes>
           <Footer />
