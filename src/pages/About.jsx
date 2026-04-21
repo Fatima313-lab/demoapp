@@ -42,6 +42,24 @@ const About = () => {
   }, []);
 
   return (
+    <>
+    <SEO
+  title="About QllmSoft | Custom Software Development Company"
+  description="Learn about QllmSoft, a custom software development company providing scalable web applications, ASP.NET Core solutions, secure API development, and enterprise software services for businesses worldwide."
+  url="https://qllmsoft.com/about"
+  image="https://qllmsoft.com/og-about.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QllmSoft",
+    "url": "https://qllmsoft.com",
+    "foundingDate": "2015",
+    "founder": {
+      "@type": "Person",
+      "name": "Zain Ul Abedin"
+    }
+  }}
+/>
     <main className="about-page">
 
       {/* HERO */}
@@ -222,6 +240,7 @@ With experience in international markets and diverse industries, QllmSoft provid
       </section>
 
     </main>
+    </>
   );
 };
 
