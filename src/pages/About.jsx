@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from "../components/SEO";
 import { Link } from 'react-router-dom';
 import ceoImg from '../assets/ceo-qllmsoft.jpg';
 import {

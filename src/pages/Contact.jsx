@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import SEO from "../components/SEO";
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import { companyInfo } from '../data/mock';
 import './Contact.css';
