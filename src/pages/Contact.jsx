@@ -84,6 +84,25 @@ const Contact = () => {
   };
 
   return (
+    <>
+    <SEO
+  title="Contact QllmSoft | Custom Software Development & API Solutions"
+  description="Get in touch with QllmSoft, a leading custom software development company delivering scalable ASP.NET Core, web application, and secure API solutions for startups and businesses worldwide. Let’s discuss your project and build reliable digital solutions together."
+  url="https://qllmsoft.com/contact"
+  image="https://qllmsoft.com/og-contact.jpg"
+  schema={{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QllmSoft",
+    "url": "https://qllmsoft.com",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Sales",
+      "email": "info@qllmsoft.com",
+      "telephone": "+923348229288"
+    }
+  }}
+/>
     <main className="contact-page">
       {/* Hero Section */}
       <section className="contact-hero reveal">
@@ -277,6 +296,7 @@ const Contact = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 
