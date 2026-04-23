@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import SEO from "../components/SEO";
 import { Link } from 'react-router-dom';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
@@ -81,6 +82,26 @@ const blogPosts = Object.entries(blogPostsData).sort(
   }, []);
 
   return (
+    <>
+    
+   <SEO
+    title="QllmSoft Blog | Software Development, Automation & API Insights"
+    description="Explore expert insights from QllmSoft on custom software development, ASP.NET Core, automation, REST APIs, and building scalable digital platforms for modern businesses."
+    url="https://qllmsoft.com/blog"
+    image="https://qllmsoft.com/og-blog.jpg"
+    schema={{
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "QllmSoft Blog",
+      "url": "https://qllmsoft.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "QllmSoft",
+        "url": "https://qllmsoft.com"
+      }
+    }}
+  />
+
     <main className="blog-page">
       {/* Hero Section */}
       <section className="blog-hero reveal">
@@ -157,6 +178,7 @@ const blogPosts = Object.entries(blogPostsData).sort(
         </div>
       </section>
     </main>
+    </>
   );
 };
 

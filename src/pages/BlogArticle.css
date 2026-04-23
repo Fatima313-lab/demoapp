@@ -4,6 +4,10 @@
   min-height: auto;
   overflow-x: hidden;
 }
+.blog-article-section a {
+  color: #1E5AA8;
+
+}
 
 /* Hero Section */
 .blog-article-hero {
