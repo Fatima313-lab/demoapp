@@ -490,128 +490,33 @@ html, body {
   overflow-y: auto !important;
 }
 
+/* Contact rows container spacing */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-
-.contact-box {
-  position: relative;
-  margin: 40px 0;
-  padding: 24px 26px;
-
-  background: linear-gradient(180deg, #e7e7e86e 0%, #f6f8fa 100%);
-  border-radius: 27px;
-  outline: 1px solid rgba(4, 34, 79, 0.6);
-  overflow: hidden;
-}
-
-
-.contact-box::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: -60px;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(
-    circle,
-    rgba(113, 112, 114, 0.137),
-    rgba(48, 50, 51, 0.048),
-    transparent 70%
-  );
-  border-radius: 50%;
-}
-
-.contact-box * {
-  position: relative;
-  z-index: 1;
-}
-
-.contact-box p strong {
-  font-size: 18px;
-  font-weight: 700;
-  color: #0f2a4a;
-}
-
-.contact-box p {
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: #374151;
-}
-
-
-.contact-box ul {
-  margin: 14px 0 18px;
-  padding-left: 18px;
-}
-
-.contact-box ul li {
+  margin: 6px 0;
   font-size: 14.5px;
-  margin-bottom: 6px;
-  color: #374151;
-}
-
-
-.contact-box p:last-of-type {
-  margin-top: 12px;
-  font-size: 14.5px;
-  line-height: 1.8;
-}
-
-
-.contact-box p:last-of-type strong {
-  margin-right: 4px;
-  color: #0f2a4a;
-}
-
-.contact-box a {
-  font-weight: 600;
-  color: #2b6cb0;
-  text-decoration: underline;
-}
-
-.contact-box a:hover {
-  color: #edb702;
-}
-
-.contact-box ul {
-  margin: 18px 0 24px;
-  padding-left: 18px;
-}
-
-.contact-box ul li {
-  margin-bottom: 10px;
-  font-size: 15px;
   line-height: 1.6;
   color: #374151;
 }
 
 
-.contact-box p:last-of-type {
-  margin-top: 24px;
-  padding: 16px 18px;
-
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
-
-  border: 1px dashed #d1d5db;
-
-  font-size: 14.5px;
-  line-height: 1.9;
-}
-
-
-.contact-box p:last-of-type strong {
+.contact-row strong {
+  min-width: 90px;              
   font-weight: 600;
   color: #0f2a4a;
 }
 
-
-.contact-box a {
-  font-weight: 600;
+.contact-row a {
+  font-weight: 500;
   color: #2b6cb0;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(43, 108, 176, 0.35);
+  padding-bottom: 1px;
 }
-
-.contact-box a:hover {
+.contact-row a:hover {
   color: #edb702;
-  text-decoration-color: #edb702;
+  border-bottom-color: #edb702;
 }
