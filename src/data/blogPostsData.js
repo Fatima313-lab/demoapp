@@ -1730,7 +1730,7 @@ export const blogPostsData = {
     description:
       'Financial services firms operate under strict regulatory pressure. This guide explains why off the shelf software often fails compliance needs and how custom systems support secure, scalable growth.',
     category: 'Financial Services & Compliance',
-    date: 'April 28, 2026',
+    date: 'April 26, 2026',
     image:CustomSoftwareImg,
     sections: [
       {
