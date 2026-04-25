@@ -1,109 +1,128 @@
-/* Projects Section - Full Width */
+/* =========================
+   Projects Section
+========================= */
 .projects-section {
   width: 100%;
-  padding: 30px 0;
+  padding: 50px 0;
   background: #f9f9f9;
 }
 
-/* Carousel Wrapper */
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  color: #073e84;
+}
+
+.section-title p {
+  color: #666;
+}
+
+/* =========================
+   Carousel
+========================= */
 .custom-carousel-wrapper {
   position: relative;
   overflow: hidden;
-  width: 100%;       /* FULL WIDTH */
-  margin: 0 auto;
+  width: 100%;
   padding: 20px 0;
 }
 
-/* Carousel Flex */
 .custom-carousel {
   display: flex;
   gap: 15px;
   will-change: transform;
-  transition: transform 0.8s ease;
 }
 
-/* Card */
+/* =========================
+   Card
+========================= */
 .carousel-card {
-  flex: 0 0 250px; /* width of each card */
+  flex: 0 0 250px;
+  max-width: 250px;
   border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  /* box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); */
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%; /* Make all cards same height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Card Image */
+.carousel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
 .carousel-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  display: block;
 }
 
-.carousel-card:hover img {
-  transform: scale(1.12);
-}
-
+/* =========================
+   Overlay (FIXED PROPERLY)
+========================= */
 /* Overlay */
 .carousel-info {
   position: absolute;
-  inset: 0;
-  background: rgba(29, 66, 136, 0.75);
-  color: #fff !important;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  border-radius: 14px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* 🔥 Stronger base for text area */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,   /* strong base */
+    rgba(0, 0, 0, 0.6) 40%,
+    rgba(0, 0, 0, 0.25) 70%,
+    transparent 100%
+  );
+
+  padding: 14px;
+  color: #fff;
 }
 
-.carousel-card:hover .carousel-info {
-  opacity: 1;
-  transform: scale(1);
-}
-
+/* Title */
 .carousel-info h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 6px;
+  font-weight: 700; /* 🔥 stronger hierarchy */
+  color: #ffffff;
+
+  /* 🔥 crisp readability */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
+/* Description */
 .carousel-info p {
-  font-size: 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.9); /* 🔥 softer than title */
+
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
-/* Buttons - Smaller */
+/* =========================
+   Buttons
+========================= */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;   
-  height: 36px;  
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: none;
-  background: #1d4288;
+  background: #073e84;
   color: #fff;
-  font-size: 20px; 
+  font-size: 20px;
   cursor: pointer;
   z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.carousel-btn:hover {
-  background: #2a5fd6;
-  transform: translateY(-50%) scale(1.1);
 }
 
 .carousel-btn.prev {
@@ -114,15 +133,38 @@
   right: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* =========================
+   Responsive
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
   .carousel-card {
     flex: 0 0 220px;
+    max-width: 220px;
   }
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
+
+  .carousel-card img {
+    height: 170px;
+  }
+}
+
+/* Small Mobile */
 @media (max-width: 480px) {
   .carousel-card {
-    flex: 0 0 180px;
+    flex: 0 0 85%;
+    max-width: 85%;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
   }
 }

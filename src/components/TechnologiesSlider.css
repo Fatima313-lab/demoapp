@@ -10,28 +10,29 @@
   width: 100%;
 }
 
-/* Moving track */
+/* Track */
 .slide-track {
   display: flex;
-  align-items: center; 
-  width: calc(250px * 32);
-  animation: scroll 70s linear infinite;
-  margin-top: 15px;
+  align-items: center;
+  gap: 20px;
+  width: max-content; /* 🔥 key fix */
+  animation: scroll 60s linear infinite;
+  margin-top: 20px;
 }
 
-/* Single item */
+/* Slide item */
 .slide {
-  width: 250px;
+  min-width: 180px; /* 🔥 responsive base */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .slide img {
-  height: 55px;
-  margin-bottom: 10px;
+  height: 50px;
+  margin-bottom: 8px;
 }
 
 .slide span {
@@ -39,17 +40,47 @@
   font-weight: 500;
 }
 
-/* Hover effect */
+/* Hover */
 .slide:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
 /* Animation */
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
+  }
+}
+
+/* 🔥 TABLET */
+@media (max-width: 768px) {
+  .slide {
+    min-width: 140px;
+  }
+
+  .slide-track {
+    animation: scroll 40s linear infinite; /* 🔥 faster */
+  }
+}
+
+/* 🔥 MOBILE */
+@media (max-width: 480px) {
+  .slide {
+    min-width: 120px;
+  }
+
+  .slide img {
+    height: 40px;
+  }
+
+  .slide span {
+    font-size: 12px;
+  }
+
+  .slide-track {
+    animation: scroll 30s linear infinite; /* 🔥 even faster */
   }
 }

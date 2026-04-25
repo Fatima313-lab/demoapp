@@ -31,6 +31,7 @@ import OutsourceApiDevelopment from './pages/OutsourceApiDevelopment';
 import WebAppDevelopment from './pages/WebAppDevelopment';
 import WebsiteDevelopmentCost from './pages/WebsiteDevelopmentCost';
 import BestSoftwareHouse from './pages/BestSoftwareHouse';
+import RealEstateSoftware from './pages/RealEstateSoftware';
 
 import './styles/global.css';
 import './App.css';
@@ -72,6 +73,7 @@ function App() {
             <Route path="/website-development-cost-in-pakistan"  element={<WebsiteDevelopmentCost/>} />
             <Route path="/outsource-api-development-to-pakistan"  element={<OutsourceApiDevelopment/>} />
             <Route path="/best-software-house-in-pakistan"  element={<BestSoftwareHouse/>} />
+            <Route path="/real-estate-software-development"  element={<RealEstateSoftware/>} />
           </Routes>
           <Footer />
           <WhatsAppButton />
