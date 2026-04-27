@@ -45,6 +45,12 @@ import ProjectSections from '../components/ProjectSections';
 import TechnologiesSlider from '../components/TechnologiesSlider';
 import TestimonialSection from '../components/TestimonialSection';
 import StatsSection from '../components/StatsSection';
+import blogPostsData from '../data/blogPostsData';
+import QllmDocImg from '../assets/documents-qllmdocs-new.png';
+import financialsystemImg from '../assets/qllm-soft-finance-management-system-11.webp';
+import CustomSoftwareDevelopment  from '../assets/Custom-Software.jpg';
+import MobileAppDevelopment  from '../assets/Mobile-app-development.jpg';
+import AboutImg from '../assets/HeroQllmsoftimg.png';
 
 import './Home.css';
 import 'animate.css';
@@ -93,6 +99,12 @@ const schemaOrg = {
     bestRating: '5',
     worstRating: '1',
   },
+  founder: {
+  '@type': 'Person',
+  name: 'Zain Ul Abedin',
+  jobTitle: 'Founder & CEO',
+  url: 'https://www.linkedin.com/in/zain-ul-abedin-b09a613b/'
+},
 };
 
 /* ─── JSON-LD: WebSite (Sitelinks SearchBox) ───────────────────── */
@@ -196,6 +208,74 @@ const schemaLocal = {
   },
 };
 
+
+
+const processSteps = [
+  {
+    step: '01',
+    title: 'Discovery',
+    desc: 'Requirements gathering, workflow analysis, and scope definition.'
+  },
+  {
+    step: '02',
+    title: 'Architecture',
+    desc: 'System design, technology selection, and security planning.'
+  },
+  {
+    step: '03',
+    title: 'Development',
+    desc: 'ASP.NET Core based implementation with sprint-based delivery.'
+  },
+  {
+    step: '04',
+    title: 'Testing & Security',
+    desc: 'QA, performance testing, and OWASP-aligned security checks.'
+  },
+  {
+    step: '05',
+    title: 'Deployment',
+    desc: 'Production deployment, monitoring, and environment setup.'
+  },
+  {
+    step: '06',
+    title: 'Support & Scaling',
+    desc: 'Post-launch support, enhancements, and long-term scaling.'
+  },
+];
+
+
+
+
+
+const featuredCaseStudies = [
+  {
+    title: 'Enterprise Financial Analytics Platform',
+    problem:
+      'Finance teams needed real-time reporting and controlled access across departments.',
+    solution:
+      'Built an ASP.NET Core platform with role-based access, secure APIs, and analytics dashboards.',
+    result:
+      'Improved visibility and reduced manual reporting through centralized dashboards.',
+    image: financialsystemImg,
+    alt:
+      'ASP.NET Core dashboard for enterprise financial reporting',
+  },
+  {
+    title: 'QllmDoc — Secure Document Management System',
+    problem:
+      'Organizations struggled with document versioning, audits, and access control.',
+    solution:
+      'Delivered a secure DMS with workflows, audit trails, and role-based permissions.',
+    result:
+      'Improved compliance and reduced manual document handling.',
+    image: QllmDocImg,
+    alt:
+      'Secure document management system with audit trails',
+  },
+];
+
+
+
 /* ═══════════════════════════════════════════════════════════
    HOME PAGE
 ═══════════════════════════════════════════════════════════ */
@@ -279,7 +359,7 @@ const Home = () => {
 
               <div className={`about-image animate__animated ${aboutInView ? 'animate__fadeInLeft' : ''}`}>
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
+                  src={AboutImg}
                   alt="QllmSoft software development team in Pakistan building ASP.NET Core enterprise web applications for global clients"
                   width="600"
                   height="400"
@@ -339,6 +419,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        
 
         {/* ── SERVICES ── */}
         <section
@@ -453,6 +535,29 @@ const Home = () => {
           </div>
         </section>
 
+
+        
+ {/*--process---*/}
+<section className="section" aria-labelledby="process-heading">
+  <div className="container">
+    <div className="section-title">
+      <h2 id="process-heading">How We Work</h2>
+      <p>Discovery to deployment — a structured process that reduces risk and improves delivery clarity.</p>
+    </div>
+
+    <div className="process-grid-lite">
+      {processSteps.map((p) => (
+        <div key={p.step} className="process-card-lite">
+          <div className="process-step-lite">{p.step}</div>
+          <h3>{p.title}</h3>
+          <p>{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
         {/* ── EXPERTISE ── */}
         <section
           className="section expertise-section"
@@ -534,6 +639,45 @@ const Home = () => {
           <TechnologiesSlider />
         </section>
 
+
+{/* ── CASE STUDIES ── */}
+<section className="section" aria-labelledby="case-heading">
+  <div className="container">
+    <div className="section-title">
+      <h2 id="case-heading">Case Studies</h2>
+      <p>
+        How we solve complex problems with ASP.NET Core and enterprise architecture.
+      </p>
+    </div>
+
+    <div className="case-grid">
+      {featuredCaseStudies.map((c) => (
+        <article key={c.title} className="case-card">
+          <img src={c.image} alt={c.alt} loading="lazy" />
+
+          <h3>{c.title}</h3>
+
+          <p className="case-problem">
+            <strong>Problem:</strong> {c.problem}
+          </p>
+
+          <p className="case-solution">
+            <strong>Solution:</strong> {c.solution}
+          </p>
+
+          <p className="case-result">
+            <strong>Result:</strong> {c.result}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
+
+
         {/* ── PARTNERS ── */}
         <section
           className="section partners-section"
@@ -568,82 +712,177 @@ const Home = () => {
             </div>
           </div>
         </section>
+{/* ── BLOG PREVIEW (AUTOMATIC) ── */}
+<section className="section blog-preview" aria-labelledby="blog-preview-heading">
+  <div className="container">
+    <div className="section-title">
+      <h2 id="blog-preview-heading">Latest Insights</h2>
+      <p>
+        Practical insights on enterprise software, ASP.NET Core, and system design
+        challenges faced by growing teams.
+      </p>
+    </div>
 
-        {/* ── FAQ ── */}
-        <section
-          className="section faq-section"
-          aria-labelledby="faq-heading"
-          itemScope
-          itemType="https://schema.org/FAQPage"
+    <div className="blog-preview-grid">
+      {[
+        "custom-vs-saas-ecommerce-for-growing-smbs",
+        "hire-dotnet-developers-pakistan",
+        "when-internal-software-slows-teams-instead-of-helping",
+      ]
+        .map((key) => ({ key, post: blogPostsData[key] }))
+        .filter(({ post }) => Boolean(post))
+        .map(({ key, post }) => (
+          <article key={key} className="blog-preview-card">
+            <img src={post.image} alt={post.title} loading="lazy" />
+            <h3>{post.title}</h3>
+            <p>{post.description}</p>
+
+            <Link to={`/blog/${key}`} className="blog-read-btn">
+              Read Article →
+            </Link>
+          </article>
+        ))}
+    </div>
+  </div>
+</section>
+
+
+      {/* ── FAQ ── */}
+<section
+  className="section faq-section"
+  aria-labelledby="faq-heading"
+  itemScope
+  itemType="https://schema.org/FAQPage"
+>
+  <div className="container">
+    <div className="section-title">
+      <h2 id="faq-heading">
+        Frequently Asked Questions — Software Development Company in Pakistan
+      </h2>
+      <p>
+        Common questions businesses ask before choosing QllmSoft as their software
+        development partner in Pakistan.
+      </p>
+    </div>
+
+    <div className="faq-content">
+
+      {/* FAQ 1 */}
+      <div
+        className="faq-item"
+        itemScope
+        itemProp="mainEntity"
+        itemType="https://schema.org/Question"
+      >
+        <h4
+          itemProp="name"
+          className="faq-question"
+          aria-expanded="false"
+          onClick={(e) => {
+            const answer = e.currentTarget.nextElementSibling;
+            const expanded = e.currentTarget.getAttribute("aria-expanded") === "true";
+            e.currentTarget.setAttribute("aria-expanded", !expanded);
+            answer.style.display = expanded ? "none" : "block";
+          }}
         >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="faq-heading">
-                Frequently Asked Questions — Software Development Company in Pakistan
-              </h2>
-              <p>
-                Common questions businesses ask before choosing QllmSoft as their software development
-                partner in Pakistan.
-              </p>
-            </div>
+          Why choose ASP.NET Core for enterprise web application development in Pakistan?
+          <span className="faq-icon">+</span>
+        </h4>
 
-            <div className="faq-content">
+        <div
+          className="faq-answer"
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          <p itemProp="text">
+            ASP.NET Core consistently ranks as one of the fastest web frameworks in
+            independent benchmarks, offering enterprise-grade security, cross-platform
+            deployment, native Azure integration, and long-term Microsoft support.
+            It is well-suited for scalable SaaS platforms, portals, and internal systems.
+          </p>
+        </div>
+      </div>
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Why choose ASP.NET Core for enterprise web application development in Pakistan?
-                </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                  <p itemProp="text">
-                    ASP.NET Core consistently ranks as the world's fastest web framework in independent
-                    TechEmpower benchmarks — outperforming Node.js, Django, Laravel, and Spring Boot in
-                    raw throughput. It ships with enterprise security built in, native Azure integration,
-                    cross-platform deployment capability, and Microsoft Long-Term Support releases that
-                    protect your technology investment for years. For Pakistani businesses building
-                    customer-facing portals, SaaS platforms, or internal enterprise tools, ASP.NET Core
-                    delivers the performance, security, and maintainability that complex business
-                    applications demand.
-                  </p>
-                </div>
-              </div>
+      {/* FAQ 2 */}
+      <div
+        className="faq-item"
+        itemScope
+        itemProp="mainEntity"
+        itemType="https://schema.org/Question"
+      >
+        <h4
+          itemProp="name"
+          className="faq-question"
+          aria-expanded="false"
+          onClick={(e) => {
+            const answer = e.currentTarget.nextElementSibling;
+            const expanded = e.currentTarget.getAttribute("aria-expanded") === "true";
+            e.currentTarget.setAttribute("aria-expanded", !expanded);
+            answer.style.display = expanded ? "none" : "block";
+          }}
+        >
+          Does QllmSoft provide ASP.NET Core development services in Pakistan for international clients?
+          <span className="faq-icon">+</span>
+        </h4>
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Does QllmSoft provide ASP.NET Core development services in Pakistan for international clients?
-                </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                  <p itemProp="text">
-                    Yes. QllmSoft is Pakistan's leading ASP.NET Core development company, serving clients
-                    in Lahore, Karachi, Islamabad, Faisalabad, and internationally in the UK, USA, UAE,
-                    Saudi Arabia, Jordan, and Germany. Our developers work in your time zone, communicate
-                    in fluent English, and deliver against fixed-price scopes with full IP ownership and
-                    NDA on day one. Every project is independently verifiable on our Upwork and Freelancer
-                    profiles.
-                  </p>
-                </div>
-              </div>
+        <div
+          className="faq-answer"
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          <p itemProp="text">
+            Yes. QllmSoft delivers ASP.NET Core and enterprise software solutions to
+            international clients across the UK, USA, UAE, and Saudi Arabia. We work
+            with fixed scopes, clear communication, and time-zone aligned delivery.
+          </p>
+        </div>
+      </div>
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Can I hire dedicated ASP.NET Core developers from QllmSoft in Pakistan?
-                </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
-                  <p itemProp="text">
-                    Yes. QllmSoft provides dedicated ASP.NET Core and .NET 8 developers available
-                    full-time, part-time, or on a project basis — with onboarding possible within
-                    24–48 hours of agreeing scope. Our dedicated developers are senior engineers with
-                    production experience in ASP.NET Core MVC, Web API, Entity Framework Core, Blazor,
-                    SignalR, and Azure deployment. Visit our{' '}
-                    <Link to="/hire-dotnet-developers-pakistan">hire .NET developers</Link> page for
-                    detailed engagement options.
-                  </p>
-                </div>
-              </div>
+      {/* FAQ 3 */}
+      <div
+        className="faq-item"
+        itemScope
+        itemProp="mainEntity"
+        itemType="https://schema.org/Question"
+      >
+        <h4
+          itemProp="name"
+          className="faq-question"
+          aria-expanded="false"
+          onClick={(e) => {
+            const answer = e.currentTarget.nextElementSibling;
+            const expanded = e.currentTarget.getAttribute("aria-expanded") === "true";
+            e.currentTarget.setAttribute("aria-expanded", !expanded);
+            answer.style.display = expanded ? "none" : "block";
+          }}
+        >
+          Can I hire dedicated ASP.NET Core developers from QllmSoft in Pakistan?
+          <span className="faq-icon">+</span>
+        </h4>
 
-            </div>
-          </div>
-        </section>
+        <div
+          className="faq-answer"
+          itemScope
+          itemProp="acceptedAnswer"
+          itemType="https://schema.org/Answer"
+        >
+          <p itemProp="text">
+            Yes. You can hire dedicated ASP.NET Core and .NET developers from QllmSoft
+            on a full-time or project basis. Our engineers have real production
+            experience with APIs, enterprise systems, and cloud deployment. Visit our{" "}
+            <Link to="/hire-dotnet-developers-pakistan">
+              hire .NET developers
+            </Link>{" "}
+            page for details.
+          </p>
+        </div>
+      </div>
 
+    </div>
+  </div>
+</section>
         {/* ── CTA ── */}
         <section
           className="section cta-section"
