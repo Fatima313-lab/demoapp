@@ -5,6 +5,12 @@ import hrImg from '../assets/hr.webp';
 import portfolioImg from '../assets/portfolio-profile.webp';
 import inventory from '../assets/inventory-management .webp';
 import digitalmarketing from '../assets/digitalmarketing.png';
+import CustomSoftwareDevelopment from "../assets/Custom-Software.jpg";
+import MobileAppDevelopment from "../assets/Mobile-app-development.jpg";
+import CustomWebImg from"../assets/Custom-web-developement.jpg";
+import APIsoftwareImg from "../assets/api-development.jpg";
+import serviceHerImg from "../assets/Services-heroImg.jpg";
+import systemModernization from "../assets/SystemModernization.jpg";
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
@@ -63,30 +69,30 @@ export const heroSlides = [
 export const homeServices = [
   {
     id: 1,
-    name: "ASP.NET Core Development Company in Pakistan",
-    description: "Professional ASP.NET Core development services delivering secure, scalable, and high-performance enterprise web applications tailored for startups and growing businesses.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
+    name: "ASP.NET Core Development",
+    description: "Enterprise-grade ASP.NET Core development for secure, scalable web applications and internal systems built for long-term growth.",
+    image: CustomSoftwareDevelopment,
     link: "/asp-net-core-development-company-pakistan"
   },
   {
     id: 2,
     name: "Custom Web Application Development",
     description: "End-to-end web application development using ASP.NET Core, React, and modern architectures designed for performance, scalability, and long-term growth.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
+    image: CustomWebImg,
     link: "/web-application-development-company-pakistan"
   },
   {
     id: 3,
-    name: "Secure API Development Services",
+    name: "API & Secure Enterprise Integrations",
     description: "Robust RESTful API development and third-party system integrations to power web, mobile, and enterprise platforms with reliability and security.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    image: APIsoftwareImg,
     link: "/api-development-company-pakistan"
   },
   {
     id: 4,
     name: "Enterprise Software & System Integration",
     description: "Custom enterprise software development, legacy system modernization, and scalable Microsoft-based solutions built for complex business environments.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    image: MobileAppDevelopment,
     link: "/enterprise-software-development-pakistan"
   }
 ];
@@ -96,49 +102,52 @@ export const servicesData = [
     id: 1,
     name: "Custom Web Application Development",
     description: "We develop scalable custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
+    image: CustomWebImg,
     features: [
       "• ASP.NET Core web application development",
       "• SaaS platform development",
       "• Enterprise web portals",
       "• Cloud-ready architectures",
       "• High-performance scalable systems"
-    ]
+    ],
+    link: "/web-application-development-services"
   },
   {
     id: 2,
     name: "Mobile App Development (iOS & Android)",
     slug: "mobile-app-development",
     description: "Our mobile app development services deliver high-performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    image: MobileAppDevelopment,
     features: [
       "• iOS and Android app development",
       "• Cross-platform Flutter apps",
       "• React Native mobile applications",
       "• Secure mobile backend APIs",
       "• Performance-optimized mobile UI/UX"
-    ]
+    ],
+    link: "/mobile-app-development"
   },
   {
     id: 3,
     name: "Enterprise & Custom Software Development",
     slug: "enterprise-custom-software-development",
     description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+    image: CustomSoftwareDevelopment,
     features: [
       "• ERP & CRM software development",
       "• Business process automation",
       "• Enterprise dashboards",
       "• Secure multi-user systems",
       "• Integration with third-party tools"
-    ]
+    ],
+    
   },
   {
     id: 4,
     name: "API Development & System Integration",
     slug: "api-development-system-integration",
     description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    image: APIsoftwareImg,
     features: [
       "• REST API development",
       "• Third-party API integration",
@@ -151,7 +160,7 @@ export const servicesData = [
     id: 5,
     name: "Legacy Software Modernization",
     description: "We modernize outdated legacy systems by migrating them to modern architectures such as ASP.NET Core and cloud-ready environments. This improves performance, scalability, and long-term maintainability.",
-    image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80",
+    image: systemModernization,
     features: [
       "• Legacy application migration",
       "• ASP.NET Core modernization",
