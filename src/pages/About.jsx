@@ -77,62 +77,109 @@ const About = () => {
         <div className="container">
 
           <div className="section-title">
-            <h2>About QllmSoft | Custom Software Development Company</h2>
+            <h2>About QllmSoft | Pakistan's Leading Custom Software Development Agency Since 2015</h2>
           </div>
 
           <div className="story-card">
 
   <p>
-    
-
-Since <strong>2015</strong>, we have helped startups, small businesses, and enterprises build scalable digital platforms using modern technologies such as <strong>ASP.NET</strong>, React, cloud infrastructure, and REST APIs.
-
-Our development approach focuses on performance, security, and long-term scalability. From business management systems and enterprise dashboards to complex API integrations and software modernization, we deliver solutions that streamline operations and accelerate digital transformation.
-
-With experience in international markets and diverse industries, QllmSoft provides reliable software engineering services tailored to each client’s technical and business needs.
+    Founded in <strong>2015</strong>, QllmSoft is a professional software development
+    agency based in Pakistan, specialising in enterprise-grade digital solutions for
+    businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia. Over 10+ years of
+    operation, our agency has delivered <strong>50+ production-ready projects</strong> for{' '}
+    <strong>50+ satisfied clients</strong> — maintaining a <strong>100% on-time delivery
+    record</strong> and a verified 100% Upwork Job Success Score throughout.
   </p>
 
   <p>
-    <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "} is small yet skilled team of ASP.NET experts brings deep
-    expertise across multiple domains, including HR and financial
-    applications, CRM systems, and custom integrations. We pride ourselves
-    on our commitment to quality and innovation, combining technical
-    proficiency with creative problem-solving to deliver applications that
-    drive productivity, streamline processes, and enhance customer
-    engagement.
+    <Link to="/" style={{ fontWeight: 'bold', textDecoration: 'none' }}>QllmSoft</Link>{' '}
+    is a full-service technology agency bringing deep expertise across enterprise web
+    application development, mobile engineering, REST and GraphQL API development, cloud
+    infrastructure, and AI-powered software solutions. Our team of certified ASP.NET Core
+    architects, React engineers, mobile developers, and solution architects combines
+    technical depth with real business domain knowledge — delivering software that drives
+    operational efficiency and measurable business growth.
   </p>
 
-  <h4>Our Top Services Include</h4>
+  <p>
+    Every engagement begins with a formal requirements discovery process, followed by a
+    fixed-price proposal and documented project scope — approved by the client before a
+    single line of code is written. This approach eliminates scope creep, budget surprises,
+    and delivery uncertainty — and is why 50+ businesses across four continents have chosen
+    QllmSoft as their long-term technology partner.
+  </p>
+
+  <h4>Our Core Services</h4>
 
   <ul className="story-list">
     <li>
-      <strong>Custom Web Application Development:</strong>
-      We develop high-performance custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions range from startup platforms to enterprise-grade business systems.
+      <strong>Custom Web Application Development:</strong>{' '}
+      High-performance enterprise web applications built on ASP.NET Core 8, React, and
+      Microsoft Azure — engineered for scalability, security, and long-term maintainability.
+      From startup MVPs to complex enterprise platforms.
     </li>
-
     <li>
-      <strong>API Integration and Development:</strong>
-      Secure and optimized API solutions to connect and enhance
-      functionality across your systems.
+      <strong>Mobile App Development:</strong>{' '}
+      Cross-platform Android and iOS applications built using Flutter and React Native —
+      with offline-first architecture, API integration, and App Store/Play Store deployment
+      included as standard.
     </li>
-
     <li>
-      <strong>Legacy Application Migration and Modernization:</strong>
-      We build secure REST APIs and integrate third-party systems to enable seamless communication between web applications, mobile apps, and enterprise platforms.
+      <strong>REST &amp; GraphQL API Development:</strong>{' '}
+      Secure, documented, and tested API solutions with OpenAPI 3.0 specification, JWT
+      authentication, and OWASP Top 10 compliance — enabling seamless integration across
+      web apps, mobile platforms, and enterprise systems.
+    </li>
+    <li>
+      <strong>Legacy System Modernisation:</strong>{' '}
+      Phased, zero-disruption migration from .NET Framework to ASP.NET Core 8 — with full
+      business logic preservation, database migration, and post-launch support included.
+    </li>
+    <li>
+      <strong>AI-Powered Software Solutions:</strong>{' '}
+      Machine learning integrations, NLP pipelines, computer vision features, and LLM-powered
+      automation tools embedded directly into your existing business software — measurable ROI,
+      not proof-of-concept demos.
     </li>
   </ul>
 
   <p>
-    Our focus on high performance, seamless integration, and security
-    ensures that every solution we create meets the evolving needs of our
-    clients. With expertise in MS SQL Server, full-stack development, and
-    cloud-ready applications, QLLMSoft is here to help you achieve your
-    business vision with reliable, innovative solutions.
+    With expertise spanning SQL Server, clean architecture patterns, CQRS, domain-driven
+    design, Docker, Kubernetes, Azure, and AWS — QllmSoft is the technology agency built
+    to help your business compete and grow in the digital economy.
   </p>
 
 </div>
         </div>
       </section>
+
+      {/* ── STATS BAND ── */}
+<section className="section" style={{ background: '#1A202C', padding: '48px 0' }} aria-label="QllmSoft agency statistics">
+  <div className="container">
+    <div className="why-grid" style={{ textAlign: 'center' }}>
+      <div>
+        <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#63B3ED' }}>10+</div>
+        <div style={{ color: '#CBD5E0', marginTop: '8px', fontWeight: '600' }}>Years in Operation</div>
+        <div style={{ color: '#718096', fontSize: '0.85rem' }}>Founded 2015</div>
+      </div>
+      <div>
+        <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#63B3ED' }}>50+</div>
+        <div style={{ color: '#CBD5E0', marginTop: '8px', fontWeight: '600' }}>Projects Delivered</div>
+        <div style={{ color: '#718096', fontSize: '0.85rem' }}>Across 6 Industries</div>
+      </div>
+      <div>
+        <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#63B3ED' }}>50+</div>
+        <div style={{ color: '#CBD5E0', marginTop: '8px', fontWeight: '600' }}>Happy Clients</div>
+        <div style={{ color: '#718096', fontSize: '0.85rem' }}>UK, USA, UAE, Pakistan & more</div>
+      </div>
+      <div>
+        <div style={{ fontSize: '2.5rem', fontWeight: '800', color: '#63B3ED' }}>100%</div>
+        <div style={{ color: '#CBD5E0', marginTop: '8px', fontWeight: '600' }}>On-Time Delivery</div>
+        <div style={{ color: '#718096', fontSize: '0.85rem' }}>Every Project, Every Time</div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SERVICES */}
       <section className="section services-features reveal">
@@ -142,11 +189,11 @@ With experience in international markets and diverse industries, QllmSoft provid
           </div>
 
           <div className="features-grid">
-            <FeatureCard icon={Users} title="Custom Software Development Solutions" description="Solutions aligned with strategy" />
-            <FeatureCard icon={Shield} title="Secure Enterprise Software Architecture" description="Built for performance & safety" />
-            <FeatureCard icon={Zap} title="ASP.NET, React & Cloud Technologies" description="ASP.NET, React, Cloud" />
-            <FeatureCard icon={Check} title="Agile Software Development Process" description="Transparent timelines" />
-            <FeatureCard icon={Headphones} title="Software Maintenance & Technical Support" description="Continuous maintenance" />
+          <FeatureCard icon={Users} title="10+ Years of Proven Delivery" description="50+ enterprise solutions delivered since 2015 for clients across Pakistan, UK, USA & UAE" />
+<FeatureCard icon={Shield} title="OWASP-Compliant Security by Default" description="Security built into architecture — not patched on after launch" />
+<FeatureCard icon={Zap} title="ASP.NET Core, React, Flutter & Azure" description="Full Microsoft .NET ecosystem plus modern frontend and cloud infrastructure" />
+<FeatureCard icon={Check} title="Fixed-Price, 100% On-Time Delivery" description="Formal scope agreed before development begins — no surprises, no scope creep" />
+<FeatureCard icon={Headphones} title="30-Day Post-Launch Support Included" description="Every project includes hyper-care, monitoring, and long-term maintenance options" />
           </div>
         </div>
       </section>
@@ -202,7 +249,12 @@ With experience in international markets and diverse industries, QllmSoft provid
               <h3>Message from the CEO</h3>
 
               <p>
-              With years of experience in software engineering and international projects, our team focuses on building reliable digital solutions that help businesses grow in a competitive digital landscape.
+              Since founding QllmSoft in 2015, our agency has grown from a specialist .NET consultancy
+into a full-service software development agency trusted by 50+ businesses across Pakistan,
+the UK, USA, UAE, Saudi Arabia, and Jordan. Every project we take on carries a personal
+commitment from our leadership to deliver on time, within budget, and to a standard we are
+proud to put our name on — backed by a 100% on-time delivery record and a verified 100%
+Upwork Job Success Score.
               </p>
 
           

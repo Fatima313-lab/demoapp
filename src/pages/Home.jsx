@@ -303,10 +303,10 @@ const Home = () => {
                 </p>
 
                 <p>
-                  Our development team delivers more than code — we deliver business outcomes. Every project
-                  is scoped, priced, and structured before development begins, so you always know what you
-                  are getting, when you are getting it, and exactly what it costs. No hidden charges,
-                  no scope creep, no surprises.
+                As a full-service software development agency, QllmSoft delivers more than code — we
+deliver business outcomes. Every project is scoped, priced, and structured before
+development begins, so you always know what you are getting, when you are getting it,
+and exactly what it costs. No hidden charges, no scope creep, no surprises.
                 </p>
 
                 <p>
@@ -466,11 +466,11 @@ const Home = () => {
             </div>
 
             <p>
-              As a specialised ASP.NET Core and custom software development company based in Pakistan,
-              QllmSoft has delivered over 100 production-grade digital solutions across healthcare,
-              finance, education, logistics, eCommerce, and SaaS sectors. Our team of certified
-              .NET developers, React engineers, mobile app developers, and solution architects brings
-              both deep technical knowledge and genuine business domain understanding to every engagement.
+            As a specialised ASP.NET Core and custom software development agency based in Pakistan,
+QllmSoft has delivered 50+ production-grade digital solutions across healthcare, finance,
+education, logistics, eCommerce, and SaaS sectors since 2015. Our agency combines certified
+.NET architects, React engineers, mobile app developers, and solution architects — bringing
+both deep technical knowledge and genuine business domain understanding to every engagement.
             </p>
 
             <p>
@@ -613,12 +613,7 @@ const Home = () => {
                 </h4>
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text">
-                    Yes. QllmSoft is Pakistan's leading ASP.NET Core development company, serving clients
-                    in Lahore, Karachi, Islamabad, Faisalabad, and internationally in the UK, USA, UAE,
-                    Saudi Arabia, Jordan, and Germany. Our developers work in your time zone, communicate
-                    in fluent English, and deliver against fixed-price scopes with full IP ownership and
-                    NDA on day one. Every project is independently verifiable on our Upwork and Freelancer
-                    profiles.
+                    Yes. Pakistan's Leading ASP.NET Core &amp; Custom Software Development Agency — 10+ Years, 50+ Projects
                   </p>
                 </div>
               </div>

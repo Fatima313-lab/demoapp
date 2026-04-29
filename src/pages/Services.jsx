@@ -213,7 +213,7 @@ const faqItems = [
   },
   {
     q: 'Does QllmSoft work with international clients for software outsourcing from Pakistan?',
-    a: 'Yes. QllmSoft is one of Pakistan\'s leading software development outsourcing companies — with verified delivery for clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Our development team works in client time zones, communicates in fluent English, and delivers against fixed-price scopes with full IP ownership and NDA on day one. Our reputation is independently verified through Upwork (100% Job Success Score) and Freelancer (5-star average rating across 47+ reviews).',
+    a: 'Yes. QllmSoft is one of Pakistan\'s leading software development outsourcing companies — with verified delivery for clients across the UK, USA, UAE, Saudi Arabia, and Germany. Our development team works in client time zones, communicates in fluent English, and delivers against fixed-price scopes with full IP ownership and NDA on day one. Our reputation is independently verified through Upwork (100% Job Success Score) and Freelancer (5-star average rating across 47+ reviews).',
   },
 ];
 
@@ -404,7 +404,7 @@ const TrustBand = () => (
     <div className="container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0' }}>
       {[
         { num: '10+',  lbl: 'Years Experience'       },
-        { num: '100+', lbl: 'Projects Delivered'     },
+        { num: '50+', lbl: 'Projects Delivered'     },
         { num: '50+',  lbl: 'Global Clients'          },
         { num: '100%', lbl: 'Upwork Job Success'     },
         { num: '5 ★',  lbl: '47+ Verified Reviews'   },
@@ -540,12 +540,11 @@ const Services = () => {
                 Our Software Development Services in Pakistan — Full Capability
               </h2>
               <p>
-                End-to-end software development services built entirely around your business goals —
-                not generic templates, not pre-built SaaS tools stretched to fit. QllmSoft takes
-                full technical ownership from requirements discovery and architecture design through
-                to production deployment and post-launch support. We serve businesses in Lahore,
-                Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally across four
-                continents. Explore our full range of{' '}
+              QllmSoft is a full-service software development agency that takes complete technical ownership
+from requirements discovery and architecture design through to production deployment and
+post-launch support. Since 2015, we have delivered 50+ enterprise solutions for 50+ clients
+across Pakistan, the UK, USA, UAE, and Saudi Arabia — with a 100% on-time delivery record and
+a verified 100% Upwork Job Success Score. Explore our full range of{' '}
                 <Link to="/custom-software-development-services">custom software development services</Link>,{' '}
                 <Link to="/outsource-software-development-to-pakistan">software outsourcing from Pakistan</Link>, and{' '}
                 <Link to="/hire-dotnet-developers-pakistan">dedicated .NET developer hiring</Link>.
