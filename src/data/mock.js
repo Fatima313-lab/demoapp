@@ -9,7 +9,6 @@ import CustomSoftwareDevelopment from "../assets/Custom-Software.jpg";
 import MobileAppDevelopment from "../assets/Mobile-app-development.jpg";
 import CustomWebImg from"../assets/Custom-web-developement.jpg";
 import APIsoftwareImg from "../assets/api-development.jpg";
-import serviceHerImg from "../assets/Services-heroImg.jpg";
 import systemModernization from "../assets/SystemModernization.jpg";
 export const companyInfo = {
   name: "QllmSoft",
