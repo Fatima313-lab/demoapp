@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import SEO from "../components/SEO";
 import { Link } from 'react-router-dom';
 import ceoImg from '../assets/ceo-qllmsoft.jpg';
+import OurMissionImg from '../assets/ourMission.jpg';
+import ourvisionImg from'../assets/OurVision.jpg';
 import {
   Eye,
   Target,
@@ -40,25 +42,38 @@ const About = () => {
     }, { threshold: 0.15 });
 
     reveals.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <>
     <SEO
-  title="About QllmSoft | Custom Software Development Company"
+  title="About QllmSoft | Leading Software House in Pakistan"
   description="Learn about QllmSoft, a custom software development company providing scalable web applications, ASP.NET Core solutions, secure API development, and enterprise software services for businesses worldwide."
   url="https://qllmsoft.com/about"
   image="https://qllmsoft.com/og-about.jpg"
   schema={{
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "SoftwareBusiness",
     "name": "QllmSoft",
     "url": "https://qllmsoft.com",
     "foundingDate": "2015",
     "founder": {
       "@type": "Person",
-      "name": "Zain Ul Abedin"
-    }
+      "name": "Zain Ul Abedin",
+      "jobTitle": "CEO"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Pakistan",
+      "addressLocality": "Lalamusa"
+    },
+    "knowsAbout": ["ASP.NET Core", "SaaS Development", "Enterprise Software", "Cloud Architecture"],
+    "sameAs": [
+      "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
+      "https://www.upwork.com/freelancers/~0170e20f8803389a86"
+    ]
   }}
 />
     <main className="about-page">
@@ -77,10 +92,24 @@ const About = () => {
         <div className="container">
 
           <div className="section-title">
-            <h2>About QllmSoft | Pakistan's Leading Custom Software Development Agency Since 2015</h2>
+            <h2>About QllmSoft | Pakistan's Leading ASP.NET & Custom Enterprise Software Development Agency Since 2015</h2>
           </div>
 
           <div className="story-card">
+            {/*QllmSoft started in 2015 with a clear purpose: to build software that businesses can trust for years ,not months.what began as small , focused engineering team in pakistan has grown into  a global  ASP.NET and enterprise software development partner serving clients across The Pakistan , UK , USA , UAE and Saudia Arabia.
+            Our growth has never been accidental. It came from consistent hard work, smart decision making,
+  and a commitment to engineering excellence. Over the past decade, we have delivered  50+ production ready projects  for 50+ satisfied clients , maintained a
+  100% on time delivery record, and earned a verified 100% Upwork Job Success Score , all through honesty, discipline, and
+  serious technical capability. QllmSoft is built by engineers who take their craft seriously. We don’t chase every technology
+  we specialize. Our core strength lies in ASP.NET Core, C#, enterprise systems, secure APIs,
+  cloud ready architectures, and long term business automation solutions. Every system we build
+  is designed for scalability, security, and maintainability.
+
+  Our vision is simple: to become the most trusted ASP.NET and enterprise software development
+  company in the region , a team known for clarity, reliability, and engineering discipline.
+  We believe great software is not just written it is planned, structured, reviewed, and delivered
+  with responsibility. That is the standard we follow in every project. */}
+
 
   <p>
     Founded in <strong>2015</strong>, QllmSoft is a professional software development
@@ -113,13 +142,13 @@ const About = () => {
 
   <ul className="story-list">
     <li>
-      <strong>Custom Web Application Development:</strong>{' '}
+     <strong><Link to="/services/web-development">Custom Web Application Development</Link></strong>{' '}
       High-performance enterprise web applications built on ASP.NET Core 8, React, and
       Microsoft Azure — engineered for scalability, security, and long-term maintainability.
       From startup MVPs to complex enterprise platforms.
     </li>
     <li>
-      <strong>Mobile App Development:</strong>{' '}
+      <strong><Link to="/services/mobile-development">Mobile App Development</Link></strong>{' '}
       Cross-platform Android and iOS applications built using Flutter and React Native —
       with offline-first architecture, API integration, and App Store/Play Store deployment
       included as standard.
@@ -181,6 +210,51 @@ const About = () => {
   </div>
 </section>
 
+
+{/*<div className="trust-badges-container" style={{ background: '#f8fafc', padding: '40px 0', borderTop: '1px solid #e2e8f0', borderBottom: '1px solid #e2e8f0' }}>
+  <div className="container">
+    <p style={{ textAlign: 'center', fontSize: '0.85rem', color: '#718096', marginBottom: '25px', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '1.5px' }}>
+      Verified Excellence & Technical Standards
+    </p>
+    
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', flexWrap: 'wrap', alignItems: 'center' }}>
+      
+     
+      <div style={{ textAlign: 'center', minWidth: '120px' }}>
+        <svg width="100" height="28" viewBox="0 0 101.4 30" xmlns="https://upload.wikimedia.org/wikipedia/commons/f/f4/Upwork_Logo.svg" style={{marginBottom: '5px'}}>
+        
+        </svg>
+        <div style={{ fontSize: '10px', fontWeight: '800', color: '#14a800' }}>100% SUCCESS</div>
+      </div>
+
+   \
+      <div style={{ textAlign: 'center', minWidth: '120px', opacity: '0.8' }}>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt="ASP.NET Core 8 Architect" style={{ height: '35px' }} />
+        <div style={{ fontSize: '10px', fontWeight: 'bold', marginTop: '5px', color: '#4A5568' }}>ENTERPRISE ARCH</div>
+      </div>
+
+   
+      <div style={{ textAlign: 'center', minWidth: '120px', opacity: '0.8' }}>
+        <img src="https://owasp.org/assets/images/logo.png" alt="OWASP Security Standard" style={{ height: '35px' }} />
+        <div style={{ fontSize: '10px', fontWeight: 'bold', marginTop: '5px', color: '#4A5568' }}>SECURE CODE</div>
+      </div>
+
+      <div style={{ textAlign: 'center', minWidth: '120px', opacity: '0.8' }}>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure Infrastructure" style={{ height: '30px' }} />
+        <div style={{ fontSize: '10px', fontWeight: 'bold', marginTop: '5px', color: '#4A5568' }}>CLOUD NATIVE</div>
+      </div>
+
+     
+      <div style={{ textAlign: 'center', minWidth: '120px', opacity: '0.8' }}>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Frontend" style={{ height: '30px' }} />
+        <div style={{ fontSize: '10px', fontWeight: 'bold', marginTop: '5px', color: '#4A5568' }}>MODERN UI</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+*/}
+
       {/* SERVICES */}
       <section className="section services-features reveal">
         <div className="container">
@@ -209,7 +283,7 @@ const About = () => {
 
             <div className="vm-row">
               <div className="vm-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" />
+                <img src={ourvisionImg} alt="Our Vision" />
               </div>
 
               <div className="vm-content">
@@ -227,7 +301,7 @@ const About = () => {
               </div>
 
               <div className="vm-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" />
+                <img src={OurMissionImg} alt="Our Mission" />
               </div>
             </div>
 
@@ -242,7 +316,7 @@ const About = () => {
           <div className="ceo-card">
 
            <div className="ceo-image">
-            <img src={ceoImg} alt="CEO" />
+            <img src={ceoImg} alt="Zain Ul Abedin - Founder and CEO of QllmSoft Pakistan" />
           </div>
 
             <div className="ceo-content">
@@ -273,11 +347,34 @@ Upwork Job Success Score.
                 <Linkedin size={18} />
                
               </a>
+              
 
             </div>
+            
           </div>
         </div>
       </section>
+
+{/*}
+  <section className='faq'>
+    <h2>Frequently Asked Questions</h2>
+    <h3>What does QllmSoft specialize in?</h3>
+    <p></p>
+    <h3>How long has QllmSoft been operating?</h3>
+    <p></p>
+    <h3>what makes Qllmsoft different fro other software agencies</h3>
+    <p></p>
+    <h3>Does Qllmsoft work with international clients?</h3>
+    <p></p>
+    <h3>what types of projects does QllmSoft handle?</h3>
+    <p></p>
+    <h3>how does QllmSoft start a new project?</h3>
+    <p></p>
+    <h3>What is the typical timeline for a QllmSoft project?</h3>
+    <p></p>
+  
+  </section>
+  */}
 
       {/* CTA */}
       <section className="section cta-section reveal">
