@@ -295,8 +295,7 @@ const About = () => {
                 of experience delivering production-grade digital solutions for businesses
                 across four continents. Founded in 2015, we have grown from a specialist
                 enterprise development consultancy into a comprehensive software agency trusted
-                by 50+ businesses across Pakistan, the UK, USA, UAE, Saudi Arabia, Jordan,
-                and Germany.
+                by 50+ businesses across Pakistan, the USA, Europe & Gulf.
               </p>
 
               <p>
@@ -597,7 +596,7 @@ const About = () => {
                 <p>
                   Since founding QllmSoft in 2015, we have grown from a specialist consultancy
                   into a full-service software development agency trusted by 50+ businesses across
-                  Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan. Every project we take on
+                  Pakistan, the UK, USA, Gulf & Europe. Every project we take on
                   carries a personal commitment from our leadership to deliver on time, within
                   budget, and to a standard we are proud to put our name on, backed by a 100%
                   on-time delivery record and a verified 100% Upwork Job Success Score.

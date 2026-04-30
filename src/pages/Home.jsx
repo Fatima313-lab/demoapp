@@ -219,7 +219,7 @@ const schemaFAQ = {
       name: "Does QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. We work with fixed-price scopes, clear communication, NDA from day one, and full IP ownership transferred to the client, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
+        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the UK, USA, UAE, Saudi Arabia. We work with fixed-price scopes, clear communication, NDA from day one, and full IP ownership transferred to the client, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
       },
     },
     {
@@ -862,7 +862,7 @@ const Home = () => {
               <p>
                 Our independently verified reviews on Upwork and Freelancer reflect
                 consistent project delivery for businesses in the UK, USA, UAE, Saudi Arabia,
-                Jordan, Germany, and Pakistan, across finance, healthcare, education,
+             and Pakistan, across finance, healthcare, education,
                 logistics, and eCommerce.
               </p>
             </div>
@@ -1013,7 +1013,7 @@ const Home = () => {
                 >
                   <p itemProp="text">
                     Yes. QllmSoft is a trusted software outsourcing company in Pakistan working with
-                    international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany.
+                    international clients across the globe.
                     We work with fixed-price scopes, clear English communication, NDA from day one,
                     and full IP ownership transferred to the client, independently verified through
                     Upwork (100% Job Success Score) and Freelancer (5-star rating).

@@ -230,7 +230,7 @@ const schemaFAQ = {
       name: "Does QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Our developers work in client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership and NDA from day one, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
+        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the USA, Europe & Gulf. Our developers work in client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership and NDA from day one, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
       },
     },
     {
