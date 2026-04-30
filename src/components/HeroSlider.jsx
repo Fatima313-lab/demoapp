@@ -111,8 +111,7 @@ const HeroSlider = () => {
       {/* Content */}
       <div className="hero-content">
         <h1 className="hero-title">
-          ASP.NET Core & Custom Enterprise Software Development Company in
-          Pakistan
+        QllmSoft software development team in Pakistan delivering custom digital solutions for global businesses
         </h1>
 
         <p className="hero-subtitle">
@@ -121,7 +120,7 @@ const HeroSlider = () => {
         </p>
 
         <Link to="/asp-net-core-development-pakistan" className="hero-btn">
-          Explore ASP.NET Core Services
+          Explore Our Services
         </Link>
       </div>
     </section>

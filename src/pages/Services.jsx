@@ -1,30 +1,43 @@
 /**
- * Services.jsx — QllmSoft
+ * Services.jsx, QllmSoft
  * ─────────────────────────────────────────────────────────────────
- * TARGET KEYWORDS:
+ * SEO STRATEGY (2026):
  *
- * Primary:
+ * Primary Keywords (solution/outcome-first):
  *   software development services Pakistan
- *   custom software development services Pakistan
+ *   custom software solutions Pakistan
+ *   IT services company Pakistan
+ *   software development services in Pakistan
+ *   digital solutions Pakistan
  *
- * Secondary:
- *   web application development services Pakistan
+ * Secondary Keywords (service-specific):
+ *   custom software development Pakistan
+ *   enterprise software solutions Pakistan
+ *   web application development Pakistan
  *   mobile app development Pakistan
- *   ASP.NET Core development services Pakistan
- *   REST API development Pakistan
- *   software development company Pakistan
- *   enterprise software development Pakistan
- *   outsource software development Pakistan
+ *   business software development Pakistan
+ *   software outsourcing Pakistan
+ *
+ * Stack Keywords (SEO-secondary, for global developer-hire searches):
+ *   .NET development company Pakistan
+ *   ASP.NET Core development Pakistan
+ *   React development Pakistan
+ *   Flutter app development Pakistan
+ *
+ * Industry Keywords:
+ *   healthcare software Pakistan
+ *   fintech software development Pakistan
+ *   education software Pakistan
+ *   ecommerce software Pakistan
  *
  * SEO:
- *   ✓ react-helmet-async  (replaces the manual useSEO hook — better for crawlers)
- *   ✓ 4 JSON-LD schemas   → WebPage+BreadcrumbList, Service+OfferCatalog,
- *                           FAQPage, Organization
- *   ✓ Single H1           → keyword-rich, search-intent aligned
- *   ✓ H1→H2→H3 hierarchy
- *   ✓ Trust band (E-E-A-T stats)
- *   ✓ Internal linking    → all service sub-pages linked
- *   ✓ External authority  → OWASP, TechEmpower outbound
+ *   ✓ react-helmet-async  → title, description, keywords, canonical, OG, Twitter
+ *   ✓ 3 JSON-LD schemas   → WebPage+BreadcrumbList, Service+OfferCatalog, FAQPage
+ *   ✓ Single H1           → solution-first, commercial intent
+ *   ✓ H1→H2→H3 hierarchy  → strict
+ *   ✓ Trust band E-E-A-T  → verified stats
+ *   ✓ Internal linking    → all service sub-pages
+ *   ✓ External authority  → OWASP outbound
  *   ✓ FAQ microdata       → itemScope/itemProp inline
  *   ✓ Semantic HTML5      → main, section, article, nav, aria-labels
  *   ✓ DESIGN UNCHANGED    → all existing CSS classes preserved
@@ -44,9 +57,9 @@ const schemaWebPage = {
   "@type": "WebPage",
   "@id": "https://qllmsoft.com/services#webpage",
   url: "https://qllmsoft.com/services",
-  name: "Custom Software Development Services in Pakistan | Web, Mobile & .NET | QllmSoft",
+  name: "Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft",
   description:
-    "QllmSoft provides custom software development services in Pakistan — ASP.NET Core enterprise web apps, mobile app development, REST API development, SaaS platforms, AI solutions, and dedicated developer hiring for global businesses.",
+    "QllmSoft provides custom software development services in Pakistan, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan, UK, USA, UAE, and Saudi Arabia.",
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -75,7 +88,7 @@ const schemaService = {
   name: "Custom Software Development Services in Pakistan",
   serviceType: "Software Development",
   description:
-    "End-to-end custom software development services — ASP.NET Core web applications, Android and iOS mobile apps, REST and GraphQL APIs, enterprise systems, AI-powered solutions, and dedicated developer hiring for startups and enterprises in Pakistan and globally.",
+    "End-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, legacy system modernisation, and dedicated developer hiring for businesses in Pakistan and internationally.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -111,7 +124,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Web Application Development Pakistan",
+          name: "Enterprise Web Application Development Pakistan",
           url: "https://qllmsoft.com/web-application-development-services",
         },
       },
@@ -127,7 +140,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "REST API Development Pakistan",
+          name: "Business Process Automation Pakistan",
           url: "https://qllmsoft.com/api-development-services",
         },
       },
@@ -143,7 +156,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Outsource Software Development to Pakistan",
+          name: "Software Outsourcing Pakistan",
           url: "https://qllmsoft.com/outsource-software-development-to-pakistan",
         },
       },
@@ -159,7 +172,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Hire .NET Developers Pakistan",
+          name: "Hire Software Developers Pakistan",
           url: "https://qllmsoft.com/hire-dotnet-developers-pakistan",
         },
       },
@@ -190,10 +203,10 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What custom software development services does QllmSoft offer in Pakistan?",
+      name: "What software development services does QllmSoft offer in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft offers end-to-end custom software development services including ASP.NET Core enterprise web applications, Android and iOS mobile app development, REST and GraphQL API development, SaaS platform development, AI-powered automation, legacy system modernization, and dedicated developer hiring. We serve Pakistani businesses in Lahore, Karachi, Islamabad, Faisalabad, and Sialkot — as well as international clients in the UK, USA, UAE, and Saudi Arabia.",
+        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses across Pakistan, Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally across the UK, USA, UAE, and Saudi Arabia.",
       },
     },
     {
@@ -201,7 +214,7 @@ const schemaFAQ = {
       name: "How much does custom software development cost in Pakistan in 2026?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Custom software development cost in Pakistan ranges from PKR 50,000 for a simple web application or API to PKR 500,000+ for a full enterprise system with complex integrations and role-based workflows. QllmSoft provides a detailed fixed-price scope document and a formal quote within 24 hours of a free consultation — with no hidden charges. See our website development cost guide for indicative pricing by project type.",
+        text: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi-department workflows, third-party integrations, and advanced reporting. Every project receives a detailed, fixed-price scope document and formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
       },
     },
     {
@@ -209,23 +222,23 @@ const schemaFAQ = {
       name: "Does QllmSoft build mobile apps for Android and iOS in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS using Flutter and React Native — delivering native-quality experiences on both platforms from a single, efficient codebase. Our mobile apps are built with offline capability, push notifications, secure API integration, and performance optimised for Pakistan's 4G network conditions.",
+        text: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS delivering native-quality experiences on both platforms from a single, efficient codebase. Our mobile apps are built with offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing through App Store submission and post-launch maintenance.",
       },
     },
     {
       "@type": "Question",
-      name: "What technologies does QllmSoft specialise in for software development in Pakistan?",
+      name: "Does QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft specialises in ASP.NET Core 8/9, C# 12, Entity Framework Core, SQL Server, React JS, Angular, Blazor, Flutter, React Native, REST APIs, GraphQL, JWT/OAuth2, Microsoft Azure, AWS, Docker, Kubernetes, and CI/CD pipelines. All projects follow SOLID principles, OWASP security standards, and Clean Architecture patterns for long-term code maintainability.",
+        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Our developers work in client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership and NDA from day one, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
       },
     },
     {
       "@type": "Question",
-      name: "Does QllmSoft work with international clients for software development outsourcing?",
+      name: "What industries does QllmSoft build software for in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft is a leading software development outsourcing company in Pakistan, serving clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Our developers work in client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership and NDA on day one — independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
+        text: "QllmSoft has delivered production-grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR, and real estate sectors since 2015. We bring both deep technical expertise and genuine business domain understanding to every engagement, ensuring your software solves real operational problems, not just technical ones.",
       },
     },
   ],
@@ -256,7 +269,7 @@ const ServiceCardDetailed = ({ service, isOdd, id }) => {
             src={service.image}
             alt={
               service.alt ||
-              `${service.name} — QllmSoft software development services Pakistan`
+              `${service.name}, QllmSoft software development services Pakistan`
             }
             loading="lazy"
           />
@@ -283,26 +296,24 @@ const ServiceCardDetailed = ({ service, isOdd, id }) => {
   );
 };
 
-/* ─── FAQ Accordion (unchanged design, improved content) ───────── */
+/* ─── FAQ Accordion ─────────────────────────────────────────────── */
 const faqItems = [
   {
-    q: "What custom software development services does QllmSoft offer in Pakistan?",
-    a: "QllmSoft provides end-to-end custom software development services — ASP.NET Core enterprise web applications, Android and iOS mobile apps, REST and GraphQL APIs, SaaS platforms, AI-powered automation, and dedicated developer hiring. We serve businesses across Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally in the UK, USA, UAE, and Saudi Arabia — all backed by a 100% Upwork Job Success Score and 5-star Freelancer rating.",
+    q: "What software development services does QllmSoft offer in Pakistan?",
+    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally in the UK, USA, UAE, and Saudi Arabia, all backed by a 100% Upwork Job Success Score and 5-star Freelancer rating.",
   },
   {
     q: "How much does custom software development cost in Pakistan in 2026?",
-    a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple web application or REST API to PKR 500,000+ for complex enterprise systems with multi-department workflows, third-party integrations, and advanced reporting. Every project receives a detailed, fixed-price scope document and a formal quote within 24 hours of a free consultation — with no hidden charges at any stage. See our website development cost guide for a full breakdown of indicative pricing by project type.",
+    a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi-department workflows, third-party integrations, and advanced reporting. Every project receives a detailed, fixed-price scope document and a formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
   },
   {
     q: "Does QllmSoft build mobile apps for Android and iOS in Pakistan?",
-    a: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS using Flutter and React Native — delivering native-quality UX on both platforms from a single codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless REST API integration. We handle the full lifecycle from wireframing and UI/UX design to App Store submission and post-launch maintenance.",
+    a: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS delivering native-quality user experiences on both platforms from a single, efficient codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing and UI/UX design through App Store submission and post-launch maintenance.",
   },
   {
-    q: "What ASP.NET Core and .NET technologies does QllmSoft specialise in?",
-    a: "QllmSoft specialises in ASP.NET Core 8/9, C# 12, Entity Framework Core 8, Dapper, SQL Server 2022, REST APIs (OpenAPI 3.0), GraphQL (Hot Chocolate), JWT/OAuth2 authentication, Blazor, SignalR, Azure App Service, Azure Functions, Docker, Kubernetes, and GitHub Actions CI/CD pipelines. All code follows SOLID principles, OWASP Top 10 security standards, and Clean Architecture patterns — ensuring maintainable, secure, and scalable enterprise software.",
+    q: "What industries does QllmSoft build software for?",
+    a: "QllmSoft has delivered production-grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR management, and real estate since 2015. We bring deep technical expertise combined with genuine business domain understanding, ensuring your software solves real operational problems, not just technical ones.",
   },
-  {
-      },
 ];
 
 const FaqSection = () => {
@@ -320,8 +331,7 @@ const FaqSection = () => {
       <div className="container">
         <div className="section-title reveal">
           <h2 id="faq-heading">
-            Frequently Asked Questions — Software Development Services in
-            Pakistan
+            Frequently Asked Questions, Software Development Services in Pakistan
           </h2>
           <p>
             Honest answers to the questions businesses ask most before choosing
@@ -424,7 +434,7 @@ const FaqSection = () => {
   );
 };
 
-/* ─── Technologies Section (unchanged design, improved content) ── */
+/* ─── Technologies Section ──────────────────────────────────────── */
 const TechnologiesSection = () => (
   <section
     className="section technologies-section bg-light"
@@ -433,40 +443,31 @@ const TechnologiesSection = () => (
     <div className="container">
       <div className="section-title reveal">
         <h2 id="tech-h2">
-          Technologies We Use to Build Your Software in Pakistan
+          Technologies Powering Our Software Solutions
         </h2>
         <p>
-          Our technology stack is selected based on your project's specific
+          We select the best technology for each project based on your
           performance requirements, scalability roadmap, and long-term
-          maintainability — not familiarity or convenience. Every tool is
-          production-proven, actively maintained, and battle-tested in
-          enterprise environments. All security implementations follow{" "}
+          maintainability, not convenience or habit. Every tool is
+          production-proven, actively maintained, and enterprise-tested. Security
+          implementations follow{" "}
           <a
             href="https://owasp.org/www-project-top-ten/"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            aria-label="OWASP Top 10 security standard — external reference"
+            aria-label="OWASP Top 10 security standard, external reference"
           >
             OWASP Top 10
           </a>{" "}
-          standards, and performance benchmarks are validated against{" "}
-          <a
-            href="https://www.techempower.com/benchmarks/"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            aria-label="TechEmpower performance benchmarks — external reference"
-          >
-            TechEmpower
-          </a>{" "}
-          independent rankings.
+          standards across every project we deliver.
         </p>
       </div>
       <div className="tech-grid reveal">
         <div className="tech-category">
-          <h3>Frontend &amp; Web</h3>
+          <h3>Web &amp; Frontend</h3>
           <ul>
-            <li>React JS 18+ (Hooks, Context, Next.js)</li>
-            <li>Angular 17 (Standalone, Signals)</li>
+            <li>React JS (Hooks, Context, Next.js)</li>
+            <li>Angular (Standalone Components)</li>
             <li>Blazor WebAssembly &amp; Server</li>
             <li>Razor Pages / ASP.NET MVC</li>
             <li>TypeScript / Tailwind CSS</li>
@@ -475,9 +476,9 @@ const TechnologiesSection = () => (
         <div className="tech-category">
           <h3>Backend &amp; APIs</h3>
           <ul>
-            <li>ASP.NET Core 8 / 9 (Web API, MVC)</li>
-            <li>C# 12 / Entity Framework Core 8</li>
-            <li>REST API (OpenAPI 3.0 / Swagger)</li>
+            <li>ASP.NET Core (Web API, MVC)</li>
+            <li>C# / Entity Framework Core</li>
+            <li>REST API (OpenAPI / Swagger)</li>
             <li>GraphQL (Hot Chocolate)</li>
             <li>JWT / OAuth2 / OpenID Connect</li>
           </ul>
@@ -495,7 +496,7 @@ const TechnologiesSection = () => (
         <div className="tech-category">
           <h3>Cloud, Data &amp; DevOps</h3>
           <ul>
-            <li>SQL Server 2022 / PostgreSQL</li>
+            <li>SQL Server / PostgreSQL</li>
             <li>Microsoft Azure &amp; AWS</li>
             <li>Docker &amp; Kubernetes</li>
             <li>CI/CD (GitHub Actions, Azure DevOps)</li>
@@ -507,7 +508,7 @@ const TechnologiesSection = () => (
   </section>
 );
 
-/* ─── Trust Band (unchanged design, improved numbers/content) ──── */
+/* ─── Trust Band ────────────────────────────────────────────────── */
 const TrustBand = () => (
   <section
     aria-label="QllmSoft verified performance metrics"
@@ -599,25 +600,24 @@ const Services = () => {
   return (
     <>
       {/* ═══════════════════════════════════════════
-          SEO HEAD — react-helmet-async
+          SEO HEAD
       ═══════════════════════════════════════════ */}
       <Helmet>
-        {/* Title — 60 chars, commercial + service intent */}
+        {/* Title, 60 chars, solution-first + brand */}
         <title>
-          Software Development Services in Pakistan | Custom Web, Mobile & .NET
-          | QllmSoft
+          Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft
         </title>
 
-        {/* Description — 158 chars */}
+        {/* Description, 158 chars */}
         <meta
           name="description"
-          content="QllmSoft provides custom software development services in Pakistan — ASP.NET Core enterprise web apps, mobile app development, REST API, AI solutions & dedicated developer hiring. Free quote in 24 hours."
+          content="QllmSoft delivers custom software development services in Pakistan, enterprise web apps, mobile apps, business automation, AI solutions & dedicated developer teams. Free quote in 24 hours."
         />
 
-        {/* Keywords */}
+        {/* Keywords, solution-first, service + stack mix */}
         <meta
           name="keywords"
-          content="software development services Pakistan, custom software development services Pakistan, web application development services Pakistan, mobile app development Pakistan, ASP.NET Core development Pakistan, REST API development Pakistan, software development company Pakistan, enterprise software Pakistan, outsource software development Pakistan"
+          content="software development services Pakistan, custom software solutions Pakistan, IT services Pakistan, enterprise software solutions Pakistan, web application development Pakistan, mobile app development Pakistan, business software development Pakistan, software outsourcing Pakistan, digital solutions Pakistan, .NET development Pakistan, React development Pakistan, Flutter app development Pakistan, healthcare software Pakistan, education software Pakistan"
         />
 
         <meta name="author" content="QllmSoft" />
@@ -633,11 +633,11 @@ const Services = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Software Development Services in Pakistan | Web, Mobile & .NET | QllmSoft"
+          content="Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Custom software development services in Pakistan — ASP.NET Core web apps, mobile apps, REST APIs, AI solutions, and dedicated developer hiring. Free quote in 24 hours."
+          content="Custom software development services in Pakistan, enterprise web apps, mobile apps, business automation, and AI solutions. Free quote in 24 hours."
         />
         <meta
           property="og:image"
@@ -659,7 +659,7 @@ const Services = () => {
         />
         <meta
           name="twitter:description"
-          content="Custom ASP.NET Core web apps, mobile apps, REST APIs, and AI solutions from Pakistan's leading software development company."
+          content="Custom enterprise software, mobile apps, business automation, and AI solutions from Pakistan's trusted software development company."
         />
         <meta
           name="twitter:image"
@@ -688,31 +688,29 @@ const Services = () => {
         {/* ── HERO ── */}
         <section className="services-hero reveal" aria-labelledby="svc-hero-h1">
           <div className="container">
-            {/* ✅ SINGLE H1 */}
+            {/* ✅ SINGLE H1, solution-first, broad commercial intent */}
             <h1 id="svc-hero-h1">
-              Custom Software Development Services in Pakistan — Web, Mobile
-              &amp; Enterprise
+              Custom Software Development Services in Pakistan, Built Around Your Business
             </h1>
             <p>
-              QllmSoft engineers production-ready enterprise software for
-              businesses that need more than a template. We build{" "}
+              QllmSoft engineers production-ready digital solutions for businesses that need more
+              than a generic tool. We build{" "}
               <Link to="/web-application-development-services">
-                ASP.NET Core web applications
+                enterprise web applications
               </Link>
               ,{" "}
               <Link to="/mobile-app-development">
-                Android and iOS mobile apps
+                mobile apps for Android and iOS
               </Link>
               ,{" "}
-              <Link to="/api-development-services">REST and GraphQL APIs</Link>,
-              and{" "}
+              <Link to="/api-development-services">business automation systems</Link>
+              , and{" "}
               <Link to="/ai-powered-software-solutions">
-                AI-powered automation tools
+                AI-powered software solutions
               </Link>{" "}
-              — delivered on a fixed price, with a documented scope, on an
-              agreed timeline. Serving businesses across Pakistan, the UK, USA,
-              UAE, and Saudi Arabia since 2015 with a verified 100% Upwork Job
-              Success Score.
+             , delivered on a fixed price, with a documented scope, on an agreed timeline.
+              Serving businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia since
+              2015 with a verified 100% Upwork Job Success Score.
             </p>
           </div>
         </section>
@@ -728,21 +726,15 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="svc-list-h2">
-                Our Software Development Services in Pakistan — Full Capability
+                Our Software Development Services, Full Capability Overview
               </h2>
               <p>
-                End-to-end Custom and Enterprise software development services
-                built entirely around your business goals — not generic
-                templates, not pre-built SaaS tools stretched to fit. While
-                QllmSoft operates as an
-                <strong>
-                  {" "}
-                  enterprise software development company in Pakistan
-                </strong>
-                , this page outlines the full range of services we deliver, We
-                serve businesses in Lahore, Karachi, Islamabad, Faisalabad,
-                Sialkot, Gujranwala, and internationally across four continents.
-                Explore our full range of{" "}
+                End-to-end digital solutions built entirely around your business goals, not
+                generic templates or pre-built tools stretched to fit. As a{" "}
+                <strong>custom software development company in Pakistan</strong>, QllmSoft
+                serves businesses in Lahore, Karachi, Islamabad, Faisalabad, Sialkot,
+                Gujranwala, and internationally across four continents. Explore our full range
+                of{" "}
                 <Link to="/custom-software-development-services">
                   custom software development services
                 </Link>
@@ -752,7 +744,7 @@ const Services = () => {
                 </Link>
                 , and{" "}
                 <Link to="/hire-dotnet-developers-pakistan">
-                  dedicated .NET developer hiring
+                  dedicated developer hiring
                 </Link>
                 .
               </p>
@@ -789,15 +781,13 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="process-h2">
-                Our 6-Phase Software Development Process — Structured,
-                Transparent, Accountable
+                Our 6-Phase Delivery Process, Structured, Transparent, Accountable
               </h2>
               <p>
-                A delivery framework built around one principle: you should
-                always know what we are building, when it will be done, and
-                exactly what it costs — before a single line of code is written.
-                Our process eliminates scope ambiguity, prevents budget
-                surprises, and ensures every software project arrives
+                A delivery framework built around one principle: you should always know what
+                we are building, when it will be done, and exactly what it costs, before a
+                single line of code is written. Our process eliminates scope ambiguity,
+                prevents budget surprises, and ensures every software project arrives
                 production-ready on the agreed date.
               </p>
             </div>
@@ -806,24 +796,22 @@ const Services = () => {
                 <div className="process-number">01</div>
                 <h3>Discovery &amp; Requirements Analysis</h3>
                 <p>
-                  We conduct a structured requirements workshop covering your
-                  business goals, user journeys, technical constraints, and
-                  integration requirements. The output is a formal scope
-                  document and fixed-price breakdown — approved by you before
-                  any development begins. No ambiguity, no scope creep.
+                  We conduct a structured requirements workshop covering your business goals,
+                  user journeys, technical constraints, and integration requirements. The
+                  output is a formal scope document and fixed-price breakdown, approved by
+                  you before any development begins. No ambiguity, no scope creep.
                 </p>
               </div>
 
               <div className="process-step reveal reveal-delay-2">
                 <div className="process-number">02</div>
-                <h3>Architecture &amp; Technical Planning</h3>
+                <h3>Solution Architecture &amp; Technical Planning</h3>
                 <p>
-                  Our architects design a clean, scalable system architecture
-                  with technology selection rationale, sprint plan, database
-                  schema, API contract design, and security architecture
-                  document — all formally reviewed and approved before coding
-                  starts. The right architecture decision at this stage saves
-                  months of refactoring later.
+                  Our architects design a clean, scalable system with technology selection
+                  rationale, sprint plan, database schema, API contract design, and security
+                  architecture document, all formally reviewed and approved before coding
+                  starts. The right architecture decision at this stage saves months of
+                  refactoring later.
                 </p>
               </div>
 
@@ -831,10 +819,9 @@ const Services = () => {
                 <div className="process-number">03</div>
                 <h3>Agile Development in 2-Week Sprints</h3>
                 <p>
-                  Clean, SOLID-principled code delivered in structured two-week
-                  sprints with weekly live demos on shared staging environments.
-                  You control backlog priority throughout — adjusting feature
-                  order based on your business timeline while we maintain
+                  Clean, well-structured code delivered in two-week sprints with weekly live
+                  demos on shared staging environments. You control backlog priority throughout
+                 , adjusting feature order based on your business timeline while we maintain
                   development velocity and code quality standards.
                 </p>
               </div>
@@ -843,11 +830,10 @@ const Services = () => {
                 <div className="process-number">04</div>
                 <h3>QA, Security Testing &amp; Performance Audit</h3>
                 <p>
-                  Automated regression tests, manual QA on real devices, OWASP
-                  Top 10 security validation, load testing against agreed
-                  performance SLAs, and full penetration testing run before
-                  every production release. Nothing ships until it passes our
-                  complete quality standard — not a simplified version of it.
+                  Automated regression tests, manual QA on real devices, OWASP Top 10 security
+                  validation, load testing against agreed performance SLAs, and penetration
+                  testing before every production release. Nothing ships until it passes our
+                  complete quality standard.
                 </p>
               </div>
 
@@ -855,10 +841,8 @@ const Services = () => {
                 <div className="process-number">05</div>
                 <h3>Deployment &amp; CI/CD Pipeline Setup</h3>
                 <p>
-                  Zero-downtime production deployment to Azure, AWS, or
-                  on-premise environments — with full CI/CD pipeline
-                  configuration, environment documentation, SSL certificate
-                  management, monitoring dashboard setup, and complete handover
+                  Zero-downtime production deployment with full pipeline configuration,
+                  environment documentation, monitoring dashboard setup, and complete handover
                   to your infrastructure team or direct management.
                 </p>
               </div>
@@ -867,12 +851,10 @@ const Services = () => {
                 <div className="process-number">06</div>
                 <h3>30-Day Hyper-Care &amp; Long-Term Support</h3>
                 <p>
-                  Every QllmSoft project includes a formal 30-day post-launch
-                  hyper-care window — bug resolution, performance monitoring,
-                  security patch management, and complete knowledge transfer to
-                  your internal team. Long-term maintenance contracts are
-                  available for ongoing feature development and system
-                  optimisation.
+                  Every QllmSoft project includes a formal 30-day post-launch hyper-care
+                  window, bug resolution, performance monitoring, security patch management,
+                  and complete knowledge transfer to your team. Long-term maintenance contracts
+                  are available for ongoing development and optimisation.
                 </p>
               </div>
             </div>
@@ -891,13 +873,11 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="explore-heading">
-                Explore Our Specialised Software Development Services in
-                Pakistan
+                Explore Our Specialised Software Development Services in Pakistan
               </h2>
               <p>
-                Deep-dive into each service area — with detailed capability
-                breakdowns, technology stacks, pricing guides, and
-                industry-specific case studies.
+                Deep-dive into each service area, with detailed capability breakdowns,
+                industry focus, and real project examples.
               </p>
             </div>
             <nav
@@ -909,52 +889,52 @@ const Services = () => {
                   {
                     to: "/custom-software-development-services",
                     title: "Custom Software Development",
-                    desc: "Bespoke enterprise applications built from scratch around your exact business requirements — not adapted from templates.",
+                    desc: "Bespoke enterprise applications built from scratch around your exact business requirements, not adapted from templates.",
                   },
                   {
                     to: "/web-application-development-services",
-                    title: "Web Application Development (ASP.NET Core)",
-                    desc: "Enterprise-grade ASP.NET Core web applications, SaaS platforms, and microservices — OWASP-compliant and Azure-deployed.",
+                    title: "Enterprise Web Application Development",
+                    desc: "Scalable, secure enterprise web platforms, internal portals, and SaaS applications designed for real operational workloads.",
                   },
                   {
                     to: "/mobile-app-development",
                     title: "Mobile App Development",
-                    desc: "Flutter and React Native cross-platform apps for Android and iOS — with offline capability and API-first architecture.",
+                    desc: "Cross-platform mobile apps for Android and iOS, with offline capability, push notifications, and seamless backend integration.",
                   },
                   {
                     to: "/api-development-services",
-                    title: "REST & GraphQL API Development",
-                    desc: "Secure, documented, and tested APIs with OpenAPI 3.0, JWT auth, and OWASP compliance on every endpoint.",
+                    title: "API Development &amp; System Integration",
+                    desc: "Secure, documented, and tested APIs enabling seamless integration across web apps, mobile platforms, and enterprise systems.",
                   },
                   {
                     to: "/ai-powered-software-solutions",
                     title: "AI-Powered Software Solutions",
-                    desc: "Machine learning, NLP, computer vision, and LLM integrations built into your products — measurable ROI, not demos.",
+                    desc: "Machine learning, NLP, computer vision, and intelligent automation embedded into your products, measurable ROI, not demos.",
                   },
                   {
                     to: "/outsource-software-development-to-pakistan",
-                    title: "Outsource Software to Pakistan",
-                    desc: "Senior .NET, React, Flutter, and AI developers at 60% lower cost — fixed-price, full IP ownership, NDA day one.",
+                    title: "Outsource Software Development to Pakistan",
+                    desc: "Senior engineers and full-stack development teams at 60% lower cost, fixed-price, full IP ownership, NDA from day one.",
                   },
                   {
                     to: "/legacy-system-modernization-services",
-                    title: "Legacy System Modernization",
-                    desc: "Phased, zero-disruption .NET Framework to ASP.NET Core migration — business logic preserved, technical debt eliminated.",
+                    title: "Legacy System Modernisation",
+                    desc: "Phased, zero-disruption migration from outdated systems to modern, maintainable platforms, business logic fully preserved.",
                   },
                   {
                     to: "/healthcare-software-development-pakistan",
                     title: "Healthcare Software Development",
-                    desc: "HIPAA-aware HMS, telemedicine apps, EMR/EHR systems, and clinic management software for Pakistani healthcare providers.",
+                    desc: "Hospital management systems, telemedicine platforms, EMR/EHR, and clinic software for Pakistani healthcare providers.",
                   },
                   {
                     to: "/education-software-development-pakistan",
                     title: "Education Software Development",
-                    desc: "School management systems, LMS platforms, and eLearning apps — with JazzCash fee integration for Pakistani institutions.",
+                    desc: "School management systems, LMS platforms, and eLearning apps, with JazzCash fee integration for Pakistani institutions.",
                   },
                   {
                     to: "/hire-dotnet-developers-pakistan",
-                    title: "Hire .NET Developers in Pakistan",
-                    desc: "Dedicated ASP.NET Core and C# developers available full-time within 24–48 hours — fixed-rate, no recruitment overhead.",
+                    title: "Hire Dedicated Developers in Pakistan",
+                    desc: "Dedicated web, mobile, and AI engineers available full-time within 24–48 hours, fixed-rate, no recruitment overhead.",
                   },
                 ].map((item) => (
                   <article key={item.to} className="why-card">
@@ -977,12 +957,11 @@ const Services = () => {
                 Ready to Build Software That Drives Real Business Growth?
               </h2>
               <p>
-                Tell us what you need to build. QllmSoft will review your
-                requirements, send a detailed fixed-price proposal within 24
-                hours, and schedule a free discovery call — no commitment
-                required. Businesses in Pakistan, the UK, USA, UAE, and Saudi
-                Arabia trust QllmSoft to deliver. We look forward to earning
-                that trust from you.
+                Tell us what you need to build. QllmSoft will review your requirements, send
+                a detailed fixed-price proposal within 24 hours, and schedule a free discovery
+                call, no commitment required. Businesses in Pakistan, the UK, USA, UAE, and
+                Saudi Arabia trust QllmSoft to deliver. We look forward to earning that trust
+                from you.
               </p>
               <Link
                 to="/contact"

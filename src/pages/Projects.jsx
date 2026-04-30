@@ -38,7 +38,7 @@ const schemaWebPage = {
   name: 'Software Development Portfolio & Case Studies | QllmSoft Pakistan',
   url: 'https://qllmsoft.com/projects',
   description:
-    'Explore QllmSoft\'s verified software development portfolio — enterprise web applications, mobile apps, REST APIs, SaaS platforms, and custom software solutions delivered for clients in Pakistan, UK, USA, UAE, and Saudi Arabia.',
+    'Explore QllmSoft\'s verified portfolio of 50+ custom software development projects delivered since 2015 — enterprise web applications built with ASP.NET Core, cross-platform mobile apps, REST and GraphQL APIs, SaaS platforms, and AI-powered business automation tools. Our agency has maintained a 100% on-time delivery record across 50+ satisfied clients in Pakistan, the UK, USA, UAE, and Saudi Arabia. Every project is independently verifiable on our portfolio.',
   publisher: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
   breadcrumb: {
     '@type': 'BreadcrumbList',
@@ -222,7 +222,7 @@ const Projects = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="grid-heading">
-                Our Custom Software Development Projects in Pakistan
+              Our 50+ Custom Software Development Projects — Pakistan &amp; Global
               </h2>
               <p>
                 Real-world case studies showcasing QllmSoft's expertise in building scalable, secure,
@@ -353,10 +353,11 @@ const Projects = () => {
             <div className="portfolio-box reveal">
               <h2>Download QllmSoft's Software Development Portfolio PDF</h2>
               <p>
-                Get a comprehensive overview of our technical capabilities, development methodology,
-                client success stories, and industry-specific software expertise. Our portfolio PDF
-                includes architecture diagrams, technology stacks, and quantifiable project outcomes —
-                everything you need to evaluate QllmSoft as your software development partner in Pakistan.
+              Get a comprehensive overview of QllmSoft's 10+ years of technical capabilities, development
+methodology, and 50+ client success stories across six industries. Our portfolio PDF covers
+verified project outcomes, architecture approaches, and technology stacks used across engagements
+in Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan — with a 100% on-time delivery record
+maintained since 2015.
               </p>
               <a
                 href="/pdfs/QllmSoft-Company-Portfolio.pdf"
@@ -519,11 +520,12 @@ const Projects = () => {
                 <summary itemProp="name">Why choose QllmSoft over other software houses in Pakistan?</summary>
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text">
-                    QllmSoft differentiates through three things most software houses cannot independently
-                    verify: a 100% Job Success Score on Upwork, 5-star reviews on Freelancer from clients
-                    across four continents, and a portfolio of production systems still running for global
-                    clients. We focus on business outcomes — understanding your processes and building
-                    software that genuinely improves operational efficiency and revenue potential.
+                  QllmSoft differentiates through four things most software agencies in Pakistan cannot
+independently verify: 10+ years of continuous operation since 2015, a 100% Job Success
+Score on Upwork, 5-star reviews on Freelancer from 50+ clients across four continents,
+and a 100% on-time delivery record across every engagement we have undertaken. We focus
+on business outcomes — understanding your processes and building software that genuinely
+improves operational efficiency and revenue potential.
                   </p>
                 </div>
               </details>

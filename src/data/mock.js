@@ -167,6 +167,19 @@ export const servicesData = [
       "• Codebase refactoring",
       "• Performance optimization"
     ]
+  },
+  {
+    id: 6,
+    name: "Digital Marketing & SEO",
+    description: "We help businesses grow their online presence through data-driven digital marketing and SEO strategies. From improving search engine rankings to generating qualified leads, our approach focuses on measurable results and long-term growth.",
+    image: CustomSoftwareDevelopment,
+    features: [
+      "• Search engine optimization (SEO)",
+      "• On-page & technical SEO",
+      "• Keyword research & strategy",
+      "• Social media marketing",
+      "• Performance tracking & analytics"
+    ]
   }
 ];
 

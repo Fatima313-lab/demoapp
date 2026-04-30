@@ -29,7 +29,7 @@
 .services-hero {
   background:
     linear-gradient(135deg, rgba(26, 54, 93, 0.95), rgba(43, 108, 176, 0.15)),
-    url("../assets/ServiceHero.jpg")
+    url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1600&q=80")
     center / cover no-repeat;
   padding: 100px 0 80px;
   text-align: center;
@@ -52,33 +52,6 @@
 }
 
 
-
-/* ══════════════════════════════════════════
-   TRUST BAND
-══════════════════════════════════════════ */
-.trust-band {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.trust-band-item {
-  flex: 1 1 auto;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 20px 24px;
-  text-align: center;
-}
-
-.trust-band-item:last-child {
-  border-right: none;
-}
-
-
-/* ══════════════════════════════════════════
-   SERVICES LIST
-══════════════════════════════════════════ */
-.services-list {
-  background-color: #ffffff;
-}
 
 .services-detailed-grid {
   display: flex;

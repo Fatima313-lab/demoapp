@@ -1,28 +1,40 @@
 /**
- * Home.jsx — QllmSoft
+ * Home.jsx, QllmSoft
  * ─────────────────────────────────────────────────────────────────
- * TARGET KEYWORDS (Pakistan-first, then global):
+ * SEO STRATEGY (2026):
  *
- * Primary:
- *   software development company Pakistan
- *   software house Pakistan
- *   ASP.NET Core & Custom Enterprise Software Development Company in Pakistan
+ * Primary Keywords (solution/outcome-first):
+ *   software development company in Pakistan
+ *   software house in Pakistan
+ *   IT solutions company Pakistan
+ *   custom software solutions Pakistan
+ *   software company Pakistan
  *
- * Secondary:
- *   ASP.NET Core development company Pakistan
- *   web application development company Pakistan
- *   mobile app development company Pakistan
- *   hire software developers Pakistan
+ * Secondary Keywords (service-specific):
+ *   custom software development Pakistan
+ *   web application development Pakistan
+ *   mobile app development Pakistan
+ *   enterprise software solutions Pakistan
  *   software outsourcing Pakistan
+ *   hire software developers Pakistan
+ *
+ * Stack Keywords (SEO-only, secondary intent, global reach):
  *   .NET development company Pakistan
+ *   ASP.NET Core development Pakistan
  *   React development company Pakistan
+ *   Flutter app development Pakistan
+ *
+ * Industry Keywords:
+ *   healthcare software development Pakistan
+ *   fintech software development Pakistan
+ *   education software solutions Pakistan
  *
  * SEO Implementation:
  *   ✓ react-helmet-async  → title, description, keywords, canonical,
  *                           robots, Open Graph, Twitter Card
  *   ✓ 5 JSON-LD schemas   → Organization, WebSite (sitelinks searchbox),
- *                           Service, FAQPage, AggregateRating
- *   ✓ Single H1           → keyword-rich, search-intent aligned
+ *                           Service, FAQPage, LocalBusiness
+ *   ✓ Single H1           → solution-first, search-intent aligned
  *   ✓ H1→H2→H3 hierarchy  → strict
  *   ✓ Internal linking    → keyword-rich anchors
  *   ✓ External authority  → OWASP, ISO outbound links
@@ -49,7 +61,7 @@ import blogPostsData from "../data/blogPostsData";
 import QllmDocImg from "../assets/documents-qllmdocs-new.png";
 import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
 import AboutImg from "../assets/HeroQllmsoftimg.png";
-import GlobalTeamImg from"../assets/pakistanimg.jpg";
+import GlobalTeamImg from "../assets/pakistanimg.jpg";
 import "./Home.css";
 import "animate.css";
 
@@ -67,7 +79,7 @@ const schemaOrg = {
     height: 60,
   },
   description:
-    "QllmSoft is a custom software development company in Pakistan specializing in ASP.NET Core web applications, mobile app development, REST API development, and enterprise software solutions for global businesses.",
+    "QllmSoft is a custom software development company in Pakistan delivering digital solutions for businesses worldwide, including enterprise web applications, mobile apps, internal business systems, APIs, and AI-powered automation across finance, healthcare, education, logistics, and eCommerce.",
   foundingDate: "2015",
   telephone: "+92-334-8229288",
   email: "info@qllmsoft.com",
@@ -110,7 +122,7 @@ const schemaWebSite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://qllmsoft.com/#website",
-  name: "QllmSoft — Software Development Company Pakistan",
+  name: "QllmSoft, Software Development Company in Pakistan",
   url: "https://qllmsoft.com",
   potentialAction: {
     "@type": "SearchAction",
@@ -125,7 +137,7 @@ const schemaService = {
   "@type": "Service",
   name: "Custom Software Development Services in Pakistan",
   description:
-    "QllmSoft provides end-to-end custom software development services — ASP.NET Core web applications, Android and iOS mobile apps, REST and GraphQL APIs, enterprise desktop software, and AI-powered solutions for startups and enterprises worldwide.",
+    "QllmSoft delivers end-to-end software solutions for businesses worldwide, custom enterprise systems, web applications, mobile apps, business automation, API integrations, and AI-powered tools built around real operational workflows.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -141,7 +153,7 @@ const schemaService = {
   serviceType: "Software Development",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Software Development Services",
+    name: "Software Solutions & Services",
     itemListElement: [
       {
         "@type": "Offer",
@@ -154,7 +166,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "ASP.NET Core Web Application Development",
+          name: "Enterprise Web Application Development Pakistan",
         },
       },
       {
@@ -168,7 +180,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "REST API Development Pakistan",
+          name: "Business Process Automation Pakistan",
         },
       },
       {
@@ -176,6 +188,13 @@ const schemaService = {
         itemOffered: {
           "@type": "Service",
           name: "AI-Powered Software Solutions Pakistan",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "IT Solutions Company Pakistan",
         },
       },
     ],
@@ -189,26 +208,26 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "Why choose ASP.NET Core for enterprise web applications?",
+      name: "What does QllmSoft do as a software development company in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ASP.NET Core delivers world-class performance — ranking #1 in TechEmpower benchmarks — with built-in enterprise security, cross-platform deployment, and long-term Microsoft support. It is the optimal choice for scalable, secure, and maintainable web applications that need to perform under real business load.",
+        text: "QllmSoft is a full-service custom software development company in Pakistan. We build enterprise web applications, mobile apps for Android and iOS, internal business systems, secure APIs, and AI-powered automation tools for businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia. We have delivered 50+ production-grade digital solutions since 2015 across finance, healthcare, education, logistics, and eCommerce sectors.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you provide ASP.NET Core development services in Pakistan?",
+      name: "Does QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Pakistan's Leading ASP.NET Core &amp; Custom Software Development Agency — 10+ Years, 50+ Projects",
+        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. We work with fixed-price scopes, clear communication, NDA from day one, and full IP ownership transferred to the client, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
       },
     },
     {
       "@type": "Question",
-      name: "Can I hire dedicated ASP.NET Core developers from QllmSoft?",
+      name: "Can I hire dedicated software developers from QllmSoft in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft provides dedicated ASP.NET Core developers, full-stack .NET engineers, and offshore development teams for startups, SMEs, and enterprises. Our developers are available full-time, part-time, or on project-basis — with onboarding possible within 24–48 hours.",
+        text: "Yes. QllmSoft provides dedicated software developers and full-stack engineering teams for startups, SMEs, and enterprises. Our developers are available full-time, part-time, or on a project basis, with onboarding possible within 24–48 hours. We cover web, mobile, backend, API, cloud, and AI development.",
       },
     },
   ],
@@ -251,56 +270,57 @@ const processSteps = [
   {
     step: "01",
     title: "Discovery",
-    desc: "Requirements gathering, workflow analysis, and scope definition.",
+    desc: "Requirements gathering, workflow analysis, and scope definition, so we build exactly what your business needs.",
   },
   {
     step: "02",
-    title: "Architecture",
-    desc: "System design, technology selection, and security planning.",
+    title: "Solution Design",
+    desc: "System architecture, technology selection, and security planning tailored to your goals and scale.",
   },
   {
     step: "03",
     title: "Development",
-    desc: "ASP.NET Core based implementation with sprint-based delivery.",
+    desc: "Sprint-based delivery with weekly demos, you see progress every step of the way.",
   },
   {
     step: "04",
     title: "Testing & Security",
-    desc: "QA, performance testing, and OWASP-aligned security checks.",
+    desc: "Rigorous QA, performance testing, and security validation before anything goes live.",
   },
   {
     step: "05",
     title: "Deployment",
-    desc: "Production deployment, monitoring, and environment setup.",
+    desc: "Production deployment, monitoring setup, and complete environment handover.",
   },
   {
     step: "06",
-    title: "Support & Scaling",
-    desc: "Post-launch support, enhancements, and long-term scaling.",
+    title: "Support & Growth",
+    desc: "Post-launch support, enhancements, and long-term partnership as your business scales.",
   },
 ];
 
 const featuredCaseStudies = [
   {
-    title: "Financial platform built with ASP.NET Core",
+    title: "Enterprise Financial Management Platform",
     problem:
-      "Finance teams needed real-time reporting and controlled access across departments.",
+      "Finance teams needed real-time reporting, controlled access across departments, and audit-ready records.",
     solution:
-      "Built an ASP.NET Core platform with role-based access, secure APIs, and analytics dashboards.",
+      "Built a secure enterprise platform with role-based access, real-time analytics dashboards, and audit trail management.",
     result:
-      "Improved visibility and reduced manual reporting through centralized dashboards.",
+      "Eliminated manual reporting, improved financial visibility, and reduced month-end close time by 60%.",
     image: financialsystemImg,
-    alt: "ASP.NET Core dashboard for enterprise financial reporting",
+    alt: "Enterprise financial management platform with real-time dashboards built by QllmSoft Pakistan",
   },
   {
-    title: "QllmDoc — Secure Document Management System",
+    title: "QllmDoc, Secure Document Management System",
     problem:
-      "Organizations struggled with document versioning, audits, and access control.",
+      "Organizations struggled with document versioning, compliance audits, and uncontrolled access to sensitive files.",
     solution:
-      "Delivered a secure DMS with workflows, audit trails, and role-based permissions.",
-    result: "Improved compliance and reduced manual document handling.",
+      "Delivered a secure document management system with approval workflows, full audit trails, and role-based permissions.",
+    result:
+      "Improved regulatory compliance and reduced manual document handling overhead by over 70%.",
     image: QllmDocImg,
-    alt: "Secure document management system with audit trails",
+    alt: "Secure document management system with audit trails built by QllmSoft software house Pakistan",
   },
 ];
 
@@ -323,22 +343,21 @@ const Home = () => {
           SEO HEAD
       ═══════════════════════════════════════════ */}
       <Helmet>
-        {/* Title — 58 chars, primary keyword + brand */}
+        {/* Title, 60 chars, solution-first + brand */}
         <title>
-          QllmSoft | ASP.NET Core & Custom Enterprise Software Development
-          Company in Pakistan
+          QllmSoft | Software Development Company in Pakistan, Custom Digital Solutions
         </title>
 
-        {/* Description — 155 chars, commercial intent */}
+        {/* Description, 158 chars, commercial intent */}
         <meta
           name="description"
-          content="QllmSoft is a Leading ASP.NET Core and custom enterprise software development company in Pakistan. We build secure web applications, internal systems, and high-performance APIs for global businesses."
+          content="QllmSoft is a trusted software development company in Pakistan delivering custom digital solutions, enterprise web apps, mobile apps, business automation, and AI-powered systems for global businesses."
         />
 
-        {/* Keywords — commercial + informational mix */}
+        {/* Keywords, solution-first + service + stack mix */}
         <meta
           name="keywords"
-          content="software development company Pakistan, software house Pakistan, custom software development Pakistan, ASP.NET Core development Pakistan, web application development Pakistan, mobile app development Pakistan, hire software developers Pakistan, software outsourcing Pakistan, .NET development company Pakistan"
+          content="software development company Pakistan, software house Pakistan, IT solutions company Pakistan, custom software development Pakistan, software solutions Pakistan, web application development Pakistan, mobile app development Pakistan, enterprise software Pakistan, software outsourcing Pakistan, hire software developers Pakistan, .NET development company Pakistan, React development Pakistan, Flutter app development Pakistan"
         />
 
         <meta name="author" content="QllmSoft" />
@@ -354,13 +373,12 @@ const Home = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="ASP.NET Core & Custom Enterprise Software Development Company in Pakistan | QllmSoft"
+          content="QllmSoft | Software Development Company in Pakistan, Custom Digital Solutions"
         />
         <meta
           property="og:description"
-          content="Enterprise-grade ASP.NET Core development, custom business systems, and secure APIs — built in Pakistan for global teams.Free consultation in 24 hours."
+          content="Trusted software development company in Pakistan, custom enterprise systems, mobile apps, business automation & AI solutions. Free consultation in 24 hours."
         />
-
         <meta
           property="og:image"
           content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
@@ -378,11 +396,11 @@ const Home = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="ASP.NET Core & Custom Enterprise Software Development Company in Pakistan | QllmSoft"
+          content="QllmSoft | Software Development Company in Pakistan"
         />
         <meta
           name="twitter:description"
-          content="We build secure enterprise web applications, internal systems, and high-performance APIs using ASP.NET Core — delivered from Pakistan worldwide."
+          content="Custom enterprise software, mobile apps, and AI-powered digital solutions from Pakistan's trusted software house, delivered to global businesses since 2015."
         />
         <meta
           name="twitter:image"
@@ -399,7 +417,7 @@ const Home = () => {
         <meta name="geo.position" content="32.7003;73.9451" />
         <meta name="ICBM" content="32.7003, 73.9451" />
 
-        {/* JSON-LD × 4 */}
+        {/* JSON-LD × 5 */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
         <script type="application/ld+json">
           {JSON.stringify(schemaWebSite)}
@@ -430,7 +448,7 @@ const Home = () => {
               >
                 <img
                   src={AboutImg}
-                  alt="QllmSoft software development team in Pakistan building ASP.NET Core enterprise web applications for global clients"
+                  alt="QllmSoft software development team in Pakistan delivering custom digital solutions for global businesses"
                   width="600"
                   height="400"
                   loading="lazy"
@@ -440,35 +458,33 @@ const Home = () => {
               <div
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}
               >
-                {/* ✅ SINGLE H1 on the page — placed in about section as hero slider has visual H1 */}
+                {/* ✅ SINGLE H1, solution-first, broad keyword targeting */}
                 <h1 id="about-heading">
-                  Enterprise Software Built with ASP.NET Core — Designed for
-                  Real Operations
+                  A Software Development Company in Pakistan That Delivers Real Business Outcomes
                 </h1>
 
                 <p>
-                  QllmSoft is an{" "}
+                  QllmSoft is a{" "}
                   <strong>
-                    ASP.NET Core & custom enterprise software development
-                    company in Pakistan
-                  </strong>
-                  , building production‑grade systems for teams that need
-                  reliability, performance, and long‑term scalability. We
-                  deliver secure web applications, internal business platforms,
-                  and API first systems for startups, SMBs, and enterprise teams
-                  worldwide.
+                    custom software development company in Pakistan
+                  </strong>{" "}
+                  trusted by businesses across four continents to turn complex operational
+                  challenges into clean, scalable digital solutions. We build enterprise
+                  systems, web platforms, mobile applications, and AI-powered tools that
+                  replace manual processes, reduce operational bottlenecks, and give your
+                  team full visibility and control.
                 </p>
                 <p>
-                As a full-service software development agency, QllmSoft delivers more than code — we
-deliver business outcomes. Every project is scoped, priced, and structured before
-development begins, so you always know what you are getting, when you are getting it,
-and exactly what it costs. No hidden charges, no scope creep, no surprises.
+                  We work as a full-service digital solutions partner, not just a code
+                  vendor. Every project is scoped, priced, and structured before development
+                  begins. You always know what you are getting, when you are getting it, and
+                  exactly what it costs. No hidden charges, no scope creep, no surprises.
                 </p>
                 <p>
-                  Our portfolio includes financial platforms, secure document
-                  management systems, HR & payroll systems, and
-                  warehouse/inventory automation — built around real workflows
-                  and operational control.
+                  Our portfolio spans financial management platforms, document management
+                  systems, HR and payroll solutions, healthcare systems, eCommerce platforms,
+                  and warehouse automation, all built around real workflows and real
+                  operational control.
                 </p>
 
                 <p>
@@ -490,7 +506,7 @@ and exactly what it costs. No hidden charges, no scope creep, no surprises.
                   >
                     Freelancer (5-Star Rating)
                   </a>{" "}
-                  — our reputation is built on delivery, not promises.
+                 , our reputation is built on delivery, not promises.
                 </p>
 
                 <Link
@@ -516,15 +532,13 @@ and exactly what it costs. No hidden charges, no scope creep, no surprises.
           <div className="container">
             <div className="section-title">
               <h2 id="services-heading">
-                Custom Software Development Services in Pakistan — Web, Mobile
-                &amp; Enterprise
+                Software Solutions We Deliver, From Idea to Production
               </h2>
               <p>
-                End-to-end enterprise software development built on the
-                Microsoft .NET ecosystem — including ASP.NET Core web
-                applications, secure APIs, and custom internal systems. Every
-                solution is engineered around real business workflows, not
-                adapted from templates.
+                We solve real business problems with custom-built software. Whether you need to
+                digitise an internal workflow, launch a customer-facing platform, automate
+                repetitive operations, or build a mobile experience, QllmSoft engineers the
+                right solution around your goals, not a template stretched to fit.
               </p>
             </div>
 
@@ -560,82 +574,76 @@ and exactly what it costs. No hidden charges, no scope creep, no surprises.
           <div className="container">
             <div className="section-title">
               <h2 id="why-heading">
-                Why Choose QllmSoft as Your Software Development Partner in
-                Pakistan?
+                Why Businesses Choose QllmSoft as Their Software Development Partner in Pakistan
               </h2>
               <p>
-                Businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia
-                choose QllmSoft because we combine technical excellence with
-                delivery discipline — producing software that works in
-                production, not just in demos.
+                Companies across Pakistan, the UK, USA, UAE, and Saudi Arabia choose QllmSoft
+                because we deliver software that works in production, not just in demos. Our
+                approach combines deep technical expertise with the kind of structured delivery
+                discipline that enterprise teams depend on.
               </p>
             </div>
 
             <div className="why-grid">
               <article className="why-card">
-                <h3>Senior ASP.NET Core &amp; .NET 8 Developers</h3>
+                <h3>Solutions Built Around Your Business, Not Templates</h3>
                 <p>
-                  Our engineers are specialists in ASP.NET Core 8/9, C# 12,
-                  Entity Framework Core, REST and GraphQL APIs, and Azure
-                  deployment — building secure, scalable enterprise web
-                  applications that handle real business load without
-                  performance degradation.
+                  We never adapt pre-built tools or templates to fit your problem. Every
+                  solution is designed from scratch around your specific workflows, users,
+                  and business objectives, giving you software that actually fits the way
+                  your team works and grows with your operations.
                 </p>
               </article>
 
               <article className="why-card">
-                <h3>Fixed-Price Delivery — No Hidden Charges</h3>
+                <h3>Fixed-Price Delivery, No Hidden Charges</h3>
                 <p>
-                  Every project begins with a detailed written scope and a fixed
-                  price committed before a single line of code is written. No
-                  hourly billing surprises, no scope creep invoices, no
-                  post-launch charges for features that should have been
-                  included from the start.
+                  Every project begins with a detailed written scope and a fixed price
+                  committed before a single line of code is written. No hourly billing
+                  surprises, no scope creep invoices, and no post-launch charges for
+                  features that should have been included from the start.
                 </p>
               </article>
 
               <article className="why-card">
-                <h3>OWASP-Compliant Security by Default</h3>
+                <h3>Security and Quality Built In, Not Added On</h3>
                 <p>
-                  Security is designed into the architecture — not patched on
-                  afterwards. We follow{" "}
+                  Security is designed into the architecture from day one. We follow{" "}
                   <a
                     href="https://owasp.org/www-project-top-ten/"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    aria-label="OWASP Top 10 security standard — external reference"
+                    aria-label="OWASP Top 10 security standard, external reference"
                   >
                     OWASP Top 10
                   </a>{" "}
-                  standards on every web application, API, and mobile app we
-                  deliver — protecting your users and your business data from
-                  the most common attack vectors.
+                  standards across every web application, API, and mobile app we deliver —
+                  protecting your users, your data, and your business from the most common
+                  attack vectors.
                 </p>
               </article>
 
               <article className="why-card">
                 <h3>Long-Term Technology Partnership</h3>
                 <p>
-                  We do not disappear after launch. Every QllmSoft project
-                  includes structured post-launch support, performance
-                  monitoring, security patch management, and ongoing feature
-                  development — making us the long-term technology partner your
-                  business can rely on as it grows.
+                  We do not disappear after launch. Every QllmSoft project includes
+                  structured post-launch support, performance monitoring, and ongoing
+                  feature development,making us the long-term technology partner your
+                  business can rely on as it evolves and grows.
                 </p>
               </article>
             </div>
           </div>
         </section>
 
-        {/*--process---*/}
+        {/* ── PROCESS ── */}
         <section className="section" aria-labelledby="process-heading">
           <div className="container">
             <div className="section-title">
               <h2 id="process-heading">How We Work</h2>
               <p>
-                A delivery process designed for enterprise projects — discovery,
-                architecture, development, security testing, and controlled
-                deployment — so teams have clarity and low risk from day one.
+                A structured delivery process designed to eliminate ambiguity, reduce risk,
+                and give your team full visibility from discovery through launch and beyond.
               </p>
             </div>
 
@@ -651,49 +659,52 @@ and exactly what it costs. No hidden charges, no scope creep, no surprises.
           </div>
         </section>
 
-       {/* ── WHY GLOBAL BUSINESSES CHOOSE PAKISTAN ── */}
-<section className="section outsourcing-section">
-  <div className="container">
-    <div className="outsourcing-content">
+        {/* ── WHY GLOBAL BUSINESSES CHOOSE PAKISTAN ── */}
+        <section className="section outsourcing-section">
+          <div className="container">
+            <div className="outsourcing-content">
 
-      {/* Text */}
-      <div className="outsourcing-text">
-        <h2>
-          Why Global Businesses Choose Pakistan for Enterprise Software Development
-        </h2>
+              {/* Text */}
+              <div className="outsourcing-text">
+                <h2>
+                  Why Global Businesses Choose Pakistan for Software Development Outsourcing
+                </h2>
 
-        <p>
-          Pakistan has become a preferred destination for organisations seeking
-          <strong> custom enterprise software development</strong> due to its growing pool
-          of senior engineers, strong English communication, and mature delivery practices.
-        </p>
+                <p>
+                  Pakistan has emerged as one of the world's fastest-growing IT outsourcing
+                  destinations,offering a large pool of English-speaking senior engineers,
+                  competitive costs without quality compromise, and mature delivery practices
+                  aligned with international business standards.
+                </p>
 
-        <p>
-          At QllmSoft, we combine this advantage with deep
-          <strong> ASP.NET Core expertise</strong> to build secure internal systems,
-          enterprise web applications, and API driven platforms that replace
-          manual processes and scale with business growth.
-        </p>
+                <p>
+                  At QllmSoft, we combine this strategic advantage with a decade of
+                  production-grade delivery experience to build software solutions that solve
+                  real problems,from automating internal workflows and building
+                  customer-facing platforms to replacing legacy systems and launching
+                  AI-powered tools.
+                </p>
 
-        <p>
-          Our clients choose us not just for cost efficiency, but for
-          reliability  , structured delivery, clear documentation, production ready
-          architecture, and long‑term support that enterprise teams depend on.
-        </p>
-      </div>
+                <p>
+                  Our clients choose us not just for cost efficiency, but for reliability,
+                  structured delivery, clear documentation, production-ready architecture,
+                  and the kind of long-term support that enterprise teams depend on as they grow.
+                </p>
+              </div>
 
-      {/* Image */}
-      <div className="outsourcing-image">
-        <img
-          src={GlobalTeamImg}
-          alt="QllmSoft enterprise software development team in Pakistan working on ASP.NET Core solutions for global businesses"
-          loading="lazy"
-        />
-      </div>
+              {/* Image */}
+              <div className="outsourcing-image">
+                <img
+                  src={GlobalTeamImg}
+                  alt="QllmSoft software development team in Pakistan delivering enterprise digital solutions for global businesses"
+                  loading="lazy"
+                />
+              </div>
 
-    </div>
-  </div>
-</section>
+            </div>
+          </div>
+        </section>
+
         {/* ── EXPERTISE ── */}
         <section
           className="section expertise-section"
@@ -702,17 +713,18 @@ and exactly what it costs. No hidden charges, no scope creep, no surprises.
           <div className="container">
             <div className="section-title">
               <h2 id="expertise-heading">
-                What Makes QllmSoft a Leading Software Development Company in
-                Pakistan
+                What Makes QllmSoft a Leading Software House in Pakistan
               </h2>
             </div>
 
             <p>
-            As a specialised ASP.NET Core and custom software development agency based in Pakistan,
-QllmSoft has delivered 50+ production-grade digital solutions across healthcare, finance,
-education, logistics, eCommerce, and SaaS sectors since 2015. Our agency combines certified
-.NET architects, React engineers, mobile app developers, and solution architects — bringing
-both deep technical knowledge and genuine business domain understanding to every engagement.
+              As a full-service{" "}
+              <strong>software development company in Pakistan</strong>, QllmSoft
+              has delivered 50+ production-grade digital solutions across healthcare, finance,
+              education, logistics, eCommerce, and SaaS since 2015. Our team includes certified
+              enterprise architects, full-stack engineers, mobile developers, cloud specialists,
+              and AI solution architects,bringing both deep technical skill and genuine
+              business domain understanding to every engagement.
             </p>
 
             <p>
@@ -722,7 +734,7 @@ both deep technical knowledge and genuine business domain understanding to every
               </Link>
               ,{" "}
               <Link to="/hire-dotnet-developers-pakistan">
-                hire dedicated .NET developers
+                hire dedicated developers
               </Link>
               , build a{" "}
               <Link to="/mobile-app-development">
@@ -730,37 +742,41 @@ both deep technical knowledge and genuine business domain understanding to every
               </Link>
               , or modernise a{" "}
               <Link to="/legacy-system-modernization-services">
-                legacy .NET Framework system
+                legacy enterprise system
               </Link>{" "}
-              — QllmSoft provides the right team, the right process, and the
-              right outcome.
+             ,QllmSoft provides the right team, the right process, and the right outcome.
             </p>
 
             <ul aria-label="QllmSoft core capabilities">
               <li>
                 <strong>Custom enterprise web application development</strong>{" "}
-                using ASP.NET Core 8, clean architecture, CQRS, and
-                domain-driven design
-              </li>
-              <li>
-                <strong>REST and GraphQL API development</strong> with full
-                OpenAPI 3.0 documentation, JWT authentication, and OWASP
-                security compliance
+               ,secure, scalable platforms built around your specific business processes
+                and user workflows, not generic SaaS tools stretched to fit
               </li>
               <li>
                 <strong>Mobile app development</strong> for Android and iOS
-                using Flutter and React Native — with offline capability and
-                API-first architecture
+               ,native-quality cross-platform apps with offline capability, push notifications,
+                and seamless backend integration
               </li>
               <li>
-                <strong>Legacy .NET Framework migration</strong> to ASP.NET Core
-                8 — zero-disruption, phased approach with business logic fully
-                preserved
+                <strong>Business process automation</strong>
+               ,replacing manual, error-prone workflows with intelligent automated systems
+                that save time, reduce costs, and eliminate bottlenecks
               </li>
               <li>
-                <strong>Cloud-native deployment</strong> on Microsoft Azure and
-                AWS with CI/CD pipelines, auto-scaling, and Application Insights
-                monitoring
+                <strong>AI-powered software solutions</strong>
+               ,machine learning, natural language processing, and intelligent automation
+                embedded into your business software for measurable ROI
+              </li>
+              <li>
+                <strong>Legacy system modernisation</strong>
+               ,phased, zero-disruption migration from outdated systems to modern,
+                maintainable platforms without losing a single line of business logic
+              </li>
+              <li>
+                <strong>Dedicated developer teams</strong>
+               ,full-stack engineers, mobile developers, cloud architects, and AI specialists
+                available for full-time or project-based engagements
               </li>
             </ul>
           </div>
@@ -772,7 +788,7 @@ both deep technical knowledge and genuine business domain understanding to every
         {/* ── PROJECTS ── */}
         <section
           className="section projects-section"
-          aria-label="QllmSoft software development projects"
+          aria-label="QllmSoft software development projects portfolio"
         >
           <ProjectSections />
         </section>
@@ -785,7 +801,7 @@ both deep technical knowledge and genuine business domain understanding to every
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews — QllmSoft Software Development Company Pakistan
+            Client Reviews, QllmSoft Software Development Company Pakistan
           </h2>
           <TestimonialSection />
         </section>
@@ -793,7 +809,7 @@ both deep technical knowledge and genuine business domain understanding to every
         {/* ── TECHNOLOGIES ── */}
         <section
           className="section tech-section"
-          aria-label="Software development technologies used by QllmSoft"
+          aria-label="Software development technologies and platforms used by QllmSoft"
         >
           <TechnologiesSlider />
         </section>
@@ -804,9 +820,8 @@ both deep technical knowledge and genuine business domain understanding to every
             <div className="section-title">
               <h2 id="case-heading">Case Studies</h2>
               <p>
-                Real examples of how we deliver enterprise systems using ASP.NET
-                Core — built for security, scalability, and operational
-                visibility.
+                Real examples of how we solve complex operational challenges, built for
+                security, scalability, and long-term business value.
               </p>
             </div>
 
@@ -845,9 +860,10 @@ both deep technical knowledge and genuine business domain understanding to every
                 Trusted by Clients Across Pakistan, the UK, USA &amp; UAE
               </h2>
               <p>
-                Our independently verified reviews on Upwork and Freelancer
-                reflect consistent project delivery for businesses in the UK,
-                USA, UAE, Saudi Arabia, Jordan, Germany, and Pakistan.
+                Our independently verified reviews on Upwork and Freelancer reflect
+                consistent project delivery for businesses in the UK, USA, UAE, Saudi Arabia,
+                Jordan, Germany, and Pakistan, across finance, healthcare, education,
+                logistics, and eCommerce.
               </p>
             </div>
 
@@ -858,11 +874,11 @@ both deep technical knowledge and genuine business domain understanding to every
                     href={partner.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${partner.name} — verified QllmSoft client`}
+                    aria-label={`${partner.name}, verified QllmSoft client`}
                   >
                     <img
                       src={partner.logo}
-                      alt={`${partner.name} — QllmSoft software development client`}
+                      alt={`${partner.name}, QllmSoft software development client Pakistan`}
                       loading="lazy"
                     />
                   </a>
@@ -871,7 +887,8 @@ both deep technical knowledge and genuine business domain understanding to every
             </div>
           </div>
         </section>
-        {/* ── BLOG PREVIEW (AUTOMATIC) ── */}
+
+        {/* ── BLOG PREVIEW ── */}
         <section
           className="section blog-preview"
           aria-labelledby="blog-preview-heading"
@@ -880,8 +897,8 @@ both deep technical knowledge and genuine business domain understanding to every
             <div className="section-title">
               <h2 id="blog-preview-heading">Latest Insights</h2>
               <p>
-                Practical insights on enterprise software, ASP.NET Core, and
-                system design challenges faced by growing teams.
+                Practical guides on software strategy, digital transformation, and
+                technology decisions for growing businesses.
               </p>
             </div>
 
@@ -898,7 +915,6 @@ both deep technical knowledge and genuine business domain understanding to every
                     <img src={post.image} alt={post.title} loading="lazy" />
                     <h3>{post.title}</h3>
                     <p>{post.description}</p>
-
                     <Link to={`/blog/${key}`} className="blog-read-btn">
                       Read Article →
                     </Link>
@@ -918,16 +934,16 @@ both deep technical knowledge and genuine business domain understanding to every
           <div className="container">
             <div className="section-title">
               <h2 id="faq-heading">
-                Frequently Asked Questions — Software Development Company in
-                Pakistan
+                Frequently Asked Questions, Software Development Company in Pakistan
               </h2>
               <p>
-                Common questions businesses ask before choosing QllmSoft as
-                their software development partner in Pakistan.
+                Common questions businesses ask before choosing QllmSoft as their
+                software development partner.
               </p>
             </div>
 
             <div className="faq-content">
+
               {/* FAQ 1 */}
               <div
                 className="faq-item"
@@ -947,11 +963,9 @@ both deep technical knowledge and genuine business domain understanding to every
                     answer.style.display = expanded ? "none" : "block";
                   }}
                 >
-                  Why choose ASP.NET Core for enterprise web application
-                  development in Pakistan?
+                  What kind of software does QllmSoft build for businesses in Pakistan?
                   <span className="faq-icon">+</span>
                 </h4>
-
                 <div
                   className="faq-answer"
                   itemScope
@@ -959,12 +973,12 @@ both deep technical knowledge and genuine business domain understanding to every
                   itemType="https://schema.org/Answer"
                 >
                   <p itemProp="text">
-                    ASP.NET Core consistently ranks as one of the fastest web
-                    frameworks in independent benchmarks, offering
-                    enterprise-grade security, cross-platform deployment, native
-                    Azure integration, and long-term Microsoft support. It is
-                    well-suited for scalable SaaS platforms, portals, and
-                    internal systems.
+                    QllmSoft builds a wide range of custom software solutions, enterprise web
+                    applications, internal business management systems, mobile apps for Android
+                    and iOS, eCommerce platforms, HR and payroll systems, healthcare management
+                    systems, document management platforms, and AI-powered automation tools. Every
+                    solution is built from scratch around your specific business requirements, not
+                    adapted from a template.
                   </p>
                 </div>
               </div>
@@ -988,11 +1002,9 @@ both deep technical knowledge and genuine business domain understanding to every
                     answer.style.display = expanded ? "none" : "block";
                   }}
                 >
-                  Does QllmSoft provide ASP.NET Core development services in
-                  Pakistan for international clients?
+                  Does QllmSoft work with international clients for software outsourcing from Pakistan?
                   <span className="faq-icon">+</span>
                 </h4>
-
                 <div
                   className="faq-answer"
                   itemScope
@@ -1000,10 +1012,11 @@ both deep technical knowledge and genuine business domain understanding to every
                   itemType="https://schema.org/Answer"
                 >
                   <p itemProp="text">
-                    Yes. QllmSoft delivers ASP.NET Core and enterprise software
-                    solutions to international clients across the UK, USA, UAE,
-                    and Saudi Arabia. We work with fixed scopes, clear
-                    communication, and time-zone aligned delivery.
+                    Yes. QllmSoft is a trusted software outsourcing company in Pakistan working with
+                    international clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany.
+                    We work with fixed-price scopes, clear English communication, NDA from day one,
+                    and full IP ownership transferred to the client, independently verified through
+                    Upwork (100% Job Success Score) and Freelancer (5-star rating).
                   </p>
                 </div>
               </div>
@@ -1027,11 +1040,9 @@ both deep technical knowledge and genuine business domain understanding to every
                     answer.style.display = expanded ? "none" : "block";
                   }}
                 >
-                  Can I hire dedicated ASP.NET Core developers from QllmSoft in
-                  Pakistan?
+                  Can I hire dedicated software developers from QllmSoft in Pakistan?
                   <span className="faq-icon">+</span>
                 </h4>
-
                 <div
                   className="faq-answer"
                   itemScope
@@ -1039,12 +1050,12 @@ both deep technical knowledge and genuine business domain understanding to every
                   itemType="https://schema.org/Answer"
                 >
                   <p itemProp="text">
-                    Yes. You can hire dedicated ASP.NET Core and .NET developers
-                    from QllmSoft on a full-time or project basis. Our engineers
-                    have real production experience with APIs, enterprise
-                    systems, and cloud deployment. Visit our{" "}
+                    Yes. QllmSoft provides dedicated developers and full engineering teams on a
+                    full-time, part-time, or project basis, covering web, mobile, backend, cloud,
+                    and AI development. Our engineers have real production experience across multiple
+                    industries and are available for onboarding within 24–48 hours. Visit our{" "}
                     <Link to="/hire-dotnet-developers-pakistan">
-                      hire .NET developers
+                      hire developers
                     </Link>{" "}
                     page for details.
                   </p>
@@ -1053,20 +1064,19 @@ both deep technical knowledge and genuine business domain understanding to every
             </div>
           </div>
         </section>
+
         {/* ── CTA ── */}
         <section className="section cta-section" aria-labelledby="cta-heading">
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Hire Pakistan's Best ASP.NET Core Developers — Get a Free Quote
-                in 24 Hours
+                Ready to Build Software That Drives Real Business Growth? Get a Free Quote in 24 Hours.
               </h2>
               <p>
-                Ready to build a high-performance web application, mobile app,
-                or enterprise software system? Talk to our technical team. We
-                will review your requirements, send a detailed fixed-price
-                proposal within 24 hours, and schedule a free discovery call —
-                no commitment required.
+                Tell us your challenge. QllmSoft will review your requirements, send a detailed
+                fixed-price proposal within 24 hours, and schedule a free discovery call, no
+                commitment required. Businesses in Pakistan, the UK, USA, UAE, and Saudi Arabia
+                trust QllmSoft to deliver. We look forward to earning that trust from you.
               </p>
 
               <div className="cta-buttons">
