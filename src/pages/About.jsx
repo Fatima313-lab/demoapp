@@ -70,7 +70,7 @@ const schemaOrg = {
     "QllmSoft is a custom software development company in Pakistan with 10+ years of experience delivering enterprise digital solutions for businesses across Pakistan, UK, USA, UAE, and Saudi Arabia. We specialise in enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams.",
   foundingDate: "2015",
   telephone: "+92-334-8229288",
-  email: "info@qllmsoft.com",
+  email: "qllmsoft@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "H # 181, Camping Ground",

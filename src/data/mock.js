@@ -15,7 +15,7 @@ export const companyInfo = {
   tagline: "Best for your business",
   description: "We specialize in providing custom solutions for web, mobile, and desktop applications to meet your business needs.",
   phone: "+92 334 8229288",
-  email: "info@qllmsoft.com",
+  email: "qllmsoft@gmail.com",
   address: "H # 181, Camping Ground, Lalamusa, Pakistan",
   whatsappLink: "https://wa.me/923348229288?text=Hi%20QllmSoft,%20I%27d%20like%20to%20discuss%20a%20project!",
   socialLinks: {
