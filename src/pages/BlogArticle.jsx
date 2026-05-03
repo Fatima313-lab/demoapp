@@ -180,7 +180,7 @@ const BlogArticle = () => {
 
               <div className="sidebar-contact">
                 <h4>Quick Contact</h4>
-                <p><strong>Email:</strong> info@qllmsoft.com</p>
+                <p><strong>Email:</strong> qllmsoft@gmail.com</p>
                 <p><strong>Phone:</strong> +92 334 8229288</p>
               </div>
             </aside>

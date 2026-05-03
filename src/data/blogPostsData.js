@@ -839,7 +839,7 @@ export const blogPostsData = {
       <div class="contact-box-details">
         <p>
           <strong>Email:</strong>
-          <a class="u-email" href="mailto:info@qllmsoft.com">info@qllmsoft.com</a>
+          <a class="u-email" href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a>
         </p>
 
         <p>
@@ -1078,7 +1078,7 @@ export const blogPostsData = {
 
         	<p>
           	<strong>Email:</strong>
-          	<a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a><br/>
+          	<a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a><br/>
           	<strong>WhatsApp:</strong>
           	<a href="tel:+923348229288">+92 334 8229288</a><br/>
           	<strong>Contact:</strong>
@@ -1379,8 +1379,8 @@ export const blogPostsData = {
 
        <p>
   <strong>Email:</strong>
-  <a class="u-email" href="mailto:info@qllmsoft.com">
-    info@qllmsoft.com
+  <a class="u-email" href="mailto:qllmsoft@gmail.com">
+    qllmsoft@gmail.com
   </a>
   <br/>
 
@@ -1549,7 +1549,7 @@ export const blogPostsData = {
 
       <p class="contact-row">
         <strong>Email:</strong>
-        <a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a>
+        <a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a>
       </p>
 
       <p class="contact-row">
@@ -1706,7 +1706,7 @@ export const blogPostsData = {
             </ul>
             <p class="contact-row">
              <strong>Email:</strong>
-                 <a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a>
+                 <a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a>
 </p>
 
                 <p class="contact-row">
@@ -1874,7 +1874,7 @@ html: `
 
       <p class="contact-row">
         <strong>Email:</strong>
-        <a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a>
+        <a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a>
       </p>
 
       <p class="contact-row">

@@ -1187,7 +1187,7 @@ const OutsourceSoftwareDevelopment = () => {
                   📞 Get Free Consultation
                 </Link>
                 <a
-                  href="mailto:info@qllmsoft.com"
+                  href="mailto:qllmsoft@gmail.com"
                   className="btn osd-btn-ghost"
                   aria-label="Email QllmSoft to discuss outsourcing your software project"
                 >
@@ -1205,8 +1205,8 @@ const OutsourceSoftwareDevelopment = () => {
             <aside className="osd-cta__right" aria-label="Quick contact and related services">
               <div className="osd-cta__contact-card">
                 <h3>Quick Contact</h3>
-                <a href="mailto:info@qllmsoft.com" className="osd-cta__contact-row">
-                  <span aria-hidden="true">📧</span> info@qllmsoft.com
+                <a href="mailto:qllmsoft@gmail.com" className="osd-cta__contact-row">
+                  <span aria-hidden="true">📧</span> qllmsoft@gmail.com
                 </a>
                 <a
                   href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20outsourcing!"

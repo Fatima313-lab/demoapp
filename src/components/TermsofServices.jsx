@@ -112,7 +112,7 @@ const TermsOfServices = () => {
           <article>
             <h2>Customer Support & Complaints</h2>
             <p>
-              Our support team is here to address your concerns. Contact us at <a href="mailto:info@qllmsoft.com">support@qllmsoft.com</a>, and we will respond promptly with:
+              Our support team is here to address your concerns. Contact us at <a href="mailto:qllmsoft@gmail.com">support@qllmsoft.com</a>, and we will respond promptly with:
             </p>
             <ul>
               <li>Acknowledgment within <b>2 business days</b></li>
@@ -134,7 +134,7 @@ const TermsOfServices = () => {
               For inquiries or assistance, reach out to:
             </p>
             <ul>
-              <li><strong>Email:</strong> <a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></li>
             </ul>
             <p>
               We value your feedback and aim to provide a safe, transparent, and reliable experience.

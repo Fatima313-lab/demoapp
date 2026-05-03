@@ -102,7 +102,7 @@ const schemaOrganization = {
   foundingDate: '2015',
   description: 'Custom real estate software development company in Pakistan. We build property management systems, real estate CRM, MLS portals, and PropTech solutions for agencies and developers worldwide.',
   telephone: '+92-334-8229288',
-  email: 'info@qllmsoft.com',
+  email: 'qllmsoft@gmail.com',
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',

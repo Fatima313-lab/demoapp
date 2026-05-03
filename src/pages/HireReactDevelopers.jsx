@@ -511,7 +511,7 @@ const HireReactDevelopers = () => {
             <aside className="hd-cta__right">
               <div className="hd-cta__contact-card">
                 <h3>Quick Contact</h3>
-                <a href="mailto:info@qllmsoft.com" className="hd-cta__contact-row">📧 info@qllmsoft.com</a>
+                <a href="mailto:qllmsoft@gmail.com" className="hd-cta__contact-row">📧 qllmsoft@gmail.com</a>
                 <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer" className="hd-cta__contact-row" aria-label="WhatsApp QllmSoft">💬 WhatsApp — replies in 5 mins</a>
                 <a href="tel:+923348229288" className="hd-cta__contact-row">📞 +92 334 8229288</a>
               </div>

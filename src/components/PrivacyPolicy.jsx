@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {
               If you have any questions or need assistance regarding your privacy, feel free to contact us at:
             </p>
             <ul>
-              <li><strong>Email:</strong> <a href="mailto:info@qllmsoft.com">info@qllmsoft.com</a></li>
+              <li><strong>Email:</strong> <a href="mailto:qllmsoft@gmail.com">qllmsoft@gmail.com</a></li>
             </ul>
             <p>We are committed to addressing your concerns and ensuring a safe and reliable experience.</p>
           </article>

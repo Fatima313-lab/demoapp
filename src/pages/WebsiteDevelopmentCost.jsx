@@ -612,7 +612,7 @@ const WebsiteDevelopmentCost = () => {
             <aside className="ip-cta__right">
               <div className="ip-cta__contact">
                 <h3>Quick Contact</h3>
-                <a href="mailto:info@qllmsoft.com" className="ip-cta__contact-row">📧 info@qllmsoft.com</a>
+                <a href="mailto:qllmsoft@gmail.com" className="ip-cta__contact-row">📧 qllmsoft@gmail.com</a>
                 <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer" className="ip-cta__contact-row">💬 WhatsApp — replies in 5 mins</a>
                 <a href="tel:+923348229288" className="ip-cta__contact-row">📞 +92 334 8229288</a>
               </div>
