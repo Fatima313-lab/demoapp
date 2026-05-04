@@ -598,7 +598,7 @@ const FinanceManagementSystem = () => {
 
         {/* WHO WE HELP */}
         <section
-          className="section ip-dark-band"
+          className="section ip-who-we-help"
           ref={clientRef}
           aria-labelledby="clients-heading"
           style={{ background:'linear-gradient(145deg,#0B1B3A,#1F66D1)' }}
@@ -611,7 +611,7 @@ const FinanceManagementSystem = () => {
               <p>We build finance systems for teams that need control and clear reporting.</p>
             </div>
 
-            <div className="ip-clients__grid">
+            <div className="ip-who-we-help__grid">
               {[
                 { Icon:IconBuilding, title:'Multi-Branch Companies', desc:'Central finance with branch-level tracking and consolidated reporting.' },
                 { Icon:IconWallet,   title:'SMEs & Growing Teams',    desc:'Simple finance system that replaces spreadsheets and scales with growth.' },
@@ -620,12 +620,12 @@ const FinanceManagementSystem = () => {
               ].map((c,i) => (
                 <article
                   key={i}
-                  className={`ip-client-card animate__animated ${clientInView ? 'animate__fadeInUp' : ''}`}
+                  className={`ip-who-we-help__card animate__animated ${clientInView ? 'animate__fadeInUp' : ''}`}
                   style={{ animationDelay:`${i*0.1}s` }}
                 >
-                  <div className="ip-client-card__icon"><c.Icon s={20} /></div>
-                  <h3 className="ip-client-card__title">{c.title}</h3>
-                  <p className="ip-client-card__desc">{c.desc}</p>
+                  <div className="ip-who-we-help__card-icon"><c.Icon s={20} /></div>
+                  <h3 className="ip-who-we-help__card-title">{c.title}</h3>
+                  <p className="ip-who-we-help__card-desc">{c.desc}</p>
                 </article>
               ))}
             </div>
