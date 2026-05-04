@@ -283,7 +283,7 @@
 .ip-stat-card {
   background: #F7FAFC; border-radius: 12px; padding: 18px;
   display: flex; align-items: center; gap: 14px;
-  border: 1px solid #E2E8F0; border-left: 4px solid var(--ip-accent);
+  border: 1px solid #E2E8F0; border: 3px dashed #e3be04;
   transition: transform 0.25s, box-shadow 0.25s;
 }
 .ip-stat-card:hover { transform: translateX(4px); box-shadow: 0 6px 20px rgba(26,54,93,0.09); }
@@ -407,10 +407,10 @@
 @media (max-width: 576px) { .ip-why__grid { grid-template-columns: 1fr; } }
 .ip-why-card {
   background: #F7FAFC; border-radius: 14px; padding: 26px;
-  border: 1px solid #E2E8F0; border-left: 4px solid #edb702;
+  border: 1px solid #E2E8F0; border: 2px dashed #b6b6bd;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-.ip-why-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,0.08); }
+.ip-why-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(2, 29, 86, 0.238); }
 .ip-why-card__icon {
   width: 44px; height: 44px;
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
@@ -511,7 +511,7 @@
 .ip-review-card__stars { color: #edb702; font-size: 1rem; letter-spacing: 2px; margin-bottom: 12px; }
 .ip-review-card__text { font-size: 0.9rem; color: #4A5568; line-height: 1.72; font-style: italic; margin-bottom: 18px; }
 .ip-review-card__author { display: flex; align-items: center; gap: 12px; }
-.ip-review-card__author img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #edb702; }
+.ip-review-card__author img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid #765d0a; }
 .ip-review-card__author strong { display: block; font-size: 0.87rem; color: #1A365D; }
 .ip-review-card__author span { font-size: 0.75rem; color: #718096; }
 
@@ -557,7 +557,7 @@
 .ip-cta__related-title { font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
 .ip-cta__related a {
   font-size: 0.81rem; color: rgba(255,255,255,0.6); text-decoration: none;
-  padding: 4px 0 4px 10px; border-left: 2px solid transparent; transition: all 0.2s;
+  padding: 4px 0 4px 10px; border: px dashed transparent; transition: all 0.2s;
 }
 .ip-cta__related a:hover { color: #edb702; border-color: #edb702; padding-left: 14px; }
 @media (max-width: 992px) {
@@ -640,7 +640,8 @@
 
 .ip-hero__features {
   perspective: 900px;
-  margin-top: 47px;
+  margin-top: 57px;
+  margin-left: 97px;
 }
 
 
@@ -725,20 +726,53 @@
 
 .ip-service-card {
   background: #ffffff;
-  border-radius: 18px;
-  border: 1px solid rgba(15,23,42,0.08);
+  border-radius: 21px;
+  padding: 27px;
+  position: relative;
+  border: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow:
-    0 8px 22px rgba(15,23,42,0.06),
-    0 2px 6px rgba(15,23,42,0.04);
+    0 10px 28px rgba(15,23,42,0.06),
+    0 4px 10px rgba(15,23,42,0.04);
   transform-style: preserve-3d;
   transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+    overflow: hidden;
+}
+.ip-service-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(
+    circle,
+    rgba(31,102,209,0.25),
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.ip-service-card::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(
+    circle,
+    rgba(237,183,2,0.20),
+    transparent 70%
+  );
+  border-radius: 50%;
 }
 
 
+
 .ip-service-card:hover {
-  transform: translateY(-10px) rotateX(2deg);
+  transform: translateY(-12px) rotateX(3deg) rotateY(-2deg);
   box-shadow:
     0 22px 48px rgba(15,23,42,0.18),
     0 6px 14px rgba(15,23,42,0.08);
@@ -746,32 +780,53 @@
 
 
 .ip-service-card__icon {
-  background: rgba(37,99,235,0.10);
+  background: 
+linear-gradient(
+    135deg,
+    rgba(31,102,209,0.15),
+    rgba(31,102,209,0.05)
+);
   color: #093188;
-  border-radius: 14px;
+  border-radius: 16px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px rgba(31, 102, 209, 0.08);
+  transition: all 0.35s ease;
 }
 
 .ip-service-card:hover .ip-service-card__icon {
-  background: #0538a4;
+  background: linear-gradient(135deg, #0538a4, #1f66d1);
   color: #ffffff;
+  transform: translateZ(18px);
 }
 
 
 .ip-service-card__title {
   font-size: 1.02rem;
   color: #0f172a;
+   font-weight: 700;
+   margin-top: 14px;
 }
 
 .ip-service-card__desc {
   color: #475569;
+  line-height: 1.65;
+  margin-top: 8px;
 }
 
 
 .ip-stag {
   background: rgba(37,99,235,0.10);
   color: #072f85;
-  border: 1px solid rgba(37,99,235,0.2);
+  border: 1px solid rgba(32, 61, 124, 0.2);
   padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
 }
 
 .ip-service-card:hover .ip-stag {
@@ -780,30 +835,121 @@
   color: #7a5a00;
 }
 
-/*FAQ */
+
+
 .faq-item {
-  overflow: visible;               
+  background: #ffffff;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(15,23,42,0.12); 
+  box-shadow: 0 6px 20px rgba(15,23,42,0.06);
+}
+
+.faq-item::before {
+  display: none !important;
+}
+
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+.faq-icon {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #edb702; 
 }
 
 .faq-answer {
-  display: block;
-  padding: 14px 18px 18px;
-  animation: faqFade 0.25s ease;
-}
-.faq-item--open .faq-answer {
-  display: block;
-  max-height: none;
-  opacity: 1;
+  padding: 0 20px 16px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.8;
 }
 
-@keyframes faqFade {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
+
+.faq-item:hover {
+  box-shadow: 0 10px 26px rgba(15,23,42,0.1);
+}
+
+
+@media (max-width: 576px) {
+  .faq-question {
+    padding: 14px 16px;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .faq-answer {
+    padding: 0 16px 14px;
+  }
+}
+
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.12); 
+  margin-bottom: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ICON */
+.faq-icon {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #edb702; 
+}
+
+
+.faq-answer {
+  display: block !important;      
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 0 20px 16px;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+
+.faq-item:hover {
+  box-shadow: 0 10px 26px rgba(15,23,42,0.1);
+}
+
+
+@media (max-width: 576px) {
+  .faq-question {
+    padding: 14px 16px;
+  }
+  .faq-answer {
+    padding: 0 16px 14px;
   }
 }
 
@@ -947,7 +1093,7 @@
 }
 
 
-/* SOCIAL PROOF BAR */
+
 .ip-social-proof {
   background: #f8fafc;
   padding: 28px 0;
@@ -969,4 +1115,152 @@
   flex-wrap: wrap;
   font-weight: 700;
   color: #94a3b8;
+}
+
+
+
+
+
+.ip-project-sample {
+  background: #f5f7fb;
+}
+
+.ip-project-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+
+.ip-project-content h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0b1b3a;
+  margin-bottom: 14px;
+}
+
+.ip-project-content p {
+  color: #475569;
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.ip-project-features {
+  padding-left: 18px;
+  margin-bottom: 18px;
+}
+
+.ip-project-features li {
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+
+.ip-project-tech {
+  background: #eef3ff;
+  border: 3px dashed #1f66d1;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+
+.ip-project-status {
+  margin-top: 16px;
+  font-weight: 700;
+  color: #7a5a00;
+  background: rgba(237,183,2,0.22);
+  padding: 10px 14px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+
+.ip-project-visual img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+  transform: rotateX(4deg) rotateY(-4deg);
+  transition: transform 0.4s ease;
+}
+
+.ip-project-visual img:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+
+@media (max-width: 992px) {
+  .ip-project-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .ip-project-features {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+
+
+.ip-project-features {
+  list-style: none;           
+  padding: 0;
+  margin: 18px 0 22px;
+}
+
+.ip-project-features li {
+  position: relative;
+  padding-left: 34px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #334155;             
+  font-weight: 500;
+}
+
+
+.ip-project-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(237, 182, 2, 0.414); 
+  color: #0b1b3a;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 900;
+}
+
+
+.ip-project-features li strong {
+  color: #0b1b3a;
+  font-weight: 700;
+}
+
+
+.ip-project-features li:hover::before {
+  background: #edb702;       
+}
+
+
+@media (max-width: 576px) {
+  .ip-project-features li {
+    padding-left: 30px;
+    font-size: 0.9rem;
+  }
+}
+
+.ip-process__step-num {
+  background: linear-gradient(135deg, #edb702, #ffd84d);
+  color: #0b1b3a;
+  font-weight: 900;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(237,183,2,0.35);
 }
