@@ -135,27 +135,7 @@ const HireDotnetDevelopersPak = () => {
 
       <main id="main-content" className="hd-page" style={{'--hd-accent':'#1A365D','--hd-accent-light':'#EBF8FF','--hd-accent-border':'#BEE3F8'}} role="main">
 
-        {/* BREADCRUMB */}
-        <nav className="csd-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="container">
-            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">Hire .NET Developers Pakistan</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </div>
-        </nav>
+       
 
         {/* HERO */}
         <header className="hd-hero" role="banner">

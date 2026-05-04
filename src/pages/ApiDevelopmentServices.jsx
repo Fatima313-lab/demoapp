@@ -226,27 +226,7 @@ const ApiDevelopmentServices = () => {
 
       <main id="main-content" className="api-page" role="main">
 
-        {/* ── BREADCRUMB ─────────────────────────────── */}
-        <nav className="csd-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="container">
-            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">API Development Services</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </div>
-        </nav>
+       
 
         {/* ══════════════════════════════════════════════
             HERO — single H1
