@@ -4,6 +4,7 @@
    • EducationSoftware.jsx
    • LegacyModernization.jsx
    • OutsourceApiDevelopment.jsx
+    Finance Management System . jsx
 
    BRAND PALETTE (strict):
      #1A365D  deep navy   · #2B6CB0  medium blue
@@ -117,7 +118,7 @@
   display: flex;
   align-items: center;
   gap: 56px;
-  padding-top: 78px;
+  padding-top: 40px;
   padding-bottom: 108px;
   position: relative;
   z-index: 1;
@@ -514,11 +515,6 @@
 .ip-review-card__author strong { display: block; font-size: 0.87rem; color: #1A365D; }
 .ip-review-card__author span { font-size: 0.75rem; color: #718096; }
 
-/* ══════════════════════════════════════════════════════
-   FAQ
-══════════════════════════════════════════════════════ */
-.ip-faq { background: #fff; }
-.ip-faq .csd-faq__list { max-width: 880px; margin: 0 auto; }
 
 /* ══════════════════════════════════════════════════════
    FINAL CTA (split layout)
@@ -575,4 +571,402 @@
 @media (max-width: 768px) {
   .ip-hero__sub { font-size: 0.95rem; }
   .ip-cta h2   { font-size: 1.6rem; }
+}
+
+
+/* HERO */
+
+
+.ip-hero {
+  background:
+    radial-gradient(900px 420px at 12% 10%, rgba(37,99,235,0.14), transparent 60%),
+    radial-gradient(700px 360px at 88% 18%, rgba(237,183,2,0.12), transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 70%);
+}
+
+/* Remove diagonal cut */
+.ip-hero::after {
+  display: none;
+}
+
+
+.ip-hero::before {
+  opacity: 0.2;
+}
+
+.ip-hero__inner {
+  padding-top: 90px;
+  padding-bottom: 70px;
+  gap: 48px;
+  align-items: center;
+}
+
+
+.ip-hero__eyebrow {
+  color: #06358d;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+}
+
+
+.ip-hero__title {
+  color: #082d83;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.05;
+}
+
+
+.ip-hero__title em {
+  color: #e1c10b;
+}
+
+
+.ip-hero__sub {
+  color: #475569;
+  font-size: 1.05rem;
+  max-width: 620px;
+}
+
+.ip-hero__sub strong {
+  color: #685a07;
+}
+
+
+.ip-hero__trust {
+  color: rgba(15,23,42,0.55);
+  border-top: 1px solid rgba(15,23,42,0.08);
+}
+
+
+.ip-hero__features {
+  perspective: 900px;
+  margin-top: 47px;
+}
+
+
+.ip-hero__feature {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 14px 34px rgba(15,23,42,0.10);
+  border-radius: 16px;
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ip-hero__feature:hover {
+  transform: translateY(-6px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 22px 46px rgba(15,23,42,0.15);
+}
+
+.ip-hero__feature-icon {
+  background: rgba(37,99,235,0.12);
+  color: #063393;
+  border-radius: 12px;
+}
+
+
+.ip-hero__feature strong {
+  color: #0f172a;
+}
+.ip-hero__feature span {
+  color: #475569;
+}
+
+.ip-hero__stats {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow: 0 14px 30px rgba(15,23,42,0.10);
+}
+
+.ip-hero__stat-num {
+  color: #e3be04;
+}
+.ip-hero__stat-label {
+  color: rgba(15,23,42,0.55);
+}
+
+
+
+@media (max-width: 1050px) {
+  .ip-hero__inner {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ip-hero__title {
+    font-size: 2rem;
+  }
+  .ip-hero__sub {
+    font-size: 0.98rem;
+  }
+}
+
+.ip-page {
+  padding-top: 72px;   
+} 
+@media (max-width: 768px) {
+  .ip-page {
+    padding-top: 80px;
+  }
+}
+
+
+/*SERVICES */
+
+.ip-services {
+  background: #f8fafc;
+}
+
+.ip-services__grid {
+  gap: 26px;
+}
+
+
+.ip-service-card {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid rgba(15,23,42,0.08);
+  box-shadow:
+    0 8px 22px rgba(15,23,42,0.06),
+    0 2px 6px rgba(15,23,42,0.04);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.ip-service-card:hover {
+  transform: translateY(-10px) rotateX(2deg);
+  box-shadow:
+    0 22px 48px rgba(15,23,42,0.18),
+    0 6px 14px rgba(15,23,42,0.08);
+}
+
+
+.ip-service-card__icon {
+  background: rgba(37,99,235,0.10);
+  color: #093188;
+  border-radius: 14px;
+}
+
+.ip-service-card:hover .ip-service-card__icon {
+  background: #0538a4;
+  color: #ffffff;
+}
+
+
+.ip-service-card__title {
+  font-size: 1.02rem;
+  color: #0f172a;
+}
+
+.ip-service-card__desc {
+  color: #475569;
+}
+
+
+.ip-stag {
+  background: rgba(37,99,235,0.10);
+  color: #072f85;
+  border: 1px solid rgba(37,99,235,0.2);
+  padding: 4px 12px;
+}
+
+.ip-service-card:hover .ip-stag {
+  background: rgba(237,183,2,0.15);
+  border-color: rgba(237,183,2,0.25);
+  color: #7a5a00;
+}
+
+/*FAQ */
+.faq-item {
+  overflow: visible;               
+}
+
+.faq-answer {
+  display: block;
+  padding: 14px 18px 18px;
+  animation: faqFade 0.25s ease;
+}
+.faq-item--open .faq-answer {
+  display: block;
+  max-height: none;
+  opacity: 1;
+}
+
+@keyframes faqFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA */
+
+.ip-cta {
+  position: relative;
+  background:
+  
+    radial-gradient(700px 360px at 12% 18%, rgba(37,99,235,0.22), transparent 60%),
+    radial-gradient(500px 280px at 88% 22%, rgba(237,183,2,0.18), transparent 55%),
+    linear-gradient(135deg, #1c3566, #042779 65%, #03269795);
+  overflow: hidden;
+}
+
+
+.ip-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(223, 229, 240, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(178, 204, 247, 0.12) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+
+.ip-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(59,130,246,0.18) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(237,183,2,0.12) 0%, transparent 40%);
+  mix-blend-mode: screen;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+
+.ip-cta__inner {
+  position: relative;
+  z-index: 1;
+}
+.ip-cta__bg {
+  opacity: 0.18;
+}
+
+
+
+
+.ip-cta h2 {
+  font-size: clamp(2rem, 3.6vw, 2.7rem);
+  letter-spacing: -0.02em;
+}
+
+.ip-cta__desc {
+  color: rgba(255,255,255,0.82);
+  font-size: 1.05rem;
+}
+
+.ip-cta .ip-btn-primary {
+  background: linear-gradient(135deg, #ebd125, #d8ac1d);
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(37,99,235,0.30);
+}
+
+.ip-cta .ip-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 52px rgba(37,99,235,0.42);
+}
+
+.ip-cta .ip-btn-whatsapp {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.ip-cta .ip-btn-whatsapp:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+
+.ip-cta__perks span {
+  color: rgba(255,255,255,0.68);
+}
+
+
+.ip-cta__contact,
+.ip-cta__related {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.16);
+  box-shadow:
+    0 14px 36px rgba(0,0,0,0.20),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.ip-cta__contact:hover,
+.ip-cta__related:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 26px 56px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+.ip-cta__contact-row {
+  color: rgba(255,255,255,0.75);
+}
+
+.ip-cta__contact-row:hover {
+  color: #edb702;
+}
+
+
+.ip-cta__related a {
+  color: rgba(255,255,255,0.65);
+}
+
+.ip-cta__related a:hover {
+  color: #edb702;
+  border-color: #edb702;
+}
+
+
+
+@media (max-width: 768px) {
+  .ip-cta__inner {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .ip-cta h2 {
+    font-size: 1.9rem;
+  }
+}
+
+
+/* SOCIAL PROOF BAR */
+.ip-social-proof {
+  background: #f8fafc;
+  padding: 28px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.ip-social-proof__title {
+  font-size: 0.85rem;
+  color: #475569;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.ip-social-proof__logos {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  font-weight: 700;
+  color: #94a3b8;
 }
