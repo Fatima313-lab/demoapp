@@ -16,6 +16,8 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './IndustryPage.css';
 import 'animate.css';
+import financeImg from "../assets/qllm-soft-finance-management-system-11.webp";
+import TestimonialSection from "../components/TestimonialSection";
 
 const PAGE_URL  = 'https://qllmsoft.com/finance-management-system';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
@@ -497,6 +499,68 @@ const FinanceManagementSystem = () => {
           </div>
         </section>
 
+
+        {/* FINANCIAL SOLUTIONS, sample projectt */}
+<section className="section ip-project-sample" aria-labelledby="project-heading">
+  <div className="container">
+
+    <p className="section-eyebrow">Sample Project</p>
+
+    <div className="section-title">
+      <h2 id="project-heading">Financial Solutions</h2>
+      <p>
+        A finance domain solution currently under active development at QllmSoft.
+      </p>
+    </div>
+
+    <div className="ip-project-grid">
+
+      {/* LEFT CONTENT */}
+      <div className="ip-project-content">
+        <h3>Financial Analysis Web Application</h3>
+
+        <p>
+          <strong>Financial Solutions</strong> is an intelligent finance platform
+          designed for SMEs to manage budgeting, investment tracking,
+          secure transactions, and real time reporting from a single system.
+        </p>
+
+        <ul className="ip-project-features">
+          <li><strong>CRM Integration:</strong> Strengthen client relationships and retention.</li>
+          <li><strong>Investment Tracking:</strong> Analyze and monitor portfolios with ease.</li>
+          <li><strong>Secure Gateways:</strong> Encrypted transactions and auto payments.</li>
+          <li><strong>Reporting & Analytics:</strong> Real time insights for data driven decisions.</li>
+        </ul>
+
+        <p>
+          The platform delivers <strong>real time analytics</strong>,
+          <strong> automated budgeting</strong>, and seamless integrations
+          with financial tools like <strong>QuickBooks</strong> and <strong>Xero</strong>.
+        </p>
+
+        <p className="ip-project-tech">
+          <strong>Tech Stack:</strong> .NET Core, Angular, ASP.NET MVC,
+          SQL Server, Bootstrap, jQuery, Ajax.
+        </p>
+
+        <div className="ip-project-status">
+          🚧 <strong>Status:</strong> Currently under development
+        </div>
+      </div>
+
+      
+      <div className="ip-project-visual">
+        <img
+          src={financeImg}
+          alt="Financial Solutions dashboard preview"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
         {/* PROCESS */}
         <section className="section ip-dark-band" ref={procRef} aria-labelledby="process-heading">
           <div className="container">
@@ -509,11 +573,11 @@ const FinanceManagementSystem = () => {
 
             <ol className="ip-process__steps" aria-label="Finance system development process">
               {[
-                { n:'01', icon:'🔍', title:'Discovery & Workflow Mapping', desc:'We understand how your finance team works today and where delays happen.' },
-                { n:'02', icon:'🧩', title:'System Design & Access Rules',    desc:'We design dashboards, approval roles, and data structure with clarity.' },
-                { n:'03', icon:'⚙️', title:'Development in Sprints',          desc:'We build in short sprints so you see progress early and often.' },
-                { n:'04', icon:'✅', title:'Testing & Data Safety Checks',    desc:'We test flows, reporting accuracy, and permissions carefully.' },
-                { n:'05', icon:'🚀', title:'Launch & Support',               desc:'We deploy, train your team, and support improvements after launch.' },
+                { n:'01',  title:'Discovery & Workflow Mapping', desc:'We understand how your finance team works today and where delays happen.' },
+                { n:'02', title:'System Design & Access Rules',    desc:'We design dashboards, approval roles, and data structure with clarity.' },
+                { n:'03',  title:'Development in Sprints',          desc:'We build in short sprints so you see progress early and often.' },
+                { n:'04',  title:'Testing & Data Safety Checks',    desc:'We test flows, reporting accuracy, and permissions carefully.' },
+                { n:'05',  title:'Launch & Support',               desc:'We deploy, train your team, and support improvements after launch.' },
               ].map((step,i) => (
                 <li
                   key={i}
@@ -534,7 +598,7 @@ const FinanceManagementSystem = () => {
 
         {/* WHO WE HELP */}
         <section
-          className="section ip-dark-band"
+          className="section ip-who-we-help"
           ref={clientRef}
           aria-labelledby="clients-heading"
           style={{ background:'linear-gradient(145deg,#0B1B3A,#1F66D1)' }}
@@ -547,7 +611,7 @@ const FinanceManagementSystem = () => {
               <p>We build finance systems for teams that need control and clear reporting.</p>
             </div>
 
-            <div className="ip-clients__grid">
+            <div className="ip-who-we-help__grid">
               {[
                 { Icon:IconBuilding, title:'Multi-Branch Companies', desc:'Central finance with branch-level tracking and consolidated reporting.' },
                 { Icon:IconWallet,   title:'SMEs & Growing Teams',    desc:'Simple finance system that replaces spreadsheets and scales with growth.' },
@@ -556,12 +620,12 @@ const FinanceManagementSystem = () => {
               ].map((c,i) => (
                 <article
                   key={i}
-                  className={`ip-client-card animate__animated ${clientInView ? 'animate__fadeInUp' : ''}`}
+                  className={`ip-who-we-help__card animate__animated ${clientInView ? 'animate__fadeInUp' : ''}`}
                   style={{ animationDelay:`${i*0.1}s` }}
                 >
-                  <div className="ip-client-card__icon"><c.Icon s={20} /></div>
-                  <h3 className="ip-client-card__title">{c.title}</h3>
-                  <p className="ip-client-card__desc">{c.desc}</p>
+                  <div className="ip-who-we-help__card-icon"><c.Icon s={20} /></div>
+                  <h3 className="ip-who-we-help__card-title">{c.title}</h3>
+                  <p className="ip-who-we-help__card-desc">{c.desc}</p>
                 </article>
               ))}
             </div>
@@ -601,6 +665,20 @@ const FinanceManagementSystem = () => {
           </div>
         </section>
 
+
+
+        {/* ── TESTIMONIALS ── */}
+        <section
+          className="section testimonial-section"
+          aria-labelledby="testimonials-heading"
+          itemScope
+          itemType="https://schema.org/Review"
+        >
+          <h2 id="testimonials-heading" className="sr-only">
+            Client Reviews, QllmSoft Software Development Company Pakistan
+          </h2>
+          <TestimonialSection />
+        </section>
 
         
 

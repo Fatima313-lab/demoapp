@@ -386,23 +386,6 @@ const BestSoftwareHouse = () => {
 
       <main className="bsh-page" id="main-content">
 
-        {/* ════════ BREADCRUMB ════════ */}
-        <nav className="bsh-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="container">
-            <ol itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <li className="bsh-breadcrumb__sep" aria-hidden="true">/</li>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">Best Software Houses Pakistan</span>
-                <meta itemProp="position" content="2" />
-              </li>
-            </ol>
-          </div>
-        </nav>
-
         {/* ════════ HERO ════════ */}
         <section
           className="bsh-hero"

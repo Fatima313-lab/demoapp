@@ -86,18 +86,7 @@ const HealthcareSoftware = () => {
 
       <main id="main-content" className="ip-page" style={{'--ip-hero-from':'#0a1f0e','--ip-hero-mid':'#0d4423','--ip-hero-to':'#1a6b3a','--ip-accent':'#edb702','--ip-icon-bg':'#F0FFF4','--ip-icon-color':'#276749'}} role="main">
 
-        {/* BREADCRUMB */}
-        <nav className="csd-breadcrumb" aria-label="Breadcrumb">
-          <div className="container">
-            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem"><Link to="/" itemProp="item"><span itemProp="name">Home</span></Link><meta itemProp="position" content="1"/></li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem"><Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link><meta itemProp="position" content="2"/></li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem"><span itemProp="name" aria-current="page">Healthcare Software Development</span><meta itemProp="position" content="3"/></li>
-            </ol>
-          </div>
-        </nav>
+      
 
         {/* HERO */}
         <header className="ip-hero" role="banner">

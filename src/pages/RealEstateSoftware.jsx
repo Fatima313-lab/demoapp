@@ -447,30 +447,6 @@ const RealEstateSoftware = () => {
       <main className="res-page" id="main-content">
 
         {/* ════════════════════════════════════════════════
-            BREADCRUMB
-        ════════════════════════════════════════════════ */}
-        <nav className="res-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="res-container">
-            <ol itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-                <span className="res-bc-sep" aria-hidden="true">/</span>
-              </li>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
-                <meta itemProp="position" content="2" />
-                <span className="res-bc-sep" aria-hidden="true">/</span>
-              </li>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">Real Estate Software Development</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </div>
-        </nav>
-
-        {/* ════════════════════════════════════════════════
             HERO
         ════════════════════════════════════════════════ */}
         <section className="res-hero" aria-labelledby="res-h1" ref={heroRef}>

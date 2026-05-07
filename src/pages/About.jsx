@@ -255,17 +255,17 @@ const About = () => {
       </Helmet>
 
       <main className="about-page">
-
         {/* ── HERO ── */}
         <section className="about-hero reveal" aria-labelledby="about-hero-h1">
           <div className="container">
             {/* ✅ SINGLE H1, identity keyword, solution-first */}
             <h1 id="about-hero-h1" style={{ color: "white" }}>
-              Pakistan's Trusted Software Development Company, Delivering Real Digital Solutions Since 2015
+              Pakistan's Trusted Software Development Company, Delivering Real
+              Digital Solutions Since 2015
             </h1>
             <p style={{ color: "white" }}>
-              10+ years. 50+ production-grade digital solutions. Clients across Pakistan,
-              the UK, USA, UAE, Saudi Arabia, and beyond.
+              10+ years. 50+ production-grade digital solutions. Clients across
+              Pakistan, the UK, USA, UAE, Saudi Arabia, and beyond.
             </p>
             <a href="#company" className="btn btn-primary">
               Discover More
@@ -280,84 +280,98 @@ const About = () => {
           aria-labelledby="company-heading"
         >
           <div className="container">
-
             <div className="section-title">
               <h2 id="company-heading">
-                About QllmSoft, Pakistan's Custom Software Development Agency Since 2015
+                About QllmSoft, Pakistan's Custom Software Development Agency
+                Since 2015
               </h2>
             </div>
 
             <div className="story-card">
-
               <p>
                 QllmSoft is a full-service{" "}
-                <strong>software development company in Pakistan</strong> with over a decade
-                of experience delivering production-grade digital solutions for businesses
-                across four continents. Founded in 2015, we have grown from a specialist
-                enterprise development consultancy into a comprehensive software agency trusted
-                by 50+ businesses across Pakistan, the USA, Europe & Gulf.
+                <strong>software development company in Pakistan</strong> with
+                over a decade of experience delivering production-grade digital
+                solutions for businesses across four continents. Founded in
+                2015, we have grown from a specialist enterprise development
+                consultancy into a comprehensive software agency trusted by 50+
+                businesses across Pakistan, the USA, Europe & Gulf.
               </p>
 
               <p>
-                <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>
+                <Link
+                  to="/"
+                  style={{ fontWeight: "bold", textDecoration: "none" }}
+                >
                   QllmSoft
                 </Link>{" "}
-                works as a genuine technology partner, not a code vendor. We invest time in
-                understanding your business operations, user workflows, and growth objectives
-                before proposing a single technical solution. Our team combines certified
-                enterprise architects, full-stack engineers, mobile developers, cloud
-                specialists, and AI solution architects, bringing both deep technical
-                expertise and real business domain understanding to every engagement.
+                works as a genuine technology partner, not a code vendor. We
+                invest time in understanding your business operations, user
+                workflows, and growth objectives before proposing a single
+                technical solution. Our team combines certified enterprise
+                architects, full-stack engineers, mobile developers, cloud
+                specialists, and AI solution architects, bringing both deep
+                technical expertise and real business domain understanding to
+                every engagement.
               </p>
 
               <p>
-                Every engagement begins with a formal requirements discovery process, followed
-                by a fixed-price proposal and documented project scope, approved by the client
-                before a single line of code is written. This approach eliminates scope creep,
-                budget surprises, and delivery uncertainty, and is why 50+ businesses across
-                four continents have chosen QllmSoft as their long-term technology partner.
+                Every engagement begins with a formal requirements discovery
+                process, followed by a fixed-price proposal and documented
+                project scope, approved by the client before a single line of
+                code is written. This approach eliminates scope creep, budget
+                surprises, and delivery uncertainty, and is why 50+ businesses
+                across four continents have chosen QllmSoft as their long-term
+                technology partner.
               </p>
 
               <h4>What We Build</h4>
 
               <ul className="story-list">
                 <li>
-                  <strong>Enterprise Web Applications:</strong>{" "}
-                  Scalable, secure web platforms, internal portals, customer-facing systems,
-                  SaaS products, and business management tools built to handle real operational
-                  workloads without performance degradation.
+                  <strong>Enterprise Web Applications:</strong> Scalable, secure
+                  web platforms, internal portals, customer-facing systems, SaaS
+                  products, and business management tools built to handle real
+                  operational workloads without performance degradation.
                 </li>
                 <li>
-                  <strong>Mobile Applications:</strong>{" "}
-                  Cross-platform Android and iOS apps with offline-first architecture, push
-                  notifications, intuitive UX, and backend integration, from MVP to full
-                  enterprise rollout.
+                  <strong>Mobile Applications:</strong> Cross-platform Android
+                  and iOS apps with offline-first architecture, push
+                  notifications, intuitive UX, and backend integration, from MVP
+                  to full enterprise rollout.
                 </li>
                 <li>
-                  <strong>Business Automation Systems:</strong>{" "}
-                  Replacing manual, error-prone workflows with automated systems, from HR
-                  and payroll automation to inventory management, document approvals, and
-                  multi-department reporting.
+                  <strong>Business Automation Systems:</strong> Replacing
+                  manual, error-prone workflows with automated systems, from HR
+                  and payroll automation to inventory management, document
+                  approvals, and multi-department reporting.
                 </li>
                 <li>
-                  <strong>AI-Powered Software Solutions:</strong>{" "}
-                  Machine learning integrations, natural language processing, computer vision
-                  features, and intelligent automation embedded directly into your existing
-                  business software, measurable ROI, not proof-of-concept demos.
+                  <strong>AI-Powered Software Solutions:</strong> Machine
+                  learning integrations, natural language processing, computer
+                  vision features, and intelligent automation embedded directly
+                  into your existing business software, measurable ROI, not
+                  proof-of-concept demos.
                 </li>
                 <li>
-                  <strong>Legacy System Modernisation:</strong>{" "}
-                  Phased, zero-disruption migration from outdated systems to modern,
-                  maintainable platforms, full business logic preserved, technical debt
-                  eliminated, and your team operational throughout the transition.
+                  <strong>Legacy System Modernisation:</strong> Phased,
+                  zero-disruption migration from outdated systems to modern,
+                  maintainable platforms, full business logic preserved,
+                  technical debt eliminated, and your team operational
+                  throughout the transition.
                 </li>
               </ul>
 
               <p>
-                Our portfolio spans financial management platforms, healthcare management
-                systems, document management solutions, eCommerce platforms, HR and payroll
-                systems, and warehouse automation tools, all built around real business
-                workflows and operational control requirements.
+                Our portfolio spans financial management platforms, healthcare
+                management systems, document management solutions, eCommerce
+                platforms, HR and payroll systems, and warehouse automation
+                tools, all built around real business workflows and operational
+                control requirements including our{" "}
+                <Link to="/finance-management-system">
+                  finance management system
+                </Link>{" "}
+                designed for budgeting, approvals, and real time reporting.
               </p>
 
               <p>
@@ -379,9 +393,8 @@ const About = () => {
                 >
                   Freelancer (5-Star Rating)
                 </a>{" "}
-               , our reputation is built on consistent delivery, not promises.
+                , our reputation is built on consistent delivery, not promises.
               </p>
-
             </div>
           </div>
         </section>
@@ -395,24 +408,96 @@ const About = () => {
           <div className="container">
             <div className="why-grid" style={{ textAlign: "center" }}>
               <div>
-                <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#63B3ED" }}>10+</div>
-                <div style={{ color: "#CBD5E0", marginTop: "8px", fontWeight: "600" }}>Years in Operation</div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>Founded 2015</div>
+                <div
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "800",
+                    color: "#63B3ED",
+                  }}
+                >
+                  10+
+                </div>
+                <div
+                  style={{
+                    color: "#CBD5E0",
+                    marginTop: "8px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Years in Operation
+                </div>
+                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
+                  Founded 2015
+                </div>
               </div>
               <div>
-                <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#63B3ED" }}>50+</div>
-                <div style={{ color: "#CBD5E0", marginTop: "8px", fontWeight: "600" }}>Projects Delivered</div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>Across 6 Industries</div>
+                <div
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "800",
+                    color: "#63B3ED",
+                  }}
+                >
+                  50+
+                </div>
+                <div
+                  style={{
+                    color: "#CBD5E0",
+                    marginTop: "8px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Projects Delivered
+                </div>
+                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
+                  Across 6 Industries
+                </div>
               </div>
               <div>
-                <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#63B3ED" }}>50+</div>
-                <div style={{ color: "#CBD5E0", marginTop: "8px", fontWeight: "600" }}>Happy Clients</div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>UK, USA, UAE, Pakistan &amp; more</div>
+                <div
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "800",
+                    color: "#63B3ED",
+                  }}
+                >
+                  50+
+                </div>
+                <div
+                  style={{
+                    color: "#CBD5E0",
+                    marginTop: "8px",
+                    fontWeight: "600",
+                  }}
+                >
+                  Happy Clients
+                </div>
+                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
+                  UK, USA, UAE, Pakistan &amp; more
+                </div>
               </div>
               <div>
-                <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#63B3ED" }}>100%</div>
-                <div style={{ color: "#CBD5E0", marginTop: "8px", fontWeight: "600" }}>On-Time Delivery</div>
-                <div style={{ color: "#718096", fontSize: "0.85rem" }}>Every Project, Every Time</div>
+                <div
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "800",
+                    color: "#63B3ED",
+                  }}
+                >
+                  100%
+                </div>
+                <div
+                  style={{
+                    color: "#CBD5E0",
+                    marginTop: "8px",
+                    fontWeight: "600",
+                  }}
+                >
+                  On-Time Delivery
+                </div>
+                <div style={{ color: "#718096", fontSize: "0.85rem" }}>
+                  Every Project, Every Time
+                </div>
               </div>
             </div>
           </div>
@@ -426,7 +511,8 @@ const About = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="capabilities-heading">
-                Why Businesses Choose QllmSoft as Their Software Development Partner
+                Why Businesses Choose QllmSoft as Their Software Development
+                Partner
               </h2>
             </div>
 
@@ -468,12 +554,11 @@ const About = () => {
         >
           <div className="container">
             <div className="section-title reveal">
-              <h2 id="industries-heading">
-                Industries We Serve
-              </h2>
+              <h2 id="industries-heading">Industries We Serve</h2>
               <p>
-                Over a decade of project delivery across key business sectors means we bring
-                domain knowledge, not just technical skills, to every engagement.
+                Over a decade of project delivery across key business sectors
+                means we bring domain knowledge, not just technical skills, to
+                every engagement.
               </p>
             </div>
             <nav aria-label="Industries served by QllmSoft" className="reveal">
@@ -511,7 +596,9 @@ const About = () => {
                       {item.to ? (
                         <Link to={item.to}>{item.title}</Link>
                       ) : (
-                        <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                        <span
+                          dangerouslySetInnerHTML={{ __html: item.title }}
+                        />
                       )}
                     </h3>
                     <p>{item.desc}</p>
@@ -533,7 +620,6 @@ const About = () => {
             </div>
 
             <div className="vm-stack">
-
               <div className="vm-row">
                 <div className="vm-image">
                   <img
@@ -544,7 +630,9 @@ const About = () => {
                 </div>
 
                 <div className="vm-content">
-                  <div className="vm-icon"><Eye size={26} /></div>
+                  <div className="vm-icon">
+                    <Eye size={26} />
+                  </div>
                   <h3>Our Vision</h3>
                   <p>{aboutContent.vision}</p>
                 </div>
@@ -552,7 +640,9 @@ const About = () => {
 
               <div className="vm-row reverse">
                 <div className="vm-content">
-                  <div className="vm-icon"><Target size={26} /></div>
+                  <div className="vm-icon">
+                    <Target size={26} />
+                  </div>
                   <h3>Our Mission</h3>
                   <p>{aboutContent.mission}</p>
                 </div>
@@ -565,7 +655,6 @@ const About = () => {
                   />
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -578,9 +667,7 @@ const About = () => {
           itemType="https://schema.org/Person"
         >
           <div className="container">
-
             <div className="ceo-card">
-
               <div className="ceo-image">
                 <img
                   src={ceoImg}
@@ -594,20 +681,24 @@ const About = () => {
                 <h2 id="ceo-heading">Message from the CEO</h2>
 
                 <p>
-                  Since founding QllmSoft in 2015, we have grown from a specialist consultancy
-                  into a full-service software development agency trusted by 50+ businesses across
-                  Pakistan, the UK, USA, Gulf & Europe. Every project we take on
-                  carries a personal commitment from our leadership to deliver on time, within
-                  budget, and to a standard we are proud to put our name on, backed by a 100%
-                  on-time delivery record and a verified 100% Upwork Job Success Score.
+                  Since founding QllmSoft in 2015, we have grown from a
+                  specialist consultancy into a full-service software
+                  development agency trusted by 50+ businesses across Pakistan,
+                  the UK, USA, Gulf & Europe. Every project we take on carries a
+                  personal commitment from our leadership to deliver on time,
+                  within budget, and to a standard we are proud to put our name
+                  on, backed by a 100% on-time delivery record and a verified
+                  100% Upwork Job Success Score.
                 </p>
 
                 <p>
-                  Our philosophy has remained the same from day one: understand the business
-                  problem first, then engineer the right solution. We do not sell you a technology
-                  stack, we solve your operational challenge with the best tools available for
-                  your specific context, scale, and budget. That commitment to outcomes over
-                  outputs is what has made our clients our longest-standing advocates.
+                  Our philosophy has remained the same from day one: understand
+                  the business problem first, then engineer the right solution.
+                  We do not sell you a technology stack, we solve your
+                  operational challenge with the best tools available for your
+                  specific context, scale, and budget. That commitment to
+                  outcomes over outputs is what has made our clients our
+                  longest-standing advocates.
                 </p>
 
                 <div className="ceo-identity">
@@ -625,7 +716,6 @@ const About = () => {
                 >
                   <Linkedin size={18} />
                 </a>
-
               </div>
             </div>
           </div>
@@ -654,15 +744,39 @@ const About = () => {
               >
                 {[
                   { to: "/services", label: "All Services" },
-                  { to: "/custom-software-development-services", label: "Custom Software" },
-                  { to: "/web-application-development-services", label: "Web Applications" },
+                  {
+                    to: "/custom-software-development-services",
+                    label: "Custom Software",
+                  },
+                  {
+                    to: "/web-application-development-services",
+                    label: "Web Applications",
+                  },
                   { to: "/mobile-app-development", label: "Mobile Apps" },
-                  { to: "/ai-powered-software-solutions", label: "AI Solutions" },
-                  { to: "/outsource-software-development-to-pakistan", label: "Outsourcing" },
-                  { to: "/legacy-system-modernization-services", label: "Legacy Modernisation" },
-                  { to: "/hire-dotnet-developers-pakistan", label: "Hire Developers" },
-                  { to: "/healthcare-software-development-pakistan", label: "Healthcare Software" },
-                  { to: "/education-software-development-pakistan", label: "Education Software" },
+                  {
+                    to: "/ai-powered-software-solutions",
+                    label: "AI Solutions",
+                  },
+                  {
+                    to: "/outsource-software-development-to-pakistan",
+                    label: "Outsourcing",
+                  },
+                  {
+                    to: "/legacy-system-modernization-services",
+                    label: "Legacy Modernisation",
+                  },
+                  {
+                    to: "/hire-dotnet-developers-pakistan",
+                    label: "Hire Developers",
+                  },
+                  {
+                    to: "/healthcare-software-development-pakistan",
+                    label: "Healthcare Software",
+                  },
+                  {
+                    to: "/education-software-development-pakistan",
+                    label: "Education Software",
+                  },
                 ].map((item) => (
                   <Link
                     key={item.to}
@@ -696,12 +810,13 @@ const About = () => {
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Ready to Work with Pakistan's Trusted Software Development Company?
+                Ready to Work with Pakistan's Trusted Software Development
+                Company?
               </h2>
               <p>
-                Tell us your challenge. We will review your requirements, send a detailed
-                fixed-price proposal within 24 hours, and schedule a free discovery call —
-                no commitment required.
+                Tell us your challenge. We will review your requirements, send a
+                detailed fixed-price proposal within 24 hours, and schedule a
+                free discovery call — no commitment required.
               </p>
               <Link to="/contact" className="btn btn-primary">
                 Get a Free Consultation
@@ -709,7 +824,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
       </main>
     </>
   );
