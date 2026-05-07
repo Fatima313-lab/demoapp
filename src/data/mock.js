@@ -76,7 +76,7 @@ export const homeServices = [
   {
     id: 2,
     name: "Custom Web Application Development",
-    description: "End-to-end web application development using ASP.NET Core, React, and modern architectures designed for performance, scalability, and long-term growth.",
+    description: "End-to-end web application development modern architectures designed for performance, scalability, and long-term growth.",
     image: CustomWebImg,
     link: "/web-application-development-company-pakistan"
   },
@@ -100,10 +100,10 @@ export const servicesData = [
   {
     id: 1,
     name: "Custom Web Application Development",
-    description: "We develop scalable custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
+    description: "We develop scalable custom web applications using modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
     image: CustomWebImg,
     features: [
-      "• ASP.NET Core web application development",
+      "• Modern Front & Backend Frameworks",
       "• SaaS platform development",
       "• Enterprise web portals",
       "• Cloud-ready architectures",
@@ -148,7 +148,7 @@ export const servicesData = [
     description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
     image: APIsoftwareImg,
     features: [
-      "• REST API development",
+      "• REST/SOAP/GraphQL API development",
       "• Third-party API integration",
       "• Secure authentication systems",
       "• Payment gateway integration",

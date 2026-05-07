@@ -59,7 +59,7 @@ const schemaWebPage = {
   url: "https://qllmsoft.com/services",
   name: "Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft",
   description:
-    "QllmSoft provides custom software development services in Pakistan, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan, UK, USA, UAE, and Saudi Arabia.",
+    "QllmSoft provides custom software development services in Pakistan, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan.",
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -206,7 +206,7 @@ const schemaFAQ = {
       name: "What software development services does QllmSoft offer in Pakistan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses across Pakistan, Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally across the UK, USA, UAE, and Saudi Arabia.",
+        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses across Pakistan.",
       },
     },
     {
@@ -300,7 +300,7 @@ const ServiceCardDetailed = ({ service, isOdd, id }) => {
 const faqItems = [
   {
     q: "What software development services does QllmSoft offer in Pakistan?",
-    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujranwala, and internationally in the UK, USA, UAE, and Saudi Arabia, all backed by a 100% Upwork Job Success Score and 5-star Freelancer rating.",
+    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Pakistan, all backed by a 100% Upwork Job Success Score and 5-star Freelancer rating.",
   },
   {
     q: "How much does custom software development cost in Pakistan in 2026?",
@@ -469,8 +469,9 @@ const TechnologiesSection = () => (
             <li>React JS (Hooks, Context, Next.js)</li>
             <li>Angular (Standalone Components)</li>
             <li>Blazor WebAssembly &amp; Server</li>
-            <li>Razor Pages / ASP.NET MVC</li>
-            <li>TypeScript / Tailwind CSS</li>
+            <li>MudBlazor / Razden</li>
+            <li>Javasript / TypeScript</li>
+            <li>Material UI / Tailwind CSS</li>
           </ul>
         </div>
         <div className="tech-category">
@@ -479,6 +480,7 @@ const TechnologiesSection = () => (
             <li>ASP.NET Core (Web API, MVC)</li>
             <li>C# / Entity Framework Core</li>
             <li>REST API (OpenAPI / Swagger)</li>
+            <li>Supabase / PostgreSQL</li>
             <li>GraphQL (Hot Chocolate)</li>
             <li>JWT / OAuth2 / OpenID Connect</li>
           </ul>
@@ -690,7 +692,7 @@ const Services = () => {
           <div className="container">
             {/* ✅ SINGLE H1, solution-first, broad commercial intent */}
             <h1 id="svc-hero-h1">
-              Custom Software Development Services in Pakistan, Built Around Your Business
+              Custom Software Development Services, Built Around Your Business
             </h1>
             <p>
               QllmSoft engineers production-ready digital solutions for businesses that need more
@@ -709,7 +711,7 @@ const Services = () => {
                 AI-powered software solutions
               </Link>{" "}
              , delivered on a fixed price, with a documented scope, on an agreed timeline.
-              Serving businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia since
+              Serving businesses across Pakistan, since
               2015 with a verified 100% Upwork Job Success Score.
             </p>
           </div>
@@ -732,8 +734,7 @@ const Services = () => {
                 End-to-end digital solutions built entirely around your business goals, not
                 generic templates or pre-built tools stretched to fit. As a{" "}
                 <strong>custom software development company in Pakistan</strong>, QllmSoft
-                serves businesses in Lahore, Karachi, Islamabad, Faisalabad, Sialkot,
-                Gujranwala, and internationally across four continents. Explore our full range
+                serves businesses in Pakistan & internationally across four continents. Explore our full range
                 of{" "}
                 <Link to="/custom-software-development-services">
                   custom software development services
@@ -959,8 +960,7 @@ const Services = () => {
               <p>
                 Tell us what you need to build. QllmSoft will review your requirements, send
                 a detailed fixed-price proposal within 24 hours, and schedule a free discovery
-                call, no commitment required. Businesses in Pakistan, the UK, USA, UAE, and
-                Saudi Arabia trust QllmSoft to deliver. We look forward to earning that trust
+                call, no commitment required. Businesses in Pakistan trust QllmSoft to deliver. We look forward to earning that trust
                 from you.
               </p>
               <Link
