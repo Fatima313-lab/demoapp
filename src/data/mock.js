@@ -10,6 +10,8 @@ import MobileAppDevelopment from "../assets/Mobile-app-development.jpg";
 import CustomWebImg from"../assets/Custom-web-developement.jpg";
 import APIsoftwareImg from "../assets/api-development.jpg";
 import systemModernization from "../assets/SystemModernization.jpg";
+import stickerSmashApp from "../assets/sticker-mobile-app.png";
+import webDesign from "../assets/web-design.webp";
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
@@ -113,6 +115,19 @@ export const servicesData = [
   },
   {
     id: 2,
+    name: "Web Design & UI/UX Services",
+    description: "We create modern, responsive, and user-focused websites with premium UI/UX design principles. Our solutions are optimized for performance, mobile responsiveness, user engagement, and seamless digital experiences across all devices.",
+    image: webDesign,
+    features: [
+      "• Modern UI/UX design systems",
+      "• Fully responsive web layouts",
+      "• Mobile-first user experience",
+      "• Interactive & conversion-focused interfaces"
+    ],
+    link: "/responsive-web-design-services"
+  },
+  {
+    id: 3,
     name: "Mobile App Development (iOS & Android)",
     slug: "mobile-app-development",
     description: "Our mobile app development services deliver high-performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
@@ -127,7 +142,7 @@ export const servicesData = [
     link: "/mobile-app-development"
   },
   {
-    id: 3,
+    id: 4,
     name: "Enterprise & Custom Software Development",
     slug: "enterprise-custom-software-development",
     description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
@@ -142,7 +157,7 @@ export const servicesData = [
     
   },
   {
-    id: 4,
+    id: 5,
     name: "API Development & System Integration",
     slug: "api-development-system-integration",
     description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
@@ -156,7 +171,7 @@ export const servicesData = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Legacy Software Modernization",
     description: "We modernize outdated legacy systems by migrating them to modern architectures such as ASP.NET Core and cloud-ready environments. This improves performance, scalability, and long-term maintainability.",
     image: systemModernization,
@@ -169,7 +184,7 @@ export const servicesData = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     name: "Digital Marketing & SEO",
     description: "We help businesses grow their online presence through data-driven digital marketing and SEO strategies. From improving search engine rankings to generating qualified leads, our approach focuses on measurable results and long-term growth.",
     image: CustomSoftwareDevelopment,
@@ -348,6 +363,46 @@ export const projectsData = [
         "Data-driven decisions"
       ]
     }
+  },
+  {
+    id: 6,
+    slug: "sticker-smash-photo-editor-app",
+    title: "Sticker Smash Photo Editor App",
+    image: stickerSmashApp,
+  
+    shortDescription:
+      "Interactive mobile app for editing pictures with fun stickers, emojis, and creative customization tools.",
+  
+    details: {
+      category: "Mobile Application | Photo Editing & Entertainment",
+  
+      paragraphs: [
+        "Sticker Smash is a modern mobile photo editing application that allows users to customize their pictures using interactive stickers, emojis, overlays, and creative editing tools through a simple and engaging interface.",
+  
+        "The application is designed with a smooth user experience, responsive mobile layout, and lightweight performance to provide fast image editing, sticker placement, and easy sharing functionality for Android and iOS users."
+      ],
+  
+      listTitle: "Application features:",
+  
+      list: [
+        "Photo upload & editing",
+        "Interactive sticker placement",
+        "Emoji & overlay customization",
+        "Drag & resize functionality",
+        "Image reset & preview options",
+        "Mobile-friendly responsive UI",
+        "Save & export edited images",
+        "Smooth Android & iOS experience"
+      ],
+  
+      impact: [
+        "Enhanced user engagement",
+        "Creative image customization",
+        "Simple and interactive experience",
+        "Fast mobile image editing",
+        "Improved social sharing appeal"
+      ]
+    }
   }
 
 ];
@@ -487,6 +542,13 @@ export const projects = [
   description: "Manage stock, track inventory, automate orders, and optimize warehouse operations",
   image: inventory, // make sure to import the image
   },
+  {
+    id: 6,
+    name: "Sticker Smasher App",
+    slug: "sticker-smash-photo-editor-app",
+    description: "Sticker Smash is a modern mobile photo editing application that allows users to customize their pictures.",
+    image: stickerSmashApp, // make sure to import the image
+    }
 ];
 
 export const trustedPartners = [
