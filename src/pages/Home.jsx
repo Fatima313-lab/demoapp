@@ -45,6 +45,7 @@
  */
 
 import React from "react";
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
@@ -53,17 +54,16 @@ import HeroSlider from "../components/HeroSlider";
 import ServiceCard from "../components/ServiceCard";
 import { homeServices, trustedPartners } from "../data/mock";
 
-import ProjectSections from "../components/ProjectSections";
-import TechnologiesSlider from "../components/TechnologiesSlider";
-import TestimonialSection from "../components/TestimonialSection";
-import StatsSection from "../components/StatsSection";
+const ProjectSections = lazy(() => import("../components/ProjectSections"));
+const TechnologiesSlider = lazy(() => import("../components/TechnologiesSlider"));
+const TestimonialSection = lazy(() => import("../components/TestimonialSection"));
+const StatsSection = lazy(() => import("../components/StatsSection"));
 import blogPostsData from "../data/blogPostsData";
 import QllmDocImg from "../assets/documents-qllmdocs-new.png";
 import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
 import AboutImg from "../assets/HeroQllmsoftimg.png";
 import GlobalTeamImg from "../assets/pakistanimg.jpg";
 import "./Home.css";
-import "animate.css";
 
 /* ─── JSON-LD: Organization ────────────────────────────────────── */
 const schemaOrg = {
@@ -506,7 +506,7 @@ const Home = () => {
                   >
                     Freelancer (5-Star Rating)
                   </a>{" "}
-                 , our reputation is built on delivery, not promises.
+                  , our reputation is built on delivery, not promises.
                 </p>
 
                 <Link
@@ -697,6 +697,8 @@ const Home = () => {
                 <img
                   src={GlobalTeamImg}
                   alt="QllmSoft software development team in Pakistan delivering enterprise digital solutions for global businesses"
+                  width="600"
+                  height="450"
                   loading="lazy"
                 />
               </div>
@@ -744,38 +746,38 @@ const Home = () => {
               <Link to="/legacy-system-modernization-services">
                 legacy enterprise system
               </Link>{" "}
-             ,QllmSoft provides the right team, the right process, and the right outcome.
+              ,QllmSoft provides the right team, the right process, and the right outcome.
             </p>
 
             <ul aria-label="QllmSoft core capabilities">
               <li>
                 <strong>Custom enterprise web application development</strong>{" "}
-               ,secure, scalable platforms built around your specific business processes
+                ,secure, scalable platforms built around your specific business processes
                 and user workflows, not generic SaaS tools stretched to fit
               </li>
               <li>
                 <strong>Mobile app development</strong> for Android and iOS
-               ,native-quality cross-platform apps with offline capability, push notifications,
+                ,native-quality cross-platform apps with offline capability, push notifications,
                 and seamless backend integration
               </li>
               <li>
                 <strong>Business process automation</strong>
-               ,replacing manual, error-prone workflows with intelligent automated systems
+                ,replacing manual, error-prone workflows with intelligent automated systems
                 that save time, reduce costs, and eliminate bottlenecks
               </li>
               <li>
                 <strong>AI-powered software solutions</strong>
-               ,machine learning, natural language processing, and intelligent automation
+                ,machine learning, natural language processing, and intelligent automation
                 embedded into your business software for measurable ROI
               </li>
               <li>
                 <strong>Legacy system modernisation</strong>
-               ,phased, zero-disruption migration from outdated systems to modern,
+                ,phased, zero-disruption migration from outdated systems to modern,
                 maintainable platforms without losing a single line of business logic
               </li>
               <li>
                 <strong>Dedicated developer teams</strong>
-               ,full-stack engineers, mobile developers, cloud architects, and AI specialists
+                ,full-stack engineers, mobile developers, cloud architects, and AI specialists
                 available for full-time or project-based engagements
               </li>
             </ul>
@@ -783,14 +785,19 @@ const Home = () => {
         </section>
 
         {/* ── STATS ── */}
-        <StatsSection />
+        <Suspense fallback={<div style={{ height: "200px" }} />}>
+          <StatsSection />
+        </Suspense>
 
         {/* ── PROJECTS ── */}
         <section
           className="section projects-section"
           aria-label="QllmSoft software development projects portfolio"
         >
-          <ProjectSections />
+          <Suspense fallback={<div style={{ height: "200px" }} />}>
+            <ProjectSections />
+          </Suspense>
+
         </section>
 
         {/* ── TESTIMONIALS ── */}
@@ -803,7 +810,9 @@ const Home = () => {
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development Company Pakistan
           </h2>
-          <TestimonialSection />
+          <Suspense fallback={<div style={{ height: "200px" }} />}>
+            <TestimonialSection />
+          </Suspense>
         </section>
 
         {/* ── TECHNOLOGIES ── */}
@@ -811,7 +820,9 @@ const Home = () => {
           className="section tech-section"
           aria-label="Software development technologies and platforms used by QllmSoft"
         >
-          <TechnologiesSlider />
+          <Suspense fallback={<div style={{ height: "200px" }} />}>
+            <TechnologiesSlider />
+          </Suspense>
         </section>
 
         {/* ── CASE STUDIES ── */}
@@ -828,7 +839,7 @@ const Home = () => {
             <div className="case-grid">
               {featuredCaseStudies.map((c) => (
                 <article key={c.title} className="case-card">
-                  <img src={c.image} alt={c.alt} loading="lazy" />
+                  <img src={c.image} alt={c.alt} width="600" height="400" loading="lazy" />
 
                   <h3>{c.title}</h3>
 
@@ -862,7 +873,7 @@ const Home = () => {
               <p>
                 Our independently verified reviews on Upwork and Freelancer reflect
                 consistent project delivery for businesses in the UK, USA, UAE, Saudi Arabia,
-             and Pakistan, across finance, healthcare, education,
+                and Pakistan, across finance, healthcare, education,
                 logistics, and eCommerce.
               </p>
             </div>
@@ -879,6 +890,8 @@ const Home = () => {
                     <img
                       src={partner.logo}
                       alt={`${partner.name}, QllmSoft software development client Pakistan`}
+                      width="160"
+                      height="60"
                       loading="lazy"
                     />
                   </a>
@@ -912,7 +925,7 @@ const Home = () => {
                 .filter(({ post }) => Boolean(post))
                 .map(({ key, post }) => (
                   <article key={key} className="blog-preview-card">
-                    <img src={post.image} alt={post.title} loading="lazy" />
+                    <img src={post.image} alt={post.title} width="400" height="250" loading="lazy" />
                     <h3>{post.title}</h3>
                     <p>{post.description}</p>
                     <Link to={`/blog/${key}`} className="blog-read-btn">
