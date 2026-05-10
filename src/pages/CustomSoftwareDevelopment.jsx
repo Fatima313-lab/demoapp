@@ -20,6 +20,8 @@ import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import "./CustomSoftwareDevelopment.css";
 import "animate.css";
+import FounderNote from "../components/FounderNote";
+import TestimonialSection from "../components/TestimonialSection";
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -54,7 +56,7 @@ const schemaOrg = {
 const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Custom Software Development",
+  serviceType: "Software Engineering",
   name: "Custom Software Development Services in Pakistan",
   description:
     "QllmSoft provides end-to-end custom software development in Pakistan including web apps, mobile apps, desktop software, cloud solutions, AI integrations, and REST APIs for startups and enterprises worldwide.",
@@ -77,7 +79,47 @@ const schemaService = {
     price: "1000",
     description: "Custom software development projects starting from $1,000",
   },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software Solutions",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise ERP Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS Platform Engineering" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & ML System Integration" }}
+    ]
+  }
 };
+
+
+
+/* ─── JSON-LD: Author / Expert Schema ─────────────────────── */
+const schemaAuthor = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zain Ul Abedin",
+  "jobTitle": "Lead Software Architect & Founder",
+  "description": "Expert Software Engineer with 10+ years of experience specializing in .NET Core, Cloud Architecture, and AI integrations. Founder of QllmSoft.",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "QllmSoft"
+  },
+  "url": "https://qllmsoft.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/", 
+    "https://www.upwork.com/freelancers/~01c2b01d0c11909f17",
+    "https://www.freelancer.com/u/mrprogrmmr"
+  ],
+  "knowsAbout": [
+    "Custom Software Development",
+    "ASP.NET Core",
+    "Microservices Architecture",
+    "Azure Cloud Migration",
+    "AI & OpenAI Integration"
+  ]
+};
+
+
+
 
 /* ─── JSON-LD: BreadcrumbList ─────────────────────────────── */
 const schemaBreadcrumb = {
@@ -269,6 +311,14 @@ const CustomSoftwareDevelopment = () => {
           name="twitter:image:alt"
           content="QllmSoft — Custom Software Development Company Pakistan"
         />
+
+
+<meta name="geo.region" content="PK-PB" />
+<meta name="geo.placename" content="Lalamusa" />
+<meta name="geo.position" content="32.7015;73.9605" />
+<meta name="ICBM" content="32.7015, 73.9605" />
+
+
 
         {/* ── JSON-LD Structured Data ────────────────── */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -598,8 +648,9 @@ const CustomSoftwareDevelopment = () => {
               </h2>
               <p>
                 We understand that every industry operates under different
-                rules, pressures, and expectations. Our software is built around
-                those realities — not around generic feature lists.
+                rules, pressures, and expectations.<strong> QllmSoft proudly serves enterprise clients in Lahore, Karachi, and Islamabad, </strong> 
+        as well as offshore partners in the US and UK, delivering custom systems built for 
+        real world growth.
               </p>
             </div>
             <div className="csd-industries__grid">
@@ -607,17 +658,20 @@ const CustomSoftwareDevelopment = () => {
                 {
                   icon: "🏦",
                   title: "Finance & Banking Software",
-                  desc: "Secure payment gateways, custom CRMs, risk management dashboards, and regulatory-compliant financial tools built to the strict standards of the banking sector.",
+                  desc: "We architect high-security payment gateways and risk dashboards. Our team ensures 99.9% uptime and strict compliance with global financial data standards.",
+                  tech: ".NET Core • SQL Server • OAuth2",
                 },
                 {
                   icon: "🏥",
                   title: "Healthcare Management Systems",
-                  desc: "HIPAA-compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
+                  desc: "We build HIPAA-compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
+                  tech: "Azure Health • HL7/FHIR • HIPAA",
                 },
                 {
                   icon: "🎓",
                   title: "Education & eLearning Platforms",
-                  desc: "Custom education software for schools, universities, and corporate training programs — including LMS systems, progress tracking, and interactive course tools.",
+                  desc: "Our developers build scalable LMS platforms capable of handling thousands of concurrent students with interactive course tools.",
+                   tech: "React • SignalR • Azure Stream",
                 },
                 {
                   icon: "🏘️",
@@ -628,11 +682,13 @@ const CustomSoftwareDevelopment = () => {
                   icon: "🚚",
                   title: "Logistics & Supply Chain",
                   desc: "Inventory tracking, fleet management, route optimization, and end-to-end supply chain visibility tools built for logistics providers who need speed and control in one place.",
+                  tech: "IoT • PowerBI • Microservices",
                 },
                 {
                   icon: "☁️",
-                  title: "SaaS Product Development",
-                  desc: "Scalable multi-tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations — engineered to grow from Day 1.",
+                  title: "SaaS & Cloud Product Development",
+                  desc: "we help to build Scalable multi-tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations — engineered to grow from Day 1.",
+                   tech: "Azure • Stripe • Redis",
                 },
               ].map((ind, i) => (
                 <article
@@ -650,6 +706,21 @@ const CustomSoftwareDevelopment = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+        
 
         {/* ══════════════════════════════════════════════════
             PROCESS  —  H2 + H4s (ordered list for crawlers)
@@ -855,96 +926,19 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            TESTIMONIALS  —  H2 + Review microdata
-        ══════════════════════════════════════════════════ */}
+        {/* ── TESTIMONIALS ── */}
         <section
-          className="section csd-testimonials"
+          className="section testimonial-section"
           aria-labelledby="testimonials-heading"
+          itemScope
+          itemType="https://schema.org/Review"
         >
-          <div className="container">
-            <p className="section-eyebrow">Client Reviews</p>
-            <div className="section-title">
-              <h2 id="testimonials-heading">
-                What Our Global Clients Say About Our Software Development
-                Services
-              </h2>
-              <p>
-                Independent, verified reviews from real clients on Freelancer —
-                from the UK, USA, UAE, Saudi Arabia, and Jordan.
-              </p>
-            </div>
-            <div className="csd-testimonials__grid">
-              {[
-                {
-                  name: "Khalid A.",
-                  location: "Riyadh, Saudi Arabia",
-                  img: "https://qllmsoft.com/images/khalid A.webp",
-                  text: '"Great work with a great programmer team. Delivered everything exactly as discussed and on time."',
-                },
-                {
-                  name: "Mohammad I.",
-                  location: "Amman, Jordan",
-                  img: "https://qllmsoft.com/images/Muhammad I.webp",
-                  text: '"As always, great work. QllmSoft is my reliable choice for store builds and web application logic. The quality of code and communication is consistently excellent. Highly recommended."',
-                },
-                {
-                  name: "Neil P.",
-                  location: "Cardiff, United Kingdom",
-                  img: "https://qllmsoft.com/images/Neil P.webp",
-                  text: '"Fantastic work. Excellent communication throughout, and the final result was exactly what we needed. I will continue to use QllmSoft for future projects without hesitation."',
-                },
-                {
-                  name: "Fernando M.",
-                  location: "Miramar, United States",
-                  img: "https://qllmsoft.com/images/fernandoM.webp",
-                  text: '"Very pleasant developer to collaborate with. QllmSoft consistently delivers a high standard of code, clean architecture, and professional results on every engagement."',
-                },
-              ].map((t, i) => (
-                <article
-                  key={i}
-                  className="csd-testimonial-card"
-                  itemScope
-                  itemType="https://schema.org/Review"
-                >
-                  <div
-                    className="csd-testimonial-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating" content="5" />
-                    ★★★★★
-                  </div>
-                  <p
-                    className="csd-testimonial-card__text"
-                    itemProp="reviewBody"
-                  >
-                    {t.text}
-                  </p>
-                  <div
-                    className="csd-testimonial-card__author"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
-                  >
-                    <img
-                      src={t.img}
-                      alt={`${t.name} — verified QllmSoft client review from ${t.location}`}
-                      loading="lazy"
-                      width="48"
-                      height="48"
-                    />
-                    <div>
-                      <strong itemProp="name">{t.name}</strong>
-                      <span>{t.location} — Freelancer</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+          <h2 id="testimonials-heading" className="sr-only">
+            Client Reviews, QllmSoft Software Development Company Pakistan
+          </h2>
+          <TestimonialSection />
+        
+
             <div style={{ textAlign: "center", marginTop: "30px" }}>
               <a
                 href="https://www.freelancer.com/u/mrprogrmmr"
@@ -956,7 +950,6 @@ const CustomSoftwareDevelopment = () => {
                 View All Verified Reviews on Freelancer
               </a>
             </div>
-          </div>
         </section>
 
         {/* ══════════════════════════════════════════════════
@@ -1036,6 +1029,13 @@ const CustomSoftwareDevelopment = () => {
             </div>
           </div>
         </section>
+
+ 
+      
+           <FounderNote 
+  title="Expert Leadership, Collective Excellence"
+  message="At QllmSoft, I lead a hand picked team of senior developers and engineers. While I personally oversee the high level architecture of every project, our collective strength lies in our collaborative approach. We don't just write code; as a team, we engineer solutions that align with your business goals, ensuring every module we deliver is backed by our shared commitment to quality."
+/>
 
         {/* ══════════════════════════════════════════════════
             FAQ  —  H2 + FAQPage itemScope
