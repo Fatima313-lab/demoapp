@@ -80,28 +80,28 @@ export const homeServices = [
     name: "Custom Web Development",
     description: "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
     image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/web-application-development-company-pakistan"
+    link: "/website-development-services"
   },
   {
     id: 3,
     name: "Mobile App Development",
     description: "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
     image: "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/mobile-app-development-company-pakistan"
+    link: "/mobile-app-development"
   },
   {
     id: 4,
     name: "API & Enterprise Integration",
     description: "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
     image: "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/api-development-company-pakistan"
+    link: "/api-development-services"
   },
   {
     id: 5,
     name: "AI Supported Solutions",
     description: "Integrating smart automation and machine learning models to optimize workflows and data-driven decision making.",
     image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/ai-development-services-pakistan"
+    link: "/ai-powered-software-solutions"
   },
   {
     id: 6,

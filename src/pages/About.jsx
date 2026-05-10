@@ -763,7 +763,7 @@ const About = () => {
                   },
                   {
                     to: "/legacy-system-modernization-services",
-                    label: "Legacy Modernisation",
+                    label: "Legacy Modernization",
                   },
                   {
                     to: "/hire-dotnet-developers-pakistan",

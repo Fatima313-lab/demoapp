@@ -15,6 +15,7 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './IndustryPage.css';
 import 'animate.css';
+import TestimonialSection from "../components/TestimonialSection";
 
 const PAGE_URL = 'https://qllmsoft.com/legacy-system-modernization-services';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
@@ -320,32 +321,9 @@ const LegacyModernization = () => {
         </section>
 
         {/* TESTIMONIALS */}
-        <section className="section ip-testimonials" ref={revRef} aria-labelledby="reviews-heading">
-          <div className="container">
-            <p className="section-eyebrow">Verified Reviews</p>
-            <div className="section-title">
-              <h2 id="reviews-heading">What Clients Say About QllmSoft Legacy Modernization</h2>
-              <p>Independent reviews from clients across Freelancer and Upwork — UK, USA, UAE, Saudi Arabia, and Jordan.</p>
-            </div>
-            <div className="ip-reviews__grid">
-              {[
-                {name:'Khalid A.',    loc:'Riyadh, Saudi Arabia', img:'https://qllmsoft.com/images/khalid A.webp',   text:'"QllmSoft modernized our decade-old financial platform without a single day of unplanned downtime. The phased approach they used meant our team was never exposed to unvalidated code in production. Exceptional work."'},
-                {name:'Neil P.',     loc:'Cardiff, United Kingdom',img:'https://qllmsoft.com/images/Neil P.webp',    text:'"Our legacy .NET Framework system was a security liability. QllmSoft\'s migration to ASP.NET Core eliminated every flagged vulnerability, improved response times by 60%, and the codebase is now something our team can actually maintain."'},
-                {name:'Fernando M.', loc:'Miramar, United States', img:'https://qllmsoft.com/images/fernandoM.webp', text:'"The modernization QllmSoft delivered has transformed our development velocity. What used to take three weeks to ship now takes three days. The architectural improvements they made have compounded in value every quarter since."'},
-                {name:'Mohammad I.', loc:'Amman, Jordan',          img:'https://qllmsoft.com/images/Muhammad I.webp',text:'"Professional, technically excellent, and genuinely careful with our business-critical system. QllmSoft treated our legacy platform with the respect it deserved and delivered a modernized system that performs and is a pleasure to work with."'},
-              ].map((r,i)=>(
-                <article key={i} className={`ip-review-card animate__animated ${revInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}} itemScope itemType="https://schema.org/Review">
-                  <div className="ip-review-card__stars" aria-label="5 out of 5 stars" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating"><meta itemProp="ratingValue" content="5"/><meta itemProp="bestRating" content="5"/>★★★★★</div>
-                  <p className="ip-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div className="ip-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
-                    <img src={r.img} alt={`${r.name} — verified QllmSoft legacy modernization client from ${r.loc}`} loading="lazy" width="44" height="44"/>
-                    <div><strong itemProp="name">{r.name}</strong><span>{r.loc} — Freelancer</span></div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        
+           <TestimonialSection />
+         
 
         {/* FAQ */}
         <section className="section csd-faq ip-faq" aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
