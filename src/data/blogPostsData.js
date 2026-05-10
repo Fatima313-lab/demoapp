@@ -1,11 +1,11 @@
 // Blog Posts Data - Reused from QllmSoft service pages
 // Content structure for SEO-friendly blog articles
-import shopifyImg from "../assets/shopify.jpg";
-import LegacyModernization from "../assets/Legacy-system-risk.jpg";
-import CustomvsEcommerceImg from "../assets/SaaS-Ecommerce.jpg";
-import internalSystemEfficiencyImg from "../assets/internal-System-Efficiency.jpg";
-import RolebasedaccessproblemImg from "../assets/Role-based-access-problem.jpg";
-import CustomSoftwareImg from "../assets/Custom-Software.jpg";
+import shopifyImg from "../assets/shopify.webp";
+import LegacyModernization from "../assets/Legacy-system-risk.webp";
+import CustomvsEcommerceImg from "../assets/SaaS-Ecommerce.webp";
+import internalSystemEfficiencyImg from "../assets/internal-System-Efficiency.webp";
+import RolebasedaccessproblemImg from "../assets/Role-based-access-problem.webp";
+import CustomSoftwareImg from "../assets/Custom-Software.webp";
 export const blogPostsData = {
   "best-software-house-in-pakistan": {
     title: "Top 10 Best Software Houses in Pakistan 2026",

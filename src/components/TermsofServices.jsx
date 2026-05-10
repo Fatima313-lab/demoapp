@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import './TermsofServices.css';
-import heroImage from "../assets/termsofservices.jpg"; // Replace with your own hero image
+import heroImage from "../assets/termsofservices.webp"; // Replace with your own hero image
 
 const TermsOfServices = () => {
   useEffect(() => {

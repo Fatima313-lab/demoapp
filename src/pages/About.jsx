@@ -38,7 +38,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import ceoImg from "../assets/ceo-qllmsoft.jpg";
+import ceoImg from "../assets/ceo-qllmsoft.webp";
 import {
   Eye,
   Target,

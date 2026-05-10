@@ -4,13 +4,13 @@ import financeImg from '../assets/qllm-soft-finance-management-system-11.webp';
 import hrImg from '../assets/hr.webp';
 import portfolioImg from '../assets/portfolio-profile.webp';
 import inventory from '../assets/inventory-management .webp';
-import digitalmarketing from '../assets/digitalmarketing.png';
-import CustomSoftwareDevelopment from "../assets/Custom-Software.jpg";
-import MobileAppDevelopment from "../assets/Mobile-app-development.jpg";
-import CustomWebImg from"../assets/Custom-web-developement.jpg";
-import APIsoftwareImg from "../assets/api-development.jpg";
-import systemModernization from "../assets/SystemModernization.jpg";
-import stickerSmashApp from "../assets/sticker-mobile-app.png";
+import digitalmarketing from '../assets/digitalmarketing.webp';
+import CustomSoftwareDevelopment from "../assets/Custom-Software.webp";
+import MobileAppDevelopment from "../assets/Mobile-app-development.webp";
+import CustomWebImg from"../assets/Custom-web-developement.webp";
+import APIsoftwareImg from "../assets/api-development.webp";
+import systemModernization from "../assets/SystemModernization.webp";
+import stickerSmashApp from "../assets/sticker-mobile-app.webp";
 import webDesign from "../assets/web-design.webp";
 export const companyInfo = {
   name: "QllmSoft",
