@@ -111,7 +111,7 @@ const HeroSlider = () => {
       {/* Content */}
       <div className="hero-content">
         <h1 className="hero-title">
-          QllmSoft software development team in Pakistan delivering custom digital solutions for global businesses
+        Custom Software, AI Integration & Digital Solutions — Built in Pakistan, Trusted Worldwide
         </h1>
 
         <p className="hero-subtitle">

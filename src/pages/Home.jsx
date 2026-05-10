@@ -45,7 +45,6 @@
  */
 
 import React from "react";
-import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
@@ -54,16 +53,17 @@ import HeroSlider from "../components/HeroSlider";
 import ServiceCard from "../components/ServiceCard";
 import { homeServices, trustedPartners } from "../data/mock";
 
-const ProjectSections = lazy(() => import("../components/ProjectSections"));
-const TechnologiesSlider = lazy(() => import("../components/TechnologiesSlider"));
-const TestimonialSection = lazy(() => import("../components/TestimonialSection"));
-const StatsSection = lazy(() => import("../components/StatsSection"));
+import ProjectSections from "../components/ProjectSections";
+import TechnologiesSlider from "../components/TechnologiesSlider";
+import TestimonialSection from "../components/TestimonialSection";
+import StatsSection from "../components/StatsSection";
 import blogPostsData from "../data/blogPostsData";
 import QllmDocImg from "../assets/documents-qllmdocs-new.png";
 import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
 import AboutImg from "../assets/HeroQllmsoftimg.png";
 import GlobalTeamImg from "../assets/pakistanimg.jpg";
 import "./Home.css";
+import "animate.css";
 
 /* ─── JSON-LD: Organization ────────────────────────────────────── */
 const schemaOrg = {
@@ -82,7 +82,7 @@ const schemaOrg = {
     "QllmSoft is a custom software development company in Pakistan delivering digital solutions for businesses worldwide, including enterprise web applications, mobile apps, internal business systems, APIs, and AI-powered automation across finance, healthcare, education, logistics, and eCommerce.",
   foundingDate: "2015",
   telephone: "+92-334-8229288",
-  email: "info@qllmsoft.com",
+  email: "qllmsoft@gmail.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "H # 181, Camping Ground",
@@ -460,25 +460,19 @@ const Home = () => {
               >
                 {/* ✅ SINGLE H1, solution-first, broad keyword targeting */}
                 <h1 id="about-heading">
-                  A Software Development Company in Pakistan That Delivers Real Business Outcomes
+                A Software & Digital Solutions Company in Pakistan That Delivers Real Results
                 </h1>
 
                 <p>
-                  QllmSoft is a{" "}
-                  <strong>
-                    custom software development company in Pakistan
-                  </strong>{" "}
-                  trusted by businesses across four continents to turn complex operational
-                  challenges into clean, scalable digital solutions. We build enterprise
-                  systems, web platforms, mobile applications, and AI-powered tools that
-                  replace manual processes, reduce operational bottlenecks, and give your
-                  team full visibility and control.
+                QllmSoft is a{" "}
+  <strong>custom software development and digital solutions company in Pakistan</strong>{" "}
+  trusted by businesses across four continents. We build, integrate, and scale —
+  so your operations run smarter, not harder.
                 </p>
                 <p>
-                  We work as a full-service digital solutions partner, not just a code
-                  vendor. Every project is scoped, priced, and structured before development
-                  begins. You always know what you are getting, when you are getting it, and
-                  exactly what it costs. No hidden charges, no scope creep, no surprises.
+                From web design and digital marketing to AI integration and APIs integration,
+  we handle the full stack. Every project is scoped, priced, and delivered
+  transparently. No hidden charges. No scope creep. No surprises.
                 </p>
                 <p>
                   Our portfolio spans financial management platforms, document management
@@ -506,7 +500,7 @@ const Home = () => {
                   >
                     Freelancer (5-Star Rating)
                   </a>{" "}
-                  , our reputation is built on delivery, not promises.
+                 , our reputation is built on delivery, not promises.
                 </p>
 
                 <Link
@@ -532,7 +526,7 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="services-heading">
-                Software Solutions We Deliver, From Idea to Production
+              Everything Your Business Needs — Built, Integrated & Launched
               </h2>
               <p>
                 We solve real business problems with custom-built software. Whether you need to
@@ -697,8 +691,6 @@ const Home = () => {
                 <img
                   src={GlobalTeamImg}
                   alt="QllmSoft software development team in Pakistan delivering enterprise digital solutions for global businesses"
-                  width="600"
-                  height="450"
                   loading="lazy"
                 />
               </div>
@@ -746,38 +738,38 @@ const Home = () => {
               <Link to="/legacy-system-modernization-services">
                 legacy enterprise system
               </Link>{" "}
-              ,QllmSoft provides the right team, the right process, and the right outcome.
+             ,QllmSoft provides the right team, the right process, and the right outcome.
             </p>
 
             <ul aria-label="QllmSoft core capabilities">
               <li>
                 <strong>Custom enterprise web application development</strong>{" "}
-                ,secure, scalable platforms built around your specific business processes
+               ,secure, scalable platforms built around your specific business processes
                 and user workflows, not generic SaaS tools stretched to fit
               </li>
               <li>
                 <strong>Mobile app development</strong> for Android and iOS
-                ,native-quality cross-platform apps with offline capability, push notifications,
+               ,native-quality cross-platform apps with offline capability, push notifications,
                 and seamless backend integration
               </li>
               <li>
                 <strong>Business process automation</strong>
-                ,replacing manual, error-prone workflows with intelligent automated systems
+               ,replacing manual, error-prone workflows with intelligent automated systems
                 that save time, reduce costs, and eliminate bottlenecks
               </li>
               <li>
                 <strong>AI-powered software solutions</strong>
-                ,machine learning, natural language processing, and intelligent automation
+               ,machine learning, natural language processing, and intelligent automation
                 embedded into your business software for measurable ROI
               </li>
               <li>
                 <strong>Legacy system modernisation</strong>
-                ,phased, zero-disruption migration from outdated systems to modern,
+               ,phased, zero-disruption migration from outdated systems to modern,
                 maintainable platforms without losing a single line of business logic
               </li>
               <li>
                 <strong>Dedicated developer teams</strong>
-                ,full-stack engineers, mobile developers, cloud architects, and AI specialists
+               ,full-stack engineers, mobile developers, cloud architects, and AI specialists
                 available for full-time or project-based engagements
               </li>
             </ul>
@@ -785,19 +777,14 @@ const Home = () => {
         </section>
 
         {/* ── STATS ── */}
-        <Suspense fallback={<div style={{ height: "200px" }} />}>
-          <StatsSection />
-        </Suspense>
+        <StatsSection />
 
         {/* ── PROJECTS ── */}
         <section
           className="section projects-section"
           aria-label="QllmSoft software development projects portfolio"
         >
-          <Suspense fallback={<div style={{ height: "200px" }} />}>
-            <ProjectSections />
-          </Suspense>
-
+          <ProjectSections />
         </section>
 
         {/* ── TESTIMONIALS ── */}
@@ -810,9 +797,7 @@ const Home = () => {
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development Company Pakistan
           </h2>
-          <Suspense fallback={<div style={{ height: "200px" }} />}>
-            <TestimonialSection />
-          </Suspense>
+          <TestimonialSection />
         </section>
 
         {/* ── TECHNOLOGIES ── */}
@@ -820,9 +805,7 @@ const Home = () => {
           className="section tech-section"
           aria-label="Software development technologies and platforms used by QllmSoft"
         >
-          <Suspense fallback={<div style={{ height: "200px" }} />}>
-            <TechnologiesSlider />
-          </Suspense>
+          <TechnologiesSlider />
         </section>
 
         {/* ── CASE STUDIES ── */}
@@ -839,7 +822,7 @@ const Home = () => {
             <div className="case-grid">
               {featuredCaseStudies.map((c) => (
                 <article key={c.title} className="case-card">
-                  <img src={c.image} alt={c.alt} width="600" height="400" loading="lazy" />
+                  <img src={c.image} alt={c.alt} loading="lazy" />
 
                   <h3>{c.title}</h3>
 
@@ -873,7 +856,7 @@ const Home = () => {
               <p>
                 Our independently verified reviews on Upwork and Freelancer reflect
                 consistent project delivery for businesses in the UK, USA, UAE, Saudi Arabia,
-                and Pakistan, across finance, healthcare, education,
+             and Pakistan, across finance, healthcare, education,
                 logistics, and eCommerce.
               </p>
             </div>
@@ -890,8 +873,6 @@ const Home = () => {
                     <img
                       src={partner.logo}
                       alt={`${partner.name}, QllmSoft software development client Pakistan`}
-                      width="160"
-                      height="60"
                       loading="lazy"
                     />
                   </a>
@@ -925,7 +906,7 @@ const Home = () => {
                 .filter(({ post }) => Boolean(post))
                 .map(({ key, post }) => (
                   <article key={key} className="blog-preview-card">
-                    <img src={post.image} alt={post.title} width="400" height="250" loading="lazy" />
+                    <img src={post.image} alt={post.title} loading="lazy" />
                     <h3>{post.title}</h3>
                     <p>{post.description}</p>
                     <Link to={`/blog/${key}`} className="blog-read-btn">
