@@ -71,30 +71,44 @@ export const homeServices = [
   {
     id: 1,
     name: "ASP.NET Core Development",
-    description: "Enterprise-grade ASP.NET Core development for secure, scalable web applications and internal systems built for long-term growth.",
-    image: CustomSoftwareDevelopment,
+    description: "Enterprise-grade backend solutions and secure internal systems built for high-performance scalability.",
+    image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/asp-net-core-development-company-pakistan"
   },
   {
     id: 2,
-    name: "Custom Web Application Development",
-    description: "End-to-end web application development modern architectures designed for performance, scalability, and long-term growth.",
-    image: CustomWebImg,
+    name: "Custom Web Development",
+    description: "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
+    image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/web-application-development-company-pakistan"
   },
   {
     id: 3,
-    name: "API & Secure Enterprise Integrations",
-    description: "Robust RESTful API development and third-party system integrations to power web, mobile, and enterprise platforms with reliability and security.",
-    image: APIsoftwareImg,
-    link: "/api-development-company-pakistan"
+    name: "Mobile App Development",
+    description: "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
+    image: "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/mobile-app-development-company-pakistan"
   },
   {
     id: 4,
-    name: "Enterprise Software & System Integration",
-    description: "Custom enterprise software development, legacy system modernization, and scalable Microsoft-based solutions built for complex business environments.",
-    image: MobileAppDevelopment,
-    link: "/enterprise-software-development-pakistan"
+    name: "API & Enterprise Integration",
+    description: "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
+    image: "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/api-development-company-pakistan"
+  },
+  {
+    id: 5,
+    name: "AI Supported Solutions",
+    description: "Integrating smart automation and machine learning models to optimize workflows and data-driven decision making.",
+    image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/ai-development-services-pakistan"
+  },
+  {
+    id: 6,
+    name: "Web Design & Digital Marketing",
+    description: "Strategic UI/UX design combined with data-driven marketing to boost your brand visibility and conversion rates.",
+    image: "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/digital-marketing-agency-pakistan"
   }
 ];
 
