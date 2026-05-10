@@ -349,14 +349,9 @@ const CustomSoftwareDevelopment = () => {
             </h1>
 
             <p className="csd-hero__sub">
-              We build secure, scalable web, mobile, desktop, and AI-powered
-              software tailored to your exact business workflows — serving
-              clients across the US, UK, Europe, and the Gulf from our base in
-              Pakistan.{" "}
-              <Link to="/finance-management-system">
-                Learn more about our finance management system solutions
-              </Link>
-              .
+              We engineer high performance <strong>enterprise solutions</strong> tailored to your specific workflows. 
+      From <strong>Lahore to accross the globe</strong>, we help businesses scale with secure web, mobile, and AI driven 
+      architectures including specialized <Link to="/finance-management-system" className="inline-link">Finance Management Systems</Link>.
             </p>
 
             <div className="csd-hero__buttons">
@@ -365,14 +360,14 @@ const CustomSoftwareDevelopment = () => {
                 className="btn btn-primary"
                 aria-label="Get a free custom software development consultation from QllmSoft Pakistan"
               >
-                Get a Free Consultation
+                Start your Project
               </Link>
               <Link
                 to="/projects"
                 className="btn btn-outline-light"
                 aria-label="View QllmSoft custom software development projects portfolio"
               >
-                View Our Projects
+                Browser Portfolio 
               </Link>
             </div>
 
@@ -386,7 +381,7 @@ const CustomSoftwareDevelopment = () => {
                 { num: "10+", label: "Years of Expertise" },
               ].map((s) => (
                 <div key={s.label} className="csd-hero__stat">
-                  <span className="csd-hero__stat-num">{s.num}</span>
+                  <strong className="csd-hero__stat-num">{s.num}</strong>
                   <span className="csd-hero__stat-label">{s.label}</span>
                 </div>
               ))}
@@ -395,13 +390,13 @@ const CustomSoftwareDevelopment = () => {
             <div className="csd-hero__pills" aria-label="Core service areas">
               {[
                 {
-                  icon: "🌐",
+                  icon: "🚀",
                   title: "Web Application Development",
                   desc: "ASP.NET Core, React, Angular — from SaaS platforms to enterprise dashboards.",
                 },
                 {
                   icon: "📱",
-                  title: "Mobile App Development",
+                  title: "Hybrid Mobile Apps",
                   desc: "iOS & Android apps with Flutter and React Native.",
                 },
                 {
@@ -424,7 +419,7 @@ const CustomSoftwareDevelopment = () => {
 
             <div className="csd-hero__tags" aria-label="Technologies used">
               {[
-                ".NET Core",
+                "ASP.NET Core",
                 "React",
                 "Angular",
                 "Azure",
@@ -450,22 +445,18 @@ const CustomSoftwareDevelopment = () => {
           itemType="https://schema.org/Organization"
         >
           <div className="container">
-            <p className="section-eyebrow">Who We Are</p>
+            <p className="section-eyebrow">Engineering Excellence</p>
             <div className="about-content">
               <article
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="about-heading" className="about-title">
-                  A Pakistani Software Company Built for Global Businesses
+                  A Pakistani Software House <span>Empowering Global Innovation</span>
                 </h2>
                 <p>
-                  QllmSoft is a Pakistan-based{" "}
-                  <strong>custom software development company</strong> that
-                  helps small-to-medium businesses and enterprises around the
-                  world build technology that actually works for them — not
-                  against them. We don't sell templates or off-the-shelf
-                  patches. Every line of code we write is grounded in your
-                  specific business challenges.
+                QllmSoft is more than just a <strong>custom software development company in Pakistan</strong>. 
+          We are your technical partners, helping SMEs and enterprises in <strong>Lahore, Karachi, Islamabad</strong>, 
+          and across the globe build technology that drives revenue—not overhead.
                 </p>
                 <p>
                   Our team of senior .NET developers, mobile engineers, UI/UX
@@ -516,7 +507,7 @@ const CustomSoftwareDevelopment = () => {
                   },
                   { num: "50+", label: "Software Projects Delivered" },
                   { num: "30+", label: "Global Clients Served" },
-                  { num: "5+", label: "Years of Development Expertise" },
+                  { num: "10+", label: "Years of Development Expertise" },
                 ].map((s) => (
                   <div key={s.num} className="csd-about__stat-card">
                     <span className="csd-about__stat-num">{s.num}</span>
