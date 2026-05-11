@@ -22,7 +22,7 @@ import "./CustomSoftwareDevelopment.css";
 import "animate.css";
 import FounderNote from "../components/FounderNote";
 import TestimonialSection from "../components/TestimonialSection";
-import RelatedServicesCarousel from "../components/RelatedSolutions";
+import RelatedSolutions from "../components/RelatedSolutions";
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -1061,7 +1061,7 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
-        <RelatedServicesCarousel />
+        <RelatedSolutions category="custom-software" />
 
         {/* ══════════════════════════════════════════════════
             FINAL CTA  —  H2

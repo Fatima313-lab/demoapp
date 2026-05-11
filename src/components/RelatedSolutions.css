@@ -3,7 +3,7 @@
 .csd-custom-grid-section {
   position: relative;
   padding: 70px 0;
-  background: linear-gradient(180deg, #eceff5 0%, #e0e6ef 100%);
+  background: linear-gradient(180deg, #c8cedb 0%, #83888f 100%);
   overflow: hidden;
   border: #475569 3px dashed;
 }
@@ -118,11 +118,36 @@
   pointer-events: none;
 }
 
-.card-icon-3d {
-  font-size: 3.3rem;
-  margin-bottom: 16px;
-  display: block;
-  filter: drop-shadow(0 10px 14px rgba(0,0,0,0.15));
+.card-image-circle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+
+  background: rgba(255,255,255,0.85);
+  padding: 6px;
+
+  box-shadow:
+    0 12px 24px rgba(15,23,42,0.25),
+    inset 0 0 0 1px rgba(255,255,255,0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateZ(35px);
+}
+
+.card-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+.csd-custom-card:hover .card-image-circle {
+  transform: translateZ(35px) scale(1.08);
 }
 
 .csd-custom-card h3 {
