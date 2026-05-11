@@ -1166,7 +1166,7 @@ const MobileAppDevelopment = () => {
             </div>
             <div style={{ textAlign: 'center', marginTop: '32px' }}>
               <Link
-                to="/mobile-app-development-cost-in-pakistan"
+                to="/mobile-app-development"
                 className="btn btn-outline-dark"
                 style={{ marginRight: '16px' }}
                 aria-label="See detailed mobile app development cost guide for Pakistan"

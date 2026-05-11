@@ -119,7 +119,7 @@ const HeroSlider = () => {
           business systems, and high‑performance APIs for teams in Pakistan,& Worldwide.
         </p>
 
-        <Link to="/asp-net-core-development-pakistan" className="hero-btn">
+        <Link to="/Services" className="hero-btn">
           Explore Our Services
         </Link>
       </div>

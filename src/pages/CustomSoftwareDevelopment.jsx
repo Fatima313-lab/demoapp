@@ -22,6 +22,7 @@ import "./CustomSoftwareDevelopment.css";
 import "animate.css";
 import FounderNote from "../components/FounderNote";
 import TestimonialSection from "../components/TestimonialSection";
+import RelatedServicesCarousel from "../components/RelatedSolutions";
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -150,16 +151,16 @@ const schemaBreadcrumb = {
 /* ─── FAQ data (drives both UI + JSON-LD) ─────────────────── */
 const FAQ_DATA = [
   {
-    q: "What custom software development services does QllmSoft offer?",
-    a: "QllmSoft offers end-to-end custom software development including web application development, mobile app development (iOS & Android using Flutter and React Native), desktop software for Windows, Microsoft Azure cloud solutions, AI and machine learning integrations via ML.NET and OpenAI, and custom API development with third-party system integrations.",
+   q: "What specialized custom software development services does QllmSoft provide?",
+    a: "As a leading software house in Pakistan, QllmSoft provides comprehensive engineering services including enterprise web applications (.NET & React), cross-platform mobile apps (Flutter/React Native), and robust Windows desktop solutions. We specialize in Azure based cloud migration and embedding AI capabilities using OpenAI and ML.NET to automate complex business workflows.",
   },
   {
     q: "Which industries does QllmSoft serve?",
     a: "We build specialized software for finance and banking, healthcare (HIPAA-compliant), real estate, education and eLearning, logistics and supply chain, SaaS product companies, and general enterprise and SMB clients worldwide. Our industry knowledge means we build for your compliance and operational context, not just your feature list.",
   },
   {
-    q: "How much does custom software development cost in Pakistan?",
-    a: "Custom software development costs depend on project scope, complexity, team size, and timeline. Web applications start from approximately $1,000, mobile apps from $1,200, and desktop software from $1,500. Contact us for a free, detailed project estimate with no obligation.",
+   q: "What is the average cost of hiring a software development company in Pakistan?",
+    a: "While project costs vary by complexity, QllmSoft offers premium offshore value. Web based systems typically start at $1,000, mobile solutions at $1,200, and enterprise desktop tools at $1,500. We provide transparent, milestone based pricing to ensure you get maximum ROI without the overhead costs of Western agencies.",
   },
   {
     q: "What technology stack does QllmSoft use for custom software development?",
@@ -531,21 +532,12 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">What We Build</p>
             <div className="section-title">
               <h2 id="services-heading">
-                End-to-End Software Development Services in Pakistan
+              High Performance Software Engineering <span>in Pakistan</span>
               </h2>
               <p>
-                From the first line of code to post-launch support, we handle
-                every phase of software development with precision,
-                transparency, and real ownership.
-              </p>
-              <p style={{ marginTop: "12px" }}>
-                For finance focused businesses, we also build dedicated
-                platforms like our{" "}
-                <Link to="/finance-management-system">
-                  finance management system
-                </Link>{" "}
-                with budgeting, approvals, automated reporting, and multi branch
-                control.
+               From initial discovery to post launch scaling, we deliver end to end 
+        software excellence. Our team doesn't just build apps; we engineer 
+        <strong> robust business assets</strong>.
               </p>
             </div>
 
@@ -637,7 +629,7 @@ const CustomSoftwareDevelopment = () => {
               <h2 id="industries-heading">
                 Industry-Specific Software Solutions
               </h2>
-              <p>
+              <p >
                 We understand that every industry operates under different
                 rules, pressures, and expectations.<strong> QllmSoft proudly serves enterprise clients in Lahore, Karachi, and Islamabad, </strong> 
         as well as offshore partners in the US and UK, delivering custom systems built for 
@@ -834,15 +826,15 @@ const CustomSoftwareDevelopment = () => {
           aria-labelledby="why-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Why QllmSoft</p>
+            <p className="section-eyebrow">The QllmSoft Advantage</p>
             <div className="section-title">
               <h2 id="why-heading">
-                Why Choose Our Software Development Team in Pakistan?
+               Why Leading Brands Partner with Our <span>Pakistan Based Team?</span>
               </h2>
               <p>
-                There are many software companies in Pakistan. Here is what
-                makes working with QllmSoft different — and why clients come
-                back for their next project.
+               In a crowded market of software houses, QllmSoft stands out by bridging the gap between 
+        <strong> technical complexity and business growth</strong>. Here is why our partners 
+        trust us with their mission critical projects.
               </p>
             </div>
             <div className="why-grid">
@@ -869,8 +861,11 @@ const CustomSoftwareDevelopment = () => {
                   className={`why-card animate__animated ${whyInView ? "animate__fadeInUp" : ""}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
+                  <div className="why-card-inner">
+            <span className="why-icon-pop">{w.icon}</span>
                   <h3>{w.title}</h3>
                   <p>{w.desc}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -1065,6 +1060,8 @@ const CustomSoftwareDevelopment = () => {
             </div>
           </div>
         </section>
+
+        <RelatedServicesCarousel />
 
         {/* ══════════════════════════════════════════════════
             FINAL CTA  —  H2
