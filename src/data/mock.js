@@ -12,6 +12,7 @@ import APIsoftwareImg from "../assets/api-development.webp";
 import systemModernization from "../assets/SystemModernization.webp";
 import stickerSmashApp from "../assets/sticker-mobile-app.webp";
 import webDesign from "../assets/web-design.webp";
+import qllmDocs from "../assets/QllmDocs.webp";
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
@@ -251,7 +252,7 @@ export const projectsData = [
     id: 2,
     slug: "qllmdocs",
     title: "QllmDocs",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+    image: qllmDocs,
 
     shortDescription:
       "Lifecycle document management with version control and approvals.",
@@ -526,7 +527,7 @@ export const projects = [
     name: "QllmDocs",
     slug: "document-controller",
     description: "Save, Organize, Edit, Retrieve Documents",
-    image: docControllerImg,
+    image: qllmDocs,
   },
   {
     id: 2,
