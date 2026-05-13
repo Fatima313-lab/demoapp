@@ -34,8 +34,8 @@ import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import "./MobileAppDevelopment.css";
 import "animate.css";
-import stickersmasher from "../assets/image7.png";
-import stickersmasher2 from "../assets/image8.png";
+import stickersmasher from "../assets/image7.webp";
+import stickersmasher2 from "../assets/image8.webp";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
@@ -411,18 +411,15 @@ const MobileAppDevelopment = () => {
 
               {/* ✅ ONE H1 */}
               <h1 className="mob-hero__title">
-                Custom Mobile App
+               Next - Gen  
                 <br />
-                Development Services
+              Mobile App Development
                 <br />
-                <span className="mob-hero__title-accent">in Pakistan</span>
+                <span className="mob-hero__title-accent">Services</span>
               </h1>
 
               <p className="mob-hero__sub">
-                We engineer high performance{" "}
-                <strong>Android, iOS, and Flutter</strong>
-                applications that scale. From startups to enterprises, we turn
-                complex ideas into seamless digital products.
+               We build high performance iOS, Android, and Hybrid applications for startups and enterprises across the US, UK, Europe, and the Gulf.
               </p>
 
               <div className="mob-hero__buttons">
@@ -1447,9 +1444,7 @@ const MobileAppDevelopment = () => {
               <div
                 className={`mob-outsource__text animate__animated ${outsourceInView ? "animate__fadeInLeft" : ""}`}
               >
-                <p className="section-eyebrow" style={{ textAlign: "left" }}>
-                  Smarter Development
-                </p>
+                
                 <h2 id="outsource-heading">
                   Mobile App Development Outsourcing to Pakistan — The
                   Competitive Advantage
@@ -1465,7 +1460,7 @@ const MobileAppDevelopment = () => {
                   Pakistan's technology sector has produced a deep bench of
                   mobile engineering talent, with thousands of Flutter, React
                   Native, Kotlin, and Swift developers delivering world-class
-                  applications for global clients. Our developers bring
+                  applications for clients across the USA, UK, and the gulf. Our developers bring
                   international project experience, fluent English
                   communication, and a genuine commitment to your product's
                   success — not just task completion.
@@ -1653,7 +1648,7 @@ const MobileAppDevelopment = () => {
 
        <FounderNote
   title="Engineering Mobility, Scaling Vision"
-  message="At QllmSoft, we believe a mobile app is more than just an extension of your brand it is the most intimate connection you have with your customers. I lead a specialized engineering team that focuses on building high-performance, 'offline first' mobile experiences that eliminate technical friction. Whether we are optimizing for 4G networks in Pakistan or scaling enterprise solutions for the US and UK markets, I personally ensure that every app we launch is secure, lightning fast, and engineered to turn first time downloads into lifelong users."
+  message="At QllmSoft, we don't just build apps; we engineer global products. Our focus is exclusively on the International Market, ensuring that every project adheres to ISO standards, GDPR privacy laws, and Tier 1 security protocols. We bridge the gap between complex business logic and world class user experiences, serving as your dedicated offshore innovation hub."
 />
 
 
