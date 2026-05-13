@@ -451,7 +451,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="expertise-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Expert Web Engineering</p>
+         
             <div className="section-title">
               <h2 id="expertise-heading">
                 Custom Website Development Services in Pakistan
@@ -538,7 +538,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="legacy-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Enterprise Legacy</p>
+            
             <div className="section-title">
               <h2 id="legacy-heading">10+ Years of Software Excellence</h2>
               <p>
@@ -602,7 +602,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="services-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Engineering the Future</p>
+            
             <div className="section-title">
               <h2 id="services-heading">Our Website Development Services</h2>
               <p>
@@ -756,7 +756,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="process-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">The Roadmap</p>
+       
             <div className="section-title">
               <h2 id="process-heading">Engineering Lifecycle: From Concept to Scale</h2>
               <p>
@@ -859,7 +859,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="tech-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Technology We Use</p>
+           
             <div className="section-title">
               <h2 id="tech-heading">
                 Technology Stack for Website Development
@@ -1027,16 +1027,15 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="local-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Engineered for Pakistan</p>
+           
             <div className="section-title">
               <h2 id="local-heading">
                 Optimized for the Pakistani Digital Market
               </h2>
-              <p>
-                We solve the bottlenecks that slow down Pakistani businesses —
-                from payment friction to connectivity challenges on 3G/4G
-                networks.
-              </p>
+             <p className="max-w-2xl mx-auto">
+        Generic international themes fail in Pakistan. We solve local bottlenecks from 
+        payment friction to connectivity challenges on 3G/4G networks.
+      </p>
             </div>
             <div className="wds-local__grid">
               {[
@@ -1077,7 +1076,7 @@ const WebsiteDevelopmentServices = () => {
         ══════════════════════════════════════════════════ */}
         <section className="section wds-perf" aria-labelledby="perf-heading">
           <div className="container">
-            <p className="section-eyebrow">Performance Analysis</p>
+           
             <div className="section-title">
               <h2 id="perf-heading">
                 Why Generic Templates Are Killing Your Business Growth in
@@ -1166,7 +1165,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="comparison-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">The QllmSoft Edge</p>
+           
             <div className="section-title">
               <h2 id="comparison-heading">
                 QllmSoft vs Other Web Development Options in Pakistan
@@ -1256,7 +1255,7 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="why-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Why QllmSoft</p>
+            
             <div className="section-title">
               <h2 id="why-heading">
                 Why Choose QllmSoft for Website Development in Pakistan
@@ -1382,7 +1381,7 @@ const WebsiteDevelopmentServices = () => {
           itemType="https://schema.org/PriceSpecification"
         >
           <div className="container">
-            <p className="section-eyebrow">Investment Guide</p>
+           
             <div className="section-title">
               <h2 id="pricing-heading">
                 Transparent Pricing for Website Development in Pakistan
