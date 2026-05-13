@@ -2107,3 +2107,158 @@
 .custom-card-3d .comparison-list li {
   color: #475569;
 }
+
+
+
+/* portfolio */
+
+.portfolio-showcase {
+  position: relative;
+  background: linear-gradient(180deg, #f4f6fb 0%, #ffffff 100%);
+  padding: 100px 0;
+  overflow: hidden;
+;
+}
+.portfolio-showcase::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(circle, rgba(0,0,0,0.035) 2px, transparent 3px);
+  background-size: 80px 80px;
+  opacity: 0.06;
+  z-index: 0;
+}
+.section-header{margin-bottom: 37px;
+text-align: center;color: #1b2947; font-weight: 800;}
+
+.portfolio-showcase > .container {
+  position: relative;
+  z-index: 1;
+  color: #1b2947;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.project-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 26px;
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.12),
+    0 10px 24px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+
+  transform-style: preserve-3d;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 50px 120px rgba(0,0,0,0.18);
+}
+
+.project-item::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: -190px;
+  right: -190px;
+  background: radial-gradient(
+    circle,
+    rgba(0,0,0,0.06),
+    transparent 70%
+  );
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+
+.project-image {
+  flex: 1 1 450px;
+  transform: translateZ(40px);
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 18px;
+
+  box-shadow:
+    0 28px 65px rgba(0,0,0,0.22),
+    0 12px 26px rgba(0,0,0,0.15);
+
+  transition: transform .4s ease;
+}
+
+.project-item:hover .project-image img {
+  transform: translateY(-8px);
+}
+
+.project-info {
+  flex: 1 1 450px;
+  transform: translateZ(50px);
+}
+
+
+.project-info span {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.project-info h3 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+
+.project-info p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.project-info ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.project-info li {
+  font-size: 0.86rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.project-info strong {
+  color: #111827;
+}
+
+
+
+@media (max-width: 768px) {
+  .project-item {
+    padding: 36px 26px;
+  }
+}

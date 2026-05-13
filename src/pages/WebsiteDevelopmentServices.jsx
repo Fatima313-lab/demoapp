@@ -24,12 +24,14 @@ import "animate.css";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
-import SeoPerformanceImg from "../assets/comparison-section.webp";
+
 import processsectionimg from '../assets/website-services.webp';
 import islamabadimg from '../assets/islamabad.webp';
 import karachiimg from '../assets/karachi.webp';
 import lhoreimg from '../assets/lahore.webp';
 import faislabadim from '../assets/faisalabad.jpg';
+import fintech from '../assets/qllm-soft-finance-management-system-11.webp';
+import qllmdocs from '../assets/QllmDocs.webp';
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/website-development-services";
 const OG_IMAGE =
@@ -66,44 +68,43 @@ const schemaOrg = {
 const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Website Development",
-  name: "Website Development Services in Pakistan",
-  description:
-    "QllmSoft provides expert custom website development services in Pakistan — SEO-optimized, high-performance business websites, eCommerce platforms, SaaS products, and web applications built with ASP.NET Core, React, and Angular.",
-  provider: {
+  "serviceType": "Custom Web Development & Software Engineering",
+ "name": "Global Website Development & Digital Solutions | QllmSoft",
+  "description": "QllmSoft delivers enterprise grade web development services globally. Specializing in high performance React/Next.js apps, ASP.NET Core backends, and scalable eCommerce solutions for clients in the US, UK, UAE, and Pakistan.",
+  "provider": {
     "@type": "Organization",
-    name: "QllmSoft",
-    url: "https://qllmsoft.com",
+    "name": "QllmSoft",
+    "url": "https://qllmsoft.com",
   },
-  areaServed: [
-    "Pakistan",
-    "United States",
-    "United Kingdom",
-    "UAE",
-    "Saudi Arabia",
+  "areaServed": [
+    { "@type": "Country", "name": "Pakistan" },
+    { "@type": "Country", "name": "United States" },
+    { "@type": "Country", "name": "United Kingdom" },
+    { "@type": "Country", "name": "United Arab Emirates" },
+    { "@type": "Country", "name": "Saudi Arabia" }
   ],
-  url: PAGE_URL,
-  offers: [
+  "url": PAGE_URL,
+  "offers": [
     {
       "@type": "Offer",
-      name: "Professional Business Website",
-      priceCurrency: "PKR",
-      price: "50000",
-      description: "SEO-optimized 5–10 page business website",
+      "name": "Professional Business Website",
+      "priceCurrency": "PKR",
+      "price": "50000",
+      "description": "SEO-optimized 5–10 page business website",
     },
     {
       "@type": "Offer",
-      name: "Growth & eCommerce Platform",
-      priceCurrency: "PKR",
-      price: "100000",
-      description: "Custom eCommerce with JazzCash & Easypaisa integration",
+      "name": "Growth & eCommerce Platform",
+      "priceCurrency": "PKR",
+      "price": "100000",
+      "description": "Custom eCommerce with JazzCash & Easypaisa integration",
     },
     {
       "@type": "Offer",
-      name: "SaaS & Web Application",
-      priceCurrency: "PKR",
-      price: "250000",
-      description: "Enterprise SaaS and multi-tenant web applications",
+      "name": "SaaS & Web Application",
+      "priceCurrency": "PKR",
+      "price": "250000",
+      "description": "Enterprise SaaS and multi-tenant web applications",
     },
   ],
 };
@@ -267,7 +268,7 @@ const WebsiteDevelopmentServices = () => {
       ══════════════════════════════════════════════════ */}
       <Helmet>
         {/* Primary */}
-        <title>Website Development Services in Pakistan | QllmSoft</title>
+        <title>High Performance Web Development Services | Global Delivery Center | QllmSoft</title>
         <meta
           name="description"
           content="Expert custom website development services in Pakistan. QllmSoft builds high-performance, SEO-optimized websites, eCommerce platforms, SaaS products and web apps for startups and enterprises using .NET, React and Angular."
@@ -944,6 +945,70 @@ const WebsiteDevelopmentServices = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+<section className="section portfolio-showcase" aria-labelledby="portfolio-heading">
+  <div className="container">
+    <div className="section-header" >
+      <h2 id="portfolio-heading">Featured Web Development Projects</h2>
+      <p>Helping global clients streamline processes with intelligent digital solutions.</p>
+    </div>
+
+    <div className="projects-grid" >
+      
+ 
+      <div className="project-item" >
+        <div className="project-image">
+          <img 
+            src={fintech}
+            alt="Financial Analysis Web Application Dashboard" 
+            
+          />
+        </div>
+        <div className="project-info" >
+          <span >FinTech Solution</span>
+          <h3 >Financial Analysis Web Application</h3>
+          <p>A production grade financial management and analytics system providing real time insights, automated reporting, and secure integrations for data driven decision making.</p>
+          <ul>
+            <li><strong>Tech Stack:</strong> .NET Core, Angular, SQL Server, Bootstrap </li>
+            <li><strong>Key Features:</strong> CRM Integration, Investment Tracking, Secure Gateways </li>
+          </ul>
+        </div>
+      </div>
+
+      
+      <div className="project-item" >
+        <div className="project-image" >
+          <img 
+            src={qllmdocs}
+            alt="QllmDocs Secure Document Management System" 
+           
+          />
+        </div>
+        <div className="project-info" >
+          <span >Enterprise SaaS</span>
+          <h3 >QllmDocs - Secure & Intelligent Document Management System</h3>
+          <p>QllmSoft developed QllmDocs, a secure cloud based document management system designed for organization needing fast access, safe storage, and real time analytics. the platform features a clean enterprise dashboard with smart insigts and role based access..</p>
+          <ul >
+            <li><strong>Tech Stack:</strong> React, Azure Cloud Storage, .NET APIs</li>
+            <li><strong>Key Features:</strong> Lifecycle Automation, Role Based Access, AI Document Search </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
         {/* ══════════════════════════════════════════════════
             CITIES  —  H2 + H3s
