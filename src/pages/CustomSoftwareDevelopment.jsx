@@ -349,11 +349,11 @@ const CustomSoftwareDevelopment = () => {
               Services in Pakistan
             </h1>
 
-            <p className="csd-hero__sub">
-              We engineer high performance <strong>enterprise solutions</strong> tailored to your specific workflows. 
-      From <strong>Lahore to accross the globe</strong>, we help businesses scale with secure web, mobile, and AI driven 
-      architectures including specialized <Link to="/finance-management-system" className="inline-link">Finance Management Systems</Link>.
-            </p>
+          <p className="csd-hero__sub">
+      We engineer high performance <strong>enterprise solutions</strong> tailored to your unique business workflows. 
+      From specialized <Link to="/finance-management-system" className="inline-link">Finance Management Systems</Link> to 
+      secure web and mobile ecosystems, we help organizations scale with reliable, AI driven architectures.
+    </p>
 
             <div className="csd-hero__buttons">
               <Link
@@ -446,46 +446,43 @@ const CustomSoftwareDevelopment = () => {
           itemType="https://schema.org/Organization"
         >
           <div className="container">
-            <p className="section-eyebrow">Engineering Excellence</p>
+           
             <div className="about-content">
               <article
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="about-heading" className="about-title">
-                  A Pakistani Software House <span>Empowering Global Innovation</span>
+                Engineering the Next Generation of <span>Global Innovation</span>
                 </h2>
-                <p>
-                QllmSoft is more than just a <strong>custom software development company in Pakistan</strong>. 
-          We are your technical partners, helping SMEs and enterprises in <strong>Lahore, Karachi, Islamabad</strong>, 
-          and across the globe build technology that drives revenue—not overhead.
-                </p>
-                <p>
-                  Our team of senior .NET developers, mobile engineers, UI/UX
-                  designers, and QA specialists brings deep technical skill
-                  together with genuine business understanding. Whether you are
-                  launching a first digital product, replacing a legacy system,
-                  or scaling a complex enterprise application, we treat your
-                  project with the same seriousness we would our own.
-                </p>
-                <p>
-                  We serve clients in the{" "}
-                  <strong>
-                    United States, United Kingdom, UAE, Saudi Arabia, and Europe
-                  </strong>
-                  , offering the cost advantage of{" "}
-                  <Link to="/outsource-software-development-to-pakistan">
-                    offshore software development in Pakistan
-                  </Link>{" "}
-                  without sacrificing communication, quality, or delivery
-                  timelines.
-                </p>
+              <p>
+          At QllmSoft, we are more than just a <strong>custom software development company</strong>. 
+          We act as your dedicated technical partners, helping SMEs and large scale enterprises 
+          across the globe build technology that drives revenue not overhead.
+        </p>
+        <p>
+          Our team of senior engineers, UI/UX designers, and QA specialists combines deep technical 
+          skill with a genuine understanding of business logic. Whether you are launching your 
+          first digital product, modernizing a legacy system, or scaling a complex enterprise 
+          application, we treat your project with the same commitment and precision as if it were our own.
+        </p>
+        <p>
+          Serving a diverse clientele across the{" "}
+          <strong>
+        globe
+          </strong>
+          , we offer the strategic advantage of{" "}
+          <Link to="/outsource-software-development-to-pakistan">
+            global offshore development
+          </Link>{" "}
+          without ever compromising on communication, code quality, or delivery timelines.
+        </p>
                 <div
                   className="csd-badges"
                   aria-label="Certifications and process standards"
                 >
                   {[
                     "GDPR & HIPAA Compliant",
-                    "ISO-Aligned Processes",
+                    "ISO Aligned Processes",
                     "Agile Delivery",
                     "Global Clients",
                   ].map((b) => (
@@ -553,21 +550,21 @@ const CustomSoftwareDevelopment = () => {
                 {
                   icon: "📱",
                   title: "Mobile App Development",
-                  desc: "Cross-platform iOS and Android apps built with Flutter and React Native that feel native, perform reliably, and sync seamlessly with your existing web and backend systems.",
+                  desc: "Cross platform iOS and Android apps built with Flutter and React Native that feel native, perform reliably, and sync seamlessly with your existing web and backend systems.",
                   link: "/mobile-app-development",
                   aria: "Learn about mobile app development services in Pakistan",
                 },
                 {
                   icon: "🖥️",
                   title: "Desktop Software Development",
-                  desc: "Reliable, secure Windows desktop applications tailored for enterprise environments — whether it's document management, ERP tools, point-of-sale systems, or complex data-entry workflows.",
+                  desc: "Reliable, secure Windows desktop applications tailored for enterprise environments — whether it's document management, ERP tools, point of sale systems, or complex data entry workflows.",
                   link: "/services",
                   aria: "Learn about desktop software development services",
                 },
                 {
                   icon: "☁️",
                   title: "Cloud Application Development",
-                  desc: "We design and deploy cloud-native applications on Microsoft Azure, optimizing for uptime, resource efficiency, auto-scaling, and cost control — built for businesses that cannot afford downtime.",
+                  desc: "We design and deploy cloud native applications on Microsoft Azure, optimizing for uptime, resource efficiency, auto scaling, and cost control — built for businesses that cannot afford downtime.",
                   link: "/services",
                   aria: "Learn about cloud application development on Microsoft Azure",
                 },
@@ -581,7 +578,7 @@ const CustomSoftwareDevelopment = () => {
                 {
                   icon: "🔗",
                   title: "API Development & Integration",
-                  desc: "We build custom REST and GraphQL APIs and integrate third-party platforms — CRMs, ERPs, payment gateways, and communication tools — so your systems communicate without friction.",
+                  desc: "We build custom REST and GraphQL APIs and integrate third party platforms — CRMs, ERPs, payment gateways, and communication tools — so your systems communicate without friction.",
                   link: "/api-development-services",
                   aria: "Learn about API development and integration services in Pakistan",
                 },
@@ -627,50 +624,52 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">Industries We Serve</p>
             <div className="section-title">
               <h2 id="industries-heading">
-                Industry-Specific Software Solutions
+                Industry Specific Software Solutions
               </h2>
-              <p >
-                We understand that every industry operates under different
-                rules, pressures, and expectations.<strong> QllmSoft proudly serves enterprise clients in Lahore, Karachi, and Islamabad, </strong> 
-        as well as offshore partners in the US and UK, delivering custom systems built for 
-        real world growth.
-              </p>
+             <p>
+    We understand that every sector operates under unique regulatory 
+    frameworks, market pressures, and user expectations. 
+    <strong> QllmSoft delivers specialized, high performance systems </strong> 
+    designed to meet the complex demands of global enterprises and 
+    innovative startups, ensuring real world scalability and long term 
+    operational efficiency.
+  </p>
             </div>
             <div className="csd-industries__grid">
               {[
                 {
-                  icon: "🏦",
+                  icon: "bi-bank",
                   title: "Finance & Banking Software",
-                  desc: "We architect high-security payment gateways and risk dashboards. Our team ensures 99.9% uptime and strict compliance with global financial data standards.",
+                  desc: "We architect high security payment gateways and risk dashboards. Our team ensures 99.9% uptime and strict compliance with global financial data standards.",
                   tech: ".NET Core • SQL Server • OAuth2",
                 },
                 {
-                  icon: "🏥",
+                  icon:"bi-heart-pulse",
                   title: "Healthcare Management Systems",
-                  desc: "We build HIPAA-compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
+                  desc: "We build HIPAA compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
                   tech: "Azure Health • HL7/FHIR • HIPAA",
                 },
                 {
-                  icon: "🎓",
+                  icon: "bi-mortarboard",
                   title: "Education & eLearning Platforms",
                   desc: "Our developers build scalable LMS platforms capable of handling thousands of concurrent students with interactive course tools.",
                    tech: "React • SignalR • Azure Stream",
                 },
                 {
-                  icon: "🏘️",
+                  icon:"bi-building-up",
                   title: "Real Estate CRM & Management",
-                  desc: "Property listing platforms, client-focused CRMs, virtual tour integrations, and operations management tools that modernize how real estate businesses serve their customers.",
+                  desc: "Property listing platforms, client focused CRMs, virtual tour integrations, and operations management tools that modernize how real estate businesses serve their customers.",
                 },
                 {
-                  icon: "🚚",
+                  icon: "bi-truck",
                   title: "Logistics & Supply Chain",
-                  desc: "Inventory tracking, fleet management, route optimization, and end-to-end supply chain visibility tools built for logistics providers who need speed and control in one place.",
+                  desc: "Inventory tracking, fleet management, route optimization, and end to end supply chain visibility tools built for logistics providers who need speed and control in one place.",
                   tech: "IoT • PowerBI • Microservices",
                 },
                 {
-                  icon: "☁️",
+                  icon: "bi-cloud-check",
                   title: "SaaS & Cloud Product Development",
-                  desc: "we help to build Scalable multi-tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations — engineered to grow from Day 1.",
+                  desc: "we help to build Scalable multi tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations engineered to grow from Day 1.",
                    tech: "Azure • Stripe • Redis",
                 },
               ].map((ind, i) => (
@@ -678,10 +677,9 @@ const CustomSoftwareDevelopment = () => {
                   key={i}
                   className={`csd-industry-card animate__animated ${industriesInView ? "animate__fadeInUp" : ""}`}
                   style={{ animationDelay: `${i * 0.08}s` }}
-                >
-                  <span className="csd-industry-card__icon" aria-hidden="true">
-                    {ind.icon}
-                  </span>
+                ><div className="csd-industries__icon-box">
+        <i className={`bi ${ind.icon}`} aria-hidden="true"></i>
+      </div>
                   <h3 className="csd-industry-card__title">{ind.title}</h3>
                   <p className="csd-industry-card__desc">{ind.desc}</p>
                 </article>
@@ -714,15 +712,15 @@ const CustomSoftwareDevelopment = () => {
           aria-labelledby="process-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">How We Work</p>
+            
             <div className="section-title">
               <h2 id="process-heading">
                 Our Custom Software Development Process
               </h2>
               <p>
-                We follow a structured, business-driven methodology that keeps
+                We follow a structured, business driven methodology that keeps
                 your project on track from the first conversation to the final
-                delivery — and beyond.
+                delivery  and beyond.
               </p>
             </div>
 
@@ -745,27 +743,27 @@ const CustomSoftwareDevelopment = () => {
                   {
                     n: "3",
                     title: "Requirements Analysis",
-                    desc: "Our business analysts document detailed functional and non-functional requirements, ensuring development decisions are grounded in real business need.",
+                    desc: "Our business analysts document detailed functional and non functional requirements, ensuring development decisions are grounded in real business need.",
                   },
                   {
                     n: "4",
                     title: "UI/UX Design",
-                    desc: "We design intuitive, accessible interfaces that users actually enjoy — validated through wireframes and interactive prototypes before development begins.",
+                    desc: "We design intuitive, accessible interfaces that users actually enjoy  validated through wireframes and interactive prototypes before development begins.",
                   },
                   {
                     n: "5",
                     title: "Agile Development & Sprints",
-                    desc: "Development happens in two-week sprints with regular demos and feedback loops — keeping you informed and in control throughout the build.",
+                    desc: "Development happens in two week sprints with regular demos and feedback loops keeping you informed and in control throughout the build.",
                   },
                   {
                     n: "6",
                     title: "Testing, QA & Integration",
-                    desc: "Every module goes through rigorous automated and manual QA — unit testing, integration testing, performance benchmarking, and security audits.",
+                    desc: "Every module goes through rigorous automated and manual QA  unit testing, integration testing, performance benchmarking, and security audits.",
                   },
                   {
                     n: "7",
                     title: "Deployment & Ongoing Support",
-                    desc: "We handle deployment to your preferred environment — cloud or on-premise — and provide long-term maintenance, updates, and performance monitoring.",
+                    desc: "We handle deployment to your preferred environment , cloud or on premise  and provide long  term maintenance, updates, and performance monitoring.",
                   },
                 ].map((step, i) => (
                   <li
@@ -802,7 +800,7 @@ const CustomSoftwareDevelopment = () => {
                   <h3>Ready to Start Your Custom Software Project?</h3>
                   <p>
                     Share your idea with us and get a structured development
-                    roadmap — free of charge, no obligation.
+                    roadmap , free of charge, no obligation.
                   </p>
                   <Link
                     to="/contact"
@@ -841,7 +839,7 @@ const CustomSoftwareDevelopment = () => {
               {[
                 {
                   title: "Competitive Offshore Rates",
-                  desc: "Get world-class development quality at a fraction of US or UK agency prices — without cutting corners on technology, testing, or communication.",
+                  desc: "Get world class development quality at a fraction of global  agency prices , without cutting corners on technology, testing, or communication.",
                 },
                 {
                   title: "Transparent Communication",
@@ -849,11 +847,11 @@ const CustomSoftwareDevelopment = () => {
                 },
                 {
                   title: "Security-First Architecture",
-                  desc: "We build with role-based access control, SSL encryption, secure APIs, and compliance standards (GDPR, HIPAA, PCI-DSS) baked into every layer — not added as an afterthought.",
+                  desc: "We build with role based access control, SSL encryption, secure APIs, and compliance standards (GDPR, HIPAA, PCI-DSS) baked into every layer not added as an afterthought.",
                 },
                 {
                   title: "Built to Scale With You",
-                  desc: "Our architectures are designed for growth. Adding users, features, or new modules to your software will not require rebuilding from scratch — ever.",
+                  desc: "Our architectures are designed for growth. Adding users, features, or new modules to your software will not require rebuilding from scratch  ever.",
                 },
               ].map((w, i) => (
                 <article
@@ -877,14 +875,14 @@ const CustomSoftwareDevelopment = () => {
         ══════════════════════════════════════════════════ */}
         <section className="section csd-tech" aria-labelledby="tech-heading">
           <div className="container">
-            <p className="section-eyebrow">Our Technology Stack</p>
+            
             <div className="section-title">
               <h2 id="tech-heading">Modern, Proven Technologies We Use</h2>
-              <p>
-                We select technology based on what is right for your project's
-                longevity, performance, and maintainability — not what happens
-                to be trendy.
-              </p>
+             <p>
+      We don’t just follow trends; we choose technologies that ensure your 
+      project’s long term performance, security, and maintainability. Our 
+      stack is curated to build robust systems that evolve with your business.
+    </p>
             </div>
             <ul
               className="csd-tech__grid"
@@ -943,14 +941,14 @@ const CustomSoftwareDevelopment = () => {
         ══════════════════════════════════════════════════ */}
         <section className="section csd-case" aria-labelledby="case-heading">
           <div className="container">
-            <p className="section-eyebrow">The Case for Custom</p>
+           
             <div className="section-title">
               <h2 id="case-heading">
                 Why Custom Software Is the Smartest Investment for Growing
                 Businesses
               </h2>
               <p>
-                Off-the-shelf software is built for everyone, which means it is
+                Off the shelf software is built for everyone, which means it is
                 perfect for no one. Here is why businesses that invest in custom
                 development consistently outperform those that do not.
               </p>
@@ -958,39 +956,39 @@ const CustomSoftwareDevelopment = () => {
             <div className="csd-case__grid">
               {[
                 {
-                  icon: "⚙️",
+                  icon: "bi-sliders",
                   title: "Built Around Your Workflows",
                   desc: "Custom software adapts to how your team actually works, not the reverse. The result is higher adoption, fewer workarounds, and measurably better operational efficiency from day one.",
                 },
                 {
-                  icon: "📈",
+                  icon:"bi-graph-up-arrow",
                   title: "Scales Without Limits",
                   desc: "As your business grows, custom software grows with it. Add users, new modules, or integrations without hitting subscription walls, licensing fees, or performance ceilings.",
                 },
                 {
-                  icon: "🔒",
+                  icon:"bi-shield-check",
                   title: "Better Security & Compliance",
-                  desc: "You control the code, the data, and the infrastructure. That means stronger security posture, full compliance with industry regulations, and no dependency on third-party vendor decisions.",
+                  desc: "You control the code, the data, and the infrastructure. That means stronger security posture, full compliance with industry regulations, and no dependency on third party vendor decisions.",
                 },
                 {
-                  icon: "🏆",
+                  icon:"bi-trophy",
                   title: "Genuine Competitive Advantage",
-                  desc: "Your competitors are using the same off-the-shelf tools. Custom software gives you capabilities they cannot replicate, creating real differentiation in how you serve your customers.",
+                  desc: "Your competitors are using the same off the shelf tools. Custom software gives you capabilities they cannot replicate, creating real differentiation in how you serve your customers.",
                 },
                 {
-                  icon: "💰",
+                  icon:"bi-cash-stack",
                   title: "Lower Long-Term Cost",
-                  desc: "Monthly SaaS fees, per-seat pricing, and vendor lock-in add up fast. Custom software, properly built, pays for itself through automation, efficiency gains, and eliminated tool redundancy.",
+                  desc: "Monthly SaaS fees, per seat pricing, and vendor lock in add up fast. Custom software, properly built, pays for itself through automation, efficiency gains, and eliminated tool redundancy.",
                 },
                 {
-                  icon: "🤝",
+                  icon: "bi-people",
                   title: "A Partner, Not Just a Vendor",
-                  desc: "We stay invested in your product's success beyond launch. Our team provides strategic input, not just technical execution — because we understand that the software we build affects your business outcomes directly.",
+                  desc: "We stay invested in your product's success beyond launch. Our team provides strategic input, not just technical execution  because we understand that the software we build affects your business outcomes directly.",
                 },
               ].map((c, i) => (
                 <article key={i} className="csd-case-card">
                   <span className="csd-case-card__icon" aria-hidden="true">
-                    {c.icon}
+                   <i className={`bi ${c.icon}`} style={{ fontSize: '1.8rem', color: '#edb702' }}></i>
                   </span>
                   <h3 className="csd-case-card__title">{c.title}</h3>
                   <p className="csd-case-card__desc">{c.desc}</p>
