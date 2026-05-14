@@ -20,6 +20,9 @@ import { Helmet } from "react-helmet-async";
 import { useInView } from "react-intersection-observer";
 import "./CustomSoftwareDevelopment.css";
 import "animate.css";
+import FounderNote from "../components/FounderNote";
+import TestimonialSection from "../components/TestimonialSection";
+import RelatedSolutions from "../components/RelatedSolutions";
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -54,7 +57,7 @@ const schemaOrg = {
 const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Custom Software Development",
+  serviceType: "Software Engineering",
   name: "Custom Software Development Services in Pakistan",
   description:
     "QllmSoft provides end-to-end custom software development in Pakistan including web apps, mobile apps, desktop software, cloud solutions, AI integrations, and REST APIs for startups and enterprises worldwide.",
@@ -77,7 +80,47 @@ const schemaService = {
     price: "1000",
     description: "Custom software development projects starting from $1,000",
   },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software Solutions",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise ERP Development" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SaaS Platform Engineering" }},
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI & ML System Integration" }}
+    ]
+  }
 };
+
+
+
+/* ─── JSON-LD: Author / Expert Schema ─────────────────────── */
+const schemaAuthor = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Zain Ul Abedin",
+  "jobTitle": "Lead Software Architect & Founder",
+  "description": "Expert Software Engineer with 10+ years of experience specializing in .NET Core, Cloud Architecture, and AI integrations. Founder of QllmSoft.",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "QllmSoft"
+  },
+  "url": "https://qllmsoft.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/", 
+    "https://www.upwork.com/freelancers/~01c2b01d0c11909f17",
+    "https://www.freelancer.com/u/mrprogrmmr"
+  ],
+  "knowsAbout": [
+    "Custom Software Development",
+    "ASP.NET Core",
+    "Microservices Architecture",
+    "Azure Cloud Migration",
+    "AI & OpenAI Integration"
+  ]
+};
+
+
+
 
 /* ─── JSON-LD: BreadcrumbList ─────────────────────────────── */
 const schemaBreadcrumb = {
@@ -108,16 +151,16 @@ const schemaBreadcrumb = {
 /* ─── FAQ data (drives both UI + JSON-LD) ─────────────────── */
 const FAQ_DATA = [
   {
-    q: "What custom software development services does QllmSoft offer?",
-    a: "QllmSoft offers end-to-end custom software development including web application development, mobile app development (iOS & Android using Flutter and React Native), desktop software for Windows, Microsoft Azure cloud solutions, AI and machine learning integrations via ML.NET and OpenAI, and custom API development with third-party system integrations.",
+   q: "What specialized custom software development services does QllmSoft provide?",
+    a: "As a leading software house in Pakistan, QllmSoft provides comprehensive engineering services including enterprise web applications (.NET & React), cross-platform mobile apps (Flutter/React Native), and robust Windows desktop solutions. We specialize in Azure based cloud migration and embedding AI capabilities using OpenAI and ML.NET to automate complex business workflows.",
   },
   {
     q: "Which industries does QllmSoft serve?",
     a: "We build specialized software for finance and banking, healthcare (HIPAA-compliant), real estate, education and eLearning, logistics and supply chain, SaaS product companies, and general enterprise and SMB clients worldwide. Our industry knowledge means we build for your compliance and operational context, not just your feature list.",
   },
   {
-    q: "How much does custom software development cost in Pakistan?",
-    a: "Custom software development costs depend on project scope, complexity, team size, and timeline. Web applications start from approximately $1,000, mobile apps from $1,200, and desktop software from $1,500. Contact us for a free, detailed project estimate with no obligation.",
+   q: "What is the average cost of hiring a software development company in Pakistan?",
+    a: "While project costs vary by complexity, QllmSoft offers premium offshore value. Web based systems typically start at $1,000, mobile solutions at $1,200, and enterprise desktop tools at $1,500. We provide transparent, milestone based pricing to ensure you get maximum ROI without the overhead costs of Western agencies.",
   },
   {
     q: "What technology stack does QllmSoft use for custom software development?",
@@ -270,6 +313,14 @@ const CustomSoftwareDevelopment = () => {
           content="QllmSoft — Custom Software Development Company Pakistan"
         />
 
+
+<meta name="geo.region" content="PK-PB" />
+<meta name="geo.placename" content="Lalamusa" />
+<meta name="geo.position" content="32.7015;73.9605" />
+<meta name="ICBM" content="32.7015, 73.9605" />
+
+
+
         {/* ── JSON-LD Structured Data ────────────────── */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
         <script type="application/ld+json">
@@ -299,14 +350,9 @@ const CustomSoftwareDevelopment = () => {
             </h1>
 
             <p className="csd-hero__sub">
-              We build secure, scalable web, mobile, desktop, and AI-powered
-              software tailored to your exact business workflows — serving
-              clients across the US, UK, Europe, and the Gulf from our base in
-              Pakistan.{" "}
-              <Link to="/finance-management-system">
-                Learn more about our finance management system solutions
-              </Link>
-              .
+              We engineer high performance <strong>enterprise solutions</strong> tailored to your specific workflows. 
+      From <strong>Lahore to accross the globe</strong>, we help businesses scale with secure web, mobile, and AI driven 
+      architectures including specialized <Link to="/finance-management-system" className="inline-link">Finance Management Systems</Link>.
             </p>
 
             <div className="csd-hero__buttons">
@@ -315,14 +361,14 @@ const CustomSoftwareDevelopment = () => {
                 className="btn btn-primary"
                 aria-label="Get a free custom software development consultation from QllmSoft Pakistan"
               >
-                Get a Free Consultation
+                Start your Project
               </Link>
               <Link
                 to="/projects"
                 className="btn btn-outline-light"
                 aria-label="View QllmSoft custom software development projects portfolio"
               >
-                View Our Projects
+                Browser Portfolio 
               </Link>
             </div>
 
@@ -336,7 +382,7 @@ const CustomSoftwareDevelopment = () => {
                 { num: "10+", label: "Years of Expertise" },
               ].map((s) => (
                 <div key={s.label} className="csd-hero__stat">
-                  <span className="csd-hero__stat-num">{s.num}</span>
+                  <strong className="csd-hero__stat-num">{s.num}</strong>
                   <span className="csd-hero__stat-label">{s.label}</span>
                 </div>
               ))}
@@ -345,13 +391,13 @@ const CustomSoftwareDevelopment = () => {
             <div className="csd-hero__pills" aria-label="Core service areas">
               {[
                 {
-                  icon: "🌐",
+                  icon: "🚀",
                   title: "Web Application Development",
                   desc: "ASP.NET Core, React, Angular — from SaaS platforms to enterprise dashboards.",
                 },
                 {
                   icon: "📱",
-                  title: "Mobile App Development",
+                  title: "Hybrid Mobile Apps",
                   desc: "iOS & Android apps with Flutter and React Native.",
                 },
                 {
@@ -374,7 +420,7 @@ const CustomSoftwareDevelopment = () => {
 
             <div className="csd-hero__tags" aria-label="Technologies used">
               {[
-                ".NET Core",
+                "ASP.NET Core",
                 "React",
                 "Angular",
                 "Azure",
@@ -400,22 +446,18 @@ const CustomSoftwareDevelopment = () => {
           itemType="https://schema.org/Organization"
         >
           <div className="container">
-            <p className="section-eyebrow">Who We Are</p>
+            <p className="section-eyebrow">Engineering Excellence</p>
             <div className="about-content">
               <article
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="about-heading" className="about-title">
-                  A Pakistani Software Company Built for Global Businesses
+                  A Pakistani Software House <span>Empowering Global Innovation</span>
                 </h2>
                 <p>
-                  QllmSoft is a Pakistan-based{" "}
-                  <strong>custom software development company</strong> that
-                  helps small-to-medium businesses and enterprises around the
-                  world build technology that actually works for them — not
-                  against them. We don't sell templates or off-the-shelf
-                  patches. Every line of code we write is grounded in your
-                  specific business challenges.
+                QllmSoft is more than just a <strong>custom software development company in Pakistan</strong>. 
+          We are your technical partners, helping SMEs and enterprises in <strong>Lahore, Karachi, Islamabad</strong>, 
+          and across the globe build technology that drives revenue—not overhead.
                 </p>
                 <p>
                   Our team of senior .NET developers, mobile engineers, UI/UX
@@ -466,7 +508,7 @@ const CustomSoftwareDevelopment = () => {
                   },
                   { num: "50+", label: "Software Projects Delivered" },
                   { num: "30+", label: "Global Clients Served" },
-                  { num: "5+", label: "Years of Development Expertise" },
+                  { num: "10+", label: "Years of Development Expertise" },
                 ].map((s) => (
                   <div key={s.num} className="csd-about__stat-card">
                     <span className="csd-about__stat-num">{s.num}</span>
@@ -490,21 +532,12 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">What We Build</p>
             <div className="section-title">
               <h2 id="services-heading">
-                End-to-End Software Development Services in Pakistan
+              High Performance Software Engineering <span>in Pakistan</span>
               </h2>
               <p>
-                From the first line of code to post-launch support, we handle
-                every phase of software development with precision,
-                transparency, and real ownership.
-              </p>
-              <p style={{ marginTop: "12px" }}>
-                For finance focused businesses, we also build dedicated
-                platforms like our{" "}
-                <Link to="/finance-management-system">
-                  finance management system
-                </Link>{" "}
-                with budgeting, approvals, automated reporting, and multi branch
-                control.
+               From initial discovery to post launch scaling, we deliver end to end 
+        software excellence. Our team doesn't just build apps; we engineer 
+        <strong> robust business assets</strong>.
               </p>
             </div>
 
@@ -596,10 +629,11 @@ const CustomSoftwareDevelopment = () => {
               <h2 id="industries-heading">
                 Industry-Specific Software Solutions
               </h2>
-              <p>
+              <p >
                 We understand that every industry operates under different
-                rules, pressures, and expectations. Our software is built around
-                those realities — not around generic feature lists.
+                rules, pressures, and expectations.<strong> QllmSoft proudly serves enterprise clients in Lahore, Karachi, and Islamabad, </strong> 
+        as well as offshore partners in the US and UK, delivering custom systems built for 
+        real world growth.
               </p>
             </div>
             <div className="csd-industries__grid">
@@ -607,17 +641,20 @@ const CustomSoftwareDevelopment = () => {
                 {
                   icon: "🏦",
                   title: "Finance & Banking Software",
-                  desc: "Secure payment gateways, custom CRMs, risk management dashboards, and regulatory-compliant financial tools built to the strict standards of the banking sector.",
+                  desc: "We architect high-security payment gateways and risk dashboards. Our team ensures 99.9% uptime and strict compliance with global financial data standards.",
+                  tech: ".NET Core • SQL Server • OAuth2",
                 },
                 {
                   icon: "🏥",
                   title: "Healthcare Management Systems",
-                  desc: "HIPAA-compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
+                  desc: "We build HIPAA-compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
+                  tech: "Azure Health • HL7/FHIR • HIPAA",
                 },
                 {
                   icon: "🎓",
                   title: "Education & eLearning Platforms",
-                  desc: "Custom education software for schools, universities, and corporate training programs — including LMS systems, progress tracking, and interactive course tools.",
+                  desc: "Our developers build scalable LMS platforms capable of handling thousands of concurrent students with interactive course tools.",
+                   tech: "React • SignalR • Azure Stream",
                 },
                 {
                   icon: "🏘️",
@@ -628,11 +665,13 @@ const CustomSoftwareDevelopment = () => {
                   icon: "🚚",
                   title: "Logistics & Supply Chain",
                   desc: "Inventory tracking, fleet management, route optimization, and end-to-end supply chain visibility tools built for logistics providers who need speed and control in one place.",
+                  tech: "IoT • PowerBI • Microservices",
                 },
                 {
                   icon: "☁️",
-                  title: "SaaS Product Development",
-                  desc: "Scalable multi-tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations — engineered to grow from Day 1.",
+                  title: "SaaS & Cloud Product Development",
+                  desc: "we help to build Scalable multi-tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations — engineered to grow from Day 1.",
+                   tech: "Azure • Stripe • Redis",
                 },
               ].map((ind, i) => (
                 <article
@@ -650,6 +689,21 @@ const CustomSoftwareDevelopment = () => {
             </div>
           </div>
         </section>
+
+
+
+
+
+
+  
+ 
+
+
+
+
+
+
+        
 
         {/* ══════════════════════════════════════════════════
             PROCESS  —  H2 + H4s (ordered list for crawlers)
@@ -772,15 +826,15 @@ const CustomSoftwareDevelopment = () => {
           aria-labelledby="why-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Why QllmSoft</p>
+            <p className="section-eyebrow">The QllmSoft Advantage</p>
             <div className="section-title">
               <h2 id="why-heading">
-                Why Choose Our Software Development Team in Pakistan?
+               Why Leading Brands Partner with Our <span>Pakistan Based Team?</span>
               </h2>
               <p>
-                There are many software companies in Pakistan. Here is what
-                makes working with QllmSoft different — and why clients come
-                back for their next project.
+               In a crowded market of software houses, QllmSoft stands out by bridging the gap between 
+        <strong> technical complexity and business growth</strong>. Here is why our partners 
+        trust us with their mission critical projects.
               </p>
             </div>
             <div className="why-grid">
@@ -807,8 +861,11 @@ const CustomSoftwareDevelopment = () => {
                   className={`why-card animate__animated ${whyInView ? "animate__fadeInUp" : ""}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
+                  <div className="why-card-inner">
+            <span className="why-icon-pop">{w.icon}</span>
                   <h3>{w.title}</h3>
                   <p>{w.desc}</p>
+                  </div>
                 </article>
               ))}
             </div>
@@ -855,96 +912,19 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            TESTIMONIALS  —  H2 + Review microdata
-        ══════════════════════════════════════════════════ */}
+        {/* ── TESTIMONIALS ── */}
         <section
-          className="section csd-testimonials"
+          className="section testimonial-section"
           aria-labelledby="testimonials-heading"
+          itemScope
+          itemType="https://schema.org/Review"
         >
-          <div className="container">
-            <p className="section-eyebrow">Client Reviews</p>
-            <div className="section-title">
-              <h2 id="testimonials-heading">
-                What Our Global Clients Say About Our Software Development
-                Services
-              </h2>
-              <p>
-                Independent, verified reviews from real clients on Freelancer —
-                from the UK, USA, UAE, Saudi Arabia, and Jordan.
-              </p>
-            </div>
-            <div className="csd-testimonials__grid">
-              {[
-                {
-                  name: "Khalid A.",
-                  location: "Riyadh, Saudi Arabia",
-                  img: "https://qllmsoft.com/images/khalid A.webp",
-                  text: '"Great work with a great programmer team. Delivered everything exactly as discussed and on time."',
-                },
-                {
-                  name: "Mohammad I.",
-                  location: "Amman, Jordan",
-                  img: "https://qllmsoft.com/images/Muhammad I.webp",
-                  text: '"As always, great work. QllmSoft is my reliable choice for store builds and web application logic. The quality of code and communication is consistently excellent. Highly recommended."',
-                },
-                {
-                  name: "Neil P.",
-                  location: "Cardiff, United Kingdom",
-                  img: "https://qllmsoft.com/images/Neil P.webp",
-                  text: '"Fantastic work. Excellent communication throughout, and the final result was exactly what we needed. I will continue to use QllmSoft for future projects without hesitation."',
-                },
-                {
-                  name: "Fernando M.",
-                  location: "Miramar, United States",
-                  img: "https://qllmsoft.com/images/fernandoM.webp",
-                  text: '"Very pleasant developer to collaborate with. QllmSoft consistently delivers a high standard of code, clean architecture, and professional results on every engagement."',
-                },
-              ].map((t, i) => (
-                <article
-                  key={i}
-                  className="csd-testimonial-card"
-                  itemScope
-                  itemType="https://schema.org/Review"
-                >
-                  <div
-                    className="csd-testimonial-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating" content="5" />
-                    ★★★★★
-                  </div>
-                  <p
-                    className="csd-testimonial-card__text"
-                    itemProp="reviewBody"
-                  >
-                    {t.text}
-                  </p>
-                  <div
-                    className="csd-testimonial-card__author"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
-                  >
-                    <img
-                      src={t.img}
-                      alt={`${t.name} — verified QllmSoft client review from ${t.location}`}
-                      loading="lazy"
-                      width="48"
-                      height="48"
-                    />
-                    <div>
-                      <strong itemProp="name">{t.name}</strong>
-                      <span>{t.location} — Freelancer</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+          <h2 id="testimonials-heading" className="sr-only">
+            Client Reviews, QllmSoft Software Development Company Pakistan
+          </h2>
+          <TestimonialSection />
+        
+
             <div style={{ textAlign: "center", marginTop: "30px" }}>
               <a
                 href="https://www.freelancer.com/u/mrprogrmmr"
@@ -956,7 +936,6 @@ const CustomSoftwareDevelopment = () => {
                 View All Verified Reviews on Freelancer
               </a>
             </div>
-          </div>
         </section>
 
         {/* ══════════════════════════════════════════════════
@@ -1037,6 +1016,13 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
+ 
+      
+           <FounderNote 
+  title="Expert Leadership, Collective Excellence"
+  message="At QllmSoft, I lead a hand picked team of senior developers and engineers. While I personally oversee the high level architecture of every project, our collective strength lies in our collaborative approach. We don't just write code; as a team, we engineer solutions that align with your business goals, ensuring every module we deliver is backed by our shared commitment to quality."
+/>
+
         {/* ══════════════════════════════════════════════════
             FAQ  —  H2 + FAQPage itemScope
         ══════════════════════════════════════════════════ */}
@@ -1074,6 +1060,8 @@ const CustomSoftwareDevelopment = () => {
             </div>
           </div>
         </section>
+
+        <RelatedSolutions category="custom-software" />
 
         {/* ══════════════════════════════════════════════════
             FINAL CTA  —  H2

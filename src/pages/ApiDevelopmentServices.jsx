@@ -23,6 +23,9 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './ApiDevelopmentServices.css';
 import 'animate.css';
+import TestimonialSection from "../components/TestimonialSection";
+import RelatedSolutions from "../components/RelatedSolutions";
+import FounderNote from "../components/FounderNote";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/api-development-services';
@@ -913,96 +916,44 @@ const ApiDevelopmentServices = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════
-            TESTIMONIALS — H2 + Review microdata
-        ══════════════════════════════════════════════ */}
-        <section
-          className="section api-testimonials"
-          ref={reviewRef}
-          aria-labelledby="reviews-heading"
-        >
-          <div className="container">
-            <p className="section-eyebrow">Verified Expertise</p>
-            <div className="section-title">
-              <h2 id="reviews-heading">
-                Trusted API Development — Verified on Upwork &amp; Freelancer
-              </h2>
-              <p>
-                Our reputation is backed by independent third-party reviews — not just our own
-                claims. Top-Rated Plus status with a 100% Job Success Score.
-              </p>
-            </div>
-
-            <div className="api-testimonials__grid">
-              {[
-                { name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'"Great work with a great programmer team. Delivered everything exactly as discussed and on time."' },
-                { name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'"As always, great work. QllmSoft is my reliable choice for store builds and web application logic. The quality of code and communication is consistently excellent. Highly recommended."' },
-                { name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'"Fantastic work. Excellent communication throughout, and the final result was exactly what we needed. I will continue to use QllmSoft for future projects without hesitation."' },
-                { name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'"Very pleasant developer to collaborate with. QllmSoft consistently delivers a high standard of code, clean architecture, and professional results on every engagement."' },
-              ].map((r, i) => (
-                <article
-                  key={i}
-                  className={`api-review-card animate__animated ${reviewInView ? 'animate__fadeInUp' : ''}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+          {/* ── TESTIMONIALS ── */}
+                <section
+                  className="section testimonial-section"
+                  aria-labelledby="testimonials-heading"
                   itemScope
                   itemType="https://schema.org/Review"
                 >
-                  <div
-                    className="api-review-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
-                    ★★★★★
+                  <h2 id="testimonials-heading" className="sr-only">
+                    Client Reviews, QllmSoft Software Development Company Pakistan
+                  </h2>
+                  <TestimonialSection />
+        
+                  <div style={{ textAlign: "center", marginTop: "30px" }}>
+                    <a
+                      href="https://www.freelancer.com/u/mrprogrmmr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-dark"
+                      aria-label="View all QllmSoft verified client reviews on Freelancer"
+                    >
+                      View All Verified Reviews on Freelancer
+                    </a>
                   </div>
-                  <p className="api-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div
-                    className="api-review-card__author"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
-                  >
-                    <img
-                      src={r.img}
-                      alt={`${r.name} — verified QllmSoft API development client review from ${r.loc}`}
-                      loading="lazy"
-                      width="48"
-                      height="48"
-                    />
-                    <div>
-                      <strong itemProp="name">{r.name}</strong>
-                      <span>{r.loc}</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
+                </section>
+      
+      
+      
+      
+      
+      
+        {/*contwnt will be change soon for this note */}
+ <FounderNote
+          title="Digital Craftsmanship, Business Results"
+          message="At QllmSoft, we believe a website is more than just a digital address it's your most powerful sales engine. I lead a specialized team that transforms complex business requirements into high-performance web experiences. From Lahore to London, we personally ensure that every line of code we write and every pixel we place is strategically designed to drive engagement, ensure rock solid security, and scale alongside your global ambitions."
+        />
 
-            <div className="api-testimonials__platforms" aria-label="Verified on Freelancer and Upwork">
-              <a
-                href="https://www.freelancer.com/u/mrprogrmmr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-dark"
-                aria-label="View QllmSoft verified API development reviews on Freelancer"
-              >
-                View Freelancer Reviews
-              </a>
-              <a
-                href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-dark"
-                aria-label="Verify QllmSoft Top-Rated Plus status on Upwork"
-              >
-                Verify Upwork Status
-              </a>
-            </div>
-          </div>
-        </section>
+
+        
 
         {/* ══════════════════════════════════════════════
             FAQ — H2 + FAQPage schema
@@ -1038,6 +989,15 @@ const ApiDevelopmentServices = () => {
             </div>
           </div>
         </section>
+
+
+ {/*services carousel*/}
+
+        <RelatedSolutions category="api" />
+
+
+
+
 
         {/* ══════════════════════════════════════════════
             FINAL CTA — H2

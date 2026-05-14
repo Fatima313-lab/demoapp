@@ -708,7 +708,7 @@ const BestSoftwareHouse = () => {
             <div className="bsh-destination__layout">
               <div className="bsh-destination__visual">
                 <img
-                  src="/images/top-10-software-houses-in-pakistan.webp"
+                  src="https://i.pinimg.com/1200x/bb/7f/f8/bb7ff8c6f6d8c42f8ecb4ca4304a7e92.jpg"
                   alt="Pakistan Software Outsourcing Hub 2026 — best software house in Pakistan"
                   loading="lazy"
                   width="580"

@@ -33,6 +33,7 @@ import { useInView } from 'react-intersection-observer';
 import './OutsourceSoftwareDevelopment.css';
 import 'animate.css';
 
+
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/outsource-software-development-to-pakistan';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';

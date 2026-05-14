@@ -18,7 +18,7 @@
 .about-hero {
   background:
     linear-gradient(135deg, rgba(26,54,93,.95), rgba(43,108,176,.15)),
-    url("../assets/AboutHero.jpg");
+    url("../assets/AboutHero.webp");
   background-size: cover;
   background-position: center;
   padding: 90px 0;

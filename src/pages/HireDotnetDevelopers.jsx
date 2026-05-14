@@ -720,7 +720,7 @@ const HireDotnetDevelopers = () => {
                 </p>
                 <p>
                   Whether you need an{' '}
-                  <Link to="/asp-net-core-development-pakistan">ASP.NET Core application</Link> or a
+                  ASP.NET Core application or a
                   full{' '}
                   <Link to="/website-development-services">custom web platform</Link>, our developers
                   deliver with precision and professionalism.

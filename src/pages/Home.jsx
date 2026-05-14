@@ -58,10 +58,10 @@ import TechnologiesSlider from "../components/TechnologiesSlider";
 import TestimonialSection from "../components/TestimonialSection";
 import StatsSection from "../components/StatsSection";
 import blogPostsData from "../data/blogPostsData";
-import QllmDocImg from "../assets/documents-qllmdocs-new.png";
+import QllmDocImg from "../assets/documents-qllmdocs-new.webp";
 import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
-import AboutImg from "../assets/HeroQllmsoftimg.png";
-import GlobalTeamImg from "../assets/pakistanimg.jpg";
+import AboutImg from "../assets/HeroQllmsoftimg.webp";
+import GlobalTeamImg from "../assets/pakistanimg.webp";
 import "./Home.css";
 import "animate.css";
 
