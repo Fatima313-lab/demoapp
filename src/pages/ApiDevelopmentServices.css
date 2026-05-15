@@ -8,15 +8,6 @@
    .btn-outline-light, .btn-primary
 ═══════════════════════════════════════════════════════════ */
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("../assets/bodyimg.png") center/cover no-repeat;
-  filter: blur(11px);         
-  transform: scale(1.1);      
-  z-index: -1;
-}
 
 .api-about,
 .api-services,
@@ -24,7 +15,7 @@ body::before {
 .api-choose,
 .api-best-practices,
 .api-explainer {
-  background: transparent !important;
+  background: rgb(251, 255, 255) !important;
 }
 
 
