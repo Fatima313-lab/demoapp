@@ -407,7 +407,7 @@ const BestSoftwareHouse = () => {
                 2026 Buyer's Guide - Pakistan IT Market
               </div>
               <h1 id="hero-h1" className="bsh-hero__title">
-                Best Software House<br/>
+                Best Software Houses<br/>
                 <span className="bsh-hero__title-accent">in Pakistan</span>
                 <br/>Top 10 Vetted Agencies 2026
               </h1>
