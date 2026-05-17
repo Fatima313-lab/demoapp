@@ -155,15 +155,15 @@ const FAQ_DATA = [
     a: "API development services involve creating and integrating Application Programming Interfaces that allow software systems to communicate. QllmSoft builds REST, GraphQL, and SOAP APIs for web, mobile, and cloud platforms — enabling seamless data exchange and business automation.",
   },
   {
-    q: "How much does API development cost in Pakistan?",
-    a: "Cost depends on complexity, number of endpoints, security requirements, third-party integrations, and timeline. QllmSoft provides transparent, fixed-price quotes after a free consultation — no hidden fees or surprise invoices.",
+    q: "How does QllmSoft determine API project pricing?",
+    a: "Project cost is determined by structural scope: the total number of endpoints, architectural complexity (monolith vs microservices), security requirements (such as PCI DSS or HIPAA), and third party sync protocols. We provide fully detailed, fixed scope proposals post consultation to ensure zero pricing surprises.",
   },
   {
     q: "Which API standards does QllmSoft support?",
     a: "We specialize in RESTful APIs, GraphQL endpoints, and SOAP APIs. We also handle third-party integrations with payment gateways (JazzCash, Easypaisa, Stripe), CRMs, ERPs, logistics APIs (TCS, Leopards), and cloud platforms (Azure, AWS).",
   },
   {
-    q: "Do you provide post-launch API support and maintenance?",
+    q: "Do you provide post launch API support and maintenance?",
     a: "Yes. We provide ongoing monitoring, security updates, and performance optimization after delivery. Every project includes a dedicated support period — ensuring your APIs remain reliable, secure, and scalable as your business grows.",
   },
   {
