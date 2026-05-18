@@ -85,14 +85,14 @@ const blogPosts = Object.entries(blogPostsData).sort(
     <>
     
    <SEO
-    title="QllmSoft Blog | Software Development, Automation & API Insights"
-    description="Explore expert insights from QllmSoft on custom software development, ASP.NET Core, automation, REST APIs, and building scalable digital platforms for modern businesses."
+    title="QllmSoft Insights | Software Development, Automation & API Insights"
+    description="Deep dive technical guides, architectural breakdowns, and strategic engineering insights  from QllmSoft on custom software development, ASP.NET Core, automation, REST APIs, and building scalable digital platforms for modern businesses."
     url="https://qllmsoft.com/blog"
     image="https://qllmsoft.com/og-blog.jpg"
     schema={{
       "@context": "https://schema.org",
       "@type": "Blog",
-      "name": "QllmSoft Blog",
+      "name": "QllmSoft Technical Insights",
       "url": "https://qllmsoft.com/blog",
       "publisher": {
         "@type": "Organization",
@@ -106,7 +106,7 @@ const blogPosts = Object.entries(blogPostsData).sort(
       {/* Hero Section */}
       <section className="blog-hero reveal">
         <div className="container">
-          <h1>Our Blog</h1>
+          <h1>Our Blogs</h1>
           <p>
             Stay updated with the latest trends, insights, and best practices
             in software development, technology, and digital transformation.
