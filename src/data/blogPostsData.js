@@ -25,6 +25,10 @@ import mobileappsecondryimg from '../assets/Mobile-app-development.webp';
 import outsourcemobileappimg from '../assets/Blog_Imgs/outsourcemobileapp.jpg';
 import outsourcemobileapp2 from '../assets/Blog_Imgs/outsourcemobileapp2.jpg';
 import SEO from '../components/SEO';
+import ecommerce from '../assets/Blog_Imgs/ecommerce-developmet.jpg';
+import ecommercesecondary from '../assets/Blog_Imgs/ecommerce-secondary.jpg';
+import aspdotnet from '../assets/Blog_Imgs/ASP.NET.jpg';
+import dotnetsecondary from '../assets/Blog_Imgs/ASP.NET-SECONDARY.jpg';
 
 // ─── Shared Site Constants ───────────────────────────────────
 const SITE_URL   = "https://qllmsoft.com";
@@ -1389,29 +1393,36 @@ export const blogPostsData = {
     ]
   },
 
-  // ══════════════════════════════════════════════════════════
+
+// ══════════════════════════════════════════════════════════
   // 9. SCALABLE ECOMMERCE DEVELOPMENT FOR SMBS
   // ══════════════════════════════════════════════════════════
   "scalable-ecommerce-development-for-smbs": {
     title: "Scalable eCommerce Development for SMBs | Custom Platforms Built for Growth",
     seoTitle: "Scalable eCommerce Development for SMBs | Custom vs SaaS Solutions",
-    description: "Custom scalable eCommerce platforms built for small and mid-sized businesses. Secure payment integration, role-based access, and enterprise-grade architecture without enterprise-level pricing.",
+    description: "Custom scalable eCommerce platforms built for small and mid sized businesses. Secure payment integration, role based access, and enterprise grade architecture without enterprise level pricing.",
     canonicalUrl: `${BLOG_BASE}/scalable-ecommerce-development-for-smbs`,
     category: "eCommerce",
     date: "January 28, 2026",
-    dateModified: "May 18, 2026",
+    dateModified: "May 19, 2026",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+    image: ecommerce,
     imageMeta: {
-      alt: "Small business owner managing a scalable custom eCommerce platform built for growth",
-      caption: "Purpose-built eCommerce architecture for growing SMBs — without SaaS limitations.",
+      alt: " scalable custom eCommerce platform built for growth",
+      caption: "Purpose built eCommerce architecture for growing SMBs , without SaaS limitations.",
       width: 800,
       height: 450
+    },
+    
+    secondaryImage: ecommercesecondary,
+    secondaryImageMeta: {
+      alt: "Dashboard analytics displaying e-commerce traffic spikes and server performance metrics",
+      caption: "Real time scaling capabilities: Ensuring zero downtime during seasonal traffic surges and peak marketing campaigns."
     },
     seoMeta: {
       ogType: "article",
       ogTitle: "Scalable eCommerce Development for SMBs | QllmSoft",
-      ogDescription: "Stop outgrowing your eCommerce platform. Custom scalable solutions for SMBs with secure payments, role-based access, and enterprise architecture at SMB pricing.",
+      ogDescription: "Stop outgrowing your eCommerce platform. Custom scalable solutions for SMBs with secure payments, role based access, and enterprise architecture at SMB pricing.",
       twitterCard: "summary_large_image",
       robots: "index, follow",
       keywords: "scalable ecommerce development smb, custom ecommerce platform small business, ecommerce development pakistan, b2b ecommerce platform, custom ecommerce software"
@@ -1422,9 +1433,9 @@ export const blogPostsData = {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Scalable eCommerce Development for SMBs | Custom Platforms Built for Growth",
-        "description": "Custom scalable eCommerce platforms for small and mid-sized businesses — secure, performant, and built to grow with your operations.",
-        "datePublished": "2026-01-28T09:00:00+05:00",
-        "dateModified": "2026-05-18T21:00:00+05:00",
+        "description": "Custom scalable eCommerce platforms for small and mid sized businesses  secure, performant, and built to grow with your operations.",
+        "datePublished": "2026-01-28",
+        "dateModified": "2026-05-19",
         "author": orgSchema,
         "publisher": orgSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/scalable-ecommerce-development-for-smbs` }
@@ -1441,40 +1452,49 @@ export const blogPostsData = {
       { href: "https://stripe.com/guides/payment-flows", label: "Stripe — Payment Integration Best Practices" },
       { href: "https://web.dev/vitals/", label: "Google Core Web Vitals for eCommerce Performance" }
     ],
+  
     sections: [
       {
         heading: "Scalable eCommerce for Growing Businesses",
         paragraphs: [
-          "Small and mid-sized businesses rarely fail because of a lack of ideas — they stall because their eCommerce systems cannot scale alongside their growth. Rigid templates create workflow bottlenecks, SaaS platforms impose feature restrictions at the worst moments, and shared infrastructure buckles under seasonal traffic spikes.",
-          "At QllmSoft, we design and build scalable eCommerce platforms specifically for SMBs and growth-stage startups. Our solutions are engineered to handle increasing transaction volumes, complex operational workflows, secure payment processing, and enterprise-grade security features — all without the enterprise-level price tag."
+          "Small and mid sized businesses (SMBs) rarely hit a glass ceiling because of a lack of ambition they stall because their underlying eCommerce infrastructure fails to grow with them. In the initial phases of a startup, off the shelf software or basic subscription templates work fine. However, the moment daily transactions surge from a handful to hundreds, rigid template boundaries transform into massive operational bottlenecks.",
+          "Standard SaaS platforms or basic plug in ecosystems frequently impose sudden feature restrictions or structural paywalls right when your business requires maximum flexibility. Complex demands such as implementing multi tiered B2B pricing, syncing real time inventory across multiple distribution hubs, or processing custom high volume payouts without astronomical third party transaction fees quickly become engineering nightmares on rigid monolithic systems.",
+          "At QllmSoft, we specialize in architecting, engineering, and launching robust, scalable eCommerce platforms explicitly tailored for mid sized operations and growth stage brands. Our core objective is to deliver enterprise grade performance, flexible order orchestration pipelines, and impenetrable transactional security all engineered without the traditional enterprise level price tag."
         ]
       },
       {
         heading: "Why SMBs Need Purpose-Built Scalable Platforms",
+        paragraphs: [
+          "While drag and drop website builders offer a convenient starting point, they harbor massive architectural limitations that surface as operations mature. Google heavily rewards content that directly addresses authentic business pain points. For a growing business looking to dominate its niche, migrating to a custom scalable engine becomes necessary for several critical reasons:"
+        ],
         list: [
-          "Growth Bottlenecks: Rigid platform architectures slow operations and block business expansion when transaction volumes increase.",
-          "Platform Lock-In: SaaS subscription models restrict customization and create long-term dependency on vendor feature roadmaps.",
-          "Performance Degradation: Generic platforms frequently crash or slow significantly during high-traffic events like sales campaigns or holiday rushes.",
-          "Security and Compliance Gaps: Enterprise-grade data protection requires more than a plugin — it demands architectural security built from the foundation."
+          "Eliminating Operational Bottlenecks: When order volumes surge, backend systems must process real time inventory updates, generate shipping logs, and sync tracking info across databases seamlessly without crashing.",
+          "Escaping Platform Lock In and Hidden Fees: Most standard SaaS platforms rely on paid monthly add-ons and app extensions. As transaction numbers grow, these recurring subscriptions and flat rate transaction fees quietly drain your hard-earned profit margins.",
+          "Preventing Performance Degradation During Spikes: Mass market templates and heavy plugins drastically slow down page speed under heavy concurrent traffic. According to modern web vitals data, an e-commerce page that takes longer than 3 seconds to load loses over 40% of its active customer base.",
+          "Bridging Security and Compliance Gaps: Protecting customer profiles and credit card pipelines requires architectural security built directly into the codebase framework not just reliance on a superficial security patch or a basic third party plugin."
         ]
       },
       {
         heading: "Our Engineering Approach to SMB eCommerce",
+        paragraphs: [
+          "We don't just skin pre made templates; we build highly performant digital ecosystems structured around automated business workflows. Our software engineering methodology rests on three core technical pillars:"
+        ],
         list: [
-          "Architecture Designed for Scale: Systems built to handle thousands of concurrent users with distributed caching, optimized query structures, and cloud auto-scaling.",
-          "Modular Development Philosophy: Core platform features built first with clean interfaces allowing new modules — subscriptions, B2B pricing, multi-warehouse routing — to be added as the business evolves.",
-          "Security-First Engineering: Role-based access controls, encrypted transaction pipelines, and automated compliance monitoring built into every layer of the system."
+          "High Throughput Architecture: We construct database query systems optimized to maintain sub second server response times even when thousands of concurrent users are active. Leveraged by distributed caching frameworks and intelligent cloud auto scaling, your checkout system stays completely responsive.",
+          "Modular Application Architecture: We engineer clean code bases with decoupled structural modules. This means your foundational store is built to easily snap in complex future expansions like recurring sub-billing, wholesale/retail split pricing, or automated CRM tools without needing a full system rewrite down the line.",
+          "Granular Security First Mechanics: By integrating strict Role Based Access Control (RBAC), your operations team, product managers, and financial analysts only access the specific data buckets relevant to their roles, eliminating internal data leaks."
         ]
       },
       {
         heading: "Core Modules We Implement",
+        paragraphs: [
+          "To provide a comprehensive, market ready experience, we build and deploy advanced operational layers customized to your specific market demands:"
+        ],
         list: [
-          "Lead Generation and Sales Pipeline Management for tracking customer acquisition and conversion workflows.",
-          "Interactive Financial Planning and Revenue Reporting tools for real-time business intelligence.",
-          "Secure User Authentication and Role-Based Access Control protecting operational and financial data.",
-          "Recruitment and Hiring Management integrated with operational team growth workflows.",
-          "Payment Gateway and Subscription Integration supporting recurring billing and one-time transactions.",
-          "Role-Based Organizational Hierarchy managing complex multi-team access and approval structures."
+          "Advanced Lead Catching & Sales Funnels: Automated diagnostic loops that track cart abandonment and intelligently engage potential buyers to recover lost checkouts.",
+          "Interactive Financial Panels: Live, real time analytics displaying automatic revenue generation metrics, micro margin tracking, and cross border tax calculation directly on your custom dashboard.",
+          "Impenetrable Payment Systems: Deep native integrations with leading global and local credit gateways (Stripe, PayPal, or specialized bank gateways) providing clean, single click checkout journeys.",
+          "Administrative Privilege Settings: Enterprise-grade access hierarchies ensuring your checkout mechanics and sensitive merchant settings remain fully safe from unauthorized configurations."
         ]
       }
     ]
@@ -1486,18 +1506,24 @@ export const blogPostsData = {
   "asp-net-core-development": {
     title: "ASP.NET Core Development Services | High-Performance Web & API Engineering",
     seoTitle: "ASP.NET Core Development Services | Custom .NET Web Applications & APIs",
-    description: "Expert ASP.NET Core development services for high-performance, scalable web applications and REST APIs. C# .NET 8/9 specialists — enterprise web apps, cloud-native solutions, and legacy system modernization.",
+    description: "Expert ASP.NET Core development services for high performance, scalable web applications and REST APIs. C# .NET 8/9 specialists , enterprise web apps, cloud native solutions, and legacy system modernization.",
     canonicalUrl: `${BLOG_BASE}/asp-net-core-development`,
     category: "Development",
     date: "January 22, 2026",
-    dateModified: "May 18, 2026",
+    dateModified: "May 19, 2026",
     readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&q=80",
+    image: aspdotnet,
     imageMeta: {
-      alt: "ASP.NET Core web application development team building high-performance REST APIs in Visual Studio",
-      caption: "Enterprise ASP.NET Core development for scalable, cloud-native web platforms.",
+      alt: "ASP.NET Core web application development team building high performance REST APIs in Visual Studio",
+      caption: "Enterprise ASP.NET Core development for scalable, cloud native web platforms.",
       width: 800,
       height: 450
+    },
+   
+    secondaryImage: dotnetsecondary,
+    secondaryImageMeta: {
+      alt: "Software engineer optimizing backend C# code and monitoring server requests in terminal",
+      caption: "Optimized for maximum throughput: Leveraging .NET 8/9 Kestrel server architecture for sub millisecond execution times."
     },
     seoMeta: {
       ogType: "article",
@@ -1513,9 +1539,9 @@ export const blogPostsData = {
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "ASP.NET Core Development Services | High-Performance Web & API Engineering",
-        "description": "Expert ASP.NET Core development — scalable web applications, REST APIs, cloud-native solutions, and legacy modernization using .NET 8/9.",
-        "datePublished": "2026-01-22T09:00:00+05:00",
-        "dateModified": "2026-05-18T21:30:00+05:00",
+        "description": "Expert ASP.NET Core development , scalable web applications, REST APIs, cloud native solutions, and legacy modernization using .NET 8/9.",
+        "datePublished": "2026-01-22",
+        "dateModified": "2026-05-19", 
         "author": orgSchema,
         "publisher": orgSchema,
         "mainEntityOfPage": { "@type": "WebPage", "@id": `${BLOG_BASE}/asp-net-core-development` }
@@ -1542,50 +1568,56 @@ export const blogPostsData = {
       { href: "https://learn.microsoft.com/en-us/ef/core/", label: "Entity Framework Core Official Docs" },
       { href: "https://azure.microsoft.com/en-us/products/app-service/", label: "Azure App Service for .NET Hosting" }
     ],
+   
     sections: [
       {
         heading: "Why ASP.NET Core?",
         paragraphs: [
-          "If your organization faces performance bottlenecks, outdated software architecture, or applications unable to keep pace with growth, ASP.NET Core provides a modern, battle-tested solution. As Microsoft's cross-platform, open-source successor to the classic .NET Framework, ASP.NET Core .NET 8/9 delivers exceptional throughput, minimal memory footprint, and first-class cloud-native deployment capabilities across web, mobile backend, and enterprise environments.",
-          "Pakistan-based .NET development teams at QllmSoft combine deep architectural knowledge with competitive pricing — giving international businesses access to senior-level ASP.NET Core expertise at a fraction of Western market rates."
+          "When an organization faces persistent processing lag, architectural technical debt, or legacy enterprise software unable to handle user scaling, choosing the right framework is no longer just a technical detail it is a critical business decision. ASP.NET Core serves as Microsoft’s flagship, open source cross platform runtime built to solve these exact enterprise level bottlenecks. Optimized heavily across recent releases, ASP.NET Core .NET 8/9 offers lightning fast execution speeds, minimal system memory consumption, and a native cloud deployment engine engineered to run modern digital ecosystems seamlessly.",
+          "Moving away from traditional setups allows businesses to run light, modular microservices or large scale web applications directly on Linux containers, cloud clusters, or internal local infrastructure. The resulting efficiency drops compute expenses significantly while providing robust framework safety tools straight out of the box.",
+          "Our specialized .NET engineering team at QllmSoft bridges the gap between top tier architectural planning and practical execution. By leveraging remote offshore deployment structures, we give international clients direct access to senior C# system architects at highly competitive global market rates."
         ]
       },
       {
         heading: "Common Problems Our ASP.NET Core Services Solve",
+        paragraphs: [
+          "Many growth stage development systems eventually hit an invisible ceiling where adding more servers no longer solves systemic codebase slowness. Our tailored engineering services systematically diagnose and eliminate these common development roadblocks:"
+        ],
         list: [
-          "Performance Bottlenecks: Legacy systems causing slow responses, timeouts, and instability under moderate traffic loads.",
-          "Limited Scalability: Architectures unable to meet increasing concurrent user demands without full system rewrites.",
-          "Cross-Platform Compatibility Issues: Applications tied to Windows-only environments preventing cloud-native deployment.",
-          "Inefficient or Undocumented APIs: Outdated backend services blocking frontend and mobile team productivity.",
-          "Slow Time-to-Market: Internal teams struggling with technical debt and delivery timelines."
+          "Resolving Deep System Performance Latency: We replace outdated data pipelines and legacy unoptimized loops with native .NET asynchronous processing pipelines to restore instant request response times.",
+          "Breaking Down Scalability Blockers: Monolithic frameworks often buckle under sudden seasonal spikes. We re architect core logic into highly modular microservices that dynamically scale based on user load.",
+          "Eliminating OS Dependency Issues: Traditional .NET software was often locked strictly into expensive Windows server licenses. We seamlessly refactor backends to deploy smoothly across cost efficient Linux containers and modern Docker setups.",
+          "Standardizing Missing or Broken API Contracts: Poorly built, slow endpoints heavily delay web and mobile frontend teams. We deliver clean, auto documented RESTful and GraphQL API backends using Minimal APIs for extreme data speeds.",
+          "Reducing High Maintenance Costs and Technical Debt: Outdated, messy code bases make adding simple features incredibly slow. We refactor old systems into clean architectures following strict SOLID design patterns."
         ]
       },
       {
         heading: "Our ASP.NET Core Development Capabilities",
         paragraphs: [
-          "We deliver enterprise-grade ASP.NET Core solutions built for high performance, seamless scalability, and clean modern architecture:"
+          "We do not build generic landing templates; we construct highly secure, reliable, and decoupled enterprise tier software systems engineered for maximum availability. Our production workflows cover full end to end backend pipelines:"
         ],
         list: [
-          "Custom Web and Mobile API Development using ASP.NET Core MVC and Minimal APIs.",
-          "Scalable .NET Core REST and GraphQL Backend Services with full OpenAPI documentation.",
-          "Cross-Platform Enterprise Web Applications deployable on Windows, Linux, and macOS.",
-          "Cloud-Native Development on Azure with App Service, Azure Functions, and managed databases.",
-          "Legacy .NET Framework to .NET 8/9 Migration with zero data loss and full feature parity."
+          "Custom Distributed Enterprise Web Systems: Building secure internal portals, global software solutions, and data hubs using clean architecture layers.",
+          "Ultra-Fast Minimal APIs and Web Integrations: Developing streamlined data transfer channels with minimal overhead to supply real time updates to custom frontend layouts.",
+          "Seamless Legacy Migrations (Modernizing to .NET 8/9): Upgrading brittle systems running on classic .NET Framework 4.x over to optimized cross platform runtimes with zero data corruption.",
+          "Cloud-Native Serverless Ecosystems: Launching fully responsive systems built for the cloud using Azure App Services, managed SQL hubs, and automated continuous integration pipelines."
         ]
       },
       {
         heading: "Technologies We Master",
+        paragraphs: [
+          "A robust backend framework requires an equally powerful toolset. Our tech stack is hand-selected to guarantee that every system we ship remains reliable for years to come:"
+        ],
         list: [
-          ".NET Core 6/7/8/9 — Cross-platform, high-performance backend runtime with LTS support.",
-          "C# — Clean, scalable enterprise application logic following SOLID principles.",
-          "Entity Framework Core & SQL Server — Efficient ORM with optimized migrations and query profiling.",
-          "Azure Cloud — Cloud-native deployments with CI/CD pipelines, managed databases, and App Service.",
-          "React & Next.js — Modern, responsive frontend integration with ASP.NET Core backends."
+          ".NET Core 6/7/8/9 Core Engine: Utilizing cross platform, Long Term Support (LTS) releases to guarantee absolute stability, quick dependency management, and rapid garbage collection mechanics.",
+          "Advanced C# Implementation: Designing clean, typed server code leveraging strong asynchronous patterns, secure memory management, and clean modern language structures.",
+          "Entity Framework Core & High Tier Database Profiling: Structuring safe object relational mapping (ORM) alongside raw SQL tuning, complex index configuration, and smooth migration rollouts.",
+          "Comprehensive Azure Cloud Solutions: Building dynamic cloud hosting environments utilizing secure Key Vaults, cloud managed containers, and automated deployment actions.",
+          "Decoupled Frontend Connections: Combining blazing fast Microsoft backends with responsive, highly interactive modern interfaces built with React, Next.js, and TypeScript."
         ]
       }
     ]
   },
-
   // ══════════════════════════════════════════════════════════
   // 11. HIRE ANGULAR DEVELOPERS PAKISTAN
   // ══════════════════════════════════════════════════════════
