@@ -24,6 +24,7 @@ import mobileappimg from '../assets/Blog_Imgs/mobile-app.jpg';
 import mobileappsecondryimg from '../assets/Mobile-app-development.webp';
 import outsourcemobileappimg from '../assets/Blog_Imgs/outsourcemobileapp.jpg';
 import outsourcemobileapp2 from '../assets/Blog_Imgs/outsourcemobileapp2.jpg';
+import SEO from '../components/SEO';
 
 // ─── Shared Site Constants ───────────────────────────────────
 const SITE_URL   = "https://qllmsoft.com";
