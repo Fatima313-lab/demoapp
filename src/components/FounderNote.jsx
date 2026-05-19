@@ -18,7 +18,7 @@ const FounderNote = ({ title, message }) => {
                 className="founder-img"
               />
               <div className="experience-badge-3d">
-                <span className="years">10+</span>
+                <span className="years">15+</span>
                 <span className="text">Years Exp.</span>
               </div>
             </div>

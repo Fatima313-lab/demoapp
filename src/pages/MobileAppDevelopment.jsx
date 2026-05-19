@@ -419,7 +419,7 @@ const MobileAppDevelopment = () => {
               </h1>
 
               <p className="mob-hero__sub">
-               We build high performance iOS, Android, and Hybrid applications for startups and enterprises across the US, UK, Europe, and the Gulf.
+               We build high performance iOS, Android, and Hybrid applications for startups and enterprises across the globe.
               </p>
 
               <div className="mob-hero__buttons">
@@ -504,7 +504,7 @@ const MobileAppDevelopment = () => {
                 </div>
                 <div>
                   <strong>Flutter Apps</strong>
-                  <p>Cross-Platform</p>
+                  <p>Cross Platform</p>
                 </div>
                 <span className="mob-platform-card__stat">Android + iOS</span>
               </div>
@@ -523,7 +523,7 @@ const MobileAppDevelopment = () => {
                 </div>
                 <div>
                   <strong>React Native</strong>
-                  <p>Cross-Platform</p>
+                  <p>Cross Platform</p>
                 </div>
                 <span className="mob-platform-card__stat">Android + iOS</span>
               </div>
@@ -565,30 +565,26 @@ const MobileAppDevelopment = () => {
                   Growth
                 </h2>
                 <p>
-                  Building a mobile application is one of the highest-ROI
-                  investments a growing business can make. At QllmSoft, we
-                  provide{" "}
-                  <strong>custom mobile app development services</strong>{" "}
-                  engineered to help startups, SMEs, and enterprises build
-                  scalable, secure, and high-performance mobile solutions that
-                  users return to, day after day.
-                </p>
-                <p>
-                 Our experienced developers specialize in Android, iOS, and high performance hybrid app development services. By leveraging frameworks like Flutter and React Native, we deliver hybrid mobile applications that offer native-quality experiences from a single codebase."
-                
-                </p>
-                <p>
-                  We combine technical precision with intuitive UI/UX design and
-                  our{" "}
-                  <Link to="/api-development-services">
-                    secure API development capabilities
-                  </Link>{" "}
-                  to ensure seamless integrations, real-time data sync, and
-                  smooth app performance across all devices. Businesses from the{" "}
-                  <strong>USA, Europe, Gulf region, and Pakistan</strong> trust
-                  QllmSoft to deliver mobile applications that scale with
-                  growth.
-                </p>
+          A high performance mobile application is more than just an asset , it’s a 
+          strategic investment. At QllmSoft, we deliver <strong>bespoke mobile development services</strong> 
+          engineered to help startups and enterprises build scalable, secure, and 
+          user centric mobile solutions that drive long term engagement.
+        </p>
+        <p>
+          Our engineering team specializes in native iOS, Android, and 
+          high performance <strong>hybrid architectures</strong>. By leveraging 
+          industry leading frameworks like Flutter and React Native, we deliver 
+          cross platform applications that provide native quality experiences 
+          from a single, maintainable codebase.
+        </p>
+        <p>
+          We bridge the gap between technical precision and intuitive UI/UX design. 
+          With our <Link to="/api-development-services">secure API integration capabilities</Link>, 
+          we ensure seamless data synchronization and fluid performance across 
+          the entire mobile ecosystem. Leading businesses across the 
+          <strong> the world</strong> trust QllmSoft to 
+          build digital products that scale with their vision.
+        </p>
                 <div
                   className="mob-intro__badges"
                   aria-label="Compliance and delivery standards"
@@ -613,45 +609,42 @@ const MobileAppDevelopment = () => {
                 <h3 className="mob-intro__highlights-title">What We Deliver</h3>
                 {[
                   {
-                    icon: "📱",
+                    icon: "bi-android2",
                     label: "Native Android Apps",
-                    sub: "Kotlin & Java — Google Play ready",
+                    sub: "Kotlin & Java , Google Play ready",
                   },
-                  { icon: '⚛️', 
-                    label: 'Hybrid App Development',
-                     sub: 'React Native & Flutter solutions' },
                   {
-                    icon: "🍎",
+                    icon: "bi-apple",
                     label: "Native iOS Apps",
-                    sub: "Swift — App Store ready",
+                    sub: "Swift , App Store ready",
                   },
                   {
-                    icon: "⚡",
-                    label: "Flutter Cross-Platform",
+                    icon: "bi-layers-half",
+                    label: "Flutter Cross Platform",
                     sub: "One codebase, two platforms",
                   },
                   {
-                    icon: "⚛️",
+                    icon: "bi-braces",
                     label: "React Native Apps",
-                    sub: "JS-powered cross-platform",
+                    sub: "JS-powered cross platform",
                   },
                   {
-                    icon: "🚀",
+                    icon: "bi-lightning-charge",
                     label: "MVP Development",
                     sub: "Launch fast, validate early",
                   },
                   {
-                    icon: "🔄",
+                    icon: "bi-arrow-repeat",
                     label: "App Modernization",
                     sub: "Upgrade legacy mobile apps",
                   },
                   {
-                    icon: "🔗",
+                    icon:"bi-hr",
                     label: "API & Backend Integration",
                     sub: "Seamless data & payment flows",
                   },
                   {
-                    icon: "🏪",
+                    icon: "bi-cloud-arrow-up",
                     label: "Store Submission & ASO",
                     sub: "Play Store & App Store launch",
                   },
@@ -661,7 +654,7 @@ const MobileAppDevelopment = () => {
                       className="mob-highlight-row__icon"
                       aria-hidden="true"
                     >
-                      {h.icon}
+                     <i className={`bi ${h.icon}`} style={{ color: '#edb702' }}></i>
                     </span>
                     <div>
                       <strong>{h.label}</strong>
@@ -736,22 +729,22 @@ const MobileAppDevelopment = () => {
           aria-labelledby="services-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">What We Build</p>
+            
             <div className="section-title">
               <h2 className="services-heading">
-                Android, iOS &amp; Cross-Platform Mobile App Development
+                Android, iOS & Cross Platform Mobile App Development
               </h2>
-              <p>
-                Every mobile solution we deliver is custom-engineered around
-                your users, your workflows, and your long-term growth roadmap —
-                never a template, never a compromise.
-              </p>
+             <p>
+        We don't believe in templates or compromises. Every mobile solution we 
+        engineer is custom built around your specific user journeys, enterprise 
+        workflows, and long-term scalability roadmap.
+      </p>
             </div>
             <div className="mob-services__grid">
               {[
                 {
                   num: "01",
-                  icon: "📱",
+                  icon: "bi-android2",
                   platform: "Android",
                   title: "Android App Development",
                   desc: "We build secure, high-performance Android applications using modern Kotlin and Java SDKs — from customer-facing apps and eCommerce platforms to complex enterprise tools and internal business systems. Every app is optimized for Google Play Store submission and device fragmentation.",
@@ -766,7 +759,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "02",
-                  icon: "🍎",
+                  icon:"bi-apple",
                   platform: "iOS",
                   title: "iOS App Development",
                   desc: "Our iOS developers build polished, performant iPhone and iPad applications using Swift — designed to Apple's Human Interface Guidelines and optimized for App Store approval. We focus on smooth animations, intuitive UX, and deep iOS system integration.",
@@ -781,7 +774,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "03",
-                  icon: "⚡",
+                  icon: "bi-lightning-charge",
                   platform: "Flutter",
                   title: "Flutter Cross-Platform App Development",
                   desc: "Flutter by Google lets us build one codebase that delivers native-quality apps on both Android and iOS — cutting development time by up to 40% without sacrificing UI fidelity or performance. Ideal for startups and businesses that need both platforms simultaneously.",
@@ -796,7 +789,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "04",
-                  icon: "⚛️",
+                  icon:"bi-braces",
                   platform: "React Native",
                   title: "React Native App Development",
                   desc: "Using React Native, we build cross-platform mobile applications that leverage JavaScript and React — giving your web development team a familiar toolchain while delivering truly native-feeling mobile experiences on Android and iOS.",
@@ -811,7 +804,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "05",
-                  icon: "🛠️",
+                  icon: "bi-gear-wide-connected",
                   platform: "Custom",
                   title: "Custom Mobile Product Development",
                   desc: "When your business has unique workflows, integrations, or user journeys, off-the-shelf frameworks and templates fall short. We engineer fully bespoke mobile products — designed around your exact requirements, tech stack, and scalability roadmap.",
@@ -825,7 +818,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "06",
-                  icon: "🔄",
+                  icon:"bi-arrow-repeat",
                   platform: "Modernization",
                   title: "App Modernization &amp; Maintenance",
                   desc: "Outdated mobile apps leak users and revenue. We modernize legacy Android and iOS applications through UI/UX redesign, performance auditing, security hardening, framework migration, and feature expansion — without disrupting your existing user base.",
@@ -854,7 +847,7 @@ const MobileAppDevelopment = () => {
                         className="mob-service-card__icon"
                         aria-hidden="true"
                       >
-                        {s.icon}
+                       <i className={`bi ${s.icon}`} style={{ color: '#edb702', fontSize: '1.5rem' }}></i>
                       </span>
                       <span className="mob-service-card__platform">
                         {s.platform}
@@ -896,14 +889,14 @@ const MobileAppDevelopment = () => {
           aria-labelledby="process-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">How We Work</p>
+           
             <div className="section-title">
               <h2 id="process-heading">Our Mobile App Development Process</h2>
               <p>
-                Clear steps. Clean delivery. Full transparency from the first
-                discovery call to your app's first day on the store — and
-                beyond.
-              </p>
+        From concept to code and deployment, we follow a rigorous, 
+        transparency first engineering process. No black boxes just a 
+        structured journey toward a high performance digital product.
+      </p>
             </div>
 
             <div className="mob-process__layout">
@@ -914,39 +907,39 @@ const MobileAppDevelopment = () => {
                 {[
                   {
                     n: "01",
-                    icon: "🎯",
+                    icon: "bi-search",
                     title: "Discovery & Strategy",
                     desc: "We define your app's goals, target users, core features, and technical scope. This phase produces a clear product roadmap so development stays focused and every sprint delivers measurable value.",
                   },
                   {
                     n: "02",
-                    icon: "🎨",
+                    icon: "bi-vector-pen",
                     title: "UI / UX Design",
-                    desc: "From wireframes to high-fidelity interactive prototypes, we design mobile interfaces that are intuitive, visually polished, and optimized for real user behavior — validated before a single line of code is written.",
+                    desc: "From wireframes to high fidelity interactive prototypes, we design mobile interfaces that are intuitive, visually polished, and optimized for real user behavior ,validated before a single line of code is written.",
                   },
                   {
                     n: "03",
-                    icon: "⚙️",
+                    icon: "bi-gear-wide-connected",
                     title: "Agile Development",
                     desc: "We build in two-week sprints with regular staging access and live demos. Frontend, backend, and API layers are developed in parallel — with clean code practices, version control, and daily progress updates.",
                   },
                   {
                     n: "04",
-                    icon: "🧪",
+                    icon: "bi-test-tube",
                     title: "Testing & QA",
                     desc: "Rigorous performance, usability, and security testing across real devices and OS versions. We catch issues before your users do — using automated test suites and manual QA protocols.",
                   },
                   {
                     n: "05",
-                    icon: "🚀",
+                    icon: "bi-cloud-arrow-up",
                     title: "Store Deployment",
-                    desc: "We prepare store-optimized builds, handle Google Play and App Store submission, and manage the review process — ensuring first-attempt approvals and a smooth public launch.",
+                    desc: "We prepare store optimized builds, handle Google Play and App Store submission, and manage the review process , ensuring firstattempt approvals and a smooth public launch.",
                   },
                   {
                     n: "06",
-                    icon: "🔧",
-                    title: "Post-Launch Support",
-                    desc: "Every project includes 30 days of post-launch monitoring, bug resolution, and performance tuning at no additional cost. Long-term maintenance contracts are available for ongoing feature development.",
+                    icon: "bi-wrench",
+                    title: "Post Launch Support",
+                    desc: "Every project includes 30 days of post launch monitoring, bug resolution, and performance tuning at no additional cost. Long term maintenance contracts are available for ongoing feature development.",
                   },
                 ].map((step, i) => (
                   <li
@@ -973,7 +966,7 @@ const MobileAppDevelopment = () => {
                         className="mob-process__step-icon"
                         aria-hidden="true"
                       >
-                        {step.icon}
+                      <i className={`bi ${step.icon}`} style={{ color: '#edb702' }}></i>
                       </span>
                       <h4>{step.title}</h4>
                       <p>{step.desc}</p>
@@ -996,23 +989,26 @@ const MobileAppDevelopment = () => {
                   <div className="mob-process__sidebar-pillars">
                     {[
                       {
-                        icon: "📋",
+                        icon: "bi-search",
                         label: "Planning-first",
                         sub: "Discovery before code",
                       },
                       {
-                        icon: "⚙️",
+                        icon: "bi-test-tube",
                         label: "Quality-driven",
                         sub: "Testing on real devices",
                       },
                       {
-                        icon: "🛡️",
+                        icon: "bi-shield",
+
                         label: "Secure by default",
                         sub: "Best practices throughout",
                       },
                     ].map((p) => (
                       <div key={p.label} className="mob-process__pillar">
-                        <span aria-hidden="true">{p.icon}</span>
+                        <span aria-hidden="true">
+                          <i className={`bi ${p.icon}`} style={{ color: '#edb702' }}></i>
+                        </span>
                         <div>
                           <strong>{p.label}</strong>
                           <span>{p.sub}</span>
@@ -1024,7 +1020,7 @@ const MobileAppDevelopment = () => {
                     <strong>💡 Pro Tip</strong>
                     <p>
                       Want to launch faster? We can ship an MVP first, then
-                      scale features iteratively — reducing your time-to-market
+                      scale features iteratively , reducing your time to market
                       and initial investment significantly.
                     </p>
                   </div>
@@ -1055,7 +1051,7 @@ const MobileAppDevelopment = () => {
           aria-labelledby="roadmap-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">From Idea to Launch</p>
+           
             <div className="section-title">
               <h2 id="roadmap-heading">Mobile App Development Roadmap</h2>
               <p>
@@ -1070,32 +1066,32 @@ const MobileAppDevelopment = () => {
             >
               {[
                 {
-                  icon: "💡",
+                  icon:"bi-lightbulb",
                   label: "Idea Validation",
                   sub: "Concept & market fit",
                 },
                 {
-                  icon: "🧩",
+                  icon: "bi-layout-text-sidebar-reverse",
                   label: "Feature Planning",
                   sub: "User flows & scope",
                 },
                 {
-                  icon: "🎨",
+                  icon: "bi-palette",
                   label: "UI / UX Design",
                   sub: "Wireframes & prototypes",
                 },
                 {
-                  icon: "⚙️",
+                  icon: "bi-gear",
                   label: "Development",
                   sub: "Milestones & sprints",
                 },
                 {
-                  icon: "🧪",
+                  icon: "bi-test-tube",
                   label: "Testing & QA",
                   sub: "Performance & security",
                 },
                 {
-                  icon: "🚀",
+                  icon: "bi-rocket",
                   label: "Launch & Growth",
                   sub: "Publish, monitor & scale",
                 },
@@ -1106,7 +1102,7 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   <div className="mob-roadmap__stage-icon" aria-hidden="true">
-                    {r.icon}
+                   <i className={`bi ${r.icon}`} style={{ color: '#edb702', fontSize: '1.4rem' }}></i>
                   </div>
                   <div className="mob-roadmap__stage-num" aria-hidden="true">
                     0{i + 1}
@@ -1117,7 +1113,7 @@ const MobileAppDevelopment = () => {
                   <span className="mob-roadmap__stage-sub">{r.sub}</span>
                   {i < 5 && (
                     <span className="mob-roadmap__arrow" aria-hidden="true">
-                      →
+                      <i className="bi bi-chevron-right"></i>
                     </span>
                   )}
                 </div>
@@ -1135,7 +1131,7 @@ const MobileAppDevelopment = () => {
           aria-labelledby="tech-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Technology Stack</p>
+            
             <div className="section-title">
               <h2 id="tech-heading">
                 Technologies We Use for Mobile App Development
@@ -1143,7 +1139,7 @@ const MobileAppDevelopment = () => {
               <p>
                 We select our technology stack based on your project's
                 performance needs, platform requirements, and long-term
-                maintainability — not what's trending.
+                maintainability , not what's trending.
               </p>
             </div>
             <div className="mob-tech__grid">
@@ -1237,7 +1233,7 @@ const MobileAppDevelopment = () => {
                       note: "Android UI automation",
                     },
                     { name: "XCTest (iOS)", note: "iOS automated testing" },
-                    { name: "Appium", note: "Cross-platform test automation" },
+                    { name: "Appium", note: "Cross platform test automation" },
                     {
                       name: "Firebase Test Lab",
                       note: "Real device cloud testing",
@@ -1280,52 +1276,52 @@ const MobileAppDevelopment = () => {
           aria-labelledby="pillars-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">What Makes Apps Succeed</p>
+          
             <div className="section-title">
               <h2 id="pillars-heading">
-                Key Factors That Determine Mobile App Success in 2025 &amp;
+                Key Factors That Determine Mobile App Success in 2026 &
                 Beyond
               </h2>
               <p>
-                Building a successful mobile app goes far beyond writing code.
-                At QllmSoft, we engineer every pillar that drives real user
-                adoption and long-term business growth.
-              </p>
+        Building a market leading app requires more than just functional code. 
+        At QllmSoft, we engineer the core pillars that drive user retention, 
+        enterprise grade security, and sustainable business growth.
+      </p>
             </div>
             <div className="mob-pillars__grid">
               {[
                 {
-                  icon: "👤",
+                  icon: "bi-person-badge",
                   title: "User-Centric UI / UX Design",
                   desc: "Great apps are built around how users actually behave — not how developers assume they do. We design intuitive onboarding flows, frictionless navigation, and visually clean interfaces that drive adoption and reduce churn.",
                   highlight: true,
                 },
                 {
-                  icon: "⚡",
+                  icon: "bi-speedometer2",
                   title: "High Performance & Speed",
                   desc: "Speed directly impacts retention. Apps that take more than 3 seconds to load lose over 50% of users on first open. We build mobile applications with optimized rendering, efficient data fetching, and sub-second response times.",
                   highlight: false,
                 },
                 {
-                  icon: "📐",
+                  icon: "bi-layers-half",
                   title: "Scalable Mobile Architecture",
                   desc: "Your app should grow with your business — not become a bottleneck. We use proven architectural patterns (MVVM, Clean Architecture) so your product can handle 10x user growth without a costly rebuild.",
                   highlight: false,
                 },
                 {
-                  icon: "🔒",
+                  icon:"bi-shield-lock",
                   title: "Security & Data Compliance",
                   desc: "We apply OWASP Mobile Top 10 practices, encrypted local storage, secure API communication, and privacy-aware data handling. Where required, we support GDPR-aligned data flows to protect your users and reduce regulatory risk.",
                   highlight: false,
                 },
                 {
-                  icon: "📊",
+                  icon:"bi-graph-up-arrow",
                   title: "Analytics & Continuous Improvement",
                   desc: "Launching an app is the beginning, not the end. We integrate analytics tools (Firebase Analytics, Mixpanel) so you can track user behavior, identify drop-off points, and make data-driven product decisions post-launch.",
                   highlight: false,
                 },
                 {
-                  icon: "🌐",
+                  icon: "bi-device-ssd",
                   title: "Cross-Platform Consistency",
                   desc: "With Flutter and React Native, we ensure your app looks, feels, and performs consistently on both Android and iOS — reaching the widest possible audience without doubling your development budget.",
                   highlight: false,
@@ -1337,7 +1333,7 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.09}s` }}
                 >
                   <span className="mob-pillar-card__icon" aria-hidden="true">
-                    {p.icon}
+                   <i className={`bi ${p.icon}`} style={{ color: p.highlight ? '#fff' : '#edb702', fontSize: '1.8rem' }}></i>
                   </span>
                   <h3 className="mob-pillar-card__title">{p.title}</h3>
                   <p className="mob-pillar-card__desc">{p.desc}</p>
@@ -1356,7 +1352,7 @@ const MobileAppDevelopment = () => {
           aria-labelledby="industries-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Industries We Serve</p>
+           
             <div className="section-title">
               <h2 id="industries-heading">
                 Mobile Applications Across Every Industry
@@ -1364,53 +1360,53 @@ const MobileAppDevelopment = () => {
               <p>
                 We build mobile solutions tailored to the compliance
                 requirements, operational workflows, and user expectations of
-                each industry — not generic one-size-fits-all apps.
+                each industry not generic one size fits all apps.
               </p>
             </div>
             <div className="mob-industries__grid">
               {[
                 {
-                  icon: "🏥",
+                  icon: "bi-heart-pulse",
                   title: "Healthcare",
                   desc: "HIPAA-aware patient portals, telemedicine apps, appointment booking systems, EHR integrations, and wearable device connectivity for healthcare providers and patients.",
                 },
                 {
-                  icon: "🎓",
+                  icon: "bi-mortarboard",
                   title: "Education & eLearning",
                   desc: "LMS mobile apps, live class platforms, gamified learning experiences, progress tracking dashboards, and corporate training tools for institutions and businesses.",
                 },
                 {
-                  icon: "🏘️",
+                  icon: "bi-house",
                   title: "Real Estate",
                   desc: "360° virtual property tours, AI-powered listing search, instant agent chat, location-based alerts, and property management tools for modern real estate businesses.",
                 },
                 {
-                  icon: "🚚",
+                  icon: "bi-truck",
                   title: "Logistics",
                   desc: "Real-time shipment tracking, route optimization, digital inventory management, driver apps, and supply chain visibility tools for logistics and delivery companies.",
                 },
                 {
-                  icon: "💳",
+                  icon: "bi-credit-card",
                   title: "FinTech",
                   desc: "Mobile banking apps, digital wallets, investment platforms, payment gateway integration, and regulatory-compliant financial tools built with security at the core.",
                 },
                 {
-                  icon: "🛍️",
+                  icon: "bi-bag-shopping",
                   title: "Retail & eCommerce",
                   desc: "Feature-rich mobile shops with personalized product recommendations, loyalty programs, in-app payments, push notifications, and seamless checkout flows.",
                 },
                 {
-                  icon: "🏭",
+                  icon: "bi-factory",
                   title: "Manufacturing",
                   desc: "Equipment monitoring apps, digital inventory control, supply chain tracking, quality management tools, and workforce productivity apps for modern manufacturers.",
                 },
                 {
-                  icon: "☁️",
+                  icon: "bi-cloud",
                   title: "SaaS Startups",
                   desc: "MVP mobile apps designed for fast validation, followed by full-featured SaaS mobile platforms built to scale from early users to enterprise customers on both platforms.",
                 },
                 {
-                  icon: "🤲",
+                  icon: "bi-hand-thumbs-up",
                   title: "Nonprofits",
                   desc: "Donation management, volunteer coordination, event management, fundraising campaigns, and community engagement apps that amplify impact for mission-driven organizations.",
                 },
@@ -1421,7 +1417,7 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.07}s` }}
                 >
                   <span className="mob-industry-card__icon" aria-hidden="true">
-                    {ind.icon}
+                    <i className={`bi ${ind.icon}`} style={{ color: ind.highlight ? '#fff' : '#edb702', fontSize: '1.8rem' }}></i>
                   </span>
                   <h3 className="mob-industry-card__title">{ind.title}</h3>
                   <p className="mob-industry-card__desc">{ind.desc}</p>
@@ -1452,18 +1448,17 @@ const MobileAppDevelopment = () => {
                 <p>
                   Outsourcing your mobile app development to QllmSoft in
                   Pakistan gives you access to senior engineering talent,
-                  structured delivery processes, and enterprise-grade quality —
-                  at 50–60% of the cost of equivalent teams in the US, UK, or
-                  Australia.
+                  structured delivery processes, and enterprise grade quality 
+                  at 50 - 60% of the cost of equivalent teams across the globe
                 </p>
                 <p>
                   Pakistan's technology sector has produced a deep bench of
                   mobile engineering talent, with thousands of Flutter, React
-                  Native, Kotlin, and Swift developers delivering world-class
-                  applications for clients across the USA, UK, and the gulf. Our developers bring
+                  Native, Kotlin, and Swift developers delivering world class
+                  applications for clients internationaly Our developers bring
                   international project experience, fluent English
                   communication, and a genuine commitment to your product's
-                  success — not just task completion.
+                  success  not just task completion.
                 </p>
                 <p>
                   According to{" "}
@@ -1475,7 +1470,7 @@ const MobileAppDevelopment = () => {
                   >
                     Statista
                   </a>
-                  , global mobile app usage continues to grow year-over-year —
+                  , global mobile app usage continues to grow year over year 
                   making this the right time to invest in a mobile presence for
                   your business.
                 </p>
@@ -1494,37 +1489,37 @@ const MobileAppDevelopment = () => {
               >
                 {[
                   {
-                    icon: "💰",
+                    icon: "bi-currency-dollar",
                     stat: "50–60%",
                     label: "Cost Savings",
                     desc: "vs US, UK, or Australian development teams",
                   },
                   {
-                    icon: "⚡",
+                    icon: "bi-clock",
                     stat: "Days",
                     label: "Time to Onboard",
                     desc: "Not weeks — start building immediately",
                   },
                   {
-                    icon: "👥",
+                    icon: "bi-people",
                     stat: "Senior",
                     label: "Developer Level",
                     desc: "Kotlin, Swift, Flutter, React Native experts",
                   },
                   {
-                    icon: "🌍",
+                    icon: "bi-globe",
                     stat: "Global",
                     label: "Client Base",
                     desc: "US, UK, UAE, Saudi Arabia, Europe",
                   },
                   {
-                    icon: "📊",
+                    icon: "bi-clipboard-data",
                     stat: "Weekly",
                     label: "Progress Updates",
                     desc: "Milestone tracking & transparent reporting",
                   },
                   {
-                    icon: "🤝",
+                    icon: "bi-handshake",
                     stat: "100%",
                     label: "IP Ownership",
                     desc: "All code and assets belong to you",
@@ -1535,7 +1530,7 @@ const MobileAppDevelopment = () => {
                       className="mob-outsource-card__icon"
                       aria-hidden="true"
                     >
-                      {b.icon}
+                      <i className={`bi ${b.icon}`} style={{ color: '#edb702', fontSize: '1.8rem' }}></i>
                     </span>
                     <div className="mob-outsource-card__stat">{b.stat}</div>
                     <strong className="mob-outsource-card__label">
@@ -1558,14 +1553,14 @@ const MobileAppDevelopment = () => {
           aria-labelledby="why-heading"
         >
           <div className="container">
-            <p className="section-eyebrow">Why QllmSoft</p>
+            
             <div className="section-title">
               <h2 id="why-heading">
-                Why Choose QllmSoft for Mobile App Development in Pakistan?
+                Why Choose QllmSoft for Mobile App Development ?
               </h2>
               <p>
-                We are not just a mobile app development company — we are your
-                long-term technology partner. Here is what makes QllmSoft the
+                We are not just a mobile app development company . we are your
+                long term technology partner. Here is what makes QllmSoft the
                 trusted choice for businesses worldwide.
               </p>
             </div>
@@ -1573,25 +1568,25 @@ const MobileAppDevelopment = () => {
               {[
                 {
                   num: "01",
-                  icon: "👨‍💻",
+                  icon: "bi-person-badge",
                   title: "Expert Mobile App Developers",
                   desc: "Our team builds native Android apps with Kotlin and Java, iOS apps with Swift, and cross-platform solutions with Flutter and React Native — delivering fast, scalable, and reliable mobile applications that stand up to real-world usage.",
                 },
                 {
                   num: "02",
-                  icon: "🔄",
+                  icon: "bi-gear-wide-connected",
                   title: "End-to-End Mobile App Lifecycle",
                   desc: "We manage everything — discovery, UI/UX design, development, testing, app store submission, and post-launch support. Whether you need an MVP or a full enterprise product, we align delivery with your business goals at every stage.",
                 },
                 {
                   num: "03",
-                  icon: "📱",
+                  icon: "bi-layers-half",
                   title: "Platform-Agnostic Solutions",
                   desc: "We develop for Android, iOS, and cross-platform — and help you launch on Google Play, App Store, or both simultaneously. Our solutions are designed for real-world usage and built to perform across all major device categories.",
                 },
                 {
                   num: "04",
-                  icon: "🏆",
+                  icon: "bi-shield-lock",
                   title: "Verified Global Track Record",
                   desc: "Top-Rated Plus on Upwork. 5-star reviews on Freelancer. Clients across the UK, USA, UAE, Saudi Arabia, and Jordan. Our reputation is backed by independent third-party verification — not just our own claims.",
                 },
@@ -1606,7 +1601,7 @@ const MobileAppDevelopment = () => {
                       {w.num}
                     </span>
                     <span className="mob-why-card__icon" aria-hidden="true">
-                      {w.icon}
+                      <i className={`bi ${w.icon}`} style={{ color: '#edb702', fontSize: '1.8rem' }}></i>
                     </span>
                   </div>
                   <h3>{w.title}</h3>
@@ -1665,11 +1660,11 @@ const MobileAppDevelopment = () => {
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
               <h2 id="faq-heading">
-                Mobile App Development FAQs — Pakistan &amp; Global
+                Mobile App Development FAQs 
               </h2>
               <p>
                 Quick answers about timelines, platforms, costs, store
-                submission, and cross-platform development — everything you need
+                submission, and cross platform development , everything you need
                 before making a decision.
               </p>
             </div>
@@ -1715,12 +1710,12 @@ const MobileAppDevelopment = () => {
               <span>🚀</span> Your App · Built by QllmSoft · Secure
             </div>
             <h2 id="cta-heading">
-              Ready to Build a High-Performance Mobile App?
+              Ready to Build a High Performance Mobile App?
             </h2>
             <p>
               Whether you are a startup validating your first idea or an
               enterprise expanding into mobile, QllmSoft helps you design,
-              develop, and launch scalable Android and iOS applications — fast,
+              develop, and launch scalable Android and iOS applications , fast,
               secure, and built to grow.
             </p>
             <div className="mob-cta__buttons">

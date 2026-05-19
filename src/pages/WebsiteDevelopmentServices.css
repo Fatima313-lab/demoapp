@@ -2262,3 +2262,62 @@ text-align: center;color: #1b2947; font-weight: 800;}
     padding: 36px 26px;
   }
 }
+
+
+
+
+.csd-final-cta {
+  background: linear-gradient(135deg, #1E5AA8 0%, #0D3A6E 100%);
+  text-align: center;
+}
+
+.csd-final-cta__content h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.csd-final-cta__content p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.88);
+  max-width: 620px;
+  margin: 0 auto 30px;
+  line-height: 1.75;
+}
+
+.csd-final-cta__buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.csd-final-cta__perks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.csd-final-cta__perks span {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 768px) {
+  .csd-final-cta__content h2 {
+    font-size: 1.6rem;
+  }
+  .csd-hero__stats {
+    gap: 30px;
+  }
+  .csd-hero__pills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .csd-hero__pill {
+    max-width: 100%;
+    width: 100%;
+  }
+}

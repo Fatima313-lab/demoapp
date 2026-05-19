@@ -12,7 +12,10 @@
    .why-grid, .why-card
 ═══════════════════════════════════════════════════════════ */
 
-.mob-page { overflow-x: hidden; }
+.mob-page { overflow-x: hidden;}
+p{
+  font-weight: 600;
+}
 
 /* ─── Shared button overrides ─────────────────────────────── */
 .mob-btn-primary {
@@ -406,7 +409,7 @@
 /* ══════════════════════════════════════════════════════
    INTRO
 ══════════════════════════════════════════════════════ */
-.mob-intro { background:linear-gradient(rgb(205, 207, 208) , rgb(133, 133, 137) ) }
+.mob-intro { background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) ) }
 
 .mob-intro__layout {
   display: flex;
@@ -870,7 +873,7 @@
 /* process */
 
 .mob-process {
-  background: linear-gradient(180deg, #bec2c7 0%, #87878b 100%);
+  background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) ); 
   padding: 90px 0;
   position: relative;
 }
@@ -1174,7 +1177,7 @@
 /* tech */
 
 .mob-tech {
-  background:  #bec2c7 0%;
+ background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) ); 
   padding: 90px 0;
   position: relative;
 }
@@ -1302,7 +1305,7 @@
 /* ══════════════════════════════════════════════════════
    SUCCESS PILLARS
 ══════════════════════════════════════════════════════ */
-.mob-pillars {  background:  #bec2c7 0%; }
+.mob-pillars {  background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) );  }
 
 .mob-pillars__grid {
   display: grid;
@@ -1356,7 +1359,7 @@
 /* ══════════════════════════════════════════════════════
    INDUSTRIES
 ══════════════════════════════════════════════════════ */
-.mob-industries {background:  #bec2c7 0%; }
+.mob-industries { background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) );  }
 
 .mob-industries__grid {
   display: grid;
@@ -1498,7 +1501,7 @@
 /* why section*/
 
 .mob-why {
-background:  #d8dadc 0%; 
+ background:linear-gradient(rgb(248, 249, 252) , rgb(241, 243, 248) ); 
   padding: 100px 0;
   position: relative;
   overflow: hidden;
@@ -1605,7 +1608,7 @@ background:  #d8dadc 0%;
 
 .csd-faq {
   position: relative;
-  background: linear-gradient(180deg, #fefeff 0%, #ffffff 100%);
+  background:linear-gradient(rgb(247, 248, 250) , rgb(213, 216, 222) );
   padding: 90px 0;
   overflow: hidden;
 }
