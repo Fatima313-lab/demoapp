@@ -72,51 +72,83 @@ export const heroSlides = [
 export const homeServices = [
   {
     id: 1,
-    name: "ASP.NET Core Development",
-    description: "Enterprise-grade backend solutions and secure internal systems built for high-performance scalability.",
-    image: "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/asp-net-core-development-company-pakistan"
+    name: "Custom Software Development",
+    description:
+      "Tailored enterprise solutions and scalable core software engineered to automate complex workflows and accelerate organizational growth.",
+    image: softwaredevelopmentimg,
+    link: "/custom-software-development-services"
   },
   {
-  id: 2, 
-  name: "Custom Software Development",
-  description: "Tailored enterprise solutions and scalable core software engineered to automate complex workflows and accelerate organizational growth.",
-  image: softwaredevelopmentimg,
-  link: "/custom-software-development-services"
-},
-  {
-    id: 3,
+    id: 2,
     name: "Custom Web Development",
-    description: "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
-    image: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description:
+      "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
+    image:
+      "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/website-development-services"
   },
+  
   {
-    id: 4,
+    id: 3,
     name: "Mobile App Development",
-    description: "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
-    image: "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description:
+      "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
+    image:
+      "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/mobile-app-development"
   },
   {
-    id: 5,
+    id: 4,
     name: "API & Enterprise Integration",
-    description: "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
-    image: "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description:
+      "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
+    image:
+      "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/api-development-services"
+  },
+  {
+    id: 5,
+    name: "ASP.NET Core Development",
+    description:
+      "Enterprise-grade backend solutions and secure internal systems built for high-performance scalability.",
+    image:
+      "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/asp-net-core-development-company-pakistan"
   },
   {
     id: 6,
     name: "AI Supported Solutions",
-    description: "Integrating smart automation and machine learning models to optimize workflows and data-driven decision making.",
-    image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
+    description:
+      "Integrating smart automation and machine learning models to optimize workflows and data-driven decision making.",
+    image:
+      "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/ai-powered-software-solutions"
   },
   {
     id: 7,
-    name: "Web Design & Digital Marketing",
-    description: "Strategic UI/UX design combined with data-driven marketing to boost your brand visibility and conversion rates.",
-    image: "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
+    name: "Web Design Services",
+    description:
+      "Modern UI/UX focused website designs crafted to improve engagement, user experience, and brand credibility.",
+    image:
+      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/web-design-services"
+  },
+  {
+    id: 8,
+    name: "WordPress Development",
+    description:
+      "Professional WordPress websites, business portals, and custom theme solutions optimized for speed, SEO, and scalability.",
+    image:
+      "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/wordpress-development-services"
+  },
+  {
+    id: 9,
+    name: "Digital Marketing",
+    description:
+      "SEO, social media marketing, and performance-driven digital campaigns designed to increase visibility and generate leads.",
+    image:
+      "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/digital-marketing-agency-pakistan"
   }
 ];
