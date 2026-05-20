@@ -3,6 +3,7 @@ import { useParams, Navigate, Link } from "react-router-dom";
 import { Calendar, ArrowLeft, User, Tag } from "lucide-react";
 import blogPostsData from "../data/blogPostsData";
 import "./BlogArticle.css";
+import SEO from '../components/SEO';
 
 // const BlogSection = ({ heading, paragraphs, list }) => (
 //   <div className="blog-article-section">
@@ -51,7 +52,7 @@ const SectionParagraph = ({ text }) => {
   );
 };
 
-const BlogSection = ({ heading, paragraphs, list, html, table }) => (
+const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) => (
   <div className="blog-article-section">
     {/* Render RAW HTML if provided */}
     {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
@@ -63,6 +64,29 @@ const BlogSection = ({ heading, paragraphs, list, html, table }) => (
 
         {paragraphs &&
           paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
+
+
+       
+
+        
+        {detailedList && (
+          <div className="detailed-blog-list" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+            {detailedList.map((item, itemIdx) => (
+              <div key={itemIdx} className="detailed-blog-card" style={{ padding: '15px', background: '#f9f9f9', borderRadius: '8px', marginBottom: '15px', borderLeft: '4px solid #0066cc' }}>
+                <h3 style={{ margin: '0 0 5px 0', color: '#111' }}>{item.name}</h3>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: 'bold', margin: '0 0 8px 0' }}>HUB: {item.hub}</p>
+                <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}><strong>Specialties:</strong> {item.specialties}</p>
+                <p style={{ fontStyle: 'italic', color: '#444', margin: '0', background: '#fff', padding: '10px', borderRadius: '4px' }}>"{item.insight}"</p>
+              </div>
+            ))}
+          </div>
+        )}
+      
+        
+
+
+
+
 
         {list && (
           <ul className="blog-article-list">
@@ -109,6 +133,26 @@ const BlogArticle = () => {
 
   return (
     <main className="blog-article-page">
+
+     
+     <SEO 
+        title={post.seoTitle || post.title} 
+        description={post.description}
+        url={post.canonicalUrl}
+        image={post.image}
+        schema={post.schemas && post.schemas[0]} 
+      />
+
+
+      {post.schemas && post.schemas.slice(1).map((additionalSchema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(additionalSchema)}
+        </script>
+      ))}
+
+
+
+
       {/* Hero Section */}
       <section className="blog-article-hero">
         <div className="container">
@@ -159,24 +203,14 @@ const BlogArticle = () => {
                   )}
                 </figure>
               )}
-              {sections[1] && <BlogSection {...sections[1]} />}
-              {sections[2] && <BlogSection {...sections[2]} />}
-              {sections[3] && <BlogSection {...sections[3]} />}
-              {sections[4] && <BlogSection {...sections[4]} />}
-              {sections[5] && <BlogSection {...sections[5]} />}
-              {sections[6] && <BlogSection {...sections[6]} />}
-              {sections[7] && <BlogSection {...sections[7]} />}
-              {sections[8] && <BlogSection {...sections[8]} />}
-              {sections[9] && <BlogSection {...sections[9]} />}
-              {sections[10] && <BlogSection {...sections[10]} />}
-              {sections[11] && <BlogSection {...sections[11]} />}
-              {sections[12] && <BlogSection {...sections[12]} />}
-              {sections[13] && <BlogSection {...sections[13]} />}
-              {sections[14] && <BlogSection {...sections[14]} />}
-              {sections[15] && <BlogSection {...sections[15]} />}
-              {sections[16] && <BlogSection {...sections[16]} />}
-              {sections[17] && <BlogSection {...sections[17]} />}
-              {sections[18] && <BlogSection {...sections[18]} />}
+
+
+              {sections.slice(1).map((section, index) => (
+                <BlogSection key={index} {...section} />
+              ))}
+
+
+
             </article>
 
             {/* Sidebar */}
