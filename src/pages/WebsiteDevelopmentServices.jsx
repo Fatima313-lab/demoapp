@@ -706,7 +706,7 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        <section className="section comparison-section">
+       {/*<section className="section comparison-section">
           <div className="container">
             <div className="section-title text-center">
              
@@ -749,11 +749,11 @@ const WebsiteDevelopmentServices = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* ══════════════════════════════════════════════════
             PROCESS  —  H2 + H4s
-        ══════════════════════════════════════════════════ */}
+        ══════════════════════════════════════════════════ 
         <section
           className="section wds-process"
           ref={processRef}
@@ -852,7 +852,7 @@ const WebsiteDevelopmentServices = () => {
               ))}
             </ol>
           </div>
-        </section>
+        </section>*/}
 
         {/* ══════════════════════════════════════════════════
             TECH STACK  —  H2 + H3s
@@ -1232,9 +1232,10 @@ const WebsiteDevelopmentServices = () => {
     </div>
   </div>
 </section>
+       
         {/* ══════════════════════════════════════════════════
             COMPARISON TABLE  —  H2
-        ══════════════════════════════════════════════════ */}
+        ══════════════════════════════════════════════════ 
         <section
           className="section wds-comparison"
           ref={comparisonRef}
@@ -1319,7 +1320,7 @@ const WebsiteDevelopmentServices = () => {
               </table>
             </div>
           </div>
-        </section>
+        </section>*/}
 
         {/* ══════════════════════════════════════════════════
             WHY CHOOSE US  —  H2 + H3s
