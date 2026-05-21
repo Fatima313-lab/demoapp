@@ -23,6 +23,10 @@ import "animate.css";
 import FounderNote from "../components/FounderNote";
 import TestimonialSection from "../components/TestimonialSection";
 import RelatedSolutions from "../components/RelatedSolutions";
+import QllmDocs from '../assets/QllmDocs.webp';
+import FinanceImg from '../assets/qllm-soft-finance-management-system-11.webp';
+import stickerapp from '../assets/image7.webp';
+import stickerapp2 from '../assets/image8.webp';
 
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/custom-software-development-services";
@@ -372,22 +376,6 @@ const CustomSoftwareDevelopment = () => {
               </Link>
             </div>
 
-            <div
-              className="csd-hero__stats"
-              aria-label="QllmSoft key statistics"
-            >
-              {[
-                { num: "50+", label: "Projects Delivered" },
-                { num: "50+", label: "Global Clients" },
-                { num: "10+", label: "Years of Expertise" },
-              ].map((s) => (
-                <div key={s.label} className="csd-hero__stat">
-                  <strong className="csd-hero__stat-num">{s.num}</strong>
-                  <span className="csd-hero__stat-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
-
             <div className="csd-hero__pills" aria-label="Core service areas">
               {[
                 {
@@ -402,7 +390,7 @@ const CustomSoftwareDevelopment = () => {
                 },
                 {
                   icon: "🤖",
-                  title: "AI-Powered Software Solutions",
+                  title: "AI Powered Software Solutions",
                   desc: "ML.NET and OpenAI-powered intelligent integrations.",
                 },
               ].map((p) => (
@@ -445,9 +433,9 @@ const CustomSoftwareDevelopment = () => {
           itemScope
           itemType="https://schema.org/Organization"
         >
-          <div className="container">
+         <div className="container">
            
-            <div className="about-content">
+            *<div className="about-content">
               <article
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
@@ -612,90 +600,279 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            INDUSTRIES  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
-        <section
-          className="section csd-industries"
-          ref={industriesRef}
-          aria-labelledby="industries-heading"
-        >
-          <div className="container">
-            <p className="section-eyebrow">Industries We Serve</p>
-            <div className="section-title">
-              <h2 id="industries-heading">
-                Industry Specific Software Solutions
-              </h2>
-             <p>
-    We understand that every sector operates under unique regulatory 
-    frameworks, market pressures, and user expectations. 
-    <strong> QllmSoft delivers specialized, high performance systems </strong> 
-    designed to meet the complex demands of global enterprises and 
-    innovative startups, ensuring real world scalability and long term 
-    operational efficiency.
-  </p>
-            </div>
-            <div className="csd-industries__grid">
-              {[
-                {
-                  icon: "bi-bank",
-                  title: "Finance & Banking Software",
-                  desc: "We architect high security payment gateways and risk dashboards. Our team ensures 99.9% uptime and strict compliance with global financial data standards.",
-                  tech: ".NET Core • SQL Server • OAuth2",
-                },
-                {
-                  icon:"bi-heart-pulse",
-                  title: "Healthcare Management Systems",
-                  desc: "We build HIPAA compliant patient portals, electronic health records (EHR), telehealth platforms, and appointment scheduling systems that improve patient care and staff efficiency.",
-                  tech: "Azure Health • HL7/FHIR • HIPAA",
-                },
-                {
-                  icon: "bi-mortarboard",
-                  title: "Education & eLearning Platforms",
-                  desc: "Our developers build scalable LMS platforms capable of handling thousands of concurrent students with interactive course tools.",
-                   tech: "React • SignalR • Azure Stream",
-                },
-                {
-                  icon:"bi-building-up",
-                  title: "Real Estate CRM & Management",
-                  desc: "Property listing platforms, client focused CRMs, virtual tour integrations, and operations management tools that modernize how real estate businesses serve their customers.",
-                },
-                {
-                  icon: "bi-truck",
-                  title: "Logistics & Supply Chain",
-                  desc: "Inventory tracking, fleet management, route optimization, and end to end supply chain visibility tools built for logistics providers who need speed and control in one place.",
-                  tech: "IoT • PowerBI • Microservices",
-                },
-                {
-                  icon: "bi-cloud-check",
-                  title: "SaaS & Cloud Product Development",
-                  desc: "we help to build Scalable multi tenant SaaS platforms with subscription billing, user role management, analytics dashboards, and seamless API integrations engineered to grow from Day 1.",
-                   tech: "Azure • Stripe • Redis",
-                },
-              ].map((ind, i) => (
-                <article
-                  key={i}
-                  className={`csd-industry-card animate__animated ${industriesInView ? "animate__fadeInUp" : ""}`}
-                  style={{ animationDelay: `${i * 0.08}s` }}
-                ><div className="csd-industries__icon-box">
-        <i className={`bi ${ind.icon}`} aria-hidden="true"></i>
-      </div>
-                  <h3 className="csd-industry-card__title">{ind.title}</h3>
-                  <p className="csd-industry-card__desc">{ind.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+ 
+{/*projects*/}
+      
 
-
-
-
-
+<section className="section csd-featured-projects" aria-labelledby="projects-heading">
+  <div className="container">
 
   
- 
+    <div className="section-header">
+      <p className="section-eyebrow">Proven Track Record</p>
 
+      <h2 id="projects-heading" className="section-main-title">
+        Featured Enterprise Applications <span>Built by QllmSoft</span>
+      </h2>
+
+      <p className="section-description">
+        Explore how we engineer high performance software systems that solve complex business problems and streamline workflows.
+      </p>
+    </div>
+
+
+    <div className="projects-stream-wrapper">
+
+      {/*  PROJECT 1  */}
+      <article className="project-row">
+
+        <div className="project-details-content">
+          <span className="case-study-tag">Case Study 01</span>
+
+          <h3 className="project-title">
+  QllmDocs |  Secure & Intelligent Document Management System
+</h3>
+
+<p className="project-narrative">
+  QllmDocs is a powerful, cloud based Document Management System developed by QllmSoft to simplify complex document workflows, 
+  strengthen compliance, and ensure enterprise grade data security. It transforms scattered and unstructured files into a 
+  centralized, intelligent, and fully manageable system.
+</p>
+
+<p className="project-narrative">
+  Built for modern businesses, the platform reduces manual effort by automating document processes while providing complete 
+  visibility, control, and traceability across every stage of the document lifecycle.
+</p>
+
+
+
+<div className="project-features-grid">
+
+  <div className="feature-item">
+    <h5>Lifecycle Automation</h5>
+    <p>Manage document stages seamlessly with automated workflows and structured lifecycle control.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>Role Based Access</h5>
+    <p>Secure sensitive information using granular permission levels and user based controls.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>Smart Audit Trails</h5>
+    <p>Track every document change with complete revision history and full transparency.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>Azure Cloud Storage</h5>
+    <p>Scalable, secure, and encrypted cloud storage for reliable document management.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>Subscription Management</h5>
+    <p>Flexible subscription plans integrated with PayPal and banking systems.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>AI Based Search</h5>
+    <p>Instantly find documents with intelligent AI powered search and indexing.</p>
+  </div>
+
+</div>
+
+
+
+<p className="project-narrative">
+  The platform includes powerful capabilities such as API integrations, customizable access control, version tracking, 
+  automated workflow triggers, and real time document collaboration. These features significantly reduce administrative 
+  workload and improve operational efficiency across teams.
+</p>
+
+<p className="project-narrative">
+  Additional functionality includes smart tagging, template creation, secure document sharing, and cloud based encryption, 
+  making QllmDocs an ideal solution for industries like finance, healthcare, and legal where compliance and data security 
+  are critical.
+</p>
+</div>
+        <div className="project-visual-wrapper">
+          <div className="image-container-card">
+            <img
+              src={QllmDocs}
+              alt="QllmDocs Dashboard"
+              className="project-screenshot"
+            />
+          </div>
+        </div>
+
+      </article>
+
+
+      <article className="project-row reverse-row">
+
+        <div className="project-visual-wrapper">
+          <div className="image-container-card">
+            <img
+              src={FinanceImg}
+              alt="Finance Dashboard"
+              className="project-screenshot"
+            />
+          </div>
+        </div>
+
+        <div className="project-details-content">
+          <span className="case-study-tag">Case Study 02</span>
+
+          <h3 className="project-title">
+  Financial Analysis & Ledger Automation Web Application
+</h3>
+
+<p className="project-narrative">
+  QllmSoft’s Financial Management System is an intelligent, enterprise grade platform designed to simplify complex business finances through automation, 
+  real-time analytics, and seamless system integration. It enables SMEs to gain full visibility and control over their financial operations while reducing manual effort.
+</p>
+
+<p className="project-narrative">
+  The platform transforms traditional accounting workflows into a smart, automated system where budgeting, expense tracking, and reporting are handled in real time. 
+  By integrating with tools like QuickBooks and Xero, it creates a centralized financial ecosystem that supports fast, informed decision making.
+</p>
+
+
+
+
+<div className="project-features-grid">
+
+  <div className="feature-item">
+    <h5>CRM Integration</h5>
+    <p>Strengthen customer relationships with integrated client data and financial insights.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5>Investment Tracking</h5>
+    <p>Monitor and analyze portfolios with intelligent tracking and reporting tools.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5> Secure Payment Gateways</h5>
+    <p>Enable encrypted transactions with automated billing and secure payment workflows.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5> Reporting & Analytics</h5>
+    <p>Access real time dashboards and actionable insights for data driven decisions.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5> Automated Budgeting</h5>
+    <p>Streamline financial planning with intelligent budgeting and expense automation.</p>
+  </div>
+
+  <div className="feature-item">
+    <h5> System Integrations</h5>
+    <p>Seamless connectivity with accounting tools like QuickBooks, Xero, and ERP systems.</p>
+  </div>
+
+
+
+
+
+
+<p className="project-narrative">
+  Built using modern technologies including .NET Core, Angular, MVC architecture, SQL Server, Bootstrap, jQuery, and Ajax, 
+  the platform ensures robust performance, scalability, and secure data handling across enterprise environments.
+</p>
+
+<p className="project-narrative">
+  More than just an accounting tool, this system acts as a strategic financial engine  helping businesses optimize operations, reduce errors, 
+  and gain deep insights into their financial health for long term growth.
+</p>
+
+          </div>
+
+          <div className="project-tech-stack">
+            <strong className="tech-stack-title">Engineered With:</strong>
+
+            <div className="tech-tags-wrapper">
+              <span className="tech-tag">ASP.NET Core</span>
+              <span className="tech-tag">Angular</span>
+              <span className="tech-tag">SQL Server</span>
+              <span className="tech-tag">REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+      </article>
+
+
+     
+      <article className="project-row">
+
+        <div className="project-details-content">
+          <span className="case-study-tag highlighting-tag">Case Study 03</span>
+
+          <h3 className="project-title">
+            Sticker Smash | Mobile Photo Editor
+          </h3>
+
+          <p className="project-narrative">
+            A creative photo editing mobile app built for smooth interactions 
+            and real time performance across devices.
+          </p>
+
+          <p className="project-narrative">
+            It provides a responsive and fun editing experience through gesture-based 
+            controls and optimized rendering.
+          </p>
+
+          <div className="project-features-grid">
+
+            <div className="feature-item">
+              <h5>Gesture UI</h5>
+              <p>Drag, scale, rotate interactions.</p>
+            </div>
+
+            <div className="feature-item">
+              <h5>Camera Integration</h5>
+              <p>Capture & edit instantly.</p>
+            </div>
+
+            <div className="feature-item">
+              <h5>Smart Gallery</h5>
+              <p>Optimized media management.</p>
+            </div>
+
+            <div className="feature-item">
+              <h5> Fast Rendering</h5>
+              <p>Smooth real time editing performance.</p>
+            </div>
+
+          </div>
+
+          <div className="project-tech-stack">
+            <strong className="tech-stack-title">Engineered With:</strong>
+
+            <div className="tech-tags-wrapper">
+              <span className="tech-tag">React Native</span>
+              <span className="tech-tag">Expo</span>
+              <span className="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="project-visual-wrapper mobile-mockup-wrapper">
+          <div className="image-container-card">
+            <img
+              src={stickerapp2}
+              alt="Sticker Smash App UI"
+              className="project-screenshot"
+            />
+          </div>
+        </div>
+
+      </article>
+
+    </div>
+  </div>
+</section>
 
 
 
@@ -815,61 +992,7 @@ const CustomSoftwareDevelopment = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            WHY CHOOSE US  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
-        <section
-          className="section csd-why"
-          ref={whyRef}
-          aria-labelledby="why-heading"
-        >
-          <div className="container">
-            <p className="section-eyebrow">The QllmSoft Advantage</p>
-            <div className="section-title">
-              <h2 id="why-heading">
-               Why Leading Brands Partner with Our <span>Pakistan Based Team?</span>
-              </h2>
-              <p>
-               In a crowded market of software houses, QllmSoft stands out by bridging the gap between 
-        <strong> technical complexity and business growth</strong>. Here is why our partners 
-        trust us with their mission critical projects.
-              </p>
-            </div>
-            <div className="why-grid">
-              {[
-                {
-                  title: "Competitive Offshore Rates",
-                  desc: "Get world class development quality at a fraction of global  agency prices , without cutting corners on technology, testing, or communication.",
-                },
-                {
-                  title: "Transparent Communication",
-                  desc: "You get direct access to your development team, not a middleman. Regular video calls, written updates, and a dedicated Slack channel keep you in the loop daily.",
-                },
-                {
-                  title: "Security-First Architecture",
-                  desc: "We build with role based access control, SSL encryption, secure APIs, and compliance standards (GDPR, HIPAA, PCI-DSS) baked into every layer not added as an afterthought.",
-                },
-                {
-                  title: "Built to Scale With You",
-                  desc: "Our architectures are designed for growth. Adding users, features, or new modules to your software will not require rebuilding from scratch  ever.",
-                },
-              ].map((w, i) => (
-                <article
-                  key={i}
-                  className={`why-card animate__animated ${whyInView ? "animate__fadeInUp" : ""}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <div className="why-card-inner">
-            <span className="why-icon-pop">{w.icon}</span>
-                  <h3>{w.title}</h3>
-                  <p>{w.desc}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
+       
         {/* ══════════════════════════════════════════════════
             TECH STACK  —  H2
         ══════════════════════════════════════════════════ */}
@@ -936,86 +1059,7 @@ const CustomSoftwareDevelopment = () => {
             </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            WHY CUSTOM SOFTWARE  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
-        <section className="section csd-case" aria-labelledby="case-heading">
-          <div className="container">
-           
-            <div className="section-title">
-              <h2 id="case-heading">
-                Why Custom Software Is the Smartest Investment for Growing
-                Businesses
-              </h2>
-              <p>
-                Off the shelf software is built for everyone, which means it is
-                perfect for no one. Here is why businesses that invest in custom
-                development consistently outperform those that do not.
-              </p>
-            </div>
-            <div className="csd-case__grid">
-              {[
-                {
-                  icon: "bi-sliders",
-                  title: "Built Around Your Workflows",
-                  desc: "Custom software adapts to how your team actually works, not the reverse. The result is higher adoption, fewer workarounds, and measurably better operational efficiency from day one.",
-                },
-                {
-                  icon:"bi-graph-up-arrow",
-                  title: "Scales Without Limits",
-                  desc: "As your business grows, custom software grows with it. Add users, new modules, or integrations without hitting subscription walls, licensing fees, or performance ceilings.",
-                },
-                {
-                  icon:"bi-shield-check",
-                  title: "Better Security & Compliance",
-                  desc: "You control the code, the data, and the infrastructure. That means stronger security posture, full compliance with industry regulations, and no dependency on third party vendor decisions.",
-                },
-                {
-                  icon:"bi-trophy",
-                  title: "Genuine Competitive Advantage",
-                  desc: "Your competitors are using the same off the shelf tools. Custom software gives you capabilities they cannot replicate, creating real differentiation in how you serve your customers.",
-                },
-                {
-                  icon:"bi-cash-stack",
-                  title: "Lower Long-Term Cost",
-                  desc: "Monthly SaaS fees, per seat pricing, and vendor lock in add up fast. Custom software, properly built, pays for itself through automation, efficiency gains, and eliminated tool redundancy.",
-                },
-                {
-                  icon: "bi-people",
-                  title: "A Partner, Not Just a Vendor",
-                  desc: "We stay invested in your product's success beyond launch. Our team provides strategic input, not just technical execution  because we understand that the software we build affects your business outcomes directly.",
-                },
-              ].map((c, i) => (
-                <article key={i} className="csd-case-card">
-                  <span className="csd-case-card__icon" aria-hidden="true">
-                   <i className={`bi ${c.icon}`} style={{ fontSize: '1.8rem', color: '#edb702' }}></i>
-                  </span>
-                  <h3 className="csd-case-card__title">{c.title}</h3>
-                  <p className="csd-case-card__desc">{c.desc}</p>
-                </article>
-              ))}
-            </div>
-            <div className="csd-case__cta">
-              <Link
-                to="/projects"
-                className="btn btn-primary"
-                aria-label="See QllmSoft custom software development project portfolio"
-              >
-                See Our Work
-              </Link>
-              <Link
-                to="/contact"
-                className="btn btn-outline-dark"
-                aria-label="Talk to the QllmSoft software development team in Pakistan"
-              >
-                Talk to Our Team
-              </Link>
-            </div>
-          </div>
-        </section>
-
- 
-      
+        
            <FounderNote 
   title="Expert Leadership, Collective Excellence"
   message="At QllmSoft, I lead a hand picked team of senior developers and engineers. While I personally oversee the high level architecture of every project, our collective strength lies in our collaborative approach. We don't just write code; as a team, we engineer solutions that align with your business goals, ensuring every module we deliver is backed by our shared commitment to quality."

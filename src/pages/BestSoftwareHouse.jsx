@@ -34,6 +34,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './BestSoftwareHouse.css';
+import TestimonialSection from "../components/TestimonialSection";
 
 /* ─── Constants ─────────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/best-software-house-in-pakistan';
@@ -489,10 +490,10 @@ const BestSoftwareHouse = () => {
                 <p>
                   Pakistan has firmly established itself as a major force in global software development.
                   Whether you need a mobile application, an enterprise platform, or an{' '}
-                  <Link to="/ai-powered-software-solutions" aria-label="Learn about AI-powered software solutions by QllmSoft">
-                    AI-powered product
+                  <Link to="/ai-powered-software-solutions" aria-label="Learn about AI powered software solutions by QllmSoft">
+                    AI powered product
                   </Link>
-                  , Pakistani software firms routinely deliver world-class results at highly competitive
+                  , Pakistani software firms routinely deliver world class results at highly competitive
                   rates. In this 2026 guide, we have ranked the ten most notable software houses in
                   Pakistan based on their service quality, international reach, client satisfaction,
                   and technological capabilities.
@@ -502,7 +503,7 @@ const BestSoftwareHouse = () => {
                   with the government and PSEB actively investing in talent pipelines, technology parks,
                   and regulatory frameworks to support continued growth. For international businesses,
                   Pakistan offers the rare combination of deep engineering talent, English fluency,
-                  timezone flexibility, and costs 50–70% lower than comparable Western markets.
+                  timezone flexibility, and costs 50 - 70% lower than comparable Western markets.
                 </p>
                 <p>
                   For independent verification, see the{' '}
@@ -778,89 +779,29 @@ const BestSoftwareHouse = () => {
             </div>
           </div>
         </section>
-
-        {/* ════════ REVIEWS ════════ */}
+ 
+  {/* ── TESTIMONIALS ── */}
         <section
-          className="bsh-reviews section"
-          aria-labelledby="reviews-heading"
-          ref={reviewRef}
-          itemScope itemType="https://schema.org/Organization"
+          className="section testimonial-section"
+          aria-labelledby="testimonials-heading"
+          itemScope
+          itemType="https://schema.org/Review"
         >
-          <meta itemProp="name" content="QllmSoft" />
-          <div className="container">
-            <div className="bsh-section-head">
-              <span className="bsh-eyebrow">Verified Client Feedback</span>
-              <h2 id="reviews-heading" className="bsh-section-title">
-                What Global Clients Say About QllmSoft
-              </h2>
-              <p className="bsh-section-lead">
-                Independent, third-party verified reviews from global clients — from the UK, USA,
-                UAE, Saudi Arabia, and Jordan — on Freelancer and Upwork.
-              </p>
-            </div>
-            <div className="bsh-reviews__grid">
-              {REVIEWS.map((r, i) => (
-                <article
-                  key={i}
-                  className={`bsh-review-card${reviewInView ? ' bsh-review-card--visible' : ''}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                  itemScope itemType="https://schema.org/Review"
-                >
-                  <div
-                    className="bsh-review-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating"
-                    itemScope
-                    itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
-                    {[...Array(5)].map((_, si) => (
-                      <span key={si} className="bsh-star" aria-hidden="true">
-                        <IconStar size={16} />
-                      </span>
-                    ))}
-                  </div>
-                  <p className="bsh-review-card__text" itemProp="reviewBody">"{r.text}"</p>
-                  <div
-                    className="bsh-review-card__author"
-                    itemProp="author"
-                    itemScope
-                    itemType="https://schema.org/Person"
-                  >
-                    <img
-                      src={r.img}
-                      alt={`${r.name} — verified QllmSoft software development client from ${r.loc}`}
-                      loading="lazy"
-                      width="48"
-                      height="48"
-                    />
-                    <div>
-                      <strong itemProp="name">{r.name}</strong>
-                      <span>{r.loc} — Verified</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="bsh-reviews__actions">
-              <a
-                href="https://www.freelancer.com/u/mrprogrmmr"
-                target="_blank" rel="noopener noreferrer"
-                className="bsh-btn bsh-btn--outline"
-                aria-label="View all QllmSoft reviews on Freelancer"
-              >
-                View Freelancer Reviews
-              </a>
-              <a
-                href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
-                target="_blank" rel="noopener noreferrer"
-                className="bsh-btn bsh-btn--outline"
-                aria-label="Verify QllmSoft Top-Rated status on Upwork"
-              >
-                Verify Upwork Status
-              </a>
-            </div>
+          <h2 id="testimonials-heading" className="sr-only">
+            Client Reviews, QllmSoft Software Development Company Pakistan
+          </h2>
+          <TestimonialSection />
+
+          <div style={{ textAlign: "center", marginTop: "30px" }}>
+            <a
+              href="https://www.freelancer.com/u/mrprogrmmr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-dark"
+              aria-label="View all QllmSoft verified client reviews on Freelancer"
+            >
+              View All Verified Reviews on Freelancer
+            </a>
           </div>
         </section>
 
