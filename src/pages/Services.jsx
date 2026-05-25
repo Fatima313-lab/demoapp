@@ -50,6 +50,8 @@ import { servicesData } from "../data/mock";
 import { useInView } from "react-intersection-observer";
 import "./Services.css";
 import "animate.css";
+import ServiceCard from "../components/ServiceCard";
+import QllmDocs from "../assets/QllmDocsMainPage2.webp";
 
 /* ─── JSON-LD: WebPage + BreadcrumbList ────────────────────────── */
 const schemaWebPage = {
@@ -331,7 +333,8 @@ const FaqSection = () => {
       <div className="container">
         <div className="section-title reveal">
           <h2 id="faq-heading">
-            Frequently Asked Questions, Software Development Services in Pakistan
+            Frequently Asked Questions, Software Development Services in
+            Pakistan
           </h2>
           <p>
             Honest answers to the questions businesses ask most before choosing
@@ -442,15 +445,13 @@ const TechnologiesSection = () => (
   >
     <div className="container">
       <div className="section-title reveal">
-        <h2 id="tech-h2">
-          Technologies Powering Our Software Solutions
-        </h2>
+        <h2 id="tech-h2">Technologies Powering Our Software Solutions</h2>
         <p>
           We select the best technology for each project based on your
           performance requirements, scalability roadmap, and long-term
           maintainability, not convenience or habit. Every tool is
-          production-proven, actively maintained, and enterprise-tested. Security
-          implementations follow{" "}
+          production-proven, actively maintained, and enterprise-tested.
+          Security implementations follow{" "}
           <a
             href="https://owasp.org/www-project-top-ten/"
             target="_blank"
@@ -607,13 +608,14 @@ const Services = () => {
       <Helmet>
         {/* Title, 60 chars, solution-first + brand */}
         <title>
-          Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft
+          Top Software Development Services in Pakistan | Custom Digital
+          Solutions | QllmSoft
         </title>
 
         {/* Description, 158 chars */}
         <meta
           name="description"
-          content="QllmSoft delivers custom software development services in Pakistan, enterprise web apps, mobile apps, business automation, AI solutions & dedicated developer teams. Free quote in 24 hours."
+          content="Looking for top custom software development services in Pakistan? QllmSoft builds secure enterprise web applications, mobile apps & AI solutions. Get a Free quote in 24 hours."
         />
 
         {/* Keywords, solution-first, service + stack mix */}
@@ -695,8 +697,8 @@ const Services = () => {
               Custom Software Development Services, Built Around Your Business
             </h1>
             <p>
-              QllmSoft engineers production-ready digital solutions for businesses that need more
-              than a generic tool. We build{" "}
+              QllmSoft engineers production-ready digital solutions for
+              businesses that need more than a generic tool. We build{" "}
               <Link to="/web-application-development-services">
                 enterprise web applications
               </Link>
@@ -705,14 +707,16 @@ const Services = () => {
                 mobile apps for Android and iOS
               </Link>
               ,{" "}
-              <Link to="/api-development-services">business automation systems</Link>
+              <Link to="/api-development-services">
+                business automation systems
+              </Link>
               , and{" "}
               <Link to="/ai-powered-software-solutions">
                 AI-powered software solutions
               </Link>{" "}
-             , delivered on a fixed price, with a documented scope, on an agreed timeline.
-              Serving businesses across Pakistan, since
-              2015 with a verified 100% Upwork Job Success Score.
+              , delivered on a fixed price, with a documented scope, on an
+              agreed timeline. Serving businesses across Pakistan, since 2015
+              with a verified 100% Upwork Job Success Score.
             </p>
           </div>
         </section>
@@ -731,23 +735,24 @@ const Services = () => {
                 Our Software Development Services, Full Capability Overview
               </h2>
               <p>
-                End-to-end digital solutions built entirely around your business goals, not
-                generic templates or pre-built tools stretched to fit. As a{" "}
-                <strong>custom software development company in Pakistan</strong>, QllmSoft
-                serves businesses in Pakistan & internationally across four continents. Explore our full range
-                of{" "}
+                QllmSoft engineers end-to-end digital solutions built entirely
+                around your business goals zero generic templates, zero pre
+                built tools stretched to fit. Operating as an elite offshore
+                custom software development company, we deliver premium
+                engineering to international enterprises across four continents,
+                combined with competitive advantages through our high end
+                delivery hubs. Explore our comprehensive suite of{" "}
                 <Link to="/custom-software-development-services">
                   custom software development services
                 </Link>
-                ,{" "}
+                , cost effective{" "}
                 <Link to="/outsource-software-development-to-pakistan">
                   software outsourcing from Pakistan
                 </Link>
-                , and{" "}
+                , and scalable remote teams via{" "}
                 <Link to="/hire-dotnet-developers-pakistan">
-                  dedicated developer hiring
+                  dedicated .NET developer hiring
                 </Link>
-                .
               </p>
             </div>
             <div className="services-detailed-grid">
@@ -759,14 +764,177 @@ const Services = () => {
                     .replace(/\s+/g, "-")
                     .replace(/[^a-z0-9-]/g, "");
                 return (
-                  <ServiceCardDetailed
+                  <ServiceCard
                     key={service.id}
                     service={service}
+                    variant="detailed"
                     isOdd={index % 2 === 0}
                     id={serviceId}
                   />
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        <div className="product-showcase-divider">
+          <span className="divider-line"></span>
+          <span className="divider-tag">Our Flagship Product</span>
+          <span className="divider-line"></span>
+        </div>
+
+        <section className="qllmdocs-product-section dark-theme">
+          <div className="qllm-product-container">
+            <div className="qllm-product-visual-box iframe-mode">
+              <div className="glass-glow-mesh"></div>
+
+              <div className="browser-mockup-header">
+                <span className="dot red"></span>
+                <span className="dot yellow"></span>
+                <span className="dot green"></span>
+                <div className="browser-address-bar">qllmdocs.com</div>
+              </div>
+
+              <iframe
+                src={QllmDocs}
+                title="QllmDocs Live Platform Dashboard"
+                className="product-live-iframe"
+                loading="lazy"
+                sandbox="allow-scripts allow-same-origin allow-popups"
+              ></iframe>
+
+              <div className="product-live-badge">
+                <span className="pulse-dot"></span> Live Interactive Portal
+              </div>
+            </div>
+
+            <div className="qllm-product-intellect">
+              <div className="product-meta-brand">
+                Ready To Deploy SaaS Solution
+              </div>
+
+              <div className="product-logo-wrapper">
+                <img
+                  src="https://qllmdocs.com/images/QllmDocs-Horizontal.png"
+                  alt="QllmDocs Business Logo"
+                  className="product-brand-logo"
+                  loading="lazy"
+                />
+                <span className="product-brand-subtitle">
+                  Secure & Intelligent DMS
+                </span>
+              </div>
+
+              <p className="product-seo-description">
+                QllmDocs is an enterprise grade Document Management System
+                designed to simplify complex document workflows, improve
+                corporate compliance, and ensure data security. With automated
+                workflows, customizable access levels, and meticulous version
+                tracking, our platform reduces manual tracking operations and
+                helps businesses maintain perfect audit readiness.
+              </p>
+
+              <div className="product-tech-pills">
+                <span className="tech-pill">.NET Core</span>
+                <span className="tech-pill">Angular</span>
+                <span className="tech-pill">SQL Server</span>
+                <span className="tech-pill">Azure Blob</span>
+              </div>
+
+              <div className="product-specs-grid">
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-cpu-fill"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>AI Powered Search</h4>
+                    <p>
+                      Locate and organize critical business files instantly
+                      using intelligent, context aware AI search tools.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-shield-lock-fill"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>Role-Based Access Control</h4>
+                    <p>
+                      Secure confidential records and control data visibility
+                      with granular cryptographic permission layers.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-arrow-repeat"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>Workflow Automation</h4>
+                    <p>
+                      Automate document stages, smart tagging behaviors, and
+                      live internal file routing effortlessly.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-cloud-check-fill"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>Azure Cloud Security</h4>
+                    <p>
+                      Store your repository safely on encrypted cloud
+                      infrastructure with automated backup management.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-credit-card-2-front-fill"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>Subscription Gateway</h4>
+                    <p>
+                      Manage modular payment cycles connected directly with
+                      commercial digital paths and banking networks.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="spec-item">
+                  <div className="spec-icon">
+                    <i className="bi bi-lightning-charge-fill"></i>
+                  </div>
+                  <div className="spec-texts">
+                    <h4>Transparent Audit Trails</h4>
+                    <p>
+                      Eliminate manual logs and easily review complete
+                      historical file revision records anytime.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="product-action-cluster">
+                <a
+                  href="https://qllmdocs.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-launch-neon"
+                >
+                  Open Site in New Tab{" "}
+                  <i className="bi bi-box-arrow-up-right ms-2"></i>
+                </a>
+                <Link to="/contact" className="btn-demo-muted">
+                  Schedule Enterprise Demo
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -782,13 +950,15 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="process-h2">
-                Our 6-Phase Delivery Process, Structured, Transparent, Accountable
+                Our 6-Phase Delivery Process, Structured, Transparent,
+                Accountable
               </h2>
               <p>
-                A delivery framework built around one principle: you should always know what
-                we are building, when it will be done, and exactly what it costs, before a
-                single line of code is written. Our process eliminates scope ambiguity,
-                prevents budget surprises, and ensures every software project arrives
+                A delivery framework built around one principle: you should
+                always know what we are building, when it will be done, and
+                exactly what it costs, before a single line of code is written.
+                Our process eliminates scope ambiguity, prevents budget
+                surprises, and ensures every software project arrives
                 production-ready on the agreed date.
               </p>
             </div>
@@ -797,10 +967,11 @@ const Services = () => {
                 <div className="process-number">01</div>
                 <h3>Discovery &amp; Requirements Analysis</h3>
                 <p>
-                  We conduct a structured requirements workshop covering your business goals,
-                  user journeys, technical constraints, and integration requirements. The
-                  output is a formal scope document and fixed-price breakdown, approved by
-                  you before any development begins. No ambiguity, no scope creep.
+                  We conduct a structured requirements workshop covering your
+                  business goals, user journeys, technical constraints, and
+                  integration requirements. The output is a formal scope
+                  document and fixed-price breakdown, approved by you before any
+                  development begins. No ambiguity, no scope creep.
                 </p>
               </div>
 
@@ -808,10 +979,11 @@ const Services = () => {
                 <div className="process-number">02</div>
                 <h3>Solution Architecture &amp; Technical Planning</h3>
                 <p>
-                  Our architects design a clean, scalable system with technology selection
-                  rationale, sprint plan, database schema, API contract design, and security
-                  architecture document, all formally reviewed and approved before coding
-                  starts. The right architecture decision at this stage saves months of
+                  Our architects design a clean, scalable system with technology
+                  selection rationale, sprint plan, database schema, API
+                  contract design, and security architecture document, all
+                  formally reviewed and approved before coding starts. The right
+                  architecture decision at this stage saves months of
                   refactoring later.
                 </p>
               </div>
@@ -820,10 +992,11 @@ const Services = () => {
                 <div className="process-number">03</div>
                 <h3>Agile Development in 2-Week Sprints</h3>
                 <p>
-                  Clean, well-structured code delivered in two-week sprints with weekly live
-                  demos on shared staging environments. You control backlog priority throughout
-                 , adjusting feature order based on your business timeline while we maintain
-                  development velocity and code quality standards.
+                  Clean, well-structured code delivered in two-week sprints with
+                  weekly live demos on shared staging environments. You control
+                  backlog priority throughout , adjusting feature order based on
+                  your business timeline while we maintain development velocity
+                  and code quality standards.
                 </p>
               </div>
 
@@ -831,10 +1004,11 @@ const Services = () => {
                 <div className="process-number">04</div>
                 <h3>QA, Security Testing &amp; Performance Audit</h3>
                 <p>
-                  Automated regression tests, manual QA on real devices, OWASP Top 10 security
-                  validation, load testing against agreed performance SLAs, and penetration
-                  testing before every production release. Nothing ships until it passes our
-                  complete quality standard.
+                  Automated regression tests, manual QA on real devices, OWASP
+                  Top 10 security validation, load testing against agreed
+                  performance SLAs, and penetration testing before every
+                  production release. Nothing ships until it passes our complete
+                  quality standard.
                 </p>
               </div>
 
@@ -842,9 +1016,10 @@ const Services = () => {
                 <div className="process-number">05</div>
                 <h3>Deployment &amp; CI/CD Pipeline Setup</h3>
                 <p>
-                  Zero-downtime production deployment with full pipeline configuration,
-                  environment documentation, monitoring dashboard setup, and complete handover
-                  to your infrastructure team or direct management.
+                  Zero-downtime production deployment with full pipeline
+                  configuration, environment documentation, monitoring dashboard
+                  setup, and complete handover to your infrastructure team or
+                  direct management.
                 </p>
               </div>
 
@@ -852,10 +1027,11 @@ const Services = () => {
                 <div className="process-number">06</div>
                 <h3>30-Day Hyper-Care &amp; Long-Term Support</h3>
                 <p>
-                  Every QllmSoft project includes a formal 30-day post-launch hyper-care
-                  window, bug resolution, performance monitoring, security patch management,
-                  and complete knowledge transfer to your team. Long-term maintenance contracts
-                  are available for ongoing development and optimisation.
+                  Every QllmSoft project includes a formal 30-day post-launch
+                  hyper-care window, bug resolution, performance monitoring,
+                  security patch management, and complete knowledge transfer to
+                  your team. Long-term maintenance contracts are available for
+                  ongoing development and optimisation.
                 </p>
               </div>
             </div>
@@ -874,11 +1050,12 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="explore-heading">
-                Explore Our Specialised Software Development Services in Pakistan
+                Explore Our Specialised Software Development Services in
+                Pakistan
               </h2>
               <p>
-                Deep-dive into each service area, with detailed capability breakdowns,
-                industry focus, and real project examples.
+                Deep-dive into each service area, with detailed capability
+                breakdowns, industry focus, and real project examples.
               </p>
             </div>
             <nav
@@ -958,10 +1135,11 @@ const Services = () => {
                 Ready to Build Software That Drives Real Business Growth?
               </h2>
               <p>
-                Tell us what you need to build. QllmSoft will review your requirements, send
-                a detailed fixed-price proposal within 24 hours, and schedule a free discovery
-                call, no commitment required. Businesses in Pakistan trust QllmSoft to deliver. We look forward to earning that trust
-                from you.
+                Tell us what you need to build. QllmSoft will review your
+                requirements, send a detailed fixed-price proposal within 24
+                hours, and schedule a free discovery call, no commitment
+                required. Businesses in Pakistan trust QllmSoft to deliver. We
+                look forward to earning that trust from you.
               </p>
               <Link
                 to="/contact"
