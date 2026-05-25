@@ -1,4 +1,4 @@
-/* WhatsApp Button Styles - Always show tooltip */
+/* WhatsApp Button Styles */
 .whatsapp-button {
   position: fixed;
   bottom: 30px;
@@ -6,12 +6,12 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end; /* ✅ align to the right edge instead */
   gap: 10px;
   text-decoration: none;
+  pointer-events: none; /* ✅ container itself doesn't block touches */
 }
 
-/* Tooltip always visible */
 .whatsapp-tooltip {
   display: flex;
   align-items: center;
@@ -22,9 +22,8 @@
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
   font-size: 0.85rem;
   color: #2D3748;
-  opacity: 1; /* always visible */
-  transform: translateX(0);
   white-space: nowrap;
+  pointer-events: auto; /* ✅ re-enable on actual elements */
 }
 
 .tooltip-status {
@@ -40,7 +39,6 @@
   50% { opacity: 0.5; }
 }
 
-/* WhatsApp Icon with radiation effect */
 .whatsapp-icon {
   position: relative;
   display: flex;
@@ -53,7 +51,8 @@
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
   transition: all 0.3s ease;
   animation: pulse-ring 1.0s infinite;
-  margin-left: 50%;
+  /* ✅ REMOVED margin-left: 50% — this was the bug */
+  pointer-events: auto; /* ✅ re-enable on actual elements */
 }
 
 .whatsapp-button:hover .whatsapp-icon {
@@ -61,17 +60,10 @@
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
 }
 
-/* Radiation/Wave animation */
 @keyframes pulse-ring {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
+  0%   { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0.7); }
+  70%  { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0   rgba(37, 211, 102, 0); }
 }
 
 .notification-badge {
@@ -103,7 +95,6 @@
     right: 20px;
   }
 
-  /* Keep tooltip hidden on mobile for simplicity */
   .whatsapp-tooltip {
     display: none;
   }
