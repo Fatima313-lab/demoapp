@@ -302,19 +302,39 @@ const ServiceCardDetailed = ({ service, isOdd, id }) => {
 const faqItems = [
   {
     q: "What software development services does QllmSoft offer in Pakistan?",
-    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Pakistan, all backed by a 100% Upwork Job Success Score and 5-star Freelancer rating.",
+    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Pakistan, all backed by a 100% Upwork Job Success Score and 5 star Freelancer rating.",
   },
   {
     q: "How much does custom software development cost in Pakistan in 2026?",
-    a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi-department workflows, third-party integrations, and advanced reporting. Every project receives a detailed, fixed-price scope document and a formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
+    a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi department workflows, third party integrations, and advanced reporting. Every project receives a detailed, fixed price scope document and a formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
   },
   {
     q: "Does QllmSoft build mobile apps for Android and iOS in Pakistan?",
-    a: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS delivering native-quality user experiences on both platforms from a single, efficient codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing and UI/UX design through App Store submission and post-launch maintenance.",
+    a: "Yes. QllmSoft develops cross platform mobile apps for both Android and iOS delivering native quality user experiences on both platforms from a single, efficient codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing and UI/UX design through App Store submission and post launch maintenance.",
   },
   {
     q: "What industries does QllmSoft build software for?",
-    a: "QllmSoft has delivered production-grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR management, and real estate since 2015. We bring deep technical expertise combined with genuine business domain understanding, ensuring your software solves real operational problems, not just technical ones.",
+    a: "QllmSoft has delivered production grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR management, and real estate since 2015. We bring deep technical expertise combined with genuine business domain understanding, ensuring your software solves real operational problems, not just technical ones.",
+  },
+  {
+    q: "Can QllmSoft integrate proprietary Document Management Systems (DMS) like QllmDocs into existing corporate workflows?",
+    a: "Absolutely. We specialize in seamless API integrations. Whether you deploy our flagship QllmDocs platform or require a custom built Document Management System, our team ensures smooth data synchronization with your existing ERPs, CRM software, legacy servers, and secure Azure cloud storage environments without interrupting live daily operations.",
+  },
+  {
+    q: "What development methodology and tech stack does QllmSoft use for software projects?",
+    a: "We follow the Agile Scrum methodology, offering transparent weekly sprint demos and iterative feedback loops. Our modern corporate tech stack includes .NET Core, Angular, React, Node.js, SQL Server, and robust cloud hosting models (AWS & Azure). This ensures every enterprise system or mobile application we deliver is scalable, hyper secure, and future proof.",
+  },
+  {
+    q: "Who owns the source code and intellectual property rights after project completion?",
+    a: "You do. Upon successful project completion and deployment, 100% ownership of the source code, databases, design assets, and intellectual property is legally transferred to your company. QllmSoft maintains strict corporate confidentiality via signed Non Disclosure Agreements (NDAs) to protect your unique business ideas.",
+  },
+  {
+    q: "Does QllmSoft provide post launch software maintenance and technical support?",
+    a: "Yes, we provide structured post deployment technical support. Every custom software project includes a complimentary warranty period for bug fixing and performance monitoring. Afterward, we offer flexible Monthly Support Contracts (SLAs) covering routine cloud data updates, security patches, feature updates, and server scaling options.",
+  },
+  {
+    q: "How do we get started with QllmSoft for a custom software project?",
+    a: "Getting started is simple. You can schedule a free initial consultation via our Contact Page or open a direct discovery chat. Our business analysts will review your operational requirements, structure a comprehensive project scope document, and deliver a transparent cost quotation alongside a defined development timeline within 24 to 48 hours."
   },
 ];
 
