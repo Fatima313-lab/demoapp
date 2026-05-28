@@ -535,7 +535,7 @@ const TechnologiesSection = () => (
 const TrustBand = () => (
   <section
     aria-label="QllmSoft verified performance metrics"
-    style={{ background: "#1A365D", padding: "28px 0" }}
+    style={{ background: "#021a4a", padding: "28px 0" }}
   >
     <div
       className="container"
@@ -568,7 +568,7 @@ const TrustBand = () => (
               display: "block",
               fontSize: "2rem",
               fontWeight: "900",
-              color: "#edb702",
+              color: "#fec304",
               lineHeight: "1",
             }}
           >
@@ -628,8 +628,7 @@ const Services = () => {
       <Helmet>
         {/* Title, 60 chars, solution-first + brand */}
         <title>
-          Top Software Development Services in Pakistan | Custom Digital
-          Solutions | QllmSoft
+         Custom Software Development Services & Solutions | QllmSoft
         </title>
 
         {/* Description, 158 chars */}
@@ -641,8 +640,8 @@ const Services = () => {
         {/* Keywords, solution-first, service + stack mix */}
         <meta
           name="keywords"
-          content="software development services Pakistan, custom software solutions Pakistan, IT services Pakistan, enterprise software solutions Pakistan, web application development Pakistan, mobile app development Pakistan, business software development Pakistan, software outsourcing Pakistan, digital solutions Pakistan, .NET development Pakistan, React development Pakistan, Flutter app development Pakistan, healthcare software Pakistan, education software Pakistan"
-        />
+    content="custom software development services, enterprise software solutions, web application development, custom mobile app engineering, software development company Pakistan, .NET web api, React application scalability, software outsourcing company"
+  />
 
         <meta name="author" content="QllmSoft" />
         <meta
@@ -657,12 +656,12 @@ const Services = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft"
+          content="Custom Software Development Services & Enterprise Solutions"
         />
         <meta
           property="og:description"
-          content="Custom software development services in Pakistan, enterprise web apps, mobile apps, business automation, and AI solutions. Free quote in 24 hours."
-        />
+          content="QllmSoft builds secure enterprise web platforms, mobile apps, and high performance digital automation tools with fixed pricing and documented scope."
+  />
         <meta
           property="og:image"
           content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
@@ -679,8 +678,8 @@ const Services = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Software Development Services in Pakistan | QllmSoft"
-        />
+        content="Enterprise Software Engineering & Digital Solutions | QllmSoft"
+  />
         <meta
           name="twitter:description"
           content="Custom enterprise software, mobile apps, business automation, and AI solutions from Pakistan's trusted software development company."
