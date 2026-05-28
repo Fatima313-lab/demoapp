@@ -247,8 +247,8 @@ const schemaFAQ = {
   ],
 };
 
-/* ─── Service Card (unchanged design) ─────────────────────────── */
-const ServiceCardDetailed = ({ service, isOdd, id }) => {
+/* ─── Service Card (unchanged design) ─────────────────────────── 
+const ServiceCard = ({ service, isOdd, id }) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
   return (
     <div
@@ -297,7 +297,7 @@ const ServiceCardDetailed = ({ service, isOdd, id }) => {
       </div>
     </div>
   );
-};
+};*/
 
 /* ─── FAQ Accordion ─────────────────────────────────────────────── */
 const faqItems = [
@@ -466,38 +466,37 @@ const TechnologiesSection = () => (
   >
     <div className="container">
       <div className="section-title reveal">
-        <h2 id="tech-h2">Technologies Powering Our Software Solutions</h2>
-        <p>
-          We select the best technology for each project based on your
-          performance requirements, scalability roadmap, and long-term
-          maintainability, not convenience or habit. Every tool is
-          production-proven, actively maintained, and enterprise tested.
-          Security implementations follow{" "}
+        <h2 id="tech-h2">Enterprise Technology Stack Powering Our Software Solutions</h2>
+      <p>
+          We select the best enterprise grade development framework for each project based on your 
+          specific performance requirements, microservices scalability roadmap, and long term 
+          maintainability. Every tool is production-proven, actively maintained, and corporate tested. 
+          Our defensive engineering practices strictly implement the{" "}
           <a
             href="https://owasp.org/www-project-top-ten/"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            aria-label="OWASP Top 10 security standard, external reference"
+            aria-label="OWASP Top 10 web application security standard, external reference"
           >
-            OWASP Top 10
+            OWASP Top 10 Security Compliance Standards
           </a>{" "}
-          standards across every project we deliver.
+          across every software ecosystem we engineer.
         </p>
       </div>
       <div className="tech-grid reveal">
         <div className="tech-category">
-          <h3>Web &; Frontend</h3>
+          <h3>Web & Frontend</h3>
           <ul>
             <li>React JS (Hooks, Context, Next.js)</li>
             <li>Angular (Standalone Components)</li>
-            <li>Blazor WebAssembly &amp; Server</li>
+            <li>Blazor WebAssembly & Server</li>
             <li>MudBlazor / Razden</li>
             <li>Javasript / TypeScript</li>
             <li>Material UI / Tailwind CSS</li>
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Backend &; APIs</h3>
+          <h3>Backend & APIs</h3>
           <ul>
             <li>ASP.NET Core (Web API, MVC)</li>
             <li>C# / Entity Framework Core</li>
@@ -510,19 +509,19 @@ const TechnologiesSection = () => (
         <div className="tech-category">
           <h3>Mobile Development</h3>
           <ul>
-            <li>Flutter (Android &; iOS)</li>
-            <li>React Native (Cross-Platform)</li>
+            <li>Flutter (Android & iOS)</li>
+            <li>React Native (Cross Platform)</li>
             <li>Kotlin (Native Android)</li>
             <li>Swift (Native iOS)</li>
-            <li>.NET MAUI (Cross-Platform)</li>
+            <li>.NET MAUI (Cross Platform)</li>
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Cloud, Data &; DevOps</h3>
+          <h3>Cloud, Data & DevOps</h3>
           <ul>
             <li>SQL Server / PostgreSQL</li>
             <li>Microsoft Azure &; AWS</li>
-            <li>Docker &; Kubernetes</li>
+            <li>Docker &  Kubernetes</li>
             <li>CI/CD (GitHub Actions, Azure DevOps)</li>
             <li>Redis Cache / Application Insights</li>
           </ul>
