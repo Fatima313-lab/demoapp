@@ -709,6 +709,7 @@ const Services = () => {
       </Helmet>
 
       <main className="services-page" id="main-content" role="main">
+        
         {/* ── HERO ── */}
         <section className="services-hero reveal" aria-labelledby="svc-hero-h1">
           <div className="container">
@@ -717,8 +718,9 @@ const Services = () => {
               Custom Software Development Services, Built Around Your Business
             </h1>
             <p>
-              QllmSoft engineers production-ready digital solutions for
-              businesses that need more than a generic tool. We build{" "}
+             QllmSoft engineers production ready digital solutions for global enterprises and 
+            fast growing businesses that demand more than generic tools. As a trusted custom 
+            software engineering company, we design high performance{" "}
               <Link to="/web-application-development-services">
                 enterprise web applications
               </Link>
