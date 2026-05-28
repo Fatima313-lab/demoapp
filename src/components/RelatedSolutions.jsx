@@ -13,9 +13,8 @@ const RelatedSolutions = ({ category }) => {
       <div className="container">
 
         <div className="section-title text-center">
-          <p className="section-eyebrow">Industry Specifics</p>
           <h2 className="text-white">
-            Explore Our <span>Dedicated Expertise</span>
+          Explore Our Specialised Software Development Services in Pakistan
           </h2>
         </div>
 

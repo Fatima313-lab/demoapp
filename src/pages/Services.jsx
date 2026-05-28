@@ -52,6 +52,7 @@ import "./Services.css";
 import "animate.css";
 import ServiceCard from "../components/ServiceCard";
 import QllmDocs from "../assets/QllmDocsMainPage2.webp";
+import RelatedSolutions from "../components/RelatedSolutions";  
 
 /* ─── JSON-LD: WebPage + BreadcrumbList ────────────────────────── */
 const schemaWebPage = {
@@ -470,7 +471,7 @@ const TechnologiesSection = () => (
           We select the best technology for each project based on your
           performance requirements, scalability roadmap, and long-term
           maintainability, not convenience or habit. Every tool is
-          production-proven, actively maintained, and enterprise-tested.
+          production-proven, actively maintained, and enterprise tested.
           Security implementations follow{" "}
           <a
             href="https://owasp.org/www-project-top-ten/"
@@ -485,7 +486,7 @@ const TechnologiesSection = () => (
       </div>
       <div className="tech-grid reveal">
         <div className="tech-category">
-          <h3>Web &amp; Frontend</h3>
+          <h3>Web &; Frontend</h3>
           <ul>
             <li>React JS (Hooks, Context, Next.js)</li>
             <li>Angular (Standalone Components)</li>
@@ -496,7 +497,7 @@ const TechnologiesSection = () => (
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Backend &amp; APIs</h3>
+          <h3>Backend &; APIs</h3>
           <ul>
             <li>ASP.NET Core (Web API, MVC)</li>
             <li>C# / Entity Framework Core</li>
@@ -509,7 +510,7 @@ const TechnologiesSection = () => (
         <div className="tech-category">
           <h3>Mobile Development</h3>
           <ul>
-            <li>Flutter (Android &amp; iOS)</li>
+            <li>Flutter (Android &; iOS)</li>
             <li>React Native (Cross-Platform)</li>
             <li>Kotlin (Native Android)</li>
             <li>Swift (Native iOS)</li>
@@ -517,11 +518,11 @@ const TechnologiesSection = () => (
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Cloud, Data &amp; DevOps</h3>
+          <h3>Cloud, Data &; DevOps</h3>
           <ul>
             <li>SQL Server / PostgreSQL</li>
-            <li>Microsoft Azure &amp; AWS</li>
-            <li>Docker &amp; Kubernetes</li>
+            <li>Microsoft Azure &; AWS</li>
+            <li>Docker &; Kubernetes</li>
             <li>CI/CD (GitHub Actions, Azure DevOps)</li>
             <li>Redis Cache / Application Insights</li>
           </ul>
@@ -797,6 +798,10 @@ const Services = () => {
           </div>
         </section>
 
+
+        {/* QllmDocs*/}
+
+
         <div className="product-showcase-divider">
           <span className="divider-line"></span>
           <span className="divider-tag">Our Flagship Product</span>
@@ -959,6 +964,19 @@ const Services = () => {
           </div>
         </section>
 
+      
+
+
+
+
+      
+
+
+
+
+
+
+
         {/* ── TECHNOLOGIES ── */}
         <TechnologiesSection />
 
@@ -970,7 +988,7 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="process-h2">
-                Our 6-Phase Delivery Process, Structured, Transparent,
+                Our 6 Phase Delivery Process, Structured, Transparent,
                 Accountable
               </h2>
               <p>
@@ -1045,7 +1063,7 @@ const Services = () => {
 
               <div className="process-step reveal reveal-delay-3">
                 <div className="process-number">06</div>
-                <h3>30-Day Hyper-Care &amp; Long-Term Support</h3>
+                <h3>30 Day Hyper Care & Long Term Support</h3>
                 <p>
                   Every QllmSoft project includes a formal 30-day post-launch
                   hyper-care window, bug resolution, performance monitoring,
@@ -1061,7 +1079,15 @@ const Services = () => {
         {/* ── FAQ ── */}
         <FaqSection />
 
-        {/* ── INTERNAL LINKS ── */}
+
+
+      {/*services carousel*/}
+     
+             <RelatedSolutions category="servicePage" />
+
+
+
+        {/* ── INTERNAL LINKS ── 
         <section
           className="section"
           style={{ background: "#F7FAFC", padding: "40px 0" }}
@@ -1145,7 +1171,8 @@ const Services = () => {
               </div>
             </nav>
           </div>
-        </section>
+        </section>*/}
+        
 
         {/* ── CTA ── */}
         <section className="section cta-section" aria-labelledby="cta-h2">

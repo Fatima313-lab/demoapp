@@ -24,7 +24,6 @@ import "animate.css";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
-
 import processsectionimg from "../assets/website-services.webp";
 import islamabadimg from "../assets/islamabad.webp";
 import karachiimg from "../assets/karachi.webp";
