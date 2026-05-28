@@ -52,7 +52,7 @@ import "./Services.css";
 import "animate.css";
 import ServiceCard from "../components/ServiceCard";
 import QllmDocs from "../assets/QllmDocsMainPage2.webp";
-import RelatedSolutions from "../components/RelatedSolutions";  
+import RelatedSolutions from "../components/RelatedSolutions";
 
 /* ─── JSON-LD: WebPage + BreadcrumbList ────────────────────────── */
 const schemaWebPage = {
@@ -335,7 +335,7 @@ const faqItems = [
   },
   {
     q: "How do we get started with QllmSoft for a custom software project?",
-    a: "Getting started is simple. You can schedule a free initial consultation via our Contact Page or open a direct discovery chat. Our business analysts will review your operational requirements, structure a comprehensive project scope document, and deliver a transparent cost quotation alongside a defined development timeline within 24 to 48 hours."
+    a: "Getting started is simple. You can schedule a free initial consultation via our Contact Page or open a direct discovery chat. Our business analysts will review your operational requirements, structure a comprehensive project scope document, and deliver a transparent cost quotation alongside a defined development timeline within 24 to 48 hours.",
   },
 ];
 
@@ -798,9 +798,7 @@ const Services = () => {
           </div>
         </section>
 
-
         {/* QllmDocs*/}
-
 
         <div className="product-showcase-divider">
           <span className="divider-line"></span>
@@ -964,128 +962,156 @@ const Services = () => {
           </div>
         </section>
 
-      
-
-
-
-
-      
-
-
-
-
-
-
-
         {/* ── TECHNOLOGIES ── */}
         <TechnologiesSection />
 
+
+
+
         {/* ── PROCESS ── */}
+
         <section
           className="section process-section"
-          aria-labelledby="process-h2"
+          aria-labelledby="process-main-heading"
         >
           <div className="container">
             <div className="section-title reveal">
-              <h2 id="process-h2">
-                Our 6 Phase Delivery Process, Structured, Transparent,
+              <h2 id="process-main-heading">
+                Our 6 Phase Software Delivery Process: Structured, Transparent &
                 Accountable
               </h2>
               <p>
-                A delivery framework built around one principle: you should
-                always know what we are building, when it will be done, and
-                exactly what it costs, before a single line of code is written.
-                Our process eliminates scope ambiguity, prevents budget
-                surprises, and ensures every software project arrives
-                production-ready on the agreed date.
+                A proven software development life cycle framework built around
+                one core principle: you should always know what we are building,
+                when it will be delivered, and exactly what it costs before a
+                single line of code is written. Our agile process eliminates
+                scope ambiguity, prevents budget surprises, and ensures every
+                custom software project arrives production ready on the agreed
+                date.
               </p>
             </div>
-            <div className="process-grid">
-              <div className="process-step reveal reveal-delay-1">
-                <div className="process-number">01</div>
-                <h3>Discovery &amp; Requirements Analysis</h3>
+            <div
+              className="process-grid"
+              role="list"
+              aria-label="Software development process steps"
+            >
+             
+              <div
+                className="process-step reveal reveal-delay-1"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  01
+                </div>
+                <h3>Discovery & Requirements Analysis</h3>
                 <p>
-                  We conduct a structured requirements workshop covering your
-                  business goals, user journeys, technical constraints, and
-                  integration requirements. The output is a formal scope
-                  document and fixed-price breakdown, approved by you before any
-                  development begins. No ambiguity, no scope creep.
+                  We conduct structured business requirements discovery
+                  workshops covering your product goals, user journeys,
+                  technical constraints, and third party API integration maps.
+                  The direct output is a formal software scope document and a
+                  fixed price cost breakdown, eliminating scope creep before
+                  development begins.
                 </p>
               </div>
 
-              <div className="process-step reveal reveal-delay-2">
-                <div className="process-number">02</div>
-                <h3>Solution Architecture &amp; Technical Planning</h3>
+              <div
+                className="process-step reveal reveal-delay-2"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  02
+                </div>
+                <h3>Solution Architecture & Technical Planning</h3>
                 <p>
-                  Our architects design a clean, scalable system with technology
-                  selection rationale, sprint plan, database schema, API
-                  contract design, and security architecture document, all
-                  formally reviewed and approved before coding starts. The right
-                  architecture decision at this stage saves months of
-                  refactoring later.
+                  Our senior systems architects design a scalable enterprise
+                  software architecture, complete with technology selection
+                  rationale, database schemas, cryptographic security models,
+                  and formal API contract specifications reviewed rigorously
+                  before coding starts to eliminate future engineering
+                  refactoring risks.
                 </p>
               </div>
 
-              <div className="process-step reveal reveal-delay-3">
-                <div className="process-number">03</div>
-                <h3>Agile Development in 2-Week Sprints</h3>
+              <div
+                className="process-step reveal reveal-delay-3"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  03
+                </div>
+                <h3>Agile Development & 2 Week Sprints</h3>
                 <p>
-                  Clean, well-structured code delivered in two-week sprints with
-                  weekly live demos on shared staging environments. You control
-                  backlog priority throughout , adjusting feature order based on
-                  your business timeline while we maintain development velocity
-                  and code quality standards.
+                  We engineer clean, well structured code delivered in strict
+                  two week agile sprints with weekly live feature demos hosted
+                  on secure staging environments. You retain complete product
+                  backlog prioritization control, balancing features against
+                  business timelines while we maintain code quality milestones.
                 </p>
               </div>
 
-              <div className="process-step reveal reveal-delay-1">
-                <div className="process-number">04</div>
-                <h3>QA, Security Testing &amp; Performance Audit</h3>
+              <div
+                className="process-step reveal reveal-delay-1"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  04
+                </div>
+                <h3>QA Engineering, Security Testing & Performance Audits</h3>
                 <p>
-                  Automated regression tests, manual QA on real devices, OWASP
-                  Top 10 security validation, load testing against agreed
-                  performance SLAs, and penetration testing before every
-                  production release. Nothing ships until it passes our complete
-                  quality standard.
+                  Our quality assurance process executes automated regression
+                  testing, manual cross device validation, OWASP Top 10 security
+                  compliance reviews, and heavy load testing against strict
+                  performance SLAs. Nothing builds into the main branch until it
+                  passes our enterprise deployment criteria.
                 </p>
               </div>
 
-              <div className="process-step reveal reveal-delay-2">
-                <div className="process-number">05</div>
-                <h3>Deployment &amp; CI/CD Pipeline Setup</h3>
+              <div
+                className="process-step reveal reveal-delay-2"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  05
+                </div>
+                <h3>CI/CD Pipeline Setup & Production Deployment</h3>
                 <p>
-                  Zero-downtime production deployment with full pipeline
-                  configuration, environment documentation, monitoring dashboard
-                  setup, and complete handover to your infrastructure team or
-                  direct management.
+                  We orchestrate zero downtime production launch environments
+                  using robust Continuous Integration and Continuous Deployment
+                  (CI/CD) pipelines. This phase encompasses exhaustive
+                  environment logging setup, live cloud monitoring dashboard
+                  configurations, and a seamless handover to your infrastructure
+                  team.
                 </p>
               </div>
 
-              <div className="process-step reveal reveal-delay-3">
-                <div className="process-number">06</div>
-                <h3>30 Day Hyper Care & Long Term Support</h3>
+              <div
+                className="process-step reveal reveal-delay-3"
+                role="listitem"
+              >
+                <div className="process-number" aria-hidden="true">
+                  06
+                </div>
+                <h3>30 Day Hyper Care Window & Long Term Support</h3>
                 <p>
-                  Every QllmSoft project includes a formal 30-day post-launch
-                  hyper-care window, bug resolution, performance monitoring,
-                  security patch management, and complete knowledge transfer to
-                  your team. Long-term maintenance contracts are available for
-                  ongoing development and optimisation.
+                  Every custom app deployment includes a formal 30 day post
+                  launch hyper care maintenance window covering immediate bug
+                  resolution, server optimization, and codebase security patch
+                  updates. Long term software maintenance SLA contracts are
+                  available for scalable feature upgrades.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
+
         {/* ── FAQ ── */}
         <FaqSection />
 
 
+        {/*services carousel*/}
 
-      {/*services carousel*/}
-     
-             <RelatedSolutions category="servicePage" />
-
-
+        <RelatedSolutions category="servicePage" />
 
         {/* ── INTERNAL LINKS ── 
         <section
@@ -1172,7 +1198,6 @@ const Services = () => {
             </nav>
           </div>
         </section>*/}
-        
 
         {/* ── CTA ── */}
         <section className="section cta-section" aria-labelledby="cta-h2">

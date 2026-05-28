@@ -160,11 +160,11 @@ export const servicesData = [
     description: "We develop scalable custom web applications using modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
     image: CustomWebImg,
     features: [
-      "• Modern Front & Backend Frameworks",
-      "• SaaS platform development",
-      "• Enterprise web portals",
-      "• Cloud-ready architectures",
-      "• High-performance scalable systems"
+      "Modern Front & Backend Frameworks",
+      "SaaS platform development",
+      "Enterprise web portals",
+      "Cloud ready architectures",
+      "High performance scalable systems"
     ],
     link: "/web-application-development-services"
   },
@@ -174,10 +174,10 @@ export const servicesData = [
     description: "We create modern, responsive, and user-focused websites with premium UI/UX design principles. Our solutions are optimized for performance, mobile responsiveness, user engagement, and seamless digital experiences across all devices.",
     image: webDesign,
     features: [
-      "• Modern UI/UX design systems",
-      "• Fully responsive web layouts",
-      "• Mobile-first user experience",
-      "• Interactive & conversion-focused interfaces"
+      "Modern UI/UX design systems",
+      "Fully responsive web layouts",
+      "Mobile first user experience",
+      "Interactive & conversion-focused interfaces"
     ],
     link: "/responsive-web-design-services"
   },
