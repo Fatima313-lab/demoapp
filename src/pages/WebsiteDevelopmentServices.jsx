@@ -361,16 +361,15 @@ const TrustBand = () => (
       <Helmet>
         {/* Primary */}
         <title>
-          High Performance Web Development Services | Global Delivery Center |
-          QllmSoft
+          High Performance Web Development Services  | QllmSoft
         </title>
         <meta
           name="description"
-          content="Expert custom website development services in Pakistan. QllmSoft builds high-performance, SEO-optimized websites, eCommerce platforms, SaaS products and web apps for startups and enterprises using .NET, React and Angular."
-        />
+         content="QllmSoft's Global Delivery Center engineers secure, enterprise grade web applications, SaaS platforms & custom solutions using .NET, React, and Angular."
+  />
         <meta
           name="keywords"
-          content="website development services Pakistan, web development company Pakistan, custom website development Pakistan, eCommerce website development Pakistan, ASP.NET Core web development, React web development Pakistan, SEO-optimized website Pakistan, web application development Pakistan, website development Lahore Karachi Islamabad"
+          content="high performance web development, custom web engineering solutions, website development services Pakistan, web development company Pakistan, custom website development Pakistan, eCommerce website development Pakistan, ASP.NET Core web development, React web development Pakistan, SEO-optimized website Pakistan, web application development Pakistan, website development Lahore Karachi Islamabad"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -385,36 +384,36 @@ const TrustBand = () => (
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Website Development Services in Pakistan | QllmSoft"
-        />
+       content="High Performance Web Development & Engineering Services"
+  />
         <meta
           property="og:description"
-          content="Expert custom website development in Pakistan. High-performance, SEO-optimized websites, eCommerce platforms and web apps built with .NET, React, and Angular."
-        />
+         content="Scalable web apps, premium SaaS architectures, and custom enterprise digital platforms engineered for speed and global delivery."
+  />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Website Development Services Pakistan"
-        />
+         content="QllmSoft High Performance Web Engineering Platform"
+  />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Website Development Services in Pakistan | QllmSoft"
-        />
+        content="Custom Web Engineering & Enterprise Solutions | QllmSoft"
+  />
         <meta
           name="twitter:description"
-          content="Expert custom website development in Pakistan — SEO-optimized, high-performance sites built with .NET, React, and Angular."
-        />
+         content="Deploy secure web platforms, fast Core Web Vitals apps, and enterprise systems globally with QllmSoft's dedicated engineering teams."
+  />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft Website Development Services Pakistan"
-        />
+         content="QllmSoft Custom Web Architecture"
+  />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
