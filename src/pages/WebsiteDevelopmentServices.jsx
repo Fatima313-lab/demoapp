@@ -263,6 +263,96 @@ const WebsiteDevelopmentServices = () => {
     threshold: 0.1,
   });
 
+
+
+const ENGINEERING_CAPABILITIES = [
+  {
+    icon: "bi bi-cpu-fill", 
+    title: "Zero Code Bloat",
+    desc: "Clean, enterprise grade architectures featuring native performance with zero plugin dependency.",
+  },
+  {
+    icon: "bi bi-lightning-charge-fill", 
+    title: "Next Gen Web Vitals",
+    desc: "Sub 1.5 second fully interactive rendering optimized globally across low bandwidth connections.",
+  },
+  {
+    icon: "bi bi-search-heart-fill", 
+    title: "Semantic Engineering",
+    desc: "Advanced structural data execution engineered to secure top global SERP rankings from day one.",
+  },
+  {
+    icon: "bi bi-shield-lock-fill", 
+    title: "Military Grade Security",
+    desc: "Full OWASP Top 10 mitigation, end-to-end encryption, and multi tier secure API integrations.",
+  },
+];
+
+
+
+
+
+/* ─── Trust Band ────────────────────────────────────────────────── */
+const TrustBand = () => (
+  <section
+    aria-label="QllmSoft verified performance metrics"
+    style={{ background: "#021a4a", padding: "28px 0" }}
+  >
+    <div
+      className="container"
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: "0",
+      }}
+    >
+      {[
+        { num: "10+", lbl: "Years Experience" },
+        { num: "50+", lbl: "Projects Delivered" },
+        { num: "50+", lbl: "Global Clients" },
+        { num: "100%", lbl: "Upwork Job Success" },
+        { num: "5 ★", lbl: "47+ Verified Reviews" },
+      ].map((s, i) => (
+        <div
+          key={i}
+          style={{
+            flex: "1",
+            minWidth: "140px",
+            textAlign: "center",
+            padding: "12px 16px",
+            borderRight: i < 4 ? "1px solid rgba(255,255,255,.12)" : "none",
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              fontSize: "2rem",
+              fontWeight: "900",
+              color: "#fec304",
+              lineHeight: "1",
+            }}
+          >
+            {s.num}
+          </span>
+          <span
+            style={{
+              fontSize: ".75rem",
+              color: "rgba(255,255,255,.65)",
+              textTransform: "uppercase",
+              letterSpacing: "1.2px",
+              marginTop: "4px",
+              display: "block",
+            }}
+          >
+            {s.lbl}
+          </span>
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
   return (
     <>
       {/* ══════════════════════════════════════════════════
@@ -337,116 +427,73 @@ const WebsiteDevelopmentServices = () => {
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
-      <main id="main-content" className="wds-page" role="main">
-        {/* ══════════════════════════════════════════════════
-            HERO — single H1
-        ══════════════════════════════════════════════════ */}
-        <header className="wds-hero">
-          <div className="container">
-            <p className="csd-hero__eyebrow">
-              #1 Web Development Company in Pakistan
-            </p>
+     
+          
 
-            {/* ✅ SINGLE H1 */}
-            <h1 className="wds-hero__title">
-              Expert Website Development Services in <em>Pakistan</em>
-            </h1>
 
-            <p className="wds-hero__sub">
-              Turn your business into a 24/7 Lead Machine. We engineer SEO first
-              websites that outrank competitors and load instantly on slow
-              connections.
-            </p>
+    <main id="main-content" className="wds-page" role="main">
+      <header className="wds-hero services-hero">
+     
+        <div className="services-hero-shape-1" aria-hidden="true"></div>
+        <div className="services-hero-shape-2" aria-hidden="true"></div>
 
-            <div className="csd-hero__buttons">
-              <Link
-                to="/contact"
-                className="btn btn-primary"
-                aria-label="Get a free website development consultation from QllmSoft Pakistan"
-              >
-                Get Free Consultation
-              </Link>
-              <Link
-                to="/projects"
-                className="btn btn-outline-light"
-                aria-label="View QllmSoft website development case studies and portfolio"
-              >
-                View Case Studies
-              </Link>
-            </div>
+        <div className="container">
+         
+          <p className="csd-hero__eyebrow">
+            Global Delivery Center & Web Engineering Hub
+          </p>
 
-            {/* Trust badges */}
-            <div className="wds-hero__trust" aria-label="Trust indicators">
-              <span>5-Star Upwork Rating</span>
-              <span className="wds-trust-sep" aria-hidden="true">
-                |
-              </span>
-              <span>10+ Years Experience</span>
-              <span className="wds-trust-sep" aria-hidden="true">
-                |
-              </span>
-              <span>100% Job Success</span>
-            </div>
+        
+          <h1 className="wds-hero__title" id="svc-hero-h1">
+            High Performance Web Development Services for <em>Scale</em>
+          </h1>
 
-            {/* Feature pills */}
-            <div
-              className="wds-hero__pills"
-              aria-label="Core engineering capabilities"
+          <p className="wds-hero__sub">
+            QllmSoft engineers ultra fast, secure, and production ready digital architectures. 
+            We transition corporate objectives into robust custom web applications that dominate competitors 
+            and load instantly worldwide.
+          </p>
+
+
+          <div className="csd-hero__buttons">
+            <Link
+              to="/contact"
+              className="btn btn-primary"
+              aria-label="Get a free high-performance web development consultation from QllmSoft"
             >
-              {[
-                {
-                  icon: "⚙️",
-                  title: "Zero Code Bloat",
-                  desc: "Clean, semantic HTML5 architecture — no unnecessary plugins",
-                },
-                {
-                  icon: "⚡",
-                  title: "Core Web Vitals Ready",
-                  desc: "Sub 2 second load times on Pakistan's 4G networks",
-                },
-                {
-                  icon: "🔍",
-                  title: "Architectural SEO",
-                  desc: "Built to rank on Google Pakistan from day one",
-                },
-                {
-                  icon: "🛡️",
-                  title: "Enterprise Security",
-                  desc: "OWASP compliant, SSL secured, API protected",
-                },
-              ].map((p) => (
-                <div key={p.title} className="wds-hero__pill">
-                  <span className="wds-pill-icon" aria-hidden="true">
-                    {p.icon}
-                  </span>
-                  <div>
-                    <strong>{p.title}</strong>
-                    <p>{p.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Stats */}
-            <div
-              className="wds-hero__stats"
-              aria-label="QllmSoft key statistics"
+              Get Free Consultation
+            </Link>
+            <Link
+              to="/projects"
+              className="btn btn-outline-light"
+              aria-label="Explore QllmSoft enterprise web development case studies and engineering portfolio"
             >
-              {[
-                { num: "10+", label: "Years of Experience" },
-                { num: "100%", label: "Upwork Job Success" },
-                { num: "120+", label: "Websites Delivered" },
-                { num: "5★", label: "Average Client Rating" },
-                { num: "30-Day", label: "Post Launch Support" },
-              ].map((s) => (
-                <div key={s.label} className="wds-hero__stat">
-                  <span className="wds-hero__stat-num">{s.num}</span>
-                  <span className="wds-hero__stat-label">{s.label}</span>
-                </div>
-              ))}
-            </div>
+              View Case Studies
+            </Link>
           </div>
-        </header>
+          <div
+            className="wds-hero__pills"
+            aria-label="Core engineering capabilities and tech metrics"
+          >
+           {ENGINEERING_CAPABILITIES.map((pill) => (
+  <div key={pill.title} className="wds-hero__pill">
+    <span className="wds-pill-icon" aria-hidden="true">
+      <i className={pill.icon}></i>
+    </span>
+    <div>
+      <strong>{pill.title}</strong>
+      <p>{pill.desc}</p>
+    </div>
+  </div>
+))}
+          </div>
+        </div>
+      </header>
+      
+        {/* ── TRUST BAND ── */}
+        <TrustBand />
+   
+  
 
         {/* ══════════════════════════════════════════════════
             INTRO / EXPERTISE  —  H2
