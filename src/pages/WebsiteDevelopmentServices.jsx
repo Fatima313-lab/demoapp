@@ -346,18 +346,50 @@ const WebsiteDevelopmentServices = () => {
     </section>
   );
 
-
-
   /*intro*/
 
   const SPECIALIZATIONS = [
-  "Enterprise Web Applications",
-  "Fintech & Secure Payment Portals",
-  "High Scale B2B Lead Engines",
-  "Headless & Custom CMS Architecture",
-  "Real time Dashboards & Analytics",
-  "Global & Local eCommerce Ecosystems",
-];
+    "Enterprise Web Applications",
+    "Fintech & Secure Payment Portals",
+    "High Scale B2B Lead Engines",
+    "Headless & Custom CMS Architecture",
+    "Real time Dashboards & Analytics",
+    "Global & Local eCommerce Ecosystems",
+  ];
+
+  /*webservicelegacy*/
+  const LEGACY_CREDENTIALS = [
+    {
+      icon: "bi-bank",
+      title: "Institutional Depth",
+      label: "Since 2015",
+      desc: "A collective expertise spanning over a decade in architecting mission critical systems and enterprise level software solutions for clients from Karachi to California.",
+    },
+    {
+      icon: "bi-arrow-repeat",
+      title: "End-to-End Engineering",
+      label: "Full Lifecycle",
+      desc: "From legacy system modernization to modern cloud native architectures, we manage the entire SDLC for Pakistani and international enterprises.",
+    },
+    {
+      icon: "bi-globe-americas",
+      title: "Established Engineering Hub",
+      label: "International HQ",
+      desc: "A full scale software house operating with institutional accountability, providing a permanent and reliable global delivery presence.",
+    },
+    {
+      icon: "bi-patch-check-fill",
+      title: "Verified Marketplace Authority",
+      label: "Top Rated Plus",
+      desc: "Top Rated Plus status and a 100% Job Success Score on global platforms reflecting years of consistent, on time, and on budget delivery.",
+    },
+    {
+      icon: "bi-shield-lock-fill",
+      title: "30 Day HyperCare Support",
+      label: "24/7 Emergency",
+      desc: "Every project ships with an intensive 30 day post launch deployment support phase and 24/7 emergency response SLA for long term reliability.",
+    },
+  ];
 
   return (
     <>
@@ -489,143 +521,124 @@ const WebsiteDevelopmentServices = () => {
         {/* ── TRUST BAND ── */}
         <TrustBand />
 
+        {/*intro*/}
+        <section
+          className="section wds-intro"
+          ref={expertiseRef}
+          aria-labelledby="expertise-heading"
+        >
+          <div className="container">
+            <div className="section-title">
+              <h2 id="expertise-heading" className="wds-intro__title-h2">
+                Custom Web Engineering & Digital Solutions
+              </h2>
+            </div>
 
-
-
-          {/*intro*/}
-       <section
-      className="section wds-intro"
-      ref={expertiseRef}
-      aria-labelledby="expertise-heading"
-    >
-      <div className="container">
-        <div className="section-title">
-          <h2 id="expertise-heading" className="wds-intro__title-h2">
-            Custom Web Engineering & Digital Solutions
-          </h2>
-        </div>
-
-        <div className="wds-intro__layout">
-          <div
-            className={`wds-intro__text animate__animated ${
-              expertiseInView ? "animate__fadeInLeft" : ""
-            }`}
-          >
-            <p className="wds-intro__lead">
-              At QllmSoft, we engineer more than just standard websites. We architect high performance{" "}
-              <strong>SaaS platforms, corporate portals, </strong>
-              <Link to="/web-application-development-services" className="wds-inline-link">
-                web applications
-              </Link>
-              , and <strong>custom enterprise ecosystems</strong> engineered to scale seamlessly. 
-              We empower modern enterprises and funded startups to step away from bloated, slow loading templates 
-              and migrate to fast, highly optimized infrastructures built for intense traffic distribution.
-            </p>
-
-            <p>
-              Many boilerplate setups hide substantial <strong>"technical debt"</strong> cluttered, unoptimized codebases 
-              that systematically drag down Core Web Vitals and damage global search engine visibilities. 
-              Our Global Delivery Center prioritizes clean, modular source files. This ensures your systems remain ultra fast, 
-              secure, and highly agile as you expand operations.
-            </p>
-
-            <p>
-              Whether you require a dedicated backend standalone platform or a comprehensive omnichannel engine including{" "}
-              <Link to="/mobile-app-development" className="wds-inline-link">mobile apps</Link> or multi tenant architectures, 
-              our dedicated{" "}
-              <Link to="/custom-software-development-services" className="wds-inline-link">
-                custom software development services
-              </Link>{" "}
-              integrate every node of your enterprise digital stack flawlessly.
-            </p>
-
-  
-            <div className="wds-intro__cta">
-              <a
-                href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20high-performance%20web%20project!"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary wds-intro__btn"
-                aria-label="Consult QllmSoft architects on WhatsApp regarding enterprise development"
+            <div className="wds-intro__layout">
+              <div
+                className={`wds-intro__text animate__animated ${
+                  expertiseInView ? "animate__fadeInLeft" : ""
+                }`}
               >
-                <i className="bi bi-whatsapp me-2"></i> Consult Our Engineers
-              </a>
+                <p className="wds-intro__lead">
+                  At QllmSoft, we engineer more than just standard websites. We
+                  architect high performance{" "}
+                  <strong>SaaS platforms, corporate portals, </strong>
+                  <Link
+                    to="/web-application-development-services"
+                    className="wds-inline-link"
+                  >
+                    web applications
+                  </Link>
+                  , and <strong>custom enterprise ecosystems</strong> engineered
+                  to scale seamlessly. We empower modern enterprises and funded
+                  startups to step away from bloated, slow loading templates and
+                  migrate to fast, highly optimized infrastructures built for
+                  intense traffic distribution.
+                </p>
+
+                <p>
+                  Many boilerplate setups hide substantial{" "}
+                  <strong>"technical debt"</strong> cluttered, unoptimized
+                  codebases that systematically drag down Core Web Vitals and
+                  damage global search engine visibilities. Our Global Delivery
+                  Center prioritizes clean, modular source files. This ensures
+                  your systems remain ultra fast, secure, and highly agile as
+                  you expand operations.
+                </p>
+
+                <p>
+                  Whether you require a dedicated backend standalone platform or
+                  a comprehensive omnichannel engine including{" "}
+                  <Link
+                    to="/mobile-app-development"
+                    className="wds-inline-link"
+                  >
+                    mobile apps
+                  </Link>{" "}
+                  or multi tenant architectures, our dedicated{" "}
+                  <Link
+                    to="/custom-software-development-services"
+                    className="wds-inline-link"
+                  >
+                    custom software development services
+                  </Link>{" "}
+                  integrate every node of your enterprise digital stack
+                  flawlessly.
+                </p>
+
+                <div className="wds-intro__cta">
+                  <a
+                    href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20high-performance%20web%20project!"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary wds-intro__btn"
+                    aria-label="Consult QllmSoft architects on WhatsApp regarding enterprise development"
+                  >
+                    <i className="bi bi-whatsapp me-2"></i> Consult Our
+                    Engineers
+                  </a>
+                </div>
+              </div>
+
+              <aside
+                className={`wds-intro__specs animate__animated ${
+                  expertiseInView ? "animate__fadeInRight" : ""
+                }`}
+                aria-label="Core technological specializations"
+              >
+                <h3 className="wds-intro__specs-title">Core Specializations</h3>
+                <ul className="wds-intro__specs-list">
+                  {SPECIALIZATIONS.map((item) => (
+                    <li key={item} className="wds-intro__spec-item">
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </aside>
             </div>
           </div>
+        </section>
 
-        
-          <aside
-            className={`wds-intro__specs animate__animated ${
-              expertiseInView ? "animate__fadeInRight" : ""
-            }`}
-            aria-label="Core technological specializations"
-          >
-            <h3 className="wds-intro__specs-title">Core Specializations</h3>
-            <ul className="wds-intro__specs-list">
-              {SPECIALIZATIONS.map((item) => (
-                <li key={item} className="wds-intro__spec-item">
-                 
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-        {/* ══════════════════════════════════════════════════
-            LEGACY / CREDENTIALS  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
+        {/*webservicelegacy*/}
         <section
           className="section wds-legacy"
           aria-labelledby="legacy-heading"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="legacy-heading">
-                Over a Decade of Building Great Software
+            <div className="section-title text-center mb-5">
+              <h2 id="legacy-heading" className="wds-legacy__main-title">
+                Over a Decade of Building High Performance Digital Architectures
               </h2>
-              <p>
-                For more than 10 years, QllmSoft has been a trusted engineering
-                partner for businesses worldwide. From our base in Pakistan, we
-                build high quality digital solutions for clients across the
-                world.
+              <p className="wds-legacy__subtitle">
+                For more than 10 years, QllmSoft has served as a trusted
+                engineering partner for global businesses. From our delivery
+                center in Pakistan, we architect elite digital ecosystems
+                optimized for international scale.
               </p>
             </div>
             <div className="wds-legacy__grid">
-              {[
-                {
-                  icon: "bi-bank",
-                  title: "Institutional Depth",
-                  label: "Since 2015",
-                  desc: "A collective expertise spanning 10+ years in architecting mission critical systems and enterprise level software solutions for clients from Karachi to California.",
-                },
-                {
-                  icon: "bi-arrow-repeat",
-                  title: "End-to-End Engineering",
-                  label: "Full Lifecycle",
-                  desc: "From legacy system modernization to modern cloud native architectures . we manage the entire SDLC for Pakistani and international enterprises.",
-                },
-                {
-                  icon: "bi-globe-americas",
-                  title: "Established Engineering Hub",
-                  label: "international HQ",
-                  desc: "A full scale software house operating with institutional accountability, providing a permanent and reliable global presence.",
-                },
-                {
-                  icon: "bi-patch-check",
-                  title: "Verified Marketplace Authority",
-                  label: "Top Rated Plus",
-                  desc: "Top Rated Plus status and a 100% Job Success Score on global platforms — reflecting years of consistent, on time, on budget delivery.",
-                },
-                {
-                  icon: "bi-shield-lock",
-                  title: "30 Day Hyper Care Support",
-                  label: "24/7 Emergency",
-                  desc: "Every project ships with 30 day post launch support and 24/7 emergency response because we're here for the long term.",
-                },
-              ].map((c, i) => (
+              {LEGACY_CREDENTIALS.map((c, i) => (
                 <article key={i} className="wds-legacy__card">
                   <span className="wds-legacy__card-badge">{c.label}</span>
                   <span className="wds-legacy__card-icon" aria-hidden="true">
@@ -641,6 +654,8 @@ const WebsiteDevelopmentServices = () => {
             </div>
           </div>
         </section>
+
+        
 
         {/* ══════════════════════════════════════════════════
             SERVICES  —  H2 + H3s
