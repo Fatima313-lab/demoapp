@@ -391,6 +391,103 @@ const WebsiteDevelopmentServices = () => {
     },
   ];
 
+  /*service data*/
+
+  const SERVICES_DATA = [
+    {
+      num: "01",
+      title: "Business Website Development",
+      desc: "Transform your corporate identity into a lead generation engine. We focus on high authority designs that load instantly and communicate value immediately. By eliminating technical debt and prioritizing Core Web Vitals, we ensure your first impression is both professional and permanent.",
+      tags: ["High Authority UI", "Lead Capture", "Core Web Vitals"],
+    },
+    {
+      num: "02",
+      title: "eCommerce Website Development",
+      desc: "Own your customer journey with custom digital storefronts. We build secure, high transaction ecosystems that handle peak traffic without latency  with frictionless checkout flows and JazzCash, Easypaisa, and Stripe integration built in from the start.",
+      tags: ["JazzCash / Easypaisa", "Scalable Inventory", "Secure Checkout"],
+    },
+    {
+      num: "03",
+      title: "Custom Web Application Development",
+      desc: "When off the shelf software fails your business logic, we engineer the solution. From internal ERPs to client facing SaaS platforms  tailored web applications that automate manual processes and integrate seamlessly with your existing data infrastructure.",
+      tags: ["Bespoke Architecture", "API First", "Process Automation"],
+    },
+    {
+      num: "04",
+      title: "SaaS Platform Development",
+      desc: "Build scalable, multi tenant SaaS products with subscription billing, role based access, real time dashboards, and cloud native deployment on Azure or AWS designed for rapid customer acquisition in Pakistan's growing SaaS market.",
+      tags: ["Multi Tenant", "Azure / AWS", "Subscription Billing"],
+    },
+    {
+      num: "05",
+      title: "Website Redesign & Performance Optimization",
+      desc: "Modernize legacy assets without losing SEO equity. We perform deep tier architectural audits to identify performance leaks  upgrading speed, security, and mobile responsiveness to meet current Google algorithm requirements.",
+      tags: ["Core Web Vitals", "UX Modernization", "Security Hardening"],
+    },
+    {
+      num: "06",
+      title: "SEO Optimized Web Development",
+      desc: "Every website we build is a ranking machine from day one. Architectural SEO, schema markup, semantic HTML5, page speed optimization, and mobile first development  baked into the code, not bolted on afterward.",
+      tags: ["Architectural SEO", "Schema Markup", "Mobile-First"],
+    },
+  ];
+
+  /*tech stack*/
+
+  const TECH_STACK_DATA = [
+    {
+      title: "Frontend & UI",
+      items: [
+        {
+          name: "React & Angular",
+          desc: "Highly responsive, state driven user interfaces for web apps and SPAs.",
+        },
+        {
+          name: "Modern CSS / SASS",
+          desc: "Pixel perfect, mobile first responsiveness across every device.",
+        },
+        {
+          name: "Progressive Web Apps",
+          desc: "Native app experiences delivered through the browser.",
+        },
+      ],
+    },
+    {
+      title: "Backend & API",
+      items: [
+        {
+          name: "ASP.NET Core",
+          desc: "Our primary framework for secure, enterprise level server side logic.",
+        },
+        {
+          name: "Node.js",
+          desc: "Real time applications and scalable microservices architecture.",
+        },
+        {
+          name: "RESTful & GraphQL APIs",
+          desc: "Seamless integration with payment gateways, CRMs, and ERP systems.",
+        },
+      ],
+    },
+    {
+      title: "Data & Infrastructure",
+      items: [
+        {
+          name: "MS SQL Server",
+          desc: "Robust relational data management for complex query handling.",
+        },
+        {
+          name: "Entity Framework",
+          desc: "Streamlined data access layers for faster development cycles.",
+        },
+        {
+          name: "Azure & AWS",
+          desc: "Cloud deployment for 99.9% uptime and auto scaling under load.",
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       {/* ══════════════════════════════════════════════════
@@ -655,86 +752,32 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        
-
-        {/* ══════════════════════════════════════════════════
-            SERVICES  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
+        {/*service */}
         <section
           className="section wds-services"
           ref={servicesRef}
           aria-labelledby="services-heading"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="services-heading">Our Website Development Services</h2>
-              <p>
+            <div className="section-title text-center mb-5">
+              <h2 id="services-heading" className="wds-services__main-title">
+                Our Website Development Services
+              </h2>
+              <p className="wds-services__main-sub">
                 As a leading software house, QllmSoft engineers{" "}
                 <strong>high concurrency portals</strong> and bespoke
                 applications that solve technical bottlenecks and dominate
                 search engine rankings.
               </p>
             </div>
-
             <div className="wds-services__grid">
-              {[
-                {
-                  num: "01",
-                  title: "Business Website Development",
-                  desc: "Transform your corporate identity into a lead generation engine. We focus on high authority designs that load instantly and communicate value immediately. By eliminating technical debt and prioritizing Core Web Vitals, we ensure your first impression is both professional and permanent.",
-                  tags: [
-                    "High-Authority UI",
-                    "Lead Capture",
-                    "Core Web Vitals",
-                  ],
-                },
-                {
-                  num: "02",
-                  title: "eCommerce Website Development",
-                  desc: "Own your customer journey with custom digital storefronts. We build secure, high-transaction ecosystems that handle peak traffic without latency — with frictionless checkout flows and JazzCash, Easypaisa, and Stripe integration built in from the start.",
-                  tags: [
-                    "JazzCash / Easypaisa",
-                    "Scalable Inventory",
-                    "Secure Checkout",
-                  ],
-                },
-                {
-                  num: "03",
-                  title: "Custom Web Application Development",
-                  desc: "When off the shelf software fails your business logic, we engineer the solution. From internal ERPs to client facing SaaS platforms — tailored web applications that automate manual processes and integrate seamlessly with your existing data infrastructure.",
-                  tags: [
-                    "Bespoke Architecture",
-                    "API First",
-                    "Process Automation",
-                  ],
-                },
-                {
-                  num: "04",
-                  title: "SaaS Platform Development",
-                  desc: "Build scalable, multi tenant SaaS products with subscription billing, role based access, real time dashboards, and cloud native deployment on Azure or AWS — designed for rapid customer acquisition in Pakistan's growing SaaS market.",
-                  tags: ["Multi Tenant", "Azure / AWS", "Subscription Billing"],
-                },
-                {
-                  num: "05",
-                  title: "Website Redesign & Performance Optimization",
-                  desc: "Modernize legacy assets without losing SEO equity. We perform deep tier architectural audits to identify performance leaks — upgrading speed, security, and mobile responsiveness to meet current Google algorithm requirements.",
-                  tags: [
-                    "Core Web Vitals",
-                    "UX Modernization",
-                    "Security Hardening",
-                  ],
-                },
-                {
-                  num: "06",
-                  title: "SEO Optimized Web Development",
-                  desc: "Every website we build is a ranking machine from day one. Architectural SEO, schema markup, semantic HTML5, page speed optimization, and mobile first development — baked into the code, not bolted on afterward.",
-                  tags: ["Architectural SEO", "Schema Markup", "Mobile-First"],
-                },
-              ].map((s, i) => (
+              {SERVICES_DATA.map((s, i) => (
                 <article
                   key={i}
-                  className={`wds-service-card animate__animated ${servicesInView ? "animate__fadeInUp" : ""}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  className={`wds-service-card animate__animated ${
+                    servicesInView ? "animate__fadeInUp" : ""
+                  }`}
+                  style={{ animationDelay: `${i * 0.08}s` }}
                   itemScope
                   itemType="https://schema.org/Service"
                 >
@@ -911,20 +954,21 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>*/}
 
-        {/* ══════════════════════════════════════════════════
-            TECH STACK  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
+
+
+
+        {/*tech stack*/}
         <section
           className="section wds-tech"
           ref={techRef}
           aria-labelledby="tech-heading"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="tech-heading">
+            <div className="section-title text-center mb-5">
+              <h2 id="tech-heading" className="wds-tech__main-title">
                 Technology Stack for Website Development
               </h2>
-              <p>
+              <p className="wds-tech__main-sub">
                 We choose technologies based on architectural stability and long
                 term maintainability not what's trending. Every stack decision
                 is made to keep your site performant and secure 5 years from
@@ -933,69 +977,30 @@ const WebsiteDevelopmentServices = () => {
             </div>
 
             <div className="wds-tech__grid">
-              {[
-                {
-                  title: "Frontend & UI",
-                  items: [
-                    {
-                      name: "React & Angular",
-                      desc: "Highly responsive, state driven user interfaces for web apps and SPAs.",
-                    },
-                    {
-                      name: "Modern CSS / SASS",
-                      desc: "Pixel perfect, mobile first responsiveness across every device.",
-                    },
-                    {
-                      name: "Progressive Web Apps",
-                      desc: "Native app experiences delivered through the browser.",
-                    },
-                  ],
-                },
-                {
-                  title: "Backend & API",
-                  items: [
-                    {
-                      name: "ASP.NET Core",
-                      desc: "Our primary framework for secure, enterprise level server side logic.",
-                    },
-                    {
-                      name: "Node.js",
-                      desc: "Real time applications and scalable microservices architecture.",
-                    },
-                    {
-                      name: "RESTful & GraphQL APIs",
-                      desc: "Seamless integration with payment gateways, CRMs, and ERP systems.",
-                    },
-                  ],
-                },
-                {
-                  title: "Data & Infrastructure",
-                  items: [
-                    {
-                      name: "MS SQL Server",
-                      desc: "Robust relational data management for complex query handling.",
-                    },
-                    {
-                      name: "Entity Framework",
-                      desc: "Streamlined data access layers for faster development cycles.",
-                    },
-                    {
-                      name: "Azure & AWS",
-                      desc: "Cloud deployment for 99.9% uptime and auto-scaling under load.",
-                    },
-                  ],
-                },
-              ].map((col, i) => (
+              {TECH_STACK_DATA.map((col, i) => (
                 <article
                   key={i}
-                  className={`wds-tech__col animate__animated ${techInView ? "animate__fadeInUp" : ""}`}
+                  className={`wds-tech__col animate__animated ${
+                    techInView ? "animate__fadeInUp" : ""
+                  }`}
                   style={{ animationDelay: `${i * 0.12}s` }}
                 >
-                  <h3 className="wds-tech__col-title">{col.title}</h3>
+                  <div className="wds-tech__col-header">
+                    <h3 className="wds-tech__col-title">{col.title}</h3>
+                  </div>
+
                   <ul className="wds-tech__list">
                     {col.items.map((item) => (
                       <li key={item.name} className="wds-tech__list-item">
-                        <strong>{item.name}:</strong> {item.desc}
+                        <span className="wds-tech__node-dot"></span>
+                        <div className="wds-tech__item-content">
+                          <strong className="wds-tech__item-name">
+                            {item.name}:
+                          </strong>{" "}
+                          <span className="wds-tech__item-desc">
+                            {item.desc}
+                          </span>
+                        </div>
                       </li>
                     ))}
                   </ul>
