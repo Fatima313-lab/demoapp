@@ -32,7 +32,6 @@ import faislabadim from "../assets/faisalabad.jpg";
 import fintech from "../assets/qllm-soft-finance-management-system-11.webp";
 import qllmdocs from "../assets/QllmDocs.webp";
 
-
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/website-development-services";
 const OG_IMAGE =
@@ -263,95 +262,102 @@ const WebsiteDevelopmentServices = () => {
     threshold: 0.1,
   });
 
+  const ENGINEERING_CAPABILITIES = [
+    {
+      icon: "bi bi-cpu-fill",
+      title: "Zero Code Bloat",
+      desc: "Clean, enterprise grade architectures featuring native performance with zero plugin dependency.",
+    },
+    {
+      icon: "bi bi-lightning-charge-fill",
+      title: "Next Gen Web Vitals",
+      desc: "Sub 1.5 second fully interactive rendering optimized globally across low bandwidth connections.",
+    },
+    {
+      icon: "bi bi-search-heart-fill",
+      title: "Semantic Engineering",
+      desc: "Advanced structural data execution engineered to secure top global SERP rankings from day one.",
+    },
+    {
+      icon: "bi bi-shield-lock-fill",
+      title: "Military Grade Security",
+      desc: "Full OWASP Top 10 mitigation, end-to-end encryption, and multi tier secure API integrations.",
+    },
+  ];
 
-
-const ENGINEERING_CAPABILITIES = [
-  {
-    icon: "bi bi-cpu-fill", 
-    title: "Zero Code Bloat",
-    desc: "Clean, enterprise grade architectures featuring native performance with zero plugin dependency.",
-  },
-  {
-    icon: "bi bi-lightning-charge-fill", 
-    title: "Next Gen Web Vitals",
-    desc: "Sub 1.5 second fully interactive rendering optimized globally across low bandwidth connections.",
-  },
-  {
-    icon: "bi bi-search-heart-fill", 
-    title: "Semantic Engineering",
-    desc: "Advanced structural data execution engineered to secure top global SERP rankings from day one.",
-  },
-  {
-    icon: "bi bi-shield-lock-fill", 
-    title: "Military Grade Security",
-    desc: "Full OWASP Top 10 mitigation, end-to-end encryption, and multi tier secure API integrations.",
-  },
-];
-
-
-
-
-
-/* ─── Trust Band ────────────────────────────────────────────────── */
-const TrustBand = () => (
-  <section
-    aria-label="QllmSoft verified performance metrics"
-    style={{ background: "#021a4a", padding: "28px 0" }}
-  >
-    <div
-      className="container"
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-        gap: "0",
-      }}
+  /* ─── Trust Band ────────────────────────────────────────────────── */
+  const TrustBand = () => (
+    <section
+      aria-label="QllmSoft verified performance metrics"
+      style={{ background: "#021a4a", padding: "28px 0" }}
     >
-      {[
-        { num: "10+", lbl: "Years Experience" },
-        { num: "50+", lbl: "Projects Delivered" },
-        { num: "50+", lbl: "Global Clients" },
-        { num: "100%", lbl: "Upwork Job Success" },
-        { num: "5 ★", lbl: "47+ Verified Reviews" },
-      ].map((s, i) => (
-        <div
-          key={i}
-          style={{
-            flex: "1",
-            minWidth: "140px",
-            textAlign: "center",
-            padding: "12px 16px",
-            borderRight: i < 4 ? "1px solid rgba(255,255,255,.12)" : "none",
-          }}
-        >
-          <span
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "0",
+        }}
+      >
+        {[
+          { num: "10+", lbl: "Years Experience" },
+          { num: "50+", lbl: "Projects Delivered" },
+          { num: "50+", lbl: "Global Clients" },
+          { num: "100%", lbl: "Upwork Job Success" },
+          { num: "5 ★", lbl: "47+ Verified Reviews" },
+        ].map((s, i) => (
+          <div
+            key={i}
             style={{
-              display: "block",
-              fontSize: "2rem",
-              fontWeight: "900",
-              color: "#fec304",
-              lineHeight: "1",
+              flex: "1",
+              minWidth: "140px",
+              textAlign: "center",
+              padding: "12px 16px",
+              borderRight: i < 4 ? "1px solid rgba(255,255,255,.12)" : "none",
             }}
           >
-            {s.num}
-          </span>
-          <span
-            style={{
-              fontSize: ".75rem",
-              color: "rgba(255,255,255,.65)",
-              textTransform: "uppercase",
-              letterSpacing: "1.2px",
-              marginTop: "4px",
-              display: "block",
-            }}
-          >
-            {s.lbl}
-          </span>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+            <span
+              style={{
+                display: "block",
+                fontSize: "2rem",
+                fontWeight: "900",
+                color: "#fec304",
+                lineHeight: "1",
+              }}
+            >
+              {s.num}
+            </span>
+            <span
+              style={{
+                fontSize: ".75rem",
+                color: "rgba(255,255,255,.65)",
+                textTransform: "uppercase",
+                letterSpacing: "1.2px",
+                marginTop: "4px",
+                display: "block",
+              }}
+            >
+              {s.lbl}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+
+
+
+  /*intro*/
+
+  const SPECIALIZATIONS = [
+  "Enterprise Web Applications",
+  "Fintech & Secure Payment Portals",
+  "High Scale B2B Lead Engines",
+  "Headless & Custom CMS Architecture",
+  "Real time Dashboards & Analytics",
+  "Global & Local eCommerce Ecosystems",
+];
 
   return (
     <>
@@ -360,13 +366,11 @@ const TrustBand = () => (
       ══════════════════════════════════════════════════ */}
       <Helmet>
         {/* Primary */}
-        <title>
-          High Performance Web Development Services  | QllmSoft
-        </title>
+        <title>High Performance Web Development Services | QllmSoft</title>
         <meta
           name="description"
-         content="QllmSoft's Global Delivery Center engineers secure, enterprise grade web applications, SaaS platforms & custom solutions using .NET, React, and Angular."
-  />
+          content="QllmSoft's Global Delivery Center engineers secure, enterprise grade web applications, SaaS platforms & custom solutions using .NET, React, and Angular."
+        />
         <meta
           name="keywords"
           content="high performance web development, custom web engineering solutions, website development services Pakistan, web development company Pakistan, custom website development Pakistan, eCommerce website development Pakistan, ASP.NET Core web development, React web development Pakistan, SEO-optimized website Pakistan, web application development Pakistan, website development Lahore Karachi Islamabad"
@@ -384,36 +388,36 @@ const TrustBand = () => (
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-       content="High Performance Web Development & Engineering Services"
-  />
+          content="High Performance Web Development & Engineering Services"
+        />
         <meta
           property="og:description"
-         content="Scalable web apps, premium SaaS architectures, and custom enterprise digital platforms engineered for speed and global delivery."
-  />
+          content="Scalable web apps, premium SaaS architectures, and custom enterprise digital platforms engineered for speed and global delivery."
+        />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-         content="QllmSoft High Performance Web Engineering Platform"
-  />
+          content="QllmSoft High Performance Web Engineering Platform"
+        />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-        content="Custom Web Engineering & Enterprise Solutions | QllmSoft"
-  />
+          content="Custom Web Engineering & Enterprise Solutions | QllmSoft"
+        />
         <meta
           name="twitter:description"
-         content="Deploy secure web platforms, fast Core Web Vitals apps, and enterprise systems globally with QllmSoft's dedicated engineering teams."
-  />
+          content="Deploy secure web platforms, fast Core Web Vitals apps, and enterprise systems globally with QllmSoft's dedicated engineering teams."
+        />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-         content="QllmSoft Custom Web Architecture"
-  />
+          content="QllmSoft Custom Web Architecture"
+        />
 
         {/* JSON-LD */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -426,159 +430,149 @@ const TrustBand = () => (
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
-     
-          
+      <main id="main-content" className="wds-page" role="main">
+        <header className="wds-hero services-hero">
+          <div className="services-hero-shape-1" aria-hidden="true"></div>
+          <div className="services-hero-shape-2" aria-hidden="true"></div>
 
+          <div className="container">
+            <p className="csd-hero__eyebrow">
+              Global Delivery Center & Web Engineering Hub
+            </p>
 
-    <main id="main-content" className="wds-page" role="main">
-      <header className="wds-hero services-hero">
-     
-        <div className="services-hero-shape-1" aria-hidden="true"></div>
-        <div className="services-hero-shape-2" aria-hidden="true"></div>
+            <h1 className="wds-hero__title" id="svc-hero-h1">
+              High Performance Web Development Services for <em>Scale</em>
+            </h1>
 
-        <div className="container">
-         
-          <p className="csd-hero__eyebrow">
-            Global Delivery Center & Web Engineering Hub
-          </p>
+            <p className="wds-hero__sub">
+              QllmSoft engineers ultra fast, secure, and production ready
+              digital architectures. We transition corporate objectives into
+              robust custom web applications that dominate competitors and load
+              instantly worldwide.
+            </p>
 
-        
-          <h1 className="wds-hero__title" id="svc-hero-h1">
-            High Performance Web Development Services for <em>Scale</em>
-          </h1>
-
-          <p className="wds-hero__sub">
-            QllmSoft engineers ultra fast, secure, and production ready digital architectures. 
-            We transition corporate objectives into robust custom web applications that dominate competitors 
-            and load instantly worldwide.
-          </p>
-
-
-          <div className="csd-hero__buttons">
-            <Link
-              to="/contact"
-              className="btn btn-primary"
-              aria-label="Get a free high-performance web development consultation from QllmSoft"
+            <div className="csd-hero__buttons">
+              <Link
+                to="/contact"
+                className="btn btn-primary"
+                aria-label="Get a free high-performance web development consultation from QllmSoft"
+              >
+                Get Free Consultation
+              </Link>
+              <Link
+                to="/projects"
+                className="btn btn-outline-light"
+                aria-label="Explore QllmSoft enterprise web development case studies and engineering portfolio"
+              >
+                View Case Studies
+              </Link>
+            </div>
+            <div
+              className="wds-hero__pills"
+              aria-label="Core engineering capabilities and tech metrics"
             >
-              Get Free Consultation
-            </Link>
-            <Link
-              to="/projects"
-              className="btn btn-outline-light"
-              aria-label="Explore QllmSoft enterprise web development case studies and engineering portfolio"
-            >
-              View Case Studies
-            </Link>
+              {ENGINEERING_CAPABILITIES.map((pill) => (
+                <div key={pill.title} className="wds-hero__pill">
+                  <span className="wds-pill-icon" aria-hidden="true">
+                    <i className={pill.icon}></i>
+                  </span>
+                  <div>
+                    <strong>{pill.title}</strong>
+                    <p>{pill.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div
-            className="wds-hero__pills"
-            aria-label="Core engineering capabilities and tech metrics"
-          >
-           {ENGINEERING_CAPABILITIES.map((pill) => (
-  <div key={pill.title} className="wds-hero__pill">
-    <span className="wds-pill-icon" aria-hidden="true">
-      <i className={pill.icon}></i>
-    </span>
-    <div>
-      <strong>{pill.title}</strong>
-      <p>{pill.desc}</p>
-    </div>
-  </div>
-))}
-          </div>
-        </div>
-      </header>
-      
+        </header>
+
         {/* ── TRUST BAND ── */}
         <TrustBand />
-   
+
+
+
+
+          {/*intro*/}
+       <section
+      className="section wds-intro"
+      ref={expertiseRef}
+      aria-labelledby="expertise-heading"
+    >
+      <div className="container">
+        <div className="section-title">
+          <h2 id="expertise-heading" className="wds-intro__title-h2">
+            Custom Web Engineering & Digital Solutions
+          </h2>
+        </div>
+
+        <div className="wds-intro__layout">
+          <div
+            className={`wds-intro__text animate__animated ${
+              expertiseInView ? "animate__fadeInLeft" : ""
+            }`}
+          >
+            <p className="wds-intro__lead">
+              At QllmSoft, we engineer more than just standard websites. We architect high performance{" "}
+              <strong>SaaS platforms, corporate portals, </strong>
+              <Link to="/web-application-development-services" className="wds-inline-link">
+                web applications
+              </Link>
+              , and <strong>custom enterprise ecosystems</strong> engineered to scale seamlessly. 
+              We empower modern enterprises and funded startups to step away from bloated, slow loading templates 
+              and migrate to fast, highly optimized infrastructures built for intense traffic distribution.
+            </p>
+
+            <p>
+              Many boilerplate setups hide substantial <strong>"technical debt"</strong> cluttered, unoptimized codebases 
+              that systematically drag down Core Web Vitals and damage global search engine visibilities. 
+              Our Global Delivery Center prioritizes clean, modular source files. This ensures your systems remain ultra fast, 
+              secure, and highly agile as you expand operations.
+            </p>
+
+            <p>
+              Whether you require a dedicated backend standalone platform or a comprehensive omnichannel engine including{" "}
+              <Link to="/mobile-app-development" className="wds-inline-link">mobile apps</Link> or multi tenant architectures, 
+              our dedicated{" "}
+              <Link to="/custom-software-development-services" className="wds-inline-link">
+                custom software development services
+              </Link>{" "}
+              integrate every node of your enterprise digital stack flawlessly.
+            </p>
+
   
-
-        {/* ══════════════════════════════════════════════════
-            INTRO / EXPERTISE  —  H2
-        ══════════════════════════════════════════════════ */}
-        <section
-          className="section wds-intro"
-          ref={expertiseRef}
-          aria-labelledby="expertise-heading"
-        >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="expertise-heading">
-                Custom Website Development Services in Pakistan
-              </h2>
-            </div>
-
-            <div className="wds-intro__layout">
-              <div
-                className={`wds-intro__text animate__animated ${expertiseInView ? "animate__fadeInLeft" : ""}`}
+            <div className="wds-intro__cta">
+              <a
+                href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20high-performance%20web%20project!"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary wds-intro__btn"
+                aria-label="Consult QllmSoft architects on WhatsApp regarding enterprise development"
               >
-                At QllmSoft, we do more than just build websites. We create high
-                performance
-                <strong>
-                  {" "}
-                  SaaS platforms, corporate portals,{" "}
-                  <Link to="/web-application-development-services">
-                    web applications
-                  </Link>
-                  , and custom eCommerce stores{" "}
-                </strong>
-                that actually drive results. We help startups and growing
-                businesses move away from basic, slow templates and switch to
-                fast, scalable systems that can handle real traffic.
-                <p>
-                  Many generic site builders come with{" "}
-                  <strong>"technical debt"</strong> hidden, messy code that
-                  slows down your site and hurts your SEO. We focus on clean,
-                  custom coded solutions. This ensures your website stays fast,
-                  secure, and easy to update as you grow from a local Pakistani
-                  business to a global brand.
-                </p>
-                <p>
-                  Whether you need a standalone site or a full ecosystem,
-                  including{" "}
-                  <Link to="/mobile-app-development">mobile apps</Link> or
-                  enterprise SaaS, we’ve got you covered. Our{" "}
-                  <Link to="/custom-software-development-services">
-                    custom software development services
-                  </Link>{" "}
-                  ensure every part of your digital business works together
-                  perfectly.
-                </p>
-                <div className="wds-intro__cta">
-                  <a
-                    href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20website%20project!"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                    aria-label="Consult QllmSoft engineers on WhatsApp about website development"
-                  >
-                    Consult Our Engineers
-                  </a>
-                </div>
-              </div>
-
-              <aside
-                className={`wds-intro__specs animate__animated ${expertiseInView ? "animate__fadeInRight" : ""}`}
-                aria-label="Core specializations"
-              >
-                <h3 className="wds-intro__specs-title">Core Specializations</h3>
-                <ul className="wds-intro__specs-list">
-                  {[
-                    "Enterprise Web Applications",
-                    "Fintech & Payment Portals",
-                    "B2B Lead Generation Engines",
-                    "Custom CMS Development",
-                    "Real-time Dashboards & Analytics",
-                    "eCommerce with PK Payment Gateways",
-                  ].map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </aside>
+                <i className="bi bi-whatsapp me-2"></i> Consult Our Engineers
+              </a>
             </div>
           </div>
-        </section>
+
+        
+          <aside
+            className={`wds-intro__specs animate__animated ${
+              expertiseInView ? "animate__fadeInRight" : ""
+            }`}
+            aria-label="Core technological specializations"
+          >
+            <h3 className="wds-intro__specs-title">Core Specializations</h3>
+            <ul className="wds-intro__specs-list">
+              {SPECIALIZATIONS.map((item) => (
+                <li key={item} className="wds-intro__spec-item">
+                 
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
 
         {/* ══════════════════════════════════════════════════
             LEGACY / CREDENTIALS  —  H2 + H3s
@@ -635,7 +629,10 @@ const TrustBand = () => (
                 <article key={i} className="wds-legacy__card">
                   <span className="wds-legacy__card-badge">{c.label}</span>
                   <span className="wds-legacy__card-icon" aria-hidden="true">
-                  <i className={`bi ${c.icon}`} style={{ fontSize: '2rem', color: '#edb702' }}></i>
+                    <i
+                      className={`bi ${c.icon}`}
+                      style={{ fontSize: "2rem", color: "#edb702" }}
+                    ></i>
                   </span>
                   <h3 className="wds-legacy__card-title">{c.title}</h3>
                   <p className="wds-legacy__card-desc">{c.desc}</p>
@@ -751,7 +748,7 @@ const TrustBand = () => (
           </div>
         </section>
 
-       {/*<section className="section comparison-section">
+        {/*<section className="section comparison-section">
           <div className="container">
             <div className="section-title text-center">
              
@@ -913,10 +910,10 @@ const TrustBand = () => (
                 Technology Stack for Website Development
               </h2>
               <p>
-                We choose technologies based on architectural stability and
-                long term maintainability  not what's trending. Every stack
-                decision is made to keep your site performant and secure 5 years
-                from now.
+                We choose technologies based on architectural stability and long
+                term maintainability not what's trending. Every stack decision
+                is made to keep your site performant and secure 5 years from
+                now.
               </p>
             </div>
 
@@ -1198,86 +1195,89 @@ const TrustBand = () => (
           </div>
         </section> */}
 
-      {/* ══════════════════════════════════════════════════
+        {/* ══════════════════════════════════════════════════
           PERFORMANCE ANALYSIS — Global Focus
     ══════════════════════════════════════════════════ */}
-<section className="section wds-perf" aria-labelledby="perf-heading">
-  <div className="container">
-    <div className="section-title">
-      <h2 id="perf-heading">
-        Why Off the Shelf Templates are Holding Your Business Back
-      </h2>
-      <p>
-        In today’s market, <strong>speed is your biggest competitive advantage</strong>. 
-        A generic template might look good on paper, but heavy code and unoptimized 
-        assets often lead to slow load times and lost customers before they even see your homepage.
-      </p>
-    </div>
-    <div className="wds-perf__grid">
-      {[
-        {
-          title: "Eliminating Code Bloat",
-          desc: "Most templates come packed with thousands of lines of unused CSS and JavaScript. This 'hidden weight' slows down browsers and leads to high bounce rates, especially for users on the move.",
-        },
-        {
-          title: "Optimizing for Core Web Vitals",
-          desc: "Search engines now prioritize user experience metrics like LCP and CLS. We build clean, custom solutions that pass the 2 second speed test, ensuring your site actually ranks where your customers are looking.",
-        },
-        {
-          title: "Enterprise-Grade Security",
-          desc: "Templates and generic plugins are the primary targets for global cyberattacks. By using custom coded architecture, we remove these common vulnerabilities, keeping your data safe and your brand’s reputation intact.",
-        },
-      ].map((p, i) => (
-        <article key={i} className="wds-perf__card">
-          <h3 className="wds-perf__card-title">{p.title}</h3>
-          <p className="wds-perf__card-desc">{p.desc}</p>
-        </article>
-      ))}
-    </div>
+        <section className="section wds-perf" aria-labelledby="perf-heading">
+          <div className="container">
+            <div className="section-title">
+              <h2 id="perf-heading">
+                Why Off the Shelf Templates are Holding Your Business Back
+              </h2>
+              <p>
+                In today’s market,{" "}
+                <strong>speed is your biggest competitive advantage</strong>. A
+                generic template might look good on paper, but heavy code and
+                unoptimized assets often lead to slow load times and lost
+                customers before they even see your homepage.
+              </p>
+            </div>
+            <div className="wds-perf__grid">
+              {[
+                {
+                  title: "Eliminating Code Bloat",
+                  desc: "Most templates come packed with thousands of lines of unused CSS and JavaScript. This 'hidden weight' slows down browsers and leads to high bounce rates, especially for users on the move.",
+                },
+                {
+                  title: "Optimizing for Core Web Vitals",
+                  desc: "Search engines now prioritize user experience metrics like LCP and CLS. We build clean, custom solutions that pass the 2 second speed test, ensuring your site actually ranks where your customers are looking.",
+                },
+                {
+                  title: "Enterprise-Grade Security",
+                  desc: "Templates and generic plugins are the primary targets for global cyberattacks. By using custom coded architecture, we remove these common vulnerabilities, keeping your data safe and your brand’s reputation intact.",
+                },
+              ].map((p, i) => (
+                <article key={i} className="wds-perf__card">
+                  <h3 className="wds-perf__card-title">{p.title}</h3>
+                  <p className="wds-perf__card-desc">{p.desc}</p>
+                </article>
+              ))}
+            </div>
 
-    {/* Speed comparison */}
-    <div
-      className="wds-perf__comparison"
-      aria-label="Load speed comparison"
-    >
-      <div className="wds-perf__stat">
-        <span className="wds-perf__stat-num">53%</span>
-        <span className="wds-perf__stat-label">
-          Of mobile users leave a site if it takes longer than 3 seconds to load.
-        </span>
-      </div>
-      <div className="wds-perf__bar-wrap">
-        <div className="wds-perf__bar-row">
-          <span>Custom Code (Clean & Fast)</span>
-          <div
-            className="wds-perf__bar wds-perf__bar--fast"
-            role="meter"
-            aria-label="~1.4 seconds load time"
-            aria-valuenow="24"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <span className="wds-perf__bar-label">~1.4s</span>
+            {/* Speed comparison */}
+            <div
+              className="wds-perf__comparison"
+              aria-label="Load speed comparison"
+            >
+              <div className="wds-perf__stat">
+                <span className="wds-perf__stat-num">53%</span>
+                <span className="wds-perf__stat-label">
+                  Of mobile users leave a site if it takes longer than 3 seconds
+                  to load.
+                </span>
+              </div>
+              <div className="wds-perf__bar-wrap">
+                <div className="wds-perf__bar-row">
+                  <span>Custom Code (Clean & Fast)</span>
+                  <div
+                    className="wds-perf__bar wds-perf__bar--fast"
+                    role="meter"
+                    aria-label="~1.4 seconds load time"
+                    aria-valuenow="24"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span className="wds-perf__bar-label">~1.4s</span>
+                  </div>
+                </div>
+                <div className="wds-perf__bar-row">
+                  <span>Standard Multi purpose Template</span>
+                  <div
+                    className="wds-perf__bar wds-perf__bar--slow"
+                    role="meter"
+                    aria-label="~5.8 seconds load time"
+                    aria-valuenow="97"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <span className="wds-perf__bar-label">~5.8s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="wds-perf__bar-row">
-          <span>Standard Multi purpose Template</span>
-          <div
-            className="wds-perf__bar wds-perf__bar--slow"
-            role="meter"
-            aria-label="~5.8 seconds load time"
-            aria-valuenow="97"
-            aria-valuemin="0"
-            aria-valuemax="100"
-          >
-            <span className="wds-perf__bar-label">~5.8s</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-       
+        </section>
+
         {/* ══════════════════════════════════════════════════
             COMPARISON TABLE  —  H2
         ══════════════════════════════════════════════════ 
@@ -1378,12 +1378,12 @@ const TrustBand = () => (
           <div className="container">
             <div className="section-title">
               <h2 id="why-heading">
-               Why Leading Businesses Partner with QllmSoft
+                Why Leading Businesses Partner with QllmSoft
               </h2>
               <p>
-              We go beyond standard web design. Our team delivers high performance, 
-      secure digital solutions that are built to rank on search engines 
-      and scale effortlessly as your business grows.
+                We go beyond standard web design. Our team delivers high
+                performance, secure digital solutions that are built to rank on
+                search engines and scale effortlessly as your business grows.
               </p>
             </div>
 
@@ -1500,100 +1500,100 @@ const TrustBand = () => (
           itemScope
           itemType="https://schema.org/PriceSpecification"
         >
-        
-  <div className="container">
-    <div className="section-title">
-      <h2 id="pricing-heading">
-        Transparent Pricing for Scalable Digital Solutions
-      </h2>
-      <p>
-        We believe in value based, upfront pricing with zero hidden fees. 
-        Every project begins with a comprehensive requirement analysis to 
-        ensure a fixed price quote that aligns with your business goals.
-      </p>
-    </div>
+          <div className="container">
+            <div className="section-title">
+              <h2 id="pricing-heading">
+                Transparent Pricing for Scalable Digital Solutions
+              </h2>
+              <p>
+                We believe in value based, upfront pricing with zero hidden
+                fees. Every project begins with a comprehensive requirement
+                analysis to ensure a fixed price quote that aligns with your
+                business goals.
+              </p>
+            </div>
 
-    <div className="wds-pricing__grid">
-      {[
-        {
-          tier: "Starter",
-          title: "Professional Business Site",
-          price: "Starting at $500",
-          popular: false,
-          desc: "Designed for service based businesses. Includes a high converting, SEO ready authority site with 5 - 10 custom pages, lead capture forms, and full mobile optimization.",
-        },
-        {
-          tier: "Most Popular",
-          title: "Growth & eCommerce Platform",
-          price: "Starting at $1,200",
-          popular: true,
-          desc: "Advanced platforms featuring seamless payment gateway integrations (Stripe/PayPal), inventory management, automated lead tracking, and high scale SEO architecture.",
-        },
-        {
-          tier: "Enterprise",
-          title: "Custom SaaS & Web Apps",
-          price: "Custom Quote",
-          popular: false,
-          desc: "Tailored for complex needs: multi tenant SaaS platforms, enterprise portals, ERP integrations, and real time data dashboards built to handle global traffic.",
-        },
-      ].map((p, i) => (
-        <article
-          key={i}
-          className={`wds-pricing-card ${p.popular ? "wds-pricing-card--popular" : ""} animate__animated ${pricingInView ? "animate__fadeInUp" : ""}`}
-          style={{ animationDelay: `${i * 0.12}s` }}
-        >
-          <span className="wds-pricing-card__tier">{p.tier}</span>
-          <h3 className="wds-pricing-card__title">{p.title}</h3>
-          <p className="wds-pricing-card__price" itemProp="price">
-            {p.price}
-          </p>
-          <p className="wds-pricing-card__desc">{p.desc}</p>
-          <Link
-            to="/contact"
-            className="btn btn-primary"
-            aria-label={`Request a proposal for ${p.title}`}
-          >
-            Request a Proposal
-          </Link>
-        </article>
-      ))}
-    </div>
+            <div className="wds-pricing__grid">
+              {[
+                {
+                  tier: "Starter",
+                  title: "Professional Business Site",
+                  price: "Starting at $500",
+                  popular: false,
+                  desc: "Designed for service based businesses. Includes a high converting, SEO ready authority site with 5 - 10 custom pages, lead capture forms, and full mobile optimization.",
+                },
+                {
+                  tier: "Most Popular",
+                  title: "Growth & eCommerce Platform",
+                  price: "Starting at $1,200",
+                  popular: true,
+                  desc: "Advanced platforms featuring seamless payment gateway integrations (Stripe/PayPal), inventory management, automated lead tracking, and high scale SEO architecture.",
+                },
+                {
+                  tier: "Enterprise",
+                  title: "Custom SaaS & Web Apps",
+                  price: "Custom Quote",
+                  popular: false,
+                  desc: "Tailored for complex needs: multi tenant SaaS platforms, enterprise portals, ERP integrations, and real time data dashboards built to handle global traffic.",
+                },
+              ].map((p, i) => (
+                <article
+                  key={i}
+                  className={`wds-pricing-card ${p.popular ? "wds-pricing-card--popular" : ""} animate__animated ${pricingInView ? "animate__fadeInUp" : ""}`}
+                  style={{ animationDelay: `${i * 0.12}s` }}
+                >
+                  <span className="wds-pricing-card__tier">{p.tier}</span>
+                  <h3 className="wds-pricing-card__title">{p.title}</h3>
+                  <p className="wds-pricing-card__price" itemProp="price">
+                    {p.price}
+                  </p>
+                  <p className="wds-pricing-card__desc">{p.desc}</p>
+                  <Link
+                    to="/contact"
+                    className="btn btn-primary"
+                    aria-label={`Request a proposal for ${p.title}`}
+                  >
+                    Request a Proposal
+                  </Link>
+                </article>
+              ))}
+            </div>
 
-    <div
-      className="wds-pricing__factors"
-      aria-label="Factors affecting development cost"
-    >
-      <h3 className="wds-pricing__factors-title">
-        Project Cost Drivers
-      </h3>
-      <ul className="wds-pricing__factors-list">
-        {[
-          { icon: "⚡", label: "Custom Functionality & API Logic" },
-          { icon: "🎨", label: "UI/UX Design Complexity" },
-          { icon: "✍️", label: "Content Strategy & Copywriting" },
-          { icon: "🚀", label: "Project Timeline & Urgency" },
-          { icon: "📊", label: "Technical SEO Scope" },
-          { icon: "🔗", label: "Third-Party System Integrations" },
-        ].map((f) => (
-          <li key={f.label} className="wds-pricing__factor">
-            <span aria-hidden="true">{f.icon}</span> {f.label}
-          </li>
-        ))}
-      </ul>
-      <p className="wds-pricing__cta-text">
-        Need a precise estimate? We provide custom quotes within 24 hours 
-        based on your specific project needs.
-      </p>
-      <Link
-        to="/contact"
-        className="btn btn-primary"
-        aria-label="Request a detailed proposal from QllmSoft"
-      >
-        Get Your Custom Proposal
-      </Link>
-    </div>
-  </div>
-</section>
+            <div
+              className="wds-pricing__factors"
+              aria-label="Factors affecting development cost"
+            >
+              <h3 className="wds-pricing__factors-title">
+                Project Cost Drivers
+              </h3>
+              <ul className="wds-pricing__factors-list">
+                {[
+                  { icon: "⚡", label: "Custom Functionality & API Logic" },
+                  { icon: "🎨", label: "UI/UX Design Complexity" },
+                  { icon: "✍️", label: "Content Strategy & Copywriting" },
+                  { icon: "🚀", label: "Project Timeline & Urgency" },
+                  { icon: "📊", label: "Technical SEO Scope" },
+                  { icon: "🔗", label: "Third-Party System Integrations" },
+                ].map((f) => (
+                  <li key={f.label} className="wds-pricing__factor">
+                    <span aria-hidden="true">{f.icon}</span> {f.label}
+                  </li>
+                ))}
+              </ul>
+              <p className="wds-pricing__cta-text">
+                Need a precise estimate? We provide custom quotes within 24
+                hours based on your specific project needs.
+              </p>
+              <Link
+                to="/contact"
+                className="btn btn-primary"
+                aria-label="Request a detailed proposal from QllmSoft"
+              >
+                Get Your Custom Proposal
+              </Link>
+            </div>
+          </div>
+        </section>
 
         <FounderNote
           title="Digital Craftsmanship, Business Results"
@@ -1610,7 +1610,6 @@ const TrustBand = () => (
           itemType="https://schema.org/FAQPage"
         >
           <div className="container">
-          
             <div className="section-title">
               <h2 id="faq-heading">Website Development FAQs</h2>
               <p>
@@ -1646,9 +1645,9 @@ const TrustBand = () => (
                 Ready to Build a Website That Drives Real Results?
               </h2>
               <p>
-                Your website should do more than exist it should attract
-                organic traffic, convert high value leads, and scale alongside
-                your business. Let's engineer yours.
+                Your website should do more than exist it should attract organic
+                traffic, convert high value leads, and scale alongside your
+                business. Let's engineer yours.
               </p>
               <div className="csd-final-cta__buttons">
                 <Link
