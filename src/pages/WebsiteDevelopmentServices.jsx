@@ -139,32 +139,69 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
+    id: "faq-cost-pakistan",
     q: "What is the cost of website development in Pakistan?",
-    a: "Website development cost in Pakistan ranges from PKR 50,000 to PKR 250,000+ depending on scope. A 5–10 page professional business site starts from PKR 50,000. Custom web applications and eCommerce platforms start from PKR 100,000. QllmSoft provides free, transparent fixed-price quotes within 24 hours of your enquiry.",
+    a: "Website development cost in Pakistan ranges from PKR 50,000 to PKR 250,000+ depending on scope. A 5 10 page professional business site starts from PKR 50,000. Custom web applications and eCommerce platforms start from PKR 100,000. QllmSoft provides free, transparent fixed price quotes within 24 hours of your enquiry.",
   },
   {
+    id: "faq-timeline",
     q: "How long does it take to develop a custom website?",
-    a: "A standard custom website takes 6 to 12 weeks: 2 weeks for design and prototyping, 6–8 weeks for development, and 2 weeks for QA testing and SEO optimization. Complex SaaS or enterprise projects may take 12–20 weeks depending on scope.",
+    a: "A standard custom website takes 6 to 12 weeks: 2 weeks for design and prototyping, 6-8 weeks for development, and 2 weeks for QA testing and SEO optimization. Complex SaaS or enterprise projects may take 12-20 weeks depending on scope.",
   },
   {
+    id: "faq-tech-stack",
     q: "Which technologies does QllmSoft use for website development?",
-    a: "We specialize in ASP.NET Core for backend, React JS and Angular for frontend, Microsoft SQL Server for databases, and Azure or AWS for cloud deployment. This stack ensures high performance, enterprise-grade security, and long-term scalability.",
+    a: "We specialize in ASP.NET Core for backend, React JS and Angular for frontend, Microsoft SQL Server for databases, and Azure or AWS for cloud deployment. This stack ensures high performance, enterprise grade security, and long term scalability.",
   },
   {
+    id: "faq-domain-hosting",
+    q: "Do you provide free domain registration and web hosting in Pakistan?",
+    a: "We help our clients select and configure the best cloud hosting infrastructure (like AWS, Azure, or premium VPS). While domain and hosting renewal fees are third party infrastructure costs, QllmSoft provides completely free deployment, SSL setup, and environment configuration during the initial launch phase.",
+  },
+  {
+    id: "faq-vs-wordpress",
     q: "Why choose QllmSoft over a generic WordPress freelancer?",
-    a: "Unlike freelancers using bloated templates, QllmSoft engineers custom coded solutions using React and ASP.NET. This eliminates 'technical debt', ensures sub-2-second load times, and provides enterprise-grade security that generic builders can't match.",
+    a: "Unlike freelancers using bloated templates, QllmSoft engineers custom coded solutions using React and ASP.NET. This eliminates 'technical debt', ensures sub 2 second load times, and provides enterprise grade security that generic builders can't match.",
   },
   {
+    id: "faq-ecommerce-solutions",
+    q: "Can you develop custom multi vendor eCommerce websites?",
+    a: "Yes, we build highly secure, custom eCommerce platforms engineered to handle thousands of concurrent transactions. We integrate reliable local payment gateways (like JazzCash, EasyPaisa,  and Safepay) as well as international systems (Stripe, PayPal) with optimized inventory sync mechanics.",
+  },
+  {
+    id: "faq-google-ranking",
     q: "Will my website rank on Google Pakistan?",
-    a: "Yes. We use Architectural SEO — clean semantic HTML5, optimized Core Web Vitals, structured data/schema markup, mobile-first development, and fast load times — to give your website a strong technical foundation for ranking on Google Pakistan from the day of launch.",
+    a: "Yes. We use Architectural SEO clean semantic HTML5, optimized Core Web Vitals, structured data/schema markup, mobile first development, and fast load times to give your website a strong technical foundation for ranking on Google Pakistan from the day of launch.",
   },
   {
+    id: "faq-seo-packages",
+    q: "Does QllmSoft offer monthly SEO services after development?",
+    a: "Yes. While every website includes standard technical on page SEO, we offer advanced monthly SEO retainers. This includes keyword research targeted for Pakistan & global markets, strategic link building, content marketing, and competitive rank tracking to keep you on the first page of Google.",
+  },
+  {
+    id: "faq-responsive-mobile",
+    q: "Will my website be mobile friendly and responsive?",
+    a: "Absolutely. Over 70% of web traffic in Pakistan originates from mobile devices. Every platform we build follows a strict mobile first fluid responsive grid, ensuring layout pixel perfection across all Android, iOS devices, tablets, and desktop monitors.",
+  },
+  {
+    id: "faq-source-code",
+    q: "Will I get full ownership of the website's source code?",
+    a: "Yes, 100%. Upon final project completion and launch, full intellectual property (IP) rights and raw source code ownership are transferred completely to you. We provide clean, documented code repositories via GitHub or GitLab with no hidden licensing terms.",
+  },
+  {
+    id: "faq-maintenance",
     q: "Do you provide website maintenance and support after launch?",
-    a: "Yes. Every project includes a 30-day hyper-care period after launch — covering performance monitoring, bug fixes, security patches, and content updates. We also offer ongoing maintenance retainers for businesses that want continuous optimization and support.",
+    a: "Yes. Every project includes a 30 day hyper care period after launch covering performance monitoring, bug fixes, security patches, and content updates. We also offer ongoing maintenance retainers for businesses that want continuous optimization and support.",
   },
   {
+    id: "faq-redesign-systems",
+    q: "Can you redesign and migrate our existing slow business website?",
+    a: "Yes. We specialize in legacy system migration. We can redesign your old website from scratch into a high performance React/.NET framework while carefully preserving your existing Google ranking juices using precise 301 URL redirection mapping protocols.",
+  },
+  {
+    id: "faq-locations-pakistan",
     q: "Can QllmSoft build websites for businesses in Lahore, Karachi, and Islamabad?",
-    a: "Absolutely. QllmSoft serves businesses across all of Pakistan — Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujrat, and beyond. We operate fully remotely with regular video calls, shared project portals, and transparent sprint reporting. We also serve international clients across the UK, USA, and UAE.",
+    a: "Absolutely. QllmSoft serves businesses across all of Pakistan ,Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujrat, and beyond. We operate fully remotely with regular video calls, shared project portals, and transparent sprint reporting. We also serve international clients across the UK, USA, and UAE.",
   },
 ];
 
@@ -1634,7 +1671,7 @@ const WebsiteDevelopmentServices = () => {
         >
           <div className="container">
             <div className="csd-final-cta__content">
-              <p className="section-eyebrow" style={{ color: "#edb702" }}>
+              <p className="section-eyebrow">
                 Let's Get Started
               </p>
               <h2 id="cta-heading">
@@ -1671,10 +1708,10 @@ const WebsiteDevelopmentServices = () => {
                 }}
               >
                 Questions? Visit our{" "}
-                <Link to="/blog" style={{ color: "#edb702" }}>
+                <Link to="/blog">
                   Expert Blog
                 </Link>{" "}
-                — we typically respond within 5 minutes.
+                we typically respond within 5 minutes.
               </p>
             </div>
           </div>

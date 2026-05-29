@@ -9,37 +9,34 @@
    or copy the shared rules into global.css).
 ═══════════════════════════════════════════════════════ */
 
-
 .csd-faq {
   position: relative;
-  background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 100%);
-  padding: 90px 0;
+  background: linear-gradient(180deg, #F4F7FB 0%, #FFFFFF 100%);
+  padding: 100px 0;
   overflow: hidden;
 }
-
 
 .csd-faq::before,
 .csd-faq::after {
   content: "";
   position: absolute;
-  width: 420px;
-  height: 420px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.22;
   pointer-events: none;
+  z-index: 0;
 }
 
 .csd-faq::before {
-  background: rgba(43,108,176,0.35);
-  top: -180px;
-  left: -180px;
+  background: radial-gradient(circle, rgba(43, 108, 176, 0.12) 0%, transparent 75%);
+  top: -150px;
+  left: -150px;
 }
 
 .csd-faq::after {
-  background: rgba(0,198,255,0.30);
-  bottom: -180px;
-  right: -180px;
+  background: radial-gradient(circle, rgba(0, 198, 255, 0.10) 0%, transparent 75%);
+  bottom: -150px;
+  right: -150px;
 }
 
 .csd-faq .container {
@@ -52,55 +49,62 @@
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
+  gap: 24px;
+  align-items: start; 
 }
 
 @media (max-width: 992px) {
   .csd-faq__list {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 }
 
 
-
 .faq-item {
   position: relative;
-  background: linear-gradient(145deg, #ffffff, #edf3fb);
-  border-radius: 22px;
-  padding: 22px 24px;
-  box-shadow:
-    0 26px 60px rgba(15,23,42,0.14),
-    0 10px 22px rgba(15,23,42,0.06);
-  transition: transform .35s ease, box-shadow .35s ease;
+  background: #FFFFFF; 
+  border: 1px solid rgba(15, 23, 42, 0.05);
+  border-radius: 20px;
+  padding: 24px 28px;
   overflow: hidden;
+  
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.03),
+    0 2px 8px rgba(15, 23, 42, 0.01);
+    
+  transition: 
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease;
 }
 
 .faq-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
+  border-color: rgba(43, 108, 176, 0.15);
   box-shadow:
-    0 44px 90px rgba(15,23,42,0.20),
-    0 16px 36px rgba(15,23,42,0.08);
+    0 20px 40px rgba(15, 23, 42, 0.08),
+    0 4px 12px rgba(15, 23, 42, 0.02);
 }
 
 
 .faq-item::after {
   content: "";
   position: absolute;
-  width: 160px;
-  height: 160px;
-  bottom: -60px;
-  right: -60px;
-  background: radial-gradient(
-    circle,
-    rgba(238, 242, 246, 0.35),
-    rgba(243, 251, 253, 0.22),
-    transparent 65%
-  );
-  filter: blur(28px);
-  opacity: 0.85;
+  width: 140px;
+  height: 140px;
+  bottom: -40px;
+  right: -40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(43, 108, 176, 0.04) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 1;
+  transition: transform 0.4s ease;
 }
 
+.faq-item:hover::after {
+  transform: scale(1.2);
+}
 
 
 .faq-question {
@@ -109,68 +113,103 @@
   border: none;
   padding: 0;
   text-align: left;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 18px;
-
+  gap: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
+
 .faq-question span:first-child {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a365d;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1A365D; 
+  line-height: 1.45;
+  transition: color 0.3s ease;
+}
+
+.faq-item:hover .faq-question span:first-child {
+  color: #2B6CB0; 
 }
 
 
 .faq-icon {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: rgba(237,183,2,0.20);
-  color: #1a365d;
-  font-size: 1.2rem;
-  font-weight: 900;
-
+  background: rgba(237, 183, 2, 0.12);
+  color: #1A365D;
+  font-size: 1.1rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-  transition: transform .3s ease, background .3s ease;
+
+.faq-item--open {
+  background: #FFFFFF;
+  border-color: rgba(237, 183, 2, 0.6); 
+  box-shadow: 0 15px 35px rgba(237, 183, 2, 0.06);
+}
+
+.faq-item--open .faq-question span:first-child {
+  color: #1A365D;
 }
 
 .faq-item--open .faq-icon {
   transform: rotate(180deg);
-  background: rgba(237,183,2,0.35);
+  background: #EDB702;
+  color: #FFFFFF; 
 }
-
 
 
 .faq-answer {
   margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(15,23,42,0.08);
+  padding-top: 16px;
+  border-top: 1px dashed rgba(15, 23, 42, 0.08); 
+  position: relative;
+  z-index: 2;
+  animation: slideDownFaq 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .faq-answer p {
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   color: #475569;
   line-height: 1.65;
   margin: 0;
 }
 
 
-.faq-item--open {
-  outline: 1px solid rgba(237,183,2,0.35);
+@keyframes slideDownFaq {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-
-
-
+@media (max-width: 576px) {
+  .faq-item {
+    padding: 20px 22px;
+  }
+  .faq-question span:first-child {
+    font-size: 0.96rem;
+  }
+  .faq-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+}
 
 
 .wds-page {
@@ -3018,59 +3057,190 @@
 
 
 
-
 .csd-final-cta {
-  background: linear-gradient(135deg, #1E5AA8 0%, #0D3A6E 100%);
+  position: relative;
+
+  background: #1E5AA8; 
+  padding: 120px 0;
   text-align: center;
+  overflow: hidden;
+
+  perspective: 2000px; 
+}
+
+.csd-final-cta::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -200px;
+  left: -150px;
+  border-radius: 50%;
+  background: #0D3A6E;
+  box-shadow: 0 20px 50px rgba(13, 58, 110, 0.3);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.csd-final-cta::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  right: -100px;
+  border-radius: 50%;
+  background: #092C56;
+  border: 4px solid rgba(0, 198, 255, 0.25);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+.csd-final-cta__content {
+  position: relative;
+  z-index: 2;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+.csd-final-cta__content .section-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #0D3A6E; 
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateZ(35px);
 }
 
 .csd-final-cta__content h2 {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 16px;
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #FFFFFF; 
+  margin-bottom: 20px;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 15px rgba(13, 58, 110, 0.4);
+  transform: translateZ(30px);
 }
 
 .csd-final-cta__content p {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.88);
-  max-width: 620px;
-  margin: 0 auto 30px;
-  line-height: 1.75;
+  font-size: 1.05rem;
+  color: #E2E8F0; 
+  max-width: 680px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+  transform: translateZ(20px);
 }
 
 .csd-final-cta__buttons {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  transform-style: preserve-3d;
+  transform: translateZ(25px);
 }
 
-.csd-final-cta__perks {
-  display: flex;
+
+.csd-final-cta__buttons .btn {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  padding: 16px 36px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  border-radius: 50px; 
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.csd-final-cta__perks span {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
+.csd-final-cta__buttons .btn-primary {
+  background: #EDB702;
+  color: #0D3A6E; 
+  border: 1px solid #EDB702;
+  box-shadow: 0 10px 25px rgba(237, 183, 2, 0.35);
 }
+
+.csd-final-cta__buttons .btn-primary:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #1E5AA8;
+  transform: translateY(-5px) translateZ(15px);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.3);
+}
+
+
+.csd-final-cta__buttons .btn-outline-light {
+  background: #FFFFFF;
+  color: #0D3A6E;
+  border: 1px solid #FFFFFF;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.csd-final-cta__buttons .btn-outline-light:hover {
+  background: #0D3A6E;
+  color: #FFFFFF;
+  border-color: #0D3A6E;
+  transform: translateY(-5px) translateZ(15px);
+  box-shadow: 0 12px 30px rgba(13, 58, 110, 0.5);
+}
+
+
+.csd-final-cta__content p[style*="marginTop"] {
+  margin-top: 28px !important;
+  font-size: 0.92rem !important;
+  color: #F1F5F9 !important; 
+  font-weight: 600;
+  transform: translateZ(15px);
+}
+
+
+.csd-final-cta__content p[style*="marginTop"] a {
+  color: #EDB702; 
+  font-weight: 800;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.csd-final-cta__content p[style*="marginTop"] a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #EDB702;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.csd-final-cta__content p[style*="marginTop"] a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 
 @media (max-width: 768px) {
-  .csd-final-cta__content h2 {
-    font-size: 1.6rem;
-  }
-  .csd-hero__stats {
-    gap: 30px;
-  }
-  .csd-hero__pills {
-    flex-direction: column;
-    align-items: center;
-  }
-  .csd-hero__pill {
-    max-width: 100%;
-    width: 100%;
-  }
+  .csd-final-cta { padding: 80px 0; perspective: none; }
+  .csd-final-cta__content h2 { font-size: 1.9rem; padding: 0 10px; }
+  .csd-final-cta__content p { font-size: 0.96rem; padding: 0 15px; }
+  .csd-final-cta__buttons { gap: 14px; padding: 0 20px; }
+  .csd-final-cta__buttons .btn { width: 100%; padding: 14px 24px; }
+  .csd-final-cta::before { width: 300px; height: 300px; top: -150px; left: -100px; }
+  .csd-final-cta::after { width: 250px; height: 250px; bottom: -100px; right: -80px; }
 }
