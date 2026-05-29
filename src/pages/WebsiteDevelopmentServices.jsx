@@ -488,6 +488,57 @@ const WebsiteDevelopmentServices = () => {
     },
   ];
 
+  /*portfolio*/
+
+  const PORTFOLIO_PROJECTS = [
+    {
+      type: "FinTech Solution",
+      title: "Financial Analysis Web Application",
+      imgSrc: fintech,
+      imgAlt: "Financial Analysis Web Application Dashboard",
+      desc: "A production grade financial management and analytics system providing real time insights, automated reporting, and secure integrations for data driven decision making.",
+      tech: ".NET Core, Angular, SQL Server, Bootstrap",
+      features: "CRM Integration, Investment Tracking, Secure Gateways",
+    },
+    {
+      type: "Enterprise SaaS",
+      title: "QllmDocs - Secure & Intelligent Document Management System",
+      imgSrc: qllmdocs,
+      imgAlt: "QllmDocs Secure Document Management System",
+      desc: "QllmSoft developed QllmDocs, a secure cloud based document management system designed for organizations needing fast access, safe storage, and real time analytics. The platform features a clean enterprise dashboard with smart insights and role based access.",
+      tech: "React, Azure Cloud Storage, .NET APIs",
+      features: "Lifecycle Automation, Role Based Access, AI Document Search",
+    },
+  ];
+
+  /*cities*/
+  const CITIES_DATA = [
+    {
+      img: lhoreimg,
+      city: "Lahore",
+      segment: "Startups & Software Houses",
+      desc: "The heart of Pakistan's tech ecosystem. We help Lahori startups build MVPs and scalable SaaS products that attract global VC funding and long term growth.",
+    },
+    {
+      img: karachiimg,
+      city: "Karachi",
+      segment: "Corporate & Large eCommerce",
+      desc: "Powering the financial capital. High concurrency enterprise portals and robust B2B platforms for Karachi's corporate giants and eCommerce leaders.",
+    },
+    {
+      img: islamabadimg,
+      city: "Islamabad",
+      segment: "Gov Tech & Digital Agencies",
+      desc: "Precision engineering for the capital. Secure, high authority web systems for government bodies, embassies, and digital first agencies.",
+    },
+    {
+      img: faislabadim,
+      city: "Sialkot & Faisalabad",
+      segment: "Export-Based Manufacturers",
+      desc: "Digitalizing the export sector. Global standard manufacturing portals that help exporters showcase capacity to international buyers.",
+    },
+  ];
+
   return (
     <>
       {/* ══════════════════════════════════════════════════
@@ -954,9 +1005,6 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>*/}
 
-
-
-
         {/*tech stack*/}
         <section
           className="section wds-tech"
@@ -1010,86 +1058,55 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
+        {/*portfolio*/}
         <section
           className="section portfolio-showcase"
           aria-labelledby="portfolio-heading"
         >
           <div className="container">
-            <div className="section-header">
-              <h2 id="portfolio-heading">Featured Web Development Projects</h2>
-              <p>
+            <div className="section-header text-center mb-5">
+              <h2 id="portfolio-heading" className="wds-portfolio__main-title">
+                Featured Web Development Projects
+              </h2>
+              <p className="wds-portfolio__main-sub">
                 Helping global clients streamline processes with intelligent
                 digital solutions.
               </p>
             </div>
 
             <div className="projects-grid">
-              <div className="project-item">
-                <div className="project-image">
-                  <img
-                    src={fintech}
-                    alt="Financial Analysis Web Application Dashboard"
-                  />
+              {PORTFOLIO_PROJECTS.map((project, i) => (
+                <div key={i} className="project-item">
+                  <div className="project-image">
+                    <img
+                      src={project.imgSrc}
+                      alt={project.imgAlt}
+                      loading="lazy"
+                    />
+                    <div className="project-image__tech-overlay"></div>
+                  </div>
+                  <div className="project-info">
+                    <span className="project-info__badge">{project.type}</span>
+                    <h3 className="project-info__title">{project.title}</h3>
+                    <p className="project-info__desc">{project.desc}</p>
+                    <ul className="project-info__meta-list">
+                      <li>
+                        <strong className="tech-label">Tech Stack:</strong>{" "}
+                        {project.tech}
+                      </li>
+                      <li>
+                        <strong className="tech-label">Key Features:</strong>{" "}
+                        {project.features}
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="project-info">
-                  <span>FinTech Solution</span>
-                  <h3>Financial Analysis Web Application</h3>
-                  <p>
-                    A production grade financial management and analytics system
-                    providing real time insights, automated reporting, and
-                    secure integrations for data driven decision making.
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Tech Stack:</strong> .NET Core, Angular, SQL
-                      Server, Bootstrap{" "}
-                    </li>
-                    <li>
-                      <strong>Key Features:</strong> CRM Integration, Investment
-                      Tracking, Secure Gateways{" "}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="project-item">
-                <div className="project-image">
-                  <img
-                    src={qllmdocs}
-                    alt="QllmDocs Secure Document Management System"
-                  />
-                </div>
-                <div className="project-info">
-                  <span>Enterprise SaaS</span>
-                  <h3>
-                    QllmDocs - Secure & Intelligent Document Management System
-                  </h3>
-                  <p>
-                    QllmSoft developed QllmDocs, a secure cloud based document
-                    management system designed for organization needing fast
-                    access, safe storage, and real time analytics. the platform
-                    features a clean enterprise dashboard with smart insigts and
-                    role based access..
-                  </p>
-                  <ul>
-                    <li>
-                      <strong>Tech Stack:</strong> React, Azure Cloud Storage,
-                      .NET APIs
-                    </li>
-                    <li>
-                      <strong>Key Features:</strong> Lifecycle Automation, Role
-                      Based Access, AI Document Search{" "}
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            CITIES  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
+        {/* cities section */}
 
         <section
           className="section wds-cities"
@@ -1097,11 +1114,11 @@ const WebsiteDevelopmentServices = () => {
           aria-labelledby="cities-heading"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="cities-heading">
+            <div className="section-title text-center mb-5">
+              <h2 id="cities-heading" className="wds-cities__main-title">
                 Website Development Services Across Pakistan
               </h2>
-              <p>
+              <p className="wds-cities__main-sub">
                 From the industrial hubs to the tech capitals, we engineer
                 digital solutions tailored to the unique economic landscape of
                 each major city in Pakistan.
@@ -1109,38 +1126,11 @@ const WebsiteDevelopmentServices = () => {
             </div>
 
             <div className="wds-cities__grid">
-              {[
-                {
-                  img: lhoreimg,
-                  city: "Lahore",
-                  segment: "Startups & Software Houses",
-                  desc: "The heart of Pakistan's tech ecosystem. We help Lahori startups build MVPs and scalable SaaS products that attract global VC funding and long term growth.",
-                },
-                {
-                  img: karachiimg,
-                  city: "Karachi",
-                  segment: "Corporate & Large eCommerce",
-                  desc: "Powering the financial capital. High concurrency enterprise portals and robust B2B platforms for Karachi's corporate giants and eCommerce leaders.",
-                },
-                {
-                  img: islamabadimg,
-                  city: "Islamabad",
-                  segment: "Gov Tech & Digital Agencies",
-                  desc: "Precision engineering for the capital. Secure, high authority web systems for government bodies, embassies, and digital first agencies.",
-                },
-                {
-                  img: faislabadim,
-                  city: "Sialkot & Faisalabad",
-                  segment: "Export-Based Manufacturers",
-                  desc: "Digitalizing the export sector. Global standard manufacturing portals that help exporters showcase capacity to international buyers.",
-                },
-              ].map((c, i) => (
+              {CITIES_DATA.map((c, i) => (
                 <article
                   key={i}
-                  className={`wds-city-card animate__animated ${
-                    citiesInView ? "animate__fadeInUp" : ""
-                  }`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  className={`wds-city-card animate__animated ${citiesInView ? "animate__fadeInUp" : ""}`}
+                  style={{ animationDelay: `${i * 0.08}s` }}
                 >
                   <div className="wds-city-card__imgWrap">
                     <img
@@ -1387,9 +1377,7 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>*/}
 
-        {/* ══════════════════════════════════════════════════
-            WHY CHOOSE US  —  H2 + H3s
-        ══════════════════════════════════════════════════ */}
+
         <section
           className="section wds-why"
           ref={whyRef}
@@ -1411,33 +1399,33 @@ const WebsiteDevelopmentServices = () => {
               {[
                 {
                   num: "01",
-                  title: "Bespoke Architecture — Zero Template Bloat",
-                  desc: "Every line of code is written to support your specific business logic using .NET, React, and Angular — ensuring a lightweight, rankable digital asset with no unnecessary dependencies.",
+                  title: "Bespoke Architecture , Zero Template Bloat",
+                  desc: "Every line of code is written to support your specific business logic using .NET, React, and Angular  ensuring a lightweight, rankable digital asset with no unnecessary dependencies.",
                 },
                 {
                   num: "02",
                   title: "Verified Global Track Record",
-                  desc: "Our expertise is validated by a history of successful international deliveries. We maintain top tier ratings on Upwork and Freelancer.com, serving clients across the world ",
+                  desc: "Our expertise is validated by a history of successful international deliveries. We maintain top tier ratings on Upwork and Freelancer.com, serving clients across the world.",
                 },
                 {
                   num: "03",
-                  title: "Enterprise-Grade Security (OWASP)",
+                  title: "Enterprise Grade Security (OWASP)",
                   desc: "Security is not an afterthought. We implement OWASP best practices, SSL encryption, and secure API integrations to protect your data and your customers.",
                 },
                 {
                   num: "04",
-                  title: "Performance-First Engineering",
+                  title: "Performance First Engineering",
                   desc: "Our focus on Core Web Vitals guarantees fast loading, mobile responsive interfaces that lower bounce rates and improve organic search visibility on Google Pakistan.",
                 },
                 {
                   num: "05",
-                  title: "Full-Lifecycle Accountability",
-                  desc: "From initial blueprinting to post launch maintenance — we manage the entire SDLC. We don't hand over a site and disappear. We provide 30 day hyper care to ensure operational stability.",
+                  title: "Full Lifecycle Accountability",
+                  desc: "From initial blueprinting to post launch maintenance we manage the entire SDLC. We don't hand over a site and disappear. We provide 30 day hyper care to ensure operational stability.",
                 },
               ].map((w, i) => (
                 <article
-                  key={i}
-                  className={`why-card animate__animated ${whyInView ? "animate__fadeInUp" : ""}`}
+                  key={w.num}
+                  className={`why-card ${whyInView ? "animate__animated animate__fadeInUp" : ""}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   <span className="wds-why__num" aria-hidden="true">
@@ -1458,8 +1446,8 @@ const WebsiteDevelopmentServices = () => {
                 Independently Verified on Upwork &amp; Freelancer
               </h3>
               <p>
-                Our reputation is backed by third party independent reviews —
-                not just what we say about ourselves.
+                Our reputation is backed by third party independent reviews not
+                just what we say about ourselves.
               </p>
               <div className="wds-why__platforms">
                 <a
@@ -1496,18 +1484,6 @@ const WebsiteDevelopmentServices = () => {
             Client Reviews, QllmSoft Software Development Company Pakistan
           </h2>
           <TestimonialSection />
-
-          <div style={{ textAlign: "center", marginTop: "30px" }}>
-            <a
-              href="https://www.freelancer.com/u/mrprogrmmr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-dark"
-              aria-label="View all QllmSoft verified client reviews on Freelancer"
-            >
-              View All Verified Reviews on Freelancer
-            </a>
-          </div>
         </section>
 
         {/* ══════════════════════════════════════════════════
