@@ -63,9 +63,12 @@ body {
   line-height: 1.7;
   color: var(--text-dark);
   background-color: var(--bg-white);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -367,4 +370,62 @@ button:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark-blue);
+}
+
+
+
+/*global issue*/
+html, body, #root, .App, main {
+  pointer-events: auto !important;
+  overflow-x: clip !important; 
+}
+
+
+div[class*="backdrop"], 
+div[class*="overlay"], 
+div[class*="modal-bg"],
+[data-debug-wrapper="true"] {
+  pointer-events: none !important; 
+  z-index: -9999 !important;
+  display: none !important; 
+}
+
+
+*::before,
+*::after {
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+a, 
+button, 
+.btn,
+nav,
+footer,
+header,
+input,
+select,
+textarea,
+.faq-question,
+[role="button"],
+svg,
+path {
+  pointer-events: auto !important; 
+  cursor: pointer !important;
+  position: relative !important;
+  z-index: 9999999 !important; 
+}
+
+
+@media (max-width: 991px) {
+  nav, [class*="menu"], [class*="nav"], [class*="header"] {
+    pointer-events: auto !important;
+    z-index: 99999999 !important;
+  }
+  
+  * {
+    perspective: none !important;
+    transform: none !important;
+    transform-style: flat !important;
+  }
 }
