@@ -48,7 +48,7 @@ export const SERVICES = [
     desc: "Scalable eLearning platforms built for digital education.",
     link: "/education-software-development-pakistan",
     image: EducationSoftware,
-    categories: ["custom-software", "mobile", "website"]
+    categories: ["custom-software", "mobile", "website","servicePage"]
   },
   {
     id: "outsource",
@@ -56,7 +56,7 @@ export const SERVICES = [
     desc: "Offshore development models for global scaling.",
     link: "/outsource-software-development-to-pakistan",
     image: OutSourceImg,
-    categories: ["custom-software", "api"]
+    categories: ["custom-software", "api","servicePage"]
   },
 
   //WEBSITE 
@@ -66,7 +66,7 @@ export const SERVICES = [
     desc: "High‑performance business websites built to convert.",
     link: "/website-development-services",
     image: website,
-    categories: ["website"]
+    categories: ["website","servicePage","servicePage"]
   },
 
   // MOBILE ONLY 
@@ -76,7 +76,7 @@ export const SERVICES = [
     desc: "Android & iOS apps with smooth UX and scalable backend.",
     link: "/mobile-app-development",
     image: MobileappImg,
-    categories: ["mobile"]
+    categories: ["mobile","servicePage"]
   },
   {
     id: "ai-solutions",
@@ -84,14 +84,14 @@ export const SERVICES = [
     desc: "Custom AI integrations and machine learning models for business automation.",
     link: "/ai-powered-software-solutions",
     image: AIImg,
-    categories: ["custom-software", "website", "mobile"]
+    categories: ["custom-software", "website", "mobile","servicePage"]
   },{
     id: "real-estate",
     title: "Real Estate Software",
     desc: "Property management and CRM solutions for the modern real estate market.",
     link: "/real-estate-software-development",
     image: realstateimg,
-    categories: ["custom-software", "website", "mobile"]
+    categories: ["custom-software", "website", "mobile","servicePage"]
   },
   {
     id: "legacy-modernization",
@@ -99,15 +99,16 @@ export const SERVICES = [
     desc: "Transforming outdated systems into high performance cloud native apps.",
     link: "/legacy-system-modernization-services",
     image: LegacyModernization,
-    categories: ["custom-software", "website", "api"]
+    categories: ["custom-software", "website", "api","servicePage"]
   },
+
   {
     id: "outsource-api",
     title: "Outsource API Dev",
     desc: "Specialized API engineering and third party system integrations.",
     link: "/outsource-api-development-to-pakistan",
     image: apiimg,
-    categories: ["api"]
+    categories: ["api","servicePage"]
   },
   {
     id: "web-app-services",
@@ -115,7 +116,7 @@ export const SERVICES = [
     desc: "Custom enterprise grade web applications with scalable architecture.",
     link: "/web-application-development-services",
     image: webapp,
-    categories: ["website"]
+    categories: ["website","servicePage"]
   },
   {
     id: "website-cost",
@@ -131,7 +132,7 @@ export const SERVICES = [
     desc: "Access senior ASP.NET Core experts for enterprise level security.",
     link: "/hire-dotnet-developers-pakistan",
     image: dotnet,
-    categories: ["custom-software", "website"]
+    categories: ["custom-software", "website","servicePage"]
   },
   {
     id: "hire-react",
@@ -139,7 +140,7 @@ export const SERVICES = [
     desc: "Dedicated frontend experts for building fast, reactive interfaces.",
     link: "/hire-react-developers-pakistan",
     image: react,
-    categories: ["website", "custom-software"]
+    categories: ["website", "custom-software","servicePage"]
   },
   {
     id: "hire-angular",
@@ -147,6 +148,6 @@ export const SERVICES = [
     desc: "Senior Angular engineers for complex single page applications.",
     link: "/hire-angular-developers-pakistan",
     image: angular,
-    categories: ["website", "custom-software"]
+    categories: ["website", "custom-software","servicePage"]
   }
 ];
