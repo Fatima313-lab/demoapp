@@ -160,11 +160,11 @@ export const servicesData = [
     description: "We develop scalable custom web applications using modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
     image: CustomWebImg,
     features: [
-      "• Modern Front & Backend Frameworks",
-      "• SaaS platform development",
-      "• Enterprise web portals",
-      "• Cloud-ready architectures",
-      "• High-performance scalable systems"
+      "Modern Front & Backend Frameworks",
+      "SaaS platform development",
+      "Enterprise web portals",
+      "Cloud ready architectures",
+      "High performance scalable systems"
     ],
     link: "/web-application-development-services"
   },
@@ -174,10 +174,10 @@ export const servicesData = [
     description: "We create modern, responsive, and user-focused websites with premium UI/UX design principles. Our solutions are optimized for performance, mobile responsiveness, user engagement, and seamless digital experiences across all devices.",
     image: webDesign,
     features: [
-      "• Modern UI/UX design systems",
-      "• Fully responsive web layouts",
-      "• Mobile-first user experience",
-      "• Interactive & conversion-focused interfaces"
+      "Modern UI/UX design systems",
+      "Fully responsive web layouts",
+      "Mobile first user experience",
+      "Interactive & conversion-focused interfaces"
     ],
     link: "/responsive-web-design-services"
   },
@@ -185,14 +185,14 @@ export const servicesData = [
     id: 3,
     name: "Mobile App Development (iOS & Android)",
     slug: "mobile-app-development",
-    description: "Our mobile app development services deliver high-performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
+    description: "Our mobile app development services deliver high performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
     image: MobileAppDevelopment,
     features: [
-      "• iOS and Android app development",
-      "• Cross-platform Flutter apps",
-      "• React Native mobile applications",
-      "• Secure mobile backend APIs",
-      "• Performance-optimized mobile UI/UX"
+      "iOS and Android app development",
+      "Cross platform Flutter apps",
+      "React Native mobile applications",
+      "Secure mobile backend APIs",
+      "Performance optimized mobile UI/UX"
     ],
     link: "/mobile-app-development"
   },
@@ -203,12 +203,13 @@ export const servicesData = [
     description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
     image: CustomSoftwareDevelopment,
     features: [
-      "• ERP & CRM software development",
-      "• Business process automation",
-      "• Enterprise dashboards",
-      "• Secure multi-user systems",
-      "• Integration with third-party tools"
+      "ERP & CRM software development",
+      "Business process automation",
+      "Enterprise dashboards",
+      "Secure multi-user systems",
+      "Integration with third-party tools"
     ],
+    link: "/custom-software-development-services"
     
   },
   {
@@ -218,12 +219,14 @@ export const servicesData = [
     description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
     image: APIsoftwareImg,
     features: [
-      "• REST/SOAP/GraphQL API development",
-      "• Third-party API integration",
-      "• Secure authentication systems",
-      "• Payment gateway integration",
-      "• Real-time data synchronization"
-    ]
+      "REST/SOAP/GraphQL API development",
+      "Third party API integration",
+      "Secure authentication systems",
+      "Payment gateway integration",
+      "Real time data synchronization"
+    ],
+    link: "/api-development-services"
+    
   },
   {
     id: 6,
@@ -231,12 +234,14 @@ export const servicesData = [
     description: "We modernize outdated legacy systems by migrating them to modern architectures such as ASP.NET Core and cloud-ready environments. This improves performance, scalability, and long-term maintainability.",
     image: systemModernization,
     features: [
-      "• Legacy application migration",
-      "• ASP.NET Core modernization",
-      "• Cloud infrastructure migration",
-      "• Codebase refactoring",
-      "• Performance optimization"
-    ]
+      "Legacy application migration",
+      "ASP.NET Core modernization",
+      "Cloud infrastructure migration",
+      "Codebase refactoring",
+      "Performance optimization"
+    ],
+    link: "/legacy-software-modernization"
+
   },
   {
     id: 7,
@@ -244,12 +249,14 @@ export const servicesData = [
     description: "We help businesses grow their online presence through data-driven digital marketing and SEO strategies. From improving search engine rankings to generating qualified leads, our approach focuses on measurable results and long-term growth.",
     image: CustomSoftwareDevelopment,
     features: [
-      "• Search engine optimization (SEO)",
-      "• On-page & technical SEO",
-      "• Keyword research & strategy",
-      "• Social media marketing",
-      "• Performance tracking & analytics"
-    ]
+      "Search engine optimization (SEO)",
+      "On page & technical SEO",
+      "Keyword research & strategy",
+      "Social media marketing",
+      "Performance tracking & analytics"
+    ],
+    link: "/digital-marketing-seo-services"
+
   }
 ];
 

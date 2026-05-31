@@ -65,31 +65,31 @@ const Footer = () => {
               <h4 className="footer-title">Our Services</h4>
               <ul className="footer-links">
                 <li>
-                  <Link to="/services#website-development-services">
+                  <Link to="/website-development-services">
                     <ArrowRight size={14} /> {/* <-- ADDED ArrowRight */}
                     Web Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#mobile-app-development">
+                  <Link to="/mobile-app-development">
                     <ArrowRight size={14} />
                     Mobile App Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#enterprise-custom-software-development">
+                  <Link to="/custom-software-development-services">
                     <ArrowRight size={14} />
                     Desktop Applications
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#api-development-services">
+                  <Link to="/api-development-services">
                     <ArrowRight size={14} />
                     API Development
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services#custom-software-development-services">
+                  <Link to="/custom-software-development-services">
                     <ArrowRight size={14} />
                     Custom Software
                   </Link>
