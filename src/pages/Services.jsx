@@ -588,7 +588,7 @@ const TrustBand = () => (
           </span>
         </div>
       ))}
-    </div>
+    </div>                               
   </section>
 );
 
