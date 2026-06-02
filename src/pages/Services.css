@@ -333,11 +333,13 @@ perspective: 1600px;
   height: 100%;
   background: rgba(15, 42, 74, 0.88) !important;
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: flex !important;
   align-items: center;
   justify-content: center;
-  opacity: 0 !important;
-  z-index: 10;
+  opacity: 0;
+  z-index: 12;
+  pointer-events: auto;
   transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -353,6 +355,8 @@ perspective: 1600px;
   box-shadow: 0 6px 20px rgba(237, 183, 2, 0.35);
   transform: translateY(20px);
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s ease, color 0.2s ease;
+  z-index: 14;
+  pointer-events: auto;
 }
 
 .overlay-btn:hover {

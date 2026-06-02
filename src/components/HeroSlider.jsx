@@ -101,6 +101,7 @@ const HeroSlider = () => {
         loop
         playsInline
         preload="metadata"
+        
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
