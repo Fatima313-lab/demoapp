@@ -412,7 +412,7 @@ svg,
 path {
   pointer-events: auto !important; 
   cursor: pointer !important;
-  position: relative !important;
+
   z-index: 9999999 !important; 
 }
 
