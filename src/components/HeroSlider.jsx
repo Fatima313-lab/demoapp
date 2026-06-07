@@ -111,19 +111,20 @@ const HeroSlider = () => {
 
       {/* Content */}
       <div className="hero-content">
-        <h1 className="hero-title">
-        Custom Software, AI Integration & Digital Solutions — Built in Pakistan, Trusted Worldwide
-        </h1>
+  <h1 className="hero-title">
+    Custom Software Development and AI Integration for Businesses Worldwide
+  </h1>
 
-        <p className="hero-subtitle">
-          QllmSoft build secure, scalable enterprise web applications, internal
-          business systems, and high‑performance APIs for teams in Pakistan,& Worldwide.
-        </p>
+  <p className="hero-subtitle">
+    QllmSoft builds secure, scalable enterprise web applications, internal
+    business systems, mobile apps, and AI-powered digital solutions for
+    growing businesses across four continents.
+  </p>
 
-        <Link to="/Services" className="hero-btn">
-          Explore Our Services
-        </Link>
-      </div>
+  <Link to="/Services" className="hero-btn">
+    Explore Our Services
+  </Link>
+</div>
     </section>
   );
 };
