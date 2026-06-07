@@ -24,12 +24,13 @@
 ══════════════════════════════════════════════════════ */
 .csd-hero {
   overflow: hidden;
-perspective: 1200px;
+  perspective: 1200px;
   padding:100px 0 80px;
   min-height: 55vh;
   text-align: center;
   color: #ffffff;
   position: relative;
+  z-index: 1 !important;
 }
 .csd-hero::before {
   content: "";

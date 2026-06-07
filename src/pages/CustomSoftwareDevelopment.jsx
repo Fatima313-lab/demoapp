@@ -62,9 +62,9 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Software Engineering",
-  name: "Custom Software Development Services in Pakistan",
+  name: "Custom Software Engineering & Enterprise Cloud Solutions | QllmSoft",
   description:
-    "QllmSoft provides end-to-end custom software development in Pakistan including web apps, mobile apps, desktop software, cloud solutions, AI integrations, and REST APIs for startups and enterprises worldwide.",
+    "QllmSoft provides end-to-end custom software development including web apps, mobile apps, desktop software, cloud solutions, AI integrations, and REST APIs for startups and enterprises worldwide.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -155,28 +155,28 @@ const schemaBreadcrumb = {
 /* ─── FAQ data (drives both UI + JSON-LD) ─────────────────── */
 const FAQ_DATA = [
   {
-   q: "What specialized custom software development services does QllmSoft provide?",
-    a: "As a leading software house in Pakistan, QllmSoft provides comprehensive engineering services including enterprise web applications (.NET & React), cross-platform mobile apps (Flutter/React Native), and robust Windows desktop solutions. We specialize in Azure based cloud migration and embedding AI capabilities using OpenAI and ML.NET to automate complex business workflows.",
+    q: "What specialized custom software engineering capabilities does QllmSoft provide?",
+    a: "Operating from our highly secure global delivery center, QllmSoft designs and deploys mission critical custom applications. Our capabilities cover complete enterprise web systems (ASP.NET Core & React/Angular blueprints), cross platform mobile app ecosystems (Flutter/React Native), cloud native application modernizations on Microsoft Azure, and dedicated machine learning integrations utilizing custom OpenAI API routing and ML.NET pipelines.",
   },
   {
-    q: "Which industries does QllmSoft serve?",
-    a: "We build specialized software for finance and banking, healthcare (HIPAA-compliant), real estate, education and eLearning, logistics and supply chain, SaaS product companies, and general enterprise and SMB clients worldwide. Our industry knowledge means we build for your compliance and operational context, not just your feature list.",
+    q: "Which corporate domains and industries does QllmSoft architect for?",
+    a: "We engineer production-ready architectures across highly regulated verticals including FinTech and banking networks, healthcare ecosystems requiring strict HIPAA data compliance pipelines, supply chain/logistics software, multi-tenant enterprise SaaS startups, and distributed SMB environments. Our engineering squad aligns architectures directly with your governance frameworks, security schemas, and operational workflows.",
   },
   {
-   q: "What is the average cost of hiring a software development company in Pakistan?",
+    q: "What is the average cost of hiring a software development company?",
     a: "While project costs vary by complexity, QllmSoft offers premium offshore value. Web based systems typically start at $1,000, mobile solutions at $1,200, and enterprise desktop tools at $1,500. We provide transparent, milestone based pricing to ensure you get maximum ROI without the overhead costs of Western agencies.",
   },
   {
-    q: "What technology stack does QllmSoft use for custom software development?",
-    a: "Our primary stack is centered on the Microsoft .NET ecosystem — ASP.NET Core for backend, React and Angular for frontend, SQL Server for data, Flutter and React Native for mobile, and Microsoft Azure for cloud hosting. We also work with ML.NET and OpenAI APIs for AI-powered features.",
+    q: "What technical infrastructure stack does your engineering team deploy?",
+    a: "Our core engineering ecosystem centers on the Microsoft .NET framework for ultra secure backend systems, paired with React or Angular for high performance frontend interfaces. Data tiers utilize Microsoft SQL Server and high availability cloud storage structures, hosted natively on resilient Microsoft Azure cloud environments. Advanced AI layers are deployed via customized ML.NET algorithms and state managed OpenAI microservices.",
   },
   {
-    q: "Do you provide post-launch support and maintenance for custom software?",
-    a: "Yes — every engagement includes dedicated post-launch support. We provide bug fixes, performance monitoring, security patches, and feature enhancements after deployment. Long-term maintenance contracts are available for businesses that want a reliable ongoing software partner.",
+    q: "Do your enterprise software deployments include long-term system maintenance?",
+    a: "Yes. Every custom deployment is protected by a dedicated post-launch monitoring window covering automated error tracking, runtime performance tuning, security patching, and core infrastructure optimizations. We also establish structured Service Level Agreements (SLAs) and ongoing system maintenance contracts for enterprises requiring continuous development agility.",
   },
   {
-    q: "Can QllmSoft work with clients in the US, UK, and Gulf remotely?",
-    a: "Absolutely. The majority of our clients are based in the United States, United Kingdom, UAE, and Saudi Arabia. We operate as a reliable offshore software development partner with flexible engagement models, real-time project tracking, and strong English communication.",
+    q: "How does QllmSoft manage cross-border software delivery with global clients?",
+    a: "The vast majority of our partners operate out of the United States, United Kingdom, UAE, and Saudi Arabia. We ensure seamless cross-border delivery through overlapping timezone availability, structured Agile sprint updates, secure remote environment deployments, and fluid, native level English technical documentation.",
   },
 ];
 
@@ -263,16 +263,16 @@ const CustomSoftwareDevelopment = () => {
       <Helmet>
         {/* ── Primary ───────────────────────────────── */}
         <title>
-          Custom Software Development Services in Pakistan | QllmSoft
+          Custom Software Engineering & Enterprise Cloud Solutions | QllmSoft
         </title>
         <meta
           name="description"
-          content="QllmSoft is Pakistan's trusted custom software development company. We build secure, scalable web apps, mobile apps, desktop software, and AI-powered solutions for startups and enterprises in the US, UK, UAE, and globally."
-        />
+         content="QllmSoft engineers production ready custom software architectures, multi tenant SaaS environments, and mobile platforms for global startups and enterprises across the globe."
+  />
         <meta
           name="keywords"
-          content="custom software development Pakistan, software development company Pakistan, web application development Pakistan, mobile app development Pakistan, ASP.NET Core development Pakistan, offshore software development Pakistan, custom software development services, enterprise software development Pakistan"
-        />
+         content="custom software engineering, enterprise software architecture, full stack application development, premium software agency, cloud native software development, specialized software delivery center, cross border software development services"
+  />
         <meta name="author" content="QllmSoft" />
         <meta
           name="robots"
@@ -286,44 +286,36 @@ const CustomSoftwareDevelopment = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Custom Software Development Services in Pakistan | QllmSoft"
+          content="Custom Software Engineering & Enterprise Cloud Solutions | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Pakistan's trusted custom software development company building secure, scalable web, mobile, desktop, and AI-powered software for global clients."
-        />
+         content="Elite software engineering center providing secure, high availability custom applications and cloud systems for international enterprise workloads."
+  />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft — Custom Software Development Company Pakistan"
-        />
+          content="QllmSoft - Global Custom Software Engineering & Architecture"
+  />
         <meta property="og:locale" content="en_US" />
 
         {/* ── Twitter Card ──────────────────────────── */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Custom Software Development Services in Pakistan | QllmSoft"
-        />
+          content="Custom Software Engineering & Enterprise Cloud Solutions | QllmSoft"
+  />
         <meta
           name="twitter:description"
-          content="Pakistan's trusted custom software development company building web, mobile, desktop, and AI software for global clients."
-        />
+          content="Elite software engineering center providing secure, high availability custom applications and cloud systems for international enterprise workloads."
+  />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft — Custom Software Development Company Pakistan"
+          content="QllmSoft - Global Custom Software Engineering & Architecture"
         />
-
-
-<meta name="geo.region" content="PK-PB" />
-<meta name="geo.placename" content="Lalamusa" />
-<meta name="geo.position" content="32.7015;73.9605" />
-<meta name="ICBM" content="32.7015, 73.9605" />
-
-
 
         {/* ── JSON-LD Structured Data ────────────────── */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -343,27 +335,27 @@ const CustomSoftwareDevelopment = () => {
         <header className="csd-hero">
           <div className="container">
             <p className="csd-hero__eyebrow">
-              Pakistan's Trusted Software Development Partner
-            </p>
-
+             Enterprise Software Engineering & Cloud Infrastructure Partner
+      </p>
             {/* ✅ ONE H1 */}
             <h1 className="csd-hero__title">
-              Custom Software Development
-              <br />
-              Services in Pakistan
-            </h1>
+             Custom Software Development 
+                 <br />
+          & Digital System Architecture
+         </h1>
 
-          <p className="csd-hero__sub">
-      We engineer high performance <strong>enterprise solutions</strong> tailored to your unique business workflows. 
-      From specialized <Link to="/finance-management-system" className="inline-link">Finance Management Systems</Link> to 
-      secure web and mobile ecosystems, we help organizations scale with reliable, AI driven architectures.
-    </p>
+         <p className="csd-hero__sub">
+        We engineer high performance, production ready <strong>enterprise solutions</strong> tailored 
+        to complex business workflows. Operating from our highly secure technology delivery center, 
+        we deploy scalable web systems, cross platform mobile ecosystems, and intelligence driven data layers 
+        designed for international scale.
+      </p>
 
             <div className="csd-hero__buttons">
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Get a free custom software development consultation from QllmSoft Pakistan"
+                aria-label="Get a free custom software development consultation from QllmSoft "
               >
                 Start your Project
               </Link>
@@ -379,24 +371,24 @@ const CustomSoftwareDevelopment = () => {
             <div className="csd-hero__pills" aria-label="Core service areas">
               {[
                 {
-                  icon: "🚀",
+                  icon: "bi-cpu",
                   title: "Web Application Development",
                   desc: "ASP.NET Core, React, Angular — from SaaS platforms to enterprise dashboards.",
                 },
                 {
-                  icon: "📱",
+                  icon: "bi-phone",
                   title: "Hybrid Mobile Apps",
                   desc: "iOS & Android apps with Flutter and React Native.",
                 },
                 {
-                  icon: "🤖",
+                  icon: "bi-robot",
                   title: "AI Powered Software Solutions",
                   desc: "ML.NET and OpenAI-powered intelligent integrations.",
                 },
               ].map((p) => (
                 <div key={p.title} className="csd-hero__pill">
                   <span className="pill-icon" aria-hidden="true">
-                    {p.icon}
+                  <i className={`bi ${p.icon}`} style={{ fontSize: "1.4rem" }}></i>
                   </span>
                   <div>
                     <strong>{p.title}</strong>
@@ -435,7 +427,7 @@ const CustomSoftwareDevelopment = () => {
         >
          <div className="container">
            
-            *<div className="about-content">
+          <div className="about-content">
               <article
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
@@ -517,58 +509,58 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">What We Build</p>
             <div className="section-title">
               <h2 id="services-heading">
-              High Performance Software Engineering <span>in Pakistan</span>
-              </h2>
+             Enterprise Systems Engineering & <span>Digital Transformation</span>
+      </h2>
               <p>
-               From initial discovery to post launch scaling, we deliver end to end 
-        software excellence. Our team doesn't just build apps; we engineer 
-        <strong> robust business assets</strong>.
-              </p>
+             From initial requirements mapping to cross border deployment pipelines, we deliver 
+        end-to-end software integrity. Our architects don't just build scripts; we engineer 
+        <strong> resilient operational assets</strong> designed for predictable global scaling.
+      </p>
             </div>
 
             <div className="csd-services__grid">
               {[
                 {
-                  icon: "🌐",
+                  icon: "bi-globe",
                   title: "Web Application Development",
                   desc: "We build fast, scalable, and secure web platforms using ASP.NET Core, React, and Angular — from internal admin dashboards and B2B portals to complete SaaS products with multi-tenant architecture.",
                   link: "/website-development-services",
-                  aria: "Learn about web application development services in Pakistan",
+                  aria: "Learn about web application development services",
                 },
                 {
-                  icon: "📱",
+                  icon: "bi-phone",
                   title: "Mobile App Development",
                   desc: "Cross platform iOS and Android apps built with Flutter and React Native that feel native, perform reliably, and sync seamlessly with your existing web and backend systems.",
                   link: "/mobile-app-development",
-                  aria: "Learn about mobile app development services in Pakistan",
+                  aria: "Learn about mobile app development services ",
                 },
                 {
-                  icon: "🖥️",
+                  icon: "bi-laptop",
                   title: "Desktop Software Development",
                   desc: "Reliable, secure Windows desktop applications tailored for enterprise environments — whether it's document management, ERP tools, point of sale systems, or complex data entry workflows.",
                   link: "/services",
                   aria: "Learn about desktop software development services",
                 },
                 {
-                  icon: "☁️",
+                  icon: "bi-cloud",
                   title: "Cloud Application Development",
                   desc: "We design and deploy cloud native applications on Microsoft Azure, optimizing for uptime, resource efficiency, auto scaling, and cost control — built for businesses that cannot afford downtime.",
                   link: "/services",
                   aria: "Learn about cloud application development on Microsoft Azure",
                 },
                 {
-                  icon: "🤖",
+                  icon: "bi-robot",
                   title: "AI & Machine Learning Solutions",
                   desc: "Using ML.NET and OpenAI APIs, we embed intelligent features into your software — predictive analytics, document automation, chatbots, and smart workflows that reduce manual effort.",
                   link: "/ai-powered-software-solutions",
                   aria: "Learn about AI and machine learning software solutions",
                 },
                 {
-                  icon: "🔗",
+                  icon: "bi-link",
                   title: "API Development & Integration",
                   desc: "We build custom REST and GraphQL APIs and integrate third party platforms — CRMs, ERPs, payment gateways, and communication tools — so your systems communicate without friction.",
                   link: "/api-development-services",
-                  aria: "Learn about API development and integration services in Pakistan",
+                  aria: "Learn about API development and integration services",
                 },
               ].map((s, i) => (
                 <article
@@ -579,7 +571,7 @@ const CustomSoftwareDevelopment = () => {
                   itemType="https://schema.org/Service"
                 >
                   <span className="csd-service-card__icon" aria-hidden="true">
-                    {s.icon}
+                    <i className={`bi ${s.icon}`} style={{ fontSize: "1.4rem" }}></i>
                   </span>
                   <h3 className="csd-service-card__title" itemProp="name">
                     {s.title}
@@ -1041,7 +1033,7 @@ const CustomSoftwareDevelopment = () => {
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Software Development Company Pakistan
+            Client Reviews, QllmSoft Software Development Company 
           </h2>
           <TestimonialSection />
         
@@ -1059,10 +1051,10 @@ const CustomSoftwareDevelopment = () => {
             </div>
         </section>
 
-        
-           <FounderNote 
-  title="Expert Leadership, Collective Excellence"
-  message="At QllmSoft, I lead a hand picked team of senior developers and engineers. While I personally oversee the high level architecture of every project, our collective strength lies in our collaborative approach. We don't just write code; as a team, we engineer solutions that align with your business goals, ensuring every module we deliver is backed by our shared commitment to quality."
+      
+<FounderNote 
+  title="Architectural Governance & Elite Code Hygiene"
+  message="At QllmSoft, I lead a dedicated cell of senior software architects and systems engineers. Rather than delegating critical decisions to account managers, I personally direct and audit the high level architecture of every ecosystem we deploy. Every pull request undergoes strict peer review against enterprise benchmarks ensuring distributed load tolerance, clean code design patterns, and total security isolation. We do not simply assemble features; we engineer resilient, asset-grade digital infrastructure designed to perform seamlessly under heavy global workloads."
 />
 
         {/* ══════════════════════════════════════════════════
@@ -1078,8 +1070,8 @@ const CustomSoftwareDevelopment = () => {
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
               <h2 id="faq-heading">
-                Frequently Asked Questions About Custom Software Development in
-                Pakistan
+                Frequently Asked Questions About Custom Software Development
+               
               </h2>
               <p>
                 Can't find your answer here? Reach out to us directly — we
@@ -1126,7 +1118,7 @@ const CustomSoftwareDevelopment = () => {
                 <Link
                   to="/contact"
                   className="btn btn-primary"
-                  aria-label="Get your free custom software development consultation from QllmSoft Pakistan"
+                  aria-label="Get your free custom software development consultation from QllmSoft"
                 >
                   Get Your Free Consultation
                 </Link>
