@@ -232,6 +232,7 @@
   text-align: center;
   color: #ffffff;
   position: relative;
+  z-index: 1 !important;
 }
 
 .wds-hero::after {
