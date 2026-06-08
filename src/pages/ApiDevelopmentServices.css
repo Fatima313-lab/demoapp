@@ -43,6 +43,7 @@
   padding: 120px 0 80px;
   color: #fff;
   background: linear-gradient(135deg, #011624, #000d29b6 , rgb(0, 7, 29) );
+  z-index: 1 !important;
   
 }
 
