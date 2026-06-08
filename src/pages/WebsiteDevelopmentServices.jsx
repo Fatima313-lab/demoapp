@@ -48,7 +48,7 @@ const schemaOrg = {
     "@type": "ContactPoint",
     telephone: "+92-334-8229288",
     contactType: "customer service",
-   areaServed: ["US", "GB", "AE", "SA", "PK"],
+    areaServed: ["US", "GB", "AE", "SA", "PK"],
     availableLanguage: "English",
   },
   address: {
@@ -91,19 +91,22 @@ const schemaService = {
       name: "Custom Project, Core Web Infrastructure",
       priceCurrency: "USD",
       price: "50000",
-      description: "Custom coded, production ready corporate web engines with native technical SEO optimization.",
+      description:
+        "Custom coded, production ready corporate web engines with native technical SEO optimization.",
     },
     {
       "@type": "Offer",
       name: "Scale Model ,Premium SaaS & E Commerce",
       priceCurrency: "USD",
       price: "6000",
-      description: "Cloud native architectures featuring high throughput transaction routing and multi tenant database system.",
+      description:
+        "Cloud native architectures featuring high throughput transaction routing and multi tenant database system.",
     },
     {
       "@type": "Offer",
       name: "Enterprise , Dedicated Engineering Squads",
-      description: "Custom architectural deployment retainers managed by solutions architects and senior technical leads.",
+      description:
+        "Custom architectural deployment retainers managed by solutions architects and senior technical leads.",
     },
   ],
 };
