@@ -871,6 +871,38 @@ p{
   .main-screen { transform: none; }
 }
 
+
+
+
+.wds-portfolio__pdf-banner.card {
+  max-width: 800px;
+  background-color: #0f172a !important;
+  margin-top: 40px;
+}
+
+.wds-portfolio__pdf-banner .mob-dossier-body {
+  max-width: 750px;
+  background-color: transparent; 
+  padding-top: 1.5rem;          
+}
+
+.wds-portfolio__pdf-banner .mob-dossier-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+@media (max-width: 576px) {
+  .wds-portfolio__pdf-banner.card {
+    padding: 2rem 1rem !important; 
+  }
+  
+  .wds-portfolio__pdf-banner .mob-dossier-body {
+    padding-top: 0;
+  }
+}
+
+
 /* process */
 
 .mob-process {

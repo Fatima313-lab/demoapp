@@ -724,19 +724,15 @@ const MobileAppDevelopment = () => {
           </div>
           <div
             className="wds-portfolio__pdf-banner card  text-white p-5 text-center border-0 shadow mx-auto"
-            style={{ maxWidth: "800px", background: "#0f172a" }}
+        
           >
             <div
-              className="card-body mx-auto mt-5"
-              style={{ maxWidth: "750px", background: "#0f172a" }}
+              className="card-body mx-auto mob-dossier-body"
+             
             >
-              <div
-                className="mb-3 text-warning"
-                style={{ fontSize: "2.5rem" }}
-                aria-hidden="true"
-              >
-                <i className="bi bi-file-earmark-pdf-fill"></i>
-              </div>
+            <div className="mob-dossier-icon text-warning" aria-hidden="true">
+      <i className="bi bi-file-earmark-pdf-fill"></i>
+    </div>
 
               <h3 className="h3 text-white mb-3 fw-bold">
                 Download Our Enterprise Mobile Engineering Capability Dossier
