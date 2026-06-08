@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { X, Send, MessageCircle, Loader } from "lucide-react";
+import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
 	sendMessageToGPT,
 	predefinedQuestions,
@@ -139,10 +140,15 @@ const ChatBot = () => {
 						{messages.length === 1 ? (
 							<div className="chatbot-welcome-section">
 								<div className="welcome-header">
-									<div className="welcome-avatar">S</div>
+									<div className="welcome-avatar">
+										<img src={chatbot} alt="QllmSoft ChatBot Avatar" />
+									</div>
 									<div className="welcome-text">
 										<h4>QllmSoft Assistant</h4>
-										<p>Ask me about our services, technologies, or projects</p>
+										<p>
+											Feel free to ask me anything about our services,
+											technologies, or past projects.
+										</p>
 									</div>
 								</div>
 							</div>
