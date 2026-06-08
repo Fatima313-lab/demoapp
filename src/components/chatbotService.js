@@ -10,7 +10,7 @@ const getBackendUrl = () => {
 	) {
 		return "http://localhost:5185"; // Local development
 	}
-	return "http://zain33-001-site2.qtempurl.com"; // Production
+	return "https://zain33-001-site2.qtempurl.com"; // Production
 };
 
 /**
