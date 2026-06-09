@@ -27,6 +27,8 @@ import TestimonialSection from "../components/TestimonialSection";
 import RelatedSolutions from "../components/RelatedSolutions";
 import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
+import Documentation from "../assets/Documentaion.webp";
+import ApiArchitecture from "../assets/API-CASESTUDY.webp";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
@@ -261,6 +263,57 @@ const ApiDevelopmentServices = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  const caseStudyData = [
+    {
+      title: "Phase 1: Secure & Fast Architecture",
+      subtitle:
+        "Designing a high performance verification & optimization pipeline.",
+      desc: "We built a multi-layered REST API architecture. Instead of letting requests hit the database directly, every incoming call goes through a strict verification and optimization pipeline.",
+      imgSrc: ApiArchitecture,
+      imgAlt: "api architecture",
+      featuresTitle: "Key Features of This Architecture:",
+      features: [
+        {
+          bold: "API Gateway & Security First:",
+          text: "An Nginx API gateway routes traffic safely, validating JWT Auth and rate limits instantly.",
+        },
+        {
+          bold: "Smart Middleware Pipeline:",
+          text: "Using Express.js middleware, requests are parsed and checked sequentially before core business logic.",
+        },
+        {
+          bold: "High Speed Caching Layer:",
+          text: "Redis Cache layer saves common data in memory, reducing database load by 80%.",
+        },
+      ],
+    },
+    {
+      title: "Phase 2: Automated Testing & Docs",
+      subtitle:
+        "Streamlining development with clean, live-updating API documentation.",
+      desc: "An optimized API is only useful if frontend developers and external partners know how to use it. We built automated specifications to keep workflows completely frictionless.",
+      imgSrc: Documentation,
+      imgAlt: "api documentation",
+      featuresTitle: "How This Simplifies Development:",
+      features: [
+        {
+          bold: "Interactive API Specifications:",
+          text: "Developers can view active endpoints (like POST Register User) with exact payload structures.",
+        },
+        {
+          bold: "Multi Language Support:",
+          text: "Generates code snippets for JavaScript, jQuery, Ruby, Node, PHP, and Go within minutes.",
+        },
+        {
+          bold: "Instant Response Previews:",
+          text: "Clear previews of HTTP 200 OK or 201 Created JSON payloads eliminate backend guesswork.",
+        },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -797,6 +850,93 @@ const ApiDevelopmentServices = () => {
                   <p className="api-invest-card__desc">{v.desc}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+{/*casestudy*/}
+        <section
+          className="section api-case-study"
+          aria-labelledby="case-study-heading"
+        >
+          <div
+            className="abstract-circle abstract-circle--one"
+            aria-hidden="true"
+          ></div>
+          <div
+            className="abstract-circle abstract-circle--two"
+            aria-hidden="true"
+          ></div>
+
+          <div className="container">
+            <div className="section-title text-center">
+              <h2 id="case-study-heading">
+                Case Study: Building High Performance Systems
+              </h2>
+              <p>
+                How <strong>QllmSoft</strong> engineered a backend architecture
+                built for speed, security, and effortless scaling.
+              </p>
+            </div>
+
+            <div className="cs-carousel-card">
+              <div className="cs-carousel-card__left">
+                <div className="cs-carousel-tabs">
+                  {caseStudyData.map((phase, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveTab(idx)}
+                      className={`cs-tab-btn ${activeTab === idx ? "active" : ""}`}
+                      aria-label={`View ${phase.title}`}
+                    >
+                      Phase {idx + 1}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="cs-carousel-content">
+                  <h3>{caseStudyData[activeTab].title}</h3>
+                  <p className="cs-carousel-desc">
+                    {caseStudyData[activeTab].desc}
+                  </p>
+
+                  <div className="case-study__features">
+                    <h4>{caseStudyData[activeTab].featuresTitle}</h4>
+                    <ul>
+                      {caseStudyData[activeTab].features.map((feat, fIdx) => (
+                        <li key={fIdx}>
+                          <strong>{feat.bold}</strong> {feat.text}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cs-carousel-card__right">
+                <figure className="case-study__image-wrapper">
+                  <img
+                    src={caseStudyData[activeTab].imgSrc}
+                    alt={caseStudyData[activeTab].imgAlt}
+                    className="case-study__img"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div className="case-study__results-strip">
+              <span className="results-badge">The Results</span>
+              <div className="results-metrics">
+                <span>
+                  <strong>80% Lighter</strong> Database
+                </span>
+                <span>
+                  <strong>Layered Auth</strong> Protection
+                </span>
+                <span>
+                  <strong>Instant</strong> Integrations
+                </span>
+              </div>
             </div>
           </div>
         </section>
