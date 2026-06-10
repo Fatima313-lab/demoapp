@@ -335,7 +335,8 @@
 
 /* Input Area */
 .chatbot-input-area {
-	padding: 12px 16px;
+	border-radius: 0 0 12px 12px;
+	padding: 10px 16px;
 	border-top: 1px solid #e0e0e0;
 	background-color: white;
 	display: flex;
@@ -459,5 +460,63 @@
 
 	.chatbot-button {
 		display: none;
+	}
+}
+
+
+
+/* ✅ ADD these styles to your existing ChatBot.css file */
+
+/* Clear Chat Button - positioned below input */
+.clear-chat-button {
+	padding: 2px 8px;
+	/* margin-top: 8px; */
+	background-color: #f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	color: #666;
+	font-size: 10px;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	transition: all 0.3s ease;
+	font-family: inherit;
+}
+
+.clear-chat-button:hover {
+	background-color: #ffebee;
+	border-color: #ef5350;
+	color: #ef5350;
+}
+
+.clear-chat-button:active {
+	transform: scale(0.98);
+}
+
+.clear-chat-button svg {
+	width: 16px;
+	height: 16px;
+}
+
+.chat-clear-wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	align-items: center;
+}
+
+/* Responsive design - stack on mobile */
+@media (max-width: 768px) {
+	.clear-chat-button {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+
+	.clear-chat-button svg {
+		width: 14px;
+		height: 14px;
 	}
 }

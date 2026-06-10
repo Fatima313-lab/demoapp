@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { X, Send, MessageCircle, Loader } from "lucide-react";
+import { X, Send, Loader } from "lucide-react";
 import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
 	sendMessageToGPT,
@@ -11,19 +11,60 @@ import "./ChatBot.css";
 const ChatBot = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [activeTab, setActiveTab] = useState(null);
-	const [messages, setMessages] = useState([
-		{
-			id: 1,
-			type: "bot",
-			content:
-				"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
-			timestamp: new Date(),
-		},
-	]);
+	const [messages, setMessages] = useState([]);
 	const [inputValue, setInputValue] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(null);
 	const messagesEndRef = useRef(null);
+
+	// Load chat history from sessionStorage
+	useEffect(() => {
+		const savedMessages = sessionStorage.getItem("chatbotMessages");
+		if (savedMessages) {
+			try {
+				const parsedMessages = JSON.parse(savedMessages);
+				const messagesWithDates = parsedMessages.map((msg) => ({
+					...msg,
+					timestamp: new Date(msg.timestamp),
+				}));
+				setMessages(messagesWithDates);
+			} catch (error) {
+				console.error("Error loading chat history:", error);
+				setMessages([
+					{
+						id: 1,
+						type: "bot",
+						content:
+							"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+						timestamp: new Date(),
+						isHTML: false,
+					},
+				]);
+			}
+		} else {
+			setMessages([
+				{
+					id: 1,
+					type: "bot",
+					content:
+						"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+					timestamp: new Date(),
+					isHTML: false,
+				},
+			]);
+		}
+	}, []);
+
+	// Save chat history to sessionStorage
+	useEffect(() => {
+		if (messages.length > 0) {
+			try {
+				sessionStorage.setItem("chatbotMessages", JSON.stringify(messages));
+			} catch (error) {
+				console.error("Error saving chat history:", error);
+			}
+		}
+	}, [messages]);
 
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -33,11 +74,44 @@ const ChatBot = () => {
 		scrollToBottom();
 	}, [messages]);
 
-	const handleSendMessage = async (messageContent) => {
-		console.log("Sending message to backend");
-		if (!messageContent.trim()) return;
+	const handleClearChat = () => {
+		if (window.confirm("Are you sure you want to clear the chat history?")) {
+			const welcomeMessage = {
+				id: 1,
+				type: "bot",
+				content:
+					"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+				timestamp: new Date(),
+				isHTML: false,
+			};
+			setMessages([welcomeMessage]);
+			sessionStorage.removeItem("chatbotMessages");
+			setInputValue("");
+			setError(null);
+			setActiveTab(null);
+		}
+	};
 
-		// Add user message to chat
+	const validateMessage = (message) => {
+		if (!message.trim()) {
+			return { valid: false, error: "Message cannot be empty" };
+		}
+		if (message.length > 500) {
+			return {
+				valid: false,
+				error: "Message is too long. Please keep it under 500 characters.",
+			};
+		}
+		return { valid: true };
+	};
+
+	const handleSendMessage = async (messageContent) => {
+		const validation = validateMessage(messageContent);
+		if (!validation.valid) {
+			setError(validation.error);
+			return;
+		}
+
 		const userMessage = {
 			id: messages.length + 1,
 			type: "user",
@@ -51,7 +125,6 @@ const ChatBot = () => {
 		setError(null);
 
 		try {
-			// Try to get response from backend
 			let response;
 
 			try {
@@ -67,7 +140,7 @@ const ChatBot = () => {
 				if (predefinedQ) {
 					response = getSystemResponse(predefinedQ.id);
 				} else {
-					throw backendError; // Re-throw if not a predefined question
+					throw backendError;
 				}
 			}
 
@@ -82,16 +155,19 @@ const ChatBot = () => {
 			setMessages((prev) => [...prev, botMessage]);
 		} catch (err) {
 			console.error("Error sending message:", err);
-			setError("Failed to get response. Please try again.");
 
-			// Add error message to chat
-			const errorMessage = {
+			const errorMessage =
+				err.message || "Failed to get response. Please try again.";
+			setError(errorMessage);
+
+			const errorChatMessage = {
 				id: messages.length + 2,
 				type: "bot",
-				content: `Sorry, I encountered an error: ${err.message}. Please try again or contact us directly at qllmsoft@gmail.com or WhatsApp: +92 334 8229288`,
+				content: `Sorry, I encountered an error: ${errorMessage}. Please try again or contact us directly at qllmsoft@gmail.com or WhatsApp: +92 334 8229288`,
 				timestamp: new Date(),
+				isHTML: false,
 			};
-			setMessages((prev) => [...prev, errorMessage]);
+			setMessages((prev) => [...prev, errorChatMessage]);
 		} finally {
 			setIsLoading(false);
 		}
@@ -102,9 +178,10 @@ const ChatBot = () => {
 		handleSendMessage(question.question);
 	};
 
+	const isEmptyChat = messages.length === 1 && messages[0].type === "bot";
+
 	return (
 		<>
-			{/* Chat Button - Hidden when panel is open */}
 			{!isOpen && (
 				<button
 					onClick={() => setIsOpen(true)}
@@ -117,18 +194,14 @@ const ChatBot = () => {
 						alt="QllmSoft ChatBot Avatar"
 						style={{ padding: "12px" }}
 					/>
-					{/* <MessageCircle size={24} /> */}
 				</button>
 			)}
 
-			{/* Chat Panel */}
 			{isOpen && (
 				<div className="chatbot-panel">
-					{/* Header */}
 					<div className="chatbot-header">
 						<div className="chatbot-header-title">
 							<h3>QllmSoft AI</h3>
-							{/* <span className="status-indicator">Online</span> */}
 						</div>
 						<button
 							onClick={() => setIsOpen(false)}
@@ -140,9 +213,8 @@ const ChatBot = () => {
 						</button>
 					</div>
 
-					{/* Messages Container */}
 					<div className="chatbot-messages">
-						{messages.length === 1 ? (
+						{isEmptyChat ? (
 							<div className="chatbot-welcome-section">
 								<div className="welcome-header">
 									<div className="welcome-avatar">
@@ -181,11 +253,9 @@ const ChatBot = () => {
 						<div ref={messagesEndRef} />
 					</div>
 
-					{/* Error Message */}
 					{error && <div className="error-message">{error}</div>}
 
-					{/* Suggested Questions Pills */}
-					{messages.length === 1 && !isLoading && (
+					{isEmptyChat && !isLoading && (
 						<div className="suggested-questions">
 							{predefinedQuestions.slice(0, 5).map((question) => (
 								<button
@@ -200,7 +270,6 @@ const ChatBot = () => {
 						</div>
 					)}
 
-					{/* Input Area */}
 					<div className="chatbot-input-area">
 						<div className="input-wrapper">
 							<input
@@ -221,12 +290,31 @@ const ChatBot = () => {
 								disabled={isLoading || !inputValue.trim()}
 								className="send-button"
 								aria-label="Send message"
+								title="Send message"
 							>
 								{isLoading ? (
 									<Loader size={18} className="spinner" />
 								) : (
 									<Send size={18} />
 								)}
+							</button>
+						</div>
+						<div className="chat-clear-wrapper">
+							<p
+								style={{
+									fontSize: "12px",
+									marginBottom: "0px",
+								}}
+							>
+								Clear your chat history to start fresh.
+							</p>
+							<button
+								onClick={handleClearChat}
+								className="clear-chat-button"
+								title="Clear chat history"
+								aria-label="Clear chat history"
+							>
+								<span>Clear</span>
 							</button>
 						</div>
 					</div>
