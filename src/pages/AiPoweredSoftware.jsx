@@ -408,27 +408,27 @@ const AiPoweredSoftware = () => {
             <div className="ai-hero__content">
               <div className="ai-hero__badge">
                 <span className="ai-hero__badge-pulse" aria-hidden="true" />
-                AI Development Company — Pakistan
+                Next-Gen Autonomous Intelligence
               </div>
 
               {/* ✅ SINGLE H1 */}
               <h1 className="ai-hero__title">
-                AI-Powered Software Solutions<br />
-                &amp; Custom Development Services<br />
-                <span className="ai-hero__title-accent">in Pakistan</span>
-              </h1>
+               AI-Powered Software Solutions<br />
+            <span className="ai-hero__title-accent">& Custom Platform Engineering</span>
+          </h1>
 
               <p className="ai-hero__sub">
-                We engineer intelligent software that learns, adapts, and delivers measurable
-                business outcomes — using machine learning, NLP, computer vision, and large
-                language model integrations built with precision for your specific workflows.
-              </p>
+            We design, develop, and integrate enterprise grade intelligent software that learns, 
+            adapts, and scales. From complex machine learning algorithms and real time computer vision 
+            pipelines to production ready Large Language Model frameworks, we turn raw semantic 
+            data into direct workflow automation.
+          </p>
 
               <div className="ai-hero__buttons">
                 <Link
                   to="/contact"
                   className="btn btn-primary ai-btn-primary"
-                  aria-label="Get a free AI software consultation from QllmSoft Pakistan"
+                  aria-label="Get a free AI software consultation from QllmSoft"
                 >
                   Get Free AI Consultation
                 </Link>
@@ -492,42 +492,46 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-intro" ref={introRef} aria-labelledby="intro-heading">
           <div className="container">
-            <p className="section-eyebrow">Redefining What Software Can Do</p>
+           
             <div className="ai-intro__layout">
 
               <div className={`ai-intro__text animate__animated ${introInView ? 'animate__fadeInLeft' : ''}`}>
                 <h2 id="intro-heading">
-                  AI-Powered Software That Works <em>For</em> Your Business — Not Against It
-                </h2>
+                 AI-Powered Software Engineered for <em>Measurable</em> Enterprise Value
+              </h2>
                 <p>
-                  Most businesses today generate more data than they can act on, rely on manual
-                  processes that slow decisions down, and lose competitive ground to companies that
-                  already use AI to move faster. At QllmSoft, we close that gap.
-                </p>
+                Most modern organizations generate vast quantities of dark operational data that remains unacted upon, 
+                relying on legacy architectures that slow down execution. QllmSoft designs and deploys next-generation, 
+                production-ready cognitive software that closes this execution gap securely.
+              </p>
+              <p>
+                Our <strong>global AI software engineering services</strong> transform raw technical data infrastructure 
+                into your most defensible asset. We build deterministic machine learning pipelines, responsive natural 
+                language processing layers, high velocity computer vision engines, and fully custom multi agent LLM systems all 
+                architected from first principles to scale cleanly alongside your primary product ecosystems.
+              </p>
                 <p>
-                  Our <strong>AI-powered software development services</strong> turn your data into
-                  your most valuable strategic asset. We build custom machine learning models,
-                  natural language processing pipelines, computer vision systems, and LLM-powered
-                  automation tools — all engineered from the ground up around your specific business
-                  challenges, your existing infrastructure, and your growth trajectory.
-                </p>
-                <p>
-                  We serve clients across the <strong>United States, United Kingdom, UAE, Saudi
-                  Arabia, and Pakistan</strong> — combining the cost advantage of Pakistan-based
-                  engineering with the technical depth of a specialized AI team. Every solution is
-                  built with responsible AI principles at its core, referencing frameworks from{' '}
-                  <a href="https://ai.google/principles/" target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="Google AI Principles — authoritative external reference">
-                    Google's AI guidelines
-                  </a>{' '}
-                  and{' '}
-                  <a href="https://www.ibm.com/artificial-intelligence" target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="IBM AI practices — authoritative external reference">
-                    IBM's AI best practices
-                  </a>.
-                </p>
+                We operate a highly optimized, cross border engineering infrastructure serving clients across North America, 
+                Europe, and the GCC regions delivering enterprise-grade architecture with zero operational friction. 
+                Every deployment is designed to meet strict international compliance standards, cross-referencing frameworks from{' '}
+                <a 
+                  href="https://ai.google/principles/" 
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Google AI Principles — External technical guidelines reference"
+                >
+                  Google's AI guidelines
+                </a>{' '}
+                and{' '}
+                <a 
+                  href="https://www.ibm.com/artificial-intelligence" 
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="IBM AI best practices — External architectural model reference"
+                >
+                  IBM's AI best practices
+                </a>.
+              </p>
                 <div className="ai-intro__badges">
                   {['Responsible AI Development','GDPR-Aware Data Handling','Agile ML Delivery','Explainable AI'].map(b => (
                     <span key={b} className="ai-badge"><IconCheckCircle size={14} /> {b}</span>
@@ -563,14 +567,13 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-services" ref={servicesRef} aria-labelledby="services-heading">
           <div className="container">
-            <p className="section-eyebrow">What We Build</p>
+        
             <div className="section-title">
               <h2 id="services-heading">Our AI-Powered Software Development Services</h2>
-              <p>
-                From a single intelligent feature to a fully AI-native product — every solution
-                is engineered with precision, tested rigorously, and documented for your team
-                to maintain with confidence.
-              </p>
+             <p>
+              From isolated analytical processing components to autonomous, AI-native SaaS products every line 
+              of code is verified, optimized for target system hardware environments, and safely integrated.
+            </p>
             </div>
             <div className="ai-services__grid">
               {[
@@ -578,56 +581,56 @@ const AiPoweredSoftware = () => {
                   Icon: IconBrain,
                   accent: '#1A365D',
                   title: 'Custom AI Application Development',
-                  desc: 'We design and engineer bespoke AI applications from first principles — recommendation systems, predictive analytics engines, intelligent scoring tools, and AI-native SaaS products built around your exact competitive requirements.',
+                  desc: 'We design and engineer bespoke AI applications from first principles  recommendation systems, predictive analytics engines, intelligent scoring tools, and AI-native SaaS products built around your exact competitive requirements.',
                   tags: ['ML.NET','Python','Azure AI','Custom Models','Recommendation Engine'],
                 },
                 {
                   Icon: IconDatabase,
                   accent: '#2B6CB0',
                   title: 'Machine Learning & Data Science',
-                  desc: 'We develop supervised, unsupervised, and reinforcement learning models that uncover hidden patterns in your data. From demand forecasting and churn prediction to anomaly detection — models built to perform in production, not just in notebooks.',
+                  desc: 'We develop supervised, unsupervised, and reinforcement learning models that uncover hidden patterns in your data. From demand forecasting and churn prediction to anomaly detection  models built to perform in production, not just in notebooks.',
                   tags: ['Scikit-learn','TensorFlow','PyTorch','Feature Engineering','Model Deployment'],
                 },
                 {
                   Icon: IconMessageSquare,
                   accent: '#1A365D',
                   title: 'NLP & Conversational AI',
-                  desc: 'We build chatbots, virtual assistants, document classifiers, sentiment analysis tools, and multilingual NLP pipelines. Using OpenAI, Hugging Face, and custom fine-tuned models, we create systems that understand intent — not just keywords.',
+                  desc: 'We build chatbots, virtual assistants, document classifiers, sentiment analysis tools, and multilingual NLP pipelines. Using OpenAI, Hugging Face, and custom fine tuned models, we create systems that understand intent  not just keywords.',
                   tags: ['OpenAI API','LangChain','Hugging Face','Sentiment Analysis','Chatbot'],
                 },
                 {
                   Icon: IconSettings,
                   accent: '#2B6CB0',
                   title: 'AI Business Process Automation',
-                  desc: 'We identify high-volume manual workflows — document processing, invoice extraction, report generation, ticket routing — and replace them with intelligent automation pipelines. The result: faster operations, fewer errors, lower cost per transaction.',
+                  desc: 'We identify high volume manual workflows , document processing, invoice extraction, report generation, ticket routing  and replace them with intelligent automation pipelines. The result: faster operations, fewer errors, lower cost per transaction.',
                   tags: ['RPA + AI','OCR','Document AI','Workflow Automation','Azure Logic Apps'],
                 },
                 {
                   Icon: IconEye,
                   accent: '#1A365D',
                   title: 'Computer Vision Solutions',
-                  desc: 'We build real-time visual intelligence systems — defect detection on production lines, facial recognition for access control, document scanning with field extraction, and medical image analysis — all engineered for the accuracy your use case demands.',
+                  desc: 'We build real-time visual intelligence systems  defect detection on production lines, facial recognition for access control, document scanning with field extraction, and medical image analysis  all engineered for the accuracy your use case demands.',
                   tags: ['OpenCV','YOLO','Azure Vision','Image Classification','Object Detection'],
                 },
                 {
                   Icon: IconCode,
                   accent: '#2B6CB0',
                   title: 'LLM Integration & OpenAI Development',
-                  desc: 'We integrate large language models — GPT-4, Claude, Gemini, or open-source alternatives — directly into your applications. Retrieval-Augmented Generation (RAG) systems, AI-powered search, document Q&A, and custom fine-tuned models for domain-specific use cases.',
+                  desc: 'We integrate large language models GPT-4, Claude, Gemini, or open source alternatives directly into your applications. Retrieval Augmented Generation (RAG) systems, AI-powered search, document Q&A, and custom fine tuned models for domain specific use cases.',
                   tags: ['GPT-4','Retrieval-Augmented Generation','Vector DB','Fine-tuning','LLM Pipelines'],
                 },
                 {
                   Icon: IconTarget,
                   accent: '#1A365D',
                   title: 'AI Consulting & Strategy',
-                  desc: 'Not sure where to start with AI? Our consultants conduct AI readiness assessments, identify your highest-impact use cases, select the right frameworks, and build a phased roadmap from proof-of-concept to full-scale deployment — with ROI mapped to every phase.',
+                  desc: 'Not sure where to start with AI? Our consultants conduct AI readiness assessments, identify your highest impact use cases, select the right frameworks, and build a phased roadmap from proof of concept to full scale deployment  with ROI mapped to every phase.',
                   tags: ['AI Roadmap','PoC Design','Tool Selection','AI Governance','ROI Planning'],
                 },
                 {
                   Icon: IconLink,
                   accent: '#2B6CB0',
                   title: 'AI Integration with Existing Systems',
-                  desc: 'Deploying AI should enhance your current operations, not disrupt them. We integrate AI layers into your existing CRMs, ERPs, web apps, and mobile platforms using REST APIs, custom middleware, and real-time data pipelines — with zero-downtime deployment planning.',
+                  desc: 'Deploying AI should enhance your current operations, not disrupt them. We integrate AI layers into your existing CRMs, ERPs, web apps, and mobile platforms using REST APIs, custom middleware, and real time data pipelines  with zero-downtime deployment planning.',
                   tags: ['REST API','Middleware','Real-Time Sync','CRM Integration','ERP AI Layer'],
                 },
               ].map((s, i) => (
