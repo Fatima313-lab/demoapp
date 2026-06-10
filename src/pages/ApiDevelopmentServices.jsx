@@ -29,6 +29,7 @@ import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
 import Documentation from "../assets/Documentaion.webp";
 import ApiArchitecture from "../assets/API-CASESTUDY.webp";
+import phase3 from '../assets/phase3.webp';
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
@@ -266,6 +267,8 @@ const ApiDevelopmentServices = () => {
 
   const [activeTab, setActiveTab] = useState(0);
 
+
+  /*casestudy*/
   const caseStudyData = [
     {
       title: "Phase 1: Secure & Fast Architecture",
@@ -313,6 +316,28 @@ const ApiDevelopmentServices = () => {
         },
       ],
     },
+    {
+  title: "Phase 3: Real Time Business Dashboard",
+  subtitle: "Integrating scalable REST APIs with dynamic data visualization.",
+  desc: "We connected our high performance Express.js backend with an intuitive frontend CRM dashboard. By executing optimized SQL queries, the system securely processes leads, tracking contact distribution metrics in real time.",
+  imgSrc: phase3, 
+  imgAlt: "CRM Dashboard and API Code",
+  featuresTitle: "Core Full-Stack Capabilities:",
+  features: [
+    {
+      bold: "Asynchronous Route Handlers:",
+      text: "The Express.js backend utilizes async/await pipelines to handle database operations smoothly without blocking the event loop."
+    },
+    {
+      bold: "Robust Error Handling:",
+      text: "Built in try/catch middleware safeguards endpoints, logging internal errors securely while sending uniform JSON status alerts to the client."
+    },
+    {
+      bold: "Dynamic KPI Tracking:",
+      text: "The React based CRM UI renders interactive bar charts, activity feeds, and a breakdown of contact statuses instantly."
+    }
+  ]
+}
   ];
 
   return (
