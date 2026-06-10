@@ -27,6 +27,8 @@ import TestimonialSection from "../components/TestimonialSection";
 import RelatedSolutions from "../components/RelatedSolutions";
 import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
+import Documentation from "../assets/Documentaion.webp";
+import ApiArchitecture from "../assets/API-CASESTUDY.webp";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
@@ -167,12 +169,8 @@ const FAQ_DATA = [
     a: "Yes. We provide ongoing monitoring, security updates, and performance optimization after delivery. Every project includes a dedicated support period — ensuring your APIs remain reliable, secure, and scalable as your business grows.",
   },
   {
-    q: "Can you integrate APIs with Pakistani payment gateways?",
-    a: "Absolutely. We have deep experience integrating JazzCash, Easypaisa, 2Checkout, and Checkout.com — along with logistics platforms like TCS, Leopards, and Trax. Our Pakistan-specific expertise gives local businesses a real technical advantage.",
-  },
-  {
-    q: "What is the difference between REST and GraphQL APIs?",
-    a: "REST APIs use fixed endpoints and return predefined data structures — ideal for standard CRUD operations and public-facing integrations. GraphQL lets clients request exactly the data they need in a single query — ideal for complex SaaS products, mobile apps, and dashboards where data efficiency matters.",
+    q: "What architectural parameters dictate choosing a RESTful API over a GraphQL fabric?",
+    a: "RESTful architectures rely on structured, stateless resources with fixed schema endpoints making them exceptionally resilient for traditional CRUD workflows, microservices communication, and highly cacheable public interfaces. Conversely, GraphQL implements a unified data graph allowing runtime clients to request precise payloads via single queries, completely mitigating data over fetching and under fetching inside complex modern SaaS portals and resource constrained mobile apps.",
   },
 ];
 
@@ -266,6 +264,57 @@ const ApiDevelopmentServices = () => {
     threshold: 0.1,
   });
 
+  const [activeTab, setActiveTab] = useState(0);
+
+  const caseStudyData = [
+    {
+      title: "Phase 1: Secure & Fast Architecture",
+      subtitle:
+        "Designing a high performance verification & optimization pipeline.",
+      desc: "We built a multi-layered REST API architecture. Instead of letting requests hit the database directly, every incoming call goes through a strict verification and optimization pipeline.",
+      imgSrc: ApiArchitecture,
+      imgAlt: "api architecture",
+      featuresTitle: "Key Features of This Architecture:",
+      features: [
+        {
+          bold: "API Gateway & Security First:",
+          text: "An Nginx API gateway routes traffic safely, validating JWT Auth and rate limits instantly.",
+        },
+        {
+          bold: "Smart Middleware Pipeline:",
+          text: "Using Express.js middleware, requests are parsed and checked sequentially before core business logic.",
+        },
+        {
+          bold: "High Speed Caching Layer:",
+          text: "Redis Cache layer saves common data in memory, reducing database load by 80%.",
+        },
+      ],
+    },
+    {
+      title: "Phase 2: Automated Testing & Docs",
+      subtitle:
+        "Streamlining development with clean, live-updating API documentation.",
+      desc: "An optimized API is only useful if frontend developers and external partners know how to use it. We built automated specifications to keep workflows completely frictionless.",
+      imgSrc: Documentation,
+      imgAlt: "api documentation",
+      featuresTitle: "How This Simplifies Development:",
+      features: [
+        {
+          bold: "Interactive API Specifications:",
+          text: "Developers can view active endpoints (like POST Register User) with exact payload structures.",
+        },
+        {
+          bold: "Multi Language Support:",
+          text: "Generates code snippets for JavaScript, jQuery, Ruby, Node, PHP, and Go within minutes.",
+        },
+        {
+          bold: "Instant Response Previews:",
+          text: "Clear previews of HTTP 200 OK or 201 Created JSON payloads eliminate backend guesswork.",
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       {/* ══════════════════════════════════════════════
@@ -273,16 +322,16 @@ const ApiDevelopmentServices = () => {
       ══════════════════════════════════════════════ */}
       <Helmet>
         <title>
-          API Development Services in Pakistan | REST, GraphQL & Integrations |
+          Enterprise API Engineering, Microservices & Systems Integration |
           QllmSoft
         </title>
         <meta
           name="description"
-          content="Expert API development services in Pakistan. QllmSoft builds secure, scalable REST APIs, GraphQL endpoints, SOAP APIs, and third-party integrations for startups, SMBs, and enterprises worldwide."
+          content="QllmSoft architects secure, highly scalable RESTful APIs, GraphQL endpoints, and decentralized microservices pipelines. Specializing in high throughput enterprise integrations, OAuth2 compliance, and cloud native middleware."
         />
         <meta
           name="keywords"
-          content="API development services Pakistan, REST API development Pakistan, GraphQL API development Pakistan, custom API development Pakistan, API integration services Pakistan, payment gateway API integration Pakistan, third-party API integration, ASP.NET Core API development, API development company Pakistan"
+          content="enterprise API development, RESTful systems architecture, GraphQL engineering, custom middleware development, microservices integration layers, secure payment gateway infrastructure, legacy SOAP migration, ASP.NET Core web API, high availability data pipelines"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -297,18 +346,18 @@ const ApiDevelopmentServices = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="API Development Services in Pakistan | REST, GraphQL & Integrations | QllmSoft"
+          content="Enterprise API Engineering, Microservices & Systems Integration | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Expert custom API development in Pakistan. Secure REST APIs, GraphQL endpoints, SOAP, and third-party integrations for web, mobile and cloud platforms."
+          content="Secure, zero downtime RESTful architectures, GraphQL fabrics, and cloud native data pipelines engineered for global corporate workflows."
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft API Development Services Pakistan"
+          content="QllmSoft - Global API Architecture & Middleware Engineering"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -316,16 +365,16 @@ const ApiDevelopmentServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="API Development Services in Pakistan | REST, GraphQL & Integrations | QllmSoft"
+          content="Enterprise API Engineering, Microservices & Systems Integration | QllmSoft"
         />
         <meta
           name="twitter:description"
-          content="Secure, scalable REST APIs, GraphQL endpoints, and third-party integrations built in Pakistan for global clients."
+          content="QllmSoft architects secure, highly scalable RESTful APIs, GraphQL endpoints, and decentralized microservices pipelines."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft API Development Services Pakistan"
+          content="QllmSoft - Global API Architecture & Middleware Engineering"
         />
 
         {/* JSON-LD */}
@@ -348,14 +397,15 @@ const ApiDevelopmentServices = () => {
           <div className="container api-hero__inner">
             <div className="api-hero__content">
               <p className="csd-hero__eyebrow">
-                #1 API Development Company in Pakistan
+                Global Systems Integration Delivery Center
               </p>
 
               {/* ✅ ONE H1 */}
               <h1 className="api-hero__title">
-                Build Secure, Fast &<br />
-                <span className="api-hero__accent">Scalable APIs</span> That
-                Connect Your Business
+                Architect Secure, Resilient &<br />
+                <span className="api-hero__accent text-warning">
+                  Scalable API Infrastructures
+                </span>
               </h1>
 
               <p className="api-hero__sub">
@@ -370,7 +420,7 @@ const ApiDevelopmentServices = () => {
                 <Link
                   to="/contact"
                   className="btn btn-primary"
-                  aria-label="Get a free API development consultation from QllmSoft Pakistan"
+                  aria-label="Get a free API development consultation from QllmSoft"
                 >
                   Get a Free Consultation
                 </Link>
@@ -498,7 +548,6 @@ const ApiDevelopmentServices = () => {
                   <span className="api-hero__accent">
                     Systems Integration
                   </span>{" "}
-                  in Pakistan
                 </h2>
                 <p>
                   Behind every seamless digital interaction be it a real time
@@ -528,9 +577,8 @@ const ApiDevelopmentServices = () => {
                   Beyond creation, we excel in <strong>API Integration</strong>.
                   We bridge the gap between your custom software and industry
                   giants like Stripe, Salesforce, SAP, and logistics providers.
-                  Whether you are a startup in Pakistan or an enterprise
-                  operating globally, we ensure your integrations are rock-solid
-                  and future-proof.
+                  Whether you are a startup or an enterprise operating globally,
+                  we ensure your integrations are rock-solid and future-proof.
                 </p>
 
                 <ul
@@ -560,7 +608,7 @@ const ApiDevelopmentServices = () => {
               >
                 <img
                   src={apiimg}
-                  alt="Custom API development services by QllmSoft Pakistan — REST, GraphQL and integration solutions"
+                  alt="Custom API development services by QllmSoft — REST, GraphQL and integration solutions"
                   loading="lazy"
                   width="560"
                   height="400"
@@ -618,8 +666,7 @@ const ApiDevelopmentServices = () => {
                   building a lightweight MVP or scaling a cloud native
                   enterprise platform, our{" "}
                   <strong>
-                    API solutions are engineered for Pakistan’s unique digital
-                    economy
+                    API solutions are engineered for unique digital economy
                   </strong>
                   , ensuring your software is ready for both local growth and
                   global competition.
@@ -776,7 +823,7 @@ const ApiDevelopmentServices = () => {
                 {
                   icon: "bi-cpu",
                   title: "Drive Digital Transformation",
-                  desc: "An API-first approach lets you integrate new tools, launch features faster, and connect with emerging technologies — keeping you ahead of competitors in Pakistan's rapidly evolving digital market.",
+                  desc: "An API-first approach lets you integrate new tools, launch features faster, and connect with emerging technologies — keeping you ahead of competitors  rapidly evolving digital market.",
                   stat: "+ Velocity",
                 },
               ].map((v, i) => (
@@ -803,6 +850,93 @@ const ApiDevelopmentServices = () => {
                   <p className="api-invest-card__desc">{v.desc}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+{/*casestudy*/}
+        <section
+          className="section api-case-study"
+          aria-labelledby="case-study-heading"
+        >
+          <div
+            className="abstract-circle abstract-circle--one"
+            aria-hidden="true"
+          ></div>
+          <div
+            className="abstract-circle abstract-circle--two"
+            aria-hidden="true"
+          ></div>
+
+          <div className="container">
+            <div className="section-title text-center">
+              <h2 id="case-study-heading">
+                Case Study: Building High Performance Systems
+              </h2>
+              <p>
+                How <strong>QllmSoft</strong> engineered a backend architecture
+                built for speed, security, and effortless scaling.
+              </p>
+            </div>
+
+            <div className="cs-carousel-card">
+              <div className="cs-carousel-card__left">
+                <div className="cs-carousel-tabs">
+                  {caseStudyData.map((phase, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveTab(idx)}
+                      className={`cs-tab-btn ${activeTab === idx ? "active" : ""}`}
+                      aria-label={`View ${phase.title}`}
+                    >
+                      Phase {idx + 1}
+                    </button>
+                  ))}
+                </div>
+
+                <div className="cs-carousel-content">
+                  <h3>{caseStudyData[activeTab].title}</h3>
+                  <p className="cs-carousel-desc">
+                    {caseStudyData[activeTab].desc}
+                  </p>
+
+                  <div className="case-study__features">
+                    <h4>{caseStudyData[activeTab].featuresTitle}</h4>
+                    <ul>
+                      {caseStudyData[activeTab].features.map((feat, fIdx) => (
+                        <li key={fIdx}>
+                          <strong>{feat.bold}</strong> {feat.text}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cs-carousel-card__right">
+                <figure className="case-study__image-wrapper">
+                  <img
+                    src={caseStudyData[activeTab].imgSrc}
+                    alt={caseStudyData[activeTab].imgAlt}
+                    className="case-study__img"
+                    loading="lazy"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div className="case-study__results-strip">
+              <span className="results-badge">The Results</span>
+              <div className="results-metrics">
+                <span>
+                  <strong>80% Lighter</strong> Database
+                </span>
+                <span>
+                  <strong>Layered Auth</strong> Protection
+                </span>
+                <span>
+                  <strong>Instant</strong> Integrations
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -879,13 +1013,11 @@ const ApiDevelopmentServices = () => {
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="edge-heading">
-                Why We Are the Leading API Experts in Pakistan
-              </h2>
+              <h2 id="edge-heading">Why We Are the Leading API Experts</h2>
               <p>
                 We don't just write code , we engineer digital ecosystems.
                 Here's what sets us apart from every other API development
-                company in Pakistan.
+                company .
               </p>
             </div>
             <div className="api-edge__grid">
@@ -923,13 +1055,6 @@ const ApiDevelopmentServices = () => {
                   icon: "bi-award",
                   title: "Verified Global Track Record",
                   desc: "Top Rated Plus on Upwork. 5 star reviews on Freelancer. Serving clients across the globe . our reputation is backed by independent third party platforms.",
-                  highlight: false,
-                },
-                {
-                  num: "06",
-                  icon: "bi-geo-alt",
-                  title: "Pakistan-Optimized Integrations",
-                  desc: "We natively integrate JazzCash, Easypaisa, TCS, Leopards, and other Pakistan specific platforms ,giving local businesses a technical advantage that international agencies cannot match.",
                   highlight: false,
                 },
               ].map((e, i) => (
@@ -1254,7 +1379,7 @@ const ApiDevelopmentServices = () => {
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Software Development Company Pakistan
+            Client Reviews, QllmSoft Software Development agency
           </h2>
           <TestimonialSection />
 
@@ -1273,7 +1398,7 @@ const ApiDevelopmentServices = () => {
 
         <FounderNote
           title="Powering the Digital Ecosystem with Robust APIs"
-          message="At QllmSoft, we understand that APIs are the silent engine of modern business connecting platforms, automating workflows, and unlocking data value. My mission is to ensure that your backend architecture is never a bottleneck. From our engineering hub in Pakistan to clients worldwide, we specialize in crafting RESTful and GraphQL solutions that are not just functional, but high performance, secure, and built to handle the demands of global scale. We don't just build endpoints; we build the bridges that enable your business to grow without limits."
+          message="At QllmSoft, we understand that APIs are the silent engine of modern business connecting platforms, automating workflows, and unlocking data value. My mission is to ensure that your backend architecture is never a bottleneck. From our engineering hub  to clients worldwide, we specialize in crafting RESTful and GraphQL solutions that are not just functional, but high performance, secure, and built to handle the demands of global scale. We don't just build endpoints; we build the bridges that enable your business to grow without limits."
         />
 
         {/* ══════════════════════════════════════════════
@@ -1286,7 +1411,6 @@ const ApiDevelopmentServices = () => {
           itemType="https://schema.org/FAQPage"
         >
           <div className="container">
-            
             <div className="section-title">
               <h2 id="faq-heading">API Development FAQs</h2>
               <p>
@@ -1303,7 +1427,7 @@ const ApiDevelopmentServices = () => {
               <Link
                 to="/contact"
                 className="btn btn-outline-dark"
-                aria-label="Ask QllmSoft a question about API development in Pakistan"
+                aria-label="Ask QllmSoft a question about API development "
               >
                 Ask Us Directly
               </Link>
@@ -1324,9 +1448,7 @@ const ApiDevelopmentServices = () => {
             <p className="section-eyebrow" style={{ color: "#edb702" }}>
               Start Today
             </p>
-            <h2 id="cta-heading">
-              Ready to Hire Expert API Developers in Pakistan?
-            </h2>
+            <h2 id="cta-heading">Ready to Hire Expert API Developers?</h2>
             <p>
               Whether you need a RESTful API from scratch, a complex third-party
               integration, or a legacy system modernization — QllmSoft delivers
@@ -1336,7 +1458,7 @@ const ApiDevelopmentServices = () => {
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Get your free API development quote from QllmSoft Pakistan"
+                aria-label="Get your free API development quote from QllmSoft"
               >
                 Get Your Free Quote →
               </Link>

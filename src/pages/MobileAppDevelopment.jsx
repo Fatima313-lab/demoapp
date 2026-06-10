@@ -39,6 +39,7 @@ import stickersmasher2 from "../assets/image8.webp";
 import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
+import MOBILEappPdf from "../assets/QllmSoftMobileAppDevelopmentServices.pdf";
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/mobile-app-development";
 const OG_IMAGE =
@@ -77,9 +78,9 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "Mobile App Development",
-  name: "Mobile App Development Services in Pakistan",
+  name: "Mobile App Development Services ",
   description:
-    "QllmSoft provides custom mobile app development services in Pakistan for Android, iOS, and cross-platform using Flutter and React Native. We build secure, scalable, high-performance mobile applications for startups, SMBs, and enterprises worldwide.",
+    "QllmSoft provides custom mobile app development services, for Android, iOS, and cross platform using Flutter and React Native. We build secure, scalable, high-performance mobile applications for startups, SMBs, and enterprises worldwide.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -101,14 +102,14 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Android App Development Pakistan",
+          name: "Android App Development",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "iOS App Development Pakistan",
+          name: "iOS App Developm",
         },
       },
       {
@@ -133,7 +134,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Mobile App MVP Development Pakistan",
+          name: "Mobile App MVP Development ",
         },
       },
     ],
@@ -184,7 +185,7 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    q: "How long does mobile app development take in Pakistan?",
+    q: "How long does mobile app development take?",
     a: "Development timelines depend on complexity and features. A simple Android or iOS app typically takes 1–2 months. More complex custom mobile applications with integrations, dashboards, and multi-role user systems take 3–6 months. QllmSoft follows an agile sprint process that keeps delivery fast, quality high, and scope under control at every stage.",
   },
   {
@@ -193,7 +194,7 @@ const FAQ_DATA = [
   },
   {
     q: "Can QllmSoft develop apps for both Android and iOS?",
-    a: "Yes. We build native Android apps using Kotlin and Java, native iOS apps using Swift, and cross-platform mobile applications using Flutter and React Native — giving you maximum platform coverage from a single, trusted development team in Pakistan.",
+    a: "Yes. We build native Android apps using Kotlin and Java, native iOS apps using Swift, and cross-platform mobile applications using Flutter and React Native — giving you maximum platform coverage from a single, trusted development team.",
   },
   {
     q: "Do you handle app store submission for Google Play and Apple App Store?",
@@ -203,13 +204,10 @@ const FAQ_DATA = [
     q: "Can you upgrade or modernize my existing mobile application?",
     a: "Yes. We provide comprehensive mobile app modernization services including UI/UX redesign, performance optimization, bug resolution, security hardening, and feature expansion. Whether your app is Android, iOS, or cross-platform, we bring it up to current standards without disrupting your existing users.",
   },
+
   {
-    q: "Can your apps work offline or in low internet areas?",
-    a: "Yes. We specialize in building 'Offline First' applications. By implementing local caching and SQLite/Hive databases, we ensure your app remains functional even without an active internet connection, syncing data automatically once the user is back online ideal for the Pakistani market.",
-  },
-  {
-    q: "How much does mobile app development cost in Pakistan?",
-    a: "Mobile app development cost in Pakistan depends on platform (Android, iOS, or both), feature complexity, UI/UX requirements, backend integrations, and testing scope. QllmSoft provides transparent, milestone-based estimates with no hidden charges. Contact us for a detailed quote tailored to your specific project.",
+    q: "How much does mobile app development cost?",
+    a: "Mobile app development cost depends on platform (Android, iOS, or both), feature complexity, UI/UX requirements, backend integrations, and testing scope. QllmSoft provides transparent, milestone-based estimates with no hidden charges. Contact us for a detailed quote tailored to your specific project.",
   },
   {
     q: "What is the best framework for cross-platform mobile app development?",
@@ -319,16 +317,15 @@ const MobileAppDevelopment = () => {
       <Helmet>
         {/* Primary — commercial + service intent keywords */}
         <title>
-          Mobile App Development Services in Pakistan | Android, iOS & Flutter |
-          QllmSoft
+          Cross Platform Mobile App Engineering & Native Systems | QllmSoft
         </title>
         <meta
           name="description"
-          content="QllmSoft provides expert custom mobile app development services in Pakistan for Android, iOS, Flutter, and React Native. Hire dedicated mobile app developers for startups, SMBs, and enterprises in the US, UK, UAE, and globally. Fast delivery, transparent pricing, 5-star rated."
+          content="QllmSoft engineers high performance, secure cross platform mobile apps for iOS and Android using Flutter and React Native. Deployed natively for global startups and enterprises across the Globe."
         />
         <meta
           name="keywords"
-          content="mobile app development Pakistan, Android app development Pakistan, iOS app development Pakistan, Flutter app development Pakistan, React Native app development, cross-platform mobile app development, hire mobile app developer Pakistan, custom mobile app development company Pakistan, mobile app development company Pakistan, mobile app development cost Pakistan"
+          content="cross platform mobile app development, iOS systems engineering, custom Android applications, Flutter architecture development, React Native engineering, mobile backend cloud integrations, secure enterprise mobile solutions"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -343,18 +340,18 @@ const MobileAppDevelopment = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Mobile App Development Services in Pakistan | Android, iOS & Flutter | QllmSoft"
+          content="Cross Platform Mobile App Engineering & Native Systems | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Custom Android, iOS, Flutter & React Native mobile app development in Pakistan. Fast delivery, transparent pricing, 5-star rated developers for global businesses."
+          content="Elite software delivery center designing secure, high availability mobile ecosystems for international enterprise workloads."
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Mobile App Development Services Pakistan"
+          content="QllmSoft - Global Mobile App Development & Architecture"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -362,16 +359,16 @@ const MobileAppDevelopment = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Mobile App Development Services in Pakistan | QllmSoft"
+          content="Cross Platform Mobile App Engineering & Native Systems | QllmSoft"
         />
         <meta
           name="twitter:description"
-          content="Custom Android, iOS, Flutter & React Native apps built in Pakistan for global businesses. Fast, secure, scalable."
+          content="Elite software delivery center designing secure, high availability mobile ecosystems for international enterprise workloads."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft Mobile App Development Pakistan"
+          content="QllmSoft Cross Platform Mobile App Engineering & Native Systems"
         />
 
         {/* JSON-LD × 5 */}
@@ -393,7 +390,6 @@ const MobileAppDevelopment = () => {
             HERO  —  single H1
         ════════════════════════════════════════════════ */}
         <header className="mob-hero" role="banner">
-          
           <div className="mob-hero__diagonal" aria-hidden="true" />
 
           <div className="container mob-hero__inner">
@@ -401,32 +397,30 @@ const MobileAppDevelopment = () => {
             <div className="mob-hero__content">
               <div className="mob-hero__eyebrow-wrap">
                 <span className="mob-hero__live-dot" aria-hidden="true" />
-                <span
-                  className="section-eyebrow"
-                  style={{ textAlign: "left" }}
-                >
-                  #1 Mobile App Development Company in Pakistan
+                <span className="section-eyebrow" style={{ textAlign: "left" }}>
+                  Cross Platform Engineering Hub
                 </span>
               </div>
 
               {/* ✅ ONE H1 */}
               <h1 className="mob-hero__title">
-               Next - Gen  
+                Next - Gen
                 <br />
-              Mobile App Development
+                Mobile Application
                 <br />
-                <span className="mob-hero__title-accent">Services</span>
+                <span className="mob-hero__title-accent">Engineering</span>
               </h1>
 
               <p className="mob-hero__sub">
-               We build high performance iOS, Android, and Hybrid applications for startups and enterprises across the globe.
+                We architect resilient iOS, Android, and native performance
+                hybrid ecosystems for modern startups and scaling global
+                enterprises.
               </p>
-
               <div className="mob-hero__buttons">
                 <Link
                   to="/contact"
                   className="btn btn-primary mob-btn-primary"
-                  aria-label="Start your mobile app development project with QllmSoft Pakistan"
+                  aria-label="Start your mobile app development project with QllmSoft"
                 >
                   Start Your Project
                 </Link>
@@ -565,26 +559,33 @@ const MobileAppDevelopment = () => {
                   Growth
                 </h2>
                 <p>
-          A high performance mobile application is more than just an asset , it’s a 
-          strategic investment. At QllmSoft, we deliver <strong>bespoke mobile development services</strong> 
-          engineered to help startups and enterprises build scalable, secure, and 
-          user centric mobile solutions that drive long term engagement.
-        </p>
-        <p>
-          Our engineering team specializes in native iOS, Android, and 
-          high performance <strong>hybrid architectures</strong>. By leveraging 
-          industry leading frameworks like Flutter and React Native, we deliver 
-          cross platform applications that provide native quality experiences 
-          from a single, maintainable codebase.
-        </p>
-        <p>
-          We bridge the gap between technical precision and intuitive UI/UX design. 
-          With our <Link to="/api-development-services">secure API integration capabilities</Link>, 
-          we ensure seamless data synchronization and fluid performance across 
-          the entire mobile ecosystem. Leading businesses across the 
-          <strong> the world</strong> trust QllmSoft to 
-          build digital products that scale with their vision.
-        </p>
+                  A high performance mobile application is more than just an
+                  asset , it’s a strategic investment. At QllmSoft, we deliver{" "}
+                  <strong>bespoke mobile development services</strong>
+                  engineered to help startups and enterprises build scalable,
+                  secure, and user centric mobile solutions that drive long term
+                  engagement.
+                </p>
+                <p>
+                  Our engineering team specializes in native iOS, Android, and
+                  high performance <strong>hybrid architectures</strong>. By
+                  leveraging industry leading frameworks like Flutter and React
+                  Native, we deliver cross platform applications that provide
+                  native quality experiences from a single, maintainable
+                  codebase.
+                </p>
+                <p>
+                  We bridge the gap between technical precision and intuitive
+                  UI/UX design. With our{" "}
+                  <Link to="/api-development-services">
+                    secure API integration capabilities
+                  </Link>
+                  , we ensure seamless data synchronization and fluid
+                  performance across the entire mobile ecosystem. Leading
+                  businesses across the
+                  <strong> the world</strong> trust QllmSoft to build digital
+                  products that scale with their vision.
+                </p>
                 <div
                   className="mob-intro__badges"
                   aria-label="Compliance and delivery standards"
@@ -639,7 +640,7 @@ const MobileAppDevelopment = () => {
                     sub: "Upgrade legacy mobile apps",
                   },
                   {
-                    icon:"bi-hr",
+                    icon: "bi-hr",
                     label: "API & Backend Integration",
                     sub: "Seamless data & payment flows",
                   },
@@ -654,7 +655,10 @@ const MobileAppDevelopment = () => {
                       className="mob-highlight-row__icon"
                       aria-hidden="true"
                     >
-                     <i className={`bi ${h.icon}`} style={{ color: '#edb702' }}></i>
+                      <i
+                        className={`bi ${h.icon}`}
+                        style={{ color: "#edb702" }}
+                      ></i>
                     </span>
                     <div>
                       <strong>{h.label}</strong>
@@ -718,6 +722,43 @@ const MobileAppDevelopment = () => {
               </div>
             </div>
           </div>
+          <div
+            className="wds-portfolio__pdf-banner card  text-white p-5 text-center border-0 shadow mx-auto"
+        
+          >
+            <div
+              className="card-body mx-auto mob-dossier-body"
+             
+            >
+            <div className="mob-dossier-icon text-warning" aria-hidden="true">
+      <i className="bi bi-file-earmark-pdf-fill"></i>
+    </div>
+
+              <h3 className="h3 text-white mb-3 fw-bold">
+                Download Our Enterprise Mobile Engineering Capability Dossier
+              </h3>
+              <p className="text-muted small mb-4">
+                Seeking a precise technical audit of our runtimes? Download our
+                comprehensive mobile systems blueprint portfolio. This master
+                architectural brief dissects our live iOS & Android native
+                deployments, memory profile optimization patterns, secure
+                offline first sync engines, and strict App Store & Play Store
+                compliance compliance pipelines.
+              </p>
+
+              <a
+                href={MOBILEappPdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-warning fw-bold px-4 py-2.5 text-dark d-inline-flex align-items-center gap-2 shadow-sm"
+                aria-label="Download QllmSoft master mobile application systems engineering portfolio PDF"
+                download
+              >
+                <i className="bi bi-download"></i> Download Mobile Architecture
+                Blueprints
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* ════════════════════════════════════════════════
@@ -729,16 +770,16 @@ const MobileAppDevelopment = () => {
           aria-labelledby="services-heading"
         >
           <div className="container">
-            
             <div className="section-title">
               <h2 className="services-heading">
                 Android, iOS & Cross Platform Mobile App Development
               </h2>
-             <p>
-        We don't believe in templates or compromises. Every mobile solution we 
-        engineer is custom built around your specific user journeys, enterprise 
-        workflows, and long-term scalability roadmap.
-      </p>
+              <p>
+                We don't believe in templates or compromises. Every mobile
+                solution we engineer is custom built around your specific user
+                journeys, enterprise workflows, and long-term scalability
+                roadmap.
+              </p>
             </div>
             <div className="mob-services__grid">
               {[
@@ -759,7 +800,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "02",
-                  icon:"bi-apple",
+                  icon: "bi-apple",
                   platform: "iOS",
                   title: "iOS App Development",
                   desc: "Our iOS developers build polished, performant iPhone and iPad applications using Swift — designed to Apple's Human Interface Guidelines and optimized for App Store approval. We focus on smooth animations, intuitive UX, and deep iOS system integration.",
@@ -789,7 +830,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "04",
-                  icon:"bi-braces",
+                  icon: "bi-braces",
                   platform: "React Native",
                   title: "React Native App Development",
                   desc: "Using React Native, we build cross-platform mobile applications that leverage JavaScript and React — giving your web development team a familiar toolchain while delivering truly native-feeling mobile experiences on Android and iOS.",
@@ -818,7 +859,7 @@ const MobileAppDevelopment = () => {
                 },
                 {
                   num: "06",
-                  icon:"bi-arrow-repeat",
+                  icon: "bi-arrow-repeat",
                   platform: "Modernization",
                   title: "App Modernization &amp; Maintenance",
                   desc: "Outdated mobile apps leak users and revenue. We modernize legacy Android and iOS applications through UI/UX redesign, performance auditing, security hardening, framework migration, and feature expansion — without disrupting your existing user base.",
@@ -847,7 +888,10 @@ const MobileAppDevelopment = () => {
                         className="mob-service-card__icon"
                         aria-hidden="true"
                       >
-                       <i className={`bi ${s.icon}`} style={{ color: '#edb702', fontSize: '1.5rem' }}></i>
+                        <i
+                          className={`bi ${s.icon}`}
+                          style={{ color: "#edb702", fontSize: "1.5rem" }}
+                        ></i>
                       </span>
                       <span className="mob-service-card__platform">
                         {s.platform}
@@ -889,14 +933,13 @@ const MobileAppDevelopment = () => {
           aria-labelledby="process-heading"
         >
           <div className="container">
-           
             <div className="section-title">
               <h2 id="process-heading">Our Mobile App Development Process</h2>
               <p>
-        From concept to code and deployment, we follow a rigorous, 
-        transparency first engineering process. No black boxes just a 
-        structured journey toward a high performance digital product.
-      </p>
+                From concept to code and deployment, we follow a rigorous,
+                transparency first engineering process. No black boxes just a
+                structured journey toward a high performance digital product.
+              </p>
             </div>
 
             <div className="mob-process__layout">
@@ -966,7 +1009,10 @@ const MobileAppDevelopment = () => {
                         className="mob-process__step-icon"
                         aria-hidden="true"
                       >
-                      <i className={`bi ${step.icon}`} style={{ color: '#edb702' }}></i>
+                        <i
+                          className={`bi ${step.icon}`}
+                          style={{ color: "#edb702" }}
+                        ></i>
                       </span>
                       <h4>{step.title}</h4>
                       <p>{step.desc}</p>
@@ -1007,7 +1053,10 @@ const MobileAppDevelopment = () => {
                     ].map((p) => (
                       <div key={p.label} className="mob-process__pillar">
                         <span aria-hidden="true">
-                          <i className={`bi ${p.icon}`} style={{ color: '#edb702' }}></i>
+                          <i
+                            className={`bi ${p.icon}`}
+                            style={{ color: "#edb702" }}
+                          ></i>
                         </span>
                         <div>
                           <strong>{p.label}</strong>
@@ -1051,7 +1100,6 @@ const MobileAppDevelopment = () => {
           aria-labelledby="roadmap-heading"
         >
           <div className="container">
-           
             <div className="section-title">
               <h2 id="roadmap-heading">Mobile App Development Roadmap</h2>
               <p>
@@ -1066,7 +1114,7 @@ const MobileAppDevelopment = () => {
             >
               {[
                 {
-                  icon:"bi-lightbulb",
+                  icon: "bi-lightbulb",
                   label: "Idea Validation",
                   sub: "Concept & market fit",
                 },
@@ -1102,7 +1150,10 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.1}s` }}
                 >
                   <div className="mob-roadmap__stage-icon" aria-hidden="true">
-                   <i className={`bi ${r.icon}`} style={{ color: '#edb702', fontSize: '1.4rem' }}></i>
+                    <i
+                      className={`bi ${r.icon}`}
+                      style={{ color: "#edb702", fontSize: "1.4rem" }}
+                    ></i>
                   </div>
                   <div className="mob-roadmap__stage-num" aria-hidden="true">
                     0{i + 1}
@@ -1131,7 +1182,6 @@ const MobileAppDevelopment = () => {
           aria-labelledby="tech-heading"
         >
           <div className="container">
-            
             <div className="section-title">
               <h2 id="tech-heading">
                 Technologies We Use for Mobile App Development
@@ -1276,17 +1326,16 @@ const MobileAppDevelopment = () => {
           aria-labelledby="pillars-heading"
         >
           <div className="container">
-          
             <div className="section-title">
               <h2 id="pillars-heading">
-                Key Factors That Determine Mobile App Success in 2026 &
-                Beyond
+                Key Factors That Determine Mobile App Success in 2026 & Beyond
               </h2>
               <p>
-        Building a market leading app requires more than just functional code. 
-        At QllmSoft, we engineer the core pillars that drive user retention, 
-        enterprise grade security, and sustainable business growth.
-      </p>
+                Building a market leading app requires more than just functional
+                code. At QllmSoft, we engineer the core pillars that drive user
+                retention, enterprise grade security, and sustainable business
+                growth.
+              </p>
             </div>
             <div className="mob-pillars__grid">
               {[
@@ -1309,13 +1358,13 @@ const MobileAppDevelopment = () => {
                   highlight: false,
                 },
                 {
-                  icon:"bi-shield-lock",
+                  icon: "bi-shield-lock",
                   title: "Security & Data Compliance",
                   desc: "We apply OWASP Mobile Top 10 practices, encrypted local storage, secure API communication, and privacy-aware data handling. Where required, we support GDPR-aligned data flows to protect your users and reduce regulatory risk.",
                   highlight: false,
                 },
                 {
-                  icon:"bi-graph-up-arrow",
+                  icon: "bi-graph-up-arrow",
                   title: "Analytics & Continuous Improvement",
                   desc: "Launching an app is the beginning, not the end. We integrate analytics tools (Firebase Analytics, Mixpanel) so you can track user behavior, identify drop-off points, and make data-driven product decisions post-launch.",
                   highlight: false,
@@ -1333,7 +1382,13 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.09}s` }}
                 >
                   <span className="mob-pillar-card__icon" aria-hidden="true">
-                   <i className={`bi ${p.icon}`} style={{ color: p.highlight ? '#fff' : '#edb702', fontSize: '1.8rem' }}></i>
+                    <i
+                      className={`bi ${p.icon}`}
+                      style={{
+                        color: p.highlight ? "#fff" : "#edb702",
+                        fontSize: "1.8rem",
+                      }}
+                    ></i>
                   </span>
                   <h3 className="mob-pillar-card__title">{p.title}</h3>
                   <p className="mob-pillar-card__desc">{p.desc}</p>
@@ -1352,7 +1407,6 @@ const MobileAppDevelopment = () => {
           aria-labelledby="industries-heading"
         >
           <div className="container">
-           
             <div className="section-title">
               <h2 id="industries-heading">
                 Mobile Applications Across Every Industry
@@ -1417,7 +1471,13 @@ const MobileAppDevelopment = () => {
                   style={{ animationDelay: `${i * 0.07}s` }}
                 >
                   <span className="mob-industry-card__icon" aria-hidden="true">
-                    <i className={`bi ${ind.icon}`} style={{ color: ind.highlight ? '#fff' : '#edb702', fontSize: '1.8rem' }}></i>
+                    <i
+                      className={`bi ${ind.icon}`}
+                      style={{
+                        color: ind.highlight ? "#fff" : "#edb702",
+                        fontSize: "1.8rem",
+                      }}
+                    ></i>
                   </span>
                   <h3 className="mob-industry-card__title">{ind.title}</h3>
                   <p className="mob-industry-card__desc">{ind.desc}</p>
@@ -1440,45 +1500,40 @@ const MobileAppDevelopment = () => {
               <div
                 className={`mob-outsource__text animate__animated ${outsourceInView ? "animate__fadeInLeft" : ""}`}
               >
-                
                 <h2 id="outsource-heading">
-                  Mobile App Development Outsourcing to Pakistan — The
-                  Competitive Advantage
+                  Strategic Mobile Engineering Collaboration &{" "}
+                  <span>Global Resource Scaling</span>
                 </h2>
                 <p>
-                  Outsourcing your mobile app development to QllmSoft in
-                  Pakistan gives you access to senior engineering talent,
-                  structured delivery processes, and enterprise grade quality 
-                  at 50 - 60% of the cost of equivalent teams across the globe
+                  Partnering with QllmSoft's global delivery center enables
+                  organizations to bypass regional talent shortages and secure
+                  senior systems engineering expertise. We deliver institutional
+                  grade code architecture, strict compliance mapping, and high
+                  velocity product rollouts while maintaining exceptional
+                  capital efficiency relative to domestic Western consulting
+                  firms.
                 </p>
                 <p>
-                  Pakistan's technology sector has produced a deep bench of
-                  mobile engineering talent, with thousands of Flutter, React
-                  Native, Kotlin, and Swift developers delivering world class
-                  applications for clients internationaly Our developers bring
-                  international project experience, fluent English
-                  communication, and a genuine commitment to your product's
-                  success  not just task completion.
+                  Our core development hub operates with a deep bench of mobile
+                  engineering specialists specializing in Flutter, React Native,
+                  Swift, and Kotlin. Every developer on our roster brings cross
+                  border project experience, pristine English technical
+                  documentation skills, and an engineering first methodology
+                  dedicated to reducing long term technical debt rather than
+                  merely checking off feature requirements.
                 </p>
                 <p>
-                  According to{" "}
-                  <a
-                    href="https://www.statista.com/topics/1002/mobile-app-usage/"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="Statista mobile app usage statistics — external authoritative source"
-                  >
-                    Statista
-                  </a>
-                  , global mobile app usage continues to grow year over year 
-                  making this the right time to invest in a mobile presence for
-                  your business.
+                  As enterprise ecosystems increasingly transition to mobile
+                  first interfaces, organizations require scalable
+                  cross-platform software. We design our deployment pipelines to
+                  handle cross border scalability and integration with cloud
+                  environments cleanly and predictably.
                 </p>
                 <Link
                   to="/contact"
                   className="btn btn-primary mob-btn-primary"
                   style={{ marginTop: "16px", display: "inline-block" }}
-                  aria-label="Get a free mobile app outsourcing consultation with QllmSoft Pakistan"
+                  aria-label="Get a free mobile app outsourcing consultation with QllmSoft"
                 >
                   Discuss Your Project
                 </Link>
@@ -1530,7 +1585,10 @@ const MobileAppDevelopment = () => {
                       className="mob-outsource-card__icon"
                       aria-hidden="true"
                     >
-                      <i className={`bi ${b.icon}`} style={{ color: '#edb702', fontSize: '1.8rem' }}></i>
+                      <i
+                        className={`bi ${b.icon}`}
+                        style={{ color: "#edb702", fontSize: "1.8rem" }}
+                      ></i>
                     </span>
                     <div className="mob-outsource-card__stat">{b.stat}</div>
                     <strong className="mob-outsource-card__label">
@@ -1553,7 +1611,6 @@ const MobileAppDevelopment = () => {
           aria-labelledby="why-heading"
         >
           <div className="container">
-            
             <div className="section-title">
               <h2 id="why-heading">
                 Why Choose QllmSoft for Mobile App Development ?
@@ -1601,7 +1658,10 @@ const MobileAppDevelopment = () => {
                       {w.num}
                     </span>
                     <span className="mob-why-card__icon" aria-hidden="true">
-                      <i className={`bi ${w.icon}`} style={{ color: '#edb702', fontSize: '1.8rem' }}></i>
+                      <i
+                        className={`bi ${w.icon}`}
+                        style={{ color: "#edb702", fontSize: "1.8rem" }}
+                      ></i>
                     </span>
                   </div>
                   <h3>{w.title}</h3>
@@ -1612,8 +1672,7 @@ const MobileAppDevelopment = () => {
           </div>
         </section>
 
-      
-          {/* ── TESTIMONIALS ── */}
+        {/* ── TESTIMONIALS ── */}
         <section
           className="section testimonial-section"
           aria-labelledby="testimonials-heading"
@@ -1621,7 +1680,7 @@ const MobileAppDevelopment = () => {
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Software Development Company Pakistan
+            Client Reviews, QllmSoft Software Development Company
           </h2>
           <TestimonialSection />
 
@@ -1638,14 +1697,10 @@ const MobileAppDevelopment = () => {
           </div>
         </section>
 
-      
-
-
-       <FounderNote
-  title="Engineering Mobility, Scaling Vision"
-  message="At QllmSoft, we don't just build apps; we engineer global products. Our focus is exclusively on the International Market, ensuring that every project adheres to ISO standards, GDPR privacy laws, and Tier 1 security protocols. We bridge the gap between complex business logic and world class user experiences, serving as your dedicated offshore innovation hub."
-/>
-
+        <FounderNote
+          title="Engineering Mobility, Scaling Vision"
+          message="At QllmSoft, we don't just build apps; we engineer global products. Our focus is exclusively on the International Market, ensuring that every project adheres to ISO standards, GDPR privacy laws, and Tier 1 security protocols. We bridge the gap between complex business logic and world class user experiences, serving as your dedicated offshore innovation hub."
+        />
 
         {/* ════════════════════════════════════════════════
             FAQ — H2 + FAQPage schema
@@ -1659,9 +1714,7 @@ const MobileAppDevelopment = () => {
           <div className="container">
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
-              <h2 id="faq-heading">
-                Mobile App Development FAQs 
-              </h2>
+              <h2 id="faq-heading">Mobile App Development FAQs</h2>
               <p>
                 Quick answers about timelines, platforms, costs, store
                 submission, and cross platform development , everything you need
@@ -1678,14 +1731,14 @@ const MobileAppDevelopment = () => {
                 to="/mobile-app-development"
                 className="btn btn-outline-dark"
                 style={{ marginRight: "16px" }}
-                aria-label="See detailed mobile app development cost guide for Pakistan"
+                aria-label="See detailed mobile app development cost guide "
               >
                 View Cost Guide
               </Link>
               <Link
                 to="/contact"
                 className="btn btn-primary mob-btn-primary"
-                aria-label="Get a free quote for mobile app development from QllmSoft Pakistan"
+                aria-label="Get a free quote for mobile app development from QllmSoft"
               >
                 Get a Free Quote
               </Link>
@@ -1693,12 +1746,9 @@ const MobileAppDevelopment = () => {
           </div>
         </section>
 
-
-  {/*services carousel*/}
+        {/*services carousel*/}
 
         <RelatedSolutions category="mobile" />
-
-
 
         {/* ════════════════════════════════════════════════
             FINAL CTA — H2
@@ -1722,7 +1772,7 @@ const MobileAppDevelopment = () => {
               <Link
                 to="/contact"
                 className="btn btn-primary mob-btn-primary mob-btn-cta"
-                aria-label="Get a free mobile app development consultation from QllmSoft Pakistan"
+                aria-label="Get a free mobile app development consultation from QllmSoft"
               >
                 Get a Free Consultation
               </Link>
