@@ -16,7 +16,7 @@ const ChatBot = () => {
 			id: 1,
 			type: "bot",
 			content:
-				"Hello! 👋 I'm here to help. Ask me about our services, technologies, or anything else!",
+				"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
 			timestamp: new Date(),
 		},
 	]);
@@ -112,7 +112,12 @@ const ChatBot = () => {
 					title="Chat with us"
 					aria-label="Open chatbot"
 				>
-					<MessageCircle size={24} />
+					<img
+						src={chatbot}
+						alt="QllmSoft ChatBot Avatar"
+						style={{ padding: "12px" }}
+					/>
+					{/* <MessageCircle size={24} /> */}
 				</button>
 			)}
 
@@ -122,7 +127,7 @@ const ChatBot = () => {
 					{/* Header */}
 					<div className="chatbot-header">
 						<div className="chatbot-header-title">
-							<h3>QllmSoft Assistant</h3>
+							<h3>QllmSoft AI</h3>
 							{/* <span className="status-indicator">Online</span> */}
 						</div>
 						<button
@@ -144,11 +149,7 @@ const ChatBot = () => {
 										<img src={chatbot} alt="QllmSoft ChatBot Avatar" />
 									</div>
 									<div className="welcome-text">
-										<h4>QllmSoft Assistant</h4>
-										<p>
-											Feel free to ask me anything about our services,
-											technologies, or past projects.
-										</p>
+										<h4>Welcome to QllmSoft AI 👋</h4>
 									</div>
 								</div>
 							</div>
@@ -186,7 +187,7 @@ const ChatBot = () => {
 					{/* Suggested Questions Pills */}
 					{messages.length === 1 && !isLoading && (
 						<div className="suggested-questions">
-							{predefinedQuestions.slice(0, 3).map((question) => (
+							{predefinedQuestions.slice(0, 5).map((question) => (
 								<button
 									key={question.id}
 									onClick={() => handlePredefinedQuestion(question)}

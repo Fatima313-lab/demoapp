@@ -62,32 +62,32 @@ export const sendMessageToGPT = async (message) => {
 export const predefinedQuestions = [
 	{
 		id: "services",
-		title: "Our Services",
-		question: "What services does QllmSoft provide?",
+		title: "Services",
+		question: "What services do you offer?",
 		icon: "💼",
 	},
 	{
 		id: "technologies",
-		title: "Technologies",
-		question: "What technologies and tech stacks do you work with?",
+		title: "Tech Stack",
+		question: "What technologies do you use?",
 		icon: "⚙️",
 	},
 	{
 		id: "pricing",
-		title: "Project Cost",
-		question: "How do you determine project costs and timelines?",
+		title: "Pricing",
+		question: "How much does a project cost?",
 		icon: "💰",
 	},
 	{
 		id: "experience",
-		title: "Experience",
-		question: "Tell me about your company experience and portfolio.",
+		title: "Portfolio",
+		question: "Can I see your work?",
 		icon: "🏆",
 	},
 	{
 		id: "contact",
-		title: "Contact Info",
-		question: "How can I get in touch with your team?",
+		title: "Contact",
+		question: "How can I contact you?",
 		icon: "📞",
 	},
 ];
