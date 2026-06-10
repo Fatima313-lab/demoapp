@@ -214,9 +214,9 @@ const schemaService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'AI Software Development',
-  name: 'AI-Powered Software Solutions in Pakistan',
+  name: 'AI-Powered Software Solutions & Custom Platform Engineering | QllmSoft',
   description:
-    'Custom AI development services in Pakistan — machine learning models, NLP chatbots, computer vision, AI business automation, OpenAI integrations, and AI consulting for startups and enterprises worldwide.',
+   'QllmSoft engineers custom enterprise grade AI software solutions  including production machine learning, advanced NLP pipelines, real time computer vision, agentic automation frameworks, and secure LLM integration for global organizations.',
   provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
   areaServed: ['Pakistan','United States','United Kingdom','UAE','Saudi Arabia'],
   url: PAGE_URL,
