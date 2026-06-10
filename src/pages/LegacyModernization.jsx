@@ -1028,37 +1028,37 @@ const LegacyModernization = () => {
               {[
                 {
                   n: "01",
-                  icon: "🔍",
+                  icon: "bi-search",
                   title: "Deep Technical & Business Assessment",
                   desc: "We conduct a comprehensive codebase audit, dependency inventory, security vulnerability scan, performance baseline measurement, and business risk classification  delivering a detailed assessment report and modernization roadmap before any development begins.",
                 },
                 {
                   n: "02",
-                  icon: "🗺️",
+                  icon: "bi-graph-up",
                   title: "Phased Modernization Planning",
                   desc: "We design a phased modernization plan that sequences work by business risk, dependency chain, and impact ensuring high-risk modules are modernized last, after lower-risk components validate the approach and team capability.",
                 },
                 {
                   n: "03",
-                  icon: "⚙️",
+                  icon: "bi-cpu",
                   title: "Iterative Modernization Sprints",
                   desc: "Development proceeds in two-week sprints with each sprint delivering a modernized module validated against the legacy system's behaviour. Parallel operation ensures the business is never dependent on unvalidated modernized components.",
                 },
                 {
                   n: "04",
-                  icon: "🧪",
+                  icon: "bi-check-circle",
                   title: "Regression Testing & Performance Validation",
                   desc: "Every modernized component is tested against the legacy system's functional baseline  ensuring feature parity  plus performance benchmarking against pre-modernization response times to validate improvement.",
                 },
                 {
                   n: "05",
-                  icon: "🚀",
+                  icon: "bi-rocket",
                   title: "Staged Cutover & Go-Live",
                   desc: "We manage staged traffic cutover  routing a percentage of users to the modernized system first, monitoring closely, and completing full cutover only after performance and stability are confirmed. Rollback capability is maintained throughout.",
                 },
                 {
                   n: "06",
-                  icon: "📊",
+                  icon: "bi-bar-chart",
                   title: "Post-Migration Monitoring & Optimization",
                   desc: "Post-migration, we monitor performance metrics, error rates, and security telemetry delivering a 30-day post-migration health report and implementing optimizations identified from real production usage patterns.",
                 },
@@ -1070,7 +1070,7 @@ const LegacyModernization = () => {
                 >
                   <div className="ip-process__step-num">{step.n}</div>
                   <span className="ip-process__step-icon" aria-hidden="true">
-                    {step.icon}
+                    <i className={step.icon} style={{ color: '#ffd500' }} />
                   </span>
                   <div className="ip-process__step-body">
                     <h4>{step.title}</h4>
