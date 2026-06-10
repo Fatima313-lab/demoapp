@@ -31,7 +31,7 @@ import lhoreimg from "../assets/lahore.webp";
 import faislabadim from "../assets/faisalabad.jpg";
 import fintech from "../assets/qllm-soft-finance-management-system-11.webp";
 import qllmdocs from "../assets/QllmDocs.webp";
-
+const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/website-development-services";
 const OG_IMAGE =
@@ -48,7 +48,7 @@ const schemaOrg = {
     "@type": "ContactPoint",
     telephone: "+92-334-8229288",
     contactType: "customer service",
-    areaServed: ["PK", "US", "GB", "AE", "SA"],
+    areaServed: ["US", "GB", "AE", "SA", "PK"],
     availableLanguage: "English",
   },
   address: {
@@ -71,41 +71,42 @@ const schemaService = {
   serviceType: "Custom Web Development & Software Engineering",
   name: "Global Website Development & Digital Solutions | QllmSoft",
   description:
-    "QllmSoft delivers enterprise grade web development services globally. Specializing in high performance React/Next.js apps, ASP.NET Core backends, and scalable eCommerce solutions for clients in the US, UK, UAE, and Pakistan.",
+    "QllmSoft delivers enterprise grade web development services globally. Specializing in high performance React/Next.js apps, ASP.NET Core backends, and scalable eCommerce solutions for clients globally across the US, UK, Europe, and the Gulf regions.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
     url: "https://qllmsoft.com",
   },
   areaServed: [
-    { "@type": "Country", name: "Pakistan" },
     { "@type": "Country", name: "United States" },
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "Country", name: "United Arab Emirates" },
     { "@type": "Country", name: "Saudi Arabia" },
+    { "@type": "Country", name: "Pakistan" },
   ],
   url: PAGE_URL,
   offers: [
     {
       "@type": "Offer",
-      name: "Professional Business Website",
-      priceCurrency: "PKR",
+      name: "Custom Project, Core Web Infrastructure",
+      priceCurrency: "USD",
       price: "50000",
-      description: "SEO-optimized 5–10 page business website",
+      description:
+        "Custom coded, production ready corporate web engines with native technical SEO optimization.",
     },
     {
       "@type": "Offer",
-      name: "Growth & eCommerce Platform",
-      priceCurrency: "PKR",
-      price: "100000",
-      description: "Custom eCommerce with JazzCash & Easypaisa integration",
+      name: "Scale Model ,Premium SaaS & E Commerce",
+      priceCurrency: "USD",
+      price: "6000",
+      description:
+        "Cloud native architectures featuring high throughput transaction routing and multi tenant database system.",
     },
     {
       "@type": "Offer",
-      name: "SaaS & Web Application",
-      priceCurrency: "PKR",
-      price: "250000",
-      description: "Enterprise SaaS and multi-tenant web applications",
+      name: "Enterprise , Dedicated Engineering Squads",
+      description:
+        "Custom architectural deployment retainers managed by solutions architects and senior technical leads.",
     },
   ],
 };
@@ -139,69 +140,64 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    id: "faq-cost-pakistan",
-    q: "What is the cost of website development in Pakistan?",
-    a: "Website development cost in Pakistan ranges from PKR 50,000 to PKR 250,000+ depending on scope. A 5 10 page professional business site starts from PKR 50,000. Custom web applications and eCommerce platforms start from PKR 100,000. QllmSoft provides free, transparent fixed price quotes within 24 hours of your enquiry.",
-  },
-  {
     id: "faq-timeline",
-    q: "How long does it take to develop a custom website?",
-    a: "A standard custom website takes 6 to 12 weeks: 2 weeks for design and prototyping, 6-8 weeks for development, and 2 weeks for QA testing and SEO optimization. Complex SaaS or enterprise projects may take 12-20 weeks depending on scope.",
+    q: "How long does it take to develop a custom enterprise application?",
+    a: "A high performance custom web platform typically requires 6 to 12 weeks: 2 weeks for engineering prototyping, 6-8 weeks for modular development, and 2 weeks for automated QA testing and architectural SEO optimization. Complex SaaS environments or multi tenant enterprise projects require 12-20 weeks depending on technical scope.",
   },
   {
     id: "faq-tech-stack",
-    q: "Which technologies does QllmSoft use for website development?",
-    a: "We specialize in ASP.NET Core for backend, React JS and Angular for frontend, Microsoft SQL Server for databases, and Azure or AWS for cloud deployment. This stack ensures high performance, enterprise grade security, and long term scalability.",
+    q: "Which technologies does QllmSoft deploy for custom systems?",
+    a: "We specialize in ASP.NET Core for ultra secure backend services, React JS and Angular for high speed frontends, Microsoft SQL Server for robust data layer architectures, and Azure or AWS for scalable cloud infrastructure. This tech stack guarantees elite performance, full OWASP top 10 security layers, and long term horizontal scalability.",
   },
   {
     id: "faq-domain-hosting",
-    q: "Do you provide free domain registration and web hosting in Pakistan?",
-    a: "We help our clients select and configure the best cloud hosting infrastructure (like AWS, Azure, or premium VPS). While domain and hosting renewal fees are third party infrastructure costs, QllmSoft provides completely free deployment, SSL setup, and environment configuration during the initial launch phase.",
+    q: "How do you manage infrastructure and cloud environments?",
+    a: "We help our clients engineer, secure, and configure enterprise cloud infrastructure using AWS, Microsoft Azure, or high capacity Virtual Private Servers (VPS). QllmSoft provides complete multi environment deployment, automated SSL configurations, and CI/CD pipeline setup during the initial launch phase.",
   },
   {
     id: "faq-vs-wordpress",
     q: "Why choose QllmSoft over a generic WordPress freelancer?",
-    a: "Unlike freelancers using bloated templates, QllmSoft engineers custom coded solutions using React and ASP.NET. This eliminates 'technical debt', ensures sub 2 second load times, and provides enterprise grade security that generic builders can't match.",
+    a: "Unlike freelance resources using bloated, insecure templates, QllmSoft is an elite agency team engineering custom coded solutions from the ground up using React and ASP.NET This completely eliminates technical debt, guarantees sub 2 second global page loads, and provides military grade security layers that generic template structures cannot support.",
   },
   {
     id: "faq-ecommerce-solutions",
-    q: "Can you develop custom multi vendor eCommerce websites?",
-    a: "Yes, we build highly secure, custom eCommerce platforms engineered to handle thousands of concurrent transactions. We integrate reliable local payment gateways (like JazzCash, EasyPaisa,  and Safepay) as well as international systems (Stripe, PayPal) with optimized inventory sync mechanics.",
+    q: "Can you engineer complex multi vendor or high volume B2B eCommerce platforms?",
+    a: "Yes. We build high availability, custom eCommerce platforms engineered to process thousands of concurrent transactions seamlessly. We integrate major international financial gateways (including Stripe, Stripe Atlas corporate conduits, PayPal, and regional enterprise payment infrastructure) tied to highly optimized, real time inventory synchronization systems.",
   },
   {
     id: "faq-google-ranking",
-    q: "Will my website rank on Google Pakistan?",
-    a: "Yes. We use Architectural SEO clean semantic HTML5, optimized Core Web Vitals, structured data/schema markup, mobile first development, and fast load times to give your website a strong technical foundation for ranking on Google Pakistan from the day of launch.",
+    q: "Will my custom platform be structured to maximize global search engine reach?",
+    a: "Absolutely. We build utilizing strict Search Engine Physics: clean semantic HTML5, fully optimized Core Web Vitals, JSON-LD structured schema markups, and rapid global CDN distribution protocols to provide your application with a superior technical foundation for global search positions from launch day.",
   },
   {
     id: "faq-seo-packages",
-    q: "Does QllmSoft offer monthly SEO services after development?",
-    a: "Yes. While every website includes standard technical on page SEO, we offer advanced monthly SEO retainers. This includes keyword research targeted for Pakistan & global markets, strategic link building, content marketing, and competitive rank tracking to keep you on the first page of Google.",
+    q: "Does QllmSoft provide advanced search optimization strategies post-launch?",
+    a: "Yes. While every application includes baseline on page technical optimization, we offer comprehensive monthly growth retainers. These services include multi market international keyword research, strategic technical audit tracking, content modeling, and competitive search analysis to secure elite rankings across target global territories.",
   },
   {
     id: "faq-responsive-mobile",
-    q: "Will my website be mobile friendly and responsive?",
-    a: "Absolutely. Over 70% of web traffic in Pakistan originates from mobile devices. Every platform we build follows a strict mobile first fluid responsive grid, ensuring layout pixel perfection across all Android, iOS devices, tablets, and desktop monitors.",
+    q: "Are your custom architectures fully optimized for fluid mobile responsive grids?",
+    a: "Yes. Every digital ecosystem we engineer follows a strict mobile first paradigm. We build responsive fluid layouts ensuring absolute pixel perfection, seamless touch interaction mechanics, and identical performance speeds across all Android, iOS, tablet, and desktop viewports.",
   },
   {
     id: "faq-source-code",
-    q: "Will I get full ownership of the website's source code?",
-    a: "Yes, 100%. Upon final project completion and launch, full intellectual property (IP) rights and raw source code ownership are transferred completely to you. We provide clean, documented code repositories via GitHub or GitLab with no hidden licensing terms.",
+    q: "Will our organization retain full ownership of the system's source code?",
+    a: "Yes, 100%. Upon system delivery and deployment, complete intellectual property (IP) rights and raw source code ownership transfer directly to your company. We provide fully clean, modular, and documented repositories via GitHub or GitLab with no proprietary lock ins or hidden licensing fees.",
   },
   {
     id: "faq-maintenance",
-    q: "Do you provide website maintenance and support after launch?",
-    a: "Yes. Every project includes a 30 day hyper care period after launch covering performance monitoring, bug fixes, security patches, and content updates. We also offer ongoing maintenance retainers for businesses that want continuous optimization and support.",
+    q: "Do you provide operational maintenance and technical support after launch?",
+    a: "Yes. Every enterprise project includes a dedicated 30 day hyper care monitoring period covering absolute performance tracking, security patch deployment, and technical adjustments. We also offer ongoing service level agreement (SLA) retainers for continuous system optimization and engineering support.",
   },
   {
     id: "faq-redesign-systems",
-    q: "Can you redesign and migrate our existing slow business website?",
-    a: "Yes. We specialize in legacy system migration. We can redesign your old website from scratch into a high performance React/.NET framework while carefully preserving your existing Google ranking juices using precise 301 URL redirection mapping protocols.",
+    q: "Can your team modernize and migrate a legacy business system?",
+    a: "Yes. We specialize in complex legacy migrations. We can completely reconstruct outdated architectures into modern React/.NET stacks while carefully safeguarding your existing organic traffic authority using precise server-side 301 URL redirection protocols.",
   },
   {
     id: "faq-locations-pakistan",
-    q: "Can QllmSoft build websites for businesses in Lahore, Karachi, and Islamabad?",
-    a: "Absolutely. QllmSoft serves businesses across all of Pakistan ,Lahore, Karachi, Islamabad, Faisalabad, Sialkot, Gujrat, and beyond. We operate fully remotely with regular video calls, shared project portals, and transparent sprint reporting. We also serve international clients across the UK, USA, and UAE.",
+    q: "How does QllmSoft manage collaboration and remote engineering alignment?",
+    a: "QllmSoft serves corporate enterprises and funded startups globally across North America, Europe, the UK, and the Gulf[cite: 1]. Operating from our specialized engineering delivery center, we utilize fully transparent sprint cycles, shared agile project boards, structured video reviews, and strategic time-zone overlap hours to make remote development smooth and frictionless[cite: 1].",
   },
 ];
 
@@ -588,9 +584,10 @@ const WebsiteDevelopmentServices = () => {
           name="description"
           content="QllmSoft's Global Delivery Center engineers secure, enterprise grade web applications, SaaS platforms & custom solutions using .NET, React, and Angular."
         />
+
         <meta
           name="keywords"
-          content="high performance web development, custom web engineering solutions, website development services Pakistan, web development company Pakistan, custom website development Pakistan, eCommerce website development Pakistan, ASP.NET Core web development, React web development Pakistan, SEO-optimized website Pakistan, web application development Pakistan, website development Lahore Karachi Islamabad"
+          content="high performance web development, custom web engineering solutions, enterprise SaaS architecture, ASP.NET Core web development, React web development, secure web application development, custom website engineering, scalable cloud architectures"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -662,10 +659,10 @@ const WebsiteDevelopmentServices = () => {
             </h1>
 
             <p className="wds-hero__sub">
-              QllmSoft engineers ultra fast, secure, and production ready
-              digital architectures. We transition corporate objectives into
-              robust custom web applications that dominate competitors and load
-              instantly worldwide.
+              QllmSoft engineers ultra-fast, secure, and production ready
+              digital architectures. We translate complex corporate objectives
+              into robust custom web applications designed for high availability
+              and instant global delivery.
             </p>
 
             <div className="csd-hero__buttons">
@@ -817,9 +814,10 @@ const WebsiteDevelopmentServices = () => {
               </h2>
               <p className="wds-legacy__subtitle">
                 For more than 10 years, QllmSoft has served as a trusted
-                engineering partner for global businesses. From our delivery
-                center in Pakistan, we architect elite digital ecosystems
-                optimized for international scale.
+                engineering partner for global businesses. Operating out of our
+                fully redundant, enterprise grade Global Delivery Center, we
+                architect elite digital ecosystems optimized for international
+                scale.
               </p>
             </div>
             <div className="wds-legacy__grid">
@@ -894,153 +892,129 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        {/*<section className="section comparison-section">
-          <div className="container">
-            <div className="section-title text-center">
-             
-              <h2>
-                Custom Development <span>vs</span> Generic Templates
-              </h2>
-              <p>
-                Why QllmSoft chooses React & ASP.NET over cheap WordPress themes
-                for long term growth.
-              </p>
-            </div>
-
-            <div className="comparison-grid">
-              <div className="comparison-card template-card">
-                <div className="card-head">
-                  <span className="badge">WordPress Templates</span>
-                  <h3>The "Cheap" Trap</h3>
-                </div>
-                <ul className="comparison-list">
-                  <li>❌ Bloated code slowing down SEO speed.</li>
-                  <li>❌ High vulnerability to security hacks.</li>
-                  <li>❌ Limited customization and "Same-look" design.</li>
-                  <li>❌ High maintenance costs in the long run.</li>
-                </ul>
-              </div>
-
-              <div className="vs-divider">VS</div>
-
-              <div className="comparison-card custom-card-3d">
-                <div className="card-head">
-                  <span className="badge premium">QllmSoft Custom</span>
-                  <h3>Built for Performance</h3>
-                </div>
-                <ul className="comparison-list">
-                  <li>✅ Clean React code for instant Google indexing.</li>
-                  <li>✅ ASP.NET Core: Bank grade security architecture.</li>
-                  <li>✅ 100% Unique UI designed for your brand.</li>
-                  <li>✅ Scalable architecture that grows with your users.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>*/}
-
-        {/* ══════════════════════════════════════════════════
-            PROCESS  —  H2 + H4s
-        ══════════════════════════════════════════════════ 
+        {/*   PORTFOLIO SHOWCASE*/}
         <section
-          className="section wds-process"
-          ref={processRef}
-          aria-labelledby="process-heading"
+          className="section portfolio-showcase"
+          aria-labelledby="portfolio-heading"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="process-heading">
-               Our Process: How We Bring Your Vision to Life
+            <div className="section-header text-center mb-5">
+              <span className="text-warning text-uppercase fw-bold tracking-wider">
+                Engineered Ecosystems
+              </span>
+              <h2
+                id="portfolio-heading"
+                className="wds-portfolio__main-title mt-2"
+              >
+                Featured Production Architectures
               </h2>
-              <p>
-              We follow a clear, step by step workflow to take your project from an 
-      idea to a high performance launch. No guesswork just full 
-      transparency at every stage of the journey.
+              <p
+                className="wds-portfolio__main-sub mx-auto text-muted"
+                style={{ maxWidth: "650px" }}
+              >
+                Explore highlight web systems engineered by our global delivery
+                center, designed to scale seamlessly and handle complex
+                enterprise workloads.
               </p>
             </div>
 
-            <div className="wds-process__image-wrap">
-              <img
-                src={processsectionimg}
-                alt="QllmSoft agile website development process Pakistan — 6-stage engineering workflow"
-                loading="lazy"
-              />
-              <p className="wds-process__note">
-                <strong>Note:</strong> We use Agile Scrum methodologies — every
-                sprint is documented and shared with you in real time via our
-                project portal.
-              </p>
-            </div>
+            {/* 1. Visual Highlight Project Grid */}
+            <div className="projects-grid row g-4 mb-5">
+              {PORTFOLIO_PROJECTS.map((project, i) => (
+                <div key={i} className="col-lg-6">
+                  <article className="project-item card h-100 shadow border-0 overflow-hidden bg-light">
+                    <div className="project-image position-relative">
+                      <img
+                        src={project.imgSrc}
+                        alt={project.imgAlt}
+                        className="img-fluid w-100"
+                        style={{ height: "260px", objectFit: "cover" }}
+                        loading="lazy"
+                      />
+                      <div className="project-image__tech-overlay"></div>
+                    </div>
 
-            <ol
-              className="wds-process__steps"
-              aria-label="Website development process steps"
-            >
-              {[
-                {
-                  n: "01",
-                  title: "Architecture & Blueprinting",
-                  highlight: false,
-                  desc: "We map your operational workflows and data structures. This stage ensures the technical foundation aligns with your business logic before a single line of code is written.",
-                },
-                {
-                  n: "02",
-                  title: "Interactive Prototyping",
-                  highlight: false,
-                  desc: "Experience your site through high-fidelity wireframes. We validate user pathways to ensure the interface meets expectations before committing to full development.",
-                },
-                {
-                  n: "03",
-                  title: "Agile Engineering Sprints",
-                  highlight: true,
-                  desc: "Developers work in 2 week transparent sprints with regular staging access. You see real progress — not just status updates.",
-                },
-                {
-                  n: "04",
-                  title: "QA & Security Audit",
-                  highlight: false,
-                  desc: "Rigorous stress testing, SEO validation, and security sweeps before any code touches production.",
-                },
-                {
-                  n: "05",
-                  title: "Live Deployment",
-                  highlight: false,
-                  desc: "Zero downtime migration to your live domain with DNS management handled by our team.",
-                },
-                {
-                  n: "06",
-                  title: "30-Day Hyper-Care",
-                  highlight: false,
-                  desc: "Post launch monitoring, performance tuning, and bug fixing at no additional cost.",
-                },
-              ].map((step, i) => (
-                <li
-                  key={i}
-                  className={`wds-process__step ${step.highlight ? "wds-process__step--active" : ""} animate__animated ${processInView ? "animate__fadeInLeft" : ""}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <div
-                    className="wds-process__step-num"
-                    aria-label={`Step ${step.n}`}
-                  >
-                    {step.n}
-                  </div>
-                  <div className="wds-process__step-body">
-                    <h4>
-                      {step.highlight && (
-                        <span className="wds-process__in-progress">
-                          IN PROGRESS
+                    <div className="project-info card-body p-4 d-flex flex-column justify-content-between">
+                      <div>
+                        <span className="badge bg-secondary mb-2 text-uppercase tracking-wider">
+                          {project.type}
                         </span>
-                      )}
-                      {step.title}
-                    </h4>
-                    <p>{step.desc}</p>
-                  </div>
-                </li>
+                        <h3 className="project-info__title h4 text-dark mb-3">
+                          {project.title}
+                        </h3>
+                        <p className="project-info__desc text-muted small mb-4">
+                          {project.desc}
+                        </p>
+
+                        <ul className="project-info__meta-list list-unstyled border-start border-warning border-3 ps-3 mb-4">
+                          <li className="mb-2">
+                            <strong className="text-dark small">
+                              Tech Stack:
+                            </strong>{" "}
+                            <span className="text-muted small">
+                              {project.tech}
+                            </span>
+                          </li>
+                          <li>
+                            <strong className="text-dark small">
+                              Key Metrics:
+                            </strong>{" "}
+                            <span className="text-muted small">
+                              {project.features}
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="mt-2">
+                        <Link
+                          to="/contact"
+                          className="btn btn-sm btn-primary d-inline-flex align-items-center gap-2"
+                          aria-label={`Inquire about engineering a solution like ${project.title}`}
+                        >
+                          <i className="bi bi-telephone-outbound"></i> Inquire
+                          About System
+                        </Link>
+                      </div>
+                    </div>
+                  </article>
+                </div>
               ))}
-            </ol>
+            </div>
+            <div className="wds-portfolio__pdf-banner card bg-dark text-white p-5 text-center border-0 shadow">
+              <div className="card-body mx-auto" style={{ maxWidth: "750px" }}>
+                <div
+                  className="mb-3 text-warning"
+                  style={{ fontSize: "2.5rem" }}
+                >
+                  <i className="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h3 className="h3 text-white mb-3">
+                  Download Our Complete Web Development Project Dossier
+                </h3>
+                <p className="text-muted small mb-4">
+                  Want a deeper technical evaluation? Download our comprehensive
+                  website development engineering portfolio. This master
+                  document breaks down our live web implementations, core
+                  performance testing, clean source file architectures, and
+                  custom database integrations.
+                </p>
+
+                <a
+                  href={PortfolioPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-warning fw-bold px-4 py-2 d-inline-flex align-items-center gap-2"
+                  aria-label="Download QllmSoft master web development portfolio PDF"
+                  download
+                >
+                  <i className="bi bi-download"></i> Download Web Engineering
+                  Blueprints
+                </a>
+              </div>
+            </div>
           </div>
-        </section>*/}
+        </section>
 
         {/*tech stack*/}
         <section
@@ -1095,55 +1069,7 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        {/*portfolio*/}
-        <section
-          className="section portfolio-showcase"
-          aria-labelledby="portfolio-heading"
-        >
-          <div className="container">
-            <div className="section-header text-center mb-5">
-              <h2 id="portfolio-heading" className="wds-portfolio__main-title">
-                Featured Web Development Projects
-              </h2>
-              <p className="wds-portfolio__main-sub">
-                Helping global clients streamline processes with intelligent
-                digital solutions.
-              </p>
-            </div>
-
-            <div className="projects-grid">
-              {PORTFOLIO_PROJECTS.map((project, i) => (
-                <div key={i} className="project-item">
-                  <div className="project-image">
-                    <img
-                      src={project.imgSrc}
-                      alt={project.imgAlt}
-                      loading="lazy"
-                    />
-                    <div className="project-image__tech-overlay"></div>
-                  </div>
-                  <div className="project-info">
-                    <span className="project-info__badge">{project.type}</span>
-                    <h3 className="project-info__title">{project.title}</h3>
-                    <p className="project-info__desc">{project.desc}</p>
-                    <ul className="project-info__meta-list">
-                      <li>
-                        <strong className="tech-label">Tech Stack:</strong>{" "}
-                        {project.tech}
-                      </li>
-                      <li>
-                        <strong className="tech-label">Key Features:</strong>{" "}
-                        {project.features}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* cities section */}
+        {/* cities section *
 
         <section
           className="section wds-cities"
@@ -1187,60 +1113,7 @@ const WebsiteDevelopmentServices = () => {
               ))}
             </div>
           </div>
-        </section>
-
-        {/* ══════════════════════════════════════════════════
-            LOCAL OPTIMIZATIONS  —  H2 + H3s
-        ══════════════════════════════════════════════════ 
-        <section
-          className="section wds-local"
-          ref={localRef}
-          aria-labelledby="local-heading"
-        >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="local-heading">
-                Optimized for the Pakistani Digital Market
-              </h2>
-              <p className="max-w-2xl mx-auto">
-                Generic international themes fail in Pakistan. We solve local
-                bottlenecks from payment friction to connectivity challenges on
-                3G/4G networks.
-              </p>
-            </div>
-            <div className="wds-local__grid">
-              {[
-                {
-                  icon: "💳",
-                  title: "Local Payment Gateway Integration",
-                  desc: "Seamless checkout with JazzCash, Easypaisa, 2Checkout, and Checkout.com. We ensure your revenue reaches your account securely and reliably.",
-                },
-                {
-                  icon: "⚡",
-                  title: "Low-Bandwidth Optimization",
-                  desc: "Pakistan's mobile users run on 3G/4G. We optimize every kilobyte so your site loads instantly even on unstable connections in rural Punjab or urban Karachi.",
-                },
-                {
-                  icon: "🚚",
-                  title: "Local Logistics Integration",
-                  desc: "Automate fulfillment with TCS, Leopards, and Trax API integrations — syncing orders with courier tracking systems in real time.",
-                },
-              ].map((l, i) => (
-                <article
-                  key={i}
-                  className={`wds-local-card animate__animated ${localInView ? "animate__fadeInUp" : ""}`}
-                  style={{ animationDelay: `${i * 0.12}s` }}
-                >
-                  <span className="wds-local-card__icon" aria-hidden="true">
-                    {l.icon}
-                  </span>
-                  <h3 className="wds-local-card__title">{l.title}</h3>
-                  <p className="wds-local-card__desc">{l.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section> */}
+        </section>*/}
 
         {/* ══════════════════════════════════════════════════
           PERFORMANCE ANALYSIS — Global Focus
@@ -1325,96 +1198,6 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        {/* ══════════════════════════════════════════════════
-            COMPARISON TABLE  —  H2
-        ══════════════════════════════════════════════════ 
-        <section
-          className="section wds-comparison"
-          ref={comparisonRef}
-          aria-labelledby="comparison-heading"
-        >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="comparison-heading">
-                QllmSoft vs Other Web Development Options in Pakistan
-              </h2>
-              <p>
-                Not all web development is equal. See why Pakistan's growing
-                businesses choose QllmSoft over freelancers and template
-                agencies.
-              </p>
-            </div>
-
-            <div className="wds-table-wrap">
-              <table
-                className={`wds-comparison-table animate__animated ${comparisonInView ? "animate__fadeInUp" : ""}`}
-                aria-label="Comparison of QllmSoft vs Freelancer vs Template Agency for web development in Pakistan"
-              >
-                <thead>
-                  <tr>
-                    <th scope="col">Key Factor</th>
-                    <th scope="col" className="wds-col--highlight">
-                      ✦ QllmSoft
-                    </th>
-                    <th scope="col">Typical Freelancer</th>
-                    <th scope="col">Cheap Template Agency</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    {
-                      factor: "Full Code Ownership",
-                      q: "✔ 100% Full Ownership",
-                      f: "✘ Often Restricted",
-                      t: "✘ Proprietary Lock-in",
-                    },
-                    {
-                      factor: "SEO from Day One",
-                      q: "✔ Architectural SEO",
-                      f: "⚠ Basic Meta Tags Only",
-                      t: "✘ Bloated Code (Anti-SEO)",
-                    },
-                    {
-                      factor: "Post-Launch Support",
-                      q: "✔ 30-Day Hyper-Care",
-                      f: "✘ Unreliable Availability",
-                      t: "⚠ Paid Ticket System",
-                    },
-                    {
-                      factor: "Technical Debt",
-                      q: "✔ Zero Bloat",
-                      f: "⚠ Variable Quality",
-                      t: "✘ High (Template-Based)",
-                    },
-                    {
-                      factor: "Core Web Vitals",
-                      q: "✔ Built-In Optimization",
-                      f: "⚠ Depends on Skill Level",
-                      t: "✘ Rarely Optimized",
-                    },
-                    {
-                      factor: "Security Standard",
-                      q: "✔ OWASP Compliant",
-                      f: "⚠ Basic SSL Only",
-                      t: "✘ Plugin Vulnerabilities",
-                    },
-                  ].map((row, i) => (
-                    <tr key={i}>
-                      <td className="wds-col--factor">{row.factor}</td>
-                      <td className="wds-col--highlight wds-col--good">
-                        {row.q}
-                      </td>
-                      <td>{row.f}</td>
-                      <td>{row.t}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>*/}
-
-
         <section
           className="section wds-why"
           ref={whyRef}
@@ -1480,7 +1263,7 @@ const WebsiteDevelopmentServices = () => {
               aria-label="Verified marketplace profiles"
             >
               <h3 className="wds-why__verification-title">
-                Independently Verified on Upwork &amp; Freelancer
+                Independently Verified on Upwork & Freelancer
               </h3>
               <p>
                 Our reputation is backed by third party independent reviews not
@@ -1601,15 +1384,21 @@ const WebsiteDevelopmentServices = () => {
               </h3>
               <ul className="wds-pricing__factors-list">
                 {[
-                  { icon: "⚡", label: "Custom Functionality & API Logic" },
-                  { icon: "🎨", label: "UI/UX Design Complexity" },
-                  { icon: "✍️", label: "Content Strategy & Copywriting" },
-                  { icon: "🚀", label: "Project Timeline & Urgency" },
-                  { icon: "📊", label: "Technical SEO Scope" },
-                  { icon: "🔗", label: "Third-Party System Integrations" },
+                  { icon: "bi-cpu", label: "Custom Functionality & API Logic" },
+                  { icon: "bi-brush", label: "UI/UX Design Complexity" },
+                  {
+                    icon: "bi-pencil",
+                    label: "Content Strategy & Copywriting",
+                  },
+                  { icon: "bi-clock", label: "Project Timeline & Urgency" },
+                  { icon: "bi-graph-up", label: "Technical SEO Scope" },
+                  { icon: "bi-link", label: "Third-Party System Integrations" },
                 ].map((f) => (
                   <li key={f.label} className="wds-pricing__factor">
-                    <span aria-hidden="true">{f.icon}</span> {f.label}
+                    <span aria-hidden="true" className="me-2 text-warning">
+                      <i className={`bi ${f.icon}`}></i>
+                    </span>{" "}
+                    {f.label}
                   </li>
                 ))}
               </ul>
@@ -1629,8 +1418,8 @@ const WebsiteDevelopmentServices = () => {
         </section>
 
         <FounderNote
-          title="Digital Craftsmanship, Business Results"
-          message="At QllmSoft, we believe a website is more than just a digital address it's your most powerful sales engine. I lead a specialized team that transforms complex business requirements into high-performance web experiences. From Lahore to London, we personally ensure that every line of code we write and every pixel we place is strategically designed to drive engagement, ensure rock solid security, and scale alongside your global ambitions."
+          title="Digital Engineering, Measurable Enterprise Scale"
+          message="At QllmSoft, we believe a web ecosystem is more than just a digital address, it's your most powerful asset for global operation. I lead a specialized, elite squad of engineers that translates complex business requirements into high performance, production ready architectures. Operating from our secure, highly resilient technology center, we personally ensure that every module we deploy is strategically engineered to eliminate technical debt, guarantee rock solid security, and scale alongside your international ambitions."
         />
 
         {/* ══════════════════════════════════════════════════
@@ -1671,9 +1460,7 @@ const WebsiteDevelopmentServices = () => {
         >
           <div className="container">
             <div className="csd-final-cta__content">
-              <p className="section-eyebrow">
-                Let's Get Started
-              </p>
+              <p className="section-eyebrow">Let's Get Started</p>
               <h2 id="cta-heading">
                 Ready to Build a Website That Drives Real Results?
               </h2>
@@ -1707,11 +1494,8 @@ const WebsiteDevelopmentServices = () => {
                   fontSize: "0.9rem",
                 }}
               >
-                Questions? Visit our{" "}
-                <Link to="/blog">
-                  Expert Blog
-                </Link>{" "}
-                we typically respond within 5 minutes.
+                Questions? Visit our <Link to="/blog">Expert Blog</Link> we
+                typically respond within 5 minutes.
               </p>
             </div>
           </div>
