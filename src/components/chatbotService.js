@@ -94,50 +94,105 @@ export const predefinedQuestions = [
 
 /**
  * Get system responses for predefined questions (fallback)
+ * Returns markdown-formatted text for rich rendering
  */
 export const getSystemResponse = (questionId) => {
 	const responses = {
-		services: `QllmSoft specializes in:
-• Custom Software Development
-• Web Application Development
-• Mobile App Development (iOS & Android)
-• API Development & Integration
-• System Modernization
-• AI-Powered Solutions
-• Software Outsourcing
+		services: `## 🎯 Our Services
 
-Contact us to discuss your specific project needs!`,
-		technologies: `We work with modern tech stacks:
-• Frontend: React, Angular, Vue.js
-• Backend: .NET, Node.js, Python
-• Mobile: React Native, Flutter
-• Databases: SQL Server, PostgreSQL, MongoDB
-• Cloud: Azure, AWS, Google Cloud
-• Tools: Docker, Kubernetes, Git
+**QllmSoft specializes in:**
 
-Let's discuss what's best for your project!`,
-		pricing: `Project costs depend on:
-• Project scope and complexity
-• Team size and expertise needed
-• Timeline and deadlines
-• Technology stack
-• Maintenance & support requirements
+- **Custom Software Development** - Tailored solutions built to your specifications
+- **Web Application Development** - Modern, scalable web platforms
+- **Mobile App Development** - iOS & Android native and cross-platform solutions
+- **API Development & Integration** - Robust and secure backend systems
+- **System Modernization** - Transforming legacy systems into modern architectures
+- **AI-Powered Solutions** - Intelligent automation and machine learning integration
+- **Software Outsourcing** - Dedicated teams for your projects
 
-We offer flexible engagement models and transparent pricing. Contact us for a consultation!`,
-		experience: `QllmSoft has been delivering quality solutions since 2015:
-• 100+ successful projects
-• Clients across multiple industries
-• Expert team of developers
-• Portfolio includes finance, healthcare, education, real estate, and e-commerce solutions
+**Contact us to discuss your specific project needs!**`,
 
-Visit our portfolio or contact us to learn more!`,
-		contact: `Get in touch with us:
-📧 Email: qllmsoft@gmail.com
-📱 WhatsApp: +92 334 8229288
-📍 Address: H # 181, Camping Ground, Lalamusa, Pakistan
-🌐 LinkedIn: linkedin.com/company/qllmsoft/
+		technologies: `## ⚙️ Our Tech Stack
 
-We typically reply within 5 minutes!`,
+**Frontend Development**
+- React, Angular, Vue.js
+
+**Backend Development**
+- .NET, Node.js, Python
+
+**Mobile Development**
+- React Native, Flutter
+
+**Data Management**
+- SQL Server, PostgreSQL, MongoDB
+
+**Cloud & DevOps**
+- Azure, AWS, Google Cloud
+- Docker, Kubernetes
+
+**Tools & Version Control**
+- Git, GitHub, GitLab
+
+**Let's discuss what's best for your project!**`,
+
+		pricing: `## 💰 Project Pricing
+
+**Costs depend on multiple factors:**
+
+- **Project Scope** - Complexity and requirements
+- **Team Composition** - Size and expertise level needed
+- **Timeline** - Project duration and deadlines
+- **Technology Stack** - Specific tools and frameworks
+- **Support** - Maintenance and ongoing support requirements
+
+**Our Approach:**
+- ✓ Flexible engagement models
+- ✓ Transparent pricing structure
+- ✓ No hidden costs
+- ✓ Custom solutions for your budget
+
+**Contact us for a detailed consultation and custom quote!**`,
+
+		experience: `## 🏆 Our Track Record
+
+**QllmSoft - Delivering Excellence Since 2015**
+
+**Our Achievements:**
+- **100+** successful projects delivered
+- **Multiple Industries** - Finance, Healthcare, Education, Real Estate, E-Commerce
+- **Expert Team** - Experienced developers and architects
+- **Quality First** - Proven track record of client satisfaction
+
+**Industry Experience:**
+- Financial Services & Banking
+- Healthcare & Medical Solutions
+- Educational Platforms
+- Real Estate Technology
+- E-Commerce Systems
+- Enterprise Solutions
+
+**Visit our portfolio or contact us to see how we can help your business!**`,
+
+		contact: `## 📞 Get In Touch
+
+**We're here to help and typically reply within 5 minutes!**
+
+**Contact Information:**
+- **📧 Email:** qllmsoft@gmail.com
+- **📱 WhatsApp:** +92 334 8229288
+- **📍 Office Address:** H # 181, Camping Ground, Lalamusa, Pakistan
+- **🌐 LinkedIn:** linkedin.com/company/qllmsoft/
+
+**Business Hours:**
+- Monday - Friday: 9:00 AM - 6:00 PM (PKT)
+- Weekend support available for urgent matters
+
+**Quick Response:**
+- Email: Reply within 1 hour
+- WhatsApp: Instant response
+- Call: Available during business hours
+
+**Looking forward to working with you!**`,
 	};
 
 	return responses[questionId] || "How can I help you today?";

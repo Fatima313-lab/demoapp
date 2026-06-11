@@ -346,6 +346,7 @@ const ChatBot = () => {
 						<div className="input-wrapper">
 							<input
 								type="text"
+								maxLength={500}
 								value={inputValue}
 								onChange={(e) => setInputValue(e.target.value)}
 								onKeyPress={(e) => {
@@ -371,10 +372,11 @@ const ChatBot = () => {
 								)}
 							</button>
 						</div>
+						<div className="character-count">{inputValue.length}/500</div>
 						<div className="chat-clear-wrapper">
 							<p
 								style={{
-									fontSize: "12px",
+									fontSize: "11px",
 									marginBottom: "0px",
 								}}
 							>
