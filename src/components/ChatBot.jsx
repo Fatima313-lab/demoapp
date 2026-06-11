@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { X, Send, Loader } from "lucide-react";
 import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
@@ -180,6 +182,65 @@ const ChatBot = () => {
 
 	const isEmptyChat = messages.length === 1 && messages[0].type === "bot";
 
+	// ========================================
+	// OPTIMIZED MARKDOWN COMPONENTS
+	// ========================================
+	const markdownComponents = {
+		// Heading levels - downgrade for compact display in chat
+		h1: ({ children }) => <h2 className="markdown-h1">{children}</h2>,
+		h2: ({ children }) => <h3 className="markdown-h2">{children}</h3>,
+		h3: ({ children }) => <h4 className="markdown-h3">{children}</h4>,
+		h4: ({ children }) => <h4 className="markdown-h4">{children}</h4>,
+		h5: ({ children }) => <h5 className="markdown-h5">{children}</h5>,
+		h6: ({ children }) => <h6 className="markdown-h6">{children}</h6>,
+
+		// Paragraphs
+		p: ({ children }) => <p>{children}</p>,
+
+		// Lists
+		ul: ({ children }) => <ul>{children}</ul>,
+		ol: ({ children }) => <ol>{children}</ol>,
+		li: ({ children }) => <li>{children}</li>,
+
+		// Code
+		code: ({ children, className }) => {
+			// Check if it's an inline code or a code block
+			const isCodeBlock = className && className.includes("language-");
+			if (isCodeBlock) {
+				return <code>{children}</code>;
+			}
+			return <code className="inline-code">{children}</code>;
+		},
+		pre: ({ children }) => <pre className="code-block">{children}</pre>,
+
+		// Blockquote
+		blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+
+		// Links
+		a: ({ href, children }) => (
+			<a href={href} target="_blank" rel="noopener noreferrer">
+				{children}
+			</a>
+		),
+
+		// Strong/Bold
+		strong: ({ children }) => <strong>{children}</strong>,
+
+		// Emphasis
+		em: ({ children }) => <em>{children}</em>,
+
+		// Horizontal rule
+		hr: () => <hr />,
+
+		// Tables
+		table: ({ children }) => <table>{children}</table>,
+		thead: ({ children }) => <thead>{children}</thead>,
+		tbody: ({ children }) => <tbody>{children}</tbody>,
+		tr: ({ children }) => <tr>{children}</tr>,
+		th: ({ children }) => <th>{children}</th>,
+		td: ({ children }) => <td>{children}</td>,
+	};
+
 	return (
 		<>
 			{!isOpen && (
@@ -232,7 +293,18 @@ const ChatBot = () => {
 								key={message.id}
 								className={`message message-${message.type}`}
 							>
-								<div className="message-content">{message.content}</div>
+								<div className="message-content">
+									{message.type === "bot" ? (
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm]}
+											components={markdownComponents}
+										>
+											{message.content}
+										</ReactMarkdown>
+									) : (
+										message.content
+									)}
+								</div>
 								<span className="message-time">
 									{message.timestamp.toLocaleTimeString([], {
 										hour: "2-digit",
