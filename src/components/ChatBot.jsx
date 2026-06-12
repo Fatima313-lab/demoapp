@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import { X, Send, Loader } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { X, Send, Loader, ChevronRight } from "lucide-react";
 import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
 	sendMessageToGPT,
 	predefinedQuestions,
 	getSystemResponse,
+	getDefaultSuggestions,
 } from "./chatbotService";
 import "./ChatBot.css";
 
@@ -15,6 +18,7 @@ const ChatBot = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(null);
+	const [lastSuggestions, setLastSuggestions] = useState([]); // Track suggestions for the last bot message
 	const messagesEndRef = useRef(null);
 
 	// Load chat history from sessionStorage
@@ -72,7 +76,7 @@ const ChatBot = () => {
 
 	useEffect(() => {
 		scrollToBottom();
-	}, [messages]);
+	}, [messages, lastSuggestions]);
 
 	const handleClearChat = () => {
 		if (window.confirm("Are you sure you want to clear the chat history?")) {
@@ -89,6 +93,7 @@ const ChatBot = () => {
 			setInputValue("");
 			setError(null);
 			setActiveTab(null);
+			setLastSuggestions([]);
 		}
 	};
 
@@ -123,12 +128,16 @@ const ChatBot = () => {
 		setInputValue("");
 		setIsLoading(true);
 		setError(null);
+		setLastSuggestions([]); // Clear previous suggestions
 
 		try {
 			let response;
+			let suggestions = [];
 
 			try {
-				response = await sendMessageToGPT(messageContent);
+				const result = await sendMessageToGPT(messageContent);
+				response = result.response;
+				suggestions = result.suggestions || [];
 			} catch (backendError) {
 				console.error("Backend error, using fallback:", backendError);
 
@@ -139,6 +148,7 @@ const ChatBot = () => {
 
 				if (predefinedQ) {
 					response = getSystemResponse(predefinedQ.id);
+					suggestions = getDefaultSuggestions(predefinedQ.id);
 				} else {
 					throw backendError;
 				}
@@ -153,6 +163,7 @@ const ChatBot = () => {
 			};
 
 			setMessages((prev) => [...prev, botMessage]);
+			setLastSuggestions(suggestions); // Store suggestions for display
 		} catch (err) {
 			console.error("Error sending message:", err);
 
@@ -168,6 +179,7 @@ const ChatBot = () => {
 				isHTML: false,
 			};
 			setMessages((prev) => [...prev, errorChatMessage]);
+			setLastSuggestions([]);
 		} finally {
 			setIsLoading(false);
 		}
@@ -178,7 +190,58 @@ const ChatBot = () => {
 		handleSendMessage(question.question);
 	};
 
+	const handleSuggestionClick = (suggestion) => {
+		// When user clicks a suggestion, send it as a message
+		handleSendMessage(suggestion.label);
+	};
+
 	const isEmptyChat = messages.length === 1 && messages[0].type === "bot";
+
+	// ========================================
+	// OPTIMIZED MARKDOWN COMPONENTS
+	// ========================================
+	const markdownComponents = {
+		h1: ({ children }) => <h2 className="markdown-h1">{children}</h2>,
+		h2: ({ children }) => <h3 className="markdown-h2">{children}</h3>,
+		h3: ({ children }) => <h4 className="markdown-h3">{children}</h4>,
+		h4: ({ children }) => <h4 className="markdown-h4">{children}</h4>,
+		h5: ({ children }) => <h5 className="markdown-h5">{children}</h5>,
+		h6: ({ children }) => <h6 className="markdown-h6">{children}</h6>,
+
+		p: ({ children }) => <p>{children}</p>,
+
+		ul: ({ children }) => <ul>{children}</ul>,
+		ol: ({ children }) => <ol>{children}</ol>,
+		li: ({ children }) => <li>{children}</li>,
+
+		code: ({ children, className }) => {
+			const isCodeBlock = className && className.includes("language-");
+			if (isCodeBlock) {
+				return <code>{children}</code>;
+			}
+			return <code className="inline-code">{children}</code>;
+		},
+		pre: ({ children }) => <pre className="code-block">{children}</pre>,
+
+		blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+
+		a: ({ href, children }) => (
+			<a href={href} target="_blank" rel="noopener noreferrer">
+				{children}
+			</a>
+		),
+
+		strong: ({ children }) => <strong>{children}</strong>,
+		em: ({ children }) => <em>{children}</em>,
+		hr: () => <hr />,
+
+		table: ({ children }) => <table>{children}</table>,
+		thead: ({ children }) => <thead>{children}</thead>,
+		tbody: ({ children }) => <tbody>{children}</tbody>,
+		tr: ({ children }) => <tr>{children}</tr>,
+		th: ({ children }) => <th>{children}</th>,
+		td: ({ children }) => <td>{children}</td>,
+	};
 
 	return (
 		<>
@@ -232,7 +295,18 @@ const ChatBot = () => {
 								key={message.id}
 								className={`message message-${message.type}`}
 							>
-								<div className="message-content">{message.content}</div>
+								<div className="message-content">
+									{message.type === "bot" ? (
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm]}
+											components={markdownComponents}
+										>
+											{message.content}
+										</ReactMarkdown>
+									) : (
+										message.content
+									)}
+								</div>
 								<span className="message-time">
 									{message.timestamp.toLocaleTimeString([], {
 										hour: "2-digit",
@@ -241,6 +315,30 @@ const ChatBot = () => {
 								</span>
 							</div>
 						))}
+
+						{/* Display follow-up suggestions after the last bot message */}
+						{lastSuggestions.length > 0 && !isLoading && (
+							<div className="follow-up-suggestions">
+								<div className="suggestions-label">What's next?</div>
+								{lastSuggestions.map((suggestion) => (
+									<button
+										key={suggestion.id}
+										onClick={() => handleSuggestionClick(suggestion)}
+										className="suggestion-card"
+										title={suggestion.description}
+									>
+										<div className="suggestion-content">
+											<div className="suggestion-label">{suggestion.label}</div>
+											<div className="suggestion-description">
+												{suggestion.description}
+											</div>
+										</div>
+										<ChevronRight size={18} className="suggestion-icon" />
+									</button>
+								))}
+							</div>
+						)}
+
 						{isLoading && (
 							<div className="message message-bot loading">
 								<div className="typing-indicator">
@@ -274,6 +372,7 @@ const ChatBot = () => {
 						<div className="input-wrapper">
 							<input
 								type="text"
+								maxLength={500}
 								value={inputValue}
 								onChange={(e) => setInputValue(e.target.value)}
 								onKeyPress={(e) => {
@@ -299,10 +398,11 @@ const ChatBot = () => {
 								)}
 							</button>
 						</div>
+						<div className="character-count">{inputValue.length}/500</div>
 						<div className="chat-clear-wrapper">
 							<p
 								style={{
-									fontSize: "12px",
+									fontSize: "11px",
 									marginBottom: "0px",
 								}}
 							>
