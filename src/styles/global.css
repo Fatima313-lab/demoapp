@@ -413,14 +413,14 @@ path {
   pointer-events: auto !important; 
   cursor: pointer !important;
 
-  z-index: 9999999 !important; 
+  
 }
 
 
 @media (max-width: 991px) {
   nav, [class*="menu"], [class*="nav"], [class*="header"] {
     pointer-events: auto !important;
-    z-index: 99999999 !important;
+    
   }
   
   * {
