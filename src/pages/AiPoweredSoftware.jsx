@@ -250,7 +250,7 @@ const schemaBreadcrumb = {
 const FAQ_DATA = [
   {
     q: 'What types of data are needed to start an AI project?',
-    a: 'AI systems can be trained on structured data from databases, semi-structured data from logs and APIs, unstructured data such as text, images, and audio, and real-time data from IoT devices. QllmSoft conducts a data readiness assessment at project start to determine volume, quality, and labelling requirements — and helps you build a data pipeline if your existing data needs enrichment.',
+    a: 'AI systems can be trained on structured data from databases, semi-structured data from logs and APIs, unstructured data such as text, images, and audio, and real-time data from IoT devices. QllmSoft conducts a data readiness assessment at project start to determine volume, quality, and labelling requirements  and helps you build a data pipeline if your existing data needs enrichment.',
   },
   {
     q: 'How do you protect data security and privacy in AI projects?',
@@ -262,15 +262,15 @@ const FAQ_DATA = [
   },
   {
     q: 'How long does it take to develop and deploy an AI solution?',
-    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature — such as a document classifier or recommendation engine — can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
+    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature such as a document classifier or recommendation engine — can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
   },
   {
     q: 'Will AI automation replace my employees?',
-    a: 'No — and this is a common misconception worth addressing directly. AI is designed to augment human capability, not replace people. It automates high-volume, repetitive tasks — data entry, document processing, ticket routing — freeing your team to focus on creative work, strategic decisions, and high-value customer interactions. Most organizations that adopt AI see productivity increase alongside headcount, not instead of it.',
+    a: 'No, and this is a common misconception worth addressing directly. AI is designed to augment human capability, not replace people. It automates high-volume, repetitive tasks  data entry, document processing, ticket routing freeing your team to focus on creative work, strategic decisions, and high-value customer interactions. Most organizations that adopt AI see productivity increase alongside headcount, not instead of it.',
   },
   {
-    q: 'Can you customize AI solutions for a specific industry in Pakistan?',
-    a: 'Absolutely. We build domain-specific AI solutions tailored to the compliance, data formats, and operational workflows of each industry — healthcare, fintech, eCommerce, education, logistics, real estate, and manufacturing. Our Pakistan-based developers also have experience integrating with local payment gateways, ERP systems, and regulatory requirements specific to the Pakistani market.',
+    q: 'Can you customize AI solutions for complex or highly regulated global industries?',
+    a: 'Absolutely. We build domain specific AI solutions tailored to the strict compliance frameworks, unique data formats, and complex operational workflows of industries worldwide including Healthcare (HIPAA), Fintech (PCI-DSS), eCommerce, Logistics, and Manufacturing. Our engineering team has extensive experience building systems that seamlessly adapt to localized payment gateways, international ERPs, and regional compliance structures across different target markets.',
   },
   {
     q: 'How do you maintain and improve AI models after launch?',
@@ -346,15 +346,15 @@ const AiPoweredSoftware = () => {
           SEO HEAD
       ════════════════════════════════════════════════ */}
       <Helmet>
-        <title>AI-Powered Software Solutions in Pakistan | Custom AI Development | QllmSoft</title>
+        <title>Custom AI Software Development & ML Solutions | QllmSoft</title>
         <meta
           name="description"
-          content="QllmSoft builds custom AI-powered software solutions in Pakistan — machine learning, NLP, computer vision, AI automation, and OpenAI integrations. Trusted by businesses in the US, UK, UAE, and globally. Get a free AI consultation."
-        />
+          content="QllmSoft engineers custom AI-powered software solutions enterprise machine learning, private LLMs, NLP, computer vision, and secure OpenAI integrations for global startups and enterprises. Schedule a technical consultation."
+  />
         <meta
           name="keywords"
-          content="AI powered software solutions Pakistan, AI software development company Pakistan, custom AI development Pakistan, machine learning development Pakistan, NLP solutions Pakistan, AI automation software Pakistan, AI integration services Pakistan, AI consulting Pakistan, OpenAI integration Pakistan, computer vision Pakistan, artificial intelligence software Pakistan"
-        />
+          content="custom AI software development, enterprise machine learning solutions, private LLM engineering, NLP software agency, production AI integration, custom computer vision systems, predictive analytics engineering, OpenAI integration services, generative AI consulting"
+  />
         <meta name="author"  content="QllmSoft" />
         <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
@@ -363,20 +363,20 @@ const AiPoweredSoftware = () => {
         <meta property="og:type"         content="website" />
         <meta property="og:url"          content={PAGE_URL} />
         <meta property="og:site_name"    content="QllmSoft" />
-        <meta property="og:title"        content="AI-Powered Software Solutions in Pakistan | Custom AI Development | QllmSoft" />
-        <meta property="og:description"  content="Custom AI development in Pakistan — ML models, NLP chatbots, computer vision, AI automation, and OpenAI integrations. Free consultation for startups and enterprises." />
+        <meta property="og:title"        content="Custom AI Software Development & ML Solutions | QllmSoft" />
+        <meta property="og:description"  content="QllmSoft engineers custom AI-powered software solutions enterprise machine learning, private LLMs, NLP, computer vision, and secure OpenAI integrations for global startups and enterprises. Schedule a technical consultation." />
         <meta property="og:image"        content={OG_IMAGE} />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt"    content="QllmSoft AI-Powered Software Solutions Pakistan" />
+        <meta property="og:image:alt"    content="QllmSoft Enterprise AI Software Development" />
         <meta property="og:locale"       content="en_US" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card"        content="summary_large_image" />
-        <meta name="twitter:title"       content="AI-Powered Software Solutions in Pakistan | QllmSoft" />
-        <meta name="twitter:description" content="Custom ML, NLP, computer vision, and OpenAI integrations built in Pakistan for global businesses. Free AI consultation." />
-        <meta name="twitter:image"       content={OG_IMAGE} />
-        <meta name="twitter:image:alt"   content="QllmSoft AI Software Development Pakistan" />
+       <meta name="twitter:card"        content="summary_large_image" />
+       <meta name="twitter:title"       content="Custom AI Software Solutions & ML Engineering | QllmSoft" />
+       <meta name="twitter:description" content="Production-ready machine learning, custom LLMs, and intelligent automation built for global enterprise scale." />
+       <meta name="twitter:image"       content={OG_IMAGE} />
+       <meta name="twitter:image:alt"   content="QllmSoft Custom AI Software Engineering" />
 
         {/* JSON-LD × 5 */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
