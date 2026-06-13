@@ -659,13 +659,13 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-benefits" ref={benefitsRef} aria-labelledby="benefits-heading">
           <div className="container">
-            <p className="section-eyebrow">Business Value of AI</p>
+        
             <div className="section-title">
               <h2 id="benefits-heading">
                 Why Invest in AI-Powered Software Development?
               </h2>
               <p>
-                Integrating AI is not about chasing technology trends — it is about gaining
+                Integrating AI is not about chasing technology trends it is about gaining
                 measurable operational advantages that compound over time.
               </p>
             </div>
@@ -675,22 +675,22 @@ const AiPoweredSoftware = () => {
                   {
                     Icon: IconZap,
                     title: 'Automate What Slows You Down',
-                    desc: 'AI handles high-volume, rule-based tasks — data entry, document processing, email classification, report generation — with greater speed and accuracy than any manual process. Your team focuses on decisions that require human judgment.',
+                    desc: 'AI handles high-volume, rule-based tasks  data entry, document processing, email classification, report generation with greater speed and accuracy than any manual process. Your team focuses on decisions that require human judgment.',
                   },
                   {
                     Icon: IconBarChart,
                     title: 'Decisions Backed by Data, Not Instinct',
-                    desc: 'Real-time predictive analytics surfaces the signals your team would otherwise miss. Forecast demand, identify churn risk, detect fraud, and model outcomes — before they happen, not after.',
+                    desc: 'Real-time predictive analytics surfaces the signals your team would otherwise miss. Forecast demand, identify churn risk, detect fraud, and model outcomes  before they happen, not after.',
                   },
                   {
                     Icon: IconUsers,
                     title: 'Experiences Users Actually Prefer',
-                    desc: 'From personalized product recommendations to intelligent search and conversational support, AI creates interactions that feel tailored to each user — driving higher engagement, lower bounce rates, and measurable conversion improvement.',
+                    desc: 'From personalized product recommendations to intelligent search and conversational support, AI creates interactions that feel tailored to each user driving higher engagement, lower bounce rates, and measurable conversion improvement.',
                   },
                   {
                     Icon: IconShield,
                     title: 'Security & Compliance at Scale',
-                    desc: 'AI-powered fraud detection, anomaly monitoring, and behavioral analysis identify threats that rule-based systems miss. Protect your customers and your data — in real time, at any transaction volume.',
+                    desc: 'AI-powered fraud detection, anomaly monitoring, and behavioral analysis identify threats that rule-based systems miss. Protect your customers and your data in real time, at any transaction volume.',
                   },
                   {
                     Icon: IconTrendingUp,
@@ -700,7 +700,7 @@ const AiPoweredSoftware = () => {
                   {
                     Icon: IconTarget,
                     title: 'Competitive Advantage That Compounds',
-                    desc: 'Businesses that adopt AI create a compounding advantage — better data leads to better models, better models lead to better outcomes, better outcomes attract more users. The earlier you start, the wider the gap you build.',
+                    desc: 'Businesses that adopt AI create a compounding advantage  better data leads to better models, better models lead to better outcomes, better outcomes attract more users. The earlier you start, the wider the gap you build.',
                   },
                 ].map((b, i) => (
                   <article
@@ -721,7 +721,7 @@ const AiPoweredSoftware = () => {
                 <div className="ai-benefits__image-wrap">
                   <img
                     src="https://qllmsoft.com/images/benefits-of-ai-in-software-development.webp"
-                    alt="Benefits of AI in software development — QllmSoft Pakistan showing measurable business outcomes"
+                    alt="Benefits of AI in software development  QllmSoft showing measurable business outcomes"
                     loading="lazy"
                     width="480"
                     height="380"
@@ -729,7 +729,7 @@ const AiPoweredSoftware = () => {
                 </div>
                 <div className="ai-benefits__cta-card">
                   <h3>Ready to see what AI can do for your business?</h3>
-                  <p>Book a free 30-minute AI readiness consultation — no commitment, just clarity.</p>
+                  <p>Book a free 30-minute AI readiness consultation, no commitment, just clarity.</p>
                   <Link
                     to="/contact"
                     className="btn btn-primary ai-btn-primary"
