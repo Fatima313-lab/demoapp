@@ -200,7 +200,7 @@ const schemaWebPage = {
   name: 'AI-Powered Software Solutions in Pakistan | QllmSoft',
   url: PAGE_URL,
   description:
-    'QllmSoft builds custom AI-powered software solutions in Pakistan — machine learning, NLP, computer vision, AI automation, and OpenAI integrations for businesses worldwide.',
+    'QllmSoft builds custom AI-powered software solutions ,  machine learning, NLP, computer vision, AI automation, and OpenAI integrations for businesses worldwide.',
   publisher: { '@type': 'Organization', name: 'QllmSoft' },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -226,12 +226,12 @@ const schemaService = {
     '@type': 'OfferCatalog',
     name: 'AI Development Services',
     itemListElement: [
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Custom AI Application Development Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Machine Learning Development Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'NLP & Conversational AI Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Business Automation Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Computer Vision Solutions Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Consulting & Strategy Pakistan' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Custom AI Application Development ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Machine Learning Development ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'NLP & Conversational AI' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Business Automation' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Computer Vision Solutions ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Consulting & Strategy ' } },
       { '@type':'Offer', itemOffered:{ '@type':'Service', name:'OpenAI & LLM Integration Services' } },
     ],
   },
@@ -277,7 +277,7 @@ const FAQ_DATA = [
   },
   {
     q: 'How long does it take to develop and deploy an AI solution?',
-    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature such as a document classifier or recommendation engine — can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
+    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature such as a document classifier or recommendation engine  can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
   },
   {
     q: 'Will AI automation replace my employees?',
@@ -533,7 +533,7 @@ const AiPoweredSoftware = () => {
                   href="https://ai.google/principles/" 
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  aria-label="Google AI Principles — External technical guidelines reference"
+                  aria-label="Google AI Principles External technical guidelines reference"
                 >
                   Google's AI guidelines
                 </a>{' '}
@@ -542,7 +542,7 @@ const AiPoweredSoftware = () => {
                   href="https://www.ibm.com/artificial-intelligence" 
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  aria-label="IBM AI best practices — External architectural model reference"
+                  aria-label="IBM AI best practices  External architectural model reference"
                 >
                   IBM's AI best practices
                 </a>.
@@ -866,7 +866,7 @@ const AiPoweredSoftware = () => {
                     { title:'Intelligent Chatbots & Assistants', desc:'Context-aware conversational agents that handle multi-turn dialogue, escalation, and intent resolution.' },
                     { title:'Sentiment & Intent Analysis',       desc:'Understand customer emotion and intent from support tickets, reviews, and social media at scale.' },
                     { title:'Language Translation & Transcription', desc:'Real-time translation, speech-to-text, and multilingual content processing across 50+ languages.' },
-                    { title:'Automated Message Classification', desc:'Route emails, tickets, and messages to the right team or workflow automatically — zero manual triage.' },
+                    { title:'Automated Message Classification', desc:'Route emails, tickets, and messages to the right team or workflow automatically  zero manual triage.' },
                     { title:'Text Summarization & Extraction',  desc:'Surface key insights from contracts, reports, and research documents in seconds, not hours.' },
                   ].map((item, i) => (
                     <li key={i} className="ai-ml__item">
@@ -1101,7 +1101,7 @@ const AiPoweredSoftware = () => {
               <div className={`ai-consult__text animate__animated ${consultInView ? 'animate__fadeInLeft' : ''}`}>
                 <p className="section-eyebrow" style={{ textAlign:'left' }}>AI Strategy</p>
                 <h2 id="consult-heading">
-                  AI Consulting & Strategic Planning for Pakistani Businesses
+                  AI Consulting & Strategic Planning for  Businesses
                 </h2>
                 <p>
                   Not every business knows where AI fits, or whether it's the right investment
@@ -1120,7 +1120,7 @@ const AiPoweredSoftware = () => {
                   Google's{' '}
                   <a href="https://ai.google/principles/" target="_blank"
                     rel="noopener noreferrer nofollow"
-                    aria-label="Google AI Principles — external reference">
+                    aria-label="Google AI Principles  external reference">
                     AI guidelines
                   </a>{' '}
                   and IBM's enterprise AI best practices to ensure ethical, explainable, and
@@ -1131,7 +1131,7 @@ const AiPoweredSoftware = () => {
               <aside className={`ai-consult__services animate__animated ${consultInView ? 'animate__fadeInRight' : ''}`}>
                 <img
                   src="https://qllmsoft.com/images/ai-consulting-and-strategy-for-your-business.webp"
-                  alt="AI consulting and strategic planning for businesses in Pakistan — QllmSoft roadmap development"
+                  alt="AI consulting and strategic planning for businesses globally  , QllmSoft roadmap development"
                   loading="lazy"
                   width="520"
                   height="340"
@@ -1157,7 +1157,7 @@ const AiPoweredSoftware = () => {
                   to="/contact"
                   className="btn btn-primary ai-btn-primary"
                   style={{ display:'block', textAlign:'center', marginTop:'20px' }}
-                  aria-label="Get a free AI consulting session with QllmSoft Pakistan"
+                  aria-label="Get a free AI consulting session with QllmSoft "
                 >
                   Get Free AI Consultation
                 </Link>
@@ -1196,7 +1196,7 @@ const AiPoweredSoftware = () => {
           <aside className="ai-integration__aside-graphic">
             <img
               src="https://qllmsoft.com/images/seamless-integration-%20with-existing-systems.webp"
-              alt="Seamless AI integration with existing software systems — QllmSoft Pakistan deployment approach"
+              alt="Seamless AI integration with existing software systems , QllmSoft  deployment approach"
               loading="lazy"
               width="960"
               height="360"
@@ -1301,7 +1301,7 @@ const AiPoweredSoftware = () => {
             </p>
             <div className="ai-cta__buttons">
               <Link to="/contact" className="btn btn-primary ai-btn-primary ai-btn-cta"
-                aria-label="Schedule a free AI consultation with QllmSoft Pakistan">
+                aria-label="Schedule a free AI consultation with QllmSoft ">
                 Schedule Free AI Consultation
               </Link>
               <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20an%20AI%20project!"
