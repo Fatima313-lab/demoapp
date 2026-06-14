@@ -1,7 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import { X, Send, Loader, ChevronRight } from "lucide-react";
+import {
+	X,
+	Send,
+	Trash2,
+	Loader,
+	ChevronRight,
+	Trash2Icon,
+} from "lucide-react";
 import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
 	sendMessageToGPT,
@@ -110,6 +117,23 @@ const ChatBot = () => {
 		return { valid: true };
 	};
 
+	// ═══════════════════════════════════════════════════════════════════════════
+	// ITEM 1: Build conversation history before sending
+	// Convert existing messages to {role, content} format for the backend
+	// ═══════════════════════════════════════════════════════════════════════════
+	const buildConversationHistory = () => {
+		// Skip the welcome message (first message is always the initial bot message)
+		// Map user/bot messages to role/content format, excluding the current message being sent
+		const history = messages
+			.slice(1) // skip welcome message
+			.filter((m) => m.type === "user" || m.type === "bot")
+			.map((m) => ({
+				role: m.type === "bot" ? "assistant" : "user",
+				content: m.content,
+			}));
+		return history;
+	};
+
 	const handleSendMessage = async (messageContent) => {
 		const validation = validateMessage(messageContent);
 		if (!validation.valid) {
@@ -135,7 +159,11 @@ const ChatBot = () => {
 			let suggestions = [];
 
 			try {
-				const result = await sendMessageToGPT(messageContent);
+				// ═════════════════════════════════════════════════════════════
+				// ITEM 1: Pass conversation history to backend
+				// ═════════════════════════════════════════════════════════════
+				const history = buildConversationHistory();
+				const result = await sendMessageToGPT(messageContent, history);
 				response = result.response;
 				suggestions = result.suggestions || [];
 			} catch (backendError) {
@@ -191,8 +219,10 @@ const ChatBot = () => {
 	};
 
 	const handleSuggestionClick = (suggestion) => {
-		// When user clicks a suggestion, send it as a message
-		handleSendMessage(suggestion.label);
+		// When user clicks a suggestion, send the query (or label if no query) as a message
+		// ITEM 11: Use suggestion.query if available, fall back to label
+		const messageToSend = suggestion.query || suggestion.label;
+		handleSendMessage(messageToSend);
 	};
 
 	const isEmptyChat = messages.length === 1 && messages[0].type === "bot";
@@ -398,24 +428,17 @@ const ChatBot = () => {
 								)}
 							</button>
 						</div>
-						<div className="character-count">{inputValue.length}/500</div>
 						<div className="chat-clear-wrapper">
-							<p
-								style={{
-									fontSize: "11px",
-									marginBottom: "0px",
-								}}
-							>
-								Clear your chat history to start fresh.
-							</p>
 							<button
 								onClick={handleClearChat}
 								className="clear-chat-button"
 								title="Clear chat history"
 								aria-label="Clear chat history"
 							>
+								<Trash2Icon size={10} className="clear-icon" />
 								<span>Clear</span>
 							</button>
+							<div className="character-count">{inputValue.length}/500</div>
 						</div>
 					</div>
 				</div>

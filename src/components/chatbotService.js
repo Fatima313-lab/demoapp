@@ -16,12 +16,20 @@ const getBackendUrl = () => {
 /**
  * Send message to .NET Backend which calls GitHub/OpenAI API
  * Returns both the response and follow-up suggestions
- * @param {string} message - User message
+ *
+ * ITEM 1: Now accepts conversation history for multi-turn context
+ *
+ * @param {string} userMessage - User message
+ * @param {Array} history - Previous conversation turns [{role, content}, ...]
  * @returns {Promise<{response: string, suggestions: Array}>} - Response and suggestions
  */
-export const sendMessageToGPT = async (message) => {
+export const sendMessageToGPT = async (userMessage, history = []) => {
 	try {
 		const backendUrl = getBackendUrl();
+
+		// Keep last 10 turns only to avoid token overflow
+		// Slice from the end so we always keep the most recent context
+		const trimmedHistory = history.slice(-10);
 
 		const response = await fetch(`${backendUrl}/api/chat/send`, {
 			method: "POST",
@@ -30,7 +38,8 @@ export const sendMessageToGPT = async (message) => {
 				Accept: "application/json",
 			},
 			body: JSON.stringify({
-				message: message,
+				message: userMessage,
+				history: trimmedHistory, // ← ITEM 1: Send history with every request
 			}),
 		});
 
@@ -226,6 +235,9 @@ UK, USA, UAE, Europe, Gulf region, and Pakistan
 /**
  * Default follow-up suggestions for predefined questions
  * These are used as fallbacks if backend doesn't return suggestions
+ *
+ * ITEM 11: Now includes 'query' field so suggestions send natural language
+ * instead of just the label text
  */
 export const getDefaultSuggestions = (questionId) => {
 	const suggestions = {
@@ -234,16 +246,20 @@ export const getDefaultSuggestions = (questionId) => {
 				id: "web-apps",
 				label: "Custom Web Applications",
 				description: "Learn how we build scalable business platforms",
+				query:
+					"Tell me more about your custom web application development services",
 			},
 			{
 				id: "mobile-apps",
 				label: "Mobile App Development",
 				description: "iOS & Android apps tailored to your needs",
+				query: "What mobile app development services do you offer?",
 			},
 			{
 				id: "consultation",
 				label: "Book Free Consultation",
 				description: "Discuss your specific project requirements",
+				query: "How can I book a free consultation with your team?",
 			},
 		],
 		technologies: [
@@ -251,16 +267,19 @@ export const getDefaultSuggestions = (questionId) => {
 				id: "services",
 				label: "View All Services",
 				description: "See how we use these technologies",
+				query: "What services do you offer with these technologies?",
 			},
 			{
 				id: "hiring",
 				label: "Hire Dedicated Developers",
 				description: "Work with our expert .NET and React engineers",
+				query: "Can I hire dedicated developers from your team?",
 			},
 			{
 				id: "portfolio",
 				label: "See Our Projects",
 				description: "Real examples of our technical expertise",
+				query: "Can you show me examples of your recent projects?",
 			},
 		],
 		pricing: [
@@ -268,16 +287,19 @@ export const getDefaultSuggestions = (questionId) => {
 				id: "services",
 				label: "Explore Our Services",
 				description: "Different projects have different costs",
+				query: "What services do you offer?",
 			},
 			{
 				id: "consultation",
 				label: "Get a Custom Quote",
 				description: "Schedule a free consultation for your project",
+				query: "How can I get a custom quote for my project?",
 			},
 			{
 				id: "contact",
 				label: "Contact Our Team",
 				description: "Discuss pricing options and payment plans",
+				query: "What's the best way to contact your team about pricing?",
 			},
 		],
 		experience: [
@@ -285,16 +307,19 @@ export const getDefaultSuggestions = (questionId) => {
 				id: "services",
 				label: "View Our Services",
 				description: "See what we've built for similar clients",
+				query: "What services do you offer?",
 			},
 			{
 				id: "case-study",
 				label: "Case Studies & Details",
 				description: "How we solved real business problems",
+				query: "Do you have case studies of your successful projects?",
 			},
 			{
 				id: "hiring",
 				label: "Hire Our Team",
 				description: "Work with experienced developers directly",
+				query: "Can I hire developers from your team?",
 			},
 		],
 		contact: [
@@ -302,16 +327,19 @@ export const getDefaultSuggestions = (questionId) => {
 				id: "consultation",
 				label: "Schedule Consultation",
 				description: "Free session to discuss your project",
+				query: "How can I schedule a free consultation?",
 			},
 			{
 				id: "services",
 				label: "Our Services",
 				description: "What we can help you with",
+				query: "What services do you offer?",
 			},
 			{
 				id: "portfolio",
 				label: "View Our Work",
 				description: "Examples of successful projects",
+				query: "Can I see your portfolio and recent projects?",
 			},
 		],
 	};
