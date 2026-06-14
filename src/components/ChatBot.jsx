@@ -1,29 +1,74 @@
 import React, { useState, useRef, useEffect } from "react";
-import { X, Send, MessageCircle, Loader } from "lucide-react";
+import ReactMarkdown from "react-markdown"; 
+import remarkGfm from "remark-gfm";
+import { X, Send, Loader, ChevronRight } from "lucide-react";
 import chatbot from "../assets/qllmsoft-chatbot-logo.png";
 import {
 	sendMessageToGPT,
 	predefinedQuestions,
 	getSystemResponse,
+	getDefaultSuggestions,
 } from "./chatbotService";
 import "./ChatBot.css";
 
 const ChatBot = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [activeTab, setActiveTab] = useState(null);
-	const [messages, setMessages] = useState([
-		{
-			id: 1,
-			type: "bot",
-			content:
-				"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
-			timestamp: new Date(),
-		},
-	]);
+	const [messages, setMessages] = useState([]);
 	const [inputValue, setInputValue] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	const [error, setError] = useState(null);
+	const [lastSuggestions, setLastSuggestions] = useState([]); // Track suggestions for the last bot message
 	const messagesEndRef = useRef(null);
+
+	// Load chat history from sessionStorage   import ReactMarkdown from "react-markdown"; import remarkGfm from "remark-gfm";
+	useEffect(() => {
+		const savedMessages = sessionStorage.getItem("chatbotMessages");
+		if (savedMessages) {
+			try {
+				const parsedMessages = JSON.parse(savedMessages);
+				const messagesWithDates = parsedMessages.map((msg) => ({
+					...msg,
+					timestamp: new Date(msg.timestamp),
+				}));
+				setMessages(messagesWithDates);
+			} catch (error) {
+				console.error("Error loading chat history:", error);
+				setMessages([
+					{
+						id: 1,
+						type: "bot",
+						content:
+							"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+						timestamp: new Date(),
+						isHTML: false,
+					},
+				]);
+			}
+		} else {
+			setMessages([
+				{
+					id: 1,
+					type: "bot",
+					content:
+						"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+					timestamp: new Date(),
+					isHTML: false,
+				},
+			]);
+		}
+	}, []);
+
+	// Save chat history to sessionStorage
+	useEffect(() => {
+		if (messages.length > 0) {
+			try {
+				sessionStorage.setItem("chatbotMessages", JSON.stringify(messages));
+			} catch (error) {
+				console.error("Error saving chat history:", error);
+			}
+		}
+	}, [messages]);
 
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -31,13 +76,47 @@ const ChatBot = () => {
 
 	useEffect(() => {
 		scrollToBottom();
-	}, [messages]);
+	}, [messages, lastSuggestions]);
+
+	const handleClearChat = () => {
+		if (window.confirm("Are you sure you want to clear the chat history?")) {
+			const welcomeMessage = {
+				id: 1,
+				type: "bot",
+				content:
+					"Hello! I'm here to help. Ask me about our services, technologies, or anything else!",
+				timestamp: new Date(),
+				isHTML: false,
+			};
+			setMessages([welcomeMessage]);
+			sessionStorage.removeItem("chatbotMessages");
+			setInputValue("");
+			setError(null);
+			setActiveTab(null);
+			setLastSuggestions([]);
+		}
+	};
+
+	const validateMessage = (message) => {
+		if (!message.trim()) {
+			return { valid: false, error: "Message cannot be empty" };
+		}
+		if (message.length > 500) {
+			return {
+				valid: false,
+				error: "Message is too long. Please keep it under 500 characters.",
+			};
+		}
+		return { valid: true };
+	};
 
 	const handleSendMessage = async (messageContent) => {
-		console.log("Sending message to backend");
-		if (!messageContent.trim()) return;
+		const validation = validateMessage(messageContent);
+		if (!validation.valid) {
+			setError(validation.error);
+			return;
+		}
 
-		// Add user message to chat
 		const userMessage = {
 			id: messages.length + 1,
 			type: "user",
@@ -49,13 +128,16 @@ const ChatBot = () => {
 		setInputValue("");
 		setIsLoading(true);
 		setError(null);
+		setLastSuggestions([]); // Clear previous suggestions
 
 		try {
-			// Try to get response from backend
 			let response;
+			let suggestions = [];
 
 			try {
-				response = await sendMessageToGPT(messageContent);
+				const result = await sendMessageToGPT(messageContent);
+				response = result.response;
+				suggestions = result.suggestions || [];
 			} catch (backendError) {
 				console.error("Backend error, using fallback:", backendError);
 
@@ -66,8 +148,9 @@ const ChatBot = () => {
 
 				if (predefinedQ) {
 					response = getSystemResponse(predefinedQ.id);
+					suggestions = getDefaultSuggestions(predefinedQ.id);
 				} else {
-					throw backendError; // Re-throw if not a predefined question
+					throw backendError;
 				}
 			}
 
@@ -80,18 +163,23 @@ const ChatBot = () => {
 			};
 
 			setMessages((prev) => [...prev, botMessage]);
+			setLastSuggestions(suggestions); // Store suggestions for display
 		} catch (err) {
 			console.error("Error sending message:", err);
-			setError("Failed to get response. Please try again.");
 
-			// Add error message to chat
-			const errorMessage = {
+			const errorMessage =
+				err.message || "Failed to get response. Please try again.";
+			setError(errorMessage);
+
+			const errorChatMessage = {
 				id: messages.length + 2,
 				type: "bot",
-				content: `Sorry, I encountered an error: ${err.message}. Please try again or contact us directly at qllmsoft@gmail.com or WhatsApp: +92 334 8229288`,
+				content: `Sorry, I encountered an error: ${errorMessage}. Please try again or contact us directly at qllmsoft@gmail.com or WhatsApp: +92 334 8229288`,
 				timestamp: new Date(),
+				isHTML: false,
 			};
-			setMessages((prev) => [...prev, errorMessage]);
+			setMessages((prev) => [...prev, errorChatMessage]);
+			setLastSuggestions([]);
 		} finally {
 			setIsLoading(false);
 		}
@@ -102,9 +190,61 @@ const ChatBot = () => {
 		handleSendMessage(question.question);
 	};
 
+	const handleSuggestionClick = (suggestion) => {
+		// When user clicks a suggestion, send it as a message
+		handleSendMessage(suggestion.label);
+	};
+
+	const isEmptyChat = messages.length === 1 && messages[0].type === "bot";
+
+	// ========================================
+	// OPTIMIZED MARKDOWN COMPONENTS
+	// ========================================
+	const markdownComponents = {
+		h1: ({ children }) => <h2 className="markdown-h1">{children}</h2>,
+		h2: ({ children }) => <h3 className="markdown-h2">{children}</h3>,
+		h3: ({ children }) => <h4 className="markdown-h3">{children}</h4>,
+		h4: ({ children }) => <h4 className="markdown-h4">{children}</h4>,
+		h5: ({ children }) => <h5 className="markdown-h5">{children}</h5>,
+		h6: ({ children }) => <h6 className="markdown-h6">{children}</h6>,
+
+		p: ({ children }) => <p>{children}</p>,
+
+		ul: ({ children }) => <ul>{children}</ul>,
+		ol: ({ children }) => <ol>{children}</ol>,
+		li: ({ children }) => <li>{children}</li>,
+
+		code: ({ children, className }) => {
+			const isCodeBlock = className && className.includes("language-");
+			if (isCodeBlock) {
+				return <code>{children}</code>;
+			}
+			return <code className="inline-code">{children}</code>;
+		},
+		pre: ({ children }) => <pre className="code-block">{children}</pre>,
+
+		blockquote: ({ children }) => <blockquote>{children}</blockquote>,
+
+		a: ({ href, children }) => (
+			<a href={href} target="_blank" rel="noopener noreferrer">
+				{children}
+			</a>
+		),
+
+		strong: ({ children }) => <strong>{children}</strong>,
+		em: ({ children }) => <em>{children}</em>,
+		hr: () => <hr />,
+
+		table: ({ children }) => <table>{children}</table>,
+		thead: ({ children }) => <thead>{children}</thead>,
+		tbody: ({ children }) => <tbody>{children}</tbody>,
+		tr: ({ children }) => <tr>{children}</tr>,
+		th: ({ children }) => <th>{children}</th>,
+		td: ({ children }) => <td>{children}</td>,
+	};
+
 	return (
 		<>
-			{/* Chat Button - Hidden when panel is open */}
 			{!isOpen && (
 				<button
 					onClick={() => setIsOpen(true)}
@@ -117,18 +257,14 @@ const ChatBot = () => {
 						alt="QllmSoft ChatBot Avatar"
 						style={{ padding: "12px" }}
 					/>
-					{/* <MessageCircle size={24} /> */}
 				</button>
 			)}
 
-			{/* Chat Panel */}
 			{isOpen && (
 				<div className="chatbot-panel">
-					{/* Header */}
 					<div className="chatbot-header">
 						<div className="chatbot-header-title">
 							<h3>QllmSoft AI</h3>
-							{/* <span className="status-indicator">Online</span> */}
 						</div>
 						<button
 							onClick={() => setIsOpen(false)}
@@ -140,9 +276,8 @@ const ChatBot = () => {
 						</button>
 					</div>
 
-					{/* Messages Container */}
 					<div className="chatbot-messages">
-						{messages.length === 1 ? (
+						{isEmptyChat ? (
 							<div className="chatbot-welcome-section">
 								<div className="welcome-header">
 									<div className="welcome-avatar">
@@ -160,7 +295,18 @@ const ChatBot = () => {
 								key={message.id}
 								className={`message message-${message.type}`}
 							>
-								<div className="message-content">{message.content}</div>
+								<div className="message-content">
+									{message.type === "bot" ? (
+										<ReactMarkdown
+											remarkPlugins={[remarkGfm]}
+											components={markdownComponents}
+										>
+											{message.content}
+										</ReactMarkdown>
+									) : (
+										message.content
+									)}
+								</div>
 								<span className="message-time">
 									{message.timestamp.toLocaleTimeString([], {
 										hour: "2-digit",
@@ -169,6 +315,30 @@ const ChatBot = () => {
 								</span>
 							</div>
 						))}
+
+						{/* Display follow-up suggestions after the last bot message */}
+						{lastSuggestions.length > 0 && !isLoading && (
+							<div className="follow-up-suggestions">
+								<div className="suggestions-label">What's next?</div>
+								{lastSuggestions.map((suggestion) => (
+									<button
+										key={suggestion.id}
+										onClick={() => handleSuggestionClick(suggestion)}
+										className="suggestion-card"
+										title={suggestion.description}
+									>
+										<div className="suggestion-content">
+											<div className="suggestion-label">{suggestion.label}</div>
+											<div className="suggestion-description">
+												{suggestion.description}
+											</div>
+										</div>
+										<ChevronRight size={18} className="suggestion-icon" />
+									</button>
+								))}
+							</div>
+						)}
+
 						{isLoading && (
 							<div className="message message-bot loading">
 								<div className="typing-indicator">
@@ -181,11 +351,9 @@ const ChatBot = () => {
 						<div ref={messagesEndRef} />
 					</div>
 
-					{/* Error Message */}
 					{error && <div className="error-message">{error}</div>}
 
-					{/* Suggested Questions Pills */}
-					{messages.length === 1 && !isLoading && (
+					{isEmptyChat && !isLoading && (
 						<div className="suggested-questions">
 							{predefinedQuestions.slice(0, 5).map((question) => (
 								<button
@@ -200,11 +368,11 @@ const ChatBot = () => {
 						</div>
 					)}
 
-					{/* Input Area */}
 					<div className="chatbot-input-area">
 						<div className="input-wrapper">
 							<input
 								type="text"
+								maxLength={500}
 								value={inputValue}
 								onChange={(e) => setInputValue(e.target.value)}
 								onKeyPress={(e) => {
@@ -221,12 +389,32 @@ const ChatBot = () => {
 								disabled={isLoading || !inputValue.trim()}
 								className="send-button"
 								aria-label="Send message"
+								title="Send message"
 							>
 								{isLoading ? (
 									<Loader size={18} className="spinner" />
 								) : (
 									<Send size={18} />
 								)}
+							</button>
+						</div>
+						<div className="character-count">{inputValue.length}/500</div>
+						<div className="chat-clear-wrapper">
+							<p
+								style={{
+									fontSize: "11px",
+									marginBottom: "0px",
+								}}
+							>
+								Clear your chat history to start fresh.
+							</p>
+							<button
+								onClick={handleClearChat}
+								className="clear-chat-button"
+								title="Clear chat history"
+								aria-label="Clear chat history"
+							>
+								<span>Clear</span>
 							</button>
 						</div>
 					</div>

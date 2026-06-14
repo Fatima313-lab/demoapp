@@ -32,6 +32,8 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './AiPoweredSoftware.css';
 import 'animate.css';
+import TestimonialSection from "../components/TestimonialSection";
+import FounderNote from "../components/FounderNote";
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/ai-powered-software-solutions';
@@ -198,7 +200,7 @@ const schemaWebPage = {
   name: 'AI-Powered Software Solutions in Pakistan | QllmSoft',
   url: PAGE_URL,
   description:
-    'QllmSoft builds custom AI-powered software solutions in Pakistan — machine learning, NLP, computer vision, AI automation, and OpenAI integrations for businesses worldwide.',
+    'QllmSoft builds custom AI-powered software solutions ,  machine learning, NLP, computer vision, AI automation, and OpenAI integrations for businesses worldwide.',
   publisher: { '@type': 'Organization', name: 'QllmSoft' },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -214,9 +216,9 @@ const schemaService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'AI Software Development',
-  name: 'AI-Powered Software Solutions in Pakistan',
+  name: 'AI-Powered Software Solutions & Custom Platform Engineering | QllmSoft',
   description:
-    'Custom AI development services in Pakistan — machine learning models, NLP chatbots, computer vision, AI business automation, OpenAI integrations, and AI consulting for startups and enterprises worldwide.',
+   'QllmSoft engineers custom enterprise grade AI software solutions  including production machine learning, advanced NLP pipelines, real time computer vision, agentic automation frameworks, and secure LLM integration for global organizations.',
   provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
   areaServed: ['Pakistan','United States','United Kingdom','UAE','Saudi Arabia'],
   url: PAGE_URL,
@@ -224,12 +226,12 @@ const schemaService = {
     '@type': 'OfferCatalog',
     name: 'AI Development Services',
     itemListElement: [
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Custom AI Application Development Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Machine Learning Development Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'NLP & Conversational AI Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Business Automation Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Computer Vision Solutions Pakistan' } },
-      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Consulting & Strategy Pakistan' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Custom AI Application Development ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Machine Learning Development ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'NLP & Conversational AI' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Business Automation' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'Computer Vision Solutions ' } },
+      { '@type':'Offer', itemOffered:{ '@type':'Service', name:'AI Consulting & Strategy ' } },
       { '@type':'Offer', itemOffered:{ '@type':'Service', name:'OpenAI & LLM Integration Services' } },
     ],
   },
@@ -246,11 +248,24 @@ const schemaBreadcrumb = {
   ],
 };
 
+
+const integrationItems = [
+    { Icon: IconZap, title: 'Minimal Downtime, Maximum Efficiency', desc: 'Carefully phased rollout plans ensure smooth operations during every deployment stage. We stage, test, and monitor before pushing to production.' },
+    { Icon: IconLink, title: 'Compatibility with Popular Platforms', desc: 'CRMs, ERPs, CMSs, mobile apps, web applications  we work within your existing ecosystem, not against it.' },
+    { Icon: IconCode, title: 'Custom APIs & Middleware', desc: 'Secure, scalable API connectors and middleware layers built specifically for your technology stack and data flow requirements.' },
+    { Icon: IconRefreshCw, title: 'Real-Time Data Sync', desc: 'Enable live data updates and intelligent decisions using event-driven architectures, webhooks, and streaming data pipelines.' },
+    { Icon: IconUsers, title: 'Training & Team Onboarding', desc: 'Documentation, training sessions, and ongoing guidance to ensure your team can operate, monitor, and maintain AI systems confidently.' },
+    { Icon: IconShield, title: 'Post-Integration Monitoring', desc: '30-day post-launch monitoring with performance dashboards, incident response, and model health checks included in every engagement.' }
+  ];
+
+
+
+
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
     q: 'What types of data are needed to start an AI project?',
-    a: 'AI systems can be trained on structured data from databases, semi-structured data from logs and APIs, unstructured data such as text, images, and audio, and real-time data from IoT devices. QllmSoft conducts a data readiness assessment at project start to determine volume, quality, and labelling requirements — and helps you build a data pipeline if your existing data needs enrichment.',
+    a: 'AI systems can be trained on structured data from databases, semi-structured data from logs and APIs, unstructured data such as text, images, and audio, and real-time data from IoT devices. QllmSoft conducts a data readiness assessment at project start to determine volume, quality, and labelling requirements  and helps you build a data pipeline if your existing data needs enrichment.',
   },
   {
     q: 'How do you protect data security and privacy in AI projects?',
@@ -262,15 +277,15 @@ const FAQ_DATA = [
   },
   {
     q: 'How long does it take to develop and deploy an AI solution?',
-    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature — such as a document classifier or recommendation engine — can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
+    a: 'Timelines depend on scope, data complexity, and integration requirements. A focused AI feature such as a document classifier or recommendation engine  can be delivered in 6–10 weeks. A full custom AI platform with ML pipelines, APIs, and dashboards typically takes 3–6 months. We provide a detailed milestone plan during the discovery phase.',
   },
   {
     q: 'Will AI automation replace my employees?',
-    a: 'No — and this is a common misconception worth addressing directly. AI is designed to augment human capability, not replace people. It automates high-volume, repetitive tasks — data entry, document processing, ticket routing — freeing your team to focus on creative work, strategic decisions, and high-value customer interactions. Most organizations that adopt AI see productivity increase alongside headcount, not instead of it.',
+    a: 'No, and this is a common misconception worth addressing directly. AI is designed to augment human capability, not replace people. It automates high-volume, repetitive tasks  data entry, document processing, ticket routing freeing your team to focus on creative work, strategic decisions, and high-value customer interactions. Most organizations that adopt AI see productivity increase alongside headcount, not instead of it.',
   },
   {
-    q: 'Can you customize AI solutions for a specific industry in Pakistan?',
-    a: 'Absolutely. We build domain-specific AI solutions tailored to the compliance, data formats, and operational workflows of each industry — healthcare, fintech, eCommerce, education, logistics, real estate, and manufacturing. Our Pakistan-based developers also have experience integrating with local payment gateways, ERP systems, and regulatory requirements specific to the Pakistani market.',
+    q: 'Can you customize AI solutions for complex or highly regulated global industries?',
+    a: 'Absolutely. We build domain specific AI solutions tailored to the strict compliance frameworks, unique data formats, and complex operational workflows of industries worldwide including Healthcare (HIPAA), Fintech (PCI-DSS), eCommerce, Logistics, and Manufacturing. Our engineering team has extensive experience building systems that seamlessly adapt to localized payment gateways, international ERPs, and regional compliance structures across different target markets.',
   },
   {
     q: 'How do you maintain and improve AI models after launch?',
@@ -346,15 +361,15 @@ const AiPoweredSoftware = () => {
           SEO HEAD
       ════════════════════════════════════════════════ */}
       <Helmet>
-        <title>AI-Powered Software Solutions in Pakistan | Custom AI Development | QllmSoft</title>
+        <title>Custom AI Software Development & ML Solutions | QllmSoft</title>
         <meta
           name="description"
-          content="QllmSoft builds custom AI-powered software solutions in Pakistan — machine learning, NLP, computer vision, AI automation, and OpenAI integrations. Trusted by businesses in the US, UK, UAE, and globally. Get a free AI consultation."
-        />
+          content="QllmSoft engineers custom AI-powered software solutions enterprise machine learning, private LLMs, NLP, computer vision, and secure OpenAI integrations for global startups and enterprises. Schedule a technical consultation."
+  />
         <meta
           name="keywords"
-          content="AI powered software solutions Pakistan, AI software development company Pakistan, custom AI development Pakistan, machine learning development Pakistan, NLP solutions Pakistan, AI automation software Pakistan, AI integration services Pakistan, AI consulting Pakistan, OpenAI integration Pakistan, computer vision Pakistan, artificial intelligence software Pakistan"
-        />
+          content="custom AI software development, enterprise machine learning solutions, private LLM engineering, NLP software agency, production AI integration, custom computer vision systems, predictive analytics engineering, OpenAI integration services, generative AI consulting"
+  />
         <meta name="author"  content="QllmSoft" />
         <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
@@ -363,20 +378,20 @@ const AiPoweredSoftware = () => {
         <meta property="og:type"         content="website" />
         <meta property="og:url"          content={PAGE_URL} />
         <meta property="og:site_name"    content="QllmSoft" />
-        <meta property="og:title"        content="AI-Powered Software Solutions in Pakistan | Custom AI Development | QllmSoft" />
-        <meta property="og:description"  content="Custom AI development in Pakistan — ML models, NLP chatbots, computer vision, AI automation, and OpenAI integrations. Free consultation for startups and enterprises." />
+        <meta property="og:title"        content="Custom AI Software Development & ML Solutions | QllmSoft" />
+        <meta property="og:description"  content="QllmSoft engineers custom AI-powered software solutions enterprise machine learning, private LLMs, NLP, computer vision, and secure OpenAI integrations for global startups and enterprises. Schedule a technical consultation." />
         <meta property="og:image"        content={OG_IMAGE} />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt"    content="QllmSoft AI-Powered Software Solutions Pakistan" />
+        <meta property="og:image:alt"    content="QllmSoft Enterprise AI Software Development" />
         <meta property="og:locale"       content="en_US" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card"        content="summary_large_image" />
-        <meta name="twitter:title"       content="AI-Powered Software Solutions in Pakistan | QllmSoft" />
-        <meta name="twitter:description" content="Custom ML, NLP, computer vision, and OpenAI integrations built in Pakistan for global businesses. Free AI consultation." />
-        <meta name="twitter:image"       content={OG_IMAGE} />
-        <meta name="twitter:image:alt"   content="QllmSoft AI Software Development Pakistan" />
+       <meta name="twitter:card"        content="summary_large_image" />
+       <meta name="twitter:title"       content="Custom AI Software Solutions & ML Engineering | QllmSoft" />
+       <meta name="twitter:description" content="Production-ready machine learning, custom LLMs, and intelligent automation built for global enterprise scale." />
+       <meta name="twitter:image"       content={OG_IMAGE} />
+       <meta name="twitter:image:alt"   content="QllmSoft Custom AI Software Engineering" />
 
         {/* JSON-LD × 5 */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -408,27 +423,27 @@ const AiPoweredSoftware = () => {
             <div className="ai-hero__content">
               <div className="ai-hero__badge">
                 <span className="ai-hero__badge-pulse" aria-hidden="true" />
-                AI Development Company — Pakistan
+                Next-Gen Autonomous Intelligence
               </div>
 
               {/* ✅ SINGLE H1 */}
               <h1 className="ai-hero__title">
-                AI-Powered Software Solutions<br />
-                &amp; Custom Development Services<br />
-                <span className="ai-hero__title-accent">in Pakistan</span>
-              </h1>
+               AI-Powered Software Solutions<br />
+            <span className="ai-hero__title-accent">& Custom Platform Engineering</span>
+          </h1>
 
               <p className="ai-hero__sub">
-                We engineer intelligent software that learns, adapts, and delivers measurable
-                business outcomes — using machine learning, NLP, computer vision, and large
-                language model integrations built with precision for your specific workflows.
-              </p>
+            We design, develop, and integrate enterprise grade intelligent software that learns, 
+            adapts, and scales. From complex machine learning algorithms and real time computer vision 
+            pipelines to production ready Large Language Model frameworks, we turn raw semantic 
+            data into direct workflow automation.
+          </p>
 
               <div className="ai-hero__buttons">
                 <Link
                   to="/contact"
                   className="btn btn-primary ai-btn-primary"
-                  aria-label="Get a free AI software consultation from QllmSoft Pakistan"
+                  aria-label="Get a free AI software consultation from QllmSoft"
                 >
                   Get Free AI Consultation
                 </Link>
@@ -492,42 +507,46 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-intro" ref={introRef} aria-labelledby="intro-heading">
           <div className="container">
-            <p className="section-eyebrow">Redefining What Software Can Do</p>
+           
             <div className="ai-intro__layout">
 
               <div className={`ai-intro__text animate__animated ${introInView ? 'animate__fadeInLeft' : ''}`}>
                 <h2 id="intro-heading">
-                  AI-Powered Software That Works <em>For</em> Your Business — Not Against It
-                </h2>
+                 AI-Powered Software Engineered for <em>Measurable</em> Enterprise Value
+              </h2>
                 <p>
-                  Most businesses today generate more data than they can act on, rely on manual
-                  processes that slow decisions down, and lose competitive ground to companies that
-                  already use AI to move faster. At QllmSoft, we close that gap.
-                </p>
+                Most modern organizations generate vast quantities of dark operational data that remains unacted upon, 
+                relying on legacy architectures that slow down execution. QllmSoft designs and deploys next-generation, 
+                production-ready cognitive software that closes this execution gap securely.
+              </p>
+              <p>
+                Our <strong>global AI software engineering services</strong> transform raw technical data infrastructure 
+                into your most defensible asset. We build deterministic machine learning pipelines, responsive natural 
+                language processing layers, high velocity computer vision engines, and fully custom multi agent LLM systems all 
+                architected from first principles to scale cleanly alongside your primary product ecosystems.
+              </p>
                 <p>
-                  Our <strong>AI-powered software development services</strong> turn your data into
-                  your most valuable strategic asset. We build custom machine learning models,
-                  natural language processing pipelines, computer vision systems, and LLM-powered
-                  automation tools — all engineered from the ground up around your specific business
-                  challenges, your existing infrastructure, and your growth trajectory.
-                </p>
-                <p>
-                  We serve clients across the <strong>United States, United Kingdom, UAE, Saudi
-                  Arabia, and Pakistan</strong> — combining the cost advantage of Pakistan-based
-                  engineering with the technical depth of a specialized AI team. Every solution is
-                  built with responsible AI principles at its core, referencing frameworks from{' '}
-                  <a href="https://ai.google/principles/" target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="Google AI Principles — authoritative external reference">
-                    Google's AI guidelines
-                  </a>{' '}
-                  and{' '}
-                  <a href="https://www.ibm.com/artificial-intelligence" target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="IBM AI practices — authoritative external reference">
-                    IBM's AI best practices
-                  </a>.
-                </p>
+                We operate a highly optimized, cross border engineering infrastructure serving clients across North America, 
+                Europe, and the GCC regions delivering enterprise-grade architecture with zero operational friction. 
+                Every deployment is designed to meet strict international compliance standards, cross-referencing frameworks from{' '}
+                <a 
+                  href="https://ai.google/principles/" 
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Google AI Principles External technical guidelines reference"
+                >
+                  Google's AI guidelines
+                </a>{' '}
+                and{' '}
+                <a 
+                  href="https://www.ibm.com/artificial-intelligence" 
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="IBM AI best practices  External architectural model reference"
+                >
+                  IBM's AI best practices
+                </a>.
+              </p>
                 <div className="ai-intro__badges">
                   {['Responsible AI Development','GDPR-Aware Data Handling','Agile ML Delivery','Explainable AI'].map(b => (
                     <span key={b} className="ai-badge"><IconCheckCircle size={14} /> {b}</span>
@@ -563,14 +582,13 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-services" ref={servicesRef} aria-labelledby="services-heading">
           <div className="container">
-            <p className="section-eyebrow">What We Build</p>
+        
             <div className="section-title">
               <h2 id="services-heading">Our AI-Powered Software Development Services</h2>
-              <p>
-                From a single intelligent feature to a fully AI-native product — every solution
-                is engineered with precision, tested rigorously, and documented for your team
-                to maintain with confidence.
-              </p>
+             <p>
+              From isolated analytical processing components to autonomous, AI-native SaaS products every line 
+              of code is verified, optimized for target system hardware environments, and safely integrated.
+            </p>
             </div>
             <div className="ai-services__grid">
               {[
@@ -578,56 +596,56 @@ const AiPoweredSoftware = () => {
                   Icon: IconBrain,
                   accent: '#1A365D',
                   title: 'Custom AI Application Development',
-                  desc: 'We design and engineer bespoke AI applications from first principles — recommendation systems, predictive analytics engines, intelligent scoring tools, and AI-native SaaS products built around your exact competitive requirements.',
+                  desc: 'We design and engineer bespoke AI applications from first principles  recommendation systems, predictive analytics engines, intelligent scoring tools, and AI-native SaaS products built around your exact competitive requirements.',
                   tags: ['ML.NET','Python','Azure AI','Custom Models','Recommendation Engine'],
                 },
                 {
                   Icon: IconDatabase,
                   accent: '#2B6CB0',
                   title: 'Machine Learning & Data Science',
-                  desc: 'We develop supervised, unsupervised, and reinforcement learning models that uncover hidden patterns in your data. From demand forecasting and churn prediction to anomaly detection — models built to perform in production, not just in notebooks.',
+                  desc: 'We develop supervised, unsupervised, and reinforcement learning models that uncover hidden patterns in your data. From demand forecasting and churn prediction to anomaly detection  models built to perform in production, not just in notebooks.',
                   tags: ['Scikit-learn','TensorFlow','PyTorch','Feature Engineering','Model Deployment'],
                 },
                 {
                   Icon: IconMessageSquare,
                   accent: '#1A365D',
                   title: 'NLP & Conversational AI',
-                  desc: 'We build chatbots, virtual assistants, document classifiers, sentiment analysis tools, and multilingual NLP pipelines. Using OpenAI, Hugging Face, and custom fine-tuned models, we create systems that understand intent — not just keywords.',
+                  desc: 'We build chatbots, virtual assistants, document classifiers, sentiment analysis tools, and multilingual NLP pipelines. Using OpenAI, Hugging Face, and custom fine tuned models, we create systems that understand intent  not just keywords.',
                   tags: ['OpenAI API','LangChain','Hugging Face','Sentiment Analysis','Chatbot'],
                 },
                 {
                   Icon: IconSettings,
                   accent: '#2B6CB0',
                   title: 'AI Business Process Automation',
-                  desc: 'We identify high-volume manual workflows — document processing, invoice extraction, report generation, ticket routing — and replace them with intelligent automation pipelines. The result: faster operations, fewer errors, lower cost per transaction.',
+                  desc: 'We identify high volume manual workflows , document processing, invoice extraction, report generation, ticket routing  and replace them with intelligent automation pipelines. The result: faster operations, fewer errors, lower cost per transaction.',
                   tags: ['RPA + AI','OCR','Document AI','Workflow Automation','Azure Logic Apps'],
                 },
                 {
                   Icon: IconEye,
                   accent: '#1A365D',
                   title: 'Computer Vision Solutions',
-                  desc: 'We build real-time visual intelligence systems — defect detection on production lines, facial recognition for access control, document scanning with field extraction, and medical image analysis — all engineered for the accuracy your use case demands.',
+                  desc: 'We build real-time visual intelligence systems  defect detection on production lines, facial recognition for access control, document scanning with field extraction, and medical image analysis  all engineered for the accuracy your use case demands.',
                   tags: ['OpenCV','YOLO','Azure Vision','Image Classification','Object Detection'],
                 },
                 {
                   Icon: IconCode,
                   accent: '#2B6CB0',
                   title: 'LLM Integration & OpenAI Development',
-                  desc: 'We integrate large language models — GPT-4, Claude, Gemini, or open-source alternatives — directly into your applications. Retrieval-Augmented Generation (RAG) systems, AI-powered search, document Q&A, and custom fine-tuned models for domain-specific use cases.',
+                  desc: 'We integrate large language models GPT-4, Claude, Gemini, or open source alternatives directly into your applications. Retrieval Augmented Generation (RAG) systems, AI-powered search, document Q&A, and custom fine tuned models for domain specific use cases.',
                   tags: ['GPT-4','Retrieval-Augmented Generation','Vector DB','Fine-tuning','LLM Pipelines'],
                 },
                 {
                   Icon: IconTarget,
                   accent: '#1A365D',
                   title: 'AI Consulting & Strategy',
-                  desc: 'Not sure where to start with AI? Our consultants conduct AI readiness assessments, identify your highest-impact use cases, select the right frameworks, and build a phased roadmap from proof-of-concept to full-scale deployment — with ROI mapped to every phase.',
+                  desc: 'Not sure where to start with AI? Our consultants conduct AI readiness assessments, identify your highest impact use cases, select the right frameworks, and build a phased roadmap from proof of concept to full scale deployment  with ROI mapped to every phase.',
                   tags: ['AI Roadmap','PoC Design','Tool Selection','AI Governance','ROI Planning'],
                 },
                 {
                   Icon: IconLink,
                   accent: '#2B6CB0',
                   title: 'AI Integration with Existing Systems',
-                  desc: 'Deploying AI should enhance your current operations, not disrupt them. We integrate AI layers into your existing CRMs, ERPs, web apps, and mobile platforms using REST APIs, custom middleware, and real-time data pipelines — with zero-downtime deployment planning.',
+                  desc: 'Deploying AI should enhance your current operations, not disrupt them. We integrate AI layers into your existing CRMs, ERPs, web apps, and mobile platforms using REST APIs, custom middleware, and real time data pipelines  with zero-downtime deployment planning.',
                   tags: ['REST API','Middleware','Real-Time Sync','CRM Integration','ERP AI Layer'],
                 },
               ].map((s, i) => (
@@ -656,13 +674,13 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-benefits" ref={benefitsRef} aria-labelledby="benefits-heading">
           <div className="container">
-            <p className="section-eyebrow">Business Value of AI</p>
+        
             <div className="section-title">
               <h2 id="benefits-heading">
                 Why Invest in AI-Powered Software Development?
               </h2>
               <p>
-                Integrating AI is not about chasing technology trends — it is about gaining
+                Integrating AI is not about chasing technology trends it is about gaining
                 measurable operational advantages that compound over time.
               </p>
             </div>
@@ -672,22 +690,22 @@ const AiPoweredSoftware = () => {
                   {
                     Icon: IconZap,
                     title: 'Automate What Slows You Down',
-                    desc: 'AI handles high-volume, rule-based tasks — data entry, document processing, email classification, report generation — with greater speed and accuracy than any manual process. Your team focuses on decisions that require human judgment.',
+                    desc: 'AI handles high-volume, rule-based tasks  data entry, document processing, email classification, report generation with greater speed and accuracy than any manual process. Your team focuses on decisions that require human judgment.',
                   },
                   {
                     Icon: IconBarChart,
                     title: 'Decisions Backed by Data, Not Instinct',
-                    desc: 'Real-time predictive analytics surfaces the signals your team would otherwise miss. Forecast demand, identify churn risk, detect fraud, and model outcomes — before they happen, not after.',
+                    desc: 'Real-time predictive analytics surfaces the signals your team would otherwise miss. Forecast demand, identify churn risk, detect fraud, and model outcomes  before they happen, not after.',
                   },
                   {
                     Icon: IconUsers,
                     title: 'Experiences Users Actually Prefer',
-                    desc: 'From personalized product recommendations to intelligent search and conversational support, AI creates interactions that feel tailored to each user — driving higher engagement, lower bounce rates, and measurable conversion improvement.',
+                    desc: 'From personalized product recommendations to intelligent search and conversational support, AI creates interactions that feel tailored to each user driving higher engagement, lower bounce rates, and measurable conversion improvement.',
                   },
                   {
                     Icon: IconShield,
                     title: 'Security & Compliance at Scale',
-                    desc: 'AI-powered fraud detection, anomaly monitoring, and behavioral analysis identify threats that rule-based systems miss. Protect your customers and your data — in real time, at any transaction volume.',
+                    desc: 'AI-powered fraud detection, anomaly monitoring, and behavioral analysis identify threats that rule-based systems miss. Protect your customers and your data in real time, at any transaction volume.',
                   },
                   {
                     Icon: IconTrendingUp,
@@ -697,7 +715,7 @@ const AiPoweredSoftware = () => {
                   {
                     Icon: IconTarget,
                     title: 'Competitive Advantage That Compounds',
-                    desc: 'Businesses that adopt AI create a compounding advantage — better data leads to better models, better models lead to better outcomes, better outcomes attract more users. The earlier you start, the wider the gap you build.',
+                    desc: 'Businesses that adopt AI create a compounding advantage  better data leads to better models, better models lead to better outcomes, better outcomes attract more users. The earlier you start, the wider the gap you build.',
                   },
                 ].map((b, i) => (
                   <article
@@ -718,7 +736,7 @@ const AiPoweredSoftware = () => {
                 <div className="ai-benefits__image-wrap">
                   <img
                     src="https://qllmsoft.com/images/benefits-of-ai-in-software-development.webp"
-                    alt="Benefits of AI in software development — QllmSoft Pakistan showing measurable business outcomes"
+                    alt="Benefits of AI in software development  QllmSoft showing measurable business outcomes"
                     loading="lazy"
                     width="480"
                     height="380"
@@ -726,7 +744,7 @@ const AiPoweredSoftware = () => {
                 </div>
                 <div className="ai-benefits__cta-card">
                   <h3>Ready to see what AI can do for your business?</h3>
-                  <p>Book a free 30-minute AI readiness consultation — no commitment, just clarity.</p>
+                  <p>Book a free 30-minute AI readiness consultation, no commitment, just clarity.</p>
                   <Link
                     to="/contact"
                     className="btn btn-primary ai-btn-primary"
@@ -745,12 +763,12 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-process" ref={processRef} aria-labelledby="process-heading">
           <div className="container">
-            <p className="section-eyebrow">How We Work</p>
+           
             <div className="section-title">
               <h2 id="process-heading">Our AI Development Process</h2>
               <p>
-                A structured, transparent methodology — from initial discovery to continuous
-                post-launch optimization — designed to reduce risk at every stage.
+                A structured, transparent methodology  from initial discovery to continuous
+                post-launch optimization  designed to reduce risk at every stage.
               </p>
             </div>
             <div className="ai-process__track">
@@ -773,7 +791,7 @@ const AiPoweredSoftware = () => {
                 {
                   n:'04', Icon: IconLink,
                   title: 'Deployment & Integration',
-                  desc: 'We deploy to your preferred environment — Azure, AWS, or on-premise — and integrate with your existing systems via APIs. Zero-downtime deployment with staged rollout and rollback planning.',
+                  desc: 'We deploy to your preferred environment Azure, AWS, or on-premise and integrate with your existing systems via APIs. Zero-downtime deployment with staged rollout and rollback planning.',
                 },
                 {
                   n:'05', Icon: IconRefreshCw,
@@ -804,12 +822,12 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-ml" ref={mlRef} aria-labelledby="ml-heading">
           <div className="container">
-            <p className="section-eyebrow">Technical Depth</p>
+          
             <div className="section-title">
-              <h2 id="ml-heading">Machine Learning &amp; NLP Capabilities</h2>
+              <h2 id="ml-heading">Machine Learning & NLP Capabilities</h2>
               <p>
-                The specific capabilities our engineers bring to every AI engagement —
-                built on industry-standard frameworks and validated in production environments.
+                The specific capabilities our engineers bring to every AI engagement 
+                built on industry standard frameworks and validated in production environments.
               </p>
             </div>
             <div className="ai-ml__layout">
@@ -822,7 +840,7 @@ const AiPoweredSoftware = () => {
                 <ul className="ai-ml__list" aria-label="Machine learning capabilities">
                   {[
                     { title:'Predictive Analytics & Forecasting', desc:'Anticipate demand, revenue, churn, and operational trends with validated forecasting models.' },
-                    { title:'Real-Time Data Processing',           desc:'Handle and react to high-velocity data streams instantly — critical for fraud detection and IoT applications.' },
+                    { title:'Real-Time Data Processing',           desc:'Handle and react to high-velocity data streams instantly  critical for fraud detection and IoT applications.' },
                     { title:'Recommendation Engines',             desc:'Deliver personalized product, content, and action recommendations based on user behavior patterns.' },
                     { title:'Anomaly & Fraud Detection',          desc:'Identify unusual transactions, security incidents, and process deviations with statistical precision.' },
                     { title:'Image & Pattern Recognition',        desc:'Classify, detect, and segment visual content for quality control, diagnostics, and access systems.' },
@@ -848,7 +866,7 @@ const AiPoweredSoftware = () => {
                     { title:'Intelligent Chatbots & Assistants', desc:'Context-aware conversational agents that handle multi-turn dialogue, escalation, and intent resolution.' },
                     { title:'Sentiment & Intent Analysis',       desc:'Understand customer emotion and intent from support tickets, reviews, and social media at scale.' },
                     { title:'Language Translation & Transcription', desc:'Real-time translation, speech-to-text, and multilingual content processing across 50+ languages.' },
-                    { title:'Automated Message Classification', desc:'Route emails, tickets, and messages to the right team or workflow automatically — zero manual triage.' },
+                    { title:'Automated Message Classification', desc:'Route emails, tickets, and messages to the right team or workflow automatically  zero manual triage.' },
                     { title:'Text Summarization & Extraction',  desc:'Surface key insights from contracts, reports, and research documents in seconds, not hours.' },
                   ].map((item, i) => (
                     <li key={i} className="ai-ml__item">
@@ -871,7 +889,7 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-cases" ref={casesRef} aria-labelledby="cases-heading">
           <div className="container">
-            <p className="section-eyebrow">Proven Results</p>
+           
             <div className="section-title">
               <h2 id="cases-heading">AI Success Stories That Speak for Themselves</h2>
               <p>
@@ -884,9 +902,9 @@ const AiPoweredSoftware = () => {
                 {
                   Icon: IconBarChart,
                   sector: 'eCommerce',
-                  title: 'Predictive AI Platform — Customer Retention',
+                  title: 'Predictive AI Platform Customer Retention',
                   problem: 'A leading online retailer was losing customers after their first purchase, with no clear visibility into which users were at highest risk of churning.',
-                  solution: 'We built a predictive AI platform that analyzed behavioral signals — session depth, cart abandonment patterns, email engagement — to score churn risk in real time.',
+                  solution: 'We built a predictive AI platform that analyzed behavioral signals session depth, cart abandonment patterns, email engagement  to score churn risk in real time.',
                   results: [
                     { metric:'15%', label:'Reduction in customer churn' },
                     { metric:'20%', label:'Increase in repeat purchases' },
@@ -895,7 +913,7 @@ const AiPoweredSoftware = () => {
                 {
                   Icon: IconEye,
                   sector: 'Healthcare',
-                  title: 'ML Diagnostic Tool — Medical Imaging',
+                  title: 'ML Diagnostic Tool  Medical Imaging',
                   problem: 'A healthcare provider was experiencing diagnostic bottlenecks, with radiologists spending significant time on initial scan review before clinical assessment.',
                   solution: 'We developed a machine learning diagnostic tool trained on labelled medical scans to flag priority cases and pre-score findings for radiologist review.',
                   results: [
@@ -906,8 +924,8 @@ const AiPoweredSoftware = () => {
                 {
                   Icon: IconShield,
                   sector: 'FinTech',
-                  title: 'Real-Time Fraud Detection — Financial Services',
-                  problem: 'A fintech startup was facing growing transaction fraud that rule-based systems could not catch — leading to financial losses and user trust erosion.',
+                  title: 'Real-Time Fraud Detection Financial Services',
+                  problem: 'A fintech startup was facing growing transaction fraud that rule-based systems could not catch  leading to financial losses and user trust erosion.',
                   solution: 'We engineered a real-time AI fraud detection system that continuously monitors transaction patterns and flags anomalies using ensemble ML models.',
                   results: [
                     { metric:'99%', label:'Fraud detection accuracy' },
@@ -952,11 +970,11 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-compare" ref={compareRef} aria-labelledby="compare-heading">
           <div className="container">
-            <p className="section-eyebrow">Why AI, Not Just Software</p>
+         
             <div className="section-title">
               <h2 id="compare-heading">AI-Powered Software vs Traditional Software</h2>
               <p>
-                The difference is not cosmetic — it is architectural. Here is how AI-powered
+                The difference is not cosmetic it is architectural. Here is how AI-powered
                 software fundamentally changes what your applications can do.
               </p>
             </div>
@@ -966,7 +984,7 @@ const AiPoweredSoftware = () => {
                 aria-label="Comparison between traditional software and AI-powered software"
               >
                 <caption className="ai-compare-table__caption">
-                  Traditional Software vs AI-Powered Software — Key Capability Differences
+                  Traditional Software vs AI-Powered Software Key Capability Differences
                 </caption>
                 <thead>
                   <tr>
@@ -978,12 +996,12 @@ const AiPoweredSoftware = () => {
                 <tbody>
                   {[
                     { cap:'Decision Logic',        trad:'Fixed rules written by developers',    ai:'Adaptive models trained on real data' },
-                    { cap:'User Experience',       trad:'One-size-fits-all interface',           ai:'Personalised in real time per user' },
-                    { cap:'Learning Capability',   trad:'Manual reprogramming required',         ai:'Self-improving with new data over time' },
-                    { cap:'Automation Scope',      trad:'Limited, task-specific scripts',        ai:'Dynamic, context-aware automation' },
-                    { cap:'Anomaly Detection',     trad:'Threshold-based alerts only',           ai:'Pattern-based detection across signals' },
+                    { cap:'User Experience',       trad:'One size fits all interface',           ai:'Personalised in real time per user' },
+                    { cap:'Learning Capability',   trad:'Manual reprogramming required',         ai:'Self improving with new data over time' },
+                    { cap:'Automation Scope',      trad:'Limited, task specific scripts',        ai:'Dynamic, context-aware automation' },
+                    { cap:'Anomaly Detection',     trad:'Threshold based alerts only',           ai:'Pattern based detection across signals' },
                     { cap:'Language Understanding',trad:'Keyword matching or regex rules',       ai:'Semantic intent and context analysis' },
-                    { cap:'Scalability',           trad:'Linear — more users, more overhead',   ai:'Scales with infrastructure, not headcount' },
+                    { cap:'Scalability',           trad:'Linear  more users, more overhead',   ai:'Scales with infrastructure, not headcount' },
                     { cap:'Continuous Value',      trad:'Depreciates without re-development',   ai:'Improves with usage and new data' },
                   ].map((row, i) => (
                     <tr key={i}>
@@ -1003,12 +1021,12 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-industries" ref={industryRef} aria-labelledby="industries-heading">
           <div className="container">
-            <p className="section-eyebrow">Industries We Serve</p>
+      
             <div className="section-title">
               <h2 id="industries-heading">AI Solutions Across Every Industry</h2>
               <p>
                 We build AI systems tailored to the data formats, compliance requirements,
-                and operational realities of each specific sector — not generic tools.
+                and operational realities of each specific sector  not generic tools.
               </p>
             </div>
             <div className="ai-industries__grid">
@@ -1041,9 +1059,9 @@ const AiPoweredSoftware = () => {
         ════════════════════════════════════════════════ */}
         <section className="section ai-tech" ref={techRef} aria-labelledby="tech-heading">
           <div className="container">
-            <p className="section-eyebrow">Our AI Technology Stack</p>
+           
             <div className="section-title">
-              <h2 id="tech-heading">Technologies &amp; Frameworks We Use</h2>
+              <h2 id="tech-heading">Technologies & Frameworks We Use</h2>
               <p>
                 Every technology choice is driven by your project's accuracy requirements,
                 deployment environment, and long-term maintainability.
@@ -1051,12 +1069,12 @@ const AiPoweredSoftware = () => {
             </div>
             <div className="ai-tech__grid">
               {[
-                { color:'#1A365D', label:'AI Frameworks',    items:['ML.NET','TensorFlow','PyTorch','Scikit-learn','Keras'] },
-                { color:'#2B6CB0', label:'LLM & NLP',        items:['OpenAI GPT-4','LangChain','Hugging Face','Azure OpenAI','Llama 3'] },
-                { color:'#edb702', label:'Computer Vision',  items:['OpenCV','YOLO v8','Azure Computer Vision','Detectron2','PIL/Pillow'] },
-                { color:'#276749', label:'Data & Pipelines', items:['Apache Spark','Pandas','Azure Data Factory','Databricks','SQL Server'] },
-                { color:'#553C9A', label:'Cloud AI Services',items:['Azure AI Studio','AWS SageMaker','Google Vertex AI','Azure ML','AutoML'] },
-                { color:'#9B2C2C', label:'DevOps & MLOps',   items:['MLflow','Docker','Kubernetes','GitHub Actions','Azure DevOps'] },
+                { label:'AI Frameworks',    items:['ML.NET','TensorFlow','PyTorch','Scikit-learn','Keras'] },
+                {  label:'LLM & NLP',        items:['OpenAI GPT-4','LangChain','Hugging Face','Azure OpenAI','Llama 3'] },
+                {  label:'Computer Vision',  items:['OpenCV','YOLO v8','Azure Computer Vision','Detectron2','PIL/Pillow'] },
+                { label:'Data & Pipelines', items:['Apache Spark','Pandas','Azure Data Factory','Databricks','SQL Server'] },
+                {  label:'Cloud AI Services',items:['Azure AI Studio','AWS SageMaker','Google Vertex AI','Azure ML','AutoML'] },
+                { label:'DevOps & MLOps',   items:['MLflow','Docker','Kubernetes','GitHub Actions','Azure DevOps'] },
               ].map((col, i) => (
                 <div
                   key={i}
@@ -1083,26 +1101,26 @@ const AiPoweredSoftware = () => {
               <div className={`ai-consult__text animate__animated ${consultInView ? 'animate__fadeInLeft' : ''}`}>
                 <p className="section-eyebrow" style={{ textAlign:'left' }}>AI Strategy</p>
                 <h2 id="consult-heading">
-                  AI Consulting &amp; Strategic Planning for Pakistani Businesses
+                  AI Consulting & Strategic Planning for  Businesses
                 </h2>
                 <p>
                   Not every business knows where AI fits, or whether it's the right investment
                   right now. QllmSoft offers structured AI consulting to answer exactly that
-                  question — honestly, practically, and with your specific business context at
+                  question  honestly, practically, and with your specific business context at
                   the centre of every recommendation.
                 </p>
                 <p>
                   Our consultants evaluate your current systems, data maturity, and operational
-                  processes — then identify the AI use cases that will deliver measurable ROI
+                  processes then identify the AI use cases that will deliver measurable ROI
                   within your existing constraints. We build phased roadmaps from proof-of-concept
                   to full-scale deployment, with clear success metrics at every stage.
                 </p>
                 <p>
-                  We align every recommendation with responsible AI principles — referencing
+                  We align every recommendation with responsible AI principles  referencing
                   Google's{' '}
                   <a href="https://ai.google/principles/" target="_blank"
                     rel="noopener noreferrer nofollow"
-                    aria-label="Google AI Principles — external reference">
+                    aria-label="Google AI Principles  external reference">
                     AI guidelines
                   </a>{' '}
                   and IBM's enterprise AI best practices to ensure ethical, explainable, and
@@ -1113,7 +1131,7 @@ const AiPoweredSoftware = () => {
               <aside className={`ai-consult__services animate__animated ${consultInView ? 'animate__fadeInRight' : ''}`}>
                 <img
                   src="https://qllmsoft.com/images/ai-consulting-and-strategy-for-your-business.webp"
-                  alt="AI consulting and strategic planning for businesses in Pakistan — QllmSoft roadmap development"
+                  alt="AI consulting and strategic planning for businesses globally  , QllmSoft roadmap development"
                   loading="lazy"
                   width="520"
                   height="340"
@@ -1139,7 +1157,7 @@ const AiPoweredSoftware = () => {
                   to="/contact"
                   className="btn btn-primary ai-btn-primary"
                   style={{ display:'block', textAlign:'center', marginTop:'20px' }}
-                  aria-label="Get a free AI consulting session with QllmSoft Pakistan"
+                  aria-label="Get a free AI consulting session with QllmSoft "
                 >
                   Get Free AI Consultation
                 </Link>
@@ -1152,109 +1170,78 @@ const AiPoweredSoftware = () => {
             INTEGRATION — H2 + H3s
         ════════════════════════════════════════════════ */}
         <section className="section ai-integration" aria-labelledby="integration-heading">
-          <div className="container">
-            <p className="section-eyebrow">Seamless Deployment</p>
-            <div className="section-title">
-              <h2 id="integration-heading">
-                AI Integration with Your Existing Systems
-              </h2>
-              <p>
-                Deploying AI should accelerate your business — not require you to rebuild it.
-                We connect AI capabilities to the systems and workflows you already depend on.
-              </p>
-            </div>
-            <div className="ai-integration__grid">
-              {[
-                { Icon:IconZap,     title:'Minimal Downtime, Maximum Efficiency',  desc:'Carefully phased rollout plans ensure smooth operations during every deployment stage. We stage, test, and monitor before pushing to production.' },
-                { Icon:IconLink,    title:'Compatibility with Popular Platforms',  desc:'CRMs, ERPs, CMSs, mobile apps, web applications — we work within your existing ecosystem, not against it.' },
-                { Icon:IconCode,    title:'Custom APIs & Middleware',             desc:'Secure, scalable API connectors and middleware layers built specifically for your technology stack and data flow requirements.' },
-                { Icon:IconRefreshCw,title:'Real-Time Data Sync',                 desc:'Enable live data updates and intelligent decisions using event-driven architectures, webhooks, and streaming data pipelines.' },
-                { Icon:IconUsers,   title:'Training & Team Onboarding',           desc:'Documentation, training sessions, and ongoing guidance to ensure your team can operate, monitor, and maintain AI systems confidently.' },
-                { Icon:IconShield,  title:'Post-Integration Monitoring',          desc:'30-day post-launch monitoring with performance dashboards, incident response, and model health checks included in every engagement.' },
-              ].map((item, i) => (
-                <article key={i} className="ai-integration-card">
-                  <div className="ai-integration-card__icon"><item.Icon size={20} /></div>
-                  <h3 className="ai-integration-card__title">{item.title}</h3>
-                  <p className="ai-integration-card__desc">{item.desc}</p>
-                </article>
-              ))}
-            </div>
-            <div className="ai-integration__image-row">
-              <img
-                src="https://qllmsoft.com/images/seamless-integration-%20with-existing-systems.webp"
-                alt="Seamless AI integration with existing software systems — QllmSoft Pakistan deployment approach"
-                loading="lazy"
-                width="960"
-                height="360"
-              />
-            </div>
+      <div className="container">
+        
+        <div className="section-title">
+          <h2 id="integration-heading">AI Integration with Your Existing Systems</h2>
+          <p>
+            Deploying AI should accelerate your business not require you to rebuild it.
+            We connect AI capabilities to the systems and workflows you already depend on.
+          </p>
+        </div>
+
+        <div className="ai-integration__main-layout">
+          <div className="ai-integration__grid">
+            {integrationItems.map((item, i) => (
+              <article key={i} className="ai-integration-card">
+                <div className="ai-integration-card__icon">
+                  <item.Icon size={20} />
+                </div>
+                <h3 className="ai-integration-card__title">{item.title}</h3>
+                <p className="ai-integration-card__desc">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+
+          <aside className="ai-integration__aside-graphic">
+            <img
+              src="https://qllmsoft.com/images/seamless-integration-%20with-existing-systems.webp"
+              alt="Seamless AI integration with existing software systems , QllmSoft  deployment approach"
+              loading="lazy"
+              width="960"
+              height="360"
+              className="ai-integration__small-img"
+            />
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    
+        {/* ── TESTIMONIALS ── */}
+        <section
+          className="section testimonial-section"
+          aria-labelledby="testimonials-heading"
+          itemScope
+          itemType="https://schema.org/Review"
+        >
+          <h2 id="testimonials-heading" className="sr-only">
+            Client Reviews, QllmSoft Software Development agency
+          </h2>
+          <TestimonialSection />
+
+          <div style={{ textAlign: "center", marginTop: "30px" }}>
+            <a
+              href="https://www.freelancer.com/u/mrprogrmmr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline-dark"
+              aria-label="View all QllmSoft verified client reviews on Freelancer"
+            >
+              View All Verified Reviews on Freelancer
+            </a>
           </div>
         </section>
 
-        {/* ════════════════════════════════════════════════
-            TESTIMONIALS — H2 + Review microdata
-        ════════════════════════════════════════════════ */}
-        <section className="section ai-testimonials" ref={reviewRef} aria-labelledby="reviews-heading">
-          <div className="container">
-            <p className="section-eyebrow">Verified Client Reviews</p>
-            <div className="section-title">
-              <h2 id="reviews-heading">
-                What Clients Say About QllmSoft AI Development
-              </h2>
-              <p>
-                Independent, third-party verified reviews from global clients — from the UK,
-                USA, UAE, Saudi Arabia, and Jordan — on Freelancer and Upwork.
-              </p>
-            </div>
-            <div className="ai-reviews__grid">
-              {[
-                { name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'"Outstanding technical work. The AI solution QllmSoft delivered was precisely what we needed — accurate, fast, and well-documented. The team communicated proactively at every stage. Exactly as discussed, on time, and on budget."' },
-                { name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'"QllmSoft is my go-to development partner for complex technical builds. Their understanding of the business context behind the code — not just the technical requirements — sets them apart from every other team I have worked with."' },
-                { name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'"Exceptional communication and technical depth throughout the entire engagement. The final solution exceeded our expectations significantly. I will not hesitate to bring QllmSoft back for our next AI integration project."' },
-                { name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'"Clean architecture, professional delivery, and a team that genuinely cares about the outcome — not just closing the ticket. QllmSoft is the benchmark I now use for every other development partner I evaluate."' },
-              ].map((r, i) => (
-                <article
-                  key={i}
-                  className={`ai-review-card animate__animated ${reviewInView ? 'animate__fadeInUp' : ''}`}
-                  style={{ animationDelay:`${i * 0.1}s` }}
-                  itemScope itemType="https://schema.org/Review"
-                >
-                  <div
-                    className="ai-review-card__stars"
-                    aria-label="5 out of 5 stars"
-                    itemProp="reviewRating" itemScope itemType="https://schema.org/Rating"
-                  >
-                    <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
-                    ★★★★★
-                  </div>
-                  <p className="ai-review-card__text" itemProp="reviewBody">{r.text}</p>
-                  <div className="ai-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
-                    <img src={r.img}
-                      alt={`${r.name} — verified QllmSoft AI development client from ${r.loc}`}
-                      loading="lazy" width="48" height="48" />
-                    <div>
-                      <strong itemProp="name">{r.name}</strong>
-                      <span>{r.loc} — Freelancer</span>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div style={{ textAlign:'center', marginTop:'32px', display:'flex', gap:'16px', justifyContent:'center', flexWrap:'wrap' }}>
-              <a href="https://www.freelancer.com/u/mrprogrmmr" target="_blank"
-                rel="noopener noreferrer" className="btn btn-outline-dark"
-                aria-label="View all QllmSoft AI development reviews on Freelancer">
-                View All Freelancer Reviews
-              </a>
-              <a href="https://www.upwork.com/freelancers/~0170e20f8803389a86" target="_blank"
-                rel="noopener noreferrer" className="btn btn-outline-dark"
-                aria-label="Verify QllmSoft Top-Rated Plus status on Upwork">
-                Verify Upwork Status
-              </a>
-            </div>
-          </div>
-        </section>
+
+<FounderNote
+  title="Architecting the Future with Adaptive AI Intelligence"
+  message="At QllmSoft, we believe that true AI integration is more than just wrapping an API it is about embedding cognitive capability into the very core of your business architecture. My mission is to ensure your systems do not just process data, but actively learn from it. From our engineering hub to enterprise clients worldwide, we build custom model pipelines, secure retrieval augmented generation (RAG) frameworks, and predictive automation engines designed for high throughput global scale. We aren't just deploying models; we are building the intelligent foundations that empower your business to evolve autonomously and grow without limits."
+/>
+
+
+
+
 
         {/* ════════════════════════════════════════════════
             FAQ — H2 + FAQPage schema
@@ -1264,10 +1251,10 @@ const AiPoweredSoftware = () => {
           itemScope itemType="https://schema.org/FAQPage"
         >
           <div className="container">
-            <p className="section-eyebrow">Common Questions</p>
+          
             <div className="section-title">
               <h2 id="faq-heading">
-                Frequently Asked Questions About AI Software Development in Pakistan
+                Frequently Asked Questions About AI Software Development 
               </h2>
               <p>
                 Practical answers to the questions businesses ask most before starting
@@ -1308,13 +1295,13 @@ const AiPoweredSoftware = () => {
             </h2>
             <p>
               Whether you have a defined AI use case, a dataset looking for direction,
-              or simply a business problem that needs a smarter solution — QllmSoft
+              or simply a business problem that needs a smarter solution, QllmSoft
               brings the technical depth, delivery discipline, and domain knowledge to
               build AI that works in production, not just in demos.
             </p>
             <div className="ai-cta__buttons">
               <Link to="/contact" className="btn btn-primary ai-btn-primary ai-btn-cta"
-                aria-label="Schedule a free AI consultation with QllmSoft Pakistan">
+                aria-label="Schedule a free AI consultation with QllmSoft ">
                 Schedule Free AI Consultation
               </Link>
               <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20an%20AI%20project!"
