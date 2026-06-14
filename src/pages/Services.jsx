@@ -60,9 +60,9 @@ const schemaWebPage = {
   "@type": "WebPage",
   "@id": "https://qllmsoft.com/services#webpage",
   url: "https://qllmsoft.com/services",
-  name: "Software Development Services in Pakistan | Custom Digital Solutions | QllmSoft",
+  name: "Professional Software Development Services | Custom Digital Solutions | QllmSoft",
   description:
-    "QllmSoft provides custom software development services in Pakistan, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan.",
+    "QllmSoft provides expert custom software development services, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan.",
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -88,10 +88,10 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://qllmsoft.com/services#service",
-  name: "Custom Software Development Services in Pakistan",
+  name: "Custom Software Development Services",
   serviceType: "Software Development",
   description:
-    "End-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, legacy system modernisation, and dedicated developer hiring for businesses in Pakistan and internationally.",
+    "End-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, legacy system modernisation, and dedicated developer hiring for businesses internationally.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -113,13 +113,13 @@ const schemaService = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Software Development Services Pakistan",
+    name: "Software Development Services",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Custom Software Development Pakistan",
+          name: "Custom Software Development",
           url: "https://qllmsoft.com/custom-software-development-services",
         },
       },
@@ -127,7 +127,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Enterprise Web Application Development Pakistan",
+          name: "Enterprise Web Application Development",
           url: "https://qllmsoft.com/web-application-development-services",
         },
       },
@@ -135,7 +135,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Mobile App Development Pakistan",
+          name: "Mobile App Development",
           url: "https://qllmsoft.com/mobile-app-development",
         },
       },
@@ -143,7 +143,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Business Process Automation Pakistan",
+          name: "Business Process Automation",
           url: "https://qllmsoft.com/api-development-services",
         },
       },
@@ -151,7 +151,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "AI-Powered Software Solutions Pakistan",
+          name: "AI-Powered Software Solutions",
           url: "https://qllmsoft.com/ai-powered-software-solutions",
         },
       },
@@ -159,7 +159,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Software Outsourcing Pakistan",
+          name: "Software Outsourcing",
           url: "https://qllmsoft.com/outsource-software-development-to-pakistan",
         },
       },
@@ -175,7 +175,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Hire Software Developers Pakistan",
+          name: "Hire Software Developers",
           url: "https://qllmsoft.com/hire-dotnet-developers-pakistan",
         },
       },
@@ -183,7 +183,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Healthcare Software Development Pakistan",
+          name: "Healthcare Software Development",
           url: "https://qllmsoft.com/healthcare-software-development-pakistan",
         },
       },
@@ -191,7 +191,7 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Education Software Development Pakistan",
+          name: "Education Software Development",
           url: "https://qllmsoft.com/education-software-development-pakistan",
         },
       },
@@ -206,10 +206,10 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What software development services does QllmSoft offer in Pakistan?",
+      name: "What software development services does QllmSoft offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses across Pakistan.",
+        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses.",
       },
     },
     {
@@ -222,7 +222,7 @@ const schemaFAQ = {
     },
     {
       "@type": "Question",
-      name: "Does QllmSoft build mobile apps for Android and iOS in Pakistan?",
+      name: "Does QllmSoft build mobile apps for Android and iOS?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS delivering native-quality experiences on both platforms from a single, efficient codebase. Our mobile apps are built with offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing through App Store submission and post-launch maintenance.",
@@ -238,7 +238,7 @@ const schemaFAQ = {
     },
     {
       "@type": "Question",
-      name: "What industries does QllmSoft build software for in Pakistan?",
+      name: "What industries does QllmSoft build software?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "QllmSoft has delivered production-grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR, and real estate sectors since 2015. We bring both deep technical expertise and genuine business domain understanding to every engagement, ensuring your software solves real operational problems, not just technical ones.",
@@ -302,7 +302,7 @@ const ServiceCard = ({ service, isOdd, id }) => {
 /* ─── FAQ Accordion ─────────────────────────────────────────────── */
 const faqItems = [
   {
-    q: "What software development services does QllmSoft offer in Pakistan?",
+    q: "What software development services does QllmSoft offer?",
     a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Pakistan, all backed by a 100% Upwork Job Success Score and 5 star Freelancer rating.",
   },
   {
@@ -310,7 +310,7 @@ const faqItems = [
     a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi department workflows, third party integrations, and advanced reporting. Every project receives a detailed, fixed price scope document and a formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
   },
   {
-    q: "Does QllmSoft build mobile apps for Android and iOS in Pakistan?",
+    q: "Does QllmSoft build mobile apps for Android and iOS?",
     a: "Yes. QllmSoft develops cross platform mobile apps for both Android and iOS delivering native quality user experiences on both platforms from a single, efficient codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing and UI/UX design through App Store submission and post launch maintenance.",
   },
   {
@@ -354,8 +354,7 @@ const FaqSection = () => {
       <div className="container">
         <div className="section-title reveal">
           <h2 id="faq-heading">
-            Frequently Asked Questions, Software Development Services in
-            Pakistan
+            Frequently Asked Questions, Software Development Services
           </h2>
           <p>
             Honest answers to the questions businesses ask most before choosing
@@ -634,7 +633,7 @@ const Services = () => {
         {/* Description, 158 chars */}
         <meta
           name="description"
-          content="Looking for top custom software development services in Pakistan? QllmSoft builds secure enterprise web applications, mobile apps & AI solutions. Get a Free quote in 24 hours."
+          content="Looking for top custom software development services? QllmSoft builds secure enterprise web applications, mobile apps & AI solutions. Get a Free quote in 24 hours."
         />
 
         {/* Keywords, solution-first, service + stack mix */}
@@ -670,7 +669,7 @@ const Services = () => {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Software Development Services Pakistan"
+          content="QllmSoft Software Development Services"
         />
         <meta property="og:locale" content="en_PK" />
 
@@ -690,7 +689,7 @@ const Services = () => {
         />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft Software Services Pakistan"
+          content="QllmSoft Software Services"
         />
 
         {/* Geo */}
@@ -736,7 +735,7 @@ const Services = () => {
                 AI-powered software solutions
               </Link>{" "}
               , delivered on a fixed price, with a documented scope, on an
-              agreed timeline. Serving businesses across Pakistan, since 2015
+              agreed timeline. Serving businesses around globe, since 2015
               with a verified 100% Upwork Job Success Score.
             </p>
           </div>
@@ -859,7 +858,6 @@ const Services = () => {
 
               <div className="product-tech-pills">
                 <span className="tech-pill">.NET Core</span>
-                <span className="tech-pill">Angular</span>
                 <span className="tech-pill">SQL Server</span>
                 <span className="tech-pill">Azure Blob</span>
               </div>
@@ -1210,13 +1208,13 @@ const Services = () => {
                 Tell us what you need to build. QllmSoft will review your
                 requirements, send a detailed fixed-price proposal within 24
                 hours, and schedule a free discovery call, no commitment
-                required. Businesses in Pakistan trust QllmSoft to deliver. We
+                required. Businesses trust QllmSoft to deliver. We
                 look forward to earning that trust from you.
               </p>
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Get a free software development consultation from QllmSoft Pakistan"
+                aria-label="Get a free software development consultation from QllmSoft"
               >
                 Get a Free Consultation
               </Link>

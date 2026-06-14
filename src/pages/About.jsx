@@ -67,7 +67,7 @@ const schemaOrg = {
     height: 60,
   },
   description:
-    "QllmSoft is a custom software development company in Pakistan with 10+ years of experience delivering enterprise digital solutions for businesses across Pakistan, UK, USA, UAE, and Saudi Arabia. We specialise in enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams.",
+    "QllmSoft is a custom software development company in Pakistan with 10+ years of experience delivering enterprise digital solutions for businesses. We specialise in enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams.",
   foundingDate: "2015",
   telephone: "+92-334-8229288",
   email: "qllmsoft@gmail.com",
@@ -264,8 +264,7 @@ const About = () => {
               Digital Solutions Since 2015
             </h1>
             <p style={{ color: "white" }}>
-              10+ years. 50+ production-grade digital solutions. Clients across
-              Pakistan, the UK, USA, UAE, Saudi Arabia, and beyond.
+              10+ years. 50+ production-grade digital solutions.
             </p>
             <a href="#company" className="btn btn-primary">
               Discover More
@@ -290,12 +289,12 @@ const About = () => {
             <div className="story-card">
               <p>
                 QllmSoft is a full-service{" "}
-                <strong>software development company in Pakistan</strong> with
+                <strong>software development company</strong> with
                 over a decade of experience delivering production-grade digital
                 solutions for businesses across four continents. Founded in
                 2015, we have grown from a specialist enterprise development
                 consultancy into a comprehensive software agency trusted by 50+
-                businesses across Pakistan, the USA, Europe & Gulf.
+                businesses across world.
               </p>
 
               <p>
@@ -473,7 +472,7 @@ const About = () => {
                   Happy Clients
                 </div>
                 <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  UK, USA, UAE, Pakistan &amp; more
+                  Around Globe
                 </div>
               </div>
               <div>
@@ -520,7 +519,7 @@ const About = () => {
               <FeatureCard
                 icon={Users}
                 title="10+ Years of Proven Delivery"
-                description="50+ enterprise digital solutions delivered since 2015 for businesses across Pakistan, UK, USA, and UAE, with a 100% on-time delivery record."
+                description="50+ enterprise digital solutions delivered since 2015 for businesses with a 100% on-time delivery record."
               />
               <FeatureCard
                 icon={Shield}
@@ -624,7 +623,7 @@ const About = () => {
                 <div className="vm-image">
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-                    alt="QllmSoft vision, trusted software partner for businesses in Pakistan and globally"
+                    alt="QllmSoft vision, trusted software partner for businesses globally"
                     loading="lazy"
                   />
                 </div>
@@ -683,8 +682,7 @@ const About = () => {
                 <p>
                   Since founding QllmSoft in 2015, we have grown from a
                   specialist consultancy into a full-service software
-                  development agency trusted by 50+ businesses across Pakistan,
-                  the UK, USA, Gulf & Europe. Every project we take on carries a
+                  development agency trusted by 50+ businesses. Every project we take on carries a
                   personal commitment from our leadership to deliver on time,
                   within budget, and to a standard we are proud to put our name
                   on, backed by a 100% on-time delivery record and a verified
@@ -810,13 +808,13 @@ const About = () => {
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Ready to Work with Pakistan's Trusted Software Development
+                Ready to Work with a Trusted Software Development
                 Company?
               </h2>
               <p>
                 Tell us your challenge. We will review your requirements, send a
                 detailed fixed-price proposal within 24 hours, and schedule a
-                free discovery call — no commitment required.
+                free discovery call, no commitment required.
               </p>
               <Link to="/contact" className="btn btn-primary">
                 Get a Free Consultation

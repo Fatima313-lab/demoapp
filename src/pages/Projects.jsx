@@ -35,7 +35,7 @@ import './Projects.css';
 const schemaWebPage = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  name: 'Software Development Portfolio & Case Studies | QllmSoft Pakistan',
+  name: 'Expert Software Development Portfolio & Case Studies | QllmSoft',
   url: 'https://qllmsoft.com/projects',
   description:
     'Explore QllmSoft\'s verified portfolio of 50+ custom software development projects delivered since 2015 — enterprise web applications built with ASP.NET Core, cross-platform mobile apps, REST and GraphQL APIs, SaaS platforms, and AI-powered business automation tools. Our agency has maintained a 100% on-time delivery record across 50+ satisfied clients in Pakistan, the UK, USA, UAE, and Saudi Arabia. Every project is independently verifiable on our portfolio.',
@@ -75,7 +75,7 @@ const schemaFAQ = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What types of software projects has QllmSoft delivered in Pakistan?',
+      name: 'What types of software projects has QllmSoft delivered?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'QllmSoft has delivered custom ASP.NET Core enterprise web applications, SaaS platforms, Android and iOS mobile apps, REST and GraphQL APIs, financial management systems, LMS platforms, fleet management systems, property management tools, and AI-powered business automation software for clients in Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan.',
@@ -99,7 +99,7 @@ const schemaFAQ = {
     },
     {
       '@type': 'Question',
-      name: 'Can startups hire QllmSoft for MVP software development in Pakistan?',
+      name: 'Can startups hire QllmSoft for MVP software development?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes. QllmSoft specialises in MVP development for early-stage startups — helping validate ideas with a working, shippable product delivered in weeks rather than months. We combine lean product thinking with production-grade architecture, so your MVP can scale without a rebuild when you find product-market fit.',
@@ -137,14 +137,14 @@ const Projects = () => {
           SEO HEAD
       ═══════════════════════════════════════════ */}
       <Helmet>
-        <title>Software Development Portfolio Pakistan | Case Studies & Projects | QllmSoft</title>
+        <title>Software Development Portfolio | Case Studies & Projects | QllmSoft</title>
         <meta
           name="description"
           content="Explore QllmSoft's software development portfolio — enterprise web apps, mobile apps, REST APIs, SaaS platforms, and custom software delivered for clients in Pakistan, UK, USA, and UAE. Download our company portfolio PDF."
         />
         <meta
           name="keywords"
-          content="software development portfolio Pakistan, custom software projects Pakistan, web application portfolio Pakistan, ASP.NET Core projects Pakistan, mobile app portfolio Pakistan, software case studies Pakistan, software development company portfolio, QllmSoft projects"
+          content="software development portfolio, custom software projects, web application portfolio Pakistan, ASP.NET Core projects Pakistan, mobile app portfolio Pakistan, software case studies Pakistan, software development company portfolio, QllmSoft projects"
         />
         <meta name="author"  content="QllmSoft" />
         <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -153,19 +153,19 @@ const Projects = () => {
         <meta property="og:type"         content="website" />
         <meta property="og:url"          content="https://qllmsoft.com/projects" />
         <meta property="og:site_name"    content="QllmSoft" />
-        <meta property="og:title"        content="Software Development Portfolio Pakistan | QllmSoft Projects & Case Studies" />
+        <meta property="og:title"        content="Software Development Portfolio | QllmSoft Projects & Case Studies" />
         <meta property="og:description"  content="Enterprise web apps, mobile apps, REST APIs, and SaaS platforms — QllmSoft's verified software development portfolio for global businesses." />
         <meta property="og:image"        content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt"    content="QllmSoft Software Development Portfolio Pakistan" />
+        <meta property="og:image:alt"    content="QllmSoft Software Development Portfolio" />
         <meta property="og:locale"       content="en_PK" />
 
         <meta name="twitter:card"        content="summary_large_image" />
-        <meta name="twitter:title"       content="Software Development Portfolio Pakistan | QllmSoft" />
+        <meta name="twitter:title"       content="Software Development Portfolio | QllmSoft" />
         <meta name="twitter:description" content="Enterprise web apps, mobile apps, REST APIs, and custom software — QllmSoft's verified portfolio from Pakistan." />
         <meta name="twitter:image"       content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
-        <meta name="twitter:image:alt"   content="QllmSoft Portfolio Pakistan" />
+        <meta name="twitter:image:alt"   content="QllmSoft Portfolio" />
 
         <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaItemList)}</script>
@@ -182,13 +182,12 @@ const Projects = () => {
           <div className="container">
             {/* ✅ SINGLE H1 */}
             <h1 id="projects-hero-heading">
-              Software Development Portfolio &amp; Case Studies — Pakistan &amp; Global
+              Software Development Portfolio &amp; International Case Studies
             </h1>
             <p>
               Explore QllmSoft's verified portfolio of custom software development projects — enterprise
               web applications built with ASP.NET Core, cross-platform mobile apps, REST and GraphQL APIs,
-              SaaS platforms, and AI-powered business automation tools delivered for clients across
-              Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan. Every project is independently
+              SaaS platforms, and AI-powered business automation tools delivered for clients. Every project is independently
               verifiable on our{' '}
               <a
                 href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
@@ -222,7 +221,7 @@ const Projects = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="grid-heading">
-              Our 50+ Custom Software Development Projects — Pakistan &amp; Global
+              Our 50+ Custom Software Development Projects Internationally
               </h2>
               <p>
                 Real-world case studies showcasing QllmSoft's expertise in building scalable, secure,
@@ -248,7 +247,7 @@ const Projects = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="industries-heading">
-                Industries We Serve with Custom Software Development in Pakistan
+                Industries We Serve with Custom Software Development
               </h2>
               <p>
                 Industry-specific software development tailored to compliance requirements, operational
@@ -315,7 +314,7 @@ const Projects = () => {
                 <p itemProp="description">
                   Custom eCommerce development with JazzCash, Easypaisa, and Stripe payment integration,
                   product catalog management, inventory automation, order management, and conversion-optimised
-                  checkout flows built for Pakistani and international online retailers.
+                  checkout flows built for international online retailers.
                 </p>
               </article>
 
@@ -327,7 +326,7 @@ const Projects = () => {
                 <p itemProp="description">
                   Fleet management systems, real-time shipment tracking, warehouse automation platforms,
                   route optimisation tools, and supply chain visibility dashboards for logistics and
-                  delivery companies operating across Pakistan and the Gulf region.
+                  delivery companies operating around globe.
                 </p>
               </article>
 
@@ -339,7 +338,7 @@ const Projects = () => {
                 <p itemProp="description">
                   Property management portals, real estate listing platforms, CRM systems for agents
                   and agencies, digital transaction management tools, and tenant management systems
-                  built for Pakistani and UAE property markets.
+                  built for international markets.
                 </p>
               </article>
 
@@ -355,8 +354,7 @@ const Projects = () => {
               <p>
               Get a comprehensive overview of QllmSoft's 10+ years of technical capabilities, development
 methodology, and 50+ client success stories across six industries. Our portfolio PDF covers
-verified project outcomes, architecture approaches, and technology stacks used across engagements
-in Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan — with a 100% on-time delivery record
+verified project outcomes, architecture approaches, and technology stacks used across engagements with a 100% on-time delivery record
 maintained since 2015.
               </p>
               <a
@@ -376,7 +374,7 @@ maintained since 2015.
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Start Your Custom Software Development Project in Pakistan
+                Start Your Custom Software Development Project
               </h2>
               <p>
                 Whether you need an enterprise web application, a mobile app, a REST API, or a
@@ -387,7 +385,7 @@ maintained since 2015.
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Start your software development project with QllmSoft Pakistan"
+                aria-label="Start your software development project with QllmSoft"
               >
                 Request Free Consultation
               </Link>
@@ -422,7 +420,7 @@ maintained since 2015.
                     QllmSoft has delivered custom ASP.NET Core enterprise web applications, SaaS platforms,
                     Android and iOS mobile apps, REST and GraphQL APIs, financial management systems, LMS
                     platforms, fleet management systems, property management tools, and AI-powered business
-                    automation software. Our clients span Pakistan, the UK, USA, UAE, Saudi Arabia, and Jordan
+                    automation software. Our clients span Pakistan, the USA, UK, and Gulf.
                     — all independently verifiable on Upwork and Freelancer.
                   </p>
                 </div>
@@ -468,7 +466,7 @@ maintained since 2015.
               </details>
 
               <details className="faq-item reveal" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <summary itemProp="name">Can startups hire QllmSoft for MVP software development in Pakistan?</summary>
+                <summary itemProp="name">Can startups hire QllmSoft for MVP software development?</summary>
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text">
                     Yes. QllmSoft specialises in MVP development for early-stage startups — lean product
@@ -520,7 +518,7 @@ maintained since 2015.
                 <summary itemProp="name">Why choose QllmSoft over other software houses in Pakistan?</summary>
                 <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
                   <p itemProp="text">
-                  QllmSoft differentiates through four things most software agencies in Pakistan cannot
+                  QllmSoft differentiates through four things most software agencies cannot
 independently verify: 10+ years of continuous operation since 2015, a 100% Job Success
 Score on Upwork, 5-star reviews on Freelancer from 50+ clients across four continents,
 and a 100% on-time delivery record across every engagement we have undertaken. We focus
@@ -545,7 +543,7 @@ improves operational efficiency and revenue potential.
             </div>
 
             <p style={{ marginTop: '24px', fontSize: '0.88rem', color: '#718096' }}>
-              QllmSoft is a custom software development company in Pakistan specialising in enterprise
+              QllmSoft is a custom software development company specialising in enterprise
               ASP.NET Core solutions, web application development, mobile app development, and system
               modernisation. Our project portfolio demonstrates verified delivery of secure, scalable,
               and business-focused digital solutions across industries and geographies.
