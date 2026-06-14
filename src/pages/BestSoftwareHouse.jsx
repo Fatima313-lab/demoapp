@@ -176,14 +176,14 @@ const SELECTION_CRITERIA = [
   { num:'01', title:'Experience & Portfolio', icon: <IconAward size={22}/>, desc:'Review completed projects carefully. A strong, relevant portfolio with documented case studies demonstrates that the team can handle work similar to yours.' },
   { num:'02', title:'Technology Stack',       icon: <IconCode size={22}/>,  desc:'Verify that the company actively works with modern frameworks and coding standards. Outdated stacks create long-term maintenance and security risks.' },
   { num:'03', title:'Communication Quality', icon: <IconMessageCircle size={22}/>, desc:'Reliable, proactive communication prevents the majority of project delays. Look for regular reporting, clear escalation paths, and responsive account management.' },
-  { num:'04', title:'Pricing Transparency',  icon: <IconDollarSign size={22}/>, desc:'A trustworthy partner provides detailed estimates covering all costs, timelines, and deliverables — with no hidden charges or vague scope language.' },
+  { num:'04', title:'Pricing Transparency',  icon: <IconDollarSign size={22}/>, desc:'A trustworthy partner provides detailed estimates covering all costs, timelines, and deliverables  with no hidden charges or vague scope language.' },
   { num:'05', title:'Customisation Depth',   icon: <IconZap size={22}/>,   desc:'Avoid firms that offer one-size-fits-all templates. Your solution should be engineered specifically for your brand, workflows, and long-term business objectives.' },
   { num:'06', title:'Security Practices',    icon: <IconShield size={22}/>, desc:'Ensure the firm follows industry best practices for data encryption, access control, IP protection, and compliance with relevant regulations.' },
 ];
 
 const SERVICES = [
-  { icon: <IconCode size={28}/>,        title:'Web Development',         desc:'High-performance websites and enterprise portals built with React, Angular, ASP .Net, and Laravel — optimised for speed, accessibility, and SEO.' },
-  { icon: <IconSmartphone size={28}/>,  title:'Mobile App Development',  desc:'Native and cross-platform mobile applications built with Flutter, Kotlin, Swift, and React Native — fast, polished, and ready for scale.' },
+  { icon: <IconCode size={28}/>,        title:'Web Development',         desc:'High-performance websites and enterprise portals built with React, Angular, ASP .Net, and Laravel  optimised for speed, accessibility, and SEO.' },
+  { icon: <IconSmartphone size={28}/>,  title:'Mobile App Development',  desc:'Native and cross-platform mobile applications built with Flutter, Kotlin, Swift, and React Native fast, polished, and ready for scale.' },
   { icon: <IconBrain size={28}/>,       title:'AI & Data Science',       desc:'Intelligent automation and machine learning systems that help businesses make faster, better decisions through data-driven insights and predictive models.' },
   { icon: <IconCloud size={28}/>,       title:'Cloud & AWS Services',    desc:'AWS architecture, serverless design, cloud migration, and infrastructure management to improve scalability and reduce long-term operational costs.' },
   { icon: <IconShield size={28}/>,      title:'Cybersecurity & QA',      desc:'End-to-end security audits, penetration testing, automated QA pipelines, and compliance reviews to keep your platform and data fully protected.' },
@@ -198,10 +198,10 @@ const BENEFITS = [
 ];
 
 const REVIEWS = [
-  { name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'Outstanding technical work. The solution QllmSoft delivered was precisely what we needed — accurate, fast, and well-documented. The team communicated proactively at every stage. Exactly as discussed, on time, and on budget.' },
+  { name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'Outstanding technical work. The solution QllmSoft delivered was precisely what we needed  accurate, fast, and well-documented. The team communicated proactively at every stage. Exactly as discussed, on time, and on budget.' },
   { name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'QllmSoft is my go-to development partner for complex technical builds. Their understanding of the business context behind the code — not just the technical requirements — sets them apart from every other team I have worked with.' },
   { name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'Exceptional communication and technical depth throughout the entire engagement. The final solution exceeded our expectations significantly. I will not hesitate to bring QllmSoft back for our next project.' },
-  { name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'Clean architecture, professional delivery, and a team that genuinely cares about the outcome — not just closing the ticket. QllmSoft is the benchmark I now use for every other development partner I evaluate.' },
+  { name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'Clean architecture, professional delivery, and a team that genuinely cares about the outcome not just closing the ticket. QllmSoft is the benchmark I now use for every other development partner I evaluate.' },
 ];
 
 const FAQ_DATA = [
@@ -209,7 +209,7 @@ const FAQ_DATA = [
   { q:'What services do software houses in Pakistan provide?',          a:'Pakistani software companies typically offer web development, mobile application engineering, desktop software, UI/UX design, e-commerce solutions, cloud services, data analytics, AI development, and digital marketing — often as integrated full-service engagements.' },
   { q:'Is outsourcing to a software house in Pakistan cost-effective?', a:'Yes. Pakistani development teams offer highly skilled engineers at rates significantly lower than comparable talent in the US or UK, making the country an attractive destination for offshore software development — typically 50–70% more cost-effective.' },
   { q:'What makes QllmSoft stand out among Pakistan\'s software houses?',a:'QllmSoft combines the agility of a boutique firm with enterprise-grade technical standards. Clients benefit from direct access to senior engineers, transparent pricing, AWS-certified cloud delivery, and a track record verified on Upwork and Freelancer by global clients from the USA, UK, UAE, and Jordan.' },
-  { q:'How do Pakistani software firms handle international clients?',  a:'The vast majority of Pakistan\'s top software houses actively serve clients in the United States, Europe, and the Gulf region — many with dedicated account management, NDA-first workflows, and flexible payment models for international engagements.' },
+  { q:'How do Pakistani software firms handle international clients?',  a:'The vast majority of Pakistan\'s top software houses actively serve clients in the United States, Europe, and the Gulf region many with dedicated account management, NDA-first workflows, and flexible payment models for international engagements.' },
   { q:'What industries do Pakistani software firms serve?',             a:'Pakistani development firms serve healthcare, financial services, retail, education, logistics, real estate, and e-commerce sectors. Many specialise in SaaS products, B2B platforms, and industry-specific enterprise systems for global markets.' },
   { q:'Do software houses in Pakistan follow international quality standards?', a:'Leading Pakistani firms adhere to ISO 27001, CMMI, and Agile/Scrum frameworks. Many are AWS-certified partners and maintain documented SDLC processes, code review standards, and automated QA pipelines that meet or exceed Western industry benchmarks.' },
 ];
@@ -442,7 +442,7 @@ const BestSoftwareHouse = () => {
 
             <aside className="bsh-hero__panel" aria-label="Key market statistics">
               <div className="bsh-hero__panel-header">
-                Pakistan IT Snapshot — 2026
+                Pakistan IT Snapshot - 2026
               </div>
               {[
                 { val:'$3B+',   label:'Annual IT Exports',        sub:'Source: PSEB 2025' },
@@ -695,7 +695,7 @@ const BestSoftwareHouse = () => {
             <div className="bsh-section-head">
               <span className="bsh-eyebrow">Market Insights 2026</span>
               <h2 id="destination-heading" className="bsh-section-title">
-                Pakistan — A Premier Global Tech Destination
+                Pakistan,  A Premier Global Tech Destination
               </h2>
               <p className="bsh-section-lead">
                 International companies are increasingly turning to Pakistan for engineering talent.
@@ -710,7 +710,7 @@ const BestSoftwareHouse = () => {
               <div className="bsh-destination__visual">
                 <img
                   src="https://i.pinimg.com/1200x/bb/7f/f8/bb7ff8c6f6d8c42f8ecb4ca4304a7e92.jpg"
-                  alt="Pakistan Software Outsourcing Hub 2026 — best software house in Pakistan"
+                  alt="Pakistan Software Outsourcing Hub 2026 , best software house in Pakistan"
                   loading="lazy"
                   width="580"
                   height="420"
@@ -817,7 +817,7 @@ const BestSoftwareHouse = () => {
               <p className="bsh-cta__desc">
                 At <strong>QllmSoft</strong>, we engineer digital products built to last.
                 Our full-stack team combines global technical insight with precise, pixel-perfect
-                execution — turning your vision into software that users genuinely rely on.
+                execution  turning your vision into software that users genuinely rely on.
               </p>
               <div className="bsh-cta__features">
                 {['Pixel-Perfect Design','Scalable Architecture','Global Standards','NDA on Day One'].map(f => (

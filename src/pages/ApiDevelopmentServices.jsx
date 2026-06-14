@@ -29,6 +29,7 @@ import FounderNote from "../components/FounderNote";
 import apiimg from "../assets/API-DEVELOPMENT-SERVICES.webp";
 import Documentation from "../assets/Documentaion.webp";
 import ApiArchitecture from "../assets/API-CASESTUDY.webp";
+import phase3 from '../assets/phase3.webp';
 
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = "https://qllmsoft.com/api-development-services";
@@ -67,9 +68,9 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "API Development",
-  name: "API Development Services in Pakistan",
+  name: "API Development Services ",
   description:
-    "QllmSoft provides expert custom API development services in Pakistan — REST, GraphQL, SOAP APIs, third-party integrations, payment gateway APIs, and legacy API modernization for startups, SMBs, SaaS, and enterprises.",
+    "QllmSoft provides expert custom API development services   REST, GraphQL, SOAP APIs, third-party integrations, payment gateway APIs, and legacy API modernization for startups, SMBs, SaaS, and enterprises.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -154,7 +155,7 @@ const schemaBreadcrumb = {
 const FAQ_DATA = [
   {
     q: "What are API development services?",
-    a: "API development services involve creating and integrating Application Programming Interfaces that allow software systems to communicate. QllmSoft builds REST, GraphQL, and SOAP APIs for web, mobile, and cloud platforms — enabling seamless data exchange and business automation.",
+    a: "API development services involve creating and integrating Application Programming Interfaces that allow software systems to communicate. QllmSoft builds REST, GraphQL, and SOAP APIs for web, mobile, and cloud platforms  enabling seamless data exchange and business automation.",
   },
   {
     q: "How does QllmSoft determine API project pricing?",
@@ -166,7 +167,7 @@ const FAQ_DATA = [
   },
   {
     q: "Do you provide post launch API support and maintenance?",
-    a: "Yes. We provide ongoing monitoring, security updates, and performance optimization after delivery. Every project includes a dedicated support period — ensuring your APIs remain reliable, secure, and scalable as your business grows.",
+    a: "Yes. We provide ongoing monitoring, security updates, and performance optimization after delivery. Every project includes a dedicated support period  ensuring your APIs remain reliable, secure, and scalable as your business grows.",
   },
   {
     q: "What architectural parameters dictate choosing a RESTful API over a GraphQL fabric?",
@@ -266,6 +267,8 @@ const ApiDevelopmentServices = () => {
 
   const [activeTab, setActiveTab] = useState(0);
 
+
+  /*casestudy*/
   const caseStudyData = [
     {
       title: "Phase 1: Secure & Fast Architecture",
@@ -313,6 +316,28 @@ const ApiDevelopmentServices = () => {
         },
       ],
     },
+    {
+  title: "Phase 3: Real Time Business Dashboard",
+  subtitle: "Integrating scalable REST APIs with dynamic data visualization.",
+  desc: "We connected our high performance Express.js backend with an intuitive frontend CRM dashboard. By executing optimized SQL queries, the system securely processes leads, tracking contact distribution metrics in real time.",
+  imgSrc: phase3, 
+  imgAlt: "CRM Dashboard and API Code",
+  featuresTitle: "Core Full-Stack Capabilities:",
+  features: [
+    {
+      bold: "Asynchronous Route Handlers:",
+      text: "The Express.js backend utilizes async/await pipelines to handle database operations smoothly without blocking the event loop."
+    },
+    {
+      bold: "Robust Error Handling:",
+      text: "Built in try/catch middleware safeguards endpoints, logging internal errors securely while sending uniform JSON status alerts to the client."
+    },
+    {
+      bold: "Dynamic KPI Tracking:",
+      text: "The React based CRM UI renders interactive bar charts, activity feeds, and a breakdown of contact statuses instantly."
+    }
+  ]
+}
   ];
 
   return (
@@ -465,7 +490,7 @@ const ApiDevelopmentServices = () => {
                 {
                   label: "GraphQL",
                   icon: "bi-diagram-2",
-                  desc: "Query exactly what you need — nothing more",
+                  desc: "Query exactly what you need nothing more",
                 },
                 {
                   label: "SOAP / XML",
@@ -608,7 +633,7 @@ const ApiDevelopmentServices = () => {
               >
                 <img
                   src={apiimg}
-                  alt="Custom API development services by QllmSoft — REST, GraphQL and integration solutions"
+                  alt="Custom API development services by QllmSoft REST, GraphQL and integration solutions"
                   loading="lazy"
                   width="560"
                   height="400"
@@ -630,7 +655,7 @@ const ApiDevelopmentServices = () => {
               <figure className="api-explainer__image">
                 <img
                   src="https://qllmsoft.com/images/api-services.webp"
-                  alt="API development services overview — how APIs connect web, mobile and cloud systems"
+                  alt="API development services overview  how APIs connect web, mobile and cloud systems"
                   loading="lazy"
                   width="500"
                   height="360"
@@ -811,19 +836,19 @@ const ApiDevelopmentServices = () => {
                 {
                   icon: "bi-link-45deg",
                   title: "Improve System Connectivity",
-                  desc: "APIs seamlessly link your CRM, ERP, cloud apps, payment gateways, and logistics systems — creating a unified data flow that eliminates manual bottlenecks and boosts operational speed.",
+                  desc: "APIs seamlessly link your CRM, ERP, cloud apps, payment gateways, and logistics systems  creating a unified data flow that eliminates manual bottlenecks and boosts operational speed.",
                   stat: "- Overhead",
                 },
                 {
                   icon: "bi-graph-up-arrow",
                   title: "Increase Application Scalability",
-                  desc: "Modern APIs are lightweight, cloud-native, and built to handle growing user demand — adapting to your business growth without requiring expensive infrastructure overhauls.",
+                  desc: "Modern APIs are lightweight, cloud-native, and built to handle growing user demand adapting to your business growth without requiring expensive infrastructure overhauls.",
                   stat: "+ Scalability",
                 },
                 {
                   icon: "bi-cpu",
                   title: "Drive Digital Transformation",
-                  desc: "An API-first approach lets you integrate new tools, launch features faster, and connect with emerging technologies — keeping you ahead of competitors  rapidly evolving digital market.",
+                  desc: "An API-first approach lets you integrate new tools, launch features faster, and connect with emerging technologies  keeping you ahead of competitors  rapidly evolving digital market.",
                   stat: "+ Velocity",
                 },
               ].map((v, i) => (
@@ -1451,7 +1476,7 @@ const ApiDevelopmentServices = () => {
             <h2 id="cta-heading">Ready to Hire Expert API Developers?</h2>
             <p>
               Whether you need a RESTful API from scratch, a complex third-party
-              integration, or a legacy system modernization — QllmSoft delivers
+              integration, or a legacy system modernization  QllmSoft delivers
               within budget, on time, and built to last.
             </p>
             <div className="api-cta__buttons">
