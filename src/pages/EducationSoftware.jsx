@@ -15,6 +15,7 @@ import { useInView } from "react-intersection-observer";
 import "./IndustryPage.css";
 import "animate.css";
 import TestimonialSection from "../components/TestimonialSection";
+import FounderNote from "../components/FounderNote";
 
 const PAGE_URL = "https://qllmsoft.com/education-software-development-pakistan";
 const OG_IMAGE =
@@ -1057,6 +1058,13 @@ const EducationSoftware = () => {
             </a>
           </div>
         </section>
+
+
+               <FounderNote
+  title="Engineering Resilient Architecture for Global EdTech Innovation"
+  message="At QllmSoft, we believe true educational transformation requires more than just skin deep digital features it demands embedding robust enterprise grade engineering into the very core of your institution’s digital infrastructure. Our mission is to ensure your campus platforms do not just log records, but actively optimize administrative workflows and student learning outcomes. From our high performance technical delivery hub to enterprise institutions and scaling startups worldwide, we build high concurrency campus hubs, low latency virtual learning networks, and secure predictive analytics frameworks designed for global scale. We aren't just shipping code; we are engineering the resilient, intelligent foundations that empower modern education to adapt, scale, and thrive without limits."
+/>
+
 
         {/* FAQ */}
         <section
