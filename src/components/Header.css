@@ -300,16 +300,15 @@
    MOBILE OVERLAY
    ============================================= */
 .mobile-overlay {
-  display: block !important;
   position: fixed;
   inset: 0;
   background: rgba(13, 27, 42, 0.45);
   backdrop-filter: blur(3px);
-  z-index: 99999;
+  z-index: 9999;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease , visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .mobile-overlay.overlay-open {
@@ -348,7 +347,7 @@
   padding: 18px 20px;
   border-bottom: 1px solid #f0f2f5;
   position: relative;
-  z-index: 5;
+  z-index: 10001 !important;
 }
 
 .drawer-logo {
@@ -370,7 +369,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   position: relative;
-  z-index: 100005 !important;
+  z-index: 100002 !important;
   pointer-events: auto !important;
   touch-action: manipulation;
 }
@@ -383,12 +382,6 @@
 }
 
 
-@media (max-width: 1024px) {
-  .nav-menu, .cta-btn { display: none !important; }
-  .hamburger { display: inline-flex !important; }
-  .mobile-overlay { display: block !important; }
-  .mobile-drawer { display: flex !important; }
-}
 
 
 /* Drawer Nav */
@@ -502,6 +495,7 @@
   .mobile-drawer {
     display: flex;
   }
+  
 }
 
 @media (max-width: 640px) {

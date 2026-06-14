@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
+import ReactMarkdown from "react-markdown"; 
 import remarkGfm from "remark-gfm";
 import {
 	X,
@@ -28,7 +28,7 @@ const ChatBot = () => {
 	const [lastSuggestions, setLastSuggestions] = useState([]); // Track suggestions for the last bot message
 	const messagesEndRef = useRef(null);
 
-	// Load chat history from sessionStorage
+	// Load chat history from sessionStorage   import ReactMarkdown from "react-markdown"; import remarkGfm from "remark-gfm";
 	useEffect(() => {
 		const savedMessages = sessionStorage.getItem("chatbotMessages");
 		if (savedMessages) {
