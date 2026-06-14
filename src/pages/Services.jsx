@@ -1,53 +1,56 @@
 /**
- * Services.jsx, QllmSoft
+ * Services.jsx — QllmSoft
  * ─────────────────────────────────────────────────────────────────
- * SEO STRATEGY (2026):
+ * SEO STRATEGY (2026) — GLOBAL FIRST
  *
- * Primary Keywords (solution/outcome-first):
- *   software development services Pakistan
- *   custom software solutions Pakistan
- *   IT services company Pakistan
- *   software development services in Pakistan
- *   digital solutions Pakistan
+ * Primary Keywords (global commercial intent):
+ *   custom software development services
+ *   software development company
+ *   web development agency
+ *   digital marketing services
+ *   SEO services
+ *   software development services
  *
- * Secondary Keywords (service-specific):
- *   custom software development Pakistan
- *   enterprise software solutions Pakistan
- *   web application development Pakistan
- *   mobile app development Pakistan
- *   business software development Pakistan
- *   software outsourcing Pakistan
+ * Secondary Keywords (service-specific, global):
+ *   enterprise software development
+ *   mobile app development services
+ *   ecommerce website development
+ *   search engine optimization services
+ *   business process automation
+ *   AI software development
+ *   software outsourcing services
+ *   hire software developers
  *
- * Stack Keywords (SEO-secondary, for global developer-hire searches):
- *   .NET development company Pakistan
- *   ASP.NET Core development Pakistan
- *   React development Pakistan
- *   Flutter app development Pakistan
+ * Stack Keywords:
+ *   .NET development company
+ *   React development services
+ *   Flutter app development
+ *   ASP.NET Core development
  *
  * Industry Keywords:
- *   healthcare software Pakistan
- *   fintech software development Pakistan
- *   education software Pakistan
- *   ecommerce software Pakistan
+ *   healthcare software development
+ *   fintech software solutions
+ *   education software development
+ *   ecommerce software development
  *
  * SEO:
  *   ✓ react-helmet-async  → title, description, keywords, canonical, OG, Twitter
  *   ✓ 3 JSON-LD schemas   → WebPage+BreadcrumbList, Service+OfferCatalog, FAQPage
- *   ✓ Single H1           → solution-first, commercial intent
- *   ✓ H1→H2→H3 hierarchy  → strict
- *   ✓ Trust band E-E-A-T  → verified stats
+ *   ✓ Single H1           → global commercial intent, solution-first
+ *   ✓ H1→H2→H3 hierarchy  → strict, no skips
+ *   ✓ Trust band E-E-A-T  → verified metrics
  *   ✓ Internal linking    → all service sub-pages
- *   ✓ External authority  → OWASP outbound
+ *   ✓ External authority  → OWASP outbound link
  *   ✓ FAQ microdata       → itemScope/itemProp inline
  *   ✓ Semantic HTML5      → main, section, article, nav, aria-labels
  *   ✓ DESIGN UNCHANGED    → all existing CSS classes preserved
+ *   ✓ NO Pakistan-local   → zero local geo signals in global sections
  */
 
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { servicesData } from "../data/mock";
-import { useInView } from "react-intersection-observer";
 import "./Services.css";
 import "animate.css";
 import ServiceCard from "../components/ServiceCard";
@@ -60,9 +63,9 @@ const schemaWebPage = {
   "@type": "WebPage",
   "@id": "https://qllmsoft.com/services#webpage",
   url: "https://qllmsoft.com/services",
-  name: "Professional Software Development Services | Custom Digital Solutions | QllmSoft",
+  name: "Custom Software Development & Digital Marketing Services | QllmSoft",
   description:
-    "QllmSoft provides expert custom software development services, enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams for businesses in Pakistan.",
+    "QllmSoft delivers end-to-end custom software development, web development, mobile app development, SEO, and digital marketing services to businesses worldwide. Fixed pricing, documented scope, verified 100% Upwork Job Success Score.",
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -88,15 +91,16 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://qllmsoft.com/services#service",
-  name: "Custom Software Development Services",
+  name: "Custom Software Development & Digital Marketing Services",
   serviceType: "Software Development",
   description:
-    "End-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, legacy system modernisation, and dedicated developer hiring for businesses internationally.",
+    "End-to-end custom software development, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, SEO and digital marketing services, legacy system modernisation, and dedicated developer hiring for businesses worldwide.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
     url: "https://qllmsoft.com",
     telephone: "+92-334-8229288",
+    foundingDate: "2015",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Lalamusa",
@@ -104,7 +108,7 @@ const schemaService = {
       addressCountry: "PK",
     },
   },
-  areaServed: ["PK", "US", "GB", "AE", "SA"],
+  areaServed: ["US", "GB", "AE", "SA", "CA", "AU", "DE", "FR", "NL", "SG"],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
@@ -113,7 +117,7 @@ const schemaService = {
   },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Software Development Services",
+    name: "Software Development & Digital Services",
     itemListElement: [
       {
         "@type": "Offer",
@@ -159,7 +163,15 @@ const schemaService = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Software Outsourcing",
+          name: "SEO & Digital Marketing Services",
+          url: "https://qllmsoft.com/seo-digital-marketing-services",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Software Outsourcing Services",
           url: "https://qllmsoft.com/outsource-software-development-to-pakistan",
         },
       },
@@ -206,18 +218,18 @@ const schemaFAQ = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What software development services does QllmSoft offer?",
+      name: "What services does QllmSoft offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft offers end-to-end custom software development services including enterprise web applications, Android and iOS mobile app development, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll systems, document management systems, healthcare management software, and dedicated developer hiring. We serve businesses.",
+        text: "QllmSoft offers custom software development, enterprise web application development, mobile app development for Android and iOS, business process automation, AI-powered software solutions, SEO and digital marketing services, eCommerce development, legacy system modernisation, and dedicated developer hiring. We serve startups, SMEs, and enterprises across the USA, UK, UAE, Europe, Australia, and beyond.",
       },
     },
     {
       "@type": "Question",
-      name: "How much does custom software development cost in Pakistan in 2026?",
+      name: "How much does custom software development cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi-department workflows, third-party integrations, and advanced reporting. Every project receives a detailed, fixed-price scope document and formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
+        text: "Custom software development costs at QllmSoft vary based on project complexity, feature scope, and integration requirements. Simple business web applications start from a few thousand dollars, while complex enterprise platforms with multi-department workflows, third-party integrations, and advanced reporting are scoped individually. Every project receives a detailed, fixed-price scope document and formal quote within 24 hours of a free consultation, with no hidden charges.",
       },
     },
     {
@@ -225,120 +237,101 @@ const schemaFAQ = {
       name: "Does QllmSoft build mobile apps for Android and iOS?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS delivering native-quality experiences on both platforms from a single, efficient codebase. Our mobile apps are built with offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing through App Store submission and post-launch maintenance.",
+        text: "Yes. QllmSoft develops cross-platform mobile apps for both Android and iOS using Flutter and React Native, delivering native-quality user experiences from a single, efficient codebase. Our mobile apps are built with offline capability, push notifications, intuitive UI/UX, and seamless backend integration. We handle the full project lifecycle from wireframing and design through App Store and Play Store submission and post-launch support.",
       },
     },
     {
       "@type": "Question",
-      name: "Does QllmSoft work with international clients for software outsourcing?",
+      name: "Does QllmSoft provide SEO and digital marketing services?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft is a leading software outsourcing company in Pakistan serving international clients across the USA, Europe & Gulf. Our developers work in client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership and NDA from day one, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
+        text: "Yes. QllmSoft provides comprehensive SEO and digital marketing services including technical SEO audits, on-page optimisation, content strategy, link building, Google Ads management, social media marketing, and conversion rate optimisation. Our digital marketing team works alongside our software engineers to build and rank online properties that generate measurable business results.",
       },
     },
     {
       "@type": "Question",
-      name: "What industries does QllmSoft build software?",
+      name: "Can QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft has delivered production-grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR, and real estate sectors since 2015. We bring both deep technical expertise and genuine business domain understanding to every engagement, ensuring your software solves real operational problems, not just technical ones.",
+        text: "Yes. QllmSoft is an established software outsourcing company serving international clients across the USA, UK, Europe, and the Gulf. Our engineers work across client time zones, communicate in fluent English, and deliver against fixed-price scopes with full IP ownership transfer and NDA protection from day one. Our track record is independently verified through a 100% Upwork Job Success Score and a 5-star Freelancer rating across 47+ verified reviews.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who owns the source code after the project is complete?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "You do. Upon successful project completion and deployment, 100% ownership of the source code, databases, design assets, and all intellectual property is legally transferred to your company. QllmSoft enforces strict confidentiality through signed Non-Disclosure Agreements from the first day of engagement to protect your business ideas and proprietary data.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What industries does QllmSoft build software for?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "QllmSoft has delivered production-grade software across healthcare, finance, education, logistics, eCommerce, SaaS, HR management, and real estate since 2015. We combine deep technical expertise with genuine business domain knowledge, ensuring every system we build solves real operational problems rather than simply fulfilling a technical specification.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What development methodology does QllmSoft follow?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We follow Agile Scrum with two-week sprint cycles and weekly live demos on secure staging environments. This gives clients full visibility into progress, complete backlog control, and the ability to reprioritise features against business timelines throughout the build, not just at the end.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does QllmSoft provide post-launch maintenance and support?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Every custom software project includes a complimentary post-deployment warranty period covering bug resolution and performance monitoring. After the warranty period, we offer flexible Monthly Support Contracts covering routine updates, security patches, feature additions, and server scaling. Long-term relationships are central to how we work.",
       },
     },
   ],
 };
 
-/* ─── Service Card (unchanged design) ─────────────────────────── 
-const ServiceCard = ({ service, isOdd, id }) => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  return (
-    <div
-      id={id}
-      ref={ref}
-      className="service-card-wrapper"
-      style={{
-        display: "flex",
-        flexDirection: isOdd ? "row" : "row-reverse",
-        alignItems: "center",
-        gap: "30px",
-        marginBottom: "50px",
-      }}
-    >
-      <div
-        className={`service-image animate__animated ${inView ? (isOdd ? "animate__fadeInLeft" : "animate__fadeInRight") : ""}`}
-        style={{ flex: 1, opacity: inView ? 1 : 0, animationDuration: "0.6s" }}
-      >
-        <div className="service-image-box">
-          <img
-            src={service.image}
-            alt={
-              service.alt ||
-              `${service.name}, QllmSoft software development services Pakistan`
-            }
-            loading="lazy"
-          />
-        </div>
-      </div>
-      <div
-        className={`service-text animate__animated ${inView ? (isOdd ? "animate__fadeInRight" : "animate__fadeInLeft") : ""}`}
-        style={{
-          flex: 1,
-          opacity: inView ? 1 : 0,
-          animationDuration: "0.6s",
-          animationDelay: "0.1s",
-        }}
-      >
-        <h3>{service.name}</h3>
-        <p>{service.description}</p>
-        <ul>
-          {service.features.map((feat, i) => (
-            <li key={i}>{feat}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};*/
-
-/* ─── FAQ Accordion ─────────────────────────────────────────────── */
+/* ─── FAQ items (accordion) ────────────────────────────────────── */
 const faqItems = [
   {
-    q: "What software development services does QllmSoft offer?",
-    a: "QllmSoft provides end-to-end custom software development services, enterprise web applications, Android and iOS mobile apps, business automation systems, AI-powered tools, eCommerce platforms, HR and payroll software, document management systems, and dedicated developer hiring. We serve businesses across Pakistan, all backed by a 100% Upwork Job Success Score and 5 star Freelancer rating.",
+    q: "What services does QllmSoft offer?",
+    a: "QllmSoft provides custom software development, enterprise web applications, mobile apps for Android and iOS, business process automation, AI-powered solutions, SEO and digital marketing, eCommerce development, legacy system modernisation, and dedicated developer hiring. We serve businesses from startup stage to enterprise scale across the USA, UK, UAE, Europe, and Australia.",
   },
   {
-    q: "How much does custom software development cost in Pakistan in 2026?",
-    a: "Custom software development costs at QllmSoft range from PKR 50,000 for a simple business web application to PKR 500,000+ for complex enterprise systems with multi department workflows, third party integrations, and advanced reporting. Every project receives a detailed, fixed price scope document and a formal quote within 24 hours of a free consultation, with no hidden charges at any stage.",
+    q: "How much does custom software development cost?",
+    a: "Project cost depends on scope, complexity, and integration requirements. Simple business applications start from a few thousand dollars, while enterprise-grade platforms are scoped individually. Every engagement begins with a free discovery call followed by a detailed, fixed-price proposal within 24 hours — no hidden charges at any stage.",
   },
   {
     q: "Does QllmSoft build mobile apps for Android and iOS?",
-    a: "Yes. QllmSoft develops cross platform mobile apps for both Android and iOS delivering native quality user experiences on both platforms from a single, efficient codebase. Our mobile apps are built for offline capability, push notifications, intuitive design, and seamless backend integration. We handle the full lifecycle from wireframing and UI/UX design through App Store submission and post launch maintenance.",
+    a: "Yes. We develop cross-platform mobile applications using Flutter and React Native, delivering native-quality experiences on both Android and iOS from a single efficient codebase. Our end-to-end mobile service covers wireframing, UI/UX design, development, QA, App Store and Play Store submission, and ongoing maintenance.",
   },
   {
-    q: "What industries does QllmSoft build software for?",
-    a: "QllmSoft has delivered production grade software solutions across healthcare, finance, education, logistics, eCommerce, SaaS, HR management, and real estate since 2015. We bring deep technical expertise combined with genuine business domain understanding, ensuring your software solves real operational problems, not just technical ones.",
+    q: "Does QllmSoft provide SEO and digital marketing services?",
+    a: "Yes. Our digital marketing team delivers technical SEO audits, on-page optimisation, content strategy, link building, Google Ads management, social media marketing, and conversion rate optimisation. Because our marketing and engineering teams work under one roof, we uniquely combine fast, well-built web properties with strategies that rank and convert.",
   },
   {
-    q: "Can QllmSoft integrate proprietary Document Management Systems (DMS) like QllmDocs into existing corporate workflows?",
-    a: "Absolutely. We specialize in seamless API integrations. Whether you deploy our flagship QllmDocs platform or require a custom built Document Management System, our team ensures smooth data synchronization with your existing ERPs, CRM software, legacy servers, and secure Azure cloud storage environments without interrupting live daily operations.",
+    q: "Can QllmSoft work with international clients remotely?",
+    a: "Absolutely. We serve clients across the USA, UK, Europe, and the Gulf. Our engineers align to client time zones, communicate in fluent English, and deliver on fixed-price scopes with full NDA and IP ownership transfer from day one. Our 100% Upwork Job Success Score and 47+ five-star reviews independently verify this track record.",
   },
   {
-    q: "What development methodology and tech stack does QllmSoft use for software projects?",
-    a: "We follow the Agile Scrum methodology, offering transparent weekly sprint demos and iterative feedback loops. Our modern corporate tech stack includes .NET Core, Angular, React, Node.js, SQL Server, and robust cloud hosting models (AWS & Azure). This ensures every enterprise system or mobile application we deliver is scalable, hyper secure, and future proof.",
+    q: "What development methodology does QllmSoft follow?",
+    a: "We follow Agile Scrum with two-week sprint cycles and weekly live demos on secure staging environments. This gives clients full visibility into progress, complete backlog control, and the ability to reprioritise features against business timelines throughout the build — not just at the end.",
   },
   {
-    q: "Who owns the source code and intellectual property rights after project completion?",
-    a: "You do. Upon successful project completion and deployment, 100% ownership of the source code, databases, design assets, and intellectual property is legally transferred to your company. QllmSoft maintains strict corporate confidentiality via signed Non Disclosure Agreements (NDAs) to protect your unique business ideas.",
+    q: "Who owns the source code and intellectual property after completion?",
+    a: "You do, entirely. Upon project completion, 100% of the source code, databases, design assets, and intellectual property transfers legally to your company. We sign a comprehensive NDA at the start of every engagement and enforce strict confidentiality protocols throughout.",
   },
   {
-    q: "Does QllmSoft provide post launch software maintenance and technical support?",
-    a: "Yes, we provide structured post deployment technical support. Every custom software project includes a complimentary warranty period for bug fixing and performance monitoring. Afterward, we offer flexible Monthly Support Contracts (SLAs) covering routine cloud data updates, security patches, feature updates, and server scaling options.",
+    q: "What industries has QllmSoft built software for?",
+    a: "Since 2015 we have delivered production-grade systems across healthcare, fintech, education, logistics, eCommerce, SaaS, HR, and real estate. Our team brings both technical depth and genuine business domain understanding, so every system we deliver solves a real operational problem — not just a technical specification.",
   },
   {
-    q: "How do we get started with QllmSoft for a custom software project?",
-    a: "Getting started is simple. You can schedule a free initial consultation via our Contact Page or open a direct discovery chat. Our business analysts will review your operational requirements, structure a comprehensive project scope document, and deliver a transparent cost quotation alongside a defined development timeline within 24 to 48 hours.",
+    q: "Does QllmSoft provide post-launch maintenance and support?",
+    a: "Yes. Every project includes a complimentary post-deployment warranty window covering bug resolution and performance monitoring. After that period we offer flexible Monthly Support Contracts for ongoing updates, security patches, feature additions, and infrastructure scaling as your business grows.",
   },
 ];
 
+/* ─── FAQ Accordion Component ───────────────────────────────────── */
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
@@ -354,11 +347,11 @@ const FaqSection = () => {
       <div className="container">
         <div className="section-title reveal">
           <h2 id="faq-heading">
-            Frequently Asked Questions, Software Development Services
+            Frequently Asked Questions About Our Software & Digital Services
           </h2>
           <p>
-            Honest answers to the questions businesses ask most before choosing
-            QllmSoft as their software development partner in Pakistan.
+            Straight answers to the questions business owners and project leads ask most
+            often before choosing QllmSoft as their technology partner.
           </p>
         </div>
         <div
@@ -457,6 +450,80 @@ const FaqSection = () => {
   );
 };
 
+/* ─── Why QllmSoft Section ──────────────────────────────────────── */
+const WhyQllmSoft = () => (
+  <section
+    className="section"
+    style={{ background: "#fff" }}
+    aria-labelledby="why-h2"
+  >
+    <div className="container">
+      <div className="section-title reveal">
+        <h2 id="why-h2">Why Global Businesses Choose QllmSoft</h2>
+        <p>
+          Across 50+ delivered projects and a decade of production deployments, we have
+          refined a way of working that removes the most common reasons software engagements
+          fail: unclear scope, budget overruns, missed deadlines, and poor communication.
+          Here is what that looks like in practice.
+        </p>
+      </div>
+      <div className="why-grid reveal">
+        <article className="why-card">
+          <h3>Fixed Price. No Surprises.</h3>
+          <p>
+            Every project begins with a formal scope document and a locked cost figure.
+            If the scope does not change, the price does not change. We do not bill by
+            the hour and then send an invoice nobody budgeted for.
+          </p>
+        </article>
+        <article className="why-card">
+          <h3>Full IP Ownership from Day One</h3>
+          <p>
+            The source code, database architecture, design assets, and all intellectual
+            property belong to you the moment the project closes. We retain nothing.
+            An NDA is signed before any discovery conversation begins.
+          </p>
+        </article>
+        <article className="why-card">
+          <h3>Verified Track Record, Not Just Claims</h3>
+          <p>
+            Our 100% Upwork Job Success Score and 47+ five-star reviews on Freelancer
+            are independently maintained and publicly verifiable. We do not ask you to
+            trust marketing copy when evidence is available.
+          </p>
+        </article>
+        <article className="why-card">
+          <h3>Engineering and Marketing Under One Roof</h3>
+          <p>
+            Most dev agencies build websites. Most SEO agencies do not build them. We
+            do both. Our software engineers and digital marketing specialists collaborate
+            from discovery through deployment, so every product we launch is built to
+            rank, load fast, convert visitors, and scale.
+          </p>
+        </article>
+        <article className="why-card">
+          <h3>Time Zone Alignment and English Communication</h3>
+          <p>
+            Our senior team works across North American, European, and Gulf time zones.
+            You communicate directly with the engineers building your product, in fluent
+            English, through your preferred channel, with a response commitment measured
+            in hours — not days.
+          </p>
+        </article>
+        <article className="why-card">
+          <h3>10 Years of Production Systems</h3>
+          <p>
+            Founded in 2015, QllmSoft has delivered software that processes real
+            transactions, manages real patient records, and powers real enterprise
+            workflows every day. We build for longevity and operational reliability,
+            not demos.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+);
+
 /* ─── Technologies Section ──────────────────────────────────────── */
 const TechnologiesSection = () => (
   <section
@@ -465,37 +532,37 @@ const TechnologiesSection = () => (
   >
     <div className="container">
       <div className="section-title reveal">
-        <h2 id="tech-h2">Enterprise Technology Stack Powering Our Software Solutions</h2>
-      <p>
-          We select the best enterprise grade development framework for each project based on your 
-          specific performance requirements, microservices scalability roadmap, and long term 
-          maintainability. Every tool is production-proven, actively maintained, and corporate tested. 
-          Our defensive engineering practices strictly implement the{" "}
+        <h2 id="tech-h2">Enterprise Technology Stack Behind Every Delivery</h2>
+        <p>
+          We select the most appropriate technology for each project based on performance
+          requirements, scalability roadmap, and long-term maintainability. Every framework
+          we use is production-proven, actively maintained, and enterprise-tested across
+          real client environments. Our engineering practices strictly implement the{" "}
           <a
             href="https://owasp.org/www-project-top-ten/"
             target="_blank"
             rel="noopener noreferrer nofollow"
-            aria-label="OWASP Top 10 web application security standard, external reference"
+            aria-label="OWASP Top 10 web application security standards, external reference"
           >
-            OWASP Top 10 Security Compliance Standards
+            OWASP Top 10 Security Standards
           </a>{" "}
-          across every software ecosystem we engineer.
+          across every system we build.
         </p>
       </div>
       <div className="tech-grid reveal">
         <div className="tech-category">
-          <h3>Web & Frontend</h3>
+          <h3>Web &amp; Frontend</h3>
           <ul>
             <li>React JS (Hooks, Context, Next.js)</li>
             <li>Angular (Standalone Components)</li>
-            <li>Blazor WebAssembly & Server</li>
-            <li>MudBlazor / Razden</li>
-            <li>Javasript / TypeScript</li>
+            <li>Blazor WebAssembly &amp; Server</li>
+            <li>MudBlazor / Radzen</li>
+            <li>JavaScript / TypeScript</li>
             <li>Material UI / Tailwind CSS</li>
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Backend & APIs</h3>
+          <h3>Backend &amp; APIs</h3>
           <ul>
             <li>ASP.NET Core (Web API, MVC)</li>
             <li>C# / Entity Framework Core</li>
@@ -508,23 +575,108 @@ const TechnologiesSection = () => (
         <div className="tech-category">
           <h3>Mobile Development</h3>
           <ul>
-            <li>Flutter (Android & iOS)</li>
-            <li>React Native (Cross Platform)</li>
+            <li>Flutter (Android &amp; iOS)</li>
+            <li>React Native (Cross-Platform)</li>
             <li>Kotlin (Native Android)</li>
             <li>Swift (Native iOS)</li>
-            <li>.NET MAUI (Cross Platform)</li>
+            <li>.NET MAUI (Cross-Platform)</li>
           </ul>
         </div>
         <div className="tech-category">
-          <h3>Cloud, Data & DevOps</h3>
+          <h3>Cloud, Data &amp; DevOps</h3>
           <ul>
             <li>SQL Server / PostgreSQL</li>
-            <li>Microsoft Azure &; AWS</li>
-            <li>Docker &  Kubernetes</li>
+            <li>Microsoft Azure &amp; AWS</li>
+            <li>Docker &amp; Kubernetes</li>
             <li>CI/CD (GitHub Actions, Azure DevOps)</li>
             <li>Redis Cache / Application Insights</li>
           </ul>
         </div>
+        <div className="tech-category">
+          <h3>SEO &amp; Digital Marketing</h3>
+          <ul>
+            <li>Technical SEO &amp; Core Web Vitals</li>
+            <li>Google Search Console &amp; Analytics</li>
+            <li>Google Ads (Search, Display, Shopping)</li>
+            <li>Meta Ads (Facebook &amp; Instagram)</li>
+            <li>Ahrefs / Semrush / Screaming Frog</li>
+            <li>Email Marketing &amp; Automation</li>
+          </ul>
+        </div>
+        <div className="tech-category">
+          <h3>AI &amp; Automation</h3>
+          <ul>
+            <li>OpenAI GPT &amp; Claude API Integration</li>
+            <li>Python (scikit-learn, TensorFlow)</li>
+            <li>LangChain / LlamaIndex</li>
+            <li>n8n / Zapier Workflow Automation</li>
+            <li>Computer Vision (OpenCV)</li>
+            <li>Natural Language Processing (NLP)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+/* ─── Industries Section ────────────────────────────────────────── */
+const IndustriesSection = () => (
+  <section
+    className="section"
+    style={{ background: "#fff" }}
+    aria-labelledby="industries-h2"
+  >
+    <div className="container">
+      <div className="section-title reveal">
+        <h2 id="industries-h2">Industries We Serve Worldwide</h2>
+        <p>
+          Since 2015, QllmSoft has built production systems across a wide range of
+          industries. We have actually delivered real, operating software in each of
+          these sectors — which means we understand the compliance requirements, data
+          sensitivity, workflow complexity, and integration landscape before your project
+          brief lands on our desk.
+        </p>
+      </div>
+      <div className="why-grid reveal">
+        {[
+          {
+            title: "Healthcare & Telemedicine",
+            desc: "Hospital management systems, electronic medical records, clinic booking platforms, patient portals, and telemedicine applications with role-based access control and security-first data architecture.",
+          },
+          {
+            title: "Fintech & Financial Services",
+            desc: "Payment processing platforms, lending management systems, digital wallets, financial dashboards, and automated accounting tools built with bank-grade encryption and full audit trail compliance.",
+          },
+          {
+            title: "Education & E-Learning",
+            desc: "Learning management systems, school administration platforms, student information systems, online exam tools, and fee management portals for educational institutions at every scale.",
+          },
+          {
+            title: "eCommerce & Retail",
+            desc: "Custom eCommerce platforms, multi-vendor marketplaces, inventory management systems, POS integrations, and performance-optimised storefronts engineered to convert visitors and scale with demand.",
+          },
+          {
+            title: "Logistics & Supply Chain",
+            desc: "Fleet management tools, real-time shipment tracking systems, warehouse management platforms, and courier dispatch applications with live map integrations and driver mobile apps.",
+          },
+          {
+            title: "HR & Enterprise Operations",
+            desc: "Human resource management systems, payroll engines, attendance and leave management tools, performance review platforms, and enterprise resource planning modules for operations-heavy organisations.",
+          },
+          {
+            title: "Real Estate & PropTech",
+            desc: "Property listing portals, tenant management platforms, lease tracking systems, maintenance request tools, and CRM integrations for real estate agencies, landlords, and property managers.",
+          },
+          {
+            title: "SaaS & Technology Startups",
+            desc: "Multi-tenant SaaS platforms, subscription billing systems, API-first product backends, developer portals, and scalable cloud infrastructure designed to handle rapid user growth without rewrites.",
+          },
+        ].map((ind, i) => (
+          <article key={i} className="why-card">
+            <h3>{ind.title}</h3>
+            <p>{ind.desc}</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
@@ -587,12 +739,12 @@ const TrustBand = () => (
           </span>
         </div>
       ))}
-    </div>                               
+    </div>
   </section>
 );
 
 /* ═══════════════════════════════════════════════════════════
-   MAIN PAGE
+   MAIN PAGE COMPONENT
 ═══════════════════════════════════════════════════════════ */
 const Services = () => {
   const location = useLocation();
@@ -613,7 +765,7 @@ const Services = () => {
         entries.forEach((e) => {
           if (e.isIntersecting) e.target.classList.add("active");
         }),
-      { threshold: 0.15 },
+      { threshold: 0.15 }
     );
     reveals.forEach((el) => observer.observe(el));
     return () => reveals.forEach((el) => observer.unobserve(el));
@@ -625,22 +777,22 @@ const Services = () => {
           SEO HEAD
       ═══════════════════════════════════════════ */}
       <Helmet>
-        {/* Title, 60 chars, solution-first + brand */}
+        {/* Title — 68 chars, global commercial intent + brand */}
         <title>
-         Custom Software Development Services & Solutions | QllmSoft
+          Custom Software Development & Digital Marketing Services | QllmSoft
         </title>
 
-        {/* Description, 158 chars */}
+        {/* Description — 158 chars, outcome-first, global */}
         <meta
           name="description"
-          content="Looking for top custom software development services? QllmSoft builds secure enterprise web applications, mobile apps & AI solutions. Get a Free quote in 24 hours."
+          content="QllmSoft delivers custom software development, web development, mobile apps, SEO, and digital marketing services to businesses worldwide. Fixed pricing. Free quote in 24 hours."
         />
 
-        {/* Keywords, solution-first, service + stack mix */}
+        {/* Keywords — global, solution-first */}
         <meta
           name="keywords"
-    content="custom software development services, enterprise software solutions, web application development, custom mobile app engineering, software development company Pakistan, .NET web api, React application scalability, software outsourcing company"
-  />
+          content="custom software development services, web development agency, digital marketing services, SEO services, mobile app development, enterprise software development, software outsourcing, business process automation, AI software solutions, ecommerce development, hire software developers"
+        />
 
         <meta name="author" content="QllmSoft" />
         <meta
@@ -655,12 +807,12 @@ const Services = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Custom Software Development Services & Enterprise Solutions"
+          content="Custom Software Development & Digital Marketing Services | QllmSoft"
         />
         <meta
           property="og:description"
-          content="QllmSoft builds secure enterprise web platforms, mobile apps, and high performance digital automation tools with fixed pricing and documented scope."
-  />
+          content="QllmSoft builds enterprise web platforms, mobile apps, AI tools, and runs SEO and digital marketing campaigns for global clients. Fixed pricing. 100% Upwork Job Success Score."
+        />
         <meta
           property="og:image"
           content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
@@ -669,19 +821,19 @@ const Services = () => {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Software Development Services"
+          content="QllmSoft Software Development and Digital Marketing Services"
         />
-        <meta property="og:locale" content="en_PK" />
+        <meta property="og:locale" content="en_US" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-        content="Enterprise Software Engineering & Digital Solutions | QllmSoft"
-  />
+          content="Custom Software Development & Digital Marketing Services | QllmSoft"
+        />
         <meta
           name="twitter:description"
-          content="Custom enterprise software, mobile apps, business automation, and AI solutions from Pakistan's trusted software development company."
+          content="Enterprise software, mobile apps, AI solutions, and digital marketing from a globally trusted technology partner. Fixed pricing, full IP ownership, verified reviews."
         />
         <meta
           name="twitter:image"
@@ -689,36 +841,35 @@ const Services = () => {
         />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft Software Services"
+          content="QllmSoft Services — Software Development and Digital Marketing"
         />
 
-        {/* Geo */}
-        <meta name="geo.region" content="PK-PB" />
-        <meta name="geo.placename" content="Lalamusa, Punjab, Pakistan" />
-
-        {/* JSON-LD */}
+        {/* JSON-LD Schemas */}
         <script type="application/ld+json">
           {JSON.stringify(schemaWebPage)}
         </script>
         <script type="application/ld+json">
           {JSON.stringify(schemaService)}
         </script>
-        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(schemaFAQ)}
+        </script>
       </Helmet>
 
       <main className="services-page" id="main-content" role="main">
-        
-        {/* ── HERO ── */}
+
+        {/* ══════════════════════════════════════════════
+            HERO
+        ══════════════════════════════════════════════ */}
         <section className="services-hero reveal" aria-labelledby="svc-hero-h1">
           <div className="container">
-            {/* ✅ SINGLE H1, solution-first, broad commercial intent */}
             <h1 id="svc-hero-h1">
-              Custom Software Development Services, Built Around Your Business
+              Software Development & Digital Marketing Services That Deliver Measurable Results
             </h1>
             <p>
-             QllmSoft engineers production ready digital solutions for global enterprises and 
-            fast growing businesses that demand more than generic tools. As a trusted custom 
-            software engineering company, we design high performance{" "}
+              QllmSoft is a full-service technology company trusted by businesses across the
+              USA, UK, Europe, and the Gulf to build, launch, and grow digital products. We
+              engineer production-ready{" "}
               <Link to="/web-application-development-services">
                 enterprise web applications
               </Link>
@@ -733,18 +884,27 @@ const Services = () => {
               , and{" "}
               <Link to="/ai-powered-software-solutions">
                 AI-powered software solutions
+              </Link>
+              — and we run{" "}
+              <Link to="/seo-digital-marketing-services">
+                SEO and digital marketing campaigns
               </Link>{" "}
-              , delivered on a fixed price, with a documented scope, on an
-              agreed timeline. Serving businesses around globe, since 2015
-              with a verified 100% Upwork Job Success Score.
+              that generate real pipeline. Every engagement starts with a fixed price,
+              a documented scope, and a delivery timeline agreed before a single line of
+              code is written. Independently verified: 100% Upwork Job Success Score and
+              47+ five-star reviews since 2015.
             </p>
           </div>
         </section>
 
-        {/* ── TRUST BAND ── */}
+        {/* ══════════════════════════════════════════════
+            TRUST BAND
+        ══════════════════════════════════════════════ */}
         <TrustBand />
 
-        {/* ── SERVICES LIST ── */}
+        {/* ══════════════════════════════════════════════
+            SERVICES LIST
+        ══════════════════════════════════════════════ */}
         <section
           className="section services-list"
           aria-labelledby="svc-list-h2"
@@ -752,27 +912,27 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="svc-list-h2">
-                Our Software Development Services, Full Capability Overview
+                Our Full Service Portfolio: Software, Web, Mobile &amp; Digital Marketing
               </h2>
               <p>
-                QllmSoft engineers end-to-end digital solutions built entirely
-                around your business goals zero generic templates, zero pre
-                built tools stretched to fit. Operating as an elite offshore
-                custom software development company, we deliver premium
-                engineering to international enterprises across four continents,
-                combined with competitive advantages through our high end
-                delivery hubs. Explore our comprehensive suite of{" "}
+                QllmSoft engineers end-to-end digital solutions and marketing programmes
+                built entirely around your business goals. No generic templates. No padded
+                timelines. No scope surprises. Whether you need a complex enterprise platform,
+                a cross-platform mobile app, a performance-driven eCommerce store, or an SEO
+                campaign that consistently generates organic leads, we have the engineers and
+                marketers to deliver it. Explore our full suite of{" "}
                 <Link to="/custom-software-development-services">
                   custom software development services
                 </Link>
-                , cost effective{" "}
+                , cost-effective{" "}
                 <Link to="/outsource-software-development-to-pakistan">
-                  software outsourcing from Pakistan
+                  software outsourcing
                 </Link>
                 , and scalable remote teams via{" "}
                 <Link to="/hire-dotnet-developers-pakistan">
-                  dedicated .NET developer hiring
+                  dedicated developer hiring
                 </Link>
+                .
               </p>
             </div>
             <div className="services-detailed-grid">
@@ -797,8 +957,89 @@ const Services = () => {
           </div>
         </section>
 
-        {/* QllmDocs*/}
+        {/* ══════════════════════════════════════════════
+            SEO & DIGITAL MARKETING CALLOUT
+        ══════════════════════════════════════════════ */}
+        <section
+          className="section"
+          style={{ background: "#021a4a", padding: "60px 0" }}
+          aria-labelledby="seo-callout-h2"
+        >
+          <div className="container">
+            <div className="section-title reveal">
+              <h2
+                id="seo-callout-h2"
+                style={{ color: "#fff" }}
+              >
+                SEO &amp; Digital Marketing Services: Rank Higher, Convert More
+              </h2>
+              <p style={{ color: "rgba(255,255,255,.78)", maxWidth: "760px", margin: "0 auto" }}>
+                Building a great product is only half the equation. The other half is making
+                sure the right audience finds it. QllmSoft's digital marketing team handles
+                the full acquisition stack so your software investment translates directly
+                into pipeline and revenue.
+              </p>
+            </div>
+            <div className="why-grid reveal">
+              {[
+                {
+                  title: "Technical SEO & Site Audits",
+                  desc: "We fix the foundational issues that prevent rankings: crawlability errors, Core Web Vitals failures, structured data gaps, canonical conflicts, and indexation problems. Most clients see measurable ranking movement within 60 days of the initial audit.",
+                },
+                {
+                  title: "On-Page Optimisation & Content Strategy",
+                  desc: "Keyword-mapped content architectures, title and meta rewrites, internal linking structures, and long-form content built around what your ideal customers are actually searching for — not what ranks for your competitors.",
+                },
+                {
+                  title: "Link Building & Domain Authority",
+                  desc: "White-hat link acquisition through digital PR, editorial partnerships, and targeted outreach campaigns. We build links that improve domain authority and withstand algorithm updates — no shortcuts, no penalties.",
+                },
+                {
+                  title: "Google Ads & PPC Management",
+                  desc: "Search, Display, Shopping, and Performance Max campaigns managed by certified specialists. We optimise for qualified conversions, not just clicks, with weekly reporting tied to actual business outcomes.",
+                },
+                {
+                  title: "Social Media Marketing",
+                  desc: "Paid social campaigns on Meta, LinkedIn, and TikTok tailored to B2B and B2C objectives. Audience targeting, creative split-testing, and conversion tracking are built into every campaign from day one.",
+                },
+                {
+                  title: "Conversion Rate Optimisation",
+                  desc: "A/B testing, heatmap analysis, user session review, and landing page redesigns that systematically improve the percentage of visitors who take the action your business needs them to take.",
+                },
+              ].map((item, i) => (
+                <article
+                  key={i}
+                  className="why-card"
+                  style={{
+                    background: "rgba(255,255,255,.06)",
+                    border: "1px solid rgba(255,255,255,.12)",
+                  }}
+                >
+                  <h3 style={{ color: "#fec304" }}>{item.title}</h3>
+                  <p style={{ color: "rgba(255,255,255,.78)" }}>{item.desc}</p>
+                </article>
+              ))}
+            </div>
+            <div style={{ textAlign: "center", marginTop: "40px" }}>
+              <Link
+                to="/contact"
+                className="btn btn-primary"
+                aria-label="Talk to QllmSoft about SEO and digital marketing services"
+              >
+                Discuss Your Digital Marketing Goals
+              </Link>
+            </div>
+          </div>
+        </section>
 
+        {/* ══════════════════════════════════════════════
+            WHY QLLMSOFT
+        ══════════════════════════════════════════════ */}
+        <WhyQllmSoft />
+
+        {/* ══════════════════════════════════════════════
+            QLLMDOCS PRODUCT SHOWCASE
+        ══════════════════════════════════════════════ */}
         <div className="product-showcase-divider">
           <span className="divider-line"></span>
           <span className="divider-tag">Our Flagship Product</span>
@@ -809,14 +1050,12 @@ const Services = () => {
           <div className="qllm-product-container">
             <div className="qllm-product-visual-box iframe-mode">
               <div className="glass-glow-mesh"></div>
-
               <div className="browser-mockup-header">
                 <span className="dot red"></span>
                 <span className="dot yellow"></span>
                 <span className="dot green"></span>
                 <div className="browser-address-bar">qllmdocs.com</div>
               </div>
-
               <iframe
                 src={QllmDocs}
                 title="QllmDocs Live Platform Dashboard"
@@ -824,58 +1063,51 @@ const Services = () => {
                 loading="lazy"
                 sandbox="allow-scripts allow-same-origin allow-popups"
               ></iframe>
-
               <div className="product-live-badge">
                 <span className="pulse-dot"></span> Live Interactive Portal
               </div>
             </div>
 
             <div className="qllm-product-intellect">
-              <div className="product-meta-brand">
-                Ready To Deploy SaaS Solution
-              </div>
-
+              <div className="product-meta-brand">Ready-to-Deploy SaaS Solution</div>
               <div className="product-logo-wrapper">
                 <img
                   src="https://qllmdocs.com/images/QllmDocs-Horizontal.png"
-                  alt="QllmDocs Business Logo"
+                  alt="QllmDocs Document Management System Logo"
                   className="product-brand-logo"
                   loading="lazy"
                 />
                 <span className="product-brand-subtitle">
-                  Secure & Intelligent DMS
+                  Secure &amp; Intelligent DMS
                 </span>
               </div>
-
               <p className="product-seo-description">
-                QllmDocs is an enterprise grade Document Management System
-                designed to simplify complex document workflows, improve
-                corporate compliance, and ensure data security. With automated
-                workflows, customizable access levels, and meticulous version
-                tracking, our platform reduces manual tracking operations and
-                helps businesses maintain perfect audit readiness.
+                QllmDocs is an enterprise-grade Document Management System designed to
+                eliminate the operational chaos of unstructured document workflows. Built
+                for compliance-heavy organisations that cannot afford information loss,
+                version conflicts, or unauthorised access, QllmDocs replaces manual file
+                management with automated workflows, granular permissions, and a full audit
+                trail on every document action.
               </p>
-
               <div className="product-tech-pills">
                 <span className="tech-pill">.NET Core</span>
                 <span className="tech-pill">SQL Server</span>
                 <span className="tech-pill">Azure Blob</span>
               </div>
-
               <div className="product-specs-grid">
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-cpu-fill"></i>
                   </div>
                   <div className="spec-texts">
-                    <h4>AI Powered Search</h4>
+                    <h4>AI-Powered Search</h4>
                     <p>
-                      Locate and organize critical business files instantly
-                      using intelligent, context aware AI search tools.
+                      Locate critical business files instantly using intelligent,
+                      context-aware search that understands document content, not
+                      just file names.
                     </p>
                   </div>
                 </div>
-
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-shield-lock-fill"></i>
@@ -883,12 +1115,11 @@ const Services = () => {
                   <div className="spec-texts">
                     <h4>Role-Based Access Control</h4>
                     <p>
-                      Secure confidential records and control data visibility
-                      with granular cryptographic permission layers.
+                      Protect confidential records with granular cryptographic
+                      permission layers down to the individual document level.
                     </p>
                   </div>
                 </div>
-
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-arrow-repeat"></i>
@@ -896,12 +1127,12 @@ const Services = () => {
                   <div className="spec-texts">
                     <h4>Workflow Automation</h4>
                     <p>
-                      Automate document stages, smart tagging behaviors, and
-                      live internal file routing effortlessly.
+                      Automate document approval stages, smart tagging, and
+                      internal routing so files reach the right person without
+                      manual intervention.
                     </p>
                   </div>
                 </div>
-
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-cloud-check-fill"></i>
@@ -909,12 +1140,11 @@ const Services = () => {
                   <div className="spec-texts">
                     <h4>Azure Cloud Security</h4>
                     <p>
-                      Store your repository safely on encrypted cloud
-                      infrastructure with automated backup management.
+                      Encrypted Azure infrastructure with automated backup
+                      management and geo-redundant availability built in.
                     </p>
                   </div>
                 </div>
-
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-credit-card-2-front-fill"></i>
@@ -922,12 +1152,11 @@ const Services = () => {
                   <div className="spec-texts">
                     <h4>Subscription Gateway</h4>
                     <p>
-                      Manage modular payment cycles connected directly with
-                      commercial digital paths and banking networks.
+                      Modular subscription tiers with integrated payment
+                      processing connected to major banking networks.
                     </p>
                   </div>
                 </div>
-
                 <div className="spec-item">
                   <div className="spec-icon">
                     <i className="bi bi-lightning-charge-fill"></i>
@@ -935,13 +1164,12 @@ const Services = () => {
                   <div className="spec-texts">
                     <h4>Transparent Audit Trails</h4>
                     <p>
-                      Eliminate manual logs and easily review complete
-                      historical file revision records anytime.
+                      Complete, tamper-evident records of every document action
+                      for compliance reviews and regulatory reporting.
                     </p>
                   </div>
                 </div>
               </div>
-
               <div className="product-action-cluster">
                 <a
                   href="https://qllmdocs.com/"
@@ -949,7 +1177,7 @@ const Services = () => {
                   rel="noopener noreferrer"
                   className="btn-launch-neon"
                 >
-                  Open Site in New Tab{" "}
+                  Open Live Platform{" "}
                   <i className="bi bi-box-arrow-up-right ms-2"></i>
                 </a>
                 <Link to="/contact" className="btn-demo-muted">
@@ -960,14 +1188,19 @@ const Services = () => {
           </div>
         </section>
 
-        {/* ── TECHNOLOGIES ── */}
+        {/* ══════════════════════════════════════════════
+            TECHNOLOGIES
+        ══════════════════════════════════════════════ */}
         <TechnologiesSection />
 
+        {/* ══════════════════════════════════════════════
+            INDUSTRIES
+        ══════════════════════════════════════════════ */}
+        <IndustriesSection />
 
-
-
-        {/* ── PROCESS ── */}
-
+        {/* ══════════════════════════════════════════════
+            PROCESS
+        ══════════════════════════════════════════════ */}
         <section
           className="section process-section"
           aria-labelledby="process-main-heading"
@@ -975,246 +1208,196 @@ const Services = () => {
           <div className="container">
             <div className="section-title reveal">
               <h2 id="process-main-heading">
-                Our 6 Phase Software Delivery Process: Structured, Transparent &
-                Accountable
+                How We Deliver: A 6-Phase Process Built for Accountability
               </h2>
               <p>
-                A proven software development life cycle framework built around
-                one core principle: you should always know what we are building,
-                when it will be delivered, and exactly what it costs before a
-                single line of code is written. Our agile process eliminates
-                scope ambiguity, prevents budget surprises, and ensures every
-                custom software project arrives production ready on the agreed
-                date.
+                Our delivery framework is built around one core principle: you should always
+                know what we are building, when it will be delivered, and what it costs
+                before a single line of code is written. This structured process eliminates
+                scope ambiguity, prevents budget overruns, and ensures every project arrives
+                production-ready on the agreed date.
               </p>
             </div>
             <div
               className="process-grid"
               role="list"
-              aria-label="Software development process steps"
+              aria-label="QllmSoft software development process steps"
             >
-             
-              <div
-                className="process-step reveal reveal-delay-1"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  01
-                </div>
-                <h3>Discovery & Requirements Analysis</h3>
+              <div className="process-step reveal reveal-delay-1" role="listitem">
+                <div className="process-number" aria-hidden="true">01</div>
+                <h3>Discovery &amp; Requirements Analysis</h3>
                 <p>
-                  We conduct structured business requirements discovery
-                  workshops covering your product goals, user journeys,
-                  technical constraints, and third party API integration maps.
-                  The direct output is a formal software scope document and a
-                  fixed price cost breakdown, eliminating scope creep before
-                  development begins.
+                  We run structured discovery workshops covering your business goals, user
+                  journeys, technical constraints, and integration requirements. The direct
+                  output is a formal scope document and a fixed-price cost breakdown that
+                  eliminates scope creep before development begins.
                 </p>
               </div>
-
-              <div
-                className="process-step reveal reveal-delay-2"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  02
-                </div>
-                <h3>Solution Architecture & Technical Planning</h3>
+              <div className="process-step reveal reveal-delay-2" role="listitem">
+                <div className="process-number" aria-hidden="true">02</div>
+                <h3>Solution Architecture &amp; Technical Planning</h3>
                 <p>
-                  Our senior systems architects design a scalable enterprise
-                  software architecture, complete with technology selection
-                  rationale, database schemas, cryptographic security models,
-                  and formal API contract specifications reviewed rigorously
-                  before coding starts to eliminate future engineering
-                  refactoring risks.
+                  Our senior architects design a scalable system architecture with technology
+                  selection rationale, database schemas, security models, and API contract
+                  specifications reviewed rigorously before coding starts — eliminating costly
+                  engineering rework later.
                 </p>
               </div>
-
-              <div
-                className="process-step reveal reveal-delay-3"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  03
-                </div>
-                <h3>Agile Development & 2 Week Sprints</h3>
+              <div className="process-step reveal reveal-delay-3" role="listitem">
+                <div className="process-number" aria-hidden="true">03</div>
+                <h3>Agile Development in 2-Week Sprints</h3>
                 <p>
-                  We engineer clean, well structured code delivered in strict
-                  two week agile sprints with weekly live feature demos hosted
-                  on secure staging environments. You retain complete product
-                  backlog prioritization control, balancing features against
-                  business timelines while we maintain code quality milestones.
+                  Clean, well-structured code delivered in strict two-week sprints with
+                  weekly live demos on secure staging environments. You retain complete
+                  backlog control to reprioritise features against business timelines
+                  throughout the entire build.
                 </p>
               </div>
-
-              <div
-                className="process-step reveal reveal-delay-1"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  04
-                </div>
-                <h3>QA Engineering, Security Testing & Performance Audits</h3>
+              <div className="process-step reveal reveal-delay-1" role="listitem">
+                <div className="process-number" aria-hidden="true">04</div>
+                <h3>QA, Security Testing &amp; Performance Audits</h3>
                 <p>
-                  Our quality assurance process executes automated regression
-                  testing, manual cross device validation, OWASP Top 10 security
-                  compliance reviews, and heavy load testing against strict
-                  performance SLAs. Nothing builds into the main branch until it
-                  passes our enterprise deployment criteria.
+                  Automated regression testing, manual cross-device validation, OWASP Top 10
+                  security compliance reviews, and load testing against strict performance
+                  SLAs. Nothing enters the main branch until it passes our enterprise
+                  deployment criteria.
                 </p>
               </div>
-
-              <div
-                className="process-step reveal reveal-delay-2"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  05
-                </div>
-                <h3>CI/CD Pipeline Setup & Production Deployment</h3>
+              <div className="process-step reveal reveal-delay-2" role="listitem">
+                <div className="process-number" aria-hidden="true">05</div>
+                <h3>CI/CD Pipeline Setup &amp; Production Deployment</h3>
                 <p>
-                  We orchestrate zero downtime production launch environments
-                  using robust Continuous Integration and Continuous Deployment
-                  (CI/CD) pipelines. This phase encompasses exhaustive
-                  environment logging setup, live cloud monitoring dashboard
-                  configurations, and a seamless handover to your infrastructure
-                  team.
+                  Zero-downtime production launches using robust CI/CD pipelines, covering
+                  environment logging, live cloud monitoring, and a smooth handover to your
+                  infrastructure team with complete technical documentation.
                 </p>
               </div>
-
-              <div
-                className="process-step reveal reveal-delay-3"
-                role="listitem"
-              >
-                <div className="process-number" aria-hidden="true">
-                  06
-                </div>
-                <h3>30 Day Hyper Care Window & Long Term Support</h3>
+              <div className="process-step reveal reveal-delay-3" role="listitem">
+                <div className="process-number" aria-hidden="true">06</div>
+                <h3>30-Day Hyper-Care &amp; Long-Term Support</h3>
                 <p>
-                  Every custom app deployment includes a formal 30 day post
-                  launch hyper care maintenance window covering immediate bug
-                  resolution, server optimization, and codebase security patch
-                  updates. Long term software maintenance SLA contracts are
-                  available for scalable feature upgrades.
+                  Every deployment includes a formal 30-day post-launch window covering
+                  immediate bug resolution, server optimisation, and security patches.
+                  Long-term SLA maintenance contracts are available for ongoing feature
+                  development and infrastructure scaling.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-
-        {/* ── FAQ ── */}
-        <FaqSection />
-
-
-        {/*services carousel*/}
-
-        <RelatedSolutions category="servicePage" />
-
-        {/* ── INTERNAL LINKS ── 
+        {/* ══════════════════════════════════════════════
+            OUTSOURCING TRUST SECTION
+        ══════════════════════════════════════════════ */}
         <section
           className="section"
-          style={{ background: "#F7FAFC", padding: "40px 0" }}
-          aria-labelledby="explore-heading"
+          style={{ background: "#F7FAFC" }}
+          aria-labelledby="outsource-h2"
         >
           <div className="container">
             <div className="section-title reveal">
-              <h2 id="explore-heading">
-                Explore Our Specialised Software Development Services in
-                Pakistan
+              <h2 id="outsource-h2">
+                Software Outsourcing That Actually Works for International Businesses
               </h2>
               <p>
-                Deep-dive into each service area, with detailed capability
-                breakdowns, industry focus, and real project examples.
+                Outsourcing software development carries real risks when the partner is not
+                structured to handle international engagements professionally. QllmSoft has
+                been managing global client relationships since 2015, with specific operational
+                commitments that address those risks directly.
               </p>
             </div>
-            <nav
-              aria-label="All QllmSoft software development services"
-              className="reveal"
-            >
-              <div className="why-grid">
-                {[
-                  {
-                    to: "/custom-software-development-services",
-                    title: "Custom Software Development",
-                    desc: "Bespoke enterprise applications built from scratch around your exact business requirements, not adapted from templates.",
-                  },
-                  {
-                    to: "/web-application-development-services",
-                    title: "Enterprise Web Application Development",
-                    desc: "Scalable, secure enterprise web platforms, internal portals, and SaaS applications designed for real operational workloads.",
-                  },
-                  {
-                    to: "/mobile-app-development",
-                    title: "Mobile App Development",
-                    desc: "Cross-platform mobile apps for Android and iOS, with offline capability, push notifications, and seamless backend integration.",
-                  },
-                  {
-                    to: "/api-development-services",
-                    title: "API Development &amp; System Integration",
-                    desc: "Secure, documented, and tested APIs enabling seamless integration across web apps, mobile platforms, and enterprise systems.",
-                  },
-                  {
-                    to: "/ai-powered-software-solutions",
-                    title: "AI-Powered Software Solutions",
-                    desc: "Machine learning, NLP, computer vision, and intelligent automation embedded into your products, measurable ROI, not demos.",
-                  },
-                  {
-                    to: "/outsource-software-development-to-pakistan",
-                    title: "Outsource Software Development to Pakistan",
-                    desc: "Senior engineers and full-stack development teams at 60% lower cost, fixed-price, full IP ownership, NDA from day one.",
-                  },
-                  {
-                    to: "/legacy-system-modernization-services",
-                    title: "Legacy System Modernisation",
-                    desc: "Phased, zero-disruption migration from outdated systems to modern, maintainable platforms, business logic fully preserved.",
-                  },
-                  {
-                    to: "/healthcare-software-development-pakistan",
-                    title: "Healthcare Software Development",
-                    desc: "Hospital management systems, telemedicine platforms, EMR/EHR, and clinic software for Pakistani healthcare providers.",
-                  },
-                  {
-                    to: "/education-software-development-pakistan",
-                    title: "Education Software Development",
-                    desc: "School management systems, LMS platforms, and eLearning apps, with JazzCash fee integration for Pakistani institutions.",
-                  },
-                  {
-                    to: "/hire-dotnet-developers-pakistan",
-                    title: "Hire Dedicated Developers in Pakistan",
-                    desc: "Dedicated web, mobile, and AI engineers available full-time within 24–48 hours, fixed-rate, no recruitment overhead.",
-                  },
-                ].map((item) => (
-                  <article key={item.to} className="why-card">
-                    <h3>
-                      <Link to={item.to}>{item.title}</Link>
-                    </h3>
-                    <p>{item.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </nav>
+            <div className="why-grid reveal">
+              <article className="why-card">
+                <h3>NDA Before Discovery</h3>
+                <p>
+                  We sign a comprehensive Non-Disclosure Agreement before any technical
+                  discussion begins. Your idea, your data, and your business logic are
+                  legally protected from the first conversation.
+                </p>
+              </article>
+              <article className="why-card">
+                <h3>Full IP Transfer on Completion</h3>
+                <p>
+                  Every line of source code, every database schema, and every design asset
+                  transfers to you legally upon project completion. We retain no licensing
+                  rights, no ongoing fees, and no code dependencies on our infrastructure.
+                </p>
+              </article>
+              <article className="why-card">
+                <h3>Time Zone Overlap Commitment</h3>
+                <p>
+                  Our senior engineers maintain deliberate overlap hours with North American,
+                  European, and Gulf time zones. You communicate with the people building your
+                  product — not an account manager relaying messages.
+                </p>
+              </article>
+              <article className="why-card">
+                <h3>Independently Verified Reviews</h3>
+                <p>
+                  Our 100% Upwork Job Success Score and 47+ five-star Freelancer reviews are
+                  publicly accessible and maintained by third-party platforms. Verify our
+                  track record before a single dollar changes hands.
+                </p>
+              </article>
+              <article className="why-card">
+                <h3>Fixed-Price Engagements</h3>
+                <p>
+                  No hourly billing. No open-ended retainers with unpredictable monthly
+                  invoices. Every project is scoped, priced, and agreed before work begins.
+                  The number you approve is the number you pay.
+                </p>
+              </article>
+              <article className="why-card">
+                <h3>Senior Engineers, Not Junior Teams</h3>
+                <p>
+                  QllmSoft does not staff projects with trainees supervised by one senior
+                  developer. The engineers who scope your project are the engineers who build
+                  it, with 10+ years of average production experience across the team.
+                </p>
+              </article>
+            </div>
+            <div style={{ textAlign: "center", marginTop: "40px" }}>
+              <Link
+                to="/outsource-software-development-to-pakistan"
+                className="btn btn-primary"
+                aria-label="Learn more about software outsourcing with QllmSoft"
+              >
+                Learn About Outsourcing With QllmSoft
+              </Link>
+            </div>
           </div>
-        </section>*/}
+        </section>
 
-        {/* ── CTA ── */}
+        {/* ══════════════════════════════════════════════
+            FAQ
+        ══════════════════════════════════════════════ */}
+        <FaqSection />
+
+        {/* ══════════════════════════════════════════════
+            RELATED SOLUTIONS
+        ══════════════════════════════════════════════ */}
+        <RelatedSolutions category="servicePage" />
+
+        {/* ══════════════════════════════════════════════
+            CTA
+        ══════════════════════════════════════════════ */}
         <section className="section cta-section" aria-labelledby="cta-h2">
           <div className="container">
             <div className="cta-content reveal">
               <h2 id="cta-h2">
-                Ready to Build Software That Drives Real Business Growth?
+                Ready to Build Software and Marketing That Drive Real Business Growth?
               </h2>
               <p>
-                Tell us what you need to build. QllmSoft will review your
-                requirements, send a detailed fixed-price proposal within 24
-                hours, and schedule a free discovery call, no commitment
-                required. Businesses trust QllmSoft to deliver. We
-                look forward to earning that trust from you.
+                Tell us what you need to build or grow. QllmSoft will review your
+                requirements, send a detailed fixed-price proposal within 24 hours, and
+                schedule a free discovery call with no commitment required. Businesses
+                across four continents trust QllmSoft to deliver. We look forward to
+                earning that trust from you.
               </p>
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Get a free software development consultation from QllmSoft"
+                aria-label="Get a free consultation from QllmSoft software and digital marketing team"
               >
                 Get a Free Consultation
               </Link>

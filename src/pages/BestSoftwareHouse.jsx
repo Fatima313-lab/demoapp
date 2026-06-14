@@ -49,7 +49,6 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './BestSoftwareHouse.css';
 import TestimonialSection from '../components/TestimonialSection';
-import BestSoftwareImg from '../assets/BestSoftware.webp';
 
 /* ─── Constants ─────────────────────────────────────────────── */
 const PAGE_URL  = 'https://qllmsoft.com/best-software-house-in-pakistan';
@@ -241,7 +240,6 @@ const TOP_10 = [
   },
 ];
 
-<<<<<<< HEAD
 /* ─── Selection Criteria / HowTo Steps ─────────────────────── */
 const HOWTO_STEPS = [
   {
@@ -280,34 +278,16 @@ const HOWTO_STEPS = [
     title: 'Request a Structured Proposal with Milestones',
     desc: 'A credible proposal breaks the project into specific deliverables with acceptance criteria, payment milestones tied to delivery (not calendar time), and a clear change-management process. Lump-sum proposals with no milestones are a significant financial and delivery risk.',
   },
-=======
-const SELECTION_CRITERIA = [
-  { num:'01', title:'Experience & Portfolio', icon: <IconAward size={22}/>, desc:'Review completed projects carefully. A strong, relevant portfolio with documented case studies demonstrates that the team can handle work similar to yours.' },
-  { num:'02', title:'Technology Stack',       icon: <IconCode size={22}/>,  desc:'Verify that the company actively works with modern frameworks and coding standards. Outdated stacks create long-term maintenance and security risks.' },
-  { num:'03', title:'Communication Quality', icon: <IconMessageCircle size={22}/>, desc:'Reliable, proactive communication prevents the majority of project delays. Look for regular reporting, clear escalation paths, and responsive account management.' },
-  { num:'04', title:'Pricing Transparency',  icon: <IconDollarSign size={22}/>, desc:'A trustworthy partner provides detailed estimates covering all costs, timelines, and deliverables  with no hidden charges or vague scope language.' },
-  { num:'05', title:'Customisation Depth',   icon: <IconZap size={22}/>,   desc:'Avoid firms that offer one-size-fits-all templates. Your solution should be engineered specifically for your brand, workflows, and long-term business objectives.' },
-  { num:'06', title:'Security Practices',    icon: <IconShield size={22}/>, desc:'Ensure the firm follows industry best practices for data encryption, access control, IP protection, and compliance with relevant regulations.' },
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
 ];
 
 /* ─── Services ───────────────────────────────────────────────── */
 const SERVICES = [
-<<<<<<< HEAD
   { icon: <IconCode size={28} />,       title: 'Custom Software Development',  desc: 'Bespoke web and desktop applications built from the ground up using React, Angular, ASP .Net, Node.js, and Laravel. Architecture-first development that scales with your business growth without accumulating technical debt.' },
   { icon: <IconSmartphone size={28} />, title: 'Mobile Application Development', desc: 'Native and cross-platform mobile apps for iOS and Android using Flutter, Kotlin, Swift, and React Native. From MVP to production-scale, Pakistani teams deliver polished, performant mobile experiences at competitive rates.' },
   { icon: <IconBrain size={28} />,      title: 'AI & Machine Learning Solutions', desc: 'Custom AI models, natural language processing pipelines, computer vision systems, and predictive analytics platforms. Pakistan\'s growing ML talent pool delivers sophisticated AI products at a fraction of Silicon Valley rates.' },
   { icon: <IconCloud size={28} />,      title: 'Cloud Architecture & AWS Services', desc: 'Cloud migration, serverless architecture, AWS infrastructure design, and managed DevOps. Pakistani cloud engineers hold AWS, Azure, and GCP certifications, delivering enterprise-grade infrastructure governance at competitive price points.' },
   { icon: <IconShield size={28} />,     title: 'Cybersecurity & Quality Assurance', desc: 'End-to-end security audits, VAPT (Vulnerability Assessment and Penetration Testing), automated QA pipelines, and ISO 27001-aligned compliance reviews. Security-first development is now standard among Pakistan\'s top software firms.' },
   { icon: <IconGlobe size={28} />,      title: 'Enterprise Digital Transformation', desc: 'Full-lifecycle modernisation of legacy systems: strategy, architecture redesign, phased migration, and post-launch optimisation. Pakistan\'s senior consultants bring Fortune 500 methodology at emerging-market cost structures.' },
-=======
-  { icon: <IconCode size={28}/>,        title:'Web Development',         desc:'High-performance websites and enterprise portals built with React, Angular, ASP .Net, and Laravel  optimised for speed, accessibility, and SEO.' },
-  { icon: <IconSmartphone size={28}/>,  title:'Mobile App Development',  desc:'Native and cross-platform mobile applications built with Flutter, Kotlin, Swift, and React Native fast, polished, and ready for scale.' },
-  { icon: <IconBrain size={28}/>,       title:'AI & Data Science',       desc:'Intelligent automation and machine learning systems that help businesses make faster, better decisions through data-driven insights and predictive models.' },
-  { icon: <IconCloud size={28}/>,       title:'Cloud & AWS Services',    desc:'AWS architecture, serverless design, cloud migration, and infrastructure management to improve scalability and reduce long-term operational costs.' },
-  { icon: <IconShield size={28}/>,      title:'Cybersecurity & QA',      desc:'End-to-end security audits, penetration testing, automated QA pipelines, and compliance reviews to keep your platform and data fully protected.' },
-  { icon: <IconGlobe size={28}/>,       title:'Digital Transformation',  desc:'Strategic consulting and full-lifecycle execution for organisations moving from legacy systems to modern, cloud-native, scalable digital architectures.' },
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
 ];
 
 /* ─── Engagement Models ─────────────────────────────────────── */
@@ -346,7 +326,6 @@ const ENGAGEMENT_MODELS = [
   },
 ];
 
-<<<<<<< HEAD
 /* ─── Cost Comparison Table Data ────────────────────────────── */
 const COST_DATA = [
   { role: 'Full-Stack Developer',      usa: '$120–180/hr', uk: '$90–140/hr',  pakistan: '$20–45/hr',  saving: '65–80%' },
@@ -355,13 +334,6 @@ const COST_DATA = [
   { role: 'DevOps / Cloud Engineer',   usa: '$130–200/hr', uk: '$100–160/hr', pakistan: '$25–55/hr',  saving: '65–80%' },
   { role: 'AI / ML Engineer',          usa: '$150–250/hr', uk: '$120–200/hr', pakistan: '$30–65/hr',  saving: '65–80%' },
   { role: 'QA Automation Engineer',    usa: '$70–110/hr',  uk: '$60–90/hr',   pakistan: '$12–28/hr',  saving: '65–75%' },
-=======
-const REVIEWS = [
-  { name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'Outstanding technical work. The solution QllmSoft delivered was precisely what we needed  accurate, fast, and well-documented. The team communicated proactively at every stage. Exactly as discussed, on time, and on budget.' },
-  { name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'QllmSoft is my go-to development partner for complex technical builds. Their understanding of the business context behind the code — not just the technical requirements — sets them apart from every other team I have worked with.' },
-  { name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'Exceptional communication and technical depth throughout the entire engagement. The final solution exceeded our expectations significantly. I will not hesitate to bring QllmSoft back for our next project.' },
-  { name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'Clean architecture, professional delivery, and a team that genuinely cares about the outcome not just closing the ticket. QllmSoft is the benchmark I now use for every other development partner I evaluate.' },
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
 ];
 
 /* ─── Industry Verticals ────────────────────────────────────── */
@@ -376,7 +348,6 @@ const INDUSTRIES = [
 
 /* ─── FAQ Data (12 questions) ───────────────────────────────── */
 const FAQ_DATA = [
-<<<<<<< HEAD
   {
     q: 'Which is the best software house in Pakistan in 2026?',
     a: 'Systems Limited is widely regarded as Pakistan\'s most established enterprise software firm based on scale, decades of operation, and Fortune 500 client base. For product engineering and startup-focused work, 10Pearls and Tkxel consistently rank highly on international platforms such as Clutch. The "best" firm ultimately depends on your specific project type, budget, and engagement model.',
@@ -425,15 +396,6 @@ const FAQ_DATA = [
     q: 'What time zone do Pakistani software companies work in?',
     a: 'Pakistan Standard Time (PKT) is UTC+5. This places Pakistani development teams roughly 10–11 hours ahead of Eastern Standard Time (EST) and 4–5 hours ahead of Central European Time (CET). In practice, leading Pakistani software firms actively accommodate client time zones with flexible working hours, morning standup availability for US clients, and dedicated project managers who maintain overlap windows of 2–4 hours per day for synchronous communication.',
   },
-=======
-  { q:'Which city has the most software houses in Pakistan?',           a:'Lahore, Karachi, and Islamabad are the three primary IT hubs, each hosting a large concentration of established and emerging software development firms. Lahore alone accounts for over 40% of Pakistan\'s registered IT companies.' },
-  { q:'What services do software houses in Pakistan provide?',          a:'Pakistani software companies typically offer web development, mobile application engineering, desktop software, UI/UX design, e-commerce solutions, cloud services, data analytics, AI development, and digital marketing — often as integrated full-service engagements.' },
-  { q:'Is outsourcing to a software house in Pakistan cost-effective?', a:'Yes. Pakistani development teams offer highly skilled engineers at rates significantly lower than comparable talent in the US or UK, making the country an attractive destination for offshore software development — typically 50–70% more cost-effective.' },
-  { q:'What makes QllmSoft stand out among Pakistan\'s software houses?',a:'QllmSoft combines the agility of a boutique firm with enterprise-grade technical standards. Clients benefit from direct access to senior engineers, transparent pricing, AWS-certified cloud delivery, and a track record verified on Upwork and Freelancer by global clients from the USA, UK, UAE, and Jordan.' },
-  { q:'How do Pakistani software firms handle international clients?',  a:'The vast majority of Pakistan\'s top software houses actively serve clients in the United States, Europe, and the Gulf region many with dedicated account management, NDA-first workflows, and flexible payment models for international engagements.' },
-  { q:'What industries do Pakistani software firms serve?',             a:'Pakistani development firms serve healthcare, financial services, retail, education, logistics, real estate, and e-commerce sectors. Many specialise in SaaS products, B2B platforms, and industry-specific enterprise systems for global markets.' },
-  { q:'Do software houses in Pakistan follow international quality standards?', a:'Leading Pakistani firms adhere to ISO 27001, CMMI, and Agile/Scrum frameworks. Many are AWS-certified partners and maintain documented SDLC processes, code review standards, and automated QA pipelines that meet or exceed Western industry benchmarks.' },
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
 ];
 
 /* ─── FAQ Item ──────────────────────────────────────────────── */
@@ -765,11 +727,7 @@ const BestSoftwareHouse = () => {
 
             <aside className="bsh-hero__panel" aria-label="Pakistan IT industry key statistics">
               <div className="bsh-hero__panel-header">
-<<<<<<< HEAD
                 Pakistan IT Market Snapshot — 2026
-=======
-                Pakistan IT Snapshot - 2026
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
               </div>
               {[
                 { val: '$3B+',   label: 'Annual IT Exports',        sub: 'Source: PSEB 2025' },
@@ -1209,11 +1167,7 @@ const BestSoftwareHouse = () => {
             <div className="bsh-section-head">
               <span className="bsh-eyebrow">Market Intelligence</span>
               <h2 id="destination-heading" className="bsh-section-title">
-<<<<<<< HEAD
                 Pakistan as a Premier Software Outsourcing Destination
-=======
-                Pakistan,  A Premier Global Tech Destination
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
               </h2>
               <p className="bsh-section-lead">
                 International buyers increasingly select Pakistan alongside India and Eastern Europe
@@ -1226,25 +1180,15 @@ const BestSoftwareHouse = () => {
             </div>
             <div className="bsh-destination__layout">
               <div className="bsh-destination__visual">
-<<<<<<< HEAD
-              <img
-  src={BestSoftwareImg}
-  alt="Map and overview of Pakistan software outsourcing industry 2026 — best software houses in Pakistan"
-  loading="lazy"
-  width="580"
-  height="420"
-/>
-                <div className="bsh-destination__chip" aria-label="Pakistan IT export statistic badge">
-=======
                 <img
-                  src="https://i.pinimg.com/1200x/bb/7f/f8/bb7ff8c6f6d8c42f8ecb4ca4304a7e92.jpg"
-                  alt="Pakistan Software Outsourcing Hub 2026 , best software house in Pakistan"
+                  src="https://qllmsoft.com/images/pakistan-software-outsourcing-hub-2026.webp"
+                  alt="Map and overview of Pakistan software outsourcing industry 2026 — best software houses in Pakistan"
                   loading="lazy"
                   width="580"
                   height="420"
+                  onError={e => { e.target.src = 'https://i.pinimg.com/1200x/bb/7f/f8/bb7ff8c6f6d8c42f8ecb4ca4304a7e92.jpg'; }}
                 />
-                <div className="bsh-destination__chip" aria-label="Pakistan IT export statistic">
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
+                <div className="bsh-destination__chip" aria-label="Pakistan IT export statistic badge">
                   <span className="bsh-destination__chip-val">$3B+</span>
                   <span className="bsh-destination__chip-label">Annual IT Exports</span>
                   <small>Source: PSEB 2025</small>
@@ -1411,16 +1355,10 @@ const BestSoftwareHouse = () => {
                 Looking for a trusted software development partner?
               </h2>
               <p className="bsh-cta__desc">
-<<<<<<< HEAD
                 <strong>QllmSoft</strong> engineers digital products built to last. Our full-stack team
                 combines deep technical capability with clear communication, milestone-based delivery,
                 and full IP transfer from day one — turning your requirements into software that
                 genuinely serves your users and scales with your business.
-=======
-                At <strong>QllmSoft</strong>, we engineer digital products built to last.
-                Our full-stack team combines global technical insight with precise, pixel-perfect
-                execution  turning your vision into software that users genuinely rely on.
->>>>>>> 1e1fe056384bf86f72f5961028a6718b85f4bb2a
               </p>
               <div className="bsh-cta__features">
                 {['Pixel-Perfect Design', 'Scalable Architecture', 'NDA on Day One', '100% IP Ownership', 'AWS Certified Delivery'].map(f => (
