@@ -25,7 +25,7 @@
  *   .NET development company
  *   React development services
  *   Flutter app development
- *   ASP.NET Core development
+
  *
  * Industry Keywords:
  *   healthcare software development
@@ -347,7 +347,7 @@ const FaqSection = () => {
       <div className="container">
         <div className="section-title reveal">
           <h2 id="faq-heading">
-            Frequently Asked Questions About Our Software & Digital Services
+            FAQs
           </h2>
           <p>
             Straight answers to the questions business owners and project leads ask most
@@ -864,31 +864,30 @@ const Services = () => {
         <section className="services-hero reveal" aria-labelledby="svc-hero-h1">
           <div className="container">
             <h1 id="svc-hero-h1">
-              Software Development & Digital Marketing Services That Deliver Measurable Results
+            Custom Software, Digital Solutions & Business Automation Services | QLlmSoft
             </h1>
             <p>
-              QllmSoft is a full-service technology company trusted by businesses across the
-              USA, UK, Europe, and the Gulf to build, launch, and grow digital products. We
-              engineer production-ready{" "}
-              <Link to="/web-application-development-services">
-                enterprise web applications
-              </Link>
-              ,{" "}
-              <Link to="/mobile-app-development">
-                mobile apps for Android and iOS
-              </Link>
-              ,{" "}
-              <Link to="/api-development-services">
-                business automation systems
-              </Link>
-              , and{" "}
-              <Link to="/ai-powered-software-solutions">
-                AI-powered software solutions
-              </Link>
-              — and we run{" "}
-              <Link to="/seo-digital-marketing-services">
-                SEO and digital marketing campaigns
-              </Link>{" "}
+  QllmSoft is a full-service technology company to build, launch, and grow digital products. We
+  engineer production-ready{" "}
+  <Link className="content-link" to="/web-application-development-services">
+    enterprise web applications
+  </Link>
+  ,{" "}
+  <Link className="content-link" to="/mobile-app-development">
+    mobile apps for Android and iOS
+  </Link>
+  ,{" "}
+  <Link className="content-link" to="/api-development-services">
+    business automation systems
+  </Link>
+  , and{" "}
+  <Link className="content-link" to="/ai-powered-software-solutions">
+    AI-powered software solutions
+  </Link>
+  — and we run{" "}
+  <Link className="content-link" to="/seo-digital-marketing-services">
+    SEO and digital marketing campaigns
+  </Link>
               that generate real pipeline. Every engagement starts with a fixed price,
               a documented scope, and a delivery timeline agreed before a single line of
               code is written. Independently verified: 100% Upwork Job Success Score and

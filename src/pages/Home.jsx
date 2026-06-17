@@ -21,7 +21,6 @@
  *
  * Stack Keywords (SEO-secondary, global reach):
  *   .NET development company
- *   ASP.NET Core development services
  *   React development services
  *   Flutter app development services
  *
@@ -576,7 +575,7 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="services-heading">
-                Everything Your Business Needs | Built, Integrated, and Launched
+                QllmSoft | A Custom Software Development Company
               </h2>
               <p>
                 We solve real business problems with custom-built software. Whether the goal
@@ -747,7 +746,7 @@ const Home = () => {
                   >
                     5-star rating on Freelancer
                   </a>{" "}
-                  reflect 200+ completed engagements where the software was delivered on scope, on
+                  reflect successful engagements where the software was delivered on scope, on
                   time, and without post-launch surprises. That consistency is not accidental, it
                   is the result of a decade of refining how enterprise software development should
                   actually be done.
@@ -879,7 +878,7 @@ QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Custom Software Development Company
+            Client Reviews on our Custom Software Development Services
           </h2>
           <TestimonialSection />
         </section>

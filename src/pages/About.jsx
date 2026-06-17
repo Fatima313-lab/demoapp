@@ -3,18 +3,23 @@
  * ─────────────────────────────────────────────────────────────────
  * SEO STRATEGY (2026):
  *
- * Primary Keywords:
- *   software development company Pakistan
- *   software house Pakistan
- *   IT company Pakistan
- *   software company in Pakistan
+ * Positioning: Global software development partner.
+ * Pakistan is referenced as the company's origin and delivery base
+ * (for E-E-A-T, trust, and legitimate long-tail search demand), but
+ * the page's primary identity, headings, and CTAs are written for a
+ * worldwide audience — not a "local agency" framing.
  *
- * Secondary Keywords:
- *   custom software development company Pakistan
- *   enterprise software company Pakistan
- *   software agency Pakistan
+ * Primary Keywords:
+ *   software development company
+ *   custom software development company
+ *   enterprise software development partner
+ *   software development partner for startups
+ *
+ * Secondary / Long-tail Keywords:
+ *   software development company Pakistan
+ *   outsource software development to Pakistan
  *   about QllmSoft
- *   QllmSoft Pakistan
+ *   QllmSoft reviews
  *
  * E-E-A-T Signals:
  *   ✓ Founder profile with LinkedIn
@@ -27,7 +32,7 @@
  * SEO:
  *   ✓ react-helmet-async → full meta tags, OG, Twitter
  *   ✓ JSON-LD → Organization + AboutPage + BreadcrumbList
- *   ✓ Single H1 → keyword-rich, identity-affirming
+ *   ✓ Single H1 → keyword-rich, identity-affirming, globally framed
  *   ✓ H1→H2→H3 hierarchy → strict
  *   ✓ Internal links → all key service pages
  *   ✓ External links → Upwork, Freelancer, LinkedIn
@@ -67,7 +72,7 @@ const schemaOrg = {
     height: 60,
   },
   description:
-    "QllmSoft is a custom software development company in Pakistan with 10+ years of experience delivering enterprise digital solutions for businesses. We specialise in enterprise web applications, mobile apps, business automation, AI-powered solutions, and dedicated developer teams.",
+    "QllmSoft is a software development company that has been designing and building digital products for businesses worldwide since 2015. Our team works with startups and enterprises across North America, Europe, and the Middle East on web applications, mobile apps, business automation, and AI-powered software.",
   foundingDate: "2015",
   telephone: "+92-334-8229288",
   email: "qllmsoft@gmail.com",
@@ -80,11 +85,14 @@ const schemaOrg = {
     postalCode: "50350",
   },
   areaServed: [
-    { "@type": "Country", name: "Pakistan" },
+    { "@type": "Place", name: "Worldwide" },
     { "@type": "Country", name: "United States" },
     { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "Australia" },
     { "@type": "Country", name: "United Arab Emirates" },
     { "@type": "Country", name: "Saudi Arabia" },
+    { "@type": "Country", name: "Pakistan" },
   ],
   sameAs: [
     "https://www.freelancer.com/u/mrprogrmmr",
@@ -117,9 +125,9 @@ const schemaAboutPage = {
   "@type": "AboutPage",
   "@id": "https://qllmsoft.com/about#webpage",
   url: "https://qllmsoft.com/about",
-  name: "About QllmSoft, Custom Software Development Company in Pakistan Since 2015",
+  name: "About QllmSoft, a Software Development Company Serving Clients Worldwide",
   description:
-    "Learn about QllmSoft, a trusted software development company in Pakistan delivering enterprise digital solutions since 2015. 50+ projects, 50+ global clients, 100% Upwork Job Success Score.",
+    "Learn about QllmSoft, a software development company that has delivered 50+ projects for clients across North America, Europe, and the Middle East since 2015. 100% Upwork Job Success Score, 100% on-time delivery.",
   isPartOf: { "@id": "https://qllmsoft.com/#website" },
   about: { "@id": "https://qllmsoft.com/#organization" },
   breadcrumb: {
@@ -178,21 +186,21 @@ const About = () => {
   return (
     <>
       <Helmet>
-        {/* Title, 60 chars, identity + brand */}
+        {/* Title, identity + brand, globally framed */}
         <title>
-          About QllmSoft | Software Development Company in Pakistan Since 2015
+          About QllmSoft | Software Development Company Serving Clients Worldwide
         </title>
 
-        {/* Description, 158 chars, E-E-A-T + commercial intent */}
+        {/* Description, E-E-A-T + commercial intent, global framing */}
         <meta
           name="description"
-          content="QllmSoft is a trusted software development company in Pakistan with 10+ years delivering custom digital solutions. 50+ projects, global clients, 100% Upwork Job Success Score."
+          content="QllmSoft has been building custom software for businesses worldwide since 2015. 50+ projects, clients across North America, Europe, and the Middle East, 100% Upwork Job Success Score."
         />
 
         {/* Keywords */}
         <meta
           name="keywords"
-          content="software development company Pakistan, software house Pakistan, IT company Pakistan, custom software company Pakistan, enterprise software company Pakistan, software agency Pakistan, QllmSoft Pakistan, about QllmSoft, software development agency Pakistan"
+          content="software development company, custom software development company, enterprise software development partner, software development agency, outsource software development, about QllmSoft, software development company Pakistan"
         />
 
         <meta name="author" content="QllmSoft" />
@@ -208,11 +216,11 @@ const About = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="About QllmSoft | Software Development Company in Pakistan Since 2015"
+          content="About QllmSoft | Software Development Company Serving Clients Worldwide"
         />
         <meta
           property="og:description"
-          content="Trusted software development company in Pakistan, 10+ years, 50+ projects, 100% Upwork Job Success Score. Custom enterprise software, mobile apps, and AI solutions for global businesses."
+          content="10+ years building software for businesses worldwide. 50+ projects delivered, 100% Upwork Job Success Score. Custom web apps, mobile apps, and AI-powered solutions."
         />
         <meta
           property="og:image"
@@ -222,26 +230,26 @@ const About = () => {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Software Development Company Pakistan, About Us"
+          content="QllmSoft Software Development Company, About Us"
         />
-        <meta property="og:locale" content="en_PK" />
+        <meta property="og:locale" content="en_US" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="About QllmSoft | Software Development Company in Pakistan"
+          content="About QllmSoft | Software Development Company"
         />
         <meta
           name="twitter:description"
-          content="Custom software development company in Pakistan, 10+ years, 50+ projects delivered globally. Enterprise systems, mobile apps, and AI solutions."
+          content="Custom software development for businesses worldwide since 2015. 50+ projects delivered for clients across North America, Europe, and the Middle East."
         />
         <meta
           name="twitter:image"
           content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
         />
 
-        {/* Geo */}
+        {/* Geo (legitimate business address, kept for trust signals) */}
         <meta name="geo.region" content="PK-PB" />
         <meta name="geo.placename" content="Lalamusa, Punjab, Pakistan" />
         <meta name="geo.position" content="32.7003;73.9451" />
@@ -258,13 +266,14 @@ const About = () => {
         {/* ── HERO ── */}
         <section className="about-hero reveal" aria-labelledby="about-hero-h1">
           <div className="container">
-            {/* ✅ SINGLE H1, identity keyword, solution-first */}
+            {/* ✅ SINGLE H1, identity keyword, globally framed */}
             <h1 id="about-hero-h1" style={{ color: "white" }}>
-              Pakistan's Trusted Software Development Company, Delivering Real
-              Digital Solutions Since 2015
+              A Software Development Company Building Real Products for
+              Businesses Worldwide Since 2015
             </h1>
             <p style={{ color: "white" }}>
-              10+ years. 50+ production-grade digital solutions.
+              10+ years. 50+ projects shipped for clients across North
+              America, Europe, and the Middle East.
             </p>
             <a href="#company" className="btn btn-primary">
               Discover More
@@ -281,100 +290,100 @@ const About = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="company-heading">
-                About QllmSoft, Pakistan's Custom Software Development Agency
-                Since 2015
+                About QllmSoft, a Software Development Partner for Growing
+                Businesses
               </h2>
             </div>
 
             <div className="story-card">
               <p>
-                QllmSoft is a full-service{" "}
-                <strong>software development company</strong> with
-                over a decade of experience delivering production-grade digital
-                solutions for businesses across four continents. Founded in
-                2015, we have grown from a specialist enterprise development
-                consultancy into a comprehensive software agency trusted by 50+
-                businesses across world.
+                QllmSoft started in 2015 as a small team of engineers who
+                were tired of watching good ideas get buried under bad
+                software. Over the past decade that team has grown into a
+                full-service <strong>software development company</strong>{" "}
+                that has shipped more than 50 production systems for clients
+                spread across four continents, from early-stage startups
+                building their first product to established companies
+                replacing software that no longer keeps up with their
+                business.
               </p>
 
               <p>
-                <Link
-                  to="/"
-                  style={{ fontWeight: "bold", textDecoration: "none" }}
-                >
-                  QllmSoft
-                </Link>{" "}
-                works as a genuine technology partner, not a code vendor. We
-                invest time in understanding your business operations, user
-                workflows, and growth objectives before proposing a single
-                technical solution. Our team combines certified enterprise
-                architects, full-stack engineers, mobile developers, cloud
-                specialists, and AI solution architects, bringing both deep
-                technical expertise and real business domain understanding to
-                every engagement.
+                We don't think of ourselves as a vendor that takes orders
+                and writes code. <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "}
+                works the way a good in-house engineering team would: we ask
+                why a feature matters before we estimate how long it will
+                take to build, and we push back when a request would create
+                more problems than it solves. Our team is made up of
+                enterprise architects, full-stack engineers, mobile
+                developers, cloud specialists, and AI engineers who have
+                built software for healthcare providers, logistics
+                companies, financial teams, and retailers, so the
+                conversation rarely starts from zero.
               </p>
 
               <p>
-                Every engagement begins with a formal requirements discovery
-                process, followed by a fixed-price proposal and documented
-                project scope, approved by the client before a single line of
-                code is written. This approach eliminates scope creep, budget
-                surprises, and delivery uncertainty, and is why 50+ businesses
-                across four continents have chosen QllmSoft as their long-term
-                technology partner.
+                Every engagement starts with a proper discovery phase. We
+                map out the workflow, write up a fixed-price proposal and a
+                documented scope, and get sign-off before any code gets
+                written. It's a slower start than jumping straight into
+                development, but it's the reason clients on three different
+                continents have stayed with us for years instead of one
+                project.
               </p>
 
               <h4>What We Build</h4>
 
               <ul className="story-list">
                 <li>
-                  <strong>Enterprise Web Applications:</strong> Scalable, secure
-                  web platforms, internal portals, customer-facing systems, SaaS
-                  products, and business management tools built to handle real
-                  operational workloads without performance degradation.
+                  <strong>Enterprise Web Applications:</strong> Internal
+                  portals, customer-facing platforms, SaaS products, and
+                  business management tools built to hold up under real
+                  daily use, not just demo traffic.
                 </li>
                 <li>
-                  <strong>Mobile Applications:</strong> Cross-platform Android
-                  and iOS apps with offline-first architecture, push
-                  notifications, intuitive UX, and backend integration, from MVP
-                  to full enterprise rollout.
+                  <strong>Mobile Applications:</strong> Cross-platform
+                  Android and iOS apps with offline support, push
+                  notifications, and clean UX, taken from a first prototype
+                  through to a full enterprise rollout.
                 </li>
                 <li>
-                  <strong>Business Automation Systems:</strong> Replacing
-                  manual, error-prone workflows with automated systems, from HR
-                  and payroll automation to inventory management, document
-                  approvals, and multi-department reporting.
+                  <strong>Business Automation Systems:</strong> Software
+                  that replaces manual, error-prone processes, covering
+                  things like payroll, inventory, document approvals, and
+                  cross-department reporting.
                 </li>
                 <li>
-                  <strong>AI-Powered Software Solutions:</strong> Machine
-                  learning integrations, natural language processing, computer
-                  vision features, and intelligent automation embedded directly
-                  into your existing business software, measurable ROI, not
-                  proof-of-concept demos.
+                  <strong>AI-Powered Software Solutions:</strong> Practical
+                  machine learning, natural language processing, and
+                  computer vision features built into existing business
+                  software, aimed at measurable results rather than
+                  one-off demos.
                 </li>
                 <li>
-                  <strong>Legacy System Modernisation:</strong> Phased,
-                  zero-disruption migration from outdated systems to modern,
-                  maintainable platforms, full business logic preserved,
-                  technical debt eliminated, and your team operational
-                  throughout the transition.
+                  <strong>Legacy System Modernisation:</strong> Phased
+                  migrations from outdated platforms to modern,
+                  maintainable systems that preserve existing business
+                  logic and keep teams working while the transition
+                  happens.
                 </li>
               </ul>
 
               <p>
-                Our portfolio spans financial management platforms, healthcare
-                management systems, document management solutions, eCommerce
-                platforms, HR and payroll systems, and warehouse automation
-                tools, all built around real business workflows and operational
-                control requirements including our{" "}
+                Our project history spans financial management platforms,
+                healthcare systems, document management tools, eCommerce
+                platforms, HR and payroll software, and warehouse
+                automation, including our{" "}
                 <Link to="/finance-management-system">
                   finance management system
                 </Link>{" "}
-                designed for budgeting, approvals, and real time reporting.
+                built around budgeting, approvals, and real-time reporting
+                for finance teams.
               </p>
 
               <p>
-                Independently verified on{" "}
+                Our work is reviewed publicly, not just promised in a sales
+                deck. You can check our record on{" "}
                 <a
                   href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
                   target="_blank"
@@ -391,8 +400,9 @@ const About = () => {
                   aria-label="View QllmSoft 5-star reviews on Freelancer"
                 >
                   Freelancer (5-Star Rating)
-                </a>{" "}
-                , our reputation is built on consistent delivery, not promises.
+                </a>
+                , where clients have left feedback after the project
+                shipped, not before.
               </p>
             </div>
           </div>
@@ -402,7 +412,7 @@ const About = () => {
         <section
           className="section"
           style={{ background: "#1A202C", padding: "48px 0" }}
-          aria-label="QllmSoft agency statistics"
+          aria-label="QllmSoft company statistics"
         >
           <div className="container">
             <div className="why-grid" style={{ textAlign: "center" }}>
@@ -460,7 +470,7 @@ const About = () => {
                     color: "#63B3ED",
                   }}
                 >
-                  50+
+                  4
                 </div>
                 <div
                   style={{
@@ -469,10 +479,10 @@ const About = () => {
                     fontWeight: "600",
                   }}
                 >
-                  Happy Clients
+                  Continents Served
                 </div>
                 <div style={{ color: "#718096", fontSize: "0.85rem" }}>
-                  Around Globe
+                  Clients Worldwide
                 </div>
               </div>
               <div>
@@ -519,27 +529,27 @@ const About = () => {
               <FeatureCard
                 icon={Users}
                 title="10+ Years of Proven Delivery"
-                description="50+ enterprise digital solutions delivered since 2015 for businesses with a 100% on-time delivery record."
+                description="50+ projects delivered since 2015 for clients across four continents, with a 100% on-time delivery record."
               />
               <FeatureCard
                 icon={Shield}
-                title="Security and Quality Built In, Not Added On"
-                description="Security is designed into the architecture from day one, following OWASP Top 10 standards across every web application, API, and mobile app we deliver."
+                title="Security Built In From the Start"
+                description="Security gets designed into the architecture from day one, following OWASP Top 10 practices across every web app, API, and mobile app we ship."
               />
               <FeatureCard
                 icon={Zap}
-                title="Full-Stack Engineering Capability"
-                description="Web, mobile, backend, cloud, AI, one team, one point of accountability. No outsourced components, no handoff gaps, no quality compromise."
+                title="One Team, Full-Stack Capability"
+                description="Web, mobile, backend, cloud, and AI under one roof, so there's a single point of accountability instead of handoffs between outsourced pieces."
               />
               <FeatureCard
                 icon={Check}
-                title="Fixed-Price, 100% On-Time Delivery"
-                description="Formal scope agreed before development begins, no hourly billing surprises, no scope creep invoices, no post-launch charges."
+                title="Fixed-Price, On-Time Delivery"
+                description="Scope gets agreed before development starts, so there are no hourly billing surprises and no scope-creep invoices later."
               />
               <FeatureCard
                 icon={Headphones}
                 title="30-Day Post-Launch Support Included"
-                description="Every project includes hyper-care support, performance monitoring, and long-term maintenance options, we stay partners after launch."
+                description="Every project ships with hyper-care support, monitoring, and the option for longer-term maintenance, we stick around after launch."
               />
             </div>
           </div>
@@ -555,9 +565,9 @@ const About = () => {
             <div className="section-title reveal">
               <h2 id="industries-heading">Industries We Serve</h2>
               <p>
-                Over a decade of project delivery across key business sectors
-                means we bring domain knowledge, not just technical skills, to
-                every engagement.
+                A decade of project work across these sectors means we
+                bring some domain context to a project, not just engineers
+                who can write code against a spec.
               </p>
             </div>
             <nav aria-label="Industries served by QllmSoft" className="reveal">
@@ -566,28 +576,28 @@ const About = () => {
                   {
                     to: "/healthcare-software-development-pakistan",
                     title: "Healthcare",
-                    desc: "Hospital management systems, telemedicine platforms, clinic management, EMR/EHR, and patient portal development.",
+                    desc: "Hospital management systems, telemedicine platforms, clinic software, EMR/EHR tools, and patient portals.",
                   },
                   {
-                    title: "Finance &amp; FinTech",
+                    title: "Finance & FinTech",
                     desc: "Financial management platforms, accounting automation, real-time reporting dashboards, and secure payment integrations.",
                   },
                   {
                     to: "/education-software-development-pakistan",
                     title: "Education",
-                    desc: "School management systems, LMS platforms, eLearning apps, and student information systems with local payment integration.",
+                    desc: "School management systems, LMS platforms, eLearning apps, and student information systems.",
                   },
                   {
-                    title: "Logistics &amp; Warehouse",
-                    desc: "Inventory management systems, warehouse automation, delivery tracking, and supply chain visibility platforms.",
+                    title: "Logistics & Warehouse",
+                    desc: "Inventory management systems, warehouse automation, delivery tracking, and supply chain visibility tools.",
                   },
                   {
-                    title: "eCommerce &amp; Retail",
-                    desc: "Custom eCommerce platforms, inventory control, order management systems, and multi-vendor marketplace development.",
+                    title: "eCommerce & Retail",
+                    desc: "Custom eCommerce platforms, inventory control, order management, and multi-vendor marketplace builds.",
                   },
                   {
-                    title: "HR &amp; Enterprise Operations",
-                    desc: "Payroll systems, employee portals, attendance management, leave tracking, and performance evaluation software.",
+                    title: "HR & Enterprise Operations",
+                    desc: "Payroll systems, employee portals, attendance tracking, leave management, and performance review tools.",
                   },
                 ].map((item, i) => (
                   <article key={i} className="why-card">
@@ -595,9 +605,7 @@ const About = () => {
                       {item.to ? (
                         <Link to={item.to}>{item.title}</Link>
                       ) : (
-                        <span
-                          dangerouslySetInnerHTML={{ __html: item.title }}
-                        />
+                        item.title
                       )}
                     </h3>
                     <p>{item.desc}</p>
@@ -623,7 +631,7 @@ const About = () => {
                 <div className="vm-image">
                   <img
                     src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-                    alt="QllmSoft vision, trusted software partner for businesses globally"
+                    alt="QllmSoft vision, a software development partner for businesses worldwide"
                     loading="lazy"
                   />
                 </div>
@@ -649,7 +657,7 @@ const About = () => {
                 <div className="vm-image">
                   <img
                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80"
-                    alt="QllmSoft mission, delivering measurable business outcomes through custom software development"
+                    alt="QllmSoft mission, measurable business outcomes through custom software"
                     loading="lazy"
                   />
                 </div>
@@ -670,7 +678,7 @@ const About = () => {
               <div className="ceo-image">
                 <img
                   src={ceoImg}
-                  alt="Zain Ul Abedin, Founder and CEO of QllmSoft, software development company in Pakistan"
+                  alt="Zain Ul Abedin, Founder and CEO of QllmSoft"
                   loading="lazy"
                   itemProp="image"
                 />
@@ -680,23 +688,24 @@ const About = () => {
                 <h2 id="ceo-heading">Message from the CEO</h2>
 
                 <p>
-                  Since founding QllmSoft in 2015, we have grown from a
-                  specialist consultancy into a full-service software
-                  development agency trusted by 50+ businesses. Every project we take on carries a
-                  personal commitment from our leadership to deliver on time,
-                  within budget, and to a standard we are proud to put our name
-                  on, backed by a 100% on-time delivery record and a verified
-                  100% Upwork Job Success Score.
+                  I started QllmSoft in 2015 with a handful of people and a
+                  simple goal: build software that actually does what it's
+                  supposed to do, on a timeline clients can plan around. A
+                  decade later, that goal hasn't changed, even though the
+                  team and the size of the projects have grown a lot. We
+                  hold a 100% on-time delivery record and a verified 100%
+                  Upwork Job Success Score, and those numbers matter to me
+                  more than any award would.
                 </p>
 
                 <p>
-                  Our philosophy has remained the same from day one: understand
-                  the business problem first, then engineer the right solution.
-                  We do not sell you a technology stack, we solve your
-                  operational challenge with the best tools available for your
-                  specific context, scale, and budget. That commitment to
-                  outcomes over outputs is what has made our clients our
-                  longest-standing advocates.
+                  The thing I tell new hires on day one is that our job
+                  isn't to sell a tech stack, it's to solve the problem in
+                  front of us with whatever tools fit the client's
+                  situation, budget, and timeline. That's a harder sell than
+                  "we use the latest framework," but it's the reason
+                  clients we worked with in our first few years are still
+                  sending us new projects today.
                 </p>
 
                 <div className="ceo-identity">
@@ -808,13 +817,13 @@ const About = () => {
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Ready to Work with a Trusted Software Development
-                Company?
+                Ready to Work with a Software Development Partner You Can
+                Rely On?
               </h2>
               <p>
-                Tell us your challenge. We will review your requirements, send a
-                detailed fixed-price proposal within 24 hours, and schedule a
-                free discovery call, no commitment required.
+                Tell us your challenge. We'll review your requirements, send
+                a detailed fixed-price proposal within 24 hours, and set up
+                a free discovery call, no commitment required.
               </p>
               <Link to="/contact" className="btn btn-primary">
                 Get a Free Consultation

@@ -108,24 +108,15 @@ export const homeServices = [
   },
   {
     id: 5,
-    name: "ASP.NET Core Development",
-    description:
-      "Enterprise-grade backend solutions and secure internal systems built for high-performance scalability.",
-    image:
-      "https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800",
-    link: "/asp-net-core-development-company-pakistan"
-  },
-  {
-    id: 6,
     name: "AI Supported Solutions",
     description:
-      "Integrating smart automation and machine learning models to optimize workflows and data-driven decision making.",
+      "Integrating smart automation to optimize workflows and data-driven decision making.",
     image:
       "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
     link: "/ai-powered-software-solutions"
   },
   {
-    id: 7,
+    id: 6,
     name: "Web Design Services",
     description:
       "Modern UI/UX focused website designs crafted to improve engagement, user experience, and brand credibility.",
@@ -134,7 +125,7 @@ export const homeServices = [
     link: "/web-design-services"
   },
   {
-    id: 8,
+    id: 7,
     name: "WordPress Development",
     description:
       "Professional WordPress websites, business portals, and custom theme solutions optimized for speed, SEO, and scalability.",
@@ -143,8 +134,8 @@ export const homeServices = [
     link: "/wordpress-development-services"
   },
   {
-    id: 9,
-    name: "Digital Marketing",
+    id: 8,
+    name: "Digital Marketing & SEO",
     description:
       "SEO, social media marketing, and performance-driven digital campaigns designed to increase visibility and generate leads.",
     image:

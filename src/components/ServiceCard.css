@@ -187,6 +187,7 @@
 .service-card-btn:hover {
   background-color: #0D3A6E;
   transform: translateX(5px);
+  color: white;
 }
 
 /* Responsive */
