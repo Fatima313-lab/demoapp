@@ -44,6 +44,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import ceoImg from "../assets/ceo-qllmsoft.webp";
+import LeadMagnetBanner from "../components/LeadMagnetBanner";
 import {
   Eye,
   Target,
@@ -828,6 +829,7 @@ const About = () => {
               <Link to="/contact" className="btn btn-primary">
                 Get a Free Consultation
               </Link>
+              <LeadMagnetBanner variant="calculator" />
             </div>
           </div>
         </section>

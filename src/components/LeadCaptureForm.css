@@ -1,0 +1,75 @@
+.lead-capture-form {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.lead-form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.lead-form-row input {
+  flex: 1;
+  min-width: 200px;
+  padding: 13px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.lead-form-row input:focus {
+  outline: none;
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.25);
+}
+
+.lead-form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.lead-capture-form .btn {
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.lead-capture-form .btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.lead-form-error {
+  color: #c53030;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.lead-form-success {
+  text-align: center;
+}
+
+.lead-form-success p {
+  color: #2f855a;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+.lead-form-download-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.lead-form-disclaimer {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-top: 10px;
+  text-align: center;
+}

@@ -6,6 +6,10 @@ import Footer from "./components/Footer";
 import ChatBot from "./components/ChatBot";
 import WhatsAppButton from "./components/WhatsAppButton";
 
+import CostCalculator from "./pages/CostCalculator";
+import RequirementsChecklist from "./pages/RequirementsChecklist";
+
+
 // Lazy loaded pages - each page loads only when visited
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -154,6 +158,10 @@ function App() {
 								path="/finance-management-system"
 								element={<FinanceManagementSystem />}
 							/>
+							
+<Route path="/software-development-cost-calculator" element={<CostCalculator />} />
+<Route path="/software-project-requirements-checklist" element={<RequirementsChecklist />} />
+
 						</Routes>
 					</Suspense>
 					<Footer />
