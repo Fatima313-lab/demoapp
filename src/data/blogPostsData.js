@@ -24,7 +24,6 @@ import mobileappimg from '../assets/Blog_Imgs/mobile-app.webp';
 import mobileappsecondryimg from '../assets/Mobile-app-development.webp';
 import outsourcemobileappimg from '../assets/Blog_Imgs/outsourcemobileapp.webp';
 import outsourcemobileapp2 from '../assets/Blog_Imgs/outsourcemobileapp2.webp';
-import SEO from '../components/SEO';
 import ecommerce from '../assets/Blog_Imgs/ecommerce-developmet.webp';
 import ecommercesecondary from '../assets/Blog_Imgs/ecommerce-secondary.webp';
 import aspdotnet from '../assets/Blog_Imgs/ASP.NET.webp';
