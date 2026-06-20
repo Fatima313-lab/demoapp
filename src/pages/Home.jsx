@@ -1010,7 +1010,7 @@ QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
           <div className="container">
             <div className="section-title">
               <h2 id="faq-heading">
-                Frequently Asked Questions, Custom Software Development Services
+                Frequently Asked Questions
               </h2>
               <p>
                 Common questions businesses ask before choosing QllmSoft as their software

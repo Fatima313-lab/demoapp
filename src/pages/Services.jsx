@@ -1070,12 +1070,7 @@ const Services = () => {
             <div className="qllm-product-intellect">
               <div className="product-meta-brand">Ready-to-Deploy SaaS Solution</div>
               <div className="product-logo-wrapper">
-                <img
-                  src="https://qllmdocs.com/images/QllmDocs-Horizontal.png"
-                  alt="QllmDocs Document Management System Logo"
-                  className="product-brand-logo"
-                  loading="lazy"
-                />
+                
                 <span className="product-brand-subtitle">
                   Secure &amp; Intelligent DMS
                 </span>
