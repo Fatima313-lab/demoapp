@@ -25,7 +25,7 @@
  * SCHEMA COVERAGE (8 types):
  *  ✓ Organization + LocalBusiness
  *  ✓ CollectionPage + ItemList
- *  ✓ WebPage + AggregateRating
+ *  ✓ WebPage
  *  ✓ BreadcrumbList
  *  ✓ FAQPage (12 Q&A)
  *  ✓ HowTo (selection guide)
@@ -488,13 +488,7 @@ const SCHEMA_ORG = JSON.stringify({
         'https://www.linkedin.com/company/qllmsoft',
         'https://www.upwork.com/freelancers/~0170e20f8803389a86',
         'https://www.freelancer.com/u/mrprogrmmr',
-      ],
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        bestRating: '5',
-        reviewCount: '47',
-      },
+      ]
     },
     /* 2. CollectionPage + ItemList */
     {

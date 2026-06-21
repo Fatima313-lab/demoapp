@@ -1676,8 +1676,6 @@ const MobileAppDevelopment = () => {
         <section
           className="section testimonial-section"
           aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development Company

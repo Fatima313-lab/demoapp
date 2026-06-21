@@ -67,146 +67,196 @@ import GlobalTeamImg from "../assets/pakistanimg.webp";
 import "./Home.css";
 import "animate.css";
 
-/* ─── JSON-LD: Organization ────────────────────────────────────── */
+
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://qllmsoft.com/#organization",
+
   name: "QllmSoft",
   url: "https://qllmsoft.com",
+
   logo: {
     "@type": "ImageObject",
-    url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
-    width: 200,
-    height: 60,
+    url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
   },
+
+  image:
+    "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
+
   description:
-    "QllmSoft is a custom software development company delivering enterprise-grade digital solutions for businesses worldwide, including web applications, mobile apps, internal business systems, APIs, and AI-powered automation across finance, healthcare, education, logistics, and eCommerce.",
+    "QllmSoft is a custom software development company delivering web applications, mobile apps, enterprise software, business automation systems, API integrations, and AI-powered solutions for businesses worldwide.",
+
   foundingDate: "2015",
+
   telephone: "+92-334-8229288",
+
   email: "qllmsoft@gmail.com",
+
   address: {
     "@type": "PostalAddress",
     streetAddress: "H # 181, Camping Ground",
     addressLocality: "Lalamusa",
     addressRegion: "Punjab",
-    addressCountry: "PK",
     postalCode: "50350",
+    addressCountry: "PK"
   },
-  areaServed: [
-    { "@type": "Country", name: "United States" },
-    { "@type": "Country", name: "United Kingdom" },
-    { "@type": "Country", name: "United Arab Emirates" },
-    { "@type": "Country", name: "Saudi Arabia" },
-    { "@type": "Country", name: "Canada" },
-    { "@type": "Country", name: "Australia" },
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "Pakistan" },
-  ],
-  sameAs: [
-    "https://www.freelancer.com/u/mrprogrmmr",
-    "https://www.upwork.com/freelancers/~0170e20f8803389a86",
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "47",
-    bestRating: "5",
-    worstRating: "1",
-  },
+
   founder: {
-    "@type": "Person",
-    name: "Zain Ul Abedin",
-    jobTitle: "Founder & CEO",
-    url: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
+    "@id": "https://qllmsoft.com/#founder"
   },
+
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide"
+  },
+
+  knowsAbout: [
+    "Custom Software Development",
+    "Web Application Development",
+    "Mobile App Development",
+    "Enterprise Software",
+    "Business Automation",
+    "Artificial Intelligence",
+    "API Development",
+    "Cloud Solutions",
+    "Software Outsourcing"
+  ],
+
+  sameAs: [
+    "https://www.linkedin.com/company/qllmsoft",
+    "https://www.freelancer.com/u/mrprogrmmr",
+    "https://www.upwork.com/freelancers/~0170e20f8803389a86"
+  ]
 };
 
-/* ─── JSON-LD: WebSite (Sitelinks SearchBox) ───────────────────── */
-const schemaWebSite = {
+const schemaFounder = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://qllmsoft.com/#founder",
+
+  name: "Zain Ul Abedin",
+
+  jobTitle: "Founder & CEO",
+
+  worksFor: {
+    "@id": "https://qllmsoft.com/#organization"
+  },
+
+  url: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
+
+  sameAs: [
+    "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
+  ]
+};
+
+const schemaWebsite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://qllmsoft.com/#website",
-  name: "QllmSoft, Custom Software Development Company",
+
   url: "https://qllmsoft.com",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://qllmsoft.com/search?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
+
+  name: "QllmSoft",
+
+  publisher: {
+    "@id": "https://qllmsoft.com/#organization"
+  }
 };
 
-/* ─── JSON-LD: Service ─────────────────────────────────────────── */
+const schemaHomePage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+
+  "@id": "https://qllmsoft.com/#webpage",
+
+  url: "https://qllmsoft.com",
+
+  name: "Custom Software Development Company | QllmSoft",
+
+  description:
+    "QllmSoft builds enterprise software, web applications, mobile apps, business automation platforms, and AI-powered solutions for businesses worldwide.",
+
+  isPartOf: {
+    "@id": "https://qllmsoft.com/#website"
+  },
+
+  about: {
+    "@id": "https://qllmsoft.com/#organization"
+  },
+
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
+  }
+};
+
 const schemaService = {
   "@context": "https://schema.org",
+
   "@type": "Service",
+
+  "@id": "https://qllmsoft.com/#service",
+
   name: "Custom Software Development Services",
-  description:
-    "QllmSoft delivers end-to-end software solutions for businesses worldwide, custom enterprise systems, web applications, mobile apps, business automation, API integrations, and AI-powered tools built around real operational workflows.",
+
   provider: {
-    "@type": "Organization",
-    name: "QllmSoft",
-    url: "https://qllmsoft.com",
+    "@id": "https://qllmsoft.com/#organization"
   },
-  areaServed: [
-    "United States",
-    "United Kingdom",
-    "United Arab Emirates",
-    "Saudi Arabia",
-    "Canada",
-    "Australia",
-    "Germany",
-    "Pakistan",
-  ],
+
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide"
+  },
+
   serviceType: "Software Development",
+
+  description:
+    "Custom software development, web applications, mobile apps, enterprise systems, business automation, API integration, and AI-powered software solutions.",
+
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Software Solutions and Services",
+
+    name: "Software Development Services",
+
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Custom Software Development",
-        },
+          name: "Custom Software Development"
+        }
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Enterprise Web Application Development",
-        },
+          name: "Enterprise Web Application Development"
+        }
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Mobile App Development Services",
-        },
+          name: "Mobile App Development"
+        }
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Business Process Automation",
-        },
+          name: "Business Process Automation"
+        }
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "AI-Powered Software Solutions",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Software Outsourcing Services",
-        },
-      },
-    ],
-  },
+          name: "AI Software Development"
+        }
+      }
+    ]
+  }
 };
 
 /* ─── JSON-LD: FAQPage ─────────────────────────────────────────── */
@@ -239,85 +289,6 @@ const schemaFAQ = {
       },
     },
   ],
-};
-
-/* ─── JSON-LD: LocalBusiness ─────────────────────────────────────
-   Kept for Google Business Profile consistency only.
-   All user-facing content uses global language.
-─────────────────────────────────────────────────────────────────── */
-const schemaLocal = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "QllmSoft",
-  "@id": "https://qllmsoft.com/#localbusiness",
-  url: "https://qllmsoft.com",
-  telephone: "+92-334-8229288",
-  priceRange: "$$",
-  image:
-    "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "H # 181, Camping Ground",
-    addressLocality: "Lalamusa",
-    addressRegion: "Punjab",
-    addressCountry: "PK",
-  },
-  geo: { "@type": "GeoCoordinates", latitude: "32.7003", longitude: "73.9451" },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "47",
-    bestRating: "5",
-  },
-};
-
-/* ─── JSON-LD: AboutPage ────────────────────────────────────────── */
-const schemaAbout = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "@id": "https://qllmsoft.com/#about",
-  name: "About QllmSoft, Custom Software Development Company",
-  url: "https://qllmsoft.com/about",
-  description:
-    "QllmSoft is a custom software development company founded in 2015, with over 50 enterprise-grade solutions delivered across finance, healthcare, education, logistics, and eCommerce for 200+ clients in 47+ countries.",
-  mainEntity: {
-    "@type": "Organization",
-    "@id": "https://qllmsoft.com/#organization",
-    name: "QllmSoft",
-    foundingDate: "2015",
-    numberOfEmployees: {
-      "@type": "QuantitativeValue",
-      minValue: 10,
-      maxValue: 49,
-    },
-    knowsAbout: [
-      "Custom Software Development",
-      "Enterprise Web Application Development",
-      "Mobile App Development",
-      "Business Process Automation",
-      "AI-Powered Software Solutions",
-      "Legacy System Modernisation",
-      "Software Outsourcing",
-      "API Development and Integration",
-    ],
-    founder: {
-      "@type": "Person",
-      name: "Zain Ul Abedin",
-      jobTitle: "Founder & CEO",
-      url: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
-      sameAs: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
-    },
-    award: [
-      "Upwork 100% Job Success Score",
-      "Freelancer 5-Star Rating",
-    ],
-  },
 };
 
 const processSteps = [

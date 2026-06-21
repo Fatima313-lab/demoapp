@@ -77,11 +77,7 @@ const schemaService = {
     url: "https://qllmsoft.com",
   },
   areaServed: [
-    "Pakistan",
-    "United States",
-    "United Kingdom",
-    "UAE",
-    "Saudi Arabia",
+    "Worldwide"
   ],
   url: PAGE_URL,
   hasOfferCatalog: {
@@ -1397,12 +1393,9 @@ const ApiDevelopmentServices = () => {
         </section>
 
         {/* ── TESTIMONIALS ── */}
-        <section
-          className="section testimonial-section"
-          aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
-        >
+
+        <section className="testimonial-section">
+        
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews, QllmSoft Software Development agency
           </h2>

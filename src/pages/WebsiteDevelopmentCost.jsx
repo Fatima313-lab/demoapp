@@ -515,7 +515,7 @@ const WebsiteDevelopmentCost = () => {
                 {Icon:IconCode,      title:'Custom Code — Not Template Adaptations', desc:'We write code from scratch for every project — your website is not an adapted WordPress template with your logo swapped in. Custom code means better performance, better security, and complete flexibility to add any feature your business needs.'},
                 {Icon:IconShield,    title:'Security Built In From Architecture',    desc:'OWASP Top 10 compliance, HTTPS enforcement, input validation, and SQL injection prevention are designed into the architecture before development begins — not patched on afterward. Your website is secure from day one.'},
                 {Icon:IconSearch,    title:'SEO-Optimised Core Web Vitals From Day One',desc:'Every website we build passes Core Web Vitals benchmarks at launch — semantic HTML5, optimised images, minimal render-blocking resources, and fast server response times that give you a strong technical SEO foundation from the first day in production.'},
-                {Icon:IconTrending,  title:'Verified on Upwork & Freelancer',        desc:'Top-Rated Plus on Upwork with a 100% Job Success Score. 5-star reviews on Freelancer from clients in the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Our reputation is independently verified, not self-reported.'},
+                {Icon:IconTrending,  title:'Verified on Upwork & Freelancer',        desc:'Top-Rated Plus on Upwork with a 100% Job Success Score. 5-star reviews on Freelancer from clients worldwide. Our reputation is independently verified, not self-reported.'},
                 {Icon:IconUsers,     title:'Full IP Ownership — Always',              desc:'Your website code, design assets, database schema, and all project deliverables belong to you — not us. We sign an NDA before work begins and transfer complete intellectual property at project delivery. No licensing fees, ever.'},
               ].map((w,i)=>(
                 <article key={i} className={`ip-why-card animate__animated ${whyInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.08}s`}}>
@@ -534,7 +534,7 @@ const WebsiteDevelopmentCost = () => {
             <p className="section-eyebrow">Verified Client Reviews</p>
             <div className="section-title">
               <h2 id="reviews-heading">What Clients Say About QllmSoft Website Development</h2>
-              <p>Independent reviews from Freelancer and Upwork — UK, USA, UAE, Saudi Arabia, and Jordan.</p>
+              <p>Independent reviews from Freelancer and Upwork.</p>
             </div>
             <div className="ip-reviews__grid">
               {[
@@ -563,7 +563,7 @@ const WebsiteDevelopmentCost = () => {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="section csd-faq ip-faq" aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
+        <section className="section csd-faq ip-faq" aria-labelledby="faq-heading">
           <div className="container">
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
