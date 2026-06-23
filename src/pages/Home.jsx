@@ -436,13 +436,6 @@ const Home = () => {
           content="QllmSoft Software Development Company"
         />
 
-        {/* JSON-LD × 6 */}
-        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaWebSite)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaService)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaLocal)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaAbout)}</script>
       </Helmet>
 
       <main className="home-page" id="main-content" role="main">
