@@ -39,7 +39,8 @@ export const navigationLinks = [
   { name: "Services", path: "/services" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" }
+  { name: "Contact", path: "/contact" },
+  { name: "Write for Us", path: "/write-for-us" }
 ];
 
 export const heroSlides = [
