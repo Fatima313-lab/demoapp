@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ChatBot from "./components/ChatBot";
 import WhatsAppButton from "./components/WhatsAppButton";
-
 import CostCalculator from "./pages/CostCalculator";
 import RequirementsChecklist from "./pages/RequirementsChecklist";
 
@@ -58,7 +57,9 @@ const RealEstateSoftware = lazy(() => import("./pages/RealEstateSoftware"));
 const FinanceManagementSystem = lazy(
 	() => import("./pages/FinanceManagementSystem"),
 );
-
+const GuestPostPage = lazy(
+	() => import("./pages/GuestPostPage"),
+);
 import "./styles/global.css";
 import "./App.css";
 import { HelmetProvider } from "react-helmet-async";
@@ -158,7 +159,10 @@ function App() {
 								path="/finance-management-system"
 								element={<FinanceManagementSystem />}
 							/>
-							
+							<Route
+								path="/write-for-us"
+								element={<GuestPostPage />}
+							/>
 <Route path="/software-development-cost-calculator" element={<CostCalculator />} />
 <Route path="/software-project-requirements-checklist" element={<RequirementsChecklist />} />
 
