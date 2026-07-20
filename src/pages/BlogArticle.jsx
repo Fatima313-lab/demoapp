@@ -1,8 +1,9 @@
-import React from 'react';
-import { useParams, Navigate, Link } from 'react-router-dom';
-import { Calendar, ArrowLeft, User, Tag } from 'lucide-react';
-import blogPostsData from '../data/blogPostsData';
-import './BlogArticle.css';
+import React from "react";
+import { useParams, Navigate, Link } from "react-router-dom";
+import { Calendar, ArrowLeft, User, Tag } from "lucide-react";
+import blogPostsData from "../data/blogPostsData";
+import "./BlogArticle.css";
+import SEO from '../components/SEO';
 
 // const BlogSection = ({ heading, paragraphs, list }) => (
 //   <div className="blog-article-section">
@@ -38,11 +39,11 @@ const SectionParagraph = ({ text }) => {
     return <p>{text}</p>;
   }
 
-  const steps = text.split("→").map(s => s.trim());
+  const steps = text.split("→").map((s) => s.trim());
 
   return (
     <div className="workflow-inline">
-      {steps.map(step => (
+      {steps.map((step) => (
         <span key={step} className="workflow-chip">
           {step}
         </span>
@@ -51,24 +52,41 @@ const SectionParagraph = ({ text }) => {
   );
 };
 
-const BlogSection = ({ heading, paragraphs, list, html,table }) => (
+const BlogSection = ({ heading, paragraphs, list, html, table ,detailedList }) => (
   <div className="blog-article-section">
-
     {/* Render RAW HTML if provided */}
-    {html && (
-      <div
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    )}
+    {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
 
     {/* Normal structured rendering */}
     {!html && (
       <>
         {heading && <h2>{heading}</h2>}
 
-        {paragraphs && paragraphs.map((p, i) => (
-          <SectionParagraph key={i} text={p} />
-        ))}
+        {paragraphs &&
+          paragraphs.map((p, i) => <SectionParagraph key={i} text={p} />)}
+
+
+       
+
+        
+        {detailedList && (
+          <div className="detailed-blog-list" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+            {detailedList.map((item, itemIdx) => (
+              <div key={itemIdx} className="detailed-blog-card" style={{ padding: '15px', background: '#f9f9f9', borderRadius: '8px', marginBottom: '15px', borderLeft: '4px solid #0066cc' }}>
+                <h3 style={{ margin: '0 0 5px 0', color: '#111' }}>{item.name}</h3>
+                <p style={{ fontSize: '12px', color: '#666', fontWeight: 'bold', margin: '0 0 8px 0' }}>HUB: {item.hub}</p>
+                <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}><strong>Specialties:</strong> {item.specialties}</p>
+                <p style={{ fontStyle: 'italic', color: '#444', margin: '0', background: '#fff', padding: '10px', borderRadius: '4px' }}>"{item.insight}"</p>
+              </div>
+            ))}
+          </div>
+        )}
+      
+        
+
+
+
+
 
         {list && (
           <ul className="blog-article-list">
@@ -77,32 +95,30 @@ const BlogSection = ({ heading, paragraphs, list, html,table }) => (
             ))}
           </ul>
         )}
-
       </>
     )}
     {table && (
-  <div className="blog-table-wrapper">
-    <table className="blog-table">
-      <thead>
-        <tr>
-          {table.headers.map((header, i) => (
-            <th key={i}>{header}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {table.rows.map((row, i) => (
-          <tr key={i}>
-            {row.map((cell, j) => (
-              <td key={j}>{cell}</td>
+      <div className="blog-table-wrapper">
+        <table className="blog-table">
+          <thead>
+            <tr>
+              {table.headers.map((header, i) => (
+                <th key={i}>{header}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, i) => (
+              <tr key={i}>
+                {row.map((cell, j) => (
+                  <td key={j}>{cell}</td>
+                ))}
+              </tr>
             ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
-)}
-
+          </tbody>
+        </table>
+      </div>
+    )}
   </div>
 );
 const BlogArticle = () => {
@@ -117,6 +133,26 @@ const BlogArticle = () => {
 
   return (
     <main className="blog-article-page">
+
+     
+     <SEO 
+        title={post.seoTitle || post.title} 
+        description={post.description}
+        url={post.canonicalUrl}
+        image={post.image}
+        schema={post.schemas && post.schemas[0]} 
+      />
+
+
+      {post.schemas && post.schemas.slice(1).map((additionalSchema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(additionalSchema)}
+        </script>
+      ))}
+
+
+
+
       {/* Hero Section */}
       <section className="blog-article-hero">
         <div className="container">
@@ -150,20 +186,31 @@ const BlogArticle = () => {
             {/* Main Content */}
             <article className="blog-article-main">
               {sections[0] && <BlogSection {...sections[0]} />}
-              {sections[1] && <BlogSection {...sections[1]} />}
-              {sections[2] && <BlogSection {...sections[2]} />}
-              {sections[3] && <BlogSection {...sections[3]} />}
-              {sections[4] && <BlogSection {...sections[4]} />}
-              {sections[5] && <BlogSection {...sections[5]} />}
-              {sections[6] && <BlogSection {...sections[6]} />}
-              {sections[7] && <BlogSection {...sections[7]} />}
-              {sections[8] && <BlogSection {...sections[8]} />}
-              {sections[9] && <BlogSection {...sections[9]} />}
-              {sections[10] && <BlogSection {...sections[10]} />}
-              {sections[11] && <BlogSection {...sections[11]} />}
-              {sections[12] && <BlogSection {...sections[12]} />}
-              {sections[13] && <BlogSection {...sections[13]} />}
-              {sections[14] && <BlogSection {...sections[14]} />}
+              {/* SECOND IMAGE */}
+              {post.secondaryImage && (
+                <figure className="blog-inline-editorial-image">
+                  <img
+                    src={post.secondaryImage}
+                    alt={post.secondaryImageMeta?.alt || post.title}
+                    loading="lazy"
+                    className="blog-inline-editorial-image__img"
+                  />
+
+                  {post.secondaryImageMeta?.caption && (
+                    <figcaption className="editorial-caption">
+                      {post.secondaryImageMeta.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+
+
+              {sections.slice(1).map((section, index) => (
+                <BlogSection key={index} {...section} />
+              ))}
+
+
+
             </article>
 
             {/* Sidebar */}
@@ -174,14 +221,23 @@ const BlogArticle = () => {
 
               <div className="sidebar-cta">
                 <h3>Ready to Start Your Project?</h3>
-                <p>Let us discuss how QllmSoft can help transform your business with custom software solutions.</p>
-                <Link to="/contact" className="btn btn-primary">Get Free Quote</Link>
+                <p>
+                  Let us discuss how QllmSoft can help transform your business
+                  with custom software solutions.
+                </p>
+                <Link to="/contact" className="btn btn-primary">
+                  Get Free Quote
+                </Link>
               </div>
 
               <div className="sidebar-contact">
                 <h4>Quick Contact</h4>
-                <p><strong>Email:</strong> info@qllmsoft.com</p>
-                <p><strong>Phone:</strong> +92 334 8229288</p>
+                <p>
+                  <strong>Email:</strong> qllmsoft@gmail.com
+                </p>
+                <p>
+                  <strong>Phone:</strong> +92 334 8229288
+                </p>
               </div>
             </aside>
           </div>
@@ -192,13 +248,17 @@ const BlogArticle = () => {
       <section className="blog-article-cta">
         <div className="container">
           <h2>Need Expert Software Development?</h2>
-          <p>Partner with QllmSoft for reliable, scalable, and innovative solutions.</p>
-          <Link to="/contact" className="btn btn-primary">Contact Us Today</Link>
+          <p>
+            Partner with QllmSoft for reliable, scalable, and innovative
+            solutions.
+          </p>
+          <Link to="/contact" className="btn btn-primary">
+            Contact Us Today
+          </Link>
         </div>
       </section>
     </main>
   );
 };
-
 
 export default BlogArticle;

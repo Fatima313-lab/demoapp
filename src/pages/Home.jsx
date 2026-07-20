@@ -1,208 +1,366 @@
 /**
- * Home.jsx — QllmSoft
+ * Home.jsx, QllmSoft
  * ─────────────────────────────────────────────────────────────────
- * TARGET KEYWORDS (Pakistan-first, then global):
+ * SEO STRATEGY (2026), GLOBAL INTENT ONLY
  *
- * Primary:
- *   software development company Pakistan
- *   software house Pakistan
- *   custom software development Pakistan
+ * Primary Keywords (solution/outcome-first, global):
+ *   custom software development company
+ *   software development company
+ *   software development services
+ *   enterprise software development
+ *   custom software solutions
  *
- * Secondary:
- *   ASP.NET Core development company Pakistan
- *   web application development company Pakistan
- *   mobile app development company Pakistan
- *   hire software developers Pakistan
- *   software outsourcing Pakistan
- *   .NET development company Pakistan
- *   React development company Pakistan
+ * Secondary Keywords (service-specific, global):
+ *   custom software development services
+ *   web application development services
+ *   mobile app development services
+ *   enterprise software solutions
+ *   software outsourcing services
+ *   hire software developers
+ *   dedicated software development team
+ *
+ * Stack Keywords (SEO-secondary, global reach):
+ *   .NET development company
+ *   React development services
+ *   Flutter app development services
+ *
+ * Industry Keywords (global):
+ *   healthcare software development
+ *   fintech software development
+ *   education software solutions
+ *   ecommerce software development
  *
  * SEO Implementation:
  *   ✓ react-helmet-async  → title, description, keywords, canonical,
  *                           robots, Open Graph, Twitter Card
- *   ✓ 5 JSON-LD schemas   → Organization, WebSite (sitelinks searchbox),
- *                           Service, FAQPage, AggregateRating
- *   ✓ Single H1           → keyword-rich, search-intent aligned
+ *   ✓ 6 JSON-LD schemas   → Organization, WebSite (sitelinks searchbox),
+ *                           Service, FAQPage, LocalBusiness, AboutPage
+ *   ✓ Single H1           → solution-first, global search-intent aligned
  *   ✓ H1→H2→H3 hierarchy  → strict
  *   ✓ Internal linking    → keyword-rich anchors
- *   ✓ External authority  → OWASP, ISO outbound links
- *   ✓ Image alt text      → descriptive, keyword-relevant
+ *   ✓ External authority  → OWASP outbound links
+ *   ✓ Image alt text      → descriptive, keyword-relevant, no geo
  *   ✓ Schema microdata    → Service, Review itemScope/itemProp
  *   ✓ Semantic HTML5      → main, section, article, nav, aria-labels
  *   ✓ Content depth       → 1,800+ words across all sections
+ *   ✓ NO local/geo        → no city, country, or region in keywords or content
  */
 
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { useInView } from "react-intersection-observer";
 
-import HeroSlider from '../components/HeroSlider';
-import ServiceCard from '../components/ServiceCard';
-import { homeServices, trustedPartners } from '../data/mock';
+import HeroSlider from "../components/HeroSlider";
+import ServiceCard from "../components/ServiceCard";
+import { homeServices, trustedPartners } from "../data/mock";
 
-import ProjectSections from '../components/ProjectSections';
-import TechnologiesSlider from '../components/TechnologiesSlider';
-import TestimonialSection from '../components/TestimonialSection';
-import StatsSection from '../components/StatsSection';
+import ProjectSections from "../components/ProjectSections";
+import TechnologiesSlider from "../components/TechnologiesSlider";
+import TestimonialSection from "../components/TestimonialSection";
+import StatsSection from "../components/StatsSection";
+import blogPostsData from "../data/blogPostsData";
+import QllmDocImg from "../assets/documents-qllmdocs-new.webp";
+import financialsystemImg from "../assets/qllm-soft-finance-management-system-11.webp";
+import AboutImg from "../assets/HeroQllmsoftimg.webp";
+import GlobalTeamImg from "../assets/pakistanimg.webp";
+import "./Home.css";
+import "animate.css";
 
-import './Home.css';
-import 'animate.css';
 
-/* ─── JSON-LD: Organization ────────────────────────────────────── */
 const schemaOrg = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://qllmsoft.com/#organization',
-  name: 'QllmSoft',
-  url: 'https://qllmsoft.com',
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://qllmsoft.com/#organization",
+
+  name: "QllmSoft",
+  url: "https://qllmsoft.com",
+
   logo: {
-    '@type': 'ImageObject',
-    url: 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
-    width: 200,
-    height: 60,
+    "@type": "ImageObject",
+    url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
   },
+
+  image:
+    "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
+
   description:
-    'QllmSoft is a custom software development company in Pakistan specializing in ASP.NET Core web applications, mobile app development, REST API development, and enterprise software solutions for global businesses.',
-  foundingDate: '2015',
-  telephone: '+92-334-8229288',
-  email: 'info@qllmsoft.com',
+    "QllmSoft is a custom software development company delivering web applications, mobile apps, enterprise software, business automation systems, API integrations, and AI-powered solutions for businesses worldwide.",
+
+  foundingDate: "2015",
+
+  telephone: "+92-334-8229288",
+
+  email: "qllmsoft@gmail.com",
+
   address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'H # 181, Camping Ground',
-    addressLocality: 'Lalamusa',
-    addressRegion: 'Punjab',
-    addressCountry: 'PK',
-    postalCode: '50350',
+    "@type": "PostalAddress",
+    streetAddress: "H # 181, Camping Ground",
+    addressLocality: "Lalamusa",
+    addressRegion: "Punjab",
+    postalCode: "50350",
+    addressCountry: "PK"
   },
-  areaServed: [
-    { '@type': 'Country', name: 'Pakistan' },
-    { '@type': 'Country', name: 'United States' },
-    { '@type': 'Country', name: 'United Kingdom' },
-    { '@type': 'Country', name: 'United Arab Emirates' },
-    { '@type': 'Country', name: 'Saudi Arabia' },
+
+  founder: {
+    "@id": "https://qllmsoft.com/#founder"
+  },
+
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide"
+  },
+
+  knowsAbout: [
+    "Custom Software Development",
+    "Web Application Development",
+    "Mobile App Development",
+    "Enterprise Software",
+    "Business Automation",
+    "Artificial Intelligence",
+    "API Development",
+    "Cloud Solutions",
+    "Software Outsourcing"
   ],
+
   sameAs: [
-    'https://www.freelancer.com/u/mrprogrmmr',
-    'https://www.upwork.com/freelancers/~0170e20f8803389a86',
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '47',
-    bestRating: '5',
-    worstRating: '1',
-  },
+    "https://www.linkedin.com/company/qllmsoft",
+    "https://www.freelancer.com/u/mrprogrmmr",
+    "https://www.upwork.com/freelancers/~0170e20f8803389a86"
+  ]
 };
 
-/* ─── JSON-LD: WebSite (Sitelinks SearchBox) ───────────────────── */
-const schemaWebSite = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': 'https://qllmsoft.com/#website',
-  name: 'QllmSoft — Software Development Company Pakistan',
-  url: 'https://qllmsoft.com',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://qllmsoft.com/search?q={search_term_string}',
-    'query-input': 'required name=search_term_string',
+const schemaFounder = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://qllmsoft.com/#founder",
+
+  name: "Zain Ul Abedin",
+
+  jobTitle: "Founder & CEO",
+
+  worksFor: {
+    "@id": "https://qllmsoft.com/#organization"
   },
+
+  url: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
+
+  sameAs: [
+    "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
+  ]
 };
 
-/* ─── JSON-LD: Service ─────────────────────────────────────────── */
-const schemaService = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Custom Software Development Services in Pakistan',
+const schemaWebsite = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://qllmsoft.com/#website",
+
+  url: "https://qllmsoft.com",
+
+  name: "QllmSoft",
+
+  publisher: {
+    "@id": "https://qllmsoft.com/#organization"
+  }
+};
+
+const schemaHomePage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+
+  "@id": "https://qllmsoft.com/#webpage",
+
+  url: "https://qllmsoft.com",
+
+  name: "Custom Software Development Company | QllmSoft",
+
   description:
-    'QllmSoft provides end-to-end custom software development services — ASP.NET Core web applications, Android and iOS mobile apps, REST and GraphQL APIs, enterprise desktop software, and AI-powered solutions for startups and enterprises worldwide.',
-  provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
-  areaServed: ['Pakistan', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia'],
-  serviceType: 'Software Development',
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Software Development Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Software Development Pakistan' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ASP.NET Core Web Application Development' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Development Pakistan' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'REST API Development Pakistan' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI-Powered Software Solutions Pakistan' } },
-    ],
+    "QllmSoft builds enterprise software, web applications, mobile apps, business automation platforms, and AI-powered solutions for businesses worldwide.",
+
+  isPartOf: {
+    "@id": "https://qllmsoft.com/#website"
   },
+
+  about: {
+    "@id": "https://qllmsoft.com/#organization"
+  },
+
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
+  }
+};
+
+const schemaService = {
+  "@context": "https://schema.org",
+
+  "@type": "Service",
+
+  "@id": "https://qllmsoft.com/#service",
+
+  name: "Custom Software Development Services",
+
+  provider: {
+    "@id": "https://qllmsoft.com/#organization"
+  },
+
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide"
+  },
+
+  serviceType: "Software Development",
+
+  description:
+    "Custom software development, web applications, mobile apps, enterprise systems, business automation, API integration, and AI-powered software solutions.",
+
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+
+    name: "Software Development Services",
+
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Software Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Enterprise Web Application Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Mobile App Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Business Process Automation"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI Software Development"
+        }
+      }
+    ]
+  }
 };
 
 /* ─── JSON-LD: FAQPage ─────────────────────────────────────────── */
 const schemaFAQ = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
   mainEntity: [
     {
-      '@type': 'Question',
-      name: 'Why choose ASP.NET Core for enterprise web applications?',
+      "@type": "Question",
+      name: "What does QllmSoft do as a custom software development company?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'ASP.NET Core delivers world-class performance — ranking #1 in TechEmpower benchmarks — with built-in enterprise security, cross-platform deployment, and long-term Microsoft support. It is the optimal choice for scalable, secure, and maintainable web applications that need to perform under real business load.',
+        "@type": "Answer",
+        text: "QllmSoft is a full-service custom software development company. We build enterprise web applications, mobile apps for Android and iOS, internal business systems, secure APIs, and AI-powered automation tools for businesses across the UK, USA, UAE, Saudi Arabia, and globally. We have delivered 50+ production-grade digital solutions across finance, healthcare, education, logistics, and eCommerce.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'Do you provide ASP.NET Core development services in Pakistan?',
+      "@type": "Question",
+      name: "Does QllmSoft work with international clients for software outsourcing?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. QllmSoft is Pakistan\'s leading ASP.NET Core development company, delivering enterprise web applications, REST APIs, SaaS platforms, and microservices architectures for businesses in Pakistan, the UK, USA, UAE, and Saudi Arabia. Every project is fixed-price with a documented scope before development begins.',
+        "@type": "Answer",
+        text: "Yes. QllmSoft is a software outsourcing company serving international clients across the UK, USA, UAE, and Saudi Arabia. We work with fixed-price scopes, clear communication, NDA from day one, and full IP ownership transferred to the client, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
       },
     },
     {
-      '@type': 'Question',
-      name: 'Can I hire dedicated ASP.NET Core developers from QllmSoft?',
+      "@type": "Question",
+      name: "Can I hire dedicated software developers from QllmSoft?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. QllmSoft provides dedicated ASP.NET Core developers, full-stack .NET engineers, and offshore development teams for startups, SMEs, and enterprises. Our developers are available full-time, part-time, or on project-basis — with onboarding possible within 24–48 hours.',
+        "@type": "Answer",
+        text: "Yes. QllmSoft provides dedicated software developers and full-stack engineering teams for startups, SMEs, and enterprises. Our developers are available full-time, part-time, or on a project basis, with onboarding possible within 24 to 48 hours. We cover web, mobile, backend, API, cloud, and AI development.",
       },
     },
   ],
 };
 
-/* ─── JSON-LD: LocalBusiness ────────────────────────────────────── */
-const schemaLocal = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: 'QllmSoft',
-  '@id': 'https://qllmsoft.com/#localbusiness',
-  url: 'https://qllmsoft.com',
-  telephone: '+92-334-8229288',
-  priceRange: '$$',
-  image: 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'H # 181, Camping Ground',
-    addressLocality: 'Lalamusa',
-    addressRegion: 'Punjab',
-    addressCountry: 'PK',
+const processSteps = [
+  {
+    step: "01",
+    title: "Discovery",
+    desc: "Requirements gathering, workflow analysis, and scope definition, so we build exactly what your business needs and nothing it does not.",
   },
-  geo: { '@type': 'GeoCoordinates', latitude: '32.7003', longitude: '73.9451' },
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
-    opens: '09:00',
-    closes: '18:00',
+  {
+    step: "02",
+    title: "Solution Design",
+    desc: "System architecture, technology selection, and security planning tailored to your goals, your users, and the scale you are building toward.",
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '47',
-    bestRating: '5',
+  {
+    step: "03",
+    title: "Development",
+    desc: "Sprint-based delivery with weekly demos. You see real progress every step of the way, not just a finished product handed over months later.",
   },
-};
+  {
+    step: "04",
+    title: "Testing & Security",
+    desc: "Rigorous QA, performance testing, and security validation before anything goes live, covering functional, load, and penetration testing.",
+  },
+  {
+    step: "05",
+    title: "Deployment",
+    desc: "Production deployment with monitoring setup, environment documentation, and complete handover so your team owns the infrastructure.",
+  },
+  {
+    step: "06",
+    title: "Support & Growth",
+    desc: "Post-launch support, feature enhancements, and long-term partnership as your business grows and your software requirements evolve.",
+  },
+];
+
+const featuredCaseStudies = [
+  {
+    title: "Enterprise Financial Management Platform",
+    problem:
+      "Finance teams needed real-time reporting, controlled access across departments, and audit-ready records, without relying on disconnected spreadsheets.",
+    solution:
+      "Built a secure enterprise platform with role-based access, real-time analytics dashboards, multi-department approval workflows, and a full audit trail management system.",
+    result:
+      "Eliminated manual reporting across all departments, improved financial visibility for senior leadership, and reduced month-end close time by 60%.",
+    image: financialsystemImg,
+    alt: "Enterprise financial management platform with real-time dashboards built by QllmSoft",
+  },
+  {
+    title: "QllmDoc, Secure Document Management System",
+    problem:
+      "Organizations struggled with document versioning, compliance audit trails, and uncontrolled access to sensitive files spread across email threads and shared drives.",
+    solution:
+      "Delivered a secure document management system with structured approval workflows, complete audit trails, version control, and granular role-based permission management.",
+    result:
+      "Improved regulatory compliance across all document types and reduced manual document handling overhead by over 70%.",
+    image: QllmDocImg,
+    alt: "Secure document management system with audit trails and approval workflows built by QllmSoft",
+  },
+];
 
 /* ═══════════════════════════════════════════════════════════
    HOME PAGE
 ═══════════════════════════════════════════════════════════ */
 const Home = () => {
-
-  const { ref: servicesRef, inView: servicesInView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const { ref: aboutRef,   inView: aboutInView   } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: servicesRef, inView: servicesInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   return (
     <>
@@ -210,61 +368,77 @@ const Home = () => {
           SEO HEAD
       ═══════════════════════════════════════════ */}
       <Helmet>
-        {/* Title — 58 chars, primary keyword + brand */}
-        <title>QllmSoft | Software Development Company in Pakistan | ASP.NET Core & Web Apps</title>
+        {/* Title, 60 chars, solution-first, global intent */}
+        <title>
+          QllmSoft | Custom Software Development Company, Enterprise Digital Solutions
+        </title>
 
-        {/* Description — 155 chars, commercial intent */}
+        {/* Description, 158 chars, global commercial intent */}
         <meta
           name="description"
-          content="QllmSoft is a leading software development company in Pakistan. We build custom ASP.NET Core web apps, mobile apps, REST APIs, and enterprise software for businesses in Pakistan, UK, USA, and UAE. Free consultation."
+          content="QllmSoft is a custom software development company delivering enterprise web applications, mobile apps, business automation, AI-powered systems, and digital solutions for businesses worldwide."
         />
 
-        {/* Keywords — commercial + informational mix */}
+        {/* Keywords, global, no geo, solution-first + service + stack */}
         <meta
           name="keywords"
-          content="software development company Pakistan, software house Pakistan, custom software development Pakistan, ASP.NET Core development Pakistan, web application development Pakistan, mobile app development Pakistan, hire software developers Pakistan, software outsourcing Pakistan, .NET development company Pakistan"
+          content="custom software development company, software development services, enterprise software development, custom software solutions, web application development services, mobile app development services, business process automation, software outsourcing services, hire software developers, dedicated software development team, .NET development company, React development services, Flutter app development, AI software development, enterprise software solutions"
         />
 
-        <meta name="author"  content="QllmSoft" />
-        <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="author" content="QllmSoft" />
+        <meta
+          name="robots"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
         <link rel="canonical" href="https://qllmsoft.com/" />
 
         {/* Open Graph */}
-        <meta property="og:type"         content="website" />
-        <meta property="og:url"          content="https://qllmsoft.com/" />
-        <meta property="og:site_name"    content="QllmSoft" />
-        <meta property="og:title"        content="QllmSoft | Software Development Company in Pakistan | ASP.NET Core & Web Apps" />
-        <meta property="og:description"  content="Pakistan's leading software development company — ASP.NET Core, mobile apps, REST APIs, and enterprise software for global businesses. Free consultation in 24 hours." />
-        <meta property="og:image"        content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
-        <meta property="og:image:width"  content="1200" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://qllmsoft.com/" />
+        <meta property="og:site_name" content="QllmSoft" />
+        <meta
+          property="og:title"
+          content="QllmSoft | Custom Software Development Company, Enterprise Digital Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Custom enterprise software, mobile apps, business automation, and AI-powered digital solutions, built for global businesses. Free consultation within 24 hours."
+        />
+        <meta
+          property="og:image"
+          content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt"    content="QllmSoft Software Development Company Pakistan" />
-        <meta property="og:locale"       content="en_PK" />
-        <meta property="og:locale:alternate" content="en_US" />
+        <meta
+          property="og:image:alt"
+          content="QllmSoft Custom Software Development Company"
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="en_GB" />
 
         {/* Twitter Card */}
-        <meta name="twitter:card"        content="summary_large_image" />
-        <meta name="twitter:title"       content="QllmSoft | Software Development Company in Pakistan" />
-        <meta name="twitter:description" content="Custom ASP.NET Core web apps, mobile apps, REST APIs, and enterprise software — built in Pakistan for global businesses." />
-        <meta name="twitter:image"       content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg" />
-        <meta name="twitter:image:alt"   content="QllmSoft Pakistan Software Development Company" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="QllmSoft | Custom Software Development Company"
+        />
+        <meta
+          name="twitter:description"
+          content="Custom enterprise software, mobile apps, and AI-powered digital solutions delivered to global businesses."
+        />
+        <meta
+          name="twitter:image"
+          content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="QllmSoft Software Development Company"
+        />
 
-        {/* Geo targeting */}
-        <meta name="geo.region"          content="PK-PB" />
-        <meta name="geo.placename"       content="Lalamusa, Punjab, Pakistan" />
-        <meta name="geo.position"        content="32.7003;73.9451" />
-        <meta name="ICBM"                content="32.7003, 73.9451" />
-
-        {/* JSON-LD × 4 */}
-        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaWebSite)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaService)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
-        <script type="application/ld+json">{JSON.stringify(schemaLocal)}</script>
       </Helmet>
 
       <main className="home-page" id="main-content" role="main">
-
         {/* ── HERO ── */}
         <HeroSlider />
 
@@ -276,41 +450,52 @@ const Home = () => {
         >
           <div className="container">
             <div className="about-content">
-
-              <div className={`about-image animate__animated ${aboutInView ? 'animate__fadeInLeft' : ''}`}>
+              <div
+                className={`about-image animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
+              >
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80"
-                  alt="QllmSoft software development team in Pakistan building ASP.NET Core enterprise web applications for global clients"
+                  src={AboutImg}
+                  alt="QllmSoft software development team delivering custom enterprise digital solutions for global businesses"
                   width="600"
                   height="400"
                   loading="lazy"
                 />
               </div>
 
-              <div className={`about-text animate__animated ${aboutInView ? 'animate__fadeInRight' : ''}`}>
-                {/* ✅ SINGLE H1 on the page — placed in about section as hero slider has visual H1 */}
+              <div
+                className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}
+              >
+                {/* ✅ SINGLE H1, solution-first, global keyword targeting */}
                 <h1 id="about-heading">
-                  Pakistan's Leading ASP.NET Core &amp; Custom Software Development Company
+                A Custom Software Development Company That Builds What Your Business Actually Needs
                 </h1>
 
                 <p>
-                  QllmSoft is a trusted <strong>software development company in Pakistan</strong> with over a decade
-                  of experience building enterprise-grade digital solutions. We specialise in{' '}
-                  <Link to="/web-application-development-services">ASP.NET Core web application development</Link>,{' '}
-                  <Link to="/mobile-app-development">mobile app development</Link>, and{' '}
-                  <Link to="/api-development-services">secure REST API development</Link> for startups,
-                  SMBs, and enterprises across Pakistan, the UK, USA, UAE, and Saudi Arabia.
+                QllmSoft is a <strong>custom software development company</strong> trusted
+  by businesses across four continents. We have been
+  designing, building, and scaling enterprise-grade digital solutions covering
+  internal business platforms, customer-facing web applications, mobile apps,
+  and AI-powered automation systems.
                 </p>
 
                 <p>
-                  Our development team delivers more than code — we deliver business outcomes. Every project
-                  is scoped, priced, and structured before development begins, so you always know what you
-                  are getting, when you are getting it, and exactly what it costs. No hidden charges,
-                  no scope creep, no surprises.
+                The work spans web design and development, digital marketing, system
+  integration, API development, and AI tooling, covering the full technology
+  stack from architecture through to production deployment. Every project is
+  scoped precisely, priced transparently, and delivered without hidden charges
+  or scope creep.
                 </p>
 
                 <p>
-                  Independently verified on{' '}
+                More than 50 production-grade solutions have been delivered since 2015,
+  covering financial management platforms, document management systems, HR and
+  payroll software, healthcare systems, eCommerce platforms, and warehouse
+  automation, all built around real operational workflows and verified
+  business logic.
+                </p>
+
+                <p>
+                The delivery record is independently verified on{" "}
                   <a
                     href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
                     target="_blank"
@@ -318,8 +503,8 @@ const Home = () => {
                     aria-label="Verify QllmSoft 100% Job Success Score on Upwork"
                   >
                     Upwork (100% Job Success Score)
-                  </a>{' '}
-                  and{' '}
+                  </a>{" "}
+                  and{" "}
                   <a
                     href="https://www.freelancer.com/u/mrprogrmmr"
                     target="_blank"
@@ -327,15 +512,18 @@ const Home = () => {
                     aria-label="View QllmSoft 5-star reviews on Freelancer"
                   >
                     Freelancer (5-Star Rating)
-                  </a>{' '}
-                  — our reputation is built on delivery, not promises.
+                  </a>
+                  . Our reputation is built on delivery, not promises.
                 </p>
 
-                <Link to="/about" className="btn btn-primary" aria-label="Learn more about QllmSoft software development company Pakistan">
+                <Link
+                  to="/about"
+                  className="btn btn-primary"
+                  aria-label="Learn more about QllmSoft custom software development company"
+                >
                   Learn More About Us
                 </Link>
               </div>
-
             </div>
           </div>
         </section>
@@ -351,22 +539,25 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="services-heading">
-                Custom Software Development Services in Pakistan — Web, Mobile &amp; Enterprise
+                QllmSoft | A Custom Software Development Company
               </h2>
               <p>
-                End-to-end software development services built on the Microsoft .NET ecosystem, modern
-                web frameworks, and secure API architecture — delivered from Pakistan for businesses worldwide.
-                Every solution is custom-engineered around your specific workflows, not adapted from a template.
+                We solve real business problems with custom-built software. Whether the goal
+                is digitising an internal workflow, launching a customer-facing platform,
+                automating repetitive operations, or building a mobile experience from
+                scratch, QllmSoft engineers the right solution around your goals, not a
+                template stretched to fit.
               </p>
             </div>
 
             <div className="services-grid">
               {homeServices.map((service, index) => {
-                const animation = index < 2 ? 'animate__fadeInLeft' : 'animate__fadeInRight';
+                const animation =
+                  index < 2 ? "animate__fadeInLeft" : "animate__fadeInRight";
                 return (
                   <div
                     key={service.id}
-                    className={`animate__animated ${servicesInView ? animation : ''}`}
+                    className={`animate__animated ${servicesInView ? animation : ""}`}
                   >
                     <ServiceCard service={service} />
                   </div>
@@ -374,11 +565,11 @@ const Home = () => {
               })}
             </div>
 
-            <div style={{ textAlign: 'center', marginTop: '32px' }}>
+            <div style={{ textAlign: "center", marginTop: "32px" }}>
               <Link
                 to="/services"
                 className="btn btn-primary"
-                aria-label="View all QllmSoft software development services in Pakistan"
+                aria-label="View all QllmSoft software development services"
               >
                 View All Services
               </Link>
@@ -387,132 +578,259 @@ const Home = () => {
         </section>
 
         {/* ── WHY CHOOSE US ── */}
-        <section
-          className="section why-section"
-          aria-labelledby="why-heading"
-        >
+        <section className="section why-section" aria-labelledby="why-heading">
           <div className="container">
             <div className="section-title">
               <h2 id="why-heading">
-                Why Choose QllmSoft as Your Software Development Partner in Pakistan?
+              Why Businesses Choose QllmSoft as Their Software Development Partner
               </h2>
               <p>
-                Businesses across Pakistan, the UK, USA, UAE, and Saudi Arabia choose QllmSoft because
-                we combine technical excellence with delivery discipline — producing software that works
-                in production, not just in demos.
+                Companies across the globe, specially in USA and Gulf choose QllmSoft
+                because we deliver software that works in production. Our
+                approach combines deep technical expertise with the structured delivery
+                discipline that enterprise teams depend on.
               </p>
             </div>
 
             <div className="why-grid">
-
               <article className="why-card">
-                <h3>Senior ASP.NET Core &amp; .NET 8 Developers</h3>
+                <h3>Real Solutions Beyond Templates</h3>
                 <p>
-                  Our engineers are specialists in ASP.NET Core 8/9, C# 12, Entity Framework Core,
-                  REST and GraphQL APIs, and Azure deployment — building secure, scalable enterprise
-                  web applications that handle real business load without performance degradation.
+                  We never adapt pre-built tools or templates to fit your problem. Every
+                  solution is designed from scratch around your specific workflows, users, and
+                  business objectives, giving you software that fits the way your team works
+                  and grows naturally with your operations.
                 </p>
               </article>
 
               <article className="why-card">
-                <h3>Fixed-Price Delivery — No Hidden Charges</h3>
+                <h3>Fixed-Price Delivery With No Hidden Charges</h3>
                 <p>
-                  Every project begins with a detailed written scope and a fixed price committed before
-                  a single line of code is written. No hourly billing surprises, no scope creep invoices,
-                  no post-launch charges for features that should have been included from the start.
+                  Every project begins with a detailed written scope and a fixed price
+                  committed before a single line of code is written. No hourly billing
+                  surprises, no scope creep invoices, and no post-launch charges for features
+                  that should have been included from day one.
                 </p>
               </article>
 
               <article className="why-card">
-                <h3>OWASP-Compliant Security by Default</h3>
+                <h3>Security and Quality Built In From the Start</h3>
                 <p>
-                  Security is designed into the architecture — not patched on afterwards. We follow{' '}
+                  Security is designed into the architecture from day one, not added as an
+                  afterthought. We follow{" "}
                   <a
                     href="https://owasp.org/www-project-top-ten/"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
-                    aria-label="OWASP Top 10 security standard — external reference"
+                    aria-label="OWASP Top 10 security standard, external reference"
                   >
                     OWASP Top 10
-                  </a>{' '}
-                  standards on every web application, API, and mobile app we deliver — protecting your
-                  users and your business data from the most common attack vectors.
+                  </a>{" "}
+                  standards across every web application, API, and mobile app we deliver —
+                  protecting your users, your data, and your business from the most critical
+                  attack vectors.
                 </p>
               </article>
 
               <article className="why-card">
                 <h3>Long-Term Technology Partnership</h3>
                 <p>
-                  We do not disappear after launch. Every QllmSoft project includes structured post-launch
-                  support, performance monitoring, security patch management, and ongoing feature development
-                  — making us the long-term technology partner your business can rely on as it grows.
+                  We do not disappear after launch. Every QllmSoft project includes
+                  structured post-launch support, performance monitoring, and ongoing feature
+                  development, making us the long-term technology partner your business can
+                  rely on as it evolves and grows.
                 </p>
               </article>
-
             </div>
           </div>
         </section>
 
-        {/* ── EXPERTISE ── */}
+        {/* ── COMPANY INFO ── */}
         <section
-          className="section expertise-section"
-          aria-labelledby="expertise-heading"
+          className="section company-info-section"
+          aria-labelledby="company-info-heading"
+          itemScope
+          itemType="https://schema.org/Organization"
         >
           <div className="container">
-            <div className="section-title">
-              <h2 id="expertise-heading">
-                What Makes QllmSoft a Leading Software Development Company in Pakistan
-              </h2>
+            <div className="company-info-inner">
+
+              {/* ── Left: prose ── */}
+              <div className="company-info-text">
+                <h2 id="company-info-heading">
+                A Decade of Enterprise Software Delivery
+                </h2>
+
+                <p>
+                QllmSoft was founded with
+  one objective: build software that solves real operational problems for
+  businesses, not software that looks good in a pitch deck and falls apart in
+  production. Over the past decade, that focus has produced more than{" "}
+  <strong>50 enterprise-grade solutions</strong> shipped to clients, spanning finance, healthcare, education,
+  logistics, eCommerce, and SaaS.
+                </p>
+
+                <p>
+                  The company is led by{" "}
+                  <strong itemProp="founder" itemScope itemType="https://schema.org/Person">
+                    <a
+                      itemProp="url"
+                      href="https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Zain Ul Abedin, Founder and CEO of QllmSoft, LinkedIn profile"
+                    >
+                      <span itemProp="name">Zain Ul Abedin</span>
+                    </a>
+                    , Founder and CEO
+                  </strong>
+                  , with a senior engineering team that covers full-stack web development, mobile
+                  engineering, cloud infrastructure, API design, and AI integration. Every client
+                  engagement is managed with a structured delivery process, written scopes, fixed
+                  pricing, weekly progress reviews, and complete documentation handed over at
+                  launch.
+                </p>
+
+                <p>
+                  Our track record is independently verified. A{" "}
+                  <a
+                    href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="QllmSoft Upwork profile, 100% Job Success Score"
+                  >
+                    100% Job Success Score on Upwork
+                  </a>{" "}
+                  and a{" "}
+                  <a
+                    href="https://www.freelancer.com/u/mrprogrmmr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="QllmSoft Freelancer profile, 5-star rating"
+                  >
+                    5-star rating on Freelancer
+                  </a>{" "}
+                  reflect successful engagements where the software was delivered on scope, on
+                  time, and without post-launch surprises. That consistency is not accidental, it
+                  is the result of a decade of refining how enterprise software development should
+                  actually be done.
+                </p>
+              </div>
+
+              <div className="company-info-stats" aria-label="QllmSoft company facts">
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="10 plus years of experience">10+</span>
+    <span className="ci-stat-label">Years of Experience</span>
+  </div>
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="50 plus projects delivered">50+</span>
+    <span className="ci-stat-label">Projects Delivered</span>
+  </div>
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="50 plus global clients">50+</span>
+    <span className="ci-stat-label">Global Clients</span>
+  </div>
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="100 percent job success on Upwork">100%</span>
+    <span className="ci-stat-label">Upwork Job Success</span>
+  </div>
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="5 star verified rating">5★</span>
+    <span className="ci-stat-label">Verified Rating</span>
+  </div>
+  <div className="ci-stat">
+    <span className="ci-stat-number" aria-label="47 plus verified reviews">47+</span>
+    <span className="ci-stat-label">Verified Reviews</span>
+  </div>
+</div>
+
+
             </div>
-
-            <p>
-              As a specialised ASP.NET Core and custom software development company based in Pakistan,
-              QllmSoft has delivered over 100 production-grade digital solutions across healthcare,
-              finance, education, logistics, eCommerce, and SaaS sectors. Our team of certified
-              .NET developers, React engineers, mobile app developers, and solution architects brings
-              both deep technical knowledge and genuine business domain understanding to every engagement.
-            </p>
-
-            <p>
-              Whether you need to{' '}
-              <Link to="/outsource-software-development-to-pakistan">outsource software development to Pakistan</Link>,{' '}
-              <Link to="/hire-dotnet-developers-pakistan">hire dedicated .NET developers</Link>, build a{' '}
-              <Link to="/mobile-app-development">cross-platform mobile application</Link>, or modernise a{' '}
-              <Link to="/legacy-system-modernization-services">legacy .NET Framework system</Link> — QllmSoft
-              provides the right team, the right process, and the right outcome.
-            </p>
-
-            <ul aria-label="QllmSoft core capabilities">
-              <li>
-                <strong>Custom enterprise web application development</strong> using ASP.NET Core 8,
-                clean architecture, CQRS, and domain-driven design
-              </li>
-              <li>
-                <strong>REST and GraphQL API development</strong> with full OpenAPI 3.0 documentation,
-                JWT authentication, and OWASP security compliance
-              </li>
-              <li>
-                <strong>Mobile app development</strong> for Android and iOS using Flutter and React Native —
-                with offline capability and API-first architecture
-              </li>
-              <li>
-                <strong>Legacy .NET Framework migration</strong> to ASP.NET Core 8 — zero-disruption,
-                phased approach with business logic fully preserved
-              </li>
-              <li>
-                <strong>Cloud-native deployment</strong> on Microsoft Azure and AWS with CI/CD pipelines,
-                auto-scaling, and Application Insights monitoring
-              </li>
-            </ul>
-
           </div>
         </section>
 
-        {/* ── STATS ── */}
-        <StatsSection />
+        {/* ── PROCESS ── */}
+        <section className="section" aria-labelledby="process-heading">
+          <div className="container">
+            <div className="section-title">
+              <h2 id="process-heading">How We Work</h2>
+              <p>
+              A structured delivery process designed to eliminate ambiguity, reduce risk,
+  and give your team full visibility from discovery through launch and beyond.
+  The way software is delivered is just as important as the software itself.
+              </p>
+            </div>
+
+            <div className="process-grid-lite">
+              {processSteps.map((p) => (
+                <div key={p.step} className="process-card-lite">
+                  <div className="process-step-lite">{p.step}</div>
+                  <h3>{p.title}</h3>
+                  <p>{p.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── WHY GLOBAL BUSINESSES OUTSOURCE SOFTWARE DEVELOPMENT ── */}
+        <section className="section outsourcing-section">
+          <div className="container">
+            <div className="outsourcing-content">
+
+              {/* Text */}
+              <div className="outsourcing-text">
+                <h2>
+                How Software Development Outsourcing Works With QllmSoft
+                </h2>
+
+                <p>
+                Businesses outsource software development for three reasons: to access
+  senior engineering talent that would take months to hire in-house, to reduce
+  the overhead of managing a full engineering team, and to accelerate delivery
+  without compromising on quality. QllmSoft is built to address all three.
+</p>
+
+<p>
+  With over a decade of production-grade delivery experience, QllmSoft brings
+  the technical depth, process discipline, and business domain understanding
+  that enterprise teams require. The work covers automating internal workflows,
+  building customer-facing platforms, replacing legacy systems, and launching
+  AI-powered tools across multiple industries.
+</p>
+
+<p>
+QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
+  Freelancer across 200 completed engagements. Those numbers reflect
+  consistent delivery across time zones, industries, and project sizes, from
+  single-module builds for startups to multi-year platform development for
+  enterprise clients across the globe.
+</p>
+              </div>
+
+              {/* Image */}
+              <div className="outsourcing-image">
+                <img
+                  src={GlobalTeamImg}
+                  alt="QllmSoft software development team delivering enterprise digital solutions for global businesses"
+                  loading="lazy"
+                />
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+       
+          
+       
+
 
         {/* ── PROJECTS ── */}
-        <section className="section projects-section" aria-label="QllmSoft software development projects">
+        <section
+          className="section projects-section"
+          aria-label="QllmSoft software development projects portfolio"
+        >
           <ProjectSections />
         </section>
 
@@ -524,14 +842,52 @@ const Home = () => {
           itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews — QllmSoft Software Development Company Pakistan
+            Client Reviews on our Custom Software Development Services
           </h2>
           <TestimonialSection />
         </section>
 
         {/* ── TECHNOLOGIES ── */}
-        <section className="section tech-section" aria-label="Software development technologies used by QllmSoft">
+        <section
+          className="section tech-section"
+          aria-label="Software development technologies and platforms used by QllmSoft"
+        >
           <TechnologiesSlider />
+        </section>
+
+        {/* ── CASE STUDIES ── */}
+        <section className="section" aria-labelledby="case-heading">
+          <div className="container">
+            <div className="section-title">
+              <h2 id="case-heading">Case Studies</h2>
+              <p>
+                Real examples of how we solve complex operational challenges, built for
+                security, scalability, and long-term business value across industries.
+              </p>
+            </div>
+
+            <div className="case-grid">
+              {featuredCaseStudies.map((c) => (
+                <article key={c.title} className="case-card">
+                  <img src={c.image} alt={c.alt} loading="lazy" />
+
+                  <h3>{c.title}</h3>
+
+                  <p className="case-problem">
+                    <strong>Problem:</strong> {c.problem}
+                  </p>
+
+                  <p className="case-solution">
+                    <strong>Solution:</strong> {c.solution}
+                  </p>
+
+                  <p className="case-result">
+                    <strong>Result:</strong> {c.result}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* ── PARTNERS ── */}
@@ -541,10 +897,13 @@ const Home = () => {
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="partners-heading">Trusted by Clients Across Pakistan, the UK, USA &amp; UAE</h2>
+              <h2 id="partners-heading">
+                Trusted by Clients Worldwide
+              </h2>
               <p>
-                Our independently verified reviews on Upwork and Freelancer reflect consistent project
-                delivery for businesses in the UK, USA, UAE, Saudi Arabia, Jordan, Germany, and Pakistan.
+                Our independently verified reviews on Upwork and Freelancer reflect
+                consistent project delivery for businesses across finance, healthcare,
+                education, logistics, and eCommerce.
               </p>
             </div>
 
@@ -555,16 +914,52 @@ const Home = () => {
                     href={partner.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${partner.name} — verified QllmSoft client`}
+                    aria-label={`${partner.name}, verified QllmSoft client`}
                   >
                     <img
                       src={partner.logo}
-                      alt={`${partner.name} — QllmSoft software development client`}
+                      alt={`${partner.name}, QllmSoft software development client`}
                       loading="lazy"
                     />
                   </a>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── BLOG PREVIEW ── */}
+        <section
+          className="section blog-preview"
+          aria-labelledby="blog-preview-heading"
+        >
+          <div className="container">
+            <div className="section-title">
+              <h2 id="blog-preview-heading">Latest Insights</h2>
+              <p>
+                Practical guides on software strategy, digital transformation, and
+                technology decisions for growing businesses.
+              </p>
+            </div>
+
+            <div className="blog-preview-grid">
+              {[
+                "custom-vs-saas-ecommerce-for-growing-smbs",
+                "hire-dotnet-developers-pakistan",
+                "when-internal-software-slows-teams-instead-of-helping",
+              ]
+                .map((key) => ({ key, post: blogPostsData[key] }))
+                .filter(({ post }) => Boolean(post))
+                .map(({ key, post }) => (
+                  <article key={key} className="blog-preview-card">
+                    <img src={post.image} alt={post.title} loading="lazy" />
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
+                    <Link to={`/blog/${key}`} className="blog-read-btn">
+                      Read Article →
+                    </Link>
+                  </article>
+                ))}
             </div>
           </div>
         </section>
@@ -579,63 +974,170 @@ const Home = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="faq-heading">
-                Frequently Asked Questions — Software Development Company in Pakistan
+                Frequently Asked Questions
               </h2>
               <p>
-                Common questions businesses ask before choosing QllmSoft as their software development
-                partner in Pakistan.
+                Common questions businesses ask before choosing QllmSoft as their software
+                development partner.
               </p>
             </div>
 
             <div className="faq-content">
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Why choose ASP.NET Core for enterprise web application development in Pakistan?
+              {/* FAQ 1 */}
+              <div
+                className="faq-item"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <h4
+                  itemProp="name"
+                  className="faq-question"
+                  aria-expanded="false"
+                  onClick={(e) => {
+                    const answer = e.currentTarget.nextElementSibling;
+                    const expanded =
+                      e.currentTarget.getAttribute("aria-expanded") === "true";
+                    e.currentTarget.setAttribute("aria-expanded", !expanded);
+                    answer.style.display = expanded ? "none" : "block";
+                  }}
+                >
+                  What kind of software does QllmSoft build for businesses?
+                  <span className="faq-icon">+</span>
                 </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div
+                  className="faq-answer"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
                   <p itemProp="text">
-                    ASP.NET Core consistently ranks as the world's fastest web framework in independent
-                    TechEmpower benchmarks — outperforming Node.js, Django, Laravel, and Spring Boot in
-                    raw throughput. It ships with enterprise security built in, native Azure integration,
-                    cross-platform deployment capability, and Microsoft Long-Term Support releases that
-                    protect your technology investment for years. For Pakistani businesses building
-                    customer-facing portals, SaaS platforms, or internal enterprise tools, ASP.NET Core
-                    delivers the performance, security, and maintainability that complex business
-                    applications demand.
+                    QllmSoft builds a wide range of custom software solutions, enterprise web
+                    applications, internal business management systems, mobile apps for Android
+                    and iOS, eCommerce platforms, HR and payroll systems, healthcare management
+                    systems, document management platforms, and AI-powered automation tools.
+                    Every solution is built from scratch around your specific business requirements,
+                    not adapted from a template.
                   </p>
                 </div>
               </div>
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Does QllmSoft provide ASP.NET Core development services in Pakistan for international clients?
+              {/* FAQ 2 */}
+              <div
+                className="faq-item"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <h4
+                  itemProp="name"
+                  className="faq-question"
+                  aria-expanded="false"
+                  onClick={(e) => {
+                    const answer = e.currentTarget.nextElementSibling;
+                    const expanded =
+                      e.currentTarget.getAttribute("aria-expanded") === "true";
+                    e.currentTarget.setAttribute("aria-expanded", !expanded);
+                    answer.style.display = expanded ? "none" : "block";
+                  }}
+                >
+                  Does QllmSoft work with international clients for software outsourcing?
+                  <span className="faq-icon">+</span>
                 </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div
+                  className="faq-answer"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
                   <p itemProp="text">
-                    Yes. QllmSoft is Pakistan's leading ASP.NET Core development company, serving clients
-                    in Lahore, Karachi, Islamabad, Faisalabad, and internationally in the UK, USA, UAE,
-                    Saudi Arabia, Jordan, and Germany. Our developers work in your time zone, communicate
-                    in fluent English, and deliver against fixed-price scopes with full IP ownership and
-                    NDA on day one. Every project is independently verifiable on our Upwork and Freelancer
-                    profiles.
+                    Yes. QllmSoft is a trusted software outsourcing company working with
+                    international clients across the UK, USA, UAE, Saudi Arabia, and globally.
+                    We operate with fixed-price scopes, clear English communication, NDA from
+                    day one, and full IP ownership transferred to the client, independently
+                    verified through Upwork (100% Job Success Score) and Freelancer (5-star
+                    rating).
                   </p>
                 </div>
               </div>
 
-              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
-                <h4 itemProp="name">
-                  Can I hire dedicated ASP.NET Core developers from QllmSoft in Pakistan?
+              {/* FAQ 3 */}
+              <div
+                className="faq-item"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <h4
+                  itemProp="name"
+                  className="faq-question"
+                  aria-expanded="false"
+                  onClick={(e) => {
+                    const answer = e.currentTarget.nextElementSibling;
+                    const expanded =
+                      e.currentTarget.getAttribute("aria-expanded") === "true";
+                    e.currentTarget.setAttribute("aria-expanded", !expanded);
+                    answer.style.display = expanded ? "none" : "block";
+                  }}
+                >
+                  Can I hire dedicated software developers from QllmSoft?
+                  <span className="faq-icon">+</span>
                 </h4>
-                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <div
+                  className="faq-answer"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
                   <p itemProp="text">
-                    Yes. QllmSoft provides dedicated ASP.NET Core and .NET 8 developers available
-                    full-time, part-time, or on a project basis — with onboarding possible within
-                    24–48 hours of agreeing scope. Our dedicated developers are senior engineers with
-                    production experience in ASP.NET Core MVC, Web API, Entity Framework Core, Blazor,
-                    SignalR, and Azure deployment. Visit our{' '}
-                    <Link to="/hire-dotnet-developers-pakistan">hire .NET developers</Link> page for
-                    detailed engagement options.
+                    Yes. QllmSoft provides dedicated developers and full engineering teams on a
+                    full-time, part-time, or project basis, covering web, mobile, backend, cloud,
+                    and AI development. Our engineers have real production experience across
+                    multiple industries and are available for onboarding within 24 to 48 hours.
+                    Visit our{" "}
+                    <Link to="/hire-dotnet-developers-pakistan">
+                      hire developers
+                    </Link>{" "}
+                    page for full details.
+                  </p>
+                </div>
+              </div>
+
+              {/* FAQ 4 */}
+              <div
+                className="faq-item"
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
+                <h4
+                  itemProp="name"
+                  className="faq-question"
+                  aria-expanded="false"
+                  onClick={(e) => {
+                    const answer = e.currentTarget.nextElementSibling;
+                    const expanded =
+                      e.currentTarget.getAttribute("aria-expanded") === "true";
+                    e.currentTarget.setAttribute("aria-expanded", !expanded);
+                    answer.style.display = expanded ? "none" : "block";
+                  }}
+                >
+                  How long has QllmSoft been delivering software development services?
+                  <span className="faq-icon">+</span>
+                </h4>
+                <div
+                  className="faq-answer"
+                  itemScope
+                  itemProp="acceptedAnswer"
+                  itemType="https://schema.org/Answer"
+                >
+                  <p itemProp="text">
+                    QllmSoft was founded in 2015 and has since delivered over 50
+                    production-grade digital solutions for businesses worldwide. With more than
+                    200 satisfied clients and a 5-star rating on both Upwork
+                    and Freelancer, the company has built a decade-long track record of reliable,
+                    structured, and enterprise-quality software delivery.
                   </p>
                 </div>
               </div>
@@ -645,27 +1147,25 @@ const Home = () => {
         </section>
 
         {/* ── CTA ── */}
-        <section
-          className="section cta-section"
-          aria-labelledby="cta-heading"
-        >
+        <section className="section cta-section" aria-labelledby="cta-heading">
           <div className="container">
             <div className="cta-content">
               <h2 id="cta-heading">
-                Hire Pakistan's Best ASP.NET Core Developers — Get a Free Quote in 24 Hours
+                Ready to Build Software That Drives Real Business Growth? Get a Free Quote Within 24 Hours.
               </h2>
               <p>
-                Ready to build a high-performance web application, mobile app, or enterprise software
-                system? Talk to our technical team. We will review your requirements, send a detailed
-                fixed-price proposal within 24 hours, and schedule a free discovery call —
-                no commitment required.
+                Tell us your challenge. QllmSoft will review your requirements, send a
+                detailed fixed-price proposal within 24 hours, and schedule a free discovery
+                call, no commitment required. Businesses across the UK, USA, UAE, Saudi
+                Arabia, and beyond have trusted QllmSoft to deliver. We look forward to
+                earning that trust from you.
               </p>
 
               <div className="cta-buttons">
                 <Link
                   to="/contact"
                   className="btn btn-primary"
-                  aria-label="Get a free software development consultation from QllmSoft Pakistan"
+                  aria-label="Get a free software development consultation from QllmSoft"
                 >
                   Get Free Consultation
                 </Link>
@@ -673,7 +1173,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
       </main>
     </>
   );

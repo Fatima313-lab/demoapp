@@ -85,15 +85,14 @@
 // };
 
 // export default HeroSlider;
-import React from 'react';
-import { Link } from 'react-router-dom';
-import heroVideo from '../assets/corporate-office.mp4';
-import './HeroSlider.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import heroVideo from "../assets/corporate-office.mp4";
+import "./HeroSlider.css";
 
 const HeroSlider = () => {
   return (
     <section className="hero-video-wrapper">
-
       {/* Background Video */}
       <video
         className="hero-video"
@@ -102,6 +101,7 @@ const HeroSlider = () => {
         loop
         playsInline
         preload="metadata"
+        
       >
         <source src={heroVideo} type="video/mp4" />
       </video>
@@ -111,22 +111,20 @@ const HeroSlider = () => {
 
       {/* Content */}
       <div className="hero-content">
+  <h1 className="hero-title">
+    Custom Software Development and AI Integration for Businesses Worldwide
+  </h1>
 
-        <h1 className="hero-title">
-          ASP.NET Core Development Company in Pakistan Delivering Scalable Web & API Solutions
-        </h1>
+  <p className="hero-subtitle">
+    QllmSoft builds secure, scalable enterprise web applications, internal
+    business systems, mobile apps, and AI-powered digital solutions for
+    growing businesses across four continents.
+  </p>
 
-        <p className="hero-subtitle">
-          QllmSoft provides enterprise-grade ASP.NET Core, custom web application development, 
-          and secure API development services for startups and businesses in Pakistan and worldwide.
-        </p>
-
-        <Link to="/asp-net-core-development-pakistan" className="hero-btn">
-          Explore ASP.NET Core Services
-        </Link>
-
-      </div>
-
+  <Link to="/Services" className="hero-btn">
+    Explore Our Services
+  </Link>
+</div>
     </section>
   );
 };

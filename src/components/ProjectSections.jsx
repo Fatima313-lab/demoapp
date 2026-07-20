@@ -4,21 +4,38 @@ import { projects } from '../data/mock';
 import './ProjectSections.css';
 
 const VISIBLE = 3;
-const CARD_WIDTH = 250;
-const GAP = 15;
 const AUTO_DELAY = 4000;
 
 const ProjectsSection = () => {
   const carouselRef = useRef(null);
+
   const [index, setIndex] = useState(VISIBLE);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const [cardWidth, setCardWidth] = useState(0);
+
   const projectCount = projects.length;
-  // Clone projects for seamless loop
+
+  // Clone for infinite loop
   const items = [
     ...projects.slice(-VISIBLE),
     ...projects,
     ...projects.slice(0, VISIBLE),
   ];
+
+  // 🔥 Dynamic width (KEY FIX)
+  useEffect(() => {
+    const updateWidth = () => {
+      const card = carouselRef.current?.querySelector('.carousel-card');
+      if (card) {
+        const gap = 15;
+        setCardWidth(card.offsetWidth + gap);
+      }
+    };
+
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
 
   // Auto scroll
   useEffect(() => {
@@ -32,39 +49,38 @@ const ProjectsSection = () => {
   // Apply transform
   useEffect(() => {
     const carousel = carouselRef.current;
-    if (!carousel) return;
+    if (!carousel || cardWidth === 0) return;
 
     carousel.style.transition = isTransitioning
-      ? 'transform 0.8s ease'
+      ? 'transform 0.6s ease'
       : 'none';
 
-    carousel.style.transform = `translateX(-${
-      index * (CARD_WIDTH + GAP)
-    }px)`;
-  }, [index, isTransitioning]);
+    carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+  }, [index, isTransitioning, cardWidth]);
 
-useEffect(() => {
-  if (index === projectCount + VISIBLE) {
-    setTimeout(() => {
-      setIsTransitioning(false);
-      setIndex(VISIBLE);
-    }, 800);
-  }
+  // Infinite loop fix
+  useEffect(() => {
+    if (index === projectCount + VISIBLE) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setIndex(VISIBLE);
+      }, 600);
+    }
 
-  if (index === 0) {
-    setTimeout(() => {
-      setIsTransitioning(false);
-      setIndex(projectCount);
-    }, 800);
-  }
+    if (index === 0) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setIndex(projectCount);
+      }, 600);
+    }
 
-  if (!isTransitioning) {
-    requestAnimationFrame(() => setIsTransitioning(true));
-  }
-}, [index, projectCount, isTransitioning]);
+    if (!isTransitioning) {
+      requestAnimationFrame(() => setIsTransitioning(true));
+    }
+  }, [index, projectCount, isTransitioning]);
 
   return (
-    <section className="section projects-section bg-light">
+    <section className="section projects-section">
       <div className="container">
         <div className="section-title">
           <h2>Latest Projects</h2>
@@ -78,15 +94,14 @@ useEffect(() => {
                 <Link to={`/projects#${project.slug}`}>
                   <img src={project.image} alt={project.name} />
                   <div className="carousel-info">
-                    <h3 style={{ color: 'white' }}>{project.name}</h3>
-                    <p style={{ color: 'white' }}>{project.description}</p>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
                   </div>
                 </Link>
               </div>
             ))}
           </div>
 
-          {/* Modern Nav Buttons */}
           <button
             className="carousel-btn prev"
             onClick={() => setIndex((i) => i - 1)}

@@ -4,13 +4,22 @@ import financeImg from '../assets/qllm-soft-finance-management-system-11.webp';
 import hrImg from '../assets/hr.webp';
 import portfolioImg from '../assets/portfolio-profile.webp';
 import inventory from '../assets/inventory-management .webp';
-import digitalmarketing from '../assets/digitalmarketing.png';
+import digitalmarketing from '../assets/digitalmarketing.webp';
+import CustomSoftwareDevelopment from "../assets/Custom-Software.webp";
+import MobileAppDevelopment from "../assets/Mobile-app-development.webp";
+import CustomWebImg from"../assets/Custom-web-developement.webp";
+import APIsoftwareImg from "../assets/api-development.webp";
+import systemModernization from "../assets/SystemModernization.webp";
+import stickerSmashApp from "../assets/sticker-mobile-app.webp";
+import webDesign from "../assets/web-design.webp";
+import qllmDocs from "../assets/QllmDocs.webp";
+import softwaredevelopmentimg from "../assets/Custom-Software.webp"
 export const companyInfo = {
   name: "QllmSoft",
   tagline: "Best for your business",
   description: "We specialize in providing custom solutions for web, mobile, and desktop applications to meet your business needs.",
   phone: "+92 334 8229288",
-  email: "info@qllmsoft.com",
+  email: "qllmsoft@gmail.com",
   address: "H # 181, Camping Ground, Lalamusa, Pakistan",
   whatsappLink: "https://wa.me/923348229288?text=Hi%20QllmSoft,%20I%27d%20like%20to%20discuss%20a%20project!",
   socialLinks: {
@@ -30,7 +39,8 @@ export const navigationLinks = [
   { name: "Services", path: "/services" },
   { name: "Projects", path: "/projects" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" }
+  { name: "Contact", path: "/contact" },
+  { name: "Write for Us", path: "/write-for-us" }
 ];
 
 export const heroSlides = [
@@ -63,31 +73,75 @@ export const heroSlides = [
 export const homeServices = [
   {
     id: 1,
-    name: "ASP.NET Core Development Company in Pakistan",
-    description: "Professional ASP.NET Core development services delivering secure, scalable, and high-performance enterprise web applications tailored for startups and growing businesses.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
-    link: "/asp-net-core-development-company-pakistan"
+    name: "Custom Software Development",
+    description:
+      "Tailored enterprise solutions and scalable core software engineered to automate complex workflows and accelerate organizational growth.",
+    image: softwaredevelopmentimg,
+    link: "/custom-software-development-services"
   },
   {
     id: 2,
-    name: "Custom Web Application Development",
-    description: "End-to-end web application development using ASP.NET Core, React, and modern architectures designed for performance, scalability, and long-term growth.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80",
-    link: "/web-application-development-company-pakistan"
+    name: "Custom Web Development",
+    description:
+      "End-to-end modern web applications designed for performance, user experience, and long-term business growth.",
+    image:
+      "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/website-development-services"
   },
+  
   {
     id: 3,
-    name: "Secure API Development Services",
-    description: "Robust RESTful API development and third-party system integrations to power web, mobile, and enterprise platforms with reliability and security.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
-    link: "/api-development-company-pakistan"
+    name: "Mobile App Development",
+    description:
+      "High-performance iOS and Android applications crafted with seamless UX and robust functional architecture.",
+    image:
+      "https://images.pexels.com/photos/1092671/pexels-photo-1092671.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/mobile-app-development"
   },
   {
     id: 4,
-    name: "Enterprise Software & System Integration",
-    description: "Custom enterprise software development, legacy system modernization, and scalable Microsoft-based solutions built for complex business environments.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
-    link: "/enterprise-software-development-pakistan"
+    name: "API & Enterprise Integration",
+    description:
+      "Robust RESTful API development and secure third-party integrations to connect your business ecosystem.",
+    image:
+      "https://images.pexels.com/photos/614117/pexels-photo-614117.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/api-development-services"
+  },
+  {
+    id: 5,
+    name: "AI Supported Solutions",
+    description:
+      "Integrating smart automation to optimize workflows and data-driven decision making.",
+    image:
+      "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/ai-powered-software-solutions"
+  },
+  {
+    id: 6,
+    name: "Web Design Services",
+    description:
+      "Modern UI/UX focused website designs crafted to improve engagement, user experience, and brand credibility.",
+    image:
+      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/web-design-services"
+  },
+  {
+    id: 7,
+    name: "WordPress Development",
+    description:
+      "Professional WordPress websites, business portals, and custom theme solutions optimized for speed, SEO, and scalability.",
+    image:
+      "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/wordpress-development-services"
+  },
+  {
+    id: 8,
+    name: "Digital Marketing & SEO",
+    description:
+      "SEO, social media marketing, and performance-driven digital campaigns designed to increase visibility and generate leads.",
+    image:
+      "https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=800",
+    link: "/digital-marketing-agency-pakistan"
   }
 ];
 
@@ -95,70 +149,106 @@ export const servicesData = [
   {
     id: 1,
     name: "Custom Web Application Development",
-    description: "We develop scalable custom web applications using ASP.NET Core, React, and modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80",
+    description: "We develop scalable custom web applications using modern cloud technologies. Our solutions include business dashboards, enterprise portals, SaaS platforms, and high-performance web systems built for security and scalability.",
+    image: CustomWebImg,
     features: [
-      "• ASP.NET Core web application development",
-      "• SaaS platform development",
-      "• Enterprise web portals",
-      "• Cloud-ready architectures",
-      "• High-performance scalable systems"
-    ]
+      "Modern Front & Backend Frameworks",
+      "SaaS platform development",
+      "Enterprise web portals",
+      "Cloud ready architectures",
+      "High performance scalable systems"
+    ],
+    link: "/web-application-development-services"
   },
   {
     id: 2,
-    name: "Mobile App Development (iOS & Android)",
-    slug: "mobile-app-development",
-    description: "Our mobile app development services deliver high-performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80",
+    name: "Web Design & UI/UX Services",
+    description: "We create modern, responsive, and user-focused websites with premium UI/UX design principles. Our solutions are optimized for performance, mobile responsiveness, user engagement, and seamless digital experiences across all devices.",
+    image: webDesign,
     features: [
-      "• iOS and Android app development",
-      "• Cross-platform Flutter apps",
-      "• React Native mobile applications",
-      "• Secure mobile backend APIs",
-      "• Performance-optimized mobile UI/UX"
-    ]
+      "Modern UI/UX design systems",
+      "Fully responsive web layouts",
+      "Mobile first user experience",
+      "Interactive & conversion-focused interfaces"
+    ],
+    link: "/responsive-web-design-services"
   },
   {
     id: 3,
-    name: "Enterprise & Custom Software Development",
-    slug: "enterprise-custom-software-development",
-    description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80",
+    name: "Mobile App Development (iOS & Android)",
+    slug: "mobile-app-development",
+    description: "Our mobile app development services deliver high performance iOS and Android applications for startups and businesses. We build cross-platform and native mobile apps using modern frameworks such as Flutter and React Native.",
+    image: MobileAppDevelopment,
     features: [
-      "• ERP & CRM software development",
-      "• Business process automation",
-      "• Enterprise dashboards",
-      "• Secure multi-user systems",
-      "• Integration with third-party tools"
-    ]
+      "iOS and Android app development",
+      "Cross platform Flutter apps",
+      "React Native mobile applications",
+      "Secure mobile backend APIs",
+      "Performance optimized mobile UI/UX"
+    ],
+    link: "/mobile-app-development"
   },
   {
     id: 4,
-    name: "API Development & System Integration",
-    slug: "api-development-system-integration",
-    description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80",
+    name: "Enterprise & Custom Software Development",
+    slug: "enterprise-custom-software-development",
+    description: "We build enterprise-grade software systems including ERP platforms, CRM solutions, and business automation tools. Our enterprise applications are designed for scalability, performance, and seamless integration with existing systems.",
+    image: CustomSoftwareDevelopment,
     features: [
-      "• REST API development",
-      "• Third-party API integration",
-      "• Secure authentication systems",
-      "• Payment gateway integration",
-      "• Real-time data synchronization"
-    ]
+      "ERP & CRM software development",
+      "Business process automation",
+      "Enterprise dashboards",
+      "Secure multi-user systems",
+      "Integration with third-party tools"
+    ],
+    link: "/custom-software-development-services"
+    
   },
   {
     id: 5,
+    name: "API Development & System Integration",
+    slug: "api-development-system-integration",
+    description: "Our API development services enable seamless communication between web applications, mobile apps, and third-party systems. We build secure REST APIs and integrate external platforms to automate workflows and data synchronization.",
+    image: APIsoftwareImg,
+    features: [
+      "REST/SOAP/GraphQL API development",
+      "Third party API integration",
+      "Secure authentication systems",
+      "Payment gateway integration",
+      "Real time data synchronization"
+    ],
+    link: "/api-development-services"
+    
+  },
+  {
+    id: 6,
     name: "Legacy Software Modernization",
     description: "We modernize outdated legacy systems by migrating them to modern architectures such as ASP.NET Core and cloud-ready environments. This improves performance, scalability, and long-term maintainability.",
-    image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&q=80",
+    image: systemModernization,
     features: [
-      "• Legacy application migration",
-      "• ASP.NET Core modernization",
-      "• Cloud infrastructure migration",
-      "• Codebase refactoring",
-      "• Performance optimization"
-    ]
+      "Legacy application migration",
+      "ASP.NET Core modernization",
+      "Cloud infrastructure migration",
+      "Codebase refactoring",
+      "Performance optimization"
+    ],
+    link: "/legacy-software-modernization"
+
+  },
+  {
+    id: 7,
+    name: "Digital Marketing & SEO",
+    description: "We help businesses grow their online presence through data-driven digital marketing and SEO strategies. From improving search engine rankings to generating qualified leads, our approach focuses on measurable results and long-term growth.",
+    image: CustomSoftwareDevelopment,
+    features: [
+      "Search engine optimization (SEO)",
+      "On page & technical SEO",
+      "Keyword research & strategy",
+      "Social media marketing",
+      "Performance tracking & analytics"
+    ],
+    link: "/digital-marketing-seo-services"
+
   }
 ];
 
@@ -201,7 +291,7 @@ export const projectsData = [
     id: 2,
     slug: "qllmdocs",
     title: "QllmDocs",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+    image: qllmDocs,
 
     shortDescription:
       "Lifecycle document management with version control and approvals.",
@@ -327,6 +417,46 @@ export const projectsData = [
         "Data-driven decisions"
       ]
     }
+  },
+  {
+    id: 6,
+    slug: "sticker-smash-photo-editor-app",
+    title: "Sticker Smash Photo Editor App",
+    image: stickerSmashApp,
+  
+    shortDescription:
+      "Interactive mobile app for editing pictures with fun stickers, emojis, and creative customization tools.",
+  
+    details: {
+      category: "Mobile Application | Photo Editing & Entertainment",
+  
+      paragraphs: [
+        "Sticker Smash is a modern mobile photo editing application that allows users to customize their pictures using interactive stickers, emojis, overlays, and creative editing tools through a simple and engaging interface.",
+  
+        "The application is designed with a smooth user experience, responsive mobile layout, and lightweight performance to provide fast image editing, sticker placement, and easy sharing functionality for Android and iOS users."
+      ],
+  
+      listTitle: "Application features:",
+  
+      list: [
+        "Photo upload & editing",
+        "Interactive sticker placement",
+        "Emoji & overlay customization",
+        "Drag & resize functionality",
+        "Image reset & preview options",
+        "Mobile-friendly responsive UI",
+        "Save & export edited images",
+        "Smooth Android & iOS experience"
+      ],
+  
+      impact: [
+        "Enhanced user engagement",
+        "Creative image customization",
+        "Simple and interactive experience",
+        "Fast mobile image editing",
+        "Improved social sharing appeal"
+      ]
+    }
   }
 
 ];
@@ -436,7 +566,7 @@ export const projects = [
     name: "QllmDocs",
     slug: "document-controller",
     description: "Save, Organize, Edit, Retrieve Documents",
-    image: docControllerImg,
+    image: qllmDocs,
   },
   {
     id: 2,
@@ -466,6 +596,13 @@ export const projects = [
   description: "Manage stock, track inventory, automate orders, and optimize warehouse operations",
   image: inventory, // make sure to import the image
   },
+  {
+    id: 6,
+    name: "Sticker Smasher App",
+    slug: "sticker-smash-photo-editor-app",
+    description: "Sticker Smash is a modern mobile photo editing application that allows users to customize their pictures.",
+    image: stickerSmashApp, // make sure to import the image
+    }
 ];
 
 export const trustedPartners = [

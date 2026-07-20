@@ -1,6 +1,7 @@
 .marquee-wrapper {
   overflow: hidden;
   position: relative;
+  width: 100%;
 }
 
 .marquee-track {
@@ -9,29 +10,30 @@
   animation: scroll-left linear infinite;
 }
 
-.marquee-track.right {
-  animation-name: scroll-right;
-}
-
 .marquee-content {
   display: flex;
   gap: 20px;
 }
 
-/* Cards */
+/* 🔥 CARD FIX */
 .review-card {
-  width: 300px;
+  min-width: 300px;
+  max-width: 320px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 18px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Header */
 .review-header {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .review-header img {
@@ -44,6 +46,7 @@
   margin: 0;
 }
 
+/* Stars */
 .stars {
   display: flex;
 }
@@ -57,39 +60,46 @@
   fill: #ffc107;
 }
 
-/* Animation */
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes scroll-right {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
-}
-.review-location {
-  display: block;
-  font-size: 12px;
-  color: #6c757d;
-  margin-top: -2px;
-  margin-bottom: 4px;
-}
-.review-card h4 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  color: #111;
-}
-
-.review-location {
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.85rem;
-  color: #666;
-}
-
+/* 🔥 TEXT FIX */
 .review-card p {
   font-family: 'Georgia', serif;
   font-style: italic;
   font-size: 0.95rem;
   color: #333;
   margin-top: 10px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* Location */
+.review-location {
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+/* Animation */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* 🔥 TABLET */
+@media (max-width: 768px) {
+  .review-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+}
+
+/* 🔥 MOBILE */
+@media (max-width: 480px) {
+  .review-card {
+    min-width: 85%;
+    max-width: 85%;
+  }
+
+  .review-card p {
+    font-size: 0.9rem;
+  }
 }

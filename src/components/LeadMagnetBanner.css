@@ -1,0 +1,39 @@
+.lead-magnet-banner {
+  padding: 56px 0;
+}
+
+.lmb-card {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: #1a202c;
+  border-radius: 12px;
+  padding: 44px 32px;
+}
+
+.lmb-eyebrow {
+  display: inline-block;
+  color: #63b3ed;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.lmb-card h3 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+}
+
+.lmb-card p {
+  color: #cbd5e0;
+  margin: 0 0 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.lmb-card .btn {
+  display: inline-block;
+}

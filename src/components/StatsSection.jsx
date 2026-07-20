@@ -4,10 +4,10 @@ const StatsSection = () => {
   // ✅ Wrap stats in useMemo to keep it stable across renders
   const stats = useMemo(
     () => [
-      { label: 'Years Experience', value: 15, suffix: '+' },
-      { label: 'Projects Completed', value: 150, suffix: '+' },
+      { label: 'Years Experience', value: 10, suffix: '+' },
+      { label: 'Projects Completed', value: 50, suffix: '+' },
       { label: 'Happy Clients', value: 50, suffix: '+' },
-      { label: 'On-time delivery', value: 98, suffix: '%' }, // static
+      { label: 'On-time delivery', value: 100, suffix: '%' }, // static
     ],
     []
   );

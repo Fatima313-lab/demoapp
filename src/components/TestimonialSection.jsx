@@ -134,7 +134,7 @@ const TestimonialSection = () => {
           <h2>What Our Clients Say</h2>
         </div>
 
-        <Marquee speed={30}>
+        <Marquee speed={65}>
           {reviews.map((r) => (
             <ReviewCard key={r.id} {...r} />
           ))}

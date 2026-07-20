@@ -135,27 +135,7 @@ const HireDotnetDevelopersPak = () => {
 
       <main id="main-content" className="hd-page" style={{'--hd-accent':'#1A365D','--hd-accent-light':'#EBF8FF','--hd-accent-border':'#BEE3F8'}} role="main">
 
-        {/* BREADCRUMB */}
-        <nav className="csd-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="container">
-            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">Hire .NET Developers Pakistan</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </div>
-        </nav>
+       
 
         {/* HERO */}
         <header className="hd-hero" role="banner">
@@ -507,7 +487,7 @@ const HireDotnetDevelopersPak = () => {
             <aside className="hd-cta__right">
               <div className="hd-cta__contact-card">
                 <h3>Quick Contact</h3>
-                <a href="mailto:info@qllmsoft.com" className="hd-cta__contact-row">📧 info@qllmsoft.com</a>
+                <a href="mailto:qllmsoft@gmail.com" className="hd-cta__contact-row">📧 qllmsoft@gmail.com</a>
                 <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer" className="hd-cta__contact-row" aria-label="WhatsApp QllmSoft">💬 WhatsApp — replies in 5 mins</a>
                 <a href="tel:+923348229288" className="hd-cta__contact-row">📞 +92 334 8229288</a>
               </div>

@@ -33,6 +33,7 @@ import { useInView } from 'react-intersection-observer';
 import './OutsourceSoftwareDevelopment.css';
 import 'animate.css';
 
+
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/outsource-software-development-to-pakistan';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
@@ -271,28 +272,7 @@ const OutsourceSoftwareDevelopment = () => {
 
       <main id="main-content" className="osd-page" role="main">
 
-        {/* ── BREADCRUMB ─────────────────────────────── */}
-        <nav className="csd-breadcrumb" aria-label="Breadcrumb navigation">
-          <div className="container">
-            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
-                <meta itemProp="position" content="1" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
-                <meta itemProp="position" content="2" />
-              </li>
-              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
-              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
-                <span itemProp="name" aria-current="page">Outsource Software Development to Pakistan</span>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </div>
-        </nav>
-
+    
         {/* ════════════════════════════════════════════════
             HERO — single H1
         ════════════════════════════════════════════════ */}
@@ -1187,7 +1167,7 @@ const OutsourceSoftwareDevelopment = () => {
                   📞 Get Free Consultation
                 </Link>
                 <a
-                  href="mailto:info@qllmsoft.com"
+                  href="mailto:qllmsoft@gmail.com"
                   className="btn osd-btn-ghost"
                   aria-label="Email QllmSoft to discuss outsourcing your software project"
                 >
@@ -1205,8 +1185,8 @@ const OutsourceSoftwareDevelopment = () => {
             <aside className="osd-cta__right" aria-label="Quick contact and related services">
               <div className="osd-cta__contact-card">
                 <h3>Quick Contact</h3>
-                <a href="mailto:info@qllmsoft.com" className="osd-cta__contact-row">
-                  <span aria-hidden="true">📧</span> info@qllmsoft.com
+                <a href="mailto:qllmsoft@gmail.com" className="osd-cta__contact-row">
+                  <span aria-hidden="true">📧</span> qllmsoft@gmail.com
                 </a>
                 <a
                   href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20outsourcing!"

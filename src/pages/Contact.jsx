@@ -99,7 +99,7 @@ const Contact = () => {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "Sales",
-      "email": "info@qllmsoft.com",
+      "email": "qllmsoft@gmail.com",
       "telephone": "+923348229288"
     }
   }}
