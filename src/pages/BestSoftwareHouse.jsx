@@ -1316,29 +1316,28 @@ const BestSoftwareHouse = () => {
         </section>
 
         {/* ════════ TESTIMONIALS ════════ */}
-        <section
-          className="section testimonial-section"
-          aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
-        >
-          <h2 id="testimonials-heading" className="sr-only">
-            Verified Client Reviews — QllmSoft Software Development Pakistan
-          </h2>
-          <TestimonialSection />
-          <div style={{ textAlign: 'center', marginTop: '30px' }}>
-            <a
-              href="https://www.freelancer.com/u/mrprogrmmr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-outline-dark"
-              aria-label="View all 47+ verified QllmSoft client reviews on Freelancer"
-            >
-              View All 47+ Verified Reviews on Freelancer
-            </a>
-          </div>
-        </section>
-
+         <section
+           className="section testimonial-section"
+           aria-labelledby="testimonials-heading"
+         >
+           <h2 id="testimonials-heading" className="sr-only">
+             Verified Client Reviews — QllmSoft Software Development Pakistan
+           </h2>
+         
+           <TestimonialSection />
+         
+           <div style={{ textAlign: 'center', marginTop: '30px' }}>
+             <a
+               href="https://www.freelancer.com/u/mrprogrmmr"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="btn btn-outline-dark"
+               aria-label="View all 47+ verified QllmSoft client reviews on Freelancer"
+             >
+               View All 47+ Verified Reviews on Freelancer
+             </a>
+           </div>
+         </section>
         {/* ════════ CTA ════════ */}
         <section className="bsh-cta section" aria-labelledby="cta-heading">
           <div className="bsh-cta__bg" aria-hidden="true" />

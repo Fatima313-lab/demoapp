@@ -834,7 +834,7 @@ QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
           <ProjectSections />
         </section>
 
-        {/* ── TESTIMONIALS ── */}
+       {/* ── TESTIMONIALS ── */}
         <section
           className="section testimonial-section"
           aria-labelledby="testimonials-heading"
@@ -844,6 +844,12 @@ QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews on our Custom Software Development Services
           </h2>
+          
+          {/* Required itemReviewed field to fix the Google Search Console error */}
+          <div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service">
+            <meta itemProp="name" content="Custom Software Development Services" />
+          </div>
+        
           <TestimonialSection />
         </section>
 

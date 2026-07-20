@@ -1026,30 +1026,28 @@ const CustomSoftwareDevelopment = () => {
         </section>
 
         {/* ── TESTIMONIALS ── */}
-        <section
-          className="section testimonial-section"
-          aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
-        >
-          <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Software Development Company 
-          </h2>
-          <TestimonialSection />
-        
-
-            <div style={{ textAlign: "center", marginTop: "30px" }}>
-              <a
-                href="https://www.freelancer.com/u/mrprogrmmr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-dark"
-                aria-label="View all QllmSoft verified client reviews on Freelancer"
-              >
-                View All Verified Reviews on Freelancer
-              </a>
-            </div>
-        </section>
+         <section
+           className="section testimonial-section"
+           aria-labelledby="testimonials-heading"
+         >
+           <h2 id="testimonials-heading" className="sr-only">
+             Client Reviews, QllmSoft Software Development Company
+           </h2>
+         
+           <TestimonialSection />
+         
+           <div style={{ textAlign: "center", marginTop: "30px" }}>
+             <a
+               href="https://www.freelancer.com/u/mrprogrmmr"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="btn btn-outline-dark"
+               aria-label="View all QllmSoft verified client reviews on Freelancer"
+             >
+               View All Verified Reviews on Freelancer
+             </a>
+           </div>
+         </section>
 
       
 <FounderNote 

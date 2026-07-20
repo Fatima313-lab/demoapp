@@ -33,7 +33,6 @@ import { useInView } from 'react-intersection-observer';
 import './OutsourceSoftwareDevelopment.css';
 import 'animate.css';
 
-
 /* ─── Constants ───────────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/outsource-software-development-to-pakistan';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
@@ -272,7 +271,28 @@ const OutsourceSoftwareDevelopment = () => {
 
       <main id="main-content" className="osd-page" role="main">
 
-    
+        {/* ── BREADCRUMB ─────────────────────────────── */}
+        <nav className="csd-breadcrumb" aria-label="Breadcrumb navigation">
+          <div className="container">
+            <ol className="csd-breadcrumb__list" itemScope itemType="https://schema.org/BreadcrumbList">
+              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+                <Link to="/" itemProp="item"><span itemProp="name">Home</span></Link>
+                <meta itemProp="position" content="1" />
+              </li>
+              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
+              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+                <Link to="/services" itemProp="item"><span itemProp="name">Services</span></Link>
+                <meta itemProp="position" content="2" />
+              </li>
+              <span aria-hidden="true" className="csd-breadcrumb__sep">›</span>
+              <li itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+                <span itemProp="name" aria-current="page">Outsource Software Development to Pakistan</span>
+                <meta itemProp="position" content="3" />
+              </li>
+            </ol>
+          </div>
+        </nav>
+
         {/* ════════════════════════════════════════════════
             HERO — single H1
         ════════════════════════════════════════════════ */}
@@ -1056,40 +1076,75 @@ const OutsourceSoftwareDevelopment = () => {
               ].map((r, i) => (
                 <article
                   key={i}
-                  className={`osd-review-card animate__animated ${reviewInView ? 'animate__fadeInUp' : ''}`}
+                  className={`osd-review-card animate__animated ${
+                    reviewInView ? 'animate__fadeInUp' : ''
+                  }`}
                   style={{ animationDelay: `${i * 0.1}s` }}
-                  itemScope itemType="https://schema.org/Review"
+                  itemScope
+                  itemType="https://schema.org/Review"
                 >
+                  {/* What is being reviewed */}
+                  <div
+                    itemProp="itemReviewed"
+                    itemScope
+                    itemType="https://schema.org/Organization"
+                  >
+                    <meta itemProp="name" content="QllmSoft" />
+                    <meta itemProp="url" content="https://qllmsoft.com/" />
+                    <meta
+                      itemProp="logo"
+                      content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
+                    />
+                  </div>
+                
+                  {/* Review information */}
+                  <meta itemProp="name" content={`Review by ${r.name}`} />
+                  <meta itemProp="datePublished" content={r.date || "2025-01-01"} />
+                
                   <div
                     className="osd-review-card__stars"
                     aria-label="5 out of 5 stars"
-                    itemProp="reviewRating" itemScope itemType="https://schema.org/Rating"
+                    itemProp="reviewRating"
+                    itemScope
+                    itemType="https://schema.org/Rating"
                   >
                     <meta itemProp="ratingValue" content="5" />
-                    <meta itemProp="bestRating"  content="5" />
+                    <meta itemProp="bestRating" content="5" />
+                    <meta itemProp="worstRating" content="1" />
                     ★★★★★
                   </div>
-                  <p className="osd-review-card__text" itemProp="reviewBody">{r.text}</p>
+                
+                  <p className="osd-review-card__text" itemProp="reviewBody">
+                    {r.text}
+                  </p>
+                
                   <div className="osd-review-card__footer">
-                    <div className="osd-review-card__author"
-                      itemProp="author" itemScope itemType="https://schema.org/Person"
+                    <div
+                      className="osd-review-card__author"
+                      itemProp="author"
+                      itemScope
+                      itemType="https://schema.org/Person"
                     >
                       <img
                         src={r.img}
-                        alt={`${r.name} — verified QllmSoft outsourcing client from ${r.loc}`}
+                        alt={`${r.name} — verified QllmSoft client from ${r.loc}`}
                         loading="lazy"
                         width="48"
                         height="48"
                       />
+                
                       <div>
                         <strong itemProp="name">{r.name}</strong>
                         <span>{r.loc}</span>
                       </div>
                     </div>
-                    <span className="osd-review-card__platform">{r.platform}</span>
+                
+                    <span className="osd-review-card__platform">
+                      {r.platform}
+                    </span>
                   </div>
                 </article>
-              ))}
+              ))}~
             </div>
             <div style={{ textAlign: 'center', marginTop: '32px' }}>
               <a
@@ -1167,7 +1222,7 @@ const OutsourceSoftwareDevelopment = () => {
                   📞 Get Free Consultation
                 </Link>
                 <a
-                  href="mailto:qllmsoft@gmail.com"
+                  href="mailto:info@qllmsoft.com"
                   className="btn osd-btn-ghost"
                   aria-label="Email QllmSoft to discuss outsourcing your software project"
                 >
@@ -1185,8 +1240,8 @@ const OutsourceSoftwareDevelopment = () => {
             <aside className="osd-cta__right" aria-label="Quick contact and related services">
               <div className="osd-cta__contact-card">
                 <h3>Quick Contact</h3>
-                <a href="mailto:qllmsoft@gmail.com" className="osd-cta__contact-row">
-                  <span aria-hidden="true">📧</span> qllmsoft@gmail.com
+                <a href="mailto:info@qllmsoft.com" className="osd-cta__contact-row">
+                  <span aria-hidden="true">📧</span> info@qllmsoft.com
                 </a>
                 <a
                   href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20outsourcing!"

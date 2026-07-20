@@ -1294,17 +1294,16 @@ const WebsiteDevelopmentServices = () => {
         </section>
 
         {/* ── TESTIMONIALS ── */}
-        <section
-          className="section testimonial-section"
-          aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
-        >
-          <h2 id="testimonials-heading" className="sr-only">
-            Client Reviews, QllmSoft Software Development Company Pakistan
-          </h2>
-          <TestimonialSection />
-        </section>
+         <section
+           className="section testimonial-section"
+           aria-labelledby="testimonials-heading"
+         >
+           <h2 id="testimonials-heading" className="sr-only">
+    Client Reviews, QllmSoft Software Development Company Pakistan
+           </h2>
+         
+           <TestimonialSection />
+         </section>
 
         {/* ══════════════════════════════════════════════════
             PRICING  —  H2 + H3s
