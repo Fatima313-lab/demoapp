@@ -7,6 +7,8 @@ import ChatBot from "./components/ChatBot";
 import WhatsAppButton from "./components/WhatsAppButton";
 import CostCalculator from "./pages/CostCalculator";
 import RequirementsChecklist from "./pages/RequirementsChecklist";
+import EcommerceDevelopmentServices from './pages/EcommerceDevelopmentServices';
+import AspnetCoreDevelopmentServices from './pages/asp-net-core-development-services';
 
 
 // Lazy loaded pages - each page loads only when visited
@@ -165,6 +167,9 @@ function App() {
 							/>
 <Route path="/software-development-cost-calculator" element={<CostCalculator />} />
 <Route path="/software-project-requirements-checklist" element={<RequirementsChecklist />} />
+<Route path="/ecommerce-development-services" element={<EcommerceDevelopmentServices />} />
+<Route path="/asp-net-core-development-services" element={<AspnetCoreDevelopmentServices />} 
+      />
 
 						</Routes>
 					</Suspense>

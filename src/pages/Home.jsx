@@ -466,9 +466,9 @@ const Home = () => {
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}
               >
                 {/* ✅ SINGLE H1, solution-first, global keyword targeting */}
-                <h1 id="about-heading">
+                <h2 id="about-heading">
                 A Custom Software Development Company That Builds What Your Business Actually Needs
-                </h1>
+                </h2>
 
                 <p>
                 QllmSoft is a <strong>custom software development company</strong> trusted

@@ -1,0 +1,270 @@
+/* =================================================================
+   ASP.NET CORE DEVELOPMENT SERVICES STYLES (TOPICAL AUTHORITY)
+   ───────────────────────────────────────────────────────────── */
+
+.aspnet-page {
+  background-color: var(--ecom-bg-primary, #07090e);
+  color: var(--ecom-text-main, #f8fafc);
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  line-height: 1.7;
+}
+
+.aspnet-hero {
+  padding: 8rem 0 6rem;
+  background: radial-gradient(circle at 65% 15%, #11223f 0%, var(--ecom-bg-primary, #07090e) 70%);
+  border-bottom: 1px solid var(--ecom-border, #1e293b);
+}
+
+.aspnet-hero__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aspnet-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 0.4rem 1.1rem;
+  border-radius: 2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+.aspnet-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: #38bdf8;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.aspnet-title {
+  font-size: clamp(2.5rem, 4.5vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.aspnet-accent {
+  color: #38bdf8;
+}
+
+.aspnet-direct-answer {
+  font-size: 1.2rem;
+  color: var(--ecom-text-muted, #94a3b8);
+  max-width: 820px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.75;
+}
+
+.aspnet-hero__cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Process Section */
+.aspnet-process__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+.aspnet-process__item {
+  background: var(--ecom-bg-card, #0d111a);
+  border: 1px solid var(--ecom-border, #1e293b);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.step-num {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: rgba(56, 189, 248, 0.25);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.aspnet-process__item h4 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.aspnet-process__item p {
+  font-size: 0.95rem;
+  color: var(--ecom-text-muted, #94a3b8);
+  margin: 0;
+}
+
+/* Tech Stack Grid */
+.aspnet-tech__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.aspnet-tech-card {
+  background: var(--ecom-bg-card, #0d111a);
+  border: 1px solid var(--ecom-border, #1e293b);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.aspnet-tech-card:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
+}
+
+.aspnet-tech-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.aspnet-tech-card p {
+  font-size: 0.95rem;
+  color: var(--ecom-text-muted, #94a3b8);
+  margin: 0;
+}
+
+/* Timeline & Cost Factors */
+.aspnet-timeline-wrapper {
+  background: var(--ecom-bg-card, #0d111a);
+  border: 1px solid var(--ecom-border, #1e293b);
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aspnet-timeline-wrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-intro {
+  font-size: 1.1rem;
+  color: var(--ecom-text-main, #f8fafc);
+  margin-bottom: 1.25rem;
+}
+
+.aspnet-timeline-wrapper p {
+  color: var(--ecom-text-muted, #94a3b8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.aspnet-timeline-wrapper a {
+  color: #38bdf8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Proof Box */
+.aspnet-proof-box {
+  background: linear-gradient(135deg, #0d111a 0%, #111d38 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 1rem;
+  padding: 3.5rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.aspnet-proof-box h2 {
+  font-size: 1.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.aspnet-proof-box p {
+  color: var(--ecom-text-muted, #94a3b8);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.proof-links-row {
+  font-size: 0.95rem !important;
+}
+
+.aspnet-proof-box a {
+  color: #38bdf8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* FAQ Grid */
+.aspnet-faq__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.faq-item {
+  background: var(--ecom-bg-card, #0d111a);
+  border: 1px solid var(--ecom-border, #1e293b);
+  border-radius: 0.75rem;
+  padding: 2rem;
+}
+
+.faq-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: var(--ecom-text-muted, #94a3b8);
+  margin: 0;
+}
+
+.faq-item a {
+  color: #38bdf8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* CTA Banner */
+.aspnet-cta-banner {
+  background: radial-gradient(circle at center, #11223f 0%, var(--ecom-bg-primary, #07090e) 80%);
+  border-top: 1px solid var(--ecom-border, #1e293b);
+  padding: 7rem 0;
+  text-align: center;
+}
+
+.aspnet-cta-banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aspnet-cta-banner p {
+  color: var(--ecom-text-muted, #94a3b8);
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .aspnet-hero {
+    padding: 5rem 1rem 4rem;
+  }
+  .aspnet-proof-box,
+  .aspnet-timeline-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}

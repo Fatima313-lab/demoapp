@@ -1,0 +1,602 @@
+/* =================================================================
+   EcommerceDevelopmentServices.css
+   ───────────────────────────────────────────────────────────── */
+
+   :root {
+    --ecom-bg-primary: #07090e;
+    --ecom-bg-secondary: #0d111a;
+    --ecom-bg-card: #131b2e;
+    --ecom-bg-card-hover: #1b263f;
+    --ecom-border: #22304f;
+    --ecom-text-main: #f1f5f9;
+    --ecom-text-muted: #94a3b8;
+    --ecom-accent: #2563eb;
+    --ecom-accent-hover: #1d4ed8;
+    --ecom-accent-glow: rgba(37, 99, 235, 0.15);
+    --ecom-highlight-bg: rgba(37, 99, 235, 0.1);
+    --ecom-whatsapp: #10b981;
+    --ecom-whatsapp-hover: #059669;
+    
+    --container-width: 1200px;
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Base Page Wrapper */
+  .ecom-page {
+    background-color: var(--ecom-bg-primary);
+    color: var(--ecom-text-main);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.65;
+    overflow-x: hidden;
+  }
+  
+  .ecom-page .container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  /* Reusable Section Styles */
+  .ecom-page .section {
+    padding: 6rem 0;
+    border-bottom: 1px solid var(--ecom-border);
+  }
+  
+  .ecom-page .section-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #38bdf8;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ecom-page .section-title {
+    margin-bottom: 3.5rem;
+  }
+  
+  .ecom-page .section-title h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+  }
+  
+  .ecom-page .section-title p {
+    font-size: 1.125rem;
+    color: var(--ecom-text-muted);
+    max-width: 750px;
+  }
+  
+  /* Global Buttons */
+  .ecom-page .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    border: none;
+  }
+  
+  .ecom-page .btn-primary {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  }
+  
+  .ecom-page .btn-primary:hover {
+    background: linear-gradient(135deg, #1d4ed8 100%, #1e40af 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.55);
+  }
+  
+  /* =================================================================
+     HERO SECTION
+     ───────────────────────────────────────────────────────────── */
+  .ecom-hero {
+    padding: 7rem 0 6rem;
+    background: radial-gradient(circle at 50% 0%, #172554 0%, var(--ecom-bg-primary) 70%);
+    border-bottom: 1px solid var(--ecom-border);
+    text-align: left;
+  }
+  
+  .ecom-hero__inner {
+    max-width: 960px;
+  }
+  
+  .ecom-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    background-color: var(--ecom-accent-glow);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .ecom-hero__badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #38bdf8;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.25); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+  }
+  
+  .ecom-hero__title {
+    font-size: clamp(2.75rem, 5.5vw, 4.25rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.035em;
+  }
+  
+  .ecom-accent {
+    background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ecom-hero__direct-answer {
+    font-size: 1.15rem;
+    color: var(--ecom-text-muted);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+    max-width: 850px;
+  }
+  
+  .ecom-hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .ecom-btn-whatsapp {
+    background-color: var(--ecom-whatsapp);
+    color: #ffffff;
+  }
+  
+  .ecom-btn-whatsapp:hover {
+    background-color: var(--ecom-whatsapp-hover);
+    transform: translateY(-2px);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+  }
+
+  .ecom-hero__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem; }
+  .ecom-process__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: flex-start; gap: 3rem; }
+  
+  /* =================================================================
+     WHEN TO GO CUSTOM (COMPARISON TABLE)
+     ───────────────────────────────────────────────────────────── */
+  .ecom-when {
+    background-color: var(--ecom-bg-secondary);
+  }
+  
+  .ecom-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0.75rem;
+    border: 1px solid var(--ecom-border);
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+  }
+  
+  .ecom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background-color: var(--ecom-bg-card);
+    font-size: 0.95rem;
+  }
+  
+  .ecom-table__caption {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  .ecom-table th,
+  .ecom-table td {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--ecom-border);
+  }
+  
+  .ecom-table th {
+    background-color: #090d16;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .ecom-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .ecom-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.015);
+  }
+  
+  .ecom-col--factor {
+    font-weight: 600;
+    color: #ffffff;
+    width: 22%;
+  }
+  
+  .ecom-col--highlight {
+    background-color: var(--ecom-highlight-bg);
+    color: #ffffff;
+    font-weight: 500;
+    width: 39%;
+    border-left: 1px solid var(--ecom-border);
+    border-right: 1px solid var(--ecom-border);
+  }
+  
+  .ecom-table td:nth-child(2) {
+    color: var(--ecom-text-muted);
+    width: 39%;
+  }
+  
+  .ecom-when__note {
+    font-size: 0.95rem;
+    color: var(--ecom-text-muted);
+  }
+  
+  .ecom-when__note a {
+    color: #38bdf8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  .ecom-when__note a:hover {
+    color: #60a5fa;
+  }
+  
+  /* =================================================================
+     CAPABILITIES GRID
+     ───────────────────────────────────────────────────────────── */
+  .ecom-capabilities {
+    background-color: var(--ecom-bg-primary);
+  }
+  
+  .ecom-capabilities__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .ecom-capability-card {
+    background-color: var(--ecom-bg-secondary);
+    border: 1px solid var(--ecom-border);
+    border-radius: 0.875rem;
+    padding: 2.25rem;
+    transition: var(--transition-smooth);
+  }
+  
+  .ecom-capability-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    background-color: var(--ecom-bg-card);
+    box-shadow: 0 16px 35px -10px rgba(56, 189, 248, 0.15);
+  }
+  
+  .ecom-capability-card__icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+  
+  .ecom-capability-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+  }
+  
+  .ecom-capability-card__desc {
+    font-size: 0.95rem;
+    color: var(--ecom-text-muted);
+    line-height: 1.65;
+  }
+  
+  /* =================================================================
+     PROCESS TIMELINE
+     ───────────────────────────────────────────────────────────── */
+  .ecom-process {
+    background-color: var(--ecom-bg-secondary);
+  }
+  
+  .ecom-process__steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.5rem;
+    max-width: 950px;
+  }
+  
+  .ecom-process__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.75rem;
+    background-color: var(--ecom-bg-card);
+    border: 1px solid var(--ecom-border);
+    padding: 2rem;
+    border-radius: 0.875rem;
+    transition: var(--transition-smooth);
+  }
+  
+  .ecom-process__step:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    transform: translateX(4px);
+  }
+  
+  .ecom-process__step-num {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #38bdf8;
+    background-color: var(--ecom-accent-glow);
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    flex-shrink: 0;
+  }
+  
+  .ecom-process__step h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+  }
+  
+  .ecom-process__step p {
+    font-size: 0.95rem;
+    color: var(--ecom-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+  
+  /* =================================================================
+     RELATED SERVICES
+     ───────────────────────────────────────────────────────────── */
+  .ecom-related {
+    background-color: var(--ecom-bg-primary);
+    padding: 3.5rem 0;
+  }
+  
+  .ecom-related__heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+  }
+  
+  .ecom-related__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .ecom-related__links a {
+    background-color: var(--ecom-bg-secondary);
+    border: 1px solid var(--ecom-border);
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+  }
+  
+  .ecom-related__links a:hover {
+    background-color: var(--ecom-accent);
+    border-color: var(--ecom-accent);
+    transform: translateY(-2px);
+  }
+  
+  .ecom-related__note {
+    font-size: 0.95rem;
+    color: var(--ecom-text-muted);
+  }
+  
+  .ecom-related__note a {
+    color: #38bdf8;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  /* =================================================================
+     FAQ SECTION
+     ───────────────────────────────────────────────────────────── */
+  .ecom-faq {
+    background-color: var(--ecom-bg-secondary);
+  }
+  
+  .ecom-faq__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+    gap: 1.75rem;
+  }
+  
+  @media (max-width: 768px) {
+    .ecom-faq__list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .ecom-faq__item {
+    background-color: var(--ecom-bg-card);
+    border: 1px solid var(--ecom-border);
+    border-radius: 0.875rem;
+    padding: 2rem;
+    transition: var(--transition-smooth);
+  }
+  
+  .ecom-faq__item:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+  
+  .ecom-faq__q {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  
+  .ecom-faq__a {
+    font-size: 0.95rem;
+    color: var(--ecom-text-muted);
+    margin: 0;
+    line-height: 1.65;
+  }
+  
+  /* =================================================================
+     FINAL CTA SECTION
+     ───────────────────────────────────────────────────────────── */
+  .ecom-cta {
+    background: linear-gradient(135deg, var(--ecom-bg-secondary) 0%, #0f1c3f 100%);
+    text-align: center;
+    padding: 7rem 0;
+    border-bottom: none;
+  }
+  
+  .ecom-cta__inner {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  
+  .ecom-cta h2 {
+    font-size: clamp(2.25rem, 3.5vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.025em;
+  }
+  
+  .ecom-cta p {
+    font-size: 1.15rem;
+    color: var(--ecom-text-muted);
+    margin-bottom: 2.5rem;
+    line-height: 1.65;
+  }
+  
+  .ecom-cta__buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive Overrides */
+  @media (max-width: 768px) {
+    .ecom-hero {
+      padding: 4.5rem 0 4rem;
+    }
+    
+    .ecom-page .section {
+      padding: 4rem 0;
+    }
+    
+    .ecom-capabilities__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+  /* =================================================================
+   HERO SECTION ALIGNMENT & LAYOUT FIX
+   ───────────────────────────────────────────────────────────── */
+.ecom-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center; /* Perfect vertical centering */
+  gap: 3.5rem;
+}
+
+.ecom-hero-visual-card {
+  background: var(--ecom-bg-card);
+  border: 1px solid var(--ecom-border);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+
+.ecom-hero__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+/* =================================================================
+   PROCESS SECTION ALIGNMENT & LAYOUT FIX
+   ───────────────────────────────────────────────────────────── */
+.ecom-process__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: start; /* Aligns top of steps list with top of image card */
+  gap: 3rem;
+}
+
+.ecom-process__sidebar {
+  position: sticky;
+  top: 2rem;
+  width: 100%;
+}
+
+.ecom-process__visual-card {
+  background-color: var(--ecom-bg-card);
+  border: 1px solid var(--ecom-border);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+}
+
+.ecom-process__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* Responsive mobile stacking */
+@media (max-width: 968px) {
+  .ecom-hero__grid,
+  .ecom-process__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .ecom-process__sidebar {
+    position: static;
+  }
+}
