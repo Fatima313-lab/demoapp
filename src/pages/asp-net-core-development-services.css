@@ -268,3 +268,57 @@
     padding: 2rem 1.5rem;
   }
 }
+
+/* Hero: two-column layout with image */
+.aspnet-hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.aspnet-hero__content {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+.aspnet-hero__image-wrap {
+  flex: 1 1 400px;
+  min-width: 280px;
+}
+.aspnet-hero__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Proof section: two-column layout with image */
+.aspnet-proof__layout {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.aspnet-proof-box {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+.aspnet-proof__image-wrap {
+  flex: 1 1 400px;
+  min-width: 280px;
+}
+.aspnet-proof__image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Stack to single column on mobile */
+@media (max-width: 768px) {
+  .aspnet-hero__inner,
+  .aspnet-proof__layout {
+    flex-direction: column;
+  }
+}
