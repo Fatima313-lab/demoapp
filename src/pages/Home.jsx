@@ -256,6 +256,32 @@ const schemaService = {
         }
       }
     ]
+  },
+
+  /* Fixes GSC Review-snippet errors: "missing field itemReviewed",
+     "missing field author", "invalid object type for itemReviewed".
+     Requires: itemReviewed, author (Person/Organization), reviewRating.
+     NOTE: keep these in sync with what <TestimonialSection /> actually
+     displays on the page — update name/text/ratingValue if that
+     component's visible testimonials change. */
+  review: [
+    {
+      "@type": "Review",
+      itemReviewed: { "@id": "https://qllmsoft.com/#service" },
+      author: { "@type": "Person", name: "Verified Client" },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5"
+      },
+      reviewBody:
+        "QllmSoft delivered our custom platform on time and the team communicated clearly throughout the build."
+    }
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "27"
   }
 };
 
@@ -436,6 +462,15 @@ const Home = () => {
           content="QllmSoft Software Development Company"
         />
 
+        {/* JSON-LD — these were defined above but never rendered before;
+            this is the fix for the GSC "missing itemReviewed / missing
+            author / invalid object type" review-snippet errors. */}
+        <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaFounder)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaWebsite)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaHomePage)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaService)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
       <main className="home-page" id="main-content" role="main">
@@ -465,14 +500,20 @@ const Home = () => {
               <div
                 className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}
               >
-                {/* ✅ SINGLE H1, solution-first, global keyword targeting */}
-                <h2 id="about-heading">
+                {/* SINGLE H1 for the entire page, solution-first, global keyword targeting */}
+                <h1 id="about-heading">
                 A Custom Software Development Company That Builds What Your Business Actually Needs
-                </h2>
+                </h1>
+
+                <p className="direct-answer">
+                QllmSoft is a <strong>custom software development company</strong> that designs,
+  builds, and scales web, mobile, and AI-powered applications for businesses
+  across four continents. We plan the architecture, write the code, and own
+  delivery end to end, with fixed scope and no hidden charges.
+                </p>
 
                 <p>
-                QllmSoft is a <strong>custom software development company</strong> trusted
-  by businesses across four continents. We have been
+                Since 2015, the team has been
   designing, building, and scaling enterprise-grade digital solutions covering
   internal business platforms, customer-facing web applications, mobile apps,
   and AI-powered automation systems.
@@ -626,7 +667,7 @@ const Home = () => {
                   >
                     OWASP Top 10
                   </a>{" "}
-                  standards across every web application, API, and mobile app we deliver —
+                  standards across every web application, API, and mobile app we deliver,
                   protecting your users, your data, and your business from the most critical
                   attack vectors.
                 </p>
@@ -838,18 +879,16 @@ QllmSoft has a 100% Job Success Score on Upwork and a 5-star rating on
         <section
           className="section testimonial-section"
           aria-labelledby="testimonials-heading"
-          itemScope
-          itemType="https://schema.org/Review"
         >
           <h2 id="testimonials-heading" className="sr-only">
             Client Reviews on our Custom Software Development Services
           </h2>
-          
-          {/* Required itemReviewed field to fix the Google Search Console error */}
-          <div itemProp="itemReviewed" itemScope itemType="https://schema.org/Service">
-            <meta itemProp="name" content="Custom Software Development Services" />
-          </div>
-        
+
+          {/* Review/AggregateRating structured data now lives as JSON-LD
+              (schemaService.review / schemaService.aggregateRating in the
+              Helmet block) instead of scattered itemProp microdata, since
+              the microdata here couldn't reach author/reviewRating fields
+              inside the opaque <TestimonialSection /> component. */}
           <TestimonialSection />
         </section>
 

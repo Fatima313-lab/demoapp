@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
   <!-- Core Homepage -->
   <url>
     <loc>https://qllmsoft.com/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,8 +18,13 @@
   </url>
 
   <!-- Core Commercial & Technical Service Pages -->
+  <!-- FIXED: was /asp-net-core-development-services, which does not match
+       the live, indexed page. Confirmed via live Google index check. If
+       your router actually uses the "-services" slug, tell me and I'll
+       flip this back — but as of today, /asp-net-core-development is what
+       Google has indexed with real content. -->
   <url>
-    <loc>https://qllmsoft.com/asp-net-core-development-services</loc>
+    <loc>https://qllmsoft.com/asp-net-core-development</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -74,6 +79,14 @@
   </url>
   <url>
     <loc>https://qllmsoft.com/ai-powered-software-solutions</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ADDED: confirmed live and indexed by Google, was missing entirely -->
+  <url>
+    <loc>https://qllmsoft.com/outsource-mobile-app-development-to-pakistan</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -150,6 +163,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- ADDED: confirmed live and indexed by Google, was missing entirely -->
+  <url>
+    <loc>https://qllmsoft.com/mobile-app-development-cost-in-pakistan</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <url>
     <loc>https://qllmsoft.com/software-project-requirements-checklist</loc>
     <lastmod>2026-06-01</lastmod>
@@ -166,7 +188,7 @@
   </url>
   <url>
     <loc>https://qllmsoft.com/blog</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -200,5 +222,76 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
+  <!-- Blog Articles -->
+<url>
+    <loc>https://qllmsoft.com/blog/csharp-desktop-application-development</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/scalable-ecommerce-development-for-smbs</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/mobile-app-devsecops-in-2026</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/shopify-isnt-scaling-what-companies-do-next</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/custom-vs-saas-ecommerce-for-growing-smbs</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/when-internal-software-slows-teams-instead-of-helping</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/role-based-access-problems-why-teams-break-systems</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/custom-software-for-financial-services-compliance-and-growth</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+<url>
+    <loc>https://qllmsoft.com/blog/legacy-system-modernization-without-downtime-or-data-loss</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+</url>
+
+  <!-- NOTE: individual /blog/* posts intentionally excluded for now.
+       Add them back in once the react-snap prerendering fix is live
+       and you've confirmed real content appears in view-source for
+       each post — submitting them while they still return an empty
+       JS shell would just be feeding Google more of the exact
+       problem you're fixing today. -->
 
 </urlset>

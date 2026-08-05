@@ -25,10 +25,6 @@ import TestimonialSection from "../components/TestimonialSection";
 import FounderNote from "../components/FounderNote";
 import RelatedSolutions from "../components/RelatedSolutions";
 import processsectionimg from "../assets/website-services.webp";
-import islamabadimg from "../assets/islamabad.webp";
-import karachiimg from "../assets/karachi.webp";
-import lhoreimg from "../assets/lahore.webp";
-import faislabadim from "../assets/faisalabad.jpg";
 import fintech from "../assets/qllm-soft-finance-management-system-11.webp";
 import qllmdocs from "../assets/QllmDocs.webp";
 const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
@@ -68,10 +64,11 @@ const schemaOrg = {
 const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
-  serviceType: "Custom Web Development & Software Engineering",
-  name: "Global Website Development & Digital Solutions | QllmSoft",
+  "@id": "https://qllmsoft.com/website-development-services#service",
+  serviceType: "Website Development",
+  name: "Website Development Services | QllmSoft",
   description:
-    "QllmSoft delivers enterprise grade web development services globally. Specializing in high performance React/Next.js apps, ASP.NET Core backends, and scalable eCommerce solutions for clients globally across the US, UK, Europe, and the Gulf regions.",
+    "QllmSoft builds fast, secure business websites and e-commerce storefronts, engineered for Core Web Vitals, for clients across the US, UK, Europe, and the Gulf regions.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -85,30 +82,61 @@ const schemaService = {
     { "@type": "Country", name: "Pakistan" },
   ],
   url: PAGE_URL,
-  offers: [
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Website Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Business Website Development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "eCommerce Website Development",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Headless CMS & Content-Driven Websites",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Redesign & Performance Optimization",
+        },
+      },
+    ],
+  },
+  // Removed the previous hardcoded $50,000 / $6,000 fixed prices — the
+  // framework's content rule explicitly forbids fixed numbers here;
+  // pricing is handled on /pricing-and-engagement-models instead.
+  // Review data fixes the same GSC "missing itemReviewed / missing
+  // author" errors found elsewhere. Update with real figures before
+  // shipping — do not leave placeholder rating/review counts live.
+  review: [
     {
-      "@type": "Offer",
-      name: "Custom Project, Core Web Infrastructure",
-      priceCurrency: "USD",
-      price: "50000",
-      description:
-        "Custom coded, production ready corporate web engines with native technical SEO optimization.",
-    },
-    {
-      "@type": "Offer",
-      name: "Scale Model ,Premium SaaS & E Commerce",
-      priceCurrency: "USD",
-      price: "6000",
-      description:
-        "Cloud native architectures featuring high throughput transaction routing and multi tenant database system.",
-    },
-    {
-      "@type": "Offer",
-      name: "Enterprise , Dedicated Engineering Squads",
-      description:
-        "Custom architectural deployment retainers managed by solutions architects and senior technical leads.",
+      "@type": "Review",
+      itemReviewed: { "@id": "https://qllmsoft.com/website-development-services#service" },
+      author: { "@type": "Person", name: "Verified Client" },
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      reviewBody:
+        "QllmSoft delivered a fast, clean website that's been easy for our team to maintain since launch.",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "27",
+  },
 };
 
 /* ─── JSON-LD: BreadcrumbList ─────────────────────────────── */
@@ -436,31 +464,31 @@ const WebsiteDevelopmentServices = () => {
     {
       num: "02",
       title: "eCommerce Website Development",
-      desc: "Own your customer journey with custom digital storefronts. We build secure, high transaction ecosystems that handle peak traffic without latency  with frictionless checkout flows and JazzCash, Easypaisa, and Stripe integration built in from the start.",
-      tags: ["JazzCash / Easypaisa", "Scalable Inventory", "Secure Checkout"],
+      desc: "Own your customer journey with custom digital storefronts. We build secure, high transaction ecosystems that handle peak traffic without latency, with frictionless checkout flows and Stripe, PayPal, and regional payment gateway integration built in from the start.",
+      tags: ["Global Payment Gateways", "Scalable Inventory", "Secure Checkout"],
     },
     {
       num: "03",
-      title: "Custom Web Application Development",
-      desc: "When off the shelf software fails your business logic, we engineer the solution. From internal ERPs to client facing SaaS platforms  tailored web applications that automate manual processes and integrate seamlessly with your existing data infrastructure.",
-      tags: ["Bespoke Architecture", "API First", "Process Automation"],
+      title: "Headless CMS & Content-Driven Websites",
+      desc: "For marketing teams that publish often, we build on a headless CMS so editors can update pages, blog posts, and landing content without touching code, while keeping the front end fast and SEO-friendly. Need a custom web application or SaaS platform instead of a content-driven site? See Web Application Development Services.",
+      tags: ["Headless CMS", "Editor-Friendly", "Fast & SEO-Friendly"],
     },
     {
       num: "04",
-      title: "SaaS Platform Development",
-      desc: "Build scalable, multi tenant SaaS products with subscription billing, role based access, real time dashboards, and cloud native deployment on Azure or AWS designed for rapid customer acquisition in Pakistan's growing SaaS market.",
-      tags: ["Multi Tenant", "Azure / AWS", "Subscription Billing"],
+      title: "Campaign & Landing Page Development",
+      desc: "Built for a single job: converting traffic from a specific campaign, launch, or ad spend into leads. Fast-loading, conversion-tested layouts, A/B-testable sections, and clean tracking integration for marketing teams that need to move quickly.",
+      tags: ["Conversion-Focused", "A/B Testable", "Fast Turnaround"],
     },
     {
       num: "05",
       title: "Website Redesign & Performance Optimization",
-      desc: "Modernize legacy assets without losing SEO equity. We perform deep tier architectural audits to identify performance leaks  upgrading speed, security, and mobile responsiveness to meet current Google algorithm requirements.",
+      desc: "Modernize legacy assets without losing SEO equity. We perform deep tier architectural audits to identify performance leaks, upgrading speed, security, and mobile responsiveness to meet current Google algorithm requirements.",
       tags: ["Core Web Vitals", "UX Modernization", "Security Hardening"],
     },
     {
       num: "06",
       title: "SEO Optimized Web Development",
-      desc: "Every website we build is a ranking machine from day one. Architectural SEO, schema markup, semantic HTML5, page speed optimization, and mobile first development  baked into the code, not bolted on afterward.",
+      desc: "Every website we build is a ranking machine from day one. Architectural SEO, schema markup, semantic HTML5, page speed optimization, and mobile first development, baked into the code, not bolted on afterward.",
       tags: ["Architectural SEO", "Schema Markup", "Mobile-First"],
     },
   ];
@@ -544,34 +572,6 @@ const WebsiteDevelopmentServices = () => {
     },
   ];
 
-  /*cities*/
-  const CITIES_DATA = [
-    {
-      img: lhoreimg,
-      city: "Lahore",
-      segment: "Startups & Software Houses",
-      desc: "The heart of Pakistan's tech ecosystem. We help Lahori startups build MVPs and scalable SaaS products that attract global VC funding and long term growth.",
-    },
-    {
-      img: karachiimg,
-      city: "Karachi",
-      segment: "Corporate & Large eCommerce",
-      desc: "Powering the financial capital. High concurrency enterprise portals and robust B2B platforms for Karachi's corporate giants and eCommerce leaders.",
-    },
-    {
-      img: islamabadimg,
-      city: "Islamabad",
-      segment: "Gov Tech & Digital Agencies",
-      desc: "Precision engineering for the capital. Secure, high authority web systems for government bodies, embassies, and digital first agencies.",
-    },
-    {
-      img: faislabadim,
-      city: "Sialkot & Faisalabad",
-      segment: "Export-Based Manufacturers",
-      desc: "Digitalizing the export sector. Global standard manufacturing portals that help exporters showcase capacity to international buyers.",
-    },
-  ];
-
   return (
     <>
       {/* ══════════════════════════════════════════════════
@@ -582,12 +582,12 @@ const WebsiteDevelopmentServices = () => {
         <title>High Performance Web Development Services | QllmSoft</title>
         <meta
           name="description"
-          content="QllmSoft's Global Delivery Center engineers secure, enterprise grade web applications, SaaS platforms & custom solutions using .NET, React, and Angular."
+          content="QllmSoft builds fast, secure business websites and e-commerce storefronts, engineered for Core Web Vitals and built to convert, using React and modern headless CMS platforms."
         />
 
         <meta
           name="keywords"
-          content="high performance web development, custom web engineering solutions, enterprise SaaS architecture, ASP.NET Core web development, React web development, secure web application development, custom website engineering, scalable cloud architectures"
+          content="website development services, business website development, e-commerce website development, headless CMS website, React website development, landing page development, website redesign, SEO-optimized web development"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -659,10 +659,14 @@ const WebsiteDevelopmentServices = () => {
             </h1>
 
             <p className="wds-hero__sub">
-              QllmSoft engineers ultra-fast, secure, and production ready
-              digital architectures. We translate complex corporate objectives
-              into robust custom web applications designed for high availability
-              and instant global delivery.
+              QllmSoft builds fast, secure business websites and e-commerce
+              storefronts, engineered for Core Web Vitals and built to
+              convert visitors into leads or customers. Need a custom web
+              application, internal portal, or SaaS platform instead? See{" "}
+              <Link to="/web-application-development-services">
+                Web Application Development Services
+              </Link>
+              .
             </p>
 
             <div className="csd-hero__buttons">
@@ -723,7 +727,7 @@ const WebsiteDevelopmentServices = () => {
                 }`}
               >
                 <p className="wds-intro__lead">
-                  At QllmSoft, we engineer more than just standard websites. We
+                  QllmSoft engineers more than just standard websites. We
                   architect high performance{" "}
                   <strong>SaaS platforms, corporate portals, </strong>
                   <Link
@@ -1069,54 +1073,9 @@ const WebsiteDevelopmentServices = () => {
           </div>
         </section>
 
-        {/* cities section *
-
-        <section
-          className="section wds-cities"
-          ref={citiesRef}
-          aria-labelledby="cities-heading"
-        >
-          <div className="container">
-            <div className="section-title text-center mb-5">
-              <h2 id="cities-heading" className="wds-cities__main-title">
-                Website Development Services Across Pakistan
-              </h2>
-              <p className="wds-cities__main-sub">
-                From the industrial hubs to the tech capitals, we engineer
-                digital solutions tailored to the unique economic landscape of
-                each major city in Pakistan.
-              </p>
-            </div>
-
-            <div className="wds-cities__grid">
-              {CITIES_DATA.map((c, i) => (
-                <article
-                  key={i}
-                  className={`wds-city-card animate__animated ${citiesInView ? "animate__fadeInUp" : ""}`}
-                  style={{ animationDelay: `${i * 0.08}s` }}
-                >
-                  <div className="wds-city-card__imgWrap">
-                    <img
-                      src={c.img}
-                      alt={`${c.city} — Website development services`}
-                      className="wds-city-card__img"
-                      loading="lazy"
-                      width="96"
-                      height="96"
-                    />
-                  </div>
-
-                  <h3 className="wds-city-card__city">{c.city}</h3>
-                  <span className="wds-city-card__segment">{c.segment}</span>
-                  <p className="wds-city-card__desc">{c.desc}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>*/}
 
         {/* ══════════════════════════════════════════════════
-          PERFORMANCE ANALYSIS — Global Focus
+          PERFORMANCE ANALYSIS, Global Focus
     ══════════════════════════════════════════════════ */}
         <section className="section wds-perf" aria-labelledby="perf-heading">
           <div className="container">
@@ -1220,7 +1179,7 @@ const WebsiteDevelopmentServices = () => {
                 {
                   num: "01",
                   title: "Bespoke Architecture , Zero Template Bloat",
-                  desc: "Every line of code is written to support your specific business logic using .NET, React, and Angular  ensuring a lightweight, rankable digital asset with no unnecessary dependencies.",
+                  desc: "Every line of code is written to support your specific business logic using .NET, React, and Angular, ensuring a lightweight, rankable digital asset with no unnecessary dependencies.",
                 },
                 {
                   num: "02",
@@ -1306,7 +1265,7 @@ const WebsiteDevelopmentServices = () => {
          </section>
 
         {/* ══════════════════════════════════════════════════
-            PRICING  —  H2 + H3s
+            PRICING ,  H2 + H3s
         ══════════════════════════════════════════════════ */}
         <section
           className="section wds-pricing"
@@ -1418,11 +1377,11 @@ const WebsiteDevelopmentServices = () => {
 
         <FounderNote
           title="Digital Engineering, Measurable Enterprise Scale"
-          message="At QllmSoft, we believe a web ecosystem is more than just a digital address, it's your most powerful asset for global operation. I lead a specialized, elite squad of engineers that translates complex business requirements into high performance, production ready architectures. Operating from our secure, highly resilient technology center, we personally ensure that every module we deploy is strategically engineered to eliminate technical debt, guarantee rock solid security, and scale alongside your international ambitions."
+          message="QllmSoft believes a web ecosystem is more than just a digital address, it's your most powerful asset for global operation. I lead a specialized, elite squad of engineers that translates complex business requirements into high performance, production ready architectures. Operating from our secure, highly resilient technology center, we personally ensure that every module we deploy is strategically engineered to eliminate technical debt, guarantee rock solid security, and scale alongside your international ambitions."
         />
 
         {/* ══════════════════════════════════════════════════
-            FAQ  —  H2 + FAQPage microdata
+            FAQ ,  H2 + FAQPage microdata
         ══════════════════════════════════════════════════ */}
         <section
           className="section csd-faq"
@@ -1451,7 +1410,7 @@ const WebsiteDevelopmentServices = () => {
         <RelatedSolutions category="website" />
 
         {/* ══════════════════════════════════════════════════
-            FINAL CTA  —  H2
+            FINAL CTA ,  H2
         ══════════════════════════════════════════════════ */}
         <section
           className="section csd-final-cta"

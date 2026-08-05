@@ -13,7 +13,7 @@
  * SEO: 5 JSON-LD · Single H1 · H1→H2→H3→H4 · Semantic HTML5
  *      aria-label · Review microdata · FAQPage microdata
  *      Service microdata · internal + authority outbound links
- *      Professional SVG icons — no emoji in UI
+ *      Professional SVG icons, no emoji in UI
  */
 
 import React, { useState } from 'react';
@@ -54,31 +54,48 @@ const schemaOrg = {
 };
 const schemaWebPage = {
   '@context':'https://schema.org','@type':'WebPage',
-  name:'Web Application Development Services in Pakistan | ASP.NET Core | QllmSoft',
+  name:'Web Application Development Services | ASP.NET Core | QllmSoft',
   url:PAGE_URL,
-  description:'QllmSoft provides expert ASP.NET Core web application development services in Pakistan — MVC portals, REST APIs, SaaS platforms, enterprise systems, and legacy .NET migration. Serving Pakistani and global businesses since 2015.',
+  description:'QllmSoft provides expert ASP.NET Core web application development services, MVC portals, REST APIs, SaaS platforms, enterprise systems, and legacy .NET migration for businesses worldwide.',
   publisher:{'@type':'Organization',name:'QllmSoft'},
-  aggregateRating:{'@type':'AggregateRating',ratingValue:'5',reviewCount:'47',bestRating:'5',worstRating:'1'},
+  // aggregateRating removed: WebPage does not support this property in
+  // Schema.org's spec, this was almost certainly the GSC "invalid object
+  // type for parent_node" error. Moved to schemaService.review below,
+  // which is the correct type to carry review/rating data.
 };
 const schemaService = {
   '@context':'https://schema.org','@type':'Service',
   serviceType:'Web Application Development',
-  name:'Web Application Development Services in Pakistan',
-  description:'Expert ASP.NET Core .NET 8/9 web application development services in Pakistan — enterprise MVC web applications, REST and GraphQL APIs, SaaS platforms, microservices architecture, and legacy .NET migration for businesses in Pakistan and worldwide.',
+  name:'Web Application Development Services',
+  description:'Expert ASP.NET Core .NET 9/10 web application development services, enterprise MVC web applications, REST and GraphQL APIs, SaaS platforms, microservices architecture, and legacy .NET migration for businesses worldwide.',
   provider:{'@type':'Organization',name:'QllmSoft',url:'https://qllmsoft.com'},
-  areaServed:['Pakistan','United States','United Kingdom','UAE','Saudi Arabia'],
+  areaServed:['United States','United Kingdom','UAE','Saudi Arabia','Pakistan'],
   url:PAGE_URL,
   hasOfferCatalog:{
     '@type':'OfferCatalog',name:'Web Application Development Services',
     itemListElement:[
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'ASP.NET Core MVC Web Application Development'}},
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'REST API and GraphQL API Development'}},
-      {'@type':'Offer',itemOffered:{'@type':'Service',name:'SaaS Platform Development Pakistan'}},
+      {'@type':'Offer',itemOffered:{'@type':'Service',name:'SaaS Platform Development'}},
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'Enterprise Web Application Development'}},
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'Legacy .NET Framework Migration to ASP.NET Core'}},
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'Microservices Architecture Development'}},
     ],
   },
+  // Fixes the same GSC Review-snippet errors found on the homepage
+  // (missing itemReviewed / missing author). Update ratingValue /
+  // reviewCount / reviewBody with real figures before shipping,
+  // do not leave placeholder numbers live in production schema.
+  review:[
+    {
+      '@type':'Review',
+      itemReviewed:{'@type':'Service',name:'Web Application Development Services'},
+      author:{'@type':'Person',name:'Verified Client'},
+      reviewRating:{'@type':'Rating',ratingValue:'5',bestRating:'5'},
+      reviewBody:'QllmSoft built our ASP.NET Core platform on schedule with clear, structured communication throughout.',
+    },
+  ],
+  aggregateRating:{'@type':'AggregateRating',ratingValue:'5',reviewCount:'47',bestRating:'5',worstRating:'1'},
 };
 const schemaBreadcrumb = {
   '@context':'https://schema.org','@type':'BreadcrumbList',
@@ -89,12 +106,12 @@ const schemaBreadcrumb = {
   ],
 };
 const FAQ_DATA = [
-  { q:'What web application development services does QllmSoft provide?', a:'QllmSoft provides end-to-end web application development services using ASP.NET Core and the Microsoft .NET ecosystem — including MVC business portals, REST and GraphQL API development, multi-tenant SaaS platforms, enterprise resource management systems, Blazor applications, and legacy .NET Framework migration to .NET 8. We serve Pakistani businesses and international clients in the US, UK, UAE, and Saudi Arabia.' },
-  { q:'Why choose ASP.NET Core for web application development in 2025–26?', a:'ASP.NET Core is consistently ranked as one of the world\'s fastest web frameworks in independent TechEmpower benchmarks — outperforming Node.js, Django, Laravel, and Spring Boot in raw throughput. It ships with enterprise-grade security features built in, native Azure integration, cross-platform deployment capability (Windows, Linux, macOS), and Microsoft Long-Term Support releases that protect your technology investment for years.' },
-  { q:'How much does web application development cost in Pakistan?', a:'Web application development cost in Pakistan depends on project scope, feature complexity, integration requirements, and team size. A business portal or internal tool typically starts from PKR 150,000 to 500,000. A SaaS platform with multi-tenant architecture, billing, and dashboards typically costs PKR 500,000 to 1,500,000 or more. QllmSoft provides a detailed fixed-price scope before any development begins — with no hidden charges or hourly billing surprises.' },
-  { q:'Can QllmSoft migrate my .NET Framework application to ASP.NET Core?', a:'Yes. We specialise in structured .NET Framework to ASP.NET Core migrations — including full dependency audit, breaking change resolution, EF6 to EF Core migration, Forms Auth to ASP.NET Core Identity, performance profiling, and regression test coverage. All business logic is preserved throughout the migration with zero data loss and planned zero-downtime cutover.' },
-  { q:'How long does enterprise web application development typically take?', a:'A focused business portal or internal tool — covering core CRUD operations, authentication, and reporting — typically takes 8–14 weeks. A full enterprise application with complex business logic, multiple department modules, and third-party integrations typically takes 16–28 weeks. A SaaS platform with multi-tenant data isolation, subscription billing, and real-time features typically takes 20–32 weeks. QllmSoft provides a detailed milestone plan after requirements discovery.' },
-  { q:'Does QllmSoft handle deployment and ongoing maintenance after launch?', a:'Yes. We manage deployment to Microsoft Azure, AWS, or on-premise environments — with CI/CD pipeline configuration, monitoring setup, SSL certificate management, and performance tuning. Every web application engagement includes 30 days of free post-launch support. Long-term maintenance contracts covering security patches, dependency updates, and feature enhancement are available for businesses that need an ongoing engineering partner.' },
+  { q:'What web application development services does QllmSoft provide?', a:'QllmSoft provides end-to-end web application development services using ASP.NET Core and the Microsoft .NET ecosystem, including MVC business portals, REST and GraphQL API development, multi-tenant SaaS platforms, enterprise resource management systems, Blazor applications, and legacy .NET Framework migration to .NET. We serve Pakistani businesses and international clients in the US, UK, UAE, and Saudi Arabia.' },
+  { q:'Why choose ASP.NET Core for web application development in 2026?', a:'ASP.NET Core is consistently ranked as one of the world\'s fastest web frameworks in independent TechEmpower benchmarks, outperforming Node.js, Django, Laravel, and Spring Boot in raw throughput. It ships with enterprise-grade security features built in, native Azure integration, cross-platform deployment capability (Windows, Linux, macOS), and Microsoft Long-Term Support releases that protect your technology investment for years.' },
+  { q:'How much does web application development cost in Pakistan?', a:'Web application development cost in Pakistan depends on project scope, feature complexity, integration requirements, and team size. A business portal or internal tool typically starts from PKR 150,000 to 500,000. A SaaS platform with multi-tenant architecture, billing, and dashboards typically costs PKR 500,000 to 1,500,000 or more. QllmSoft provides a detailed fixed-price scope before any development begins, with no hidden charges or hourly billing surprises.' },
+  { q:'Can QllmSoft migrate my .NET Framework application to ASP.NET Core?', a:'Yes. We specialise in structured .NET Framework to ASP.NET Core migrations, including full dependency audit, breaking change resolution, EF6 to EF Core migration, Forms Auth to ASP.NET Core Identity, performance profiling, and regression test coverage. All business logic is preserved throughout the migration with zero data loss and planned zero-downtime cutover.' },
+  { q:'How long does enterprise web application development typically take?', a:'A focused business portal or internal tool, covering core CRUD operations, authentication, and reporting, typically takes 8–14 weeks. A full enterprise application with complex business logic, multiple department modules, and third-party integrations typically takes 16–28 weeks. A SaaS platform with multi-tenant data isolation, subscription billing, and real-time features typically takes 20–32 weeks. QllmSoft provides a detailed milestone plan after requirements discovery.' },
+  { q:'Does QllmSoft handle deployment and ongoing maintenance after launch?', a:'Yes. We manage deployment to Microsoft Azure, AWS, or on-premise environments, with CI/CD pipeline configuration, monitoring setup, SSL certificate management, and performance tuning. Every web application engagement includes 30 days of free post-launch support. Long-term maintenance contracts covering security patches, dependency updates, and feature enhancement are available for businesses that need an ongoing engineering partner.' },
 ];
 const schemaFAQ = {
   '@context':'https://schema.org','@type':'FAQPage',
@@ -126,27 +143,27 @@ const WebAppDevelopment = () => {
   return (
     <>
       <Helmet>
-        <title>Web Application Development Services in Pakistan | ASP.NET Core .NET 8 | QllmSoft</title>
-        <meta name="description" content="Expert ASP.NET Core web application development services in Pakistan. QllmSoft builds enterprise MVC systems, REST APIs, SaaS platforms, and .NET 8 web applications for Pakistani and global businesses. OWASP-compliant, Azure-deployed. Free quote in 24 hours." />
-        <meta name="keywords" content="web application development services Pakistan, ASP.NET Core development company Pakistan, enterprise web application development Pakistan, .NET web development Pakistan, custom web application development Pakistan, SaaS development Pakistan, ASP.NET Core development services, .NET 8 web application Pakistan, hire ASP.NET Core developers Pakistan" />
+        <title>Web Application Development Services | ASP.NET Core .NET 10 | QllmSoft</title>
+        <meta name="description" content="QllmSoft builds custom web applications, portals, and SaaS platforms on ASP.NET Core and .NET, for businesses worldwide. OWASP-compliant, Azure-deployed. Free quote in 24 hours." />
+        <meta name="keywords" content="web application development services, ASP.NET Core development company, enterprise web application development, .NET web development company, custom web application development, SaaS platform development, ASP.NET Core development services, .NET web application development, hire ASP.NET Core developers" />
         <meta name="author" content="QllmSoft" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:site_name" content="QllmSoft" />
-        <meta property="og:title" content="Web Application Development Services in Pakistan | ASP.NET Core .NET 8 | QllmSoft" />
-        <meta property="og:description" content="Enterprise ASP.NET Core web applications, REST APIs, SaaS platforms, and .NET 8 systems — OWASP-compliant, Azure-deployed, built in Pakistan for global businesses." />
+        <meta property="og:title" content="Web Application Development Services | ASP.NET Core .NET 10 | QllmSoft" />
+        <meta property="og:description" content="Enterprise ASP.NET Core web applications, REST APIs, SaaS platforms, and .NET systems, OWASP-compliant and Azure-deployed for businesses worldwide." />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Web Application Development Services Pakistan — QllmSoft ASP.NET Core" />
+        <meta property="og:image:alt" content="Web Application Development Services, QllmSoft ASP.NET Core" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Web Application Development Services Pakistan | ASP.NET Core | QllmSoft" />
-        <meta name="twitter:description" content="Enterprise ASP.NET Core .NET 8 web applications, APIs, and SaaS platforms built in Pakistan for global businesses." />
+        <meta name="twitter:title" content="Web Application Development Services | ASP.NET Core | QllmSoft" />
+        <meta name="twitter:description" content="Enterprise ASP.NET Core .NET 9/10 web applications, APIs, and SaaS platforms for businesses worldwide." />
         <meta name="twitter:image" content={OG_IMAGE} />
-        <meta name="twitter:image:alt" content="Web Application Development Pakistan — QllmSoft" />
+        <meta name="twitter:image:alt" content="Web Application Development, QllmSoft" />
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaService)}</script>
@@ -163,22 +180,21 @@ const WebAppDevelopment = () => {
             <div className="ip-hero__content">
               <div className="ip-hero__eyebrow">
                 <span className="ip-hero__dot" aria-hidden="true" />
-                Pakistan's #1 ASP.NET Core Engineering Team
+                ASP.NET Core Engineering Team
               </div>
 
-              {/* ✅ SINGLE H1 */}
+              {/* SINGLE H1 */}
               <h1 className="ip-hero__title">
                 Web Application<br />
-                Development Services<br />
-                <em>in Pakistan</em>
+                Development Services
               </h1>
 
               <p className="ip-hero__sub">
-                QllmSoft engineers <strong>enterprise-grade ASP.NET Core .NET 8/9 web applications</strong> — MVC systems, REST APIs, SaaS platforms, and microservices — built to OWASP security standards and deployed to Azure or AWS. Serving Pakistan, the UK, USA, and UAE since 2015.
+                QllmSoft engineers <strong>enterprise-grade ASP.NET Core .NET 9/10 web applications</strong>, MVC systems, REST APIs, SaaS platforms, and microservices, built to OWASP security standards and deployed to Azure or AWS, for businesses worldwide. Need a marketing website or e-commerce storefront instead? See <Link to="/website-development-services">Website Development Services</Link>.
               </p>
 
               <div className="ip-hero__buttons">
-                <Link to="/contact" className="ip-btn-primary" aria-label="Get a free web application development quote from QllmSoft Pakistan">Get a Free Quote</Link>
+                <Link to="/contact" className="ip-btn-primary" aria-label="Get a free web application development quote from QllmSoft">Get a Free Quote</Link>
                 <Link to="/projects" className="ip-btn-ghost" aria-label="View QllmSoft web application development projects">View .NET Projects</Link>
               </div>
 
@@ -189,18 +205,18 @@ const WebAppDevelopment = () => {
                 <span className="ip-hero__trust-sep" />
                 <span>Quote in 24 Hours</span>
                 <span className="ip-hero__trust-sep" />
-                <span>Based in Pakistan</span>
+                <span>Engineering Team Since 2015</span>
               </div>
             </div>
 
             <aside className="ip-hero__features" aria-label="ASP.NET Core web development capabilities">
               {[
-                {Icon:IconZap,      title:'.NET 8 / .NET 9 LTS',      desc:'World\'s fastest web framework — TechEmpower verified'},
+                {Icon:IconZap,      title:'.NET 9 LTS',      desc:'World\'s fastest web framework, TechEmpower verified'},
                 {Icon:IconShield,   title:'OWASP Top 10 Security',     desc:'JWT, OAuth 2.0, RBAC on every project'},
                 {Icon:IconCloud,    title:'Azure & AWS Deployment',    desc:'CI/CD, auto-scaling, 99.9% uptime SLA'},
-                {Icon:IconCode,     title:'Clean Architecture',         desc:'SOLID, DDD, CQRS — maintainable by design'},
+                {Icon:IconCode,     title:'Clean Architecture',         desc:'SOLID, DDD, CQRS, maintainable by design'},
                 {Icon:IconDatabase, title:'Entity Framework Core 8',   desc:'Code-first migrations, LINQ, SQL Server'},
-                {Icon:IconGlobe,    title:'Cross-Platform Deployment',  desc:'Windows, Linux, or macOS — your choice'},
+                {Icon:IconGlobe,    title:'Cross-Platform Deployment',  desc:'Windows, Linux, or macOS, your choice'},
               ].map((f,i)=>(
                 <div key={i} className="ip-hero__feature">
                   <div className="ip-hero__feature-icon"><f.Icon s={20} /></div>
@@ -223,23 +239,23 @@ const WebAppDevelopment = () => {
         {/* ── INTRO ── */}
         <section className="section ip-intro" aria-labelledby="intro-heading">
           <div className="container">
-            <p className="section-eyebrow">Pakistan's Leading ASP.NET Core Web Application Company</p>
+            <p className="section-eyebrow">Enterprise ASP.NET Core Web Application Engineering</p>
             <div className="ip-intro__layout">
               <div className="ip-intro__text">
                 <h2 id="intro-heading">
-                  Enterprise ASP.NET Core Web Application Development — Built Right, From Day One
+                  Enterprise ASP.NET Core Web Application Development, Built Right, From Day One
                 </h2>
                 <p>
-                  Most web applications fail not because of the framework chosen, but because of architectural decisions made too early, too casually, or under the wrong commercial pressure. At QllmSoft, we have been building production-grade ASP.NET Core systems since the framework's earliest public releases — accumulating a depth of platform knowledge that only comes from maintaining, extending, and debugging real enterprise applications under real business constraints.
+                  Most web applications fail not because of the framework chosen, but because of architectural decisions made too early, too casually, or under the wrong commercial pressure. QllmSoft have been building production-grade ASP.NET Core systems since the framework's earliest public releases, accumulating a depth of platform knowledge that only comes from maintaining, extending, and debugging real enterprise applications under real business constraints.
                 </p>
                 <p>
-                  Our senior C# engineers and .NET architects have delivered over 80 web applications, REST APIs, and enterprise systems for clients ranging from Pakistani SMBs in Lahore and Karachi to businesses in the <strong>UK, USA, UAE, Saudi Arabia, and Germany</strong>. We specialise in <strong>.NET 8 and .NET 9</strong> — using the full Microsoft ecosystem: MVC, Razor Pages, Blazor, Entity Framework Core, SignalR, and Azure services. Every system follows{' '}
-                  <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer nofollow" aria-label="OWASP Top 10 security standard — external authority">OWASP Top 10</a>{' '}
+                  Our senior C# engineers and .NET architects have delivered over 80 web applications, REST APIs, and enterprise systems for businesses in the <strong>Europe and Gulf</strong>, plus SMBs across Pakistan. We specialise in <strong>.NET</strong>, using the full Microsoft ecosystem: MVC, Razor Pages, Blazor, Entity Framework Core, SignalR, and Azure services. Every system follows{' '}
+                  <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer nofollow" aria-label="OWASP Top 10 security standard, external authority">OWASP Top 10</a>{' '}
                   security standards and SOLID architectural principles, verified independently on{' '}
-                  <a href="https://www.techempower.com/benchmarks/" target="_blank" rel="noopener noreferrer nofollow" aria-label="TechEmpower benchmarks — external authority">TechEmpower benchmarks</a>.
+                  <a href="https://www.techempower.com/benchmarks/" target="_blank" rel="noopener noreferrer nofollow" aria-label="TechEmpower benchmarks, external authority">TechEmpower benchmarks</a>.
                 </p>
                 <p>
-                  Whether you need a <Link to="/website-development-services">custom web application</Link>, a secure <Link to="/api-development-services">REST or GraphQL API</Link>, a multi-tenant SaaS platform, or a <Link to="/legacy-system-modernization-services">legacy .NET Framework migration</Link> — our independently verified track record on Upwork and Freelancer speaks for itself.
+                  If you need a secure <Link to="/api-development-services">REST or GraphQL API</Link>, a multi-tenant SaaS platform, a <Link to="/legacy-system-modernization-services">legacy .NET Framework migration</Link>, or a <Link to="/website-development-services">business website</Link> alongside your application, our independently verified track record on Upwork and Freelancer speaks for itself.
                 </p>
                 <div className="ip-intro__badges">
                   {['OWASP Top 10 Compliant','Full IP Ownership + NDA','Fixed-Price Delivery','Azure & AWS Deployment'].map(b=>(
@@ -249,7 +265,7 @@ const WebAppDevelopment = () => {
               </div>
               <aside className="ip-intro__aside" aria-label="Key performance metrics">
                 {[
-                  {Icon:IconZap,     num:'7M+',   label:'Requests/sec — ASP.NET Core TechEmpower benchmark rank'},
+                  {Icon:IconZap,     num:'7M+',   label:'Requests/sec, ASP.NET Core TechEmpower benchmark rank'},
                   {Icon:IconShield,  num:'OWASP',  label:'Security standard applied to every web application'},
                   {Icon:IconDollar,  num:'60%',   label:'Lower cost than equivalent US or UK .NET agencies'},
                   {Icon:IconTrending,num:'80+',   label:'Enterprise web applications delivered since 2015'},
@@ -272,17 +288,17 @@ const WebAppDevelopment = () => {
           <div className="container">
             <p className="section-eyebrow">Technical Advantage</p>
             <div className="section-title">
-              <h2 id="advantage-heading">Why ASP.NET Core Is the Right Choice for Enterprise Web Applications in 2025–26</h2>
-              <p>Before choosing a framework, understand what makes ASP.NET Core the dominant platform for enterprise web development — and why Pakistan's top engineering firms build on it.</p>
+              <h2 id="advantage-heading">Why ASP.NET Core Is the Right Choice for Enterprise Web Applications in 2026</h2>
+              <p>Before choosing a framework, understand what makes ASP.NET Core the dominant platform for enterprise web development, and why QllmSoft's engineering team builds on it.</p>
             </div>
             <div className={`wapp-advantage__grid animate__animated ${advInView?'animate__fadeInUp':''}`}>
               {[
-                {Icon:IconZap,    title:'World\'s Fastest Web Framework',        badge:'7M+ req/sec', desc:'ASP.NET Core consistently ranks #1 in TechEmpower plaintext benchmarks — outperforming Node.js, Django, Laravel, and Spring Boot in raw throughput. This matters when your system scales under real traffic.'},
-                {Icon:IconShield, title:'Enterprise Security Built In',           badge:'OWASP Compliant', desc:'Ships with data protection APIs, CSRF prevention, XSS filters, HTTPS enforcement, and deep Azure AD and OAuth 2.0 integration. Security is architectural — not a plugin you install and forget.'},
-                {Icon:IconCloud,  title:'Native Azure & Cloud Integration',       badge:'Azure-Native', desc:'As a Microsoft framework, ASP.NET Core integrates natively with Azure App Service, AKS, Azure Functions, and Azure DevOps CI/CD pipelines — reducing cloud deployment complexity and operational cost.'},
-                {Icon:IconGlobe,  title:'Cross-Platform & Open Source',           badge:'Windows · Linux · macOS', desc:'Deploy on Windows Server, Linux, or macOS. Fully open source with active Microsoft development — ensuring long-term support, regular security patches, and a stable technology bet for your business.'},
-                {Icon:IconDatabase,title:'Powerful ORM with EF Core 8',          badge:'Code-First Migrations', desc:'Entity Framework Core 8 provides a first-class ORM for SQL Server, PostgreSQL, and MySQL — with LINQ support, migrations, and query optimization built in. Complex data models are manageable and testable.'},
-                {Icon:IconBox,    title:'Long-Term Support Releases',             badge:'.NET 8 LTS Until 2026', desc:'.NET 8 is a Long-Term Support release supported by Microsoft until November 2026. LTS releases receive security patches and bug fixes — protecting your investment and enterprise IT governance compliance.'},
+                {Icon:IconZap,    title:'World\'s Fastest Web Framework',        badge:'7M+ req/sec', desc:'ASP.NET Core consistently ranks #1 in TechEmpower plaintext benchmarks, outperforming Node.js, Django, Laravel, and Spring Boot in raw throughput. This matters when your system scales under real traffic.'},
+                {Icon:IconShield, title:'Enterprise Security Built In',           badge:'OWASP Compliant', desc:'Ships with data protection APIs, CSRF prevention, XSS filters, HTTPS enforcement, and deep Azure AD and OAuth 2.0 integration. Security is architectural, not a plugin you install and forget.'},
+                {Icon:IconCloud,  title:'Native Azure & Cloud Integration',       badge:'Azure-Native', desc:'As a Microsoft framework, ASP.NET Core integrates natively with Azure App Service, AKS, Azure Functions, and Azure DevOps CI/CD pipelines, reducing cloud deployment complexity and operational cost.'},
+                {Icon:IconGlobe,  title:'Cross-Platform & Open Source',           badge:'Windows · Linux · macOS', desc:'Deploy on Windows Server, Linux, or macOS. Fully open source with active Microsoft development, ensuring long-term support, regular security patches, and a stable technology bet for your business.'},
+                {Icon:IconDatabase,title:'Powerful ORM with EF Core 8',          badge:'Code-First Migrations', desc:'Entity Framework Core 8 provides a first-class ORM for SQL Server, PostgreSQL, and MySQL, with LINQ support, migrations, and query optimization built in. Complex data models are manageable and testable.'},
+                {Icon:IconBox,    title:'Long-Term Support Releases',             badge:'.NET Until 2026', desc:'.NET 9/10 is a Long-Term Support release supported by Microsoft until November 2026. LTS releases receive security patches and bug fixes, protecting your investment and enterprise IT governance compliance.'},
               ].map((a,i)=>(
                 <article key={i} className="wapp-advantage-card" style={{animationDelay:`${i*0.08}s`}}>
                   <div className="wapp-advantage-card__icon"><a.Icon s={22} /></div>
@@ -301,27 +317,27 @@ const WebAppDevelopment = () => {
             <p className="section-eyebrow">What We Build</p>
             <div className="section-title">
               <h2 id="services-heading">Our ASP.NET Core Web Application Development Services</h2>
-              <p>From business portals to full enterprise SaaS platforms — QllmSoft covers the complete spectrum of ASP.NET Core web development. Every engagement begins with a fixed-price scope agreed before any code is written.</p>
+              <p>From business portals to full enterprise SaaS platforms, QllmSoft covers the complete spectrum of ASP.NET Core web development. Every engagement begins with a fixed-price scope agreed before any code is written.</p>
             </div>
             <div className="ip-services__grid">
               {[
                 {Icon:IconLayout,   title:'ASP.NET Core MVC Web Applications',
-                  desc:'Full-featured business applications built with the ASP.NET Core MVC pattern — clean controller logic, strongly-typed Razor views, and a layered architecture separating concerns across data, business, and presentation layers. Ideal for portals, CRMs, ERPs, and customer-facing platforms.',
+                  desc:'Full-featured business applications built with the ASP.NET Core MVC pattern, clean controller logic, strongly-typed Razor views, and a layered architecture separating concerns across data, business, and presentation layers. Ideal for portals, CRMs, ERPs, and customer-facing platforms.',
                   tags:['MVC Pattern','Razor Views','Clean Architecture','SOLID Principles','Business Portals']},
                 {Icon:IconCode,     title:'REST API & GraphQL Web API Development',
-                  desc:'Secure, well-documented RESTful APIs and GraphQL endpoints built with ASP.NET Core Web API — authenticated via JWT and OAuth 2.0, documented with Swagger/OpenAPI 3.0, and tested with comprehensive unit and integration test suites built for mobile apps and third-party connectivity.',
+                  desc:'Secure, well-documented RESTful APIs and GraphQL endpoints built with ASP.NET Core Web API, authenticated via JWT and OAuth 2.0, documented with Swagger/OpenAPI 3.0, and tested with comprehensive unit and integration test suites built for mobile apps and third-party connectivity.',
                   tags:['REST / GraphQL','JWT Auth','Swagger / OpenAPI','OAuth 2.0','Integration Tests']},
                 {Icon:IconSettings, title:'SaaS Platform Development',
-                  desc:'Multi-tenant SaaS applications with per-tenant data isolation, subscription billing integration, role-based access control, and real-time dashboards — deployed to Azure App Service with auto-scaling and custom domain management. Engineered for rapid customer onboarding.',
+                  desc:'Multi-tenant SaaS applications with per-tenant data isolation, subscription billing integration, role-based access control, and real-time dashboards, deployed to Azure App Service with auto-scaling and custom domain management. Engineered for rapid customer onboarding.',
                   tags:['Multi-Tenant','RBAC','Subscription Billing','Azure Deployment','Real-Time Dashboards']},
                 {Icon:IconDatabase, title:'Enterprise System Development',
-                  desc:'Large-scale enterprise systems — document management platforms, HR and payroll systems, procurement portals, and financial reporting dashboards — built with clean architecture, CQRS patterns, and domain-driven design for systems that must remain maintainable and auditable at scale.',
+                  desc:'Large-scale enterprise systems, document management platforms, HR and payroll systems, procurement portals, and financial reporting dashboards, built with clean architecture, CQRS patterns, and domain-driven design for systems that must remain maintainable and auditable at scale.',
                   tags:['CQRS / DDD','EF Core','SQL Server','Audit Trails','Financial Systems']},
                 {Icon:IconRefreshCw,title:'Legacy .NET Framework Migration',
-                  desc:'Structured migration of .NET Framework 4.x and early .NET Core applications to .NET 8 LTS — with full dependency audit, breaking change resolution, performance profiling, and regression test coverage. Retain your business logic while gaining modern security and cloud compatibility.',
+                  desc:'Structured migration of .NET Framework 4.x and early .NET Core applications to .NET, with full dependency audit, breaking change resolution, performance profiling, and regression test coverage. Retain your business logic while gaining modern security and cloud compatibility.',
                   tags:['.NET Migration','Zero Downtime','EF6 → EF Core','Performance Profiling','LTS Upgrade']},
                 {Icon:IconBox,      title:'Microservices Architecture',
-                  desc:'Decomposition of monolithic .NET applications into independently deployable microservices — containerised with Docker, orchestrated with Kubernetes or Azure Container Apps, and connected via Azure Service Bus or RabbitMQ event buses. Ideal for high-scale systems requiring independent scaling.',
+                  desc:'Decomposition of monolithic .NET applications into independently deployable microservices, containerised with Docker, orchestrated with Kubernetes or Azure Container Apps, and connected via Azure Service Bus or RabbitMQ event buses. Ideal for high-scale systems requiring independent scaling.',
                   tags:['Docker / Kubernetes','Azure Container Apps','Service Bus','API Gateway','Event-Driven']},
               ].map((s,i)=>(
                 <article key={i} className={`ip-service-card animate__animated ${svInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.08}s`}} itemScope itemType="https://schema.org/Service">
@@ -341,14 +357,14 @@ const WebAppDevelopment = () => {
             <p className="section-eyebrow">How We Deliver</p>
             <div className="section-title">
               <h2 id="process-heading">Our Web Application Development Process</h2>
-              <p>A structured, scope-locked delivery methodology — every phase agreed before the next begins, every milestone validated before we advance.</p>
+              <p>A structured, scope-locked delivery methodology, every phase agreed before the next begins, every milestone validated before we advance.</p>
             </div>
             <ol className="ip-process__steps" aria-label="Web application development process steps">
               {[
-                {n:'01',icon:'📋',title:'Discovery & Fixed-Price Scope',              desc:'We document your functional and non-functional requirements in a detailed technical scope — including data models, user roles, integration points, and security requirements. You approve the scope and a fixed price before a single line of code is written.'},
-                {n:'02',icon:'🏗️',title:'Architecture Design & Technology Selection', desc:'We design the system architecture — choosing the right patterns (Clean Architecture, CQRS, DDD) for your system\'s complexity, defining the data model, API contracts, and security architecture before development begins.'},
-                {n:'03',icon:'⚙️',title:'Agile Development in 2-Week Sprints',       desc:'Development runs in two-week sprints with working software deployed to a shared staging environment after each sprint. You review real functionality — not slide decks — before we advance to the next sprint.'},
-                {n:'04',icon:'🔒',title:'Security Audit, QA & Performance Testing',   desc:'Before launch: OWASP Top 10 security validation, penetration testing, load testing against agreed performance SLAs, and full regression test suite execution — covering every critical user journey in the application.'},
+                {n:'01',icon:'📋',title:'Discovery & Fixed-Price Scope',              desc:'We document your functional and non-functional requirements in a detailed technical scope, including data models, user roles, integration points, and security requirements. You approve the scope and a fixed price before a single line of code is written.'},
+                {n:'02',icon:'🏗️',title:'Architecture Design & Technology Selection', desc:'We design the system architecture, choosing the right patterns (Clean Architecture, CQRS, DDD) for your system\'s complexity, defining the data model, API contracts, and security architecture before development begins.'},
+                {n:'03',icon:'⚙️',title:'Agile Development in 2-Week Sprints',       desc:'Development runs in two-week sprints with working software deployed to a shared staging environment after each sprint. You review real functionality, not slide decks, before we advance to the next sprint.'},
+                {n:'04',icon:'🔒',title:'Security Audit, QA & Performance Testing',   desc:'Before launch: OWASP Top 10 security validation, penetration testing, load testing against agreed performance SLAs, and full regression test suite execution, covering every critical user journey in the application.'},
                 {n:'05',icon:'🚀',title:'Deployment, Documentation & Post-Launch',    desc:'We manage CI/CD pipeline setup, Azure or AWS deployment, domain and SSL configuration, and developer documentation delivery. 30 days of free post-launch support covers bug resolution and performance tuning.'},
               ].map((step,i)=>(
                 <li key={i} className={`ip-process__step animate__animated ${procInView?'animate__fadeInLeft':''}`} style={{animationDelay:`${i*0.09}s`}}>
@@ -362,10 +378,10 @@ const WebAppDevelopment = () => {
             {/* Case Study */}
             <div className="wapp-case" aria-label="Client case study: Alfa Financial Solution">
               <div className="wapp-case__steps">
-                <h3 style={{color:'#fff',fontSize:'1rem',fontWeight:'700',marginBottom:'16px'}}>Case Study — Alfa Financial Solution</h3>
+                <h3 style={{color:'#fff',fontSize:'1rem',fontWeight:'700',marginBottom:'16px'}}>Case Study, Alfa Financial Solution</h3>
                 {[
                   {n:'01',title:'Challenge',     desc:'A decade-old financial platform could no longer support growing user demand, complex workflows, and modern compliance requirements. Downtime directly affected revenue.'},
-                  {n:'02',title:'Approach',      desc:'QllmSoft performed a phased .NET 8 migration — refactoring core modules, modernising the EF Core data layer, and introducing a secure REST API — without interrupting daily financial operations.'},
+                  {n:'02',title:'Approach',      desc:'QllmSoft performed a phased .NET migration, refactoring core modules, modernising the EF Core data layer, and introducing a secure REST API, without interrupting daily financial operations.'},
                   {n:'03',title:'Outcome',       desc:'The modernised system delivered measurably faster response times, eliminated all flagged security vulnerabilities, and enabled the development team to ship features three times faster than before.'},
                 ].map((step,i)=>(
                   <div key={i} className="wapp-case__step">
@@ -391,17 +407,17 @@ const WebAppDevelopment = () => {
           <div className="container">
             <p className="section-eyebrow">Why QllmSoft</p>
             <div className="section-title">
-              <h2 id="why-heading">Why Pakistani and Global Businesses Choose QllmSoft for ASP.NET Core Development</h2>
-              <p>We are not a generalist agency. Our senior engineers have been working with the ASP.NET ecosystem through WebForms, MVC 5, .NET Core, and now .NET 8/9 — deep platform knowledge that directly reduces your development risk.</p>
+              <h2 id="why-heading">Why Businesses Choose QllmSoft for ASP.NET Core Development</h2>
+              <p>We are not a generalist agency. Our senior engineers have been working with the ASP.NET ecosystem through WebForms, MVC 5, .NET Core, and now .NET 9/10, deep platform knowledge that directly reduces your development risk.</p>
             </div>
             <div className="ip-why__grid">
               {[
-                {Icon:IconCode,     title:'10+ Years of Production .NET Experience',      desc:'Healthcare, finance, logistics, manufacturing, HR, and government sectors — real production experience accumulated maintaining, extending, and debugging .NET systems under real business constraints.'},
-                {Icon:IconDollar,   title:'Fixed-Price, Scope-Locked Delivery',           desc:'Every project begins with a detailed technical scope document and a fixed-price commitment. No hourly billing surprises, no scope ambiguity — just predictable delivery against formally agreed milestones.'},
-                {Icon:IconUsers,    title:'Full-Lifecycle Team — No Subcontracting',      desc:'Discovery, architecture, development, QA, deployment, and post-launch support — all managed by the same in-house team. No subcontracting, no handoff breaks, no quality dilution.'},
-                {Icon:IconShield,   title:'OWASP Security at Architecture Level',         desc:'Security decisions are made at the architecture stage — authentication, authorisation, data protection, and input validation are designed before development begins, not patched afterward.'},
-                {Icon:IconTrending, title:'Verified Global Track Record',                 desc:'Top-Rated Plus on Upwork. 5-star reviews on Freelancer from clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Independent verification — not self-reported claims.'},
-                {Icon:IconGlobe,    title:'Pakistan Advantage — 60% Lower Cost',         desc:'Pakistan-based engineering means 60% lower cost than US or UK .NET agencies — with the same seniority, the same OWASP compliance, and the same Azure deployment capability. Full IP ownership guaranteed.'},
+                {Icon:IconCode,     title:'10+ Years of Production .NET Experience',      desc:'Healthcare, finance, logistics, manufacturing, HR, and government sectors, real production experience accumulated maintaining, extending, and debugging .NET systems under real business constraints.'},
+                {Icon:IconDollar,   title:'Fixed-Price, Scope-Locked Delivery',           desc:'Every project begins with a detailed technical scope document and a fixed-price commitment. No hourly billing surprises, no scope ambiguity, just predictable delivery against formally agreed milestones.'},
+                {Icon:IconUsers,    title:'Full-Lifecycle Team, No Subcontracting',      desc:'Discovery, architecture, development, QA, deployment, and post-launch support, all managed by the same in-house team. No subcontracting, no handoff breaks, no quality dilution.'},
+                {Icon:IconShield,   title:'OWASP Security at Architecture Level',         desc:'Security decisions are made at the architecture stage, authentication, authorisation, data protection, and input validation are designed before development begins, not patched afterward.'},
+                {Icon:IconTrending, title:'Verified Global Track Record',                 desc:'Top-Rated Plus on Upwork. 5-star reviews on Freelancer from clients across the UK, USA, UAE, Saudi Arabia, Jordan, and Germany. Independent verification, not self-reported claims.'},
+                {Icon:IconGlobe,    title:'Pakistan-Based Team, 60% Lower Cost',         desc:'Pakistan-based engineering means around 60% lower cost than US or UK .NET agencies, with the same seniority, the same OWASP compliance, and the same Azure deployment capability. Full IP ownership guaranteed.'},
               ].map((w,i)=>(
                 <article key={i} className={`ip-why-card animate__animated ${whyInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.08}s`}}>
                   <div className="ip-why-card__icon"><w.Icon s={20} /></div>
@@ -432,7 +448,7 @@ const WebAppDevelopment = () => {
             <p className="section-eyebrow">Technology Stack</p>
             <div className="section-title">
               <h2 id="stack-heading">ASP.NET Core Web Application Technology Stack</h2>
-              <p>The complete Microsoft .NET ecosystem our engineers command — from framework to cloud deployment.</p>
+              <p>The complete Microsoft .NET ecosystem our engineers command, from framework to cloud deployment.</p>
             </div>
             <div className="ip-stack__grid">
               {[
@@ -456,7 +472,7 @@ const WebAppDevelopment = () => {
             <p className="section-eyebrow">Verified Client Reviews</p>
             <div className="section-title">
               <h2 id="reviews-heading">What Clients Say About QllmSoft ASP.NET Core Development</h2>
-              <p>Independent reviews from global clients — UK, USA, UAE, Saudi Arabia, and Jordan — on Freelancer and Upwork.</p>
+              <p>Independent reviews from global clients, UK, USA, UAE, Saudi Arabia, and Jordan, on Freelancer and Upwork.</p>
             </div>
             <div className="ip-reviews__grid">
               {[
@@ -471,8 +487,8 @@ const WebAppDevelopment = () => {
                   </div>
                   <p className="ip-review-card__text" itemProp="reviewBody">{r.text}</p>
                   <div className="ip-review-card__author" itemProp="author" itemScope itemType="https://schema.org/Person">
-                    <img src={r.img} alt={`${r.name} — verified QllmSoft web application development client from ${r.loc}`} loading="lazy" width="44" height="44" />
-                    <div><strong itemProp="name">{r.name}</strong><span>{r.loc} — Freelancer</span></div>
+                    <img src={r.img} alt={`${r.name}, verified QllmSoft web application development client from ${r.loc}`} loading="lazy" width="44" height="44" />
+                    <div><strong itemProp="name">{r.name}</strong><span>{r.loc}, Freelancer</span></div>
                   </div>
                 </article>
               ))}
@@ -489,7 +505,7 @@ const WebAppDevelopment = () => {
           <div className="container">
             <p className="section-eyebrow">Common Questions</p>
             <div className="section-title">
-              <h2 id="faq-heading">Web Application Development FAQ — Pakistan &amp; Global</h2>
+              <h2 id="faq-heading">Web Application Development FAQ</h2>
               <p>Practical answers to the questions businesses ask most before commissioning web application development with QllmSoft.</p>
             </div>
             <div className="csd-faq__list">{FAQ_DATA.map((faq,i)=><FAQItem key={i} faq={faq} index={i} />)}</div>
@@ -503,9 +519,9 @@ const WebAppDevelopment = () => {
             <div className="ip-cta__left">
               <p className="section-eyebrow" style={{color:'#edb702',textAlign:'left',margin:'0 0 12px'}}>Start Your Project</p>
               <h2 id="cta-heading">Ready to Build a High-Performance ASP.NET Core Web Application?</h2>
-              <p className="ip-cta__desc">Whether you need an enterprise portal, a REST API, a multi-tenant SaaS platform, or a .NET Framework migration — QllmSoft delivers the technical depth, delivery discipline, and OWASP compliance your project demands.</p>
+              <p className="ip-cta__desc">Whether you need an enterprise portal, a REST API, a multi-tenant SaaS platform, or a .NET Framework migration, QllmSoft delivers the technical depth, delivery discipline, and OWASP compliance your project demands.</p>
               <div className="ip-cta__buttons">
-                <Link to="/contact" className="ip-btn-primary" aria-label="Get a free web application development quote from QllmSoft Pakistan">Get a Free Quote</Link>
+                <Link to="/contact" className="ip-btn-primary" aria-label="Get a free web application development quote from QllmSoft">Get a Free Quote</Link>
                 <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20web%20application%20project!" target="_blank" rel="noopener noreferrer" className="ip-btn-whatsapp" aria-label="WhatsApp QllmSoft about web application development">💬 WhatsApp Us</a>
               </div>
               <div className="ip-cta__perks">{['✓ Fixed-price scope','✓ OWASP-compliant builds','✓ NDA on day one','✓ 30-day post-launch support'].map(p=><span key={p}>{p}</span>)}</div>
@@ -514,7 +530,7 @@ const WebAppDevelopment = () => {
               <div className="ip-cta__contact">
                 <h3>Quick Contact</h3>
                 <a href="mailto:qllmsoft@gmail.com" className="ip-cta__contact-row">📧 qllmsoft@gmail.com</a>
-                <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer" className="ip-cta__contact-row">💬 WhatsApp — replies in 5 mins</a>
+                <a href="https://wa.me/923348229288" target="_blank" rel="noopener noreferrer" className="ip-cta__contact-row">💬 WhatsApp, replies in 5 mins</a>
                 <a href="tel:+923348229288" className="ip-cta__contact-row">📞 +92 334 8229288</a>
               </div>
               <nav className="ip-cta__related" aria-label="Related services">
