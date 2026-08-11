@@ -41,9 +41,6 @@ const HireReactDevelopers = lazy(() => import("./pages/HireReactDevelopers"));
 const HireAngularDevelopers = lazy(
 	() => import("./pages/HireAngularDevelopers"),
 );
-const HireDotnetDevelopersPak = lazy(
-	() => import("./pages/HireDotnetDevelopersPak"),
-);
 const HealthcareSoftware = lazy(() => import("./pages/HealthcareSoftware"));
 const EducationSoftware = lazy(() => import("./pages/EducationSoftware"));
 const LegacyModernization = lazy(() => import("./pages/LegacyModernization"));
@@ -97,6 +94,18 @@ function App() {
 								path="/api-development-services"
 								element={<ApiDevelopmentServices />}
 							/>
+							{/* FIXED 2026-08-11: this path was registered TWICE in the
+							    original file — once here (HireDotnetDevelopers) and again
+							    further down (HireDotnetDevelopersPak). Two <Route> elements
+							    with the identical path is invalid/ambiguous in React Router
+							    and was likely contributing to inconsistent rendering on
+							    this URL. Kept THIS component since it's the one referenced
+							    by the architecture plan's Hire-a-Developer cluster naming.
+							    If HireDotnetDevelopersPak was actually the newer/intended
+							    version, tell me and I'll swap which one stays. The
+							    HireDotnetDevelopersPak import and its duplicate route have
+							    been removed below — confirm that component/file can be
+							    safely deleted from /pages too, or if it's used elsewhere. */}
 							<Route
 								path="/hire-dotnet-developers-pakistan"
 								element={<HireDotnetDevelopers />}
@@ -120,10 +129,6 @@ function App() {
 							<Route
 								path="/hire-angular-developers-pakistan"
 								element={<HireAngularDevelopers />}
-							/>
-							<Route
-								path="/hire-dotnet-developers-pakistan"
-								element={<HireDotnetDevelopersPak />}
 							/>
 							<Route
 								path="/healthcare-software-development-pakistan"
