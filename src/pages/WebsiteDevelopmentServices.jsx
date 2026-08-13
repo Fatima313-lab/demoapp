@@ -5,7 +5,7 @@
  *  ✓ react-helmet-async  → <title>, meta description, canonical, robots
  *  ✓ Open Graph tags     → Facebook / LinkedIn rich previews
  *  ✓ Twitter Card tags   → Twitter rich previews
- *  ✓ JSON-LD schemas     → Organization, Service, BreadcrumbList, FAQPage
+ *  ✓ JSON-LD schemas     → Organization, Service, BreadcrumbList, FAQPage, WebPage
  *  ✓ Semantic HTML5      → <main>, <header>, <section>, <article>, <nav>, <aside>
  *  ✓ Single H1           → Proper H1→H2→H3→H4 hierarchy throughout
  *  ✓ Alt / aria-label    → Every image and interactive element labelled
@@ -13,6 +13,13 @@
  *  ✓ loading="lazy"      → Below-fold images deferred for page speed
  *  ✓ width/height attrs  → Prevents Cumulative Layout Shift (CLS)
  *  ✓ Inline microdata    → Review, Rating, Person, FAQPage itemScope/itemProp
+ *
+ * Central Search Intent: "Hire a company for web development services"
+ * (business/marketing websites & storefronts). Custom internal software,
+ * SaaS platforms and web APPLICATIONS are intentionally NOT covered here —
+ * that intent lives on /custom-software-development-services and
+ * /web-application-development-services, and is linked out to instead of
+ * duplicated, to avoid keyword cannibalization between the two pillars.
  */
 
 import React, { useState } from "react";
@@ -32,14 +39,17 @@ const PortfolioPdf = "/pdfs/QllmSoft - Website Development Portfolio.pdf";
 const PAGE_URL = "https://qllmsoft.com/website-development-services";
 const OG_IMAGE =
   "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg";
+const DATE_MODIFIED = "2026-08-13";
 
 /* ─── JSON-LD: Organization ───────────────────────────────── */
 const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://qllmsoft.com/#organization",
   name: "QllmSoft",
   url: "https://qllmsoft.com",
   logo: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
+  foundingDate: "2015",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+92-334-8229288",
@@ -65,15 +75,11 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://qllmsoft.com/website-development-services#service",
-  serviceType: "Website Development",
-  name: "Website Development Services | QllmSoft",
+  serviceType: "Web Development Services",
+  name: "Web Development Services | QllmSoft",
   description:
-    "QllmSoft builds fast, secure business websites and e-commerce storefronts, engineered for Core Web Vitals, for clients across the US, UK, Europe, and the Gulf regions.",
-  provider: {
-    "@type": "Organization",
-    name: "QllmSoft",
-    url: "https://qllmsoft.com",
-  },
+    "QllmSoft provides web development services for businesses: custom-coded marketing websites, e-commerce storefronts and content-driven sites engineered for Core Web Vitals, for clients across the US, UK, Europe, and the Gulf regions.",
+  provider: { "@id": "https://qllmsoft.com/#organization" },
   areaServed: [
     { "@type": "Country", name: "United States" },
     { "@type": "Country", name: "United Kingdom" },
@@ -84,59 +90,23 @@ const schemaService = {
   url: PAGE_URL,
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Website Development Services",
+    name: "Web Development Services",
     itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Business Website Development",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "eCommerce Website Development",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Headless CMS & Content-Driven Websites",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Website Redesign & Performance Optimization",
-        },
-      },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Business Website Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "eCommerce Website Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Headless CMS & Content-Driven Websites" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Redesign & Performance Optimization" } },
     ],
   },
-  // Removed the previous hardcoded $50,000 / $6,000 fixed prices — the
-  // framework's content rule explicitly forbids fixed numbers here;
-  // pricing is handled on /pricing-and-engagement-models instead.
-  // Review data fixes the same GSC "missing itemReviewed / missing
-  // author" errors found elsewhere. Update with real figures before
-  // shipping — do not leave placeholder rating/review counts live.
-  review: [
-    {
-      "@type": "Review",
-      itemReviewed: { "@id": "https://qllmsoft.com/website-development-services#service" },
-      author: { "@type": "Person", name: "Verified Client" },
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      reviewBody:
-        "QllmSoft delivered a fast, clean website that's been easy for our team to maintain since launch.",
-    },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "27",
-  },
+  // NOTE FOR DEV/CONTENT OWNER:
+  // No review/aggregateRating block is emitted here. Google's guidelines
+  // treat self-authored, unverifiable review markup as a policy violation
+  // that can trigger a manual action ("Review" or "AggregateRating"
+  // structured-data issue in Search Console). Only add `review` /
+  // `aggregateRating` back once real, attributable reviews exist (e.g.
+  // pulled live from Upwork/Freelancer/Google Business Profile via API or
+  // a documented on-site review collection flow) — never hardcode a
+  // rating value or review count.
 };
 
 /* ─── JSON-LD: BreadcrumbList ─────────────────────────────── */
@@ -144,88 +114,86 @@ const schemaBreadcrumb = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://qllmsoft.com/",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Services",
-      item: "https://qllmsoft.com/services",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Website Development Services",
-      item: PAGE_URL,
-    },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://qllmsoft.com/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://qllmsoft.com/services" },
+    { "@type": "ListItem", position: 3, name: "Web Development Services", item: PAGE_URL },
   ],
+};
+
+/* ─── JSON-LD: WebPage ────────────────────────────────────── */
+const schemaWebPage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": PAGE_URL + "#webpage",
+  url: PAGE_URL,
+  name: "Web Development Services | QllmSoft",
+  isPartOf: { "@id": "https://qllmsoft.com/#website" },
+  about: { "@id": "https://qllmsoft.com/website-development-services#service" },
+  dateModified: DATE_MODIFIED,
+  inLanguage: "en-US",
 };
 
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
+    id: "faq-what-is-included",
+    q: "What's actually included in a web development services engagement?",
+    a: "A full engagement covers discovery and information architecture, custom UI design, front-end and back-end build, content migration, on-page SEO setup (schema, meta data, sitemap), cross-browser and cross-device QA, deployment, and a post-launch support window. You get source code ownership, not a locked-down page builder account.",
+  },
+  {
     id: "faq-timeline",
-    q: "How long does it take to develop a custom enterprise application?",
-    a: "A high performance custom web platform typically requires 6 to 12 weeks: 2 weeks for engineering prototyping, 6-8 weeks for modular development, and 2 weeks for automated QA testing and architectural SEO optimization. Complex SaaS environments or multi tenant enterprise projects require 12-20 weeks depending on technical scope.",
+    q: "How long does a business or e-commerce website take to build?",
+    a: "A standard business website typically takes 3 to 6 weeks from signed scope to launch. An e-commerce storefront with payment gateway integration and inventory sync usually runs 6 to 10 weeks. Larger content-driven sites on a headless CMS, or projects needing custom integrations, can run 10 to 16 weeks depending on scope.",
   },
   {
     id: "faq-tech-stack",
-    q: "Which technologies does QllmSoft deploy for custom systems?",
-    a: "We specialize in ASP.NET Core for ultra secure backend services, React JS and Angular for high speed frontends, Microsoft SQL Server for robust data layer architectures, and Azure or AWS for scalable cloud infrastructure. This tech stack guarantees elite performance, full OWASP top 10 security layers, and long term horizontal scalability.",
+    q: "What technologies do you use to build websites?",
+    a: "Front end is typically React with modern CSS, chosen for speed and long-term maintainability. Back-end logic and APIs run on ASP.NET Core or Node.js depending on the project. Data lives in SQL Server, and hosting runs on Azure, AWS, or a managed VPS, whichever fits your budget and traffic profile.",
   },
   {
-    id: "faq-domain-hosting",
-    q: "How do you manage infrastructure and cloud environments?",
-    a: "We help our clients engineer, secure, and configure enterprise cloud infrastructure using AWS, Microsoft Azure, or high capacity Virtual Private Servers (VPS). QllmSoft provides complete multi environment deployment, automated SSL configurations, and CI/CD pipeline setup during the initial launch phase.",
+    id: "faq-hosting",
+    q: "Do you handle domain, hosting and SSL setup?",
+    a: "Yes. We can provision and configure hosting on AWS, Azure or a VPS, set up DNS and domain records, install SSL certificates, and configure a CI/CD pipeline so future updates deploy cleanly instead of through manual file uploads.",
   },
   {
     id: "faq-vs-wordpress",
-    q: "Why choose QllmSoft over a generic WordPress freelancer?",
-    a: "Unlike freelance resources using bloated, insecure templates, QllmSoft is an elite agency team engineering custom coded solutions from the ground up using React and ASP.NET This completely eliminates technical debt, guarantees sub 2 second global page loads, and provides military grade security layers that generic template structures cannot support.",
+    q: "Should I get a custom-coded site or a WordPress/template build?",
+    a: "It depends on your goals. WordPress and page builders are a reasonable, lower-cost option for a simple brochure site with no unusual requirements. We build custom-coded sites when page speed, security, or a specific workflow (custom quoting tools, gated content, non-standard integrations) matters more than the lower up-front cost of a template. We'll tell you honestly which one fits your case.",
   },
   {
-    id: "faq-ecommerce-solutions",
-    q: "Can you engineer complex multi vendor or high volume B2B eCommerce platforms?",
-    a: "Yes. We build high availability, custom eCommerce platforms engineered to process thousands of concurrent transactions seamlessly. We integrate major international financial gateways (including Stripe, Stripe Atlas corporate conduits, PayPal, and regional enterprise payment infrastructure) tied to highly optimized, real time inventory synchronization systems.",
+    id: "faq-ecommerce",
+    q: "Can you build a multi-vendor or high-volume e-commerce store?",
+    a: "Yes. We build storefronts designed to hold up under concurrent traffic and order volume, with integrations for Stripe, PayPal and regional payment gateways, and inventory that stays in sync in real time rather than through manual reconciliation.",
   },
   {
-    id: "faq-google-ranking",
-    q: "Will my custom platform be structured to maximize global search engine reach?",
-    a: "Absolutely. We build utilizing strict Search Engine Physics: clean semantic HTML5, fully optimized Core Web Vitals, JSON-LD structured schema markups, and rapid global CDN distribution protocols to provide your application with a superior technical foundation for global search positions from launch day.",
+    id: "faq-seo-ready",
+    q: "Will the website be SEO-ready when it launches?",
+    a: "Every site we ship includes clean semantic HTML5, correct heading hierarchy, JSON-LD schema markup for the relevant entities, optimized Core Web Vitals, an XML sitemap, and proper canonical/meta tag setup. That covers the technical foundation; ongoing keyword targeting and content strategy is a separate, optional service we also offer.",
   },
   {
-    id: "faq-seo-packages",
-    q: "Does QllmSoft provide advanced search optimization strategies post-launch?",
-    a: "Yes. While every application includes baseline on page technical optimization, we offer comprehensive monthly growth retainers. These services include multi market international keyword research, strategic technical audit tracking, content modeling, and competitive search analysis to secure elite rankings across target global territories.",
-  },
-  {
-    id: "faq-responsive-mobile",
-    q: "Are your custom architectures fully optimized for fluid mobile responsive grids?",
-    a: "Yes. Every digital ecosystem we engineer follows a strict mobile first paradigm. We build responsive fluid layouts ensuring absolute pixel perfection, seamless touch interaction mechanics, and identical performance speeds across all Android, iOS, tablet, and desktop viewports.",
+    id: "faq-responsive",
+    q: "Is the site fully responsive on mobile and tablet?",
+    a: "Yes, every site is built mobile-first and tested across common breakpoints, not just resized down from a desktop layout. Since the majority of organic traffic for most businesses now arrives on mobile, we treat the mobile layout as the primary design, not an afterthought.",
   },
   {
     id: "faq-source-code",
-    q: "Will our organization retain full ownership of the system's source code?",
-    a: "Yes, 100%. Upon system delivery and deployment, complete intellectual property (IP) rights and raw source code ownership transfer directly to your company. We provide fully clean, modular, and documented repositories via GitHub or GitLab with no proprietary lock ins or hidden licensing fees.",
+    q: "Do we own the source code once the site is delivered?",
+    a: "Yes, fully. Once the project is delivered and paid for, all intellectual property and source code rights transfer to you. You get a clean, documented repository on GitHub or GitLab, no proprietary lock-in and no recurring licensing fee tied to us.",
   },
   {
     id: "faq-maintenance",
-    q: "Do you provide operational maintenance and technical support after launch?",
-    a: "Yes. Every enterprise project includes a dedicated 30 day hyper care monitoring period covering absolute performance tracking, security patch deployment, and technical adjustments. We also offer ongoing service level agreement (SLA) retainers for continuous system optimization and engineering support.",
+    q: "What happens after the site goes live?",
+    a: "Every project includes a 30-day post-launch support window covering bug fixes and monitoring at no extra cost. After that, most clients move onto an ongoing maintenance retainer for updates, security patches and small content changes, though it isn't required.",
   },
   {
-    id: "faq-redesign-systems",
-    q: "Can your team modernize and migrate a legacy business system?",
-    a: "Yes. We specialize in complex legacy migrations. We can completely reconstruct outdated architectures into modern React/.NET stacks while carefully safeguarding your existing organic traffic authority using precise server-side 301 URL redirection protocols.",
+    id: "faq-redesign",
+    q: "Can you redesign an existing site without losing our search rankings?",
+    a: "Yes — this is one of the more common projects we take on. We audit the existing site's URL structure and ranking pages first, then map old URLs to new ones with server-side 301 redirects so link equity and rankings carry over instead of resetting to zero.",
   },
   {
-    id: "faq-locations-pakistan",
-    q: "How does QllmSoft manage collaboration and remote engineering alignment?",
-    a: "QllmSoft serves corporate enterprises and funded startups globally across North America, Europe, the UK, and the Gulf[cite: 1]. Operating from our specialized engineering delivery center, we utilize fully transparent sprint cycles, shared agile project boards, structured video reviews, and strategic time-zone overlap hours to make remote development smooth and frictionless[cite: 1].",
+    id: "faq-remote-collaboration",
+    q: "How does collaboration work if we're not in Pakistan?",
+    a: "We work with clients across North America, Europe, the UK and the Gulf remotely, using shared project boards, scheduled video check-ins, and overlap hours arranged around your time zone. You get a single point of contact rather than being routed between different people for updates.",
   },
 ];
 
@@ -326,30 +294,30 @@ const WebsiteDevelopmentServices = () => {
   const ENGINEERING_CAPABILITIES = [
     {
       icon: "bi bi-cpu-fill",
-      title: "Zero Code Bloat",
-      desc: "Clean, enterprise grade architectures featuring native performance with zero plugin dependency.",
+      title: "Clean, Custom-Coded Builds",
+      desc: "No page-builder bloat or plugin stacking — hand-written architecture kept lightweight on purpose.",
     },
     {
       icon: "bi bi-lightning-charge-fill",
-      title: "Next Gen Web Vitals",
-      desc: "Sub 1.5 second fully interactive rendering optimized globally across low bandwidth connections.",
+      title: "Core Web Vitals First",
+      desc: "Sites are built and measured against LCP, CLS and INP targets before launch, not audited after the fact.",
     },
     {
       icon: "bi bi-search-heart-fill",
-      title: "Semantic Engineering",
-      desc: "Advanced structural data execution engineered to secure top global SERP rankings from day one.",
+      title: "SEO Built Into the Code",
+      desc: "Semantic HTML, structured data and heading hierarchy are part of the build, not a separate add-on service.",
     },
     {
       icon: "bi bi-shield-lock-fill",
-      title: "Military Grade Security",
-      desc: "Full OWASP Top 10 mitigation, end-to-end encryption, and multi tier secure API integrations.",
+      title: "Security by Default",
+      desc: "OWASP Top 10 mitigations, HTTPS everywhere, and hardened forms and API endpoints on every project.",
     },
   ];
 
   /* ─── Trust Band ────────────────────────────────────────────────── */
   const TrustBand = () => (
     <section
-      aria-label="QllmSoft verified performance metrics"
+      aria-label="QllmSoft track record"
       style={{ background: "#021a4a", padding: "28px 0" }}
     >
       <div
@@ -362,11 +330,10 @@ const WebsiteDevelopmentServices = () => {
         }}
       >
         {[
-          { num: "10+", lbl: "Years Experience" },
-          { num: "50+", lbl: "Projects Delivered" },
-          { num: "50+", lbl: "Global Clients" },
+          { num: "10+", lbl: "Years Building Websites" },
+          { num: "50+", lbl: "Sites & Storefronts Shipped" },
+          { num: "5", lbl: "Countries Served" },
           { num: "100%", lbl: "Upwork Job Success" },
-          { num: "5 ★", lbl: "47+ Verified Reviews" },
         ].map((s, i) => (
           <div
             key={i}
@@ -375,7 +342,7 @@ const WebsiteDevelopmentServices = () => {
               minWidth: "140px",
               textAlign: "center",
               padding: "12px 16px",
-              borderRight: i < 4 ? "1px solid rgba(255,255,255,.12)" : "none",
+              borderRight: i < 3 ? "1px solid rgba(255,255,255,.12)" : "none",
             }}
           >
             <span
@@ -407,149 +374,113 @@ const WebsiteDevelopmentServices = () => {
     </section>
   );
 
-  /*intro*/
-
   const SPECIALIZATIONS = [
-    "Enterprise Web Applications",
-    "Fintech & Secure Payment Portals",
-    "High Scale B2B Lead Engines",
-    "Headless & Custom CMS Architecture",
-    "Real time Dashboards & Analytics",
-    "Global & Local eCommerce Ecosystems",
+    "Business & Corporate Websites",
+    "eCommerce Storefronts",
+    "Headless CMS & Blogs",
+    "Landing Pages & Campaign Sites",
+    "Website Redesigns & Migrations",
+    "Booking & Lead-Capture Sites",
   ];
 
-  /*webservicelegacy*/
   const LEGACY_CREDENTIALS = [
     {
       icon: "bi-bank",
-      title: "Institutional Depth",
+      title: "A Decade of Web Builds",
       label: "Since 2015",
-      desc: "A collective expertise spanning over a decade in architecting mission critical systems and enterprise level software solutions for clients from Karachi to California.",
+      desc: "Over ten years designing and building business websites and storefronts for clients ranging from local Pakistani businesses to companies in the US and Gulf.",
     },
     {
       icon: "bi-arrow-repeat",
-      title: "End-to-End Engineering",
-      label: "Full Lifecycle",
-      desc: "From legacy system modernization to modern cloud native architectures, we manage the entire SDLC for Pakistani and international enterprises.",
+      title: "One Team, Start to Finish",
+      label: "Design Through Launch",
+      desc: "The same team handles design, development, QA and deployment — no handoffs between a design agency and a separate dev shop.",
     },
     {
       icon: "bi-globe-americas",
-      title: "Established Engineering Hub",
-      label: "International HQ",
-      desc: "A full scale software house operating with institutional accountability, providing a permanent and reliable global delivery presence.",
+      title: "A Real Delivery Team",
+      label: "Not a Solo Freelancer",
+      desc: "A software house with a fixed engineering location, not a single contractor who disappears between projects.",
     },
     {
       icon: "bi-patch-check-fill",
-      title: "Verified Marketplace Authority",
+      title: "Verified Marketplace History",
       label: "Top Rated Plus",
-      desc: "Top Rated Plus status and a 100% Job Success Score on global platforms reflecting years of consistent, on time, and on budget delivery.",
+      desc: "Top Rated Plus status and a 100% Job Success Score on Upwork, independently verifiable, not a claim we make about ourselves.",
     },
     {
       icon: "bi-shield-lock-fill",
-      title: "30 Day HyperCare Support",
-      label: "24/7 Emergency",
-      desc: "Every project ships with an intensive 30 day post launch deployment support phase and 24/7 emergency response SLA for long term reliability.",
+      title: "30-Day Launch Support",
+      label: "Included, Not Upsold",
+      desc: "Every website ships with a 30-day post-launch window for bug fixes and monitoring before any maintenance retainer conversation happens.",
     },
   ];
-
-  /*service data*/
 
   const SERVICES_DATA = [
     {
       num: "01",
       title: "Business Website Development",
-      desc: "Transform your corporate identity into a lead generation engine. We focus on high authority designs that load instantly and communicate value immediately. By eliminating technical debt and prioritizing Core Web Vitals, we ensure your first impression is both professional and permanent.",
-      tags: ["High Authority UI", "Lead Capture", "Core Web Vitals"],
+      desc: "A custom-coded corporate site built around your actual services and how prospects search for them, not a generic template with your logo swapped in. Fast load times and clear calls to action are part of the layout, not bolted on afterward.",
+      tags: ["Custom Design", "Lead Capture", "Core Web Vitals"],
     },
     {
       num: "02",
       title: "eCommerce Website Development",
-      desc: "Own your customer journey with custom digital storefronts. We build secure, high transaction ecosystems that handle peak traffic without latency, with frictionless checkout flows and Stripe, PayPal, and regional payment gateway integration built in from the start.",
-      tags: ["Global Payment Gateways", "Scalable Inventory", "Secure Checkout"],
+      desc: "A storefront you fully control, with Stripe, PayPal or regional payment gateways wired in, inventory that updates in real time, and a checkout flow built to reduce cart abandonment rather than a default theme checkout.",
+      tags: ["Payment Gateways", "Real-Time Inventory", "Secure Checkout"],
     },
     {
       num: "03",
       title: "Headless CMS & Content-Driven Websites",
-      desc: "For marketing teams that publish often, we build on a headless CMS so editors can update pages, blog posts, and landing content without touching code, while keeping the front end fast and SEO-friendly. Need a custom web application or SaaS platform instead of a content-driven site? See Web Application Development Services.",
-      tags: ["Headless CMS", "Editor-Friendly", "Fast & SEO-Friendly"],
+      desc: "For teams that publish often, we build on a headless CMS so editors can update pages, blog posts and landing content without touching code, while the front end stays fast. Need a full web application or internal platform instead? See our software development services.",
+      tags: ["Headless CMS", "Editor-Friendly", "Fast Front End"],
     },
     {
       num: "04",
       title: "Campaign & Landing Page Development",
-      desc: "Built for a single job: converting traffic from a specific campaign, launch, or ad spend into leads. Fast-loading, conversion-tested layouts, A/B-testable sections, and clean tracking integration for marketing teams that need to move quickly.",
+      desc: "Single-purpose pages built to convert traffic from a specific ad, launch or campaign — fast-loading, A/B-testable, with clean analytics tracking wired in from day one.",
       tags: ["Conversion-Focused", "A/B Testable", "Fast Turnaround"],
     },
     {
       num: "05",
       title: "Website Redesign & Performance Optimization",
-      desc: "Modernize legacy assets without losing SEO equity. We perform deep tier architectural audits to identify performance leaks, upgrading speed, security, and mobile responsiveness to meet current Google algorithm requirements.",
+      desc: "We audit the existing site for what's slowing it down or costing it rankings, then rebuild it without losing organic traffic, using proper 301 redirects and a like-for-like content migration.",
       tags: ["Core Web Vitals", "UX Modernization", "Security Hardening"],
     },
     {
       num: "06",
-      title: "SEO Optimized Web Development",
-      desc: "Every website we build is a ranking machine from day one. Architectural SEO, schema markup, semantic HTML5, page speed optimization, and mobile first development, baked into the code, not bolted on afterward.",
-      tags: ["Architectural SEO", "Schema Markup", "Mobile-First"],
+      title: "Technical SEO for Websites",
+      desc: "Schema markup, semantic HTML5, page speed tuning and mobile-first structure, built into the site's code from the first commit rather than patched in after launch.",
+      tags: ["Structured Data", "Page Speed", "Mobile-First"],
     },
   ];
-
-  /*tech stack*/
 
   const TECH_STACK_DATA = [
     {
       title: "Frontend & UI",
       items: [
-        {
-          name: "React & Angular",
-          desc: "Highly responsive, state driven user interfaces for web apps and SPAs.",
-        },
-        {
-          name: "Modern CSS / SASS",
-          desc: "Pixel perfect, mobile first responsiveness across every device.",
-        },
-        {
-          name: "Progressive Web Apps",
-          desc: "Native app experiences delivered through the browser.",
-        },
+        { name: "React", desc: "Component-based, fast-rendering interfaces for marketing sites and storefronts alike." },
+        { name: "Modern CSS / SASS", desc: "Hand-tuned responsive layouts instead of a bloated CSS framework you never fully use." },
+        { name: "Progressive Web Apps", desc: "Optional app-like behavior — offline caching, install prompts — for sites that need it." },
       ],
     },
     {
       title: "Backend & API",
       items: [
-        {
-          name: "ASP.NET Core",
-          desc: "Our primary framework for secure, enterprise level server side logic.",
-        },
-        {
-          name: "Node.js",
-          desc: "Real time applications and scalable microservices architecture.",
-        },
-        {
-          name: "RESTful & GraphQL APIs",
-          desc: "Seamless integration with payment gateways, CRMs, and ERP systems.",
-        },
+        { name: "ASP.NET Core", desc: "Our default for server-side logic when a site needs custom backend functionality." },
+        { name: "Node.js", desc: "Used for lighter-weight APIs and real-time features like live inventory or chat." },
+        { name: "REST & GraphQL APIs", desc: "For connecting the site to payment gateways, CRMs, or an existing internal system." },
       ],
     },
     {
       title: "Data & Infrastructure",
       items: [
-        {
-          name: "MS SQL Server",
-          desc: "Robust relational data management for complex query handling.",
-        },
-        {
-          name: "Entity Framework",
-          desc: "Streamlined data access layers for faster development cycles.",
-        },
-        {
-          name: "Azure & AWS",
-          desc: "Cloud deployment for 99.9% uptime and auto scaling under load.",
-        },
+        { name: "SQL Server", desc: "Relational data storage for catalogs, orders, leads and content." },
+        { name: "Entity Framework", desc: "Keeps the data access layer consistent and faster to extend later." },
+        { name: "Azure & AWS", desc: "Cloud hosting configured for uptime and to handle traffic spikes without manual scaling." },
       ],
     },
   ];
-
-  /*portfolio*/
 
   const PORTFOLIO_PROJECTS = [
     {
@@ -557,18 +488,18 @@ const WebsiteDevelopmentServices = () => {
       title: "Financial Analysis Web Application",
       imgSrc: fintech,
       imgAlt: "Financial Analysis Web Application Dashboard",
-      desc: "A production grade financial management and analytics system providing real time insights, automated reporting, and secure integrations for data driven decision making.",
+      desc: "A financial management and analytics system providing real-time insights, automated reporting, and secure integrations for data-driven decision making.",
       tech: ".NET Core, Angular, SQL Server, Bootstrap",
       features: "CRM Integration, Investment Tracking, Secure Gateways",
     },
     {
-      type: "Enterprise SaaS",
-      title: "QllmDocs - Secure & Intelligent Document Management System",
+      type: "Content & Document Platform",
+      title: "QllmDocs - Secure Document Management System",
       imgSrc: qllmdocs,
       imgAlt: "QllmDocs Secure Document Management System",
-      desc: "QllmSoft developed QllmDocs, a secure cloud based document management system designed for organizations needing fast access, safe storage, and real time analytics. The platform features a clean enterprise dashboard with smart insights and role based access.",
+      desc: "A cloud-based document management system built for organizations that need fast access, safe storage and real-time analytics, with a clean dashboard and role-based access.",
       tech: "React, Azure Cloud Storage, .NET APIs",
-      features: "Lifecycle Automation, Role Based Access, AI Document Search",
+      features: "Lifecycle Automation, Role-Based Access, AI Document Search",
     },
   ];
 
@@ -579,15 +510,15 @@ const WebsiteDevelopmentServices = () => {
       ══════════════════════════════════════════════════ */}
       <Helmet>
         {/* Primary */}
-        <title>High Performance Web Development Services | QllmSoft</title>
+        <title>Web Development Services | Business & eCommerce Websites — QllmSoft</title>
         <meta
           name="description"
-          content="QllmSoft builds fast, secure business websites and e-commerce storefronts, engineered for Core Web Vitals and built to convert, using React and modern headless CMS platforms."
+          content="QllmSoft's web development services cover custom business websites, eCommerce storefronts and headless CMS builds — engineered for Core Web Vitals and built to convert."
         />
 
         <meta
           name="keywords"
-          content="website development services, business website development, e-commerce website development, headless CMS website, React website development, landing page development, website redesign, SEO-optimized web development"
+          content="web development services, website development services, business website development, e-commerce website development, headless CMS website, website redesign, technical SEO for websites"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -602,18 +533,18 @@ const WebsiteDevelopmentServices = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="High Performance Web Development & Engineering Services"
+          content="Web Development Services | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Scalable web apps, premium SaaS architectures, and custom enterprise digital platforms engineered for speed and global delivery."
+          content="Custom business websites, eCommerce storefronts and content-driven builds, engineered for speed, security and search visibility."
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft High Performance Web Engineering Platform"
+          content="QllmSoft Web Development Services"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -621,16 +552,16 @@ const WebsiteDevelopmentServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Custom Web Engineering & Enterprise Solutions | QllmSoft"
+          content="Web Development Services | QllmSoft"
         />
         <meta
           name="twitter:description"
-          content="Deploy secure web platforms, fast Core Web Vitals apps, and enterprise systems globally with QllmSoft's dedicated engineering teams."
+          content="Custom-coded business websites and eCommerce storefronts, built for Core Web Vitals and long-term search visibility."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft Custom Web Architecture"
+          content="QllmSoft Web Development Services"
         />
 
         {/* JSON-LD */}
@@ -641,6 +572,7 @@ const WebsiteDevelopmentServices = () => {
         <script type="application/ld+json">
           {JSON.stringify(schemaBreadcrumb)}
         </script>
+        <script type="application/ld+json">{JSON.stringify(schemaWebPage)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
@@ -651,20 +583,21 @@ const WebsiteDevelopmentServices = () => {
 
           <div className="container">
             <p className="csd-hero__eyebrow">
-              Global Delivery Center & Web Engineering Hub
+              Web Development Services
             </p>
 
             <h1 className="wds-hero__title" id="svc-hero-h1">
-              High Performance Web Development Services for <em>Scale</em>
+              Web Development Services for Business & eCommerce
             </h1>
 
             <p className="wds-hero__sub">
-              QllmSoft builds fast, secure business websites and e-commerce
-              storefronts, engineered for Core Web Vitals and built to
-              convert visitors into leads or customers. Need a custom web
-              application, internal portal, or SaaS platform instead? See{" "}
-              <Link to="/web-application-development-services">
-                Web Application Development Services
+              QllmSoft provides web development services for businesses that need a
+              custom-coded website: marketing sites, eCommerce storefronts and
+              content-driven builds engineered for Core Web Vitals and built to
+              convert visitors into leads or customers. Looking for a custom internal
+              tool or SaaS platform instead of a public-facing website? See{" "}
+              <Link to="/custom-software-development-services">
+                Software Development Services
               </Link>
               .
             </p>
@@ -673,21 +606,21 @@ const WebsiteDevelopmentServices = () => {
               <Link
                 to="/contact"
                 className="btn btn-primary"
-                aria-label="Get a free high-performance web development consultation from QllmSoft"
+                aria-label="Get a free web development consultation from QllmSoft"
               >
                 Get Free Consultation
               </Link>
               <Link
                 to="/projects"
                 className="btn btn-outline-light"
-                aria-label="Explore QllmSoft enterprise web development case studies and engineering portfolio"
+                aria-label="Explore QllmSoft web development case studies and portfolio"
               >
                 View Case Studies
               </Link>
             </div>
             <div
               className="wds-hero__pills"
-              aria-label="Core engineering capabilities and tech metrics"
+              aria-label="Core engineering capabilities"
             >
               {ENGINEERING_CAPABILITIES.map((pill) => (
                 <div key={pill.title} className="wds-hero__pill">
@@ -716,7 +649,7 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="expertise-heading" className="wds-intro__title-h2">
-                Custom Web Engineering & Digital Solutions
+                What Our Web Development Services Cover
               </h2>
             </div>
 
@@ -727,59 +660,51 @@ const WebsiteDevelopmentServices = () => {
                 }`}
               >
                 <p className="wds-intro__lead">
-                  QllmSoft engineers more than just standard websites. We
-                  architect high performance{" "}
-                  <strong>SaaS platforms, corporate portals, </strong>
+                  "Web development services" covers everything involved in getting a
+                  business online with a site that actually performs: information
+                  architecture, custom UI design, front-end and back-end build,
+                  content setup, technical SEO, and deployment. QllmSoft handles all
+                  of that in-house, for{" "}
+                  <strong>business websites, eCommerce storefronts</strong> and
+                  content-driven sites, rather than outsourcing pieces to
+                  subcontractors you never talk to.
+                </p>
+
+                <p>
+                  Most template and page-builder sites carry hidden{" "}
+                  <strong>technical debt</strong>, unused CSS, unnecessary plugins,
+                  and script bloat that slows load times and holds back search
+                  visibility. We build with a smaller, cleaner codebase so the site
+                  stays fast and easy to maintain as content and traffic grow.
+                </p>
+
+                <p>
+                  If your project goes beyond a public-facing website — an internal
+                  tool, a customer portal, or a full{" "}
                   <Link
                     to="/web-application-development-services"
                     className="wds-inline-link"
                   >
-                    web applications
-                  </Link>
-                  , and <strong>custom enterprise ecosystems</strong> engineered
-                  to scale seamlessly. We empower modern enterprises and funded
-                  startups to step away from bloated, slow loading templates and
-                  migrate to fast, highly optimized infrastructures built for
-                  intense traffic distribution.
-                </p>
-
-                <p>
-                  Many boilerplate setups hide substantial{" "}
-                  <strong>"technical debt"</strong> cluttered, unoptimized
-                  codebases that systematically drag down Core Web Vitals and
-                  damage global search engine visibilities. Our Global Delivery
-                  Center prioritizes clean, modular source files. This ensures
-                  your systems remain ultra fast, secure, and highly agile as
-                  you expand operations.
-                </p>
-
-                <p>
-                  Whether you require a dedicated backend standalone platform or
-                  a comprehensive omnichannel engine including{" "}
-                  <Link
-                    to="/mobile-app-development"
-                    className="wds-inline-link"
-                  >
-                    mobile apps
+                    web application
                   </Link>{" "}
-                  or multi tenant architectures, our dedicated{" "}
+                  — that falls under our{" "}
                   <Link
                     to="/custom-software-development-services"
                     className="wds-inline-link"
                   >
-                    custom software development services
-                  </Link>{" "}
-                  integrate every node of your enterprise digital stack
-                  flawlessly.
+                    software development services
+                  </Link>
+                  , which is a related but separate offering from the website work on
+                  this page.
                 </p>
 
                 <div className="wds-intro__cta">
                   <a
-                    href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20high-performance%20web%20project!"
+                    href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20discuss%20a%20web%20development%20project!"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-primary wds-intro__btn"
-                    aria-label="Consult QllmSoft architects on WhatsApp regarding enterprise development"
+                    aria-label="Consult QllmSoft on WhatsApp about a web development project"
                   >
                     <i className="bi bi-whatsapp me-2"></i> Consult Our
                     Engineers
@@ -791,9 +716,9 @@ const WebsiteDevelopmentServices = () => {
                 className={`wds-intro__specs animate__animated ${
                   expertiseInView ? "animate__fadeInRight" : ""
                 }`}
-                aria-label="Core technological specializations"
+                aria-label="Core web development specializations"
               >
-                <h3 className="wds-intro__specs-title">Core Specializations</h3>
+                <h3 className="wds-intro__specs-title">What We Build</h3>
                 <ul className="wds-intro__specs-list">
                   {SPECIALIZATIONS.map((item) => (
                     <li key={item} className="wds-intro__spec-item">
@@ -814,14 +739,12 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-title text-center mb-5">
               <h2 id="legacy-heading" className="wds-legacy__main-title">
-                Over a Decade of Building High Performance Digital Architectures
+                A Decade of Building Business Websites
               </h2>
               <p className="wds-legacy__subtitle">
-                For more than 10 years, QllmSoft has served as a trusted
-                engineering partner for global businesses. Operating out of our
-                fully redundant, enterprise grade Global Delivery Center, we
-                architect elite digital ecosystems optimized for international
-                scale.
+                For more than 10 years, QllmSoft has designed and built websites for
+                businesses across Pakistan, the US, the UK and the Gulf, from
+                single-page landing sites to full eCommerce catalogs.
               </p>
             </div>
             <div className="wds-legacy__grid">
@@ -854,10 +777,8 @@ const WebsiteDevelopmentServices = () => {
                 Our Website Development Services
               </h2>
               <p className="wds-services__main-sub">
-                As a leading software house, QllmSoft engineers{" "}
-                <strong>high concurrency portals</strong> and bespoke
-                applications that solve technical bottlenecks and dominate
-                search engine rankings.
+                Six ways businesses typically work with us, from a first marketing
+                site to a full storefront rebuild.
               </p>
             </div>
             <div className="wds-services__grid">
@@ -904,21 +825,20 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-header text-center mb-5">
               <span className="text-warning text-uppercase fw-bold tracking-wider">
-                Engineered Ecosystems
+                Recent Work
               </span>
               <h2
                 id="portfolio-heading"
                 className="wds-portfolio__main-title mt-2"
               >
-                Featured Production Architectures
+                Featured Projects
               </h2>
               <p
                 className="wds-portfolio__main-sub mx-auto text-muted"
                 style={{ maxWidth: "650px" }}
               >
-                Explore highlight web systems engineered by our global delivery
-                center, designed to scale seamlessly and handle complex
-                enterprise workloads.
+                A look at a couple of the systems we've built, chosen because
+                they show different sides of our web and application work.
               </p>
             </div>
 
@@ -974,10 +894,10 @@ const WebsiteDevelopmentServices = () => {
                         <Link
                           to="/contact"
                           className="btn btn-sm btn-primary d-inline-flex align-items-center gap-2"
-                          aria-label={`Inquire about engineering a solution like ${project.title}`}
+                          aria-label={`Inquire about a project like ${project.title}`}
                         >
                           <i className="bi bi-telephone-outbound"></i> Inquire
-                          About System
+                          About This Project
                         </Link>
                       </div>
                     </div>
@@ -994,14 +914,11 @@ const WebsiteDevelopmentServices = () => {
                   <i className="bi bi-file-earmark-pdf-fill"></i>
                 </div>
                 <h3 className="h3 text-white mb-3">
-                  Download Our Complete Web Development Project Dossier
+                  Download Our Web Development Portfolio
                 </h3>
                 <p className="text-muted small mb-4">
-                  Want a deeper technical evaluation? Download our comprehensive
-                  website development engineering portfolio. This master
-                  document breaks down our live web implementations, core
-                  performance testing, clean source file architectures, and
-                  custom database integrations.
+                  A PDF walkthrough of live projects, the stack behind each one,
+                  and the performance testing we run before launch.
                 </p>
 
                 <a
@@ -1009,11 +926,10 @@ const WebsiteDevelopmentServices = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-warning fw-bold px-4 py-2 d-inline-flex align-items-center gap-2"
-                  aria-label="Download QllmSoft master web development portfolio PDF"
+                  aria-label="Download QllmSoft web development portfolio PDF"
                   download
                 >
-                  <i className="bi bi-download"></i> Download Web Engineering
-                  Blueprints
+                  <i className="bi bi-download"></i> Download the Portfolio
                 </a>
               </div>
             </div>
@@ -1029,13 +945,12 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-title text-center mb-5">
               <h2 id="tech-heading" className="wds-tech__main-title">
-                Technology Stack for Website Development
+                Technology Stack for Web Development
               </h2>
               <p className="wds-tech__main-sub">
-                We choose technologies based on architectural stability and long
-                term maintainability not what's trending. Every stack decision
-                is made to keep your site performant and secure 5 years from
-                now.
+                We pick technology for stability and long-term maintainability,
+                not because it's trending. Every choice below is meant to still
+                make sense five years from now.
               </p>
             </div>
 
@@ -1081,29 +996,28 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="perf-heading">
-                Why Off the Shelf Templates are Holding Your Business Back
+                Why Template Websites Hold Businesses Back
               </h2>
               <p>
-                In today’s market,{" "}
-                <strong>speed is your biggest competitive advantage</strong>. A
-                generic template might look good on paper, but heavy code and
-                unoptimized assets often lead to slow load times and lost
-                customers before they even see your homepage.
+                <strong>Page speed is a ranking and conversion factor</strong>, not
+                just a technical detail. A template can look fine in a screenshot,
+                but heavy, unoptimized code often means slow load times and lost
+                visitors before they ever see your homepage content.
               </p>
             </div>
             <div className="wds-perf__grid">
               {[
                 {
-                  title: "Eliminating Code Bloat",
-                  desc: "Most templates come packed with thousands of lines of unused CSS and JavaScript. This 'hidden weight' slows down browsers and leads to high bounce rates, especially for users on the move.",
+                  title: "Unused Code Adds Up",
+                  desc: "Page builders and multi-purpose themes ship with far more CSS and JavaScript than any one site uses. That extra weight slows every visitor down, especially on mobile connections.",
                 },
                 {
-                  title: "Optimizing for Core Web Vitals",
-                  desc: "Search engines now prioritize user experience metrics like LCP and CLS. We build clean, custom solutions that pass the 2 second speed test, ensuring your site actually ranks where your customers are looking.",
+                  title: "Core Web Vitals Affect Rankings",
+                  desc: "Google factors in real-world loading, interactivity and layout stability. We build to those metrics from the start instead of trying to fix them after launch.",
                 },
                 {
-                  title: "Enterprise-Grade Security",
-                  desc: "Templates and generic plugins are the primary targets for global cyberattacks. By using custom coded architecture, we remove these common vulnerabilities, keeping your data safe and your brand’s reputation intact.",
+                  title: "Fewer Plugins, Fewer Vulnerabilities",
+                  desc: "Generic plugins are a common attack target. Custom-coded builds have a smaller surface area, which means fewer places for something to go wrong.",
                 },
               ].map((p, i) => (
                 <article key={i} className="wds-perf__card">
@@ -1121,8 +1035,8 @@ const WebsiteDevelopmentServices = () => {
               <div className="wds-perf__stat">
                 <span className="wds-perf__stat-num">53%</span>
                 <span className="wds-perf__stat-label">
-                  Of mobile users leave a site if it takes longer than 3 seconds
-                  to load.
+                  of mobile visitors leave a site that takes longer than 3
+                  seconds to load, per Google's own mobile research.
                 </span>
               </div>
               <div className="wds-perf__bar-wrap">
@@ -1140,7 +1054,7 @@ const WebsiteDevelopmentServices = () => {
                   </div>
                 </div>
                 <div className="wds-perf__bar-row">
-                  <span>Standard Multi purpose Template</span>
+                  <span>Standard Multi-Purpose Template</span>
                   <div
                     className="wds-perf__bar wds-perf__bar--slow"
                     role="meter"
@@ -1165,12 +1079,11 @@ const WebsiteDevelopmentServices = () => {
           <div className="container">
             <div className="section-title">
               <h2 id="why-heading">
-                Why Leading Businesses Partner with QllmSoft
+                Why Businesses Choose QllmSoft for Web Development
               </h2>
               <p>
-                We go beyond standard web design. Our team delivers high
-                performance, secure digital solutions that are built to rank on
-                search engines and scale effortlessly as your business grows.
+                Five reasons clients pick us over a template shop or a solo
+                freelancer for their web development services.
               </p>
             </div>
 
@@ -1178,28 +1091,28 @@ const WebsiteDevelopmentServices = () => {
               {[
                 {
                   num: "01",
-                  title: "Bespoke Architecture , Zero Template Bloat",
-                  desc: "Every line of code is written to support your specific business logic using .NET, React, and Angular, ensuring a lightweight, rankable digital asset with no unnecessary dependencies.",
+                  title: "Custom-Coded, Not Templated",
+                  desc: "Every site is built around your actual content and workflow using React and, where needed, ASP.NET Core — not a theme with your logo dropped in.",
                 },
                 {
                   num: "02",
-                  title: "Verified Global Track Record",
-                  desc: "Our expertise is validated by a history of successful international deliveries. We maintain top tier ratings on Upwork and Freelancer.com, serving clients across the world.",
+                  title: "Verifiable Track Record",
+                  desc: "Top Rated Plus on Upwork and a verified history on Freelancer.com — reviews you can check independently, not testimonials we wrote ourselves.",
                 },
                 {
                   num: "03",
-                  title: "Enterprise Grade Security (OWASP)",
-                  desc: "Security is not an afterthought. We implement OWASP best practices, SSL encryption, and secure API integrations to protect your data and your customers.",
+                  title: "Security Isn't an Afterthought",
+                  desc: "OWASP-aligned practices, HTTPS by default, and hardened forms and endpoints, built in from the first commit.",
                 },
                 {
                   num: "04",
-                  title: "Performance First Engineering",
-                  desc: "Our focus on Core Web Vitals guarantees fast loading, mobile responsive interfaces that lower bounce rates and improve organic search visibility on Google Pakistan.",
+                  title: "Built for Search Visibility",
+                  desc: "Core Web Vitals, semantic markup and mobile-first layouts are part of the build itself, which is what actually supports organic rankings over time.",
                 },
                 {
                   num: "05",
-                  title: "Full Lifecycle Accountability",
-                  desc: "From initial blueprinting to post launch maintenance we manage the entire SDLC. We don't hand over a site and disappear. We provide 30 day hyper care to ensure operational stability.",
+                  title: "We Don't Disappear After Launch",
+                  desc: "A 30-day support window is included with every project, and we manage the full lifecycle from first call to post-launch fixes.",
                 },
               ].map((w, i) => (
                 <article
@@ -1225,8 +1138,8 @@ const WebsiteDevelopmentServices = () => {
                 Independently Verified on Upwork & Freelancer
               </h3>
               <p>
-                Our reputation is backed by third party independent reviews not
-                just what we say about ourselves.
+                Our track record is backed by third-party, independent review
+                platforms — not just claims on this page.
               </p>
               <div className="wds-why__platforms">
                 <a
@@ -1258,7 +1171,7 @@ const WebsiteDevelopmentServices = () => {
            aria-labelledby="testimonials-heading"
          >
            <h2 id="testimonials-heading" className="sr-only">
-    Client Reviews, QllmSoft Software Development Company Pakistan
+    Client Reviews for QllmSoft Web Development Services
            </h2>
          
            <TestimonialSection />
@@ -1271,19 +1184,16 @@ const WebsiteDevelopmentServices = () => {
           className="section wds-pricing"
           ref={pricingRef}
           aria-labelledby="pricing-heading"
-          itemScope
-          itemType="https://schema.org/PriceSpecification"
         >
           <div className="container">
             <div className="section-title">
               <h2 id="pricing-heading">
-                Transparent Pricing for Scalable Digital Solutions
+                Website Development Pricing
               </h2>
               <p>
-                We believe in value based, upfront pricing with zero hidden
-                fees. Every project begins with a comprehensive requirement
-                analysis to ensure a fixed price quote that aligns with your
-                business goals.
+                Upfront, scope-based pricing with no hidden fees. Every project starts
+                with a requirements review so the quote reflects your actual site, not
+                a generic package.
               </p>
             </div>
 
@@ -1291,24 +1201,24 @@ const WebsiteDevelopmentServices = () => {
               {[
                 {
                   tier: "Starter",
-                  title: "Professional Business Site",
+                  title: "Business Website",
                   price: "Starting at $500",
                   popular: false,
-                  desc: "Designed for service based businesses. Includes a high converting, SEO ready authority site with 5 - 10 custom pages, lead capture forms, and full mobile optimization.",
+                  desc: "A custom, SEO-ready business site with 5–10 pages, lead capture forms, and full mobile optimization — suited to service businesses.",
                 },
                 {
                   tier: "Most Popular",
-                  title: "Growth & eCommerce Platform",
+                  title: "eCommerce Website",
                   price: "Starting at $1,200",
                   popular: true,
-                  desc: "Advanced platforms featuring seamless payment gateway integrations (Stripe/PayPal), inventory management, automated lead tracking, and high scale SEO architecture.",
+                  desc: "A full storefront with payment gateway integration (Stripe/PayPal), inventory management, and technical SEO built in from launch.",
                 },
                 {
-                  tier: "Enterprise",
-                  title: "Custom SaaS & Web Apps",
+                  tier: "Larger Builds",
+                  title: "Content-Driven / Custom Sites",
                   price: "Custom Quote",
                   popular: false,
-                  desc: "Tailored for complex needs: multi tenant SaaS platforms, enterprise portals, ERP integrations, and real time data dashboards built to handle global traffic.",
+                  desc: "Headless CMS builds, multi-region sites, or websites with non-standard integrations that need individual scoping.",
                 },
               ].map((p, i) => (
                 <article
@@ -1338,16 +1248,13 @@ const WebsiteDevelopmentServices = () => {
               aria-label="Factors affecting development cost"
             >
               <h3 className="wds-pricing__factors-title">
-                Project Cost Drivers
+                What Actually Drives the Cost
               </h3>
               <ul className="wds-pricing__factors-list">
                 {[
-                  { icon: "bi-cpu", label: "Custom Functionality & API Logic" },
+                  { icon: "bi-cpu", label: "Custom Functionality & API Integrations" },
                   { icon: "bi-brush", label: "UI/UX Design Complexity" },
-                  {
-                    icon: "bi-pencil",
-                    label: "Content Strategy & Copywriting",
-                  },
+                  { icon: "bi-pencil", label: "Content Strategy & Copywriting" },
                   { icon: "bi-clock", label: "Project Timeline & Urgency" },
                   { icon: "bi-graph-up", label: "Technical SEO Scope" },
                   { icon: "bi-link", label: "Third-Party System Integrations" },
@@ -1361,8 +1268,8 @@ const WebsiteDevelopmentServices = () => {
                 ))}
               </ul>
               <p className="wds-pricing__cta-text">
-                Need a precise estimate? We provide custom quotes within 24
-                hours based on your specific project needs.
+                Want a precise number? We provide custom quotes within 24 hours based
+                on your actual scope.
               </p>
               <Link
                 to="/contact"
@@ -1376,8 +1283,8 @@ const WebsiteDevelopmentServices = () => {
         </section>
 
         <FounderNote
-          title="Digital Engineering, Measurable Enterprise Scale"
-          message="QllmSoft believes a web ecosystem is more than just a digital address, it's your most powerful asset for global operation. I lead a specialized, elite squad of engineers that translates complex business requirements into high performance, production ready architectures. Operating from our secure, highly resilient technology center, we personally ensure that every module we deploy is strategically engineered to eliminate technical debt, guarantee rock solid security, and scale alongside your international ambitions."
+          title="A Website Is an Asset, Not Just an Address"
+          message="I review the architecture on every website project we take on, not because our engineers need supervision, but because the decisions that hurt a site most — bloated dependencies, a URL structure that breaks on redesign, security shortcuts — are cheap to catch early and expensive to fix later. Our job is to hand you something that still performs well a few years from now, not just something that looks right on launch day."
         />
 
         {/* ══════════════════════════════════════════════════
@@ -1391,10 +1298,10 @@ const WebsiteDevelopmentServices = () => {
         >
           <div className="container">
             <div className="section-title">
-              <h2 id="faq-heading">Website Development FAQs</h2>
+              <h2 id="faq-heading">Web Development Services FAQs</h2>
               <p>
-                Everything you need to know about our web development process,
-                costs, and timelines.
+                Common questions about our process, timelines and pricing for web
+                development projects.
               </p>
             </div>
             <div className="csd-faq__list">
@@ -1423,15 +1330,15 @@ const WebsiteDevelopmentServices = () => {
                 Ready to Build a Website That Drives Real Results?
               </h2>
               <p>
-                Your website should do more than exist it should attract organic
-                traffic, convert high value leads, and scale alongside your
-                business. Let's engineer yours.
+                A website should do more than exist — it should bring in organic
+                traffic, convert visitors into leads, and scale with your business.
+                Let's build yours.
               </p>
               <div className="csd-final-cta__buttons">
                 <Link
                   to="/contact"
                   className="btn btn-primary"
-                  aria-label="Request your free website development quote from QllmSoft Pakistan"
+                  aria-label="Request your free web development quote from QllmSoft"
                 >
                   Request Your Free Quote Today
                 </Link>
@@ -1452,8 +1359,8 @@ const WebsiteDevelopmentServices = () => {
                   fontSize: "0.9rem",
                 }}
               >
-                Questions? Visit our <Link to="/blog">Expert Blog</Link> we
-                typically respond within 5 minutes.
+                Questions? Visit our <Link to="/blog">Expert Blog</Link> — we
+                typically respond within a few hours on business days.
               </p>
             </div>
           </div>

@@ -135,7 +135,7 @@
 .btn-outline-dark {
   background: transparent;
   border: 2px solid #1A365D;
-  color: #1A365D;
+  color: #0047ab;
   padding: 12px 28px;
   border-radius: 6px;
   font-weight: 600;
@@ -144,7 +144,7 @@
   display: inline-block;
 }
 .btn-outline-dark:hover {
-  background: #1A365D;
+  background: #0047ab;
   color: #fff;
 }
 
@@ -165,7 +165,7 @@
   transition: all 0.3s ease;
 }
 .csd-hero__stat:hover {
-  background: rgba(6, 3, 117, 0.05);
+  background: rgba(37, 37, 45, 0.05);
   border-color: rgba(5, 2, 50, 0.2);
 }
 
@@ -369,7 +369,7 @@
 .csd-about__stat-num {
   font-size: 3rem;
   font-weight: 900;
-  color: #1A365D;
+  color: #0047ab;
   line-height: 1;
   margin-bottom: 12px;
   transform: translateZ(60px); 
@@ -1001,13 +1001,13 @@
   gap: 12px;
   font-size: 0.98rem;
   font-weight: 600;
-  color: #1A365D;
+  color: #fff;
   cursor: pointer;
   transition: color 0.2s;
 }
 
 .faq-question:hover {
-  color: #2B6CB0;
+  color: #eeeeee;
 }
 
 .faq-icon {
@@ -1023,7 +1023,7 @@
 
 .faq-answer p {
   font-size: 0.92rem;
-  color: #4A5568;
+  color: #fff;
   line-height: 1.75;
   margin: 0;
 }
