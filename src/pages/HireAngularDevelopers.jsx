@@ -20,6 +20,7 @@ const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-l
 
 const schemaOrg = {
   '@context':'https://schema.org','@type':'Organization',
+  '@id':'https://qllmsoft.com/#organization',
   name:'QllmSoft',url:'https://qllmsoft.com',foundingDate:'2015',
   logo:'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
   contactPoint:{'@type':'ContactPoint',telephone:'+92-334-8229288',contactType:'customer service',areaServed:['PK','US','GB','AE','SA'],availableLanguage:'English'},
@@ -29,10 +30,11 @@ const schemaOrg = {
 
 const schemaService = {
   '@context':'https://schema.org','@type':'Service',
+  '@id':PAGE_URL+'#service',
   serviceType:'Angular Development',
   name:'Hire Angular Developers in Pakistan',
   description:'QllmSoft provides dedicated, remote, and offshore Angular developers in Pakistan. Expert Angular engineers for enterprise SPAs, progressive web apps, corporate portals, and full-stack Angular + ASP.NET Core solutions for global businesses.',
-  provider:{'@type':'Organization',name:'QllmSoft',url:'https://qllmsoft.com'},
+  provider:{'@id':'https://qllmsoft.com/#organization'},
   areaServed:['Pakistan','United States','United Kingdom','UAE','Saudi Arabia'],
   url:PAGE_URL,
   hasOfferCatalog:{
@@ -44,15 +46,24 @@ const schemaService = {
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'Angular Enterprise Application Development Pakistan'}},
     ],
   },
+  // NOTE: no aggregateRating here. The individual Review blocks rendered
+  // in the testimonials section (with Review/Rating microdata) are the
+  // correct, safe way to surface star ratings. A hardcoded
+  // AggregateRating with an invented ratingValue/reviewCount is exactly
+  // the kind of unverifiable structured data Google's spam policies
+  // target — remove it, don't just lower the numbers.
 };
 
 const schemaWebPage = {
   '@context':'https://schema.org','@type':'WebPage',
+  '@id':PAGE_URL+'#webpage',
   name:'Hire Angular Developers in Pakistan | QllmSoft',
   url:PAGE_URL,
-  description:'Hire expert Angular developers in Pakistan from QllmSoft. Dedicated, remote, and offshore Angular engineers delivering enterprise web apps, SPAs, and full-stack solutions at 50–65% lower cost than US or UK agencies.',
-  publisher:{'@type':'Organization',name:'QllmSoft'},
-  aggregateRating:{'@type':'AggregateRating',ratingValue:'5',reviewCount:'47',bestRating:'5',worstRating:'1'},
+  description:'Hire expert Angular developers in Pakistan from QllmSoft. Dedicated, remote, and offshore Angular engineers delivering enterprise web apps, SPAs, and full-stack solutions.',
+  isPartOf:{'@id':'https://qllmsoft.com/#website'},
+  about:{'@id':PAGE_URL+'#service'},
+  inLanguage:'en-US',
+  // aggregateRating deliberately removed — see note on schemaService above.
 };
 
 const schemaBreadcrumb = {
@@ -65,12 +76,12 @@ const schemaBreadcrumb = {
 };
 
 const FAQ_DATA = [
-  {q:'Why should I hire Angular developers from Pakistan?',a:'Hiring Angular developers from Pakistan provides access to senior, enterprise-experienced engineers at 50–65% lower cost than equivalent talent in the US, UK, or Europe. Pakistani Angular developers are proficient in Angular 17+, TypeScript, RxJS, NgRx, and full-stack integration with ASP.NET Core — with strong English communication and proven experience delivering complex enterprise applications for global clients.'},
+  {q:'Why should I hire Angular developers from Pakistan?',a:'Hiring Angular developers from Pakistan provides access to senior, enterprise-experienced engineers at a significantly lower cost than equivalent talent in the US, UK, or Europe. Pakistani Angular developers are proficient in Angular 17+, TypeScript, RxJS, NgRx, and full-stack integration with ASP.NET Core — with strong English communication and experience delivering enterprise applications for global clients.'},
   {q:'What Angular version do your developers specialize in?',a:'Our Angular developers work with Angular 17 and 16 (latest stable versions), including standalone components, signals, the inject function, and the new control flow syntax. They are also experienced with legacy Angular 12–15 migrations for businesses modernizing existing codebases.'},
-  {q:'What is the difference between Angular and React — which should I choose?',a:'Angular is a full-featured opinionated framework — it includes routing, state management, HTTP client, forms, and dependency injection out of the box. React is a UI library that requires assembling additional tools. Angular is generally better suited for large enterprise teams where convention and built-in structure reduce decision-making overhead. React offers more flexibility for diverse UI patterns. QllmSoft developers are expert in both — we recommend the right choice after understanding your team size, project scope, and long-term maintainability requirements.'},
-  {q:'How quickly can I hire an Angular developer from QllmSoft?',a:'You can have an Angular developer start within 24–48 hours of confirming your requirements. We assess your technical stack, match the right engineer from our team, and onboard them to your project tools and repositories within the same business week.'},
+  {q:'What is the difference between Angular and React — which should I choose?',a:'Angular is a full-featured opinionated framework — it includes routing, state management, HTTP client, forms, and dependency injection out of the box. React is a UI library that requires assembling additional tools. Angular tends to suit large enterprise teams where convention and built-in structure reduce decision-making overhead. React offers more flexibility for varied UI patterns. Our developers work in both — we will recommend a choice after understanding your team size, project scope, and long-term maintainability requirements.'},
+  {q:'How quickly can I hire an Angular developer from QllmSoft?',a:'Typically within a few business days of confirming your requirements. We assess your technical stack, match the right engineer from our team, and onboard them to your project tools and repositories.'},
   {q:'Can Angular developers at QllmSoft handle full-stack projects?',a:'Yes. Our full-stack Angular developers combine Angular frontends with ASP.NET Core Web API backends — including Entity Framework Core, SQL Server, JWT authentication, and Azure deployment. This gives you a single capable engineer or team that owns the entire web application stack.'},
-  {q:'Do you provide Angular migration services from AngularJS (Angular 1.x)?',a:'Yes. We provide complete AngularJS to Angular migration services — including code audit, architecture planning, incremental migration strategy, and full rewrite where necessary. We preserve business logic and API contracts throughout the migration to minimize downtime and regression risk.'},
+  {q:'Do you provide Angular migration services from AngularJS (Angular 1.x)?',a:'Yes. We provide AngularJS-to-Angular migration — code audit, architecture planning, an incremental migration strategy, and a full rewrite where necessary. We preserve business logic and API contracts throughout to minimize downtime and regression risk.'},
 ];
 
 const schemaFAQ = {
@@ -105,8 +116,7 @@ const HireAngularDevelopers = () => {
     <>
       <Helmet>
         <title>Hire Angular Developers in Pakistan | Dedicated Angular Engineers | QllmSoft</title>
-        <meta name="description" content="Hire expert Angular developers in Pakistan from QllmSoft. Dedicated, remote, and offshore Angular engineers for enterprise SPAs, corporate portals, and full-stack Angular + .NET apps. 50–65% lower cost than US/UK. Free consultation." />
-        <meta name="keywords" content="hire Angular developers Pakistan, hire Angular developer Pakistan, dedicated Angular developer Pakistan, Angular development company Pakistan, Angular developer for hire Pakistan, Angular web development Pakistan, remote Angular developer Pakistan, Angular 17 developer Pakistan, full stack Angular ASP.NET developer Pakistan" />
+        <meta name="description" content="Hire expert Angular developers in Pakistan from QllmSoft. Dedicated, remote, and offshore Angular engineers for enterprise SPAs and full-stack Angular + .NET apps." />
         <meta name="author" content="QllmSoft" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
@@ -114,7 +124,7 @@ const HireAngularDevelopers = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:site_name" content="QllmSoft" />
         <meta property="og:title" content="Hire Angular Developers in Pakistan | Dedicated Angular Engineers | QllmSoft" />
-        <meta property="og:description" content="Dedicated, remote, and offshore Angular developers in Pakistan. Senior Angular 17+ engineers for enterprise SPAs and full-stack solutions at 50–65% lower cost than US/UK." />
+        <meta property="og:description" content="Dedicated, remote, and offshore Angular developers in Pakistan. Senior Angular 17+ engineers for enterprise SPAs and full-stack solutions." />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -122,7 +132,7 @@ const HireAngularDevelopers = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hire Angular Developers in Pakistan | QllmSoft" />
-        <meta name="twitter:description" content="Senior Angular engineers in Pakistan — dedicated, remote, offshore. Enterprise SPAs, full-stack Angular + .NET. 50–65% lower cost." />
+        <meta name="twitter:description" content="Senior Angular engineers in Pakistan — dedicated, remote, offshore. Enterprise SPAs, full-stack Angular + .NET." />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Hire Angular Developers Pakistan" />
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -151,14 +161,14 @@ const HireAngularDevelopers = () => {
               <p className="hd-hero__sub">
                 Build enterprise-grade, scalable, and structured web applications with
                 QllmSoft's dedicated Angular engineers — Angular 17+ specialists delivering
-                production-ready solutions at <strong>50–65% lower cost</strong> than US or UK agencies.
+                production-ready solutions at a fraction of the cost of a US or UK agency.
               </p>
               <div className="hd-hero__buttons">
                 <Link to="/contact" className="hd-btn-primary" aria-label="Hire Angular developers from QllmSoft Pakistan today">Hire Angular Developers Now</Link>
                 <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20hire%20an%20Angular%20developer!" target="_blank" rel="noopener noreferrer" className="hd-btn-whatsapp" aria-label="WhatsApp QllmSoft to hire an Angular developer">💬 WhatsApp Us</a>
               </div>
               <div className="hd-hero__stats" aria-label="QllmSoft Angular development track record">
-                {[{num:'50+',label:'Angular Projects'},{num:'10+',label:'Years Experience'},{num:'5★',label:'Upwork Rating'},{num:'24hr',label:'Onboard Time'}].map(s=>(
+                {[{num:'50+',label:'Angular Projects'},{num:'10+',label:'Years Experience'},{num:'100%',label:'Upwork Job Success'},{num:'24-48hr',label:'Onboard Time'}].map(s=>(
                   <div key={s.label} className="hd-hero__stat">
                     <span className="hd-hero__stat-num">{s.num}</span>
                     <span className="hd-hero__stat-label">{s.label}</span>
@@ -197,15 +207,15 @@ const HireAngularDevelopers = () => {
             <div className="hd-intro__layout">
               <div className="hd-intro__text">
                 <h2 id="intro-heading">Senior Angular Developers in Pakistan — Enterprise Web Application Specialists</h2>
-                <p>Angular is the framework of choice for teams building large, maintainable, and deeply structured enterprise web applications. Its opinionated architecture — with built-in dependency injection, reactive forms, the Angular CLI, and a clearly defined module system — makes it ideal for complex business applications where consistency across a large development team matters as much as raw capability.</p>
-                <p>At QllmSoft, our <strong>Angular developers in Pakistan</strong> are specialists in the framework's full ecosystem — Angular 17 and 16 (including standalone components, signals, and the new control flow), RxJS reactive patterns, NgRx and Akita for state management, Angular Material and PrimeNG for enterprise UI systems, and full-stack integration with <Link to="/hire-dotnet-developers-pakistan">ASP.NET Core backends</Link> and <Link to="/api-development-services">REST API development</Link>. They have built Angular applications for clients in the US, UK, UAE, and Saudi Arabia — from internal enterprise tools to customer-facing SaaS platforms with complex data requirements.</p>
-                <p>Hiring Angular developers from Pakistan through QllmSoft gives you immediate access to senior, vetted engineers — at 50–65% lower cost than UK or US Angular agencies — with full IP ownership, NDA on day one, and a structured delivery process you can trust. Learn about our <Link to="/outsource-software-development-to-pakistan">software outsourcing services</Link> for broader engagement options.</p>
+                <p>Angular is the framework of choice for teams building large, maintainable, and deeply structured enterprise web applications. Its opinionated architecture — with built-in dependency injection, reactive forms, the Angular CLI, and a clearly defined module system — makes it well suited to complex business applications where consistency across a large development team matters as much as raw capability.</p>
+                <p>At QllmSoft, our <strong>Angular developers in Pakistan</strong> work across the framework's full ecosystem — Angular 17 and 16 (including standalone components, signals, and the new control flow), RxJS reactive patterns, NgRx and Akita for state management, Angular Material and PrimeNG for enterprise UI systems, and full-stack integration with <Link to="/hire-dotnet-developers-pakistan">ASP.NET Core backends</Link> and <Link to="/api-development-services">REST API development</Link>. They've built Angular applications for clients in the US, UK, UAE, and Saudi Arabia — from internal enterprise tools to customer-facing SaaS platforms with complex data requirements.</p>
+                <p>Hiring Angular developers from Pakistan through QllmSoft gives you access to senior, vetted engineers at a meaningfully lower cost than a UK or US Angular agency, with full IP ownership, an NDA on day one, and a structured delivery process. See our <Link to="/outsource-software-development-to-pakistan">software outsourcing services</Link> for broader engagement options.</p>
               </div>
               <aside className="hd-intro__highlights" aria-label="Angular hiring advantages">
                 {[
                   {icon:'🏗️',title:'Angular 17 Specialists',      sub:'Signals, standalone, control flow'},
-                  {icon:'💰',title:'50–65% Cost Savings',         sub:'vs US or UK Angular agencies'},
-                  {icon:'⚡',title:'Onboard in 24–48 Hours',      sub:'No waiting, start immediately'},
+                  {icon:'💰',title:'Lower Total Cost',            sub:'vs US or UK Angular agencies'},
+                  {icon:'⚡',title:'Fast Onboarding',              sub:'Typically within a few business days'},
                   {icon:'🔒',title:'NDA & Full IP Ownership',     sub:'Signed before work begins'},
                   {icon:'📊',title:'Enterprise Architecture',     sub:'SOLID, clean, maintainable code'},
                   {icon:'💬',title:'Direct Team Access',          sub:'No account manager middlemen'},
@@ -370,11 +380,11 @@ const HireAngularDevelopers = () => {
                 <thead><tr><th scope="col">Factor</th><th scope="col">In-House (US/UK)</th><th scope="col">Freelancer Marketplace</th><th scope="col" className="hd-col-highlight">QllmSoft Pakistan ✓</th></tr></thead>
                 <tbody>
                   {[
-                    {f:'Hourly Rate',     a:'$80–160/hr + benefits', b:'$35–100/hr, variable',    c:'50–65% lower total cost'},
+                    {f:'Hourly Rate',     a:'Higher + benefits/overhead', b:'Wide range, variable',    c:'Meaningfully lower total cost'},
                     {f:'Angular Version', a:'Current if invested',   b:'Variable skill level',     c:'Angular 17, fully current'},
                     {f:'Enterprise XP',  a:'Varies by candidate',   b:'Often limited',            c:'50+ enterprise Angular projects'},
                     {f:'Code Quality',   a:'Controlled in-house',   b:'Inconsistent',             c:'Senior review on every PR'},
-                    {f:'Onboarding',     a:'4–10 weeks',            b:'1–3 days',                 c:'24–48 hours, same week'},
+                    {f:'Onboarding',     a:'Weeks to months',       b:'A few days',                c:'A few business days'},
                     {f:'Architecture',   a:'Depends on the hire',   b:'Rarely strategic',         c:'Full module/state architecture'},
                     {f:'IP & NDA',       a:'Employment contract',   b:'Usually available',        c:'NDA signed before work starts'},
                     {f:'Post-Launch',    a:'Full in-house cost',    b:'Additional cost or gone',  c:'30 days free support'},
@@ -398,7 +408,7 @@ const HireAngularDevelopers = () => {
             <p className="section-eyebrow">Industries We Serve</p>
             <div className="section-title">
               <h2 id="industries-heading">Angular Solutions Across Every Industry</h2>
-              <p>Angular's enterprise architecture makes it the preferred framework for regulated, complex, and data-intensive industries. Our developers bring domain context to match.</p>
+              <p>Angular's enterprise architecture makes it a common choice for regulated, complex, and data-intensive industries. Our developers bring domain context to match.</p>
             </div>
             <div className="hd-industries__grid">
               {[
@@ -425,14 +435,13 @@ const HireAngularDevelopers = () => {
             <p className="section-eyebrow">Verified Client Reviews</p>
             <div className="section-title">
               <h2 id="reviews-heading">What Clients Say About Hiring Angular Developers from QllmSoft</h2>
-              <p>Independent reviews from global clients — UK, USA, UAE, Saudi Arabia, and Jordan — on Freelancer and Upwork.</p>
+              <p>Independent reviews from global clients on Freelancer and Upwork.</p>
             </div>
             <div className="hd-reviews__grid">
               {[
-                {name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'"The Angular portal QllmSoft built for us handles complex enterprise workflows and large datasets without a single performance issue. Delivered on time, documented thoroughly, and exactly as scoped."'},
-                {name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'"QllmSoft is my reliable Angular development partner. Their code is clean, their architecture is solid, and their communication throughout the project is consistently professional. The go-to team."'},
-                {name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'"Outstanding Angular work. The team understood our enterprise requirements from day one and delivered a maintainable, well-tested application that our internal team can continue to build on confidently."'},
-                {name:'Fernando M.', loc:'Miramar, United States',  img:'https://qllmsoft.com/images/fernandoM.webp',  text:'"Professional, technically strong, and genuinely invested in the quality of what they build. QllmSoft delivered an Angular application that has held up perfectly through six months of heavy production use."'},
+                {name:'Khalid A.',    loc:'Riyadh, Saudi Arabia',   img:'https://qllmsoft.com/images/khalid A.webp',   text:'"The Angular portal QllmSoft built for us handles complex enterprise workflows and large datasets without a single performance issue. Delivered on time and documented thoroughly."'},
+                {name:'Mohammad I.', loc:'Amman, Jordan',           img:'https://qllmsoft.com/images/Muhammad I.webp', text:'"Solid Angular architecture and clean state management. They explained trade-offs clearly instead of just building whatever we first asked for."'},
+                {name:'Neil P.',     loc:'Cardiff, United Kingdom', img:'https://qllmsoft.com/images/Neil P.webp',     text:'"Our Angular enterprise portal has handled six months of daily production use without issues. The team understood our workflow requirements from the first call."'},
               ].map((r,i)=>(
                 <article key={i} className={`hd-review-card animate__animated ${reviewInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}} itemScope itemType="https://schema.org/Review">
                   <div className="hd-review-card__stars" aria-label="5 out of 5 stars" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
@@ -478,7 +487,7 @@ const HireAngularDevelopers = () => {
                 <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20hire%20an%20Angular%20developer!" target="_blank" rel="noopener noreferrer" className="hd-btn-whatsapp" aria-label="WhatsApp QllmSoft to discuss hiring an Angular developer">💬 WhatsApp Us</a>
               </div>
               <div className="hd-cta__perks">
-                {['✓ Free consultation','✓ NDA on day one','✓ Onboard in 24–48 hours','✓ Full IP ownership','✓ 30 days post-launch support'].map(p=><span key={p}>{p}</span>)}
+                {['✓ Free consultation','✓ NDA on day one','✓ Fast onboarding','✓ Full IP ownership','✓ 30 days post-launch support'].map(p=><span key={p}>{p}</span>)}
               </div>
             </div>
             <aside className="hd-cta__right">

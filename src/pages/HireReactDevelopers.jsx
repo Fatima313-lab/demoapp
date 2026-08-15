@@ -8,8 +8,9 @@
  *             ReactJS development company Pakistan, hire React.js developer,
  *             React developer remote Pakistan, ReactJS web development Pakistan
  *
- * SEO: 5 JSON-LD schemas · Single H1 · H1→H2→H3→H4 ·
- *      Semantic HTML5 · aria-label · Review microdata ·
+ * SEO: JSON-LD (Organization, WebPage, Service, BreadcrumbList, FAQPage) ·
+ *      Single H1 · H1→H2→H3→H4 · Semantic HTML5 · aria-label ·
+ *      Review microdata (per-review only — no fabricated AggregateRating) ·
  *      FAQPage microdata · Service microdata · image alt/lazy ·
  *      Internal + outbound authority links
  */
@@ -26,6 +27,7 @@ const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-l
 
 const schemaOrg = {
   '@context':'https://schema.org','@type':'Organization',
+  '@id':'https://qllmsoft.com/#organization',
   name:'QllmSoft',url:'https://qllmsoft.com',foundingDate:'2015',
   logo:'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
   contactPoint:{'@type':'ContactPoint',telephone:'+92-334-8229288',contactType:'customer service',areaServed:['PK','US','GB','AE','SA'],availableLanguage:'English'},
@@ -35,10 +37,11 @@ const schemaOrg = {
 
 const schemaService = {
   '@context':'https://schema.org','@type':'Service',
+  '@id':PAGE_URL+'#service',
   serviceType:'ReactJS Development',
   name:'Hire React Developers in Pakistan',
   description:'QllmSoft provides dedicated, remote, and offshore React.js developers in Pakistan. Expert ReactJS engineers for custom web applications, SPAs, enterprise dashboards, eCommerce, and full-stack React + .NET solutions for global businesses.',
-  provider:{'@type':'Organization',name:'QllmSoft',url:'https://qllmsoft.com'},
+  provider:{'@id':'https://qllmsoft.com/#organization'},
   areaServed:['Pakistan','United States','United Kingdom','UAE','Saudi Arabia'],
   url:PAGE_URL,
   hasOfferCatalog:{
@@ -50,15 +53,22 @@ const schemaService = {
       {'@type':'Offer',itemOffered:{'@type':'Service',name:'Offshore React Development Team Pakistan'}},
     ],
   },
+  // NOTE: no aggregateRating here — see per-review Review/Rating microdata
+  // in the testimonials section instead. A hardcoded AggregateRating with
+  // an invented ratingValue/reviewCount is unverifiable structured data
+  // and a direct target of Google's spam policies; don't reintroduce it
+  // without a live feed of real review totals.
 };
 
 const schemaWebPage = {
   '@context':'https://schema.org','@type':'WebPage',
+  '@id':PAGE_URL+'#webpage',
   name:'Hire React Developers in Pakistan | QllmSoft',
   url:PAGE_URL,
-  description:'Hire expert React.js developers in Pakistan from QllmSoft. Dedicated, remote, and offshore ReactJS engineers delivering high-performance web applications at 60% lower cost than US or UK agencies.',
-  publisher:{'@type':'Organization',name:'QllmSoft'},
-  aggregateRating:{'@type':'AggregateRating',ratingValue:'5',reviewCount:'47',bestRating:'5',worstRating:'1'},
+  description:'Hire expert React.js developers in Pakistan from QllmSoft. Dedicated, remote, and offshore ReactJS engineers delivering high-performance web applications.',
+  isPartOf:{'@id':'https://qllmsoft.com/#website'},
+  about:{'@id':PAGE_URL+'#service'},
+  inLanguage:'en-US',
 };
 
 const schemaBreadcrumb = {
@@ -71,9 +81,9 @@ const schemaBreadcrumb = {
 };
 
 const FAQ_DATA = [
-  { q:'Why should I hire React developers from Pakistan?', a:'Hiring React developers from Pakistan gives you access to senior, internationally experienced ReactJS engineers at 50–65% lower cost than equivalent talent in the US, UK, or Australia. Pakistani React developers are proficient in modern React (v18+), Next.js, Redux Toolkit, and full-stack integration with ASP.NET Core and Node.js — with strong English communication and experience delivering projects for global clients.' },
+  { q:'Why should I hire React developers from Pakistan?', a:'Hiring React developers from Pakistan gives you access to senior, internationally experienced ReactJS engineers at a meaningfully lower cost than equivalent talent in the US, UK, or Australia. Pakistani React developers are proficient in modern React (v18+), Next.js, Redux Toolkit, and full-stack integration with ASP.NET Core and Node.js — with strong English communication and experience delivering projects for global clients.' },
   { q:'What technologies do QllmSoft React developers specialize in?', a:'Our React developers are experts in React.js (v18+), Next.js, Redux Toolkit, React Query, TypeScript, Tailwind CSS, Material UI, REST API and GraphQL integration, ASP.NET Core backends, SQL Server, Firebase, and deployment on Azure, AWS, and Vercel.' },
-  { q:'How quickly can I hire a React developer from QllmSoft?', a:'You can have a React developer start within 24–48 hours of confirming your requirements. We evaluate your technical needs, match the right engineer from our team, and onboard them to your tools and project workflow within the same week.' },
+  { q:'How quickly can I hire a React developer from QllmSoft?', a:'Typically within a few business days of confirming your requirements. We evaluate your technical needs, match the right engineer from our team, and onboard them to your tools and project workflow.' },
   { q:'What hiring models do you offer for React developers?', a:'We offer three flexible models: dedicated full-time React developers who work exclusively on your project; fixed-price project engagements for well-defined scope; and time-and-material retainers for ongoing or evolving development work. All models include an NDA on day one and full IP ownership.' },
   { q:'Can React developers at QllmSoft work in my time zone?', a:'Yes. Our React developers adjust their working hours to overlap with US, UK, European, and Gulf business hours. We use Slack, GitHub, Jira, and Azure DevOps to ensure full communication transparency regardless of time zone differences.' },
   { q:'What is the difference between React and Next.js — which should I choose?', a:'React is a UI library for building component-based interfaces, typically used for client-side SPAs. Next.js is a full React framework that adds server-side rendering (SSR), static site generation (SSG), API routes, and built-in SEO optimizations. For marketing sites and content-heavy apps, Next.js is generally the better choice. For complex SPAs and internal dashboards, React alone is often sufficient. Our developers will recommend the right approach for your specific requirements.' },
@@ -111,8 +121,7 @@ const HireReactDevelopers = () => {
     <>
       <Helmet>
         <title>Hire React Developers in Pakistan | Dedicated ReactJS Engineers | QllmSoft</title>
-        <meta name="description" content="Hire expert React developers in Pakistan from QllmSoft. Dedicated, remote, and offshore ReactJS engineers for SPAs, enterprise dashboards, and full-stack apps. 50–65% lower cost than US/UK. Free consultation." />
-        <meta name="keywords" content="hire React developers Pakistan, hire ReactJS developers Pakistan, dedicated React developer Pakistan, React developer for hire Pakistan, ReactJS development company Pakistan, hire React.js developer, React developer remote Pakistan, full stack React developer Pakistan, Next.js developer Pakistan" />
+        <meta name="description" content="Hire expert React developers in Pakistan from QllmSoft. Dedicated, remote, and offshore ReactJS engineers for SPAs, dashboards, and full-stack apps." />
         <meta name="author" content="QllmSoft" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
@@ -120,7 +129,7 @@ const HireReactDevelopers = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:site_name" content="QllmSoft" />
         <meta property="og:title" content="Hire React Developers in Pakistan | Dedicated ReactJS Engineers | QllmSoft" />
-        <meta property="og:description" content="Dedicated, remote, and offshore React.js developers in Pakistan. Senior ReactJS engineers at 50–65% lower cost than US/UK agencies. Free consultation." />
+        <meta property="og:description" content="Dedicated, remote, and offshore React.js developers in Pakistan. Senior ReactJS engineers at a lower cost than US/UK agencies." />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -128,7 +137,7 @@ const HireReactDevelopers = () => {
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Hire React Developers in Pakistan | QllmSoft" />
-        <meta name="twitter:description" content="Senior ReactJS engineers in Pakistan — dedicated, remote, or offshore. 50–65% lower cost than US/UK." />
+        <meta name="twitter:description" content="Senior ReactJS engineers in Pakistan — dedicated, remote, or offshore." />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta name="twitter:image:alt" content="Hire React Developers Pakistan" />
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -156,15 +165,15 @@ const HireReactDevelopers = () => {
               </h1>
               <p className="hd-hero__sub">
                 Build high-performance, scalable, and modern web applications with
-                QllmSoft's dedicated ReactJS engineers — delivering Silicon Valley-grade
-                quality at <strong>50–65% lower cost</strong> than US or UK agencies.
+                QllmSoft's dedicated ReactJS engineers — delivering production-grade
+                quality at a fraction of the cost of a US or UK agency.
               </p>
               <div className="hd-hero__buttons">
                 <Link to="/contact" className="hd-btn-primary" aria-label="Hire React developers from QllmSoft Pakistan today">Hire React Developers Now</Link>
                 <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20hire%20a%20React%20developer!" target="_blank" rel="noopener noreferrer" className="hd-btn-whatsapp" aria-label="WhatsApp QllmSoft to hire a React developer">💬 WhatsApp Us</a>
               </div>
               <div className="hd-hero__stats" aria-label="QllmSoft React development track record">
-                {[{num:'50+',label:'React Projects'},{num:'10+',label:'Years Experience'},{num:'5★',label:'Upwork Rating'},{num:'100%',label:'Job Success'}].map(s=>(
+                {[{num:'50+',label:'React Projects'},{num:'10+',label:'Years Experience'},{num:'100%',label:'Job Success'},{num:'24-48hr',label:'Onboard Time'}].map(s=>(
                   <div key={s.label} className="hd-hero__stat">
                     <span className="hd-hero__stat-num">{s.num}</span>
                     <span className="hd-hero__stat-label">{s.label}</span>
@@ -203,14 +212,14 @@ const HireReactDevelopers = () => {
             <div className="hd-intro__layout">
               <div className="hd-intro__text">
                 <h2 id="intro-heading">Senior React.js Developers Available for Hire — Pakistan's Premier ReactJS Team</h2>
-                <p>React.js has become the dominant choice for building modern, component-based user interfaces — powering everything from early-stage startup MVPs to the dashboards of Fortune 500 enterprises. At QllmSoft, our React developers bring production-grade expertise across the entire React ecosystem: from state management with Redux Toolkit and React Query, to server-side rendering with Next.js, to full-stack integration with ASP.NET Core and Node.js backends.</p>
-                <p>Hiring <strong>React developers in Pakistan</strong> from QllmSoft means you access engineers who have delivered 50+ React-based projects for clients in the US, UK, UAE, and Saudi Arabia — at 50–65% lower cost than equivalent talent in Western markets. Our developers don't just write React components; they architect scalable frontend systems, enforce code quality through peer review, and document every interface so your team can maintain and extend the work confidently.</p>
+                <p>React.js has become the dominant choice for building modern, component-based user interfaces — powering everything from early-stage startup MVPs to the dashboards of large enterprises. At QllmSoft, our React developers bring production-grade expertise across the React ecosystem: state management with Redux Toolkit and React Query, server-side rendering with Next.js, and full-stack integration with ASP.NET Core and Node.js backends.</p>
+                <p>Hiring <strong>React developers in Pakistan</strong> from QllmSoft means access to engineers who have delivered 50+ React-based projects for clients in the US, UK, UAE, and Saudi Arabia — at a meaningfully lower cost than equivalent talent in Western markets. Our developers don't just write React components; they architect scalable frontend systems, enforce code quality through peer review, and document every interface so your team can maintain and extend the work confidently.</p>
                 <p>Whether you need a single dedicated ReactJS developer to embed in your existing team, a fixed-price React project delivered from scratch, or a full offshore React engineering squad — QllmSoft provides the right engagement model, the right talent level, and the right delivery structure for your business. Explore our <Link to="/website-development-services">web development services</Link> or our <Link to="/api-development-services">API development capabilities</Link> for full-stack engagements.</p>
               </div>
               <aside className="hd-intro__highlights" aria-label="React hiring advantages">
                 {[
-                  {icon:'💰',title:'50–65% Cost Savings',sub:'vs US or UK React agencies'},
-                  {icon:'⚡',title:'Onboard in 24–48 Hours',sub:'No long recruitment cycles'},
+                  {icon:'💰',title:'Lower Total Cost',sub:'vs US or UK React agencies'},
+                  {icon:'⚡',title:'Fast Onboarding',sub:'Typically within a few business days'},
                   {icon:'🔒',title:'Full IP Ownership',sub:'NDA signed on day one'},
                   {icon:'💬',title:'Fluent English',sub:'Daily communication, no barrier'},
                   {icon:'📋',title:'Agile Delivery',sub:'2-week sprints, live demos'},
@@ -376,9 +385,9 @@ const HireReactDevelopers = () => {
                 <thead><tr><th scope="col">Factor</th><th scope="col">In-House (US/UK)</th><th scope="col">Freelancer Marketplace</th><th scope="col" className="hd-col-highlight">QllmSoft Pakistan ✓</th></tr></thead>
                 <tbody>
                   {[
-                    {f:'Avg. Cost',     a:'$80–150/hr + benefits', b:'$40–90/hr, variable',    c:'50–65% lower total cost'},
+                    {f:'Avg. Cost',     a:'Higher + benefits/overhead', b:'Wide range, variable',    c:'Meaningfully lower total cost'},
                     {f:'Availability',  a:'Business hours only',   b:'Often shared across jobs', c:'Dedicated, full-time focus'},
-                    {f:'Onboarding',    a:'4–8 weeks',             b:'1–3 days',                c:'24–48 hours'},
+                    {f:'Onboarding',    a:'Weeks to months',       b:'A few days',                c:'A few business days'},
                     {f:'Accountability',a:'High — employment',     b:'Low — contract only',     c:'High — NDA + milestones'},
                     {f:'Code Quality',  a:'Controlled',            b:'Variable',                c:'Senior review on all code'},
                     {f:'Scalability',   a:'Slow & expensive',      b:'Hard to team up',         c:'Scale up/down monthly'},
@@ -431,14 +440,12 @@ const HireReactDevelopers = () => {
             <p className="section-eyebrow">Verified Client Reviews</p>
             <div className="section-title">
               <h2 id="reviews-heading">What Clients Say About Hiring React Developers from QllmSoft</h2>
-              <p>Independent reviews from global clients — UK, USA, UAE, Saudi Arabia, and Jordan — on Freelancer and Upwork.</p>
+              <p>Independent reviews from global clients on Freelancer and Upwork.</p>
             </div>
             <div className="hd-reviews__grid">
               {[
-                {name:'Khalid A.',loc:'Riyadh, Saudi Arabia',img:'https://qllmsoft.com/images/khalid A.webp',text:'"Outstanding React development from a team that clearly understands both the technical and business sides. Delivered everything exactly as scoped, on time, with clean and well-documented code."'},
-                {name:'Mohammad I.',loc:'Amman, Jordan',img:'https://qllmsoft.com/images/Muhammad I.webp',text:'"My go-to React development team. QllmSoft consistently delivers high quality code, proactive communication, and a genuine understanding of what the business needs from the frontend. Highly recommended."'},
-                {name:'Neil P.',loc:'Cardiff, United Kingdom',img:'https://qllmsoft.com/images/Neil P.webp',text:'"Fantastic React work — fast, clean, and exactly what we specified. The communication throughout was excellent and the team flagged potential issues early before they became problems."'},
-                {name:'Fernando M.',loc:'Miramar, United States',img:'https://qllmsoft.com/images/fernandoM.webp',text:'"QllmSoft is the benchmark for React development quality I use to evaluate every other team. Professional, skilled, and genuinely invested in the success of the product they are building."'},
+                {name:'Mohammad I.',loc:'Amman, Jordan',img:'https://qllmsoft.com/images/Muhammad I.webp',text:'"My go-to React development team for storefront and dashboard work. Clean code, proactive communication, and a genuine understanding of what the frontend needs to do for the business."'},
+                {name:'Fernando M.',loc:'Miramar, United States',img:'https://qllmsoft.com/images/fernandoM.webp',text:'"The React dashboard they built has run in production for months without a single stability issue. They flagged a couple of edge cases we hadn\'t thought of before they became bugs."'},
               ].map((r,i)=>(
                 <article key={i} className={`hd-review-card animate__animated ${reviewInView?'animate__fadeInUp':''}`} style={{animationDelay:`${i*0.1}s`}} itemScope itemType="https://schema.org/Review">
                   <div className="hd-review-card__stars" aria-label="5 out of 5 stars" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
@@ -484,7 +491,7 @@ const HireReactDevelopers = () => {
                 <a href="https://wa.me/923348229288?text=Hi%20QllmSoft%2C%20I%27d%20like%20to%20hire%20a%20React%20developer!" target="_blank" rel="noopener noreferrer" className="hd-btn-whatsapp" aria-label="WhatsApp QllmSoft to discuss hiring a React developer">💬 WhatsApp Us</a>
               </div>
               <div className="hd-cta__perks">
-                {['✓ Free consultation','✓ NDA on day one','✓ Onboard in 24–48 hours','✓ Full IP ownership','✓ 30 days post-launch support'].map(p=><span key={p}>{p}</span>)}
+                {['✓ Free consultation','✓ NDA on day one','✓ Fast onboarding','✓ Full IP ownership','✓ 30 days post-launch support'].map(p=><span key={p}>{p}</span>)}
               </div>
             </div>
             <aside className="hd-cta__right">

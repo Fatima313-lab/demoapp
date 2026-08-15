@@ -3,75 +3,42 @@
  * ─────────────────────────────────────────────────────────────
  * /hire-dotnet-developers-pakistan
  *
- * SEMANTIC SEO UPDATE — Koray Tugberk Gubur Framework
- * ─────────────────────────────────────────────────────────────
- * WHAT CHANGED FROM THE PREVIOUS VERSION AND WHY:
+ * RE-OPTIMIZATION PASS (this update) — WHAT CHANGED AND WHY:
  *
- *  1. ONE CENTRAL SEARCH INTENT
- *     Title, H1, and the new direct-answer paragraph all target a single
- *     intent: "hire a .NET developer in Pakistan." Sub-intents (remote,
- *     dedicated, offshore, ASP.NET Core) are handled as H2/H3 sections
- *     of THIS page, not as separate competing keyword targets.
+ *  1. FABRICATED AGGREGATERATING REMOVED
+ *     The previous version shipped a Service-level AggregateRating with
+ *     ratingValue/reviewCount left as literal TODO placeholders
+ *     ("5.0" / "50") that were never replaced with real numbers. Shipping
+ *     invented review counts is a direct violation of Google's structured
+ *     data guidelines and is grounds for a manual action on review-rich
+ *     results — which would explain part of a ranking drop on its own.
+ *     Removed entirely; the per-review Review/Rating microdata already
+ *     in the testimonials section is the safe way to carry star ratings.
  *
- *  2. DIRECT-ANSWER BLOCK ADDED
- *     A concise ~50-word answer now sits immediately under the H1,
- *     written to be liftable as-is for a featured snippet / AI Overview.
- *     This did not exist before — the old hero went straight into
- *     marketing copy with no direct answer to the query.
+ *  2. UNSHIPPED INTERNAL LINKS GUARDED
+ *     Two links pointed at /ecommerce-development-services and
+ *     /asp-net-core-development-services — pages the previous file's own
+ *     comments say NOT to link to until they exist. Linking to 404s hurts
+ *     crawl efficiency and user trust signals. Converted to plain text
+ *     until those pages are confirmed live — re-link them once they are.
  *
- *  3. META KEYWORDS TAG REMOVED
- *     The keywords meta tag has carried zero ranking weight for over a
- *     decade and only signals outdated SEO practice. Removed entirely.
+ *  3. DUPLICATE TESTIMONIAL CONTENT ACROSS SIBLING PAGES
+ *     The same four reviewer names/photos/quotes were reused near-verbatim
+ *     across the Angular, React, and .NET hiring pages, just swapping the
+ *     technology mentioned. Repeating identical "clients" across multiple
+ *     pages is a pattern search engines can flag as manipulated or
+ *     templated content. Trimmed to a distinct subset here — replace with
+ *     real, page-specific reviews when available rather than reusing the
+ *     same names across every hire-a-developer page.
  *
- *  4. META DESCRIPTION SHORTENED
- *     Previous description ran ~220 characters and was truncated by
- *     Google. Rewritten to ~150 characters so the full value prop shows
- *     in search results.
- *
- *  5. WEBPAGE SCHEMA + DATEMODIFIED ADDED
- *     No freshness signal existed anywhere on this page. Added a
- *     WebPage JSON-LD block with datePublished/dateModified — update
- *     dateModified every time this page's content is materially edited.
- *
- *  6. AGGREGATERATING ADDED (WITH REQUIRED ACTION)
- *     Individual Review microdata existed but there was no
- *     AggregateRating, which is what actually earns star-rating rich
- *     snippets in search results. Added below — but the ratingValue /
- *     reviewCount fields are PLACEHOLDERS. Replace them with your real,
- *     verifiable totals from Upwork/Freelancer before shipping. Fabricated
- *     review/rating markup violates Google's structured-data guidelines
- *     and risks a manual action — never publish invented numbers.
- *
- *  7. TOPICAL-MAP-ALIGNED INTERNAL LINKING
- *     - "Legacy System Migration" now links to
- *       /legacy-system-modernization-services (existing pillar).
- *     - "eCommerce & Payment Portals" now links to
- *       /ecommerce-development-services (NEW pillar — see the master
- *       Semantic SEO guide; do not ship this link until that page exists).
- *     - A new "Hiring for a different stack?" block cross-links to the
- *       sibling /hire-react-developers-pakistan and
- *       /hire-angular-developers-pakistan pages, and to the outsourcing
- *       pillar /outsource-software-development-to-pakistan — this is
- *       the Outer Section reinforcing its Core Section siblings.
- *     - The ASP.NET Core mention in the ASP.NET section now links to
- *       /asp-net-core-development-services (NEW promoted pillar — see
- *       the master guide; do not ship until that page is live).
- *
- *  8. THIS URL IS THE SINGLE CANONICAL TARGET
- *     /blog/hire-dotnet-developers-pakistan duplicates this page's exact
- *     intent. Per the sitemap audit, that blog post must 301-redirect
- *     here — this file should remain the only live URL for this intent.
- *
- *  9. COPY TIGHTENED
- *     Generic superlatives ("world-class," "cutting-edge") replaced with
- *     concrete, specific claims already backed by data on the page
- *     (technology names, percentages, years) — entity-grounded copy reads
- *     as more credible than adjective-only marketing language.
+ *  4. TITLE / DESCRIPTION KEPT TIGHT, KEYWORDS META STAYS REMOVED
+ *     (No ranking value for a decade — already correctly removed in the
+ *     prior pass.)
  *
  * All original SEO groundwork (Helmet, Organization/Service/Breadcrumb/
  * FAQPage JSON-LD, semantic HTML5, ARIA labelling, image alt text,
- * single H1 → H2 → H3 → H4 hierarchy) was already correctly implemented
- * and is preserved below.
+ * single H1 → H2 → H3 → H4 hierarchy, direct-answer block, WebPage
+ * freshness schema) is preserved below.
  * ───────────────────────────────────────────────────────────── */
 
 import React, { useState } from 'react';
@@ -86,23 +53,22 @@ const PAGE_URL = 'https://qllmsoft.com/hire-dotnet-developers-pakistan';
 const OG_IMAGE  = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
 const PAGE_TITLE = 'Hire .NET Developers in Pakistan | Dedicated & Remote | QllmSoft';
 const PAGE_DESCRIPTION =
-  'Hire dedicated, remote, or offshore .NET developers in Pakistan. ASP.NET Core & .NET 8 experts at 60–70% lower cost than US/UK. Start in days.';
+  'Hire dedicated, remote, or offshore .NET developers in Pakistan. ASP.NET Core & .NET 8 experts, lower cost than US/UK agencies. Start in days.';
 
-/* TODO: set this to the date this page was first published, and update
-   DATE_MODIFIED every time the content changes materially. */
 const DATE_PUBLISHED = '2025-09-09';
-const DATE_MODIFIED  = '2026-07-19';
+const DATE_MODIFIED  = '2026-08-15';
 
 /* ─── JSON-LD: WebPage (freshness signal) ────────────────── */
 const schemaWebPage = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': PAGE_URL,
+  '@id': PAGE_URL + '#webpage',
   url: PAGE_URL,
   name: PAGE_TITLE,
   description: PAGE_DESCRIPTION,
   inLanguage: 'en-US',
-  isPartOf: { '@type': 'WebSite', name: 'QllmSoft', url: 'https://qllmsoft.com' },
+  isPartOf: { '@id': 'https://qllmsoft.com/#website' },
+  about: { '@id': PAGE_URL + '#service' },
   datePublished: DATE_PUBLISHED,
   dateModified: DATE_MODIFIED,
 };
@@ -111,6 +77,7 @@ const schemaWebPage = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://qllmsoft.com/#organization',
   name: 'QllmSoft',
   url: 'https://qllmsoft.com',
   logo: 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
@@ -135,27 +102,21 @@ const schemaOrg = {
 };
 
 /* ─── JSON-LD: Service ───────────────────────────────────── */
-/* AGGREGATE RATING: REPLACE PLACEHOLDER VALUES BEFORE SHIPPING.
-   Use only your real, verifiable rating and review count (e.g. pulled
-   directly from your Upwork/Freelancer profile totals). Never publish
-   invented numbers — false review markup breaks Google's structured
-   data policy and risks a manual action. */
 const schemaService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': PAGE_URL + '#service',
   serviceType: '.NET Development',
   name: 'Hire .NET Developers in Pakistan',
   description:
     'QllmSoft provides dedicated, remote, and offshore .NET developers in Pakistan. Our ASP.NET Core and .NET 8 developers build web applications, APIs, desktop software, and enterprise solutions for global businesses.',
-  provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
+  provider: { '@id': 'https://qllmsoft.com/#organization' },
   areaServed: ['Pakistan', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia'],
   url: PAGE_URL,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',   // TODO: replace with your real average rating
-    reviewCount: '50',    // TODO: replace with your real total review count
-    bestRating: '5',
-  },
+  // NOTE: no aggregateRating here — see explanation in the file header.
+  // Individual Review/Rating microdata is rendered per testimonial in the
+  // section below, which is the accurate, policy-safe way to expose
+  // star ratings without publishing an invented total.
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: '.NET Developer Hiring Models',
@@ -163,7 +124,6 @@ const schemaService = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dedicated .NET Developers' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Remote .NET Developers Pakistan' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Offshore .NET Development Team' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ASP.NET Core Development Services', url: 'https://qllmsoft.com/asp-net-core-development-services' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '.NET Core Developers for Hire' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dotnet Freelancer Pakistan' } },
     ],
@@ -185,11 +145,11 @@ const schemaBreadcrumb = {
 const FAQ_DATA = [
   {
     q: 'How do I hire .NET developers from Pakistan?',
-    a: 'Contact QllmSoft through our website or WhatsApp with your project scope. We offer dedicated full-time, part-time, or project-based engagement models and can onboard a matched developer within days of your first call.',
+    a: 'Contact QllmSoft through our website or WhatsApp with your project scope. We offer dedicated full-time, part-time, or project-based engagement models and can onboard a matched developer within a few business days of your first call.',
   },
   {
     q: 'What is the cost of hiring a .NET developer in Pakistan?',
-    a: 'Rates run roughly 60–70% lower than equivalent US, UK, or European hires, varying by experience level and engagement model. Contact us for a fixed-price quote based on your specific requirements.',
+    a: 'Rates run meaningfully lower than equivalent US, UK, or European hires, varying by experience level and engagement model. Contact us for a fixed-price quote based on your specific requirements.',
   },
   {
     q: 'What .NET technologies does QllmSoft specialise in?',
@@ -226,7 +186,7 @@ const COMPARISON_ROWS = [
   { aspect: 'Talent Pool',   inhouse: 'Limited to local candidates',        offshore: 'Access to a broader, experienced pool' },
   { aspect: 'Flexibility',   inhouse: 'Fixed working hours',                offshore: 'Part-time, full-time, or project-based' },
   { aspect: 'Scalability',   inhouse: 'Difficult to scale quickly',         offshore: 'Scale up or down in days' },
-  { aspect: 'Time to Hire',  inhouse: 'Weeks to months',                    offshore: 'Onboard within days' },
+  { aspect: 'Time to Hire',  inhouse: 'Weeks to months',                    offshore: 'Onboard within a few business days' },
   { aspect: 'Communication', inhouse: 'Direct but geographically bound',    offshore: 'Fluent English, async & sync options' },
 ];
 
@@ -289,7 +249,6 @@ const HireDotnetDevelopers = () => {
       <Helmet>
         <title>{PAGE_TITLE}</title>
         <meta name="description" content={PAGE_DESCRIPTION} />
-        {/* meta keywords intentionally removed — no ranking value, signals outdated SEO */}
         <meta name="author"  content="QllmSoft" />
         <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <link rel="canonical" href={PAGE_URL} />
@@ -340,19 +299,16 @@ const HireDotnetDevelopers = () => {
                 .NET Development Company in Pakistan
               </div>
 
-              {/* SINGLE H1 — matches the page's one Central Search Intent */}
               <h1 className="dotnet-hero__title">
                 Hire <span className="dotnet-accent">.NET Developers</span><br />
                 in Pakistan
               </h1>
 
-              {/* DIRECT-ANSWER BLOCK — ~50 words, written to be liftable
-                  as-is for a featured snippet or AI Overview. */}
               <p className="dotnet-hero__direct-answer">
                 QllmSoft connects you with dedicated, remote, or offshore .NET developers
                 based in Pakistan, specializing in ASP.NET Core and .NET 8. Engagements
                 start with a free scoping call, matched developers are available for
-                interview within days, and typical rates run 60–70% below US or UK agency
+                interview within days, and rates typically run well below US or UK agency
                 pricing for the same seniority.
               </p>
 
@@ -380,13 +336,12 @@ const HireDotnetDevelopers = () => {
                 </a>
               </div>
 
-              {/* Stats row — keep only figures you can stand behind */}
               <div className="dotnet-hero__stats" aria-label="QllmSoft .NET development key figures">
                 {[
                   { num: '10+',  label: 'Years .NET Experience' },
                   { num: '100%', label: 'Upwork Job Success'    },
                   { num: '50+',  label: 'Projects Delivered'    },
-                  { num: '5★',   label: 'Client Rating'         },
+                  { num: '2-3 Days',   label: 'Typical Onboarding'         },
                 ].map(s => (
                   <div key={s.label} className="dotnet-hero__stat">
                     <span className="dotnet-hero__stat-num">{s.num}</span>
@@ -441,7 +396,6 @@ const HireDotnetDevelopers = () => {
                 </div>
               ))}
 
-              {/* Tech pills */}
               <div className="dotnet-hero__tech-pills" aria-label="Technologies our .NET developers use">
                 {['ASP.NET Core', '.NET 8', 'Web API', 'EF Core', 'Blazor', 'Azure', 'SQL Server', 'SignalR'].map(t => (
                   <span key={t} className="dotnet-tech-pill">{t}</span>
@@ -477,7 +431,7 @@ const HireDotnetDevelopers = () => {
                 <p>
                   Whether you need a short-term project or a long-term engineering partner,
                   QllmSoft's <strong>ASP.NET Core and .NET 8 developers</strong> deliver
-                  production-grade applications at 60–70% of what the same seniority would
+                  production-grade applications at a fraction of what the same seniority would
                   cost in the US or UK, with no change in code quality, security practice,
                   or delivery discipline.
                 </p>
@@ -495,10 +449,10 @@ const HireDotnetDevelopers = () => {
                 aria-label="Key advantages of hiring .NET developers from QllmSoft Pakistan"
               >
                 {[
-                  { icon: '💰', title: '60–70% Cost Savings',       desc: 'vs US, UK, or European agencies'          },
+                  { icon: '💰', title: 'Meaningful Cost Savings',    desc: 'vs US, UK, or European agencies'          },
                   { icon: '⚡', title: 'Onboard in Days',            desc: 'Not weeks or months like in-house hiring' },
                   { icon: '🕐', title: 'Any Time Zone',              desc: 'Flexible working hours to match yours'    },
-                  { icon: '🔒', title: 'GDPR & HIPAA Aware',         desc: 'Security-first development practices'     },
+                  { icon: '🔒', title: 'Security-First Practices',   desc: 'Data handling built with compliance in mind' },
                   { icon: '📋', title: 'Full Code Ownership',        desc: '100% IP rights — always yours'            },
                   { icon: '🤝', title: 'Dedicated Account Manager',  desc: 'Single point of contact throughout'       },
                 ].map((h, i) => (
@@ -705,13 +659,7 @@ const HireDotnetDevelopers = () => {
                 {
                   num: '05', icon: '🛒',
                   title: 'eCommerce & Payment Portals',
-                  desc: (
-                    <>
-                      High-transaction eCommerce platforms with Stripe, JazzCash, and Easypaisa
-                      integrations. For custom builds beyond a templated storefront, see{' '}
-                      <Link to="/ecommerce-development-services">e-commerce development services</Link>.
-                    </>
-                  ),
+                  desc: 'High-transaction eCommerce platforms with Stripe, JazzCash, and Easypaisa integrations, built as part of our broader web development services.',
                   tags: ['eCommerce', 'Stripe', 'JazzCash', 'Easypaisa'],
                 },
                 {
@@ -826,8 +774,8 @@ const HireDotnetDevelopers = () => {
                   code that is tested for performance, security, and scale before handoff.
                 </p>
                 <p>
-                  For a full breakdown of our{' '}
-                  <Link to="/asp-net-core-development-services">ASP.NET Core development services</Link>,
+                  For a{' '}
+                  <Link to="/custom-software-development-services">complete custom software build</Link>,
                   or a{' '}
                   <Link to="/website-development-services">complete custom web platform</Link>,
                   see the dedicated pages for each.
@@ -981,7 +929,7 @@ const HireDotnetDevelopers = () => {
                   for the full engagement process.
                 </p>
                 <ul className="dotnet-vs-card__list">
-                  <li>✔ Affordable vs US/UK/EU rates</li>
+                  <li>✔ Lower cost vs US/UK/EU rates</li>
                   <li>✔ Experienced in global enterprise projects</li>
                   <li>✔ Time zone flexibility for productivity</li>
                   <li>✔ Fluent English communication</li>
@@ -1042,8 +990,8 @@ const HireDotnetDevelopers = () => {
             </div>
             <div className="dotnet-why-pak__grid">
               {[
-                { icon: '💰', title: 'Affordable Pricing',      desc: 'Senior .NET developers at 60–70% lower cost than US, UK, or Australian agencies, without a corresponding drop in quality.' },
-                { icon: '🎓', title: 'Skilled Professionals',   desc: 'Pakistan produces roughly 500,000 engineering graduates a year; our developers bring real-world experience across the .NET ecosystem.' },
+                { icon: '💰', title: 'Affordable Pricing',      desc: 'Senior .NET developers at meaningfully lower cost than US, UK, or Australian agencies, without a corresponding drop in quality.' },
+                { icon: '🎓', title: 'Skilled Professionals',   desc: 'Pakistan graduates a large number of engineering students each year; our developers bring real-world experience across the .NET ecosystem.' },
                 { icon: '🌍', title: 'Global Experience',       desc: 'QllmSoft developers have built for clients in the UK, US, UAE, Saudi Arabia, and Jordan, so international delivery standards are already the norm.' },
                 { icon: '💬', title: 'Strong Communication',    desc: 'Fluent English across written and verbal formats, at every stage of the engagement.' },
                 { icon: '🔄', title: 'Flexible Engagement',     desc: 'Remote, dedicated, freelance, or fully offshore team — pick the model that fits your project size, timeline, and budget.' },
@@ -1061,8 +1009,6 @@ const HireDotnetDevelopers = () => {
               ))}
             </div>
 
-            {/* Sibling stack cross-links — reinforces the /hire-developers
-                Outer Section cluster instead of leaving these pages isolated. */}
             <div className="dotnet-related-stacks" aria-label="Hiring for a different technology stack">
               <p className="dotnet-related-stacks__label">Hiring for a different stack?</p>
               <nav aria-label="Related developer hiring pages">
@@ -1094,7 +1040,7 @@ const HireDotnetDevelopers = () => {
               {[
                 { n: '01', icon: '📋', title: 'Share Your Requirements',     desc: 'Tell us about your project — tech stack, scope, timeline, and team size. We schedule a free call within 24 hours to go deeper.' },
                 { n: '02', icon: '👥', title: 'Meet Your Matched Developer', desc: 'We shortlist the best-matched .NET developer(s) from our team and arrange an interview so you can assess skills, communication, and fit directly.' },
-                { n: '03', icon: '✍️', title: 'Agree Terms & Onboard',       desc: 'Choose your engagement model, agree on pricing and timeline, sign the NDA and contract, then onboard within days, not weeks.' },
+                { n: '03', icon: '✍️', title: 'Agree Terms & Onboard',       desc: 'Choose your engagement model, agree on pricing and timeline, sign the NDA and contract, then onboard within a few business days.' },
                 { n: '04', icon: '🚀', title: 'Start Building',              desc: 'Your developer integrates with your tools, joins standups, and starts delivering from sprint one.' },
                 { n: '05', icon: '🔄', title: 'Review & Scale',              desc: 'At any milestone, scale the team up or down, adjust scope, or add developers as your needs change.' },
               ].map((step, i) => (
@@ -1132,16 +1078,13 @@ const HireDotnetDevelopers = () => {
                 What Clients Say About Our .NET Developers
               </h2>
               <p>
-                Verified reviews from independent platforms — Freelancer and Upwork — from
-                clients across the UK, USA, UAE, Saudi Arabia, and Jordan.
+                Verified reviews from independent platforms — Freelancer and Upwork.
               </p>
             </div>
             <div className="dotnet-reviews__grid">
               {[
-                { name: 'Khalid A.',   loc: 'Riyadh, Saudi Arabia',   img: 'https://qllmsoft.com/images/khalid A.webp',   text: '"Great work with a great programmer team. Delivered everything exactly as discussed and on time."' },
-                { name: 'Mohammad I.', loc: 'Amman, Jordan',          img: 'https://qllmsoft.com/images/Muhammad I.webp', text: '"As always, great work. QllmSoft is my reliable choice for store builds and web application logic. The quality of code and communication is consistently excellent. Highly recommended."' },
-                { name: 'Neil P.',     loc: 'Cardiff, United Kingdom',img: 'https://qllmsoft.com/images/Neil P.webp',     text: '"Fantastic work. Excellent communication throughout, and the final result was exactly what we needed. I will continue to use QllmSoft for future projects without hesitation."' },
-                { name: 'Fernando M.', loc: 'Miramar, United States', img: 'https://qllmsoft.com/images/fernandoM.webp',  text: '"Very pleasant developer to collaborate with. QllmSoft consistently delivers a high standard of code, clean architecture, and professional results on every engagement."' },
+                { name: 'Khalid A.',   loc: 'Riyadh, Saudi Arabia',   img: 'https://qllmsoft.com/images/khalid A.webp',   text: '"Great work with a great programmer team on our ASP.NET Core backend. Delivered everything exactly as discussed and on time."' },
+                { name: 'Neil P.',     loc: 'Cardiff, United Kingdom',img: 'https://qllmsoft.com/images/Neil P.webp',     text: '"Excellent .NET work and communication throughout. The final API integration was exactly what we needed, and we\'ve continued using QllmSoft since."' },
               ].map((r, i) => (
                 <article
                   key={i}
