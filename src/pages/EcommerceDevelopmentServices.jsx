@@ -9,13 +9,25 @@
  * - shopify-isnt-scaling-what-companies-do-next
  * - custom-vs-saas-ecommerce-for-growing-smbs
  *
- * KORAY FRAMEWORK & TOPICAL AUTHORITY NOTES:
- *  - Central Search Intent: High-growth businesses seeking custom e-commerce
- *    engineering to bypass monolithic SaaS (Shopify/WooCommerce) limits.
- *  - Semantic Depth: Incorporates technical entities like headless setups,
- *    ERP middleware sync, custom pricing matrices, and event-driven architecture.
- *  - Clear macro (H1) -> micro-topic (H2) direct answers before deep elaboration.
- * ───────────────────────────────────────────────────────────── */
+ * RE-OPTIMIZATION NOTES:
+ *  - Removed the fabricated Service-level AggregateRating (5.0★ / 50
+ *    reviews, hardcoded with no source). Unverifiable review counts are
+ *    a direct Google structured-data policy violation and risk a manual
+ *    action — remove until you have a real, attributable review feed.
+ *  - Linked Service → Organization via @id instead of duplicating the
+ *    Organization block, and added a Service @id so WebPage can
+ *    reference it directly.
+ *  - IMPORTANT — FLAGGED, NOT CHANGED: both hero and process images are
+ *    hotlinked directly from images.unsplash.com. That's worth fixing
+ *    before this page competes for a #1 ranking: (1) generic stock
+ *    photos of an unrelated dashboard don't support the "real product,
+ *    real expertise" signal Google's quality raters look for on
+ *    commercial pages; (2) hotlinking someone else's CDN is a page-speed
+ *    and reliability risk outside your control; (3) Unsplash's API terms
+ *    require attribution you're not currently providing. Recommend
+ *    swapping these for actual project screenshots (as the other
+ *    industry pages do) and self-hosting them.
+ */
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -26,27 +38,15 @@ const PAGE_URL = 'https://qllmsoft.com/ecommerce-development-services';
 const OG_IMAGE = 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg';
 const PAGE_TITLE = 'Custom E-Commerce Development Services | Enterprise Scale | QllmSoft';
 const PAGE_DESCRIPTION =
-  'Bypass SaaS platform limits with custom e-commerce development. We build scalable headless stores, complex ERP/WMS inventory integrations, and bespoke checkouts.';
+  'Bypass SaaS platform limits with custom e-commerce development. We build scalable headless stores, ERP/WMS inventory integrations, and bespoke checkouts.';
 
 const DATE_PUBLISHED = '2026-07-19';
-const DATE_MODIFIED  = '2026-07-19';
-
-const schemaWebPage = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': PAGE_URL,
-  url: PAGE_URL,
-  name: PAGE_TITLE,
-  description: PAGE_DESCRIPTION,
-  inLanguage: 'en-US',
-  isPartOf: { '@type': 'WebSite', name: 'QllmSoft', url: 'https://qllmsoft.com' },
-  datePublished: DATE_PUBLISHED,
-  dateModified: DATE_MODIFIED,
-};
+const DATE_MODIFIED  = '2026-08-15';
 
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
+  '@id': 'https://qllmsoft.com/#organization',
   name: 'QllmSoft',
   url: 'https://qllmsoft.com',
   logo: 'https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp',
@@ -62,26 +62,23 @@ const schemaOrg = {
 const schemaService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': PAGE_URL + '#service',
   serviceType: 'E-Commerce Development',
   name: 'Custom E-Commerce Development Services',
   description:
-    'QllmSoft engineers bespoke e-commerce ecosystems for enterprises and scaling SMBs outgrowing templated SaaS restrictions, featuring real-time ERP sync and custom checkout pipelines.',
-  provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
+    'QllmSoft builds custom e-commerce platforms for businesses outgrowing templated SaaS restrictions, with real-time ERP sync and custom checkout logic.',
+  provider: { '@id': 'https://qllmsoft.com/#organization' },
   areaServed: ['Pakistan', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia'],
   url: PAGE_URL,
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '50',
-    bestRating: '5',
-  },
+  // NOTE: no aggregateRating here — see file header. Don't reintroduce a
+  // hardcoded rating/review count without a live, attributable source.
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Enterprise E-Commerce Engineering Offerings',
+    name: 'E-Commerce Engineering Offerings',
     itemListElement: [
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Headless & Custom E-Commerce Architecture' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Shopify & WooCommerce Enterprise Migration' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Multi-Gateway Payment Pipeline Integration' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Shopify & WooCommerce Migration' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Multi-Gateway Payment Integration' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ERP, WMS, and Inventory Middleware Sync' } },
     ],
   },
@@ -97,30 +94,44 @@ const schemaBreadcrumb = {
   ],
 };
 
+const schemaWebPage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': PAGE_URL + '#webpage',
+  url: PAGE_URL,
+  name: PAGE_TITLE,
+  description: PAGE_DESCRIPTION,
+  inLanguage: 'en-US',
+  isPartOf: { '@id': 'https://qllmsoft.com/#website' },
+  about: { '@id': PAGE_URL + '#service' },
+  datePublished: DATE_PUBLISHED,
+  dateModified: DATE_MODIFIED,
+};
+
 const FAQ_DATA = [
   {
-    q: "What defines the technical tipping point between a SaaS store and custom e-commerce?",
-    a: 'The tipping point occurs when business logic, data structures, or transaction volume exceed what a multi-tenant SaaS schema can support. This includes needing custom multi-tier B2B pricing grids, real-time inventory allocation across disparate warehouses, sub-second headless load performance under heavy traffic, or avoiding steep platform revenue cuts at scale.',
+    q: 'What defines the tipping point between a SaaS store and custom e-commerce?',
+    a: 'The tipping point is usually when your business logic, data structure, or transaction volume outgrows what a multi-tenant SaaS schema supports — things like custom multi-tier B2B pricing, real-time inventory allocation across separate warehouses, or hitting a plugin\'s rate limits during peak traffic.',
   },
   {
-    q: 'How does custom e-commerce handle enterprise ERP and inventory synchronization?',
-    a: 'Unlike rigid plugin connectors that frequently break or timeout, custom builds use event-driven microservices or robust middleware layers (such as custom Node.js/Python APIs). This guarantees real-time bi-directional sync with systems like SAP, Oracle NetSuite, Microsoft Dynamics, or local warehouse management systems without bottlenecking storefront rendering speed.',
+    q: 'How does custom e-commerce handle ERP and inventory synchronization?',
+    a: 'Instead of relying on plugin connectors that time out or lose sync under load, custom builds use dedicated APIs or a lightweight middleware layer to keep inventory synced with systems like SAP, NetSuite, Microsoft Dynamics, or a local warehouse management system, without slowing down the storefront.',
   },
   {
-    q: 'What is the migration process from Shopify or WooCommerce to a custom platform?',
-    a: 'Our migration framework follows a zero-downtime transition strategy. We map and sanitize historical databases (customers, orders, product variants), implement 301 redirect architectures to protect your exact SEO equity, and execute staged data delta syncs before cutting over live traffic to your new infrastructure.',
+    q: 'What does migrating from Shopify or WooCommerce to a custom platform look like?',
+    a: 'We map and clean up the historical data (customers, orders, product variants), set up 301 redirects to protect existing SEO rankings, and run the new platform alongside the old one with staged data syncs before cutting over live traffic.',
   },
   {
-    q: 'Are custom e-commerce platforms secure and compliant with global payment standards?',
-    a: 'Yes. Every custom build is architected to align with OWASP security guidelines, incorporates role-based access control (RBAC), tokenized user data encryption, and complies with PCI-DSS requirements by leveraging secure iframe/tokenization gateways like Stripe, PayPal, and regional providers.',
+    q: 'Are custom e-commerce platforms secure and compliant with payment standards?',
+    a: 'Yes. Builds follow OWASP security practices, use role-based access control, and rely on tokenized, PCI-DSS-aligned payment gateways like Stripe and PayPal rather than handling raw card data directly.',
   },
   {
-    q: 'How much does custom e-commerce development cost relative to SaaS subscription fees?',
-    a: 'While SaaS platforms look inexpensive initially, hidden costs pile up through high-tier app subscription fees, developer overrides, transaction penalties, and revenue caps. Custom development requires an initial capital investment for a bespoke build you own outright, eliminating long-term platform taxes and delivering higher operational ROI as revenue scales.',
+    q: 'How does custom e-commerce cost compare to SaaS subscription fees?',
+    a: 'SaaS platforms look cheaper upfront, but app subscriptions, transaction fees, and revenue-based pricing tiers add up as you scale. Custom development is a larger upfront investment in a platform you own outright, which tends to pay off once volume grows past what a SaaS plans economics were built for.',
   },
   {
-    q: 'Do you provide ongoing engineering support and scaling maintenance post-launch?',
-    a: 'Yes. We provide continuous maintenance SLAs covering proactive security patching, infrastructure load scaling, performance optimization (Core Web Vitals tuning), and iterative feature rollouts as your product catalog expands.',
+    q: 'Do you provide ongoing support after launch?',
+    a: 'Yes. We offer maintenance covering security patching, load scaling, Core Web Vitals tuning, and feature work as your catalog and traffic grow.',
   },
 ];
 
@@ -135,20 +146,20 @@ const schemaFAQ = {
 };
 
 const COMPARISON_ROWS = [
-  { aspect: 'Checkout & Logic Control', saas: 'Locked into rigid, vendor-defined scripts and rigid funnel parameters.', custom: 'Completely bespoke funnel workflows, custom tax rules, and dynamic checkout validation.' },
-  { aspect: 'ERP & System Integration', saas: 'Dependent on brittle third-party apps prone to API rate limits and sync failures.', custom: 'Direct, native API bridges engineered specifically for your enterprise ERP, WMS, or CRM.' },
-  { aspect: 'Cost Efficiency at Scale', saas: 'Escalating monthly subscription fees and extra transaction cuts on top of gateway charges.', custom: 'Zero platform revenue cuts; you pay only infrastructure hosting and direct payment processor fees.' },
-  { aspect: 'Performance & Speed', saas: 'Bloated scripts from third-party plugins degrade Core Web Vitals and conversion rates.', custom: 'Optimized headless or monolithic codebases delivering instant page transitions and high Lighthouse scores.' },
-  { aspect: 'Data & Code Ownership', saas: 'You lease space on a shared multi-tenant database. If you leave, you rebuild.', custom: 'You hold 100% ownership of your source code, database entities, and customer asset repositories.' },
+  { aspect: 'Checkout & Logic Control', saas: 'Locked into vendor-defined scripts and rigid funnel parameters.', custom: 'Custom checkout logic, tax rules, and validation built around your actual process.' },
+  { aspect: 'ERP & System Integration', saas: 'Dependent on third-party apps prone to rate limits and sync failures.', custom: 'Direct API integration built specifically for your ERP, WMS, or CRM.' },
+  { aspect: 'Cost at Scale', saas: 'Monthly subscription fees plus transaction cuts on top of gateway charges.', custom: 'No platform revenue cut — you pay hosting and payment processor fees only.' },
+  { aspect: 'Performance & Speed', saas: 'Third-party plugin scripts often drag down Core Web Vitals.', custom: 'A codebase built and measured for speed from the start.' },
+  { aspect: 'Data & Code Ownership', saas: 'You rent space in a shared, multi-tenant database.', custom: 'You own the source code, database, and customer data outright.' },
 ];
 
 const CAPABILITIES = [
-  { icon: '⚡', title: 'Headless & Custom Storefronts', desc: 'Decoupled frontends built with modern frameworks (React/Next.js) connected to high-performance e-commerce engines for lightning-fast user experiences.' },
-  { icon: '💳', title: 'Multi-Gateway Payment Pipelines', desc: 'Secure orchestration layer handling global providers (Stripe, PayPal) alongside regional solutions (JazzCash, Easypaisa) with strict tokenization.' },
-  { icon: '🔄', title: 'Enterprise ERP & WMS Middleware', desc: 'Real-time automated sync linking your online storefront directly with warehouse inventory levels, accounting systems, and fulfillment logs.' },
-  { icon: '🛡️', title: 'OWASP-Aligned Security Architecture', desc: 'Advanced defense-in-depth strategies, robust database encryption, and rigorous access controls safeguarding sensitive consumer transaction data.' },
-  { icon: '📈', title: 'High-Concurrency Elastic Scaling', desc: 'Cloud-native infrastructure configured to scale dynamically during flash sales, holiday peaks, and heavy traffic events without service latency.' },
-  { icon: '🔁', title: 'Seamless Platform Migration', desc: 'Meticulous data mapping moving historical customer records, active orders, and search authority metrics from Shopify or WooCommerce without ranking drops.' },
+  { icon: '⚡', title: 'Headless & Custom Storefronts', desc: 'Decoupled frontends built with modern frameworks (React/Next.js) connected to a fast commerce backend.' },
+  { icon: '💳', title: 'Multi-Gateway Payment Integration', desc: 'Global providers (Stripe, PayPal) alongside regional options (JazzCash, Easypaisa) with tokenized, PCI-aligned handling.' },
+  { icon: '🔄', title: 'ERP & WMS Middleware', desc: 'Automated sync linking your storefront to warehouse inventory, accounting, and fulfillment.' },
+  { icon: '🛡️', title: 'OWASP-Aligned Security', desc: 'Defense-in-depth practices, database encryption, and access controls protecting transaction data.' },
+  { icon: '📈', title: 'Elastic Scaling for Peak Traffic', desc: 'Cloud infrastructure configured to handle flash sales and holiday peaks without slowdown.' },
+  { icon: '🔁', title: 'Platform Migration', desc: 'Careful data mapping of customer records, orders, and SEO signals when moving off Shopify or WooCommerce.' },
 ];
 
 const EcommerceDevelopmentServices = () => {
@@ -192,7 +203,7 @@ const EcommerceDevelopmentServices = () => {
               <div className="ecom-hero__content">
                 <div className="ecom-hero__badge">
                   <span className="ecom-hero__badge-dot" aria-hidden="true" />
-                  Enterprise & High-Growth Custom E-Commerce Engineering
+                  Custom E-Commerce Engineering for Growing & Enterprise Businesses
                 </div>
 
                 <h1 className="ecom-hero__title">
@@ -200,7 +211,11 @@ const EcommerceDevelopmentServices = () => {
                 </h1>
 
                 <p className="ecom-hero__direct-answer">
-                  QllmSoft engineers high-performance custom e-commerce platforms for growing businesses and enterprises that have outgrown the rigid constraints of Shopify, WooCommerce, or standard SaaS stores. We eliminate architectural ceilings by building scalable web applications featuring custom checkout logic, deep ERP/WMS synchronization, and clean database ownership designed for long-term operational velocity.
+                  QllmSoft builds custom e-commerce platforms for businesses
+                  that have outgrown the limits of Shopify, WooCommerce, or a
+                  standard SaaS store. We build custom checkout logic, real
+                  ERP/WMS synchronization, and a platform you own outright,
+                  instead of one you rent.
                 </p>
 
                 <div className="ecom-hero__buttons">
@@ -226,9 +241,11 @@ const EcommerceDevelopmentServices = () => {
                   <span className="browser-title">Ecommerce Development Services by QllmSoft</span>
                 </div>
                 <div className="ecom-hero-image-wrapper">
+                  {/* TODO: replace with a real QllmSoft project screenshot —
+                      see file header note on stock imagery. */}
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                    alt="Headless e-commerce architecture dashboard displaying real-time multi-warehouse inventory sync and API performance metrics"
+                    alt="E-commerce admin dashboard showing order and inventory data"
                     className="ecom-hero__image"
                     width="600"
                     height="450"
@@ -237,8 +254,8 @@ const EcommerceDevelopmentServices = () => {
                   <div className="ecom-hero-floating-badge">
                     <span className="icon">⚡</span>
                     <div>
-                      <strong>Sub-Second Latency</strong>
-                      <small>Enterprise Headless API</small>
+                      <strong>Built for Speed</strong>
+                      <small>Custom Headless Architecture</small>
                     </div>
                   </div>
                 </div>
@@ -250,21 +267,23 @@ const EcommerceDevelopmentServices = () => {
         {/* WHEN TO GO CUSTOM / COMPARISON */}
         <section className="section ecom-when" aria-labelledby="when-heading">
           <div className="container">
-            <p className="section-eyebrow">Architectural Evaluation</p>
+            <p className="section-eyebrow">When to Consider Custom</p>
             <div className="section-title">
-              <h2 id="when-heading">When Does an Online Business Need to Transition Beyond SaaS?</h2>
+              <h2 id="when-heading">When Does an Online Business Need to Move Beyond SaaS?</h2>
               <p>
-                Monolithic SaaS platforms serve early-stage retail well, but scaling organizations routinely encounter infrastructure walls that stall growth and bloat operational overhead.
+                SaaS platforms work well for early-stage stores, but growing
+                businesses regularly hit limits that SaaS wasn't built to
+                solve.
               </p>
             </div>
             <div className="ecom-table-wrap">
               <table className="ecom-table" aria-label="Comparison of SaaS e-commerce platforms vs. custom-built e-commerce solutions">
-                <caption className="ecom-table__caption">Monolithic SaaS vs. Custom Engineering Comparison Matrix</caption>
+                <caption className="ecom-table__caption">SaaS vs. Custom E-Commerce — What Actually Changes</caption>
                 <thead>
                   <tr>
-                    <th scope="col">Evaluation Factor</th>
+                    <th scope="col">Factor</th>
                     <th scope="col">Templated SaaS (Shopify/WooCommerce)</th>
-                    <th scope="col" className="ecom-col--highlight">QllmSoft Custom Engineering</th>
+                    <th scope="col" className="ecom-col--highlight">QllmSoft Custom Build</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -279,10 +298,10 @@ const EcommerceDevelopmentServices = () => {
               </table>
             </div>
             <p className="ecom-when__note">
-              Related strategic insights: {' '}
+              Related reading: {' '}
               <a href="/blog/shopify-isnt-scaling-what-companies-do-next">Shopify isn't scaling — what companies do next</a>,{' '}
               <a href="/blog/custom-vs-saas-ecommerce-for-growing-smbs">custom vs. SaaS e-commerce for growing SMBs</a>, and {' '}
-              <a href="/blog/scalable-ecommerce-development-for-smbs">scalable e-commerce development frameworks</a>.
+              <a href="/blog/scalable-ecommerce-development-for-smbs">scalable e-commerce development for SMBs</a>.
             </p>
           </div>
         </section>
@@ -292,8 +311,8 @@ const EcommerceDevelopmentServices = () => {
           <div className="container">
             <p className="section-eyebrow">Core Engineering Capabilities</p>
             <div className="section-title">
-              <h2 id="capabilities-heading">Customized Solutions Built For Complex Workflows</h2>
-              <p>We craft every layer of your digital commerce infrastructure around your exact business model, inventory tracking rules, and operational layout.</p>
+              <h2 id="capabilities-heading">Built Around Your Actual Workflows</h2>
+              <p>We build every layer of your commerce infrastructure around your specific business model and inventory rules — not a generic template.</p>
             </div>
             <div className="ecom-capabilities__grid">
               {CAPABILITIES.map((c, i) => (
@@ -311,10 +330,10 @@ const EcommerceDevelopmentServices = () => {
         <section className="section ecom-process" aria-labelledby="process-heading">
           <div className="container">
             <div className="section-header-centered">
-              <p className="section-eyebrow">Methodology</p>
+              <p className="section-eyebrow">How We Work</p>
               <div className="section-title">
-                <h2 id="process-heading">Our Enterprise Development Lifecycle</h2>
-                <p>A rigorous, phase-gated engineering roadmap designed to mitigate migration risks and guarantee platform stability.</p>
+                <h2 id="process-heading">Our Development Process</h2>
+                <p>A phased approach built to reduce migration risk and keep the platform stable at each step.</p>
               </div>
             </div>
 
@@ -322,11 +341,11 @@ const EcommerceDevelopmentServices = () => {
               <div className="ecom-process__steps-wrapper">
                 <ol className="ecom-process__steps" aria-label="QllmSoft e-commerce development process">
                   {[
-                    { n: '01', title: 'Technical Discovery & Scoping', desc: 'Deep analysis of current data structures, ERP endpoints, SKU variations, and workflow pain points to define clear architectural requirements.' },
-                    { n: '02', title: 'System Architecture & UX Design', desc: 'Designing high-performance database models, headless frontend components, and user funnels tailored to maximize transaction conversion.' },
-                    { n: '03', title: 'Iterative Sprint Engineering', desc: 'Incremental code sprints implementing core commerce features, payment gateway hooks, and automated inventory sync routines with rigorous test coverage.' },
-                    { n: '04', title: 'Data Migration & SEO Preservation', desc: 'Executing secure historical database transfers (users, product catalogs, order histories) alongside comprehensive 301 redirection maps to safeguard organic visibility.' },
-                    { n: '05', title: 'Deployment, Monitoring & SLAs', desc: 'Staged production rollout backed by uptime monitoring, automated error tracking, and ongoing maintenance support contracts.' },
+                    { n: '01', title: 'Technical Discovery & Scoping', desc: 'We review your current data, ERP endpoints, SKU structure, and workflow pain points to define clear architecture requirements.' },
+                    { n: '02', title: 'System Architecture & UX Design', desc: 'Database models, storefront components, and user flows designed around conversion, not just aesthetics.' },
+                    { n: '03', title: 'Iterative Sprint Engineering', desc: 'Two-week sprints building core commerce features, payment integration, and inventory sync, with test coverage on each.' },
+                    { n: '04', title: 'Data Migration & SEO Preservation', desc: 'Historical data transfer (users, catalog, order history) with 301 redirect mapping to protect existing organic rankings.' },
+                    { n: '05', title: 'Deployment, Monitoring & Support', desc: 'Staged rollout with uptime monitoring, error tracking, and an ongoing maintenance option.' },
                   ].map((step, i) => (
                     <li key={i} className="ecom-process__step">
                       <span className="ecom-process__step-num" aria-label={`Step ${step.n}`}>{step.n}</span>
@@ -342,9 +361,11 @@ const EcommerceDevelopmentServices = () => {
               <div className="ecom-process__sidebar">
                 <div className="ecom-process__visual-card">
                   <div className="ecom-process-image-container">
+                    {/* TODO: replace with a real migration/architecture
+                        diagram from an actual project — see file header. */}
                     <img
                       src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1000&q=80"
-                      alt="Enterprise e-commerce migration workflow diagram illustrating secure ERP database mapping and zero-downtime deployment pipelines"
+                      alt="Data migration and deployment workflow illustration"
                       className="ecom-process__image"
                       width="500"
                       height="600"
@@ -353,7 +374,7 @@ const EcommerceDevelopmentServices = () => {
                   </div>
                   <div className="ecom-process__image-caption">
                     <span>🔒 Zero-Downtime Migration</span>
-                    <p>Guaranteed retention of historical records, customer databases, and organic SEO authority matrices.</p>
+                    <p>Historical records, customer data, and SEO equity carried over intact.</p>
                   </div>
                 </div>
               </div>
@@ -371,7 +392,7 @@ const EcommerceDevelopmentServices = () => {
               <Link to="/api-development-services">API Development Services</Link>
             </nav>
             <p className="ecom-related__note">
-              Explore our core competencies or return to the <Link to="/">homepage</Link> to review our master engineering portfolio.
+              Explore our core services or return to the <Link to="/">homepage</Link>.
             </p>
           </div>
         </section>
@@ -379,7 +400,7 @@ const EcommerceDevelopmentServices = () => {
         {/* FAQ SECTION */}
         <section className="section ecom-faq" aria-labelledby="faq-heading" itemScope itemType="https://schema.org/FAQPage">
           <div className="container">
-            <p className="section-eyebrow">Technical Inquiries</p>
+            <p className="section-eyebrow">Technical Questions</p>
             <div className="section-title">
               <h2 id="faq-heading">Frequently Asked Questions</h2>
             </div>
@@ -399,8 +420,8 @@ const EcommerceDevelopmentServices = () => {
         {/* FINAL CTA SECTION */}
         <section className="section ecom-cta" aria-labelledby="cta-heading">
           <div className="container ecom-cta__inner">
-            <h2 id="cta-heading">Ready to Engineer Beyond SaaS Limitations?</h2>
-            <p>Connect with our engineering team to review your scaling challenges and map out a bulletproof custom e-commerce solution.</p>
+            <h2 id="cta-heading">Ready to Move Beyond SaaS Limits?</h2>
+            <p>Talk to our engineering team about your scaling challenges and what a custom build would actually look like.</p>
             <div className="ecom-cta__buttons">
               <Link to="/contact" className="btn btn-primary" aria-label="Contact QllmSoft about a custom e-commerce build">
                 Schedule a Technical Consultation
