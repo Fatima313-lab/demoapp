@@ -20,6 +20,15 @@ import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import './DedicatedTeamsPage.css';
 import 'animate.css';
+
+/* ─── Local, self-hosted images (replaces hotlinked trio.dev /
+   hyscaler.com / intellipaat.com URLs — protects Core Web Vitals,
+   avoids "low-effort/non-original content" flags, and removes the
+   risk of a broken <img> if the source domain ever pulls the file).
+   Drop the matching files into src/assets/ before shipping. ─────── */
+import heroTeamImg from '../assets/dedicated-team-hero.webp';
+import cloudArchitectureImg from '../assets/cloud-native-architecture.webp';
+import agileWorkflowImg from '../assets/agile-delivery-workflow.webp';
  
 /* ─── Page constants ──────────────────────────────────────── */
 const PAGE_URL = 'https://qllmsoft.com/remote-dedicated-development-teams';
@@ -53,10 +62,10 @@ const schemaOrg = {
 const schemaService = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Remote Dedicated Development Teams',
-  name: 'Remote Dedicated Development Teams | QllmSoft Pakistan',
+  serviceType: 'Software Development Services',
+  name: 'Software Development Services — Dedicated Remote Teams | QllmSoft',
   description:
-    'QllmSoft provides remote dedicated engineering teams for startups and enterprises worldwide. Scale your engineering capacity on demand with pre-vetted developers specializing in .NET, React, Azure, AI, and DevOps.',
+    'End-to-end software development services delivered by dedicated remote teams: architecture, engineering, QA and DevOps for startups and enterprises.',
   provider: { '@type': 'Organization', name: 'QllmSoft', url: 'https://qllmsoft.com' },
   areaServed: ['Pakistan', 'United States', 'United Kingdom', 'UAE', 'Saudi Arabia'],
   url: PAGE_URL,
@@ -64,7 +73,9 @@ const schemaService = {
     '@type': 'Offer',
     priceCurrency: 'USD',
     price: '1000',
-    description: 'Dedicated development team engagements starting from $1,000/month',
+    priceValidUntil: '2027-01-01',
+    availability: 'https://schema.org/InStock',
+    description: 'Dedicated software development team engagements starting from $1,000/month',
   },
 };
  
@@ -82,20 +93,20 @@ const schemaBreadcrumb = {
 /* ─── FAQ data (drives both UI + JSON-LD) ─────────────────── */
 const FAQ_DATA = [
   {
-    q: 'How does QllmSoft handle time-zone differences with remote dedicated teams?',
-    a: 'We utilize a follow-the-sun support model, ensuring our workflows overlap with your team\'s core working hours for real-time collaboration, while utilizing the remaining hours for continuous, uninterrupted development. Most of our clients in the US, UK, and Gulf have found this model highly effective.',
+    q: "What is included in QllmSoft's software development services?",
+    a: 'Our software development services cover discovery and architecture, full-stack engineering in .NET, React and Node, QA, DevOps/CI-CD, and post-launch support — delivered by a dedicated team assigned solely to your project, not shared across clients.',
   },
   {
-    q: 'Can QllmSoft\'s dedicated team work alongside my existing in-house developers?',
-    a: 'Absolutely. Our dedicated teams are designed to function as a seamless extension of your existing setup. We integrate with your project management tools, code repositories, and communication channels to fill specific skill gaps or augment capacity without disrupting your internal dynamics.',
+    q: 'How is a dedicated team different from project-based outsourcing?',
+    a: 'Project-based outsourcing hands you a finished deliverable; a dedicated team is embedded in your workflow long-term, joins your standups, uses your tools, and adapts scope as your product evolves — closer to an in-house extension than a vendor.',
   },
   {
-    q: 'What does a remote dedicated development team from QllmSoft include?',
-    a: 'A dedicated team typically includes senior software engineers, a project manager, a QA specialist, and a UI/UX designer depending on your project scope. Every team is assembled specifically around your technical requirements and product goals, not generic role templates.',
+    q: 'Can a dedicated team work alongside our existing developers?',
+    a: 'Yes. We integrate with your repos, PM tools, and communication channels, and scope the engagement around specific skill gaps — backend, DevOps, AI features — rather than replacing your internal team.',
   },
   {
-    q: 'How quickly can a dedicated development team be onboarded?',
-    a: 'Our pre-vetted engineers are ready to integrate into your stack from Day 1. Following an initial discovery call and NDA signing, we typically have a team operational within 3 to 5 business days — significantly faster than traditional recruitment processes.',
+    q: 'How fast can a team be onboarded?',
+    a: 'After a discovery call and NDA, we typically have engineers operational within 3–5 business days, since our bench is pre-vetted across .NET, React, Azure and AI stacks.',
   },
 ];
  
@@ -165,14 +176,14 @@ const DedicatedTeamsPage = () => {
       ══════════════════════════════════════════════════ */}
       <Helmet>
         {/* ── Primary ───────────────────────────────── */}
-        <title>Remote Dedicated Development Teams | Scale Engineering Capacity | QllmSoft</title>
+        <title>Software Development Services with Dedicated Remote Teams | QllmSoft</title>
         <meta
           name="description"
-          content="QllmSoft provides remote dedicated development teams for startups and enterprises. Scale your engineering capacity on demand with pre-vetted .NET, React, Azure, and AI specialists from Pakistan — serving clients in the US, UK, UAE, and globally."
+          content="QllmSoft delivers software development services through dedicated remote engineering teams — pre-vetted .NET, React, Azure and AI specialists who integrate into your workflow in 3–5 days. Serving startups and enterprises in the US, UK, UAE and beyond."
         />
         <meta
           name="keywords"
-          content="remote dedicated development team Pakistan, offshore development team Pakistan, dedicated software engineers Pakistan, hire remote developers Pakistan, dedicated .NET developers, dedicated React developers Pakistan, offshore engineering team, remote software team Pakistan"
+          content="software development services, dedicated development team, remote software engineers Pakistan, offshore software development, hire dedicated developers, custom software development services"
         />
         <meta name="author"  content="QllmSoft" />
         <meta name="robots"  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -182,20 +193,20 @@ const DedicatedTeamsPage = () => {
         <meta property="og:type"         content="website" />
         <meta property="og:url"          content={PAGE_URL} />
         <meta property="og:site_name"    content="QllmSoft" />
-        <meta property="og:title"        content="Remote Dedicated Development Teams | QllmSoft Pakistan" />
-        <meta property="og:description"  content="Scale your engineering capacity on demand with QllmSoft's remote dedicated development teams. Pre-vetted engineers who integrate into your stack from Day 1." />
+        <meta property="og:title"        content="Software Development Services with Dedicated Remote Teams | QllmSoft" />
+        <meta property="og:description"  content="QllmSoft delivers software development services through dedicated remote engineering teams — pre-vetted .NET, React, Azure and AI specialists who integrate into your workflow in 3–5 days." />
         <meta property="og:image"        content={OG_IMAGE} />
         <meta property="og:image:width"  content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt"    content="QllmSoft — Remote Dedicated Development Teams Pakistan" />
+        <meta property="og:image:alt"    content="QllmSoft — Software Development Services with Dedicated Remote Teams" />
         <meta property="og:locale"       content="en_US" />
  
         {/* ── Twitter Card ──────────────────────────── */}
         <meta name="twitter:card"        content="summary_large_image" />
-        <meta name="twitter:title"       content="Remote Dedicated Development Teams | QllmSoft Pakistan" />
-        <meta name="twitter:description" content="Scale your engineering capacity with QllmSoft's remote dedicated development teams — pre-vetted engineers, Day 1 integration, follow-the-sun support." />
+        <meta name="twitter:title"       content="Software Development Services with Dedicated Remote Teams | QllmSoft" />
+        <meta name="twitter:description" content="Pre-vetted .NET, React, Azure and AI specialists who integrate into your workflow in 3–5 days — QllmSoft's dedicated remote development teams." />
         <meta name="twitter:image"       content={OG_IMAGE} />
-        <meta name="twitter:image:alt"   content="QllmSoft — Remote Dedicated Development Teams Pakistan" />
+        <meta name="twitter:image:alt"   content="QllmSoft — Software Development Services with Dedicated Remote Teams" />
  
         {/* ── JSON-LD Structured Data ────────────────── */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
@@ -241,14 +252,18 @@ const DedicatedTeamsPage = () => {
  
             {/* ✅ ONE H1 */}
             <h1 className="dtp-hero__title">
-              Scale Your Engineering<br />
-              Capacity <span className="dtp-gold">On Demand.</span>
+              Software Development Services<br />
+              Delivered by <span className="dtp-gold">Dedicated Teams.</span>
             </h1>
  
             <p className="dtp-hero__sub">
-              Talent scarcity. High operational overhead. Development bottlenecks.
-              A dedicated remote engineering team is the strategic pivot your product needs to stay competitive —
-              serving clients across the US, UK, Europe, and the Gulf from our base in Pakistan.
+              When in-house hiring can't keep pace with your roadmap, a dedicated
+              remote team becomes your software development department — full
+              ownership of architecture, delivery, and quality, without the
+              12-week hiring cycle. QllmSoft has staffed this model for startups
+              and enterprises across the US, UK, Europe, and the Gulf since our
+              founding in Pakistan. Looking for full-scope build vs. run support
+              instead? See our <Link to="/software-development-services">software development services</Link> hub.
             </p>
  
             <div className="dtp-hero__actions">
@@ -282,7 +297,7 @@ const DedicatedTeamsPage = () => {
           <aside className="dtp-hero-image-wrap" aria-label="Remote development team visual">
             <div className="dtp-hero-img-frame">
               <img
-                src="https://www.trio.dev/hubfs/Top%20Collaboration%20Tools%20to%20Streamline%20Software%20Development%20Outsourcing%20%281%29.jpg"
+                src={heroTeamImg}
                 alt="Remote dedicated software development team collaborating on enterprise project — QllmSoft Pakistan"
                 loading="eager"
                 width="640"
@@ -314,8 +329,12 @@ const DedicatedTeamsPage = () => {
                   <span className="dtp-blue">slow and expensive.</span>
                 </h2>
                 <p className="dtp-why-intro">
-                  Our model provides immediate, reliable engineering velocity without the overhead of
-                  traditional hiring cycles, HR costs, or talent scarcity constraints.
+                  Most software development services fail on handoff, not on code —
+                  ambiguous requirements, slow feedback loops, engineers who
+                  disappear after sprint one. Our dedicated-team model fixes the
+                  handoff: the same engineers own your codebase from discovery
+                  through long-term support, so institutional knowledge never leaves
+                  with a contractor.
                 </p>
               </div>
               <div className="dtp-why-cards" aria-label="Key benefits of remote dedicated teams">
@@ -368,8 +387,8 @@ const DedicatedTeamsPage = () => {
           <div className="dtp-container">
             <p className="dtp-section-label">The QllmSoft Difference</p>
             <h2 id="diff-heading" className="dtp-section-title center">
-              We don't fill roles.{' '}
-              <span className="dtp-blue">We deliver outcomes.</span>
+              We focus on outcomes,{' '}
+              <span className="dtp-blue">not headcount.</span>
             </h2>
  
             <div className="dtp-diff-grid" aria-label="QllmSoft differentiators">
@@ -437,7 +456,7 @@ const DedicatedTeamsPage = () => {
                   modern, scalable architecture — delivering measurable outcomes, not just code.
                 </p>
                 <img
-                  src="https://hyscaler.com/wp-content/uploads/2023/08/Cloud-Technology_-5-Powerful-Mastery-for-Enterprise-Software.jpg"
+                  src={cloudArchitectureImg}
                   alt="Cloud-native enterprise software architecture — QllmSoft dedicated team expertise"
                   loading="lazy"
                   width="520"
@@ -556,7 +575,7 @@ const DedicatedTeamsPage = () => {
                   track from the first conversation to the final delivery — and beyond.
                 </p>
                 <img
-                  src="https://intellipaat.com/blog/wp-content/uploads/2023/11/image-196.png"
+                  src={agileWorkflowImg}
                   alt="QllmSoft agile development workflow — sprint planning and iterative delivery process"
                   loading="lazy"
                   width="480"

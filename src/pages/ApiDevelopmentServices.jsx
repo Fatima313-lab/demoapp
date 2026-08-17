@@ -68,9 +68,9 @@ const schemaService = {
   "@context": "https://schema.org",
   "@type": "Service",
   serviceType: "API Development",
-  name: "API Development Services ",
+  name: "Web Development Services — API & Backend Engineering | QllmSoft",
   description:
-    "QllmSoft provides expert custom API development services   REST, GraphQL, SOAP APIs, third-party integrations, payment gateway APIs, and legacy API modernization for startups, SMBs, SaaS, and enterprises.",
+    "QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, payment gateway APIs, and legacy modernization for startups, SMBs, SaaS, and enterprises.",
   provider: {
     "@type": "Organization",
     name: "QllmSoft",
@@ -150,8 +150,8 @@ const schemaBreadcrumb = {
 /* ─── FAQ data ────────────────────────────────────────────── */
 const FAQ_DATA = [
   {
-    q: "What are API development services?",
-    a: "API development services involve creating and integrating Application Programming Interfaces that allow software systems to communicate. QllmSoft builds REST, GraphQL, and SOAP APIs for web, mobile, and cloud platforms  enabling seamless data exchange and business automation.",
+    q: "Are APIs part of your web development services, or a separate offering?",
+    a: "APIs are the backend layer of our web development services. When we build a web platform we design the API architecture alongside it; we also take stand-alone API projects for teams with an existing frontend that needs a new or modernized backend.",
   },
   {
     q: "How does QllmSoft determine API project pricing?",
@@ -343,16 +343,15 @@ const ApiDevelopmentServices = () => {
       ══════════════════════════════════════════════ */}
       <Helmet>
         <title>
-          Enterprise API Engineering, Microservices & Systems Integration |
-          QllmSoft
+          Web Development Services: API & Backend Engineering | QllmSoft
         </title>
         <meta
           name="description"
-          content="QllmSoft architects secure, highly scalable RESTful APIs, GraphQL endpoints, and decentralized microservices pipelines. Specializing in high throughput enterprise integrations, OAuth2 compliance, and cloud native middleware."
+          content="QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, and legacy modernization — the backend layer behind fast, secure web and mobile platforms."
         />
         <meta
           name="keywords"
-          content="enterprise API development, RESTful systems architecture, GraphQL engineering, custom middleware development, microservices integration layers, secure payment gateway infrastructure, legacy SOAP migration, ASP.NET Core web API, high availability data pipelines"
+          content="web development services, API development services, REST API development, GraphQL development, backend web development, custom API integration"
         />
         <meta name="author" content="QllmSoft" />
         <meta
@@ -367,18 +366,18 @@ const ApiDevelopmentServices = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="Enterprise API Engineering, Microservices & Systems Integration | QllmSoft"
+          content="Web Development Services: API & Backend Engineering | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Secure, zero downtime RESTful architectures, GraphQL fabrics, and cloud native data pipelines engineered for global corporate workflows."
+          content="QllmSoft's web development services include REST, GraphQL and SOAP API engineering, third-party integrations, and legacy modernization for fast, secure platforms."
         />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft - Global API Architecture & Middleware Engineering"
+          content="QllmSoft - Web Development Services: API & Backend Engineering"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -386,16 +385,16 @@ const ApiDevelopmentServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Enterprise API Engineering, Microservices & Systems Integration | QllmSoft"
+          content="Web Development Services: API & Backend Engineering | QllmSoft"
         />
         <meta
           name="twitter:description"
-          content="QllmSoft architects secure, highly scalable RESTful APIs, GraphQL endpoints, and decentralized microservices pipelines."
+          content="REST, GraphQL and SOAP API engineering, integrations, and legacy modernization — the backend layer of QllmSoft's web development services."
         />
         <meta name="twitter:image" content={OG_IMAGE} />
         <meta
           name="twitter:image:alt"
-          content="QllmSoft - Global API Architecture & Middleware Engineering"
+          content="QllmSoft - Web Development Services: API & Backend Engineering"
         />
 
         {/* JSON-LD */}
@@ -565,19 +564,18 @@ const ApiDevelopmentServices = () => {
                 className={`api-about__text animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
               >
                 <h2 id="about-heading">
-                  Strategic API Engineering & <br />
+                  API Engineering as Part of Full <br />
                   <span className="api-hero__accent">
-                    Systems Integration
-                  </span>{" "}
+                    Web Development Services
+                  </span>
                 </h2>
                 <p>
-                  Behind every seamless digital interaction be it a real time
-                  payment, a cloud synced mobile app, or an automated enterprise
-                  workflow lies a high performance API. At QllmSoft, we don't
-                  just write code; we architect the{" "}
-                  <strong>digital nervous system</strong>
-                  that allows your platforms to communicate, scale, and thrive
-                  in a connected world.
+                  Every modern web platform is only as fast and reliable as
+                  the APIs underneath it. As part of our broader{" "}
+                  <strong>web development services</strong>, QllmSoft designs
+                  the REST, GraphQL, and SOAP layers that connect your
+                  frontend, database, and third-party tools — the piece most
+                  agencies bolt on late and regret.
                 </p>
 
                 <p>
@@ -591,7 +589,12 @@ const ApiDevelopmentServices = () => {
                   <Link to="/mobile-app-development"> mobile ecosystems</Link>.
                   From designing secure RESTful architectures to implementing
                   ultra efficient GraphQL layers, our team ensures your backend
-                  is ready for global traffic and complex data handling.
+                  is ready for global traffic and complex data handling. Looking
+                  for the dedicated-team engagement model instead? See our{" "}
+                  <Link to="/remote-dedicated-development-teams">
+                    dedicated development team
+                  </Link>{" "}
+                  page.
                 </p>
 
                 <p>
@@ -683,7 +686,7 @@ const ApiDevelopmentServices = () => {
                 </p>
 
                 <p>
-                  We don't believe in "one size fits all." Whether you are
+                  There's no "one size fits all" here. Whether you are
                   building a lightweight MVP or scaling a cloud native
                   enterprise platform, our{" "}
                   <strong>
@@ -741,10 +744,9 @@ const ApiDevelopmentServices = () => {
                 Our High Standard API Development Principles
               </h2>
               <p>
-                We don't just build endpoints; we engineer durable digital
-                assets. Every API at QllmSoft is governed by strict industry
+                Every API at QllmSoft is governed by strict industry
                 best practices to ensure maximum uptime, security, and developer
-                satisfaction.
+                satisfaction — durable digital assets, not just endpoints.
               </p>
             </div>
             <div className="api-practices__grid">
@@ -1036,9 +1038,8 @@ const ApiDevelopmentServices = () => {
             <div className="section-title">
               <h2 id="edge-heading">Why We Are the Leading API Experts</h2>
               <p>
-                We don't just write code , we engineer digital ecosystems.
                 Here's what sets us apart from every other API development
-                company .
+                company on the market.
               </p>
             </div>
             <div className="api-edge__grid">
@@ -1225,10 +1226,9 @@ const ApiDevelopmentServices = () => {
                 Modern Technologies & Frameworks We Deploy
               </h2>
               <p>
-                We don't gamble with your infrastructure. Every database,
-                language, and cloud framework we select is vetted for maximum
-                execution speed, bank grade security, and long term vendor
-                independence.
+                Every database, language, and cloud framework we select is
+                vetted for maximum execution speed, bank grade security, and
+                long term vendor independence.
               </p>
             </div>
             <div className="api-tech__grid">
@@ -1416,7 +1416,7 @@ const ApiDevelopmentServices = () => {
 
         <FounderNote
           title="Powering the Digital Ecosystem with Robust APIs"
-          message="At QllmSoft, we understand that APIs are the silent engine of modern business connecting platforms, automating workflows, and unlocking data value. My mission is to ensure that your backend architecture is never a bottleneck. From our engineering hub  to clients worldwide, we specialize in crafting RESTful and GraphQL solutions that are not just functional, but high performance, secure, and built to handle the demands of global scale. We don't just build endpoints; we build the bridges that enable your business to grow without limits."
+          message="At QllmSoft, we understand that APIs are the silent engine of modern business connecting platforms, automating workflows, and unlocking data value. My mission is to ensure that your backend architecture is never a bottleneck. From our engineering hub  to clients worldwide, we specialize in crafting RESTful and GraphQL solutions that are not just functional, but high performance, secure, and built to handle the demands of global scale. We build the bridges that enable your business to grow without limits."
         />
 
         {/* ══════════════════════════════════════════════
