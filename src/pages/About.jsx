@@ -281,142 +281,144 @@ const About = () => {
             </a>
           </div>
         </section>
+<section
+  id="company"
+  className="section company-story reveal"
+  aria-labelledby="company-heading"
+>
+  <div className="container" >
+    <div className="section-title" >
+      <h2 id="company-heading"  >
+        About QllmSoft, a Software Development Partner for Growing Businesses
+      </h2>
+    </div>
 
-        {/* ── COMPANY STORY ── */}
-        <section
-          id="company"
-          className="section company-story reveal"
-          aria-labelledby="company-heading"
+    <div className="story-card">
+      <p>
+        QllmSoft started in 2015 as a small team of engineers who were tired of
+        watching good ideas get buried under bad software. Over the past decade
+        that team has grown into a full-service{" "}
+        <strong>software development company</strong> that has shipped more than
+        50 production systems for clients spread across four continents, from
+        early-stage startups building their first product to established
+        companies replacing software that no longer keeps up with their
+        business.
+      </p>
+
+      <p>
+        We don't think of ourselves as a vendor that takes orders and writes
+        code.{" "}
+        <Link to="/" className="story-link">
+          QllmSoft
+        </Link>{" "}
+        works the way a good in-house engineering team would: we ask why a
+        feature matters before we estimate how long it will take to build, and
+        we push back when a request would create more problems than it solves.
+        Our team is made up of enterprise architects, full-stack engineers,
+        mobile developers, cloud specialists, and AI engineers who have built
+        software for healthcare providers, logistics companies, financial
+        teams, and retailers, so the conversation rarely starts from zero.
+      </p>
+
+      <p>
+        Every engagement starts with a proper discovery phase. We map out the
+        workflow, write up a fixed-price proposal and a documented scope, and
+        get sign-off before any code gets written. It's a slower start than
+        jumping straight into development, but it's the reason clients on
+        three different continents have stayed with us for years instead of
+        one project.
+      </p>
+
+      <h4>What We Build</h4>
+
+      <ul className="story-list">
+        <li>
+          <strong>Enterprise Web Applications:</strong> Internal portals,
+          customer-facing platforms, SaaS products, and business management
+          tools built to hold up under real daily use, not just demo traffic.
+        </li>
+
+        <li>
+          <strong>Mobile Applications:</strong> Cross-platform Android and iOS
+          apps with offline support, push notifications, and clean UX, taken
+          from a first prototype through to a full enterprise rollout.
+        </li>
+
+        <li>
+          <strong>Business Automation Systems:</strong> Software that replaces
+          manual, error-prone processes, covering things like payroll,
+          inventory, document approvals, and cross-department reporting.
+        </li>
+
+        <li>
+          <strong>AI-Powered Software Solutions:</strong> Practical machine
+          learning, natural language processing, and computer vision features
+          built into existing business software, aimed at measurable results
+          rather than one-off demos.
+        </li>
+
+        <li>
+          <strong>Legacy System Modernisation:</strong> Phased migrations from
+          outdated platforms to modern, maintainable systems that preserve
+          existing business logic and keep teams working while the transition
+          happens.
+        </li>
+      </ul>
+
+      <p>
+        Our project history spans financial management platforms, healthcare
+        systems, document management tools, eCommerce platforms, HR and
+        payroll software, and warehouse automation, including our{" "}
+        <Link to="/finance-management-system" className="story-link">
+          finance management system
+        </Link>{" "}
+        built around budgeting, approvals, and real-time reporting for finance
+        teams.
+      </p>
+
+      <p>
+        Our work is reviewed publicly, not just promised in a sales deck. You
+        can check our record on{" "}
+        <a
+          href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="story-link"
+          aria-label="Verify QllmSoft 100% Job Success Score on Upwork"
         >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="company-heading">
-                About QllmSoft, a Software Development Partner for Growing
-                Businesses
-              </h2>
-            </div>
-
-            <div className="story-card">
-              <p>
-                QllmSoft started in 2015 as a small team of engineers who
-                were tired of watching good ideas get buried under bad
-                software. Over the past decade that team has grown into a
-                full-service <strong>software development company</strong>{" "}
-                that has shipped more than 50 production systems for clients
-                spread across four continents, from early-stage startups
-                building their first product to established companies
-                replacing software that no longer keeps up with their
-                business.
-              </p>
-
-              <p>
-                We don't think of ourselves as a vendor that takes orders
-                and writes code. <Link to="/" style={{ fontWeight: "bold", textDecoration: "none" }}>QllmSoft</Link>{" "}
-                works the way a good in-house engineering team would: we ask
-                why a feature matters before we estimate how long it will
-                take to build, and we push back when a request would create
-                more problems than it solves. Our team is made up of
-                enterprise architects, full-stack engineers, mobile
-                developers, cloud specialists, and AI engineers who have
-                built software for healthcare providers, logistics
-                companies, financial teams, and retailers, so the
-                conversation rarely starts from zero.
-              </p>
-
-              <p>
-                Every engagement starts with a proper discovery phase. We
-                map out the workflow, write up a fixed-price proposal and a
-                documented scope, and get sign-off before any code gets
-                written. It's a slower start than jumping straight into
-                development, but it's the reason clients on three different
-                continents have stayed with us for years instead of one
-                project.
-              </p>
-
-              <h4>What We Build</h4>
-
-              <ul className="story-list">
-                <li>
-                  <strong>Enterprise Web Applications:</strong> Internal
-                  portals, customer-facing platforms, SaaS products, and
-                  business management tools built to hold up under real
-                  daily use, not just demo traffic.
-                </li>
-                <li>
-                  <strong>Mobile Applications:</strong> Cross-platform
-                  Android and iOS apps with offline support, push
-                  notifications, and clean UX, taken from a first prototype
-                  through to a full enterprise rollout.
-                </li>
-                <li>
-                  <strong>Business Automation Systems:</strong> Software
-                  that replaces manual, error-prone processes, covering
-                  things like payroll, inventory, document approvals, and
-                  cross-department reporting.
-                </li>
-                <li>
-                  <strong>AI-Powered Software Solutions:</strong> Practical
-                  machine learning, natural language processing, and
-                  computer vision features built into existing business
-                  software, aimed at measurable results rather than
-                  one-off demos.
-                </li>
-                <li>
-                  <strong>Legacy System Modernisation:</strong> Phased
-                  migrations from outdated platforms to modern,
-                  maintainable systems that preserve existing business
-                  logic and keep teams working while the transition
-                  happens.
-                </li>
-              </ul>
-
-              <p>
-                Our project history spans financial management platforms,
-                healthcare systems, document management tools, eCommerce
-                platforms, HR and payroll software, and warehouse
-                automation, including our{" "}
-                <Link to="/finance-management-system">
-                  finance management system
-                </Link>{" "}
-                built around budgeting, approvals, and real-time reporting
-                for finance teams.
-              </p>
-
-              <p>
-                Our work is reviewed publicly, not just promised in a sales
-                deck. You can check our record on{" "}
-                <a
-                  href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Verify QllmSoft 100% Job Success Score on Upwork"
-                >
-                  Upwork (100% Job Success Score)
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.freelancer.com/u/mrprogrmmr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="View QllmSoft 5-star reviews on Freelancer"
-                >
-                  Freelancer (5-Star Rating)
-                </a>
-                , where clients have left feedback after the project
-                shipped, not before.
-              </p>
-            </div>
-          </div>
-        </section>
+          Upwork (100% Job Success Score)
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://www.freelancer.com/u/mrprogrmmr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="story-link"
+          aria-label="View QllmSoft 5-star reviews on Freelancer"
+        >
+          Freelancer (5-Star Rating)
+        </a>
+        , where clients have left feedback after the project shipped, not
+        before.
+      </p>
+    </div>
+  </div>
+</section>
 
         {/* ── STATS BAND ── */}
         <section
           className="section"
-          style={{ background: "#1A202C", padding: "48px 0" }}
+          style={{ background: "#1A202C", padding: "48px 0", marginTop: "28px" }}
           aria-label="QllmSoft company statistics"
         >
           <div className="container">
-            <div className="why-grid" style={{ textAlign: "center" }}>
+          <div
+              className="why-grid"
+              style={{
+                textAlign: "center",
+                display: "grid",
+                gridTemplateColumns: "repeat(4, 1fr)",
+              }} >
               <div>
                 <div
                   style={{
@@ -555,67 +557,109 @@ const About = () => {
             </div>
           </div>
         </section>
+{/* Industries Section */}
 
-        {/* ── INDUSTRIES ── */}
-        <section
-          className="section"
-          style={{ background: "#F7FAFC", padding: "60px 0" }}
-          aria-labelledby="industries-heading"
-        >
-          <div className="container">
-            <div className="section-title reveal">
-              <h2 id="industries-heading">Industries We Serve</h2>
-              <p>
-                A decade of project work across these sectors means we
-                bring some domain context to a project, not just engineers
-                who can write code against a spec.
-              </p>
+<section class="industries-section" aria-labelledby="industries-heading">
+  <div class="industries-container">
+    <div class="industries-header">
+      <span class="industries-eyebrow"style={{ fontSize: "1.1rem" }}>What We Cover</span>
+      <h2 id="industries-heading">Industries We Serve</h2>
+      <p class="industries-subtext">
+        A decade of project work across these sectors means we bring some
+        domain context to a project, not just engineers who can write code against a spec.
+      </p>
+    </div>
+    <nav aria-label="Industries served by QllmSoft">
+      <div class="industries-grid">
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>01</span>
+              <span class="card-icon">🏥</span>
             </div>
-            <nav aria-label="Industries served by QllmSoft" className="reveal">
-              <div className="why-grid">
-                {[
-                  {
-                    to: "/healthcare-software-development-pakistan",
-                    title: "Healthcare",
-                    desc: "Hospital management systems, telemedicine platforms, clinic software, EMR/EHR tools, and patient portals.",
-                  },
-                  {
-                    title: "Finance & FinTech",
-                    desc: "Financial management platforms, accounting automation, real-time reporting dashboards, and secure payment integrations.",
-                  },
-                  {
-                    to: "/education-software-development-pakistan",
-                    title: "Education",
-                    desc: "School management systems, LMS platforms, eLearning apps, and student information systems.",
-                  },
-                  {
-                    title: "Logistics & Warehouse",
-                    desc: "Inventory management systems, warehouse automation, delivery tracking, and supply chain visibility tools.",
-                  },
-                  {
-                    title: "eCommerce & Retail",
-                    desc: "Custom eCommerce platforms, inventory control, order management, and multi-vendor marketplace builds.",
-                  },
-                  {
-                    title: "HR & Enterprise Operations",
-                    desc: "Payroll systems, employee portals, attendance tracking, leave management, and performance review tools.",
-                  },
-                ].map((item, i) => (
-                  <article key={i} className="why-card">
-                    <h3>
-                      {item.to ? (
-                        <Link to={item.to}>{item.title}</Link>
-                      ) : (
-                        item.title
-                      )}
-                    </h3>
-                    <p>{item.desc}</p>
-                  </article>
-                ))}
-              </div>
-            </nav>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">
+              <a href="/healthcare-software-development-pakistan">Healthcare</a>
+            </h3>
+            <p class="card-desc">Hospital management systems, telemedicine platforms, clinic software, EMR/EHR tools, and patient portals.</p>
+            <div class="card-arrow"><span>→</span></div>
           </div>
-        </section>
+        </article>
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>02</span>
+              <span class="card-icon">💳</span>
+            </div>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">Finance & FinTech</h3>
+            <p class="card-desc">Financial management platforms, accounting automation, real-time reporting dashboards, and secure payment integrations.</p>
+            <div class="card-arrow"><span>→</span></div>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>03</span>
+              <span class="card-icon">🎓</span>
+            </div>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">
+              <a href="/education-software-development-pakistan">Education</a>
+            </h3>
+            <p class="card-desc">School management systems, LMS platforms, eLearning apps, and student information systems.</p>
+            <div class="card-arrow"><span>→</span></div>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>04</span>
+              <span class="card-icon">🚚</span>
+            </div>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">Logistics & Warehouse</h3>
+            <p class="card-desc">Inventory management systems, warehouse automation, delivery tracking, and supply chain visibility tools.</p>
+            <div class="card-arrow"><span>→</span></div>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>05</span>
+              <span class="card-icon">🛒</span>
+            </div>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">eCommerce & Retail</h3>
+            <p class="card-desc">Custom eCommerce platforms, inventory control, order management, and multi-vendor marketplace builds.</p>
+            <div class="card-arrow"><span>→</span></div>
+          </div>
+        </article>
+
+        <article class="industry-card">
+          <div class="card-inner">
+            <div class="card-top">
+              <span class="card-number" style={{ fontSize: "2.2rem" }}>06</span>
+              <span class="card-icon">🏢</span>
+            </div>
+            <div class="card-accent-line"></div>
+            <h3 class="card-title">HR & Enterprise Operations</h3>
+            <p class="card-desc">Payroll systems, employee portals, attendance tracking, leave management, and performance review tools.</p>
+            <div class="card-arrow"><span>→</span></div>
+          </div>
+        </article>
+
+      </div>
+    </nav>
+  </div>
+</section>
+
+{/* End of Industries Section */}
 
         {/* ── VISION / MISSION ── */}
         <section
@@ -816,13 +860,13 @@ const About = () => {
           className="section cta-section reveal"
           aria-labelledby="cta-heading"
         >
-          <div className="container">
+          <div className="container" style={{ textAlign: "center" }}>
             <div className="cta-content">
               <h2 id="cta-heading">
                 Ready to Work with a Software Development Partner You Can
                 Rely On?
               </h2>
-              <p>
+              <p  style={{ color: "white", marginTop: "10px" }}>
                 Tell us your challenge. We'll review your requirements, send
                 a detailed fixed-price proposal within 24 hours, and set up
                 a free discovery call, no commitment required.
