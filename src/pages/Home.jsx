@@ -72,27 +72,17 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://qllmsoft.com/#organization",
-
   name: "QllmSoft",
   url: "https://qllmsoft.com",
-
   logo: {
     "@type": "ImageObject",
     url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
   },
-
-  image:
-    "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
-
-  description:
-    "QllmSoft is a custom software development company delivering web applications, mobile apps, enterprise software, business automation systems, API integrations, and AI-powered solutions for businesses worldwide.",
-
+  image: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp",
+  description: "QllmSoft is a custom software development company delivering enterprise web applications, mobile apps, business automation platforms, API integrations, and AI solutions worldwide.",
   foundingDate: "2015",
-
   telephone: "+92-334-8229288",
-
   email: "qllmsoft@gmail.com",
-
   address: {
     "@type": "PostalAddress",
     streetAddress: "H # 181, Camping Ground",
@@ -101,16 +91,8 @@ const schemaOrg = {
     postalCode: "50350",
     addressCountry: "PK"
   },
-
-  founder: {
-    "@id": "https://qllmsoft.com/#founder"
-  },
-
-  areaServed: {
-    "@type": "Place",
-    name: "Worldwide"
-  },
-
+  founder: { "@id": "https://qllmsoft.com/#founder" },
+  areaServed: { "@type": "Place", name: "Worldwide" },
   knowsAbout: [
     "Custom Software Development",
     "Web Application Development",
@@ -122,7 +104,6 @@ const schemaOrg = {
     "Cloud Solutions",
     "Software Outsourcing"
   ],
-
   sameAs: [
     "https://www.linkedin.com/company/qllmsoft",
     "https://www.freelancer.com/u/mrprogrmmr",
@@ -134,136 +115,59 @@ const schemaFounder = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://qllmsoft.com/#founder",
-
   name: "Zain Ul Abedin",
-
   jobTitle: "Founder & CEO",
-
-  worksFor: {
-    "@id": "https://qllmsoft.com/#organization"
-  },
-
+  worksFor: { "@id": "https://qllmsoft.com/#organization" },
   url: "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/",
-
-  sameAs: [
-    "https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
-  ]
+  sameAs: ["https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"]
 };
 
 const schemaWebsite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://qllmsoft.com/#website",
-
   url: "https://qllmsoft.com",
-
   name: "QllmSoft",
-
-  publisher: {
-    "@id": "https://qllmsoft.com/#organization"
-  }
+  publisher: { "@id": "https://qllmsoft.com/#organization" }
 };
+
 
 const schemaHomePage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-
   "@id": "https://qllmsoft.com/#webpage",
-
   url: "https://qllmsoft.com",
-
   name: "Custom Software Development Company | QllmSoft",
-
-  description:
-    "QllmSoft builds enterprise software, web applications, mobile apps, business automation platforms, and AI-powered solutions for businesses worldwide.",
-
-  isPartOf: {
-    "@id": "https://qllmsoft.com/#website"
-  },
-
-  about: {
-    "@id": "https://qllmsoft.com/#organization"
-  },
-
+  description: "QllmSoft builds enterprise software, web applications, mobile apps, business automation platforms, and AI-powered solutions for businesses worldwide.",
+  isPartOf: { "@id": "https://qllmsoft.com/#website" },
+  about: { "@id": "https://qllmsoft.com/#organization" },
   primaryImageOfPage: {
     "@type": "ImageObject",
     url: "https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo.webp"
   }
 };
 
+
 const schemaService = {
   "@context": "https://schema.org",
-
   "@type": "Service",
-
   "@id": "https://qllmsoft.com/#service",
-
   name: "Custom Software Development Services",
-
-  provider: {
-    "@id": "https://qllmsoft.com/#organization"
-  },
-
-  areaServed: {
-    "@type": "Place",
-    name: "Worldwide"
-  },
-
-  serviceType: "Software Development",
-
-  description:
-    "Custom software development, web applications, mobile apps, enterprise systems, business automation, API integration, and AI-powered software solutions.",
-
+  provider: { "@id": "https://qllmsoft.com/#organization" },
+  areaServed: { "@type": "Place", name: "Worldwide" },
+  serviceType: "Software Development Services",
+  description: "Custom software development, web applications, mobile apps, enterprise systems, business automation, API integration, and AI-powered software solutions.",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-
-    name: "Software Development Services",
-
+    name: "Software Development Services Catalog",
     itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Custom Software Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Enterprise Web Application Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Mobile App Development"
-        }
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Business Process Automation"
-        }
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "AI Software Development"
-        }
-      }
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Custom Software Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Enterprise Web Application Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Business Process Automation" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "AI Software Development" } }
     ]
   },
-
-  /* Fixes GSC Review-snippet errors: "missing field itemReviewed",
-     "missing field author", "invalid object type for itemReviewed".
-     Requires: itemReviewed, author (Person/Organization), reviewRating.
-     NOTE: keep these in sync with what <TestimonialSection /> actually
-     displays on the page — update name/text/ratingValue if that
-     component's visible testimonials change. */
   review: [
     {
       "@type": "Review",
@@ -274,47 +178,124 @@ const schemaService = {
         ratingValue: "5",
         bestRating: "5"
       },
-      reviewBody:
-        "QllmSoft delivered our custom platform on time and the team communicated clearly throughout the build."
+      reviewBody: "QllmSoft delivered our custom platform on time and the team communicated clearly throughout the build."
     }
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "27"
-  }
+  ]
 };
 
-/* ─── JSON-LD: FAQPage ─────────────────────────────────────────── */
+/* ─── JSON-LD: FAQPage (SEO & AEO Optimized) ─────────────────── */
 const schemaFAQ = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
     {
       "@type": "Question",
-      name: "What does QllmSoft do as a custom software development company?",
+      name: "What software development services does QllmSoft provide?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "QllmSoft is a full-service custom software development company. We build enterprise web applications, mobile apps for Android and iOS, internal business systems, secure APIs, and AI-powered automation tools for businesses across the UK, USA, UAE, Saudi Arabia, and globally. We have delivered 50+ production-grade digital solutions across finance, healthcare, education, logistics, and eCommerce.",
-      },
+        text: "QllmSoft is a custom software development company. We deliver enterprise web applications, iOS and Android mobile apps, custom APIs, business process automation platforms, and AI integrations. Having delivered over 50 production-grade solutions across finance, healthcare, logistics, and eCommerce, we build bespoke systems tailored to your specific business workflows."
+      }
     },
     {
       "@type": "Question",
-      name: "Does QllmSoft work with international clients for software outsourcing?",
+      name: "How does QllmSoft manage international software outsourcing and IP ownership?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft is a software outsourcing company serving international clients across the UK, USA, UAE, and Saudi Arabia. We work with fixed-price scopes, clear communication, NDA from day one, and full IP ownership transferred to the client, independently verified through Upwork (100% Job Success Score) and Freelancer (5-star rating).",
-      },
+        text: "QllmSoft delivers fixed-price software outsourcing for international clients in North America, Europe, and the Middle East. Every project includes strict NDAs, fixed-scope delivery timelines, and 100% complete IP and source code ownership transfer. Our execution record is verified via Upwork (100% Job Success Score) and Freelancer (5-star rating)."
+      }
     },
     {
       "@type": "Question",
-      name: "Can I hire dedicated software developers from QllmSoft?",
+      name: "How fast can I hire dedicated software developers from QllmSoft?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. QllmSoft provides dedicated software developers and full-stack engineering teams for startups, SMEs, and enterprises. Our developers are available full-time, part-time, or on a project basis, with onboarding possible within 24 to 48 hours. We cover web, mobile, backend, API, cloud, and AI development.",
-      },
+        text: "You can onboard dedicated software developers or full-stack engineering teams within 24 to 48 hours. QllmSoft provides full-time, part-time, and project-based software developers skilled in React, .NET, Node.js, Flutter, Python, cloud architecture, and AI software engineering."
+      }
     },
-  ],
+    {
+      "@type": "Question",
+      name: "What is QllmSoft's pricing model for custom software projects?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "QllmSoft operates on a fixed-price delivery model based on written scopes and clear milestones. We provide upfront, transparent project quotes with zero hidden costs, scope creep invoices, or hourly bill surprises."
+      }
+    }
+  ]
+};
+
+const faqData = [
+  {
+    question: "What software development services does QllmSoft provide?",
+    answer:
+      "QllmSoft is a custom software development company. We deliver enterprise web applications, iOS and Android mobile apps, custom APIs, business process automation platforms, and AI integrations. Having delivered over 50 production-grade solutions across finance, healthcare, logistics, and eCommerce, we build bespoke systems tailored to your specific business workflows."
+  },
+  {
+    question: "How does QllmSoft manage international software outsourcing and IP ownership?",
+    answer:
+      "QllmSoft delivers fixed-price software outsourcing for international clients in North America, Europe, and the Middle East. Every project includes strict NDAs, fixed-scope delivery timelines, and 100% complete IP and source code ownership transfer. Our execution record is verified via Upwork (100% Job Success Score) and Freelancer (5-star rating)."
+  },
+  {
+    question: "How fast can I hire dedicated software developers from QllmSoft?",
+    answer:
+      "You can onboard dedicated software developers or full-stack engineering teams within 24 to 48 hours. QllmSoft provides full-time, part-time, and project-based software developers skilled in React, .NET, Node.js, Flutter, Python, cloud architecture, and AI software engineering."
+  },
+  {
+    question: "What is QllmSoft's pricing model for custom software projects?",
+    answer:
+      "QllmSoft operates on a fixed-price delivery model based on written scopes and clear milestones. We provide upfront, transparent project quotes with zero hidden costs, scope creep invoices, or hourly bill surprises."
+  }
+];
+
+const FAQSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="section faq-section" aria-labelledby="faq-heading">
+      <div className="container">
+        <div className="section-title text-center">
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <p>Everything you need to know about partnering with QllmSoft.</p>
+        </div>
+
+        <div className="faq-accordion" itemScope itemType="https://schema.org/FAQPage">
+          {faqData.map((item, index) => (
+            <div
+              key={index}
+              className={`faq-item ${activeIndex === index ? "active" : ""}`}
+              itemScope
+              itemProp="mainEntity"
+              itemType="https://schema.org/Question"
+            >
+              <button
+                className="faq-question"
+                onClick={() => toggleAccordion(index)}
+                aria-expanded={activeIndex === index}
+                aria-controls={`faq-answer-${index}`}
+              >
+                <span itemProp="name">{item.question}</span>
+                <span className="faq-icon">{activeIndex === index ? "−" : "+"}</span>
+              </button>
+
+              <div
+                id={`faq-answer-${index}`}
+                className="faq-answer"
+                hidden={activeIndex !== index}
+                itemScope
+                itemProp="acceptedAnswer"
+                itemType="https://schema.org/Answer"
+              >
+                <p itemProp="text">{item.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 const processSteps = [
@@ -375,9 +356,8 @@ const featuredCaseStudies = [
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   HOME PAGE
-═══════════════════════════════════════════════════════════ */
+
+
 const Home = () => {
   const { ref: servicesRef, inView: servicesInView } = useInView({
     triggerOnce: true,
@@ -391,24 +371,21 @@ const Home = () => {
   return (
     <>
       {/* ═══════════════════════════════════════════
-          SEO HEAD
+          SEO HEAD (CTR & META ENHANCEMENTS)
       ═══════════════════════════════════════════ */}
       <Helmet>
-        {/* Title, 60 chars, solution-first, global intent */}
-        <title>
-          QllmSoft | Custom Software Development Company, Enterprise Digital Solutions
-        </title>
+        {/* Title: 56 Chars | Target Keyword + Value Prop to Boost CTR */}
+        <title>Custom Software Development Company | QllmSoft</title>
 
-        {/* Description, 158 chars, global commercial intent */}
+        {/* Description: 154 Chars | Clear Call to Action */}
         <meta
           name="description"
-          content="QllmSoft is a custom software development company delivering enterprise web applications, mobile apps, business automation, AI-powered systems, and digital solutions for businesses worldwide."
+          content="QllmSoft builds enterprise web applications, mobile apps & AI solutions for global clients. Fixed-price delivery & 100% IP ownership. Get a free quote."
         />
 
-        {/* Keywords, global, no geo, solution-first + service + stack */}
         <meta
           name="keywords"
-          content="custom software development company, software development services, enterprise software development, custom software solutions, web application development services, mobile app development services, business process automation, software outsourcing services, hire software developers, dedicated software development team, .NET development company, React development services, Flutter app development, AI software development, enterprise software solutions"
+          content="custom software development company, enterprise web application development, custom mobile app development, business automation platforms, AI software solutions, software outsourcing services"
         />
 
         <meta name="author" content="QllmSoft" />
@@ -424,11 +401,11 @@ const Home = () => {
         <meta property="og:site_name" content="QllmSoft" />
         <meta
           property="og:title"
-          content="QllmSoft | Custom Software Development Company, Enterprise Digital Solutions"
+          content="Custom Software Development Company | Enterprise Solutions | QllmSoft"
         />
         <meta
           property="og:description"
-          content="Custom enterprise software, mobile apps, business automation, and AI-powered digital solutions, built for global businesses. Free consultation within 24 hours."
+          content="Enterprise software, mobile apps, business automation, and AI-powered digital solutions for global businesses. Fixed-price delivery, verified 100% success record."
         />
         <meta
           property="og:image"
@@ -438,33 +415,26 @@ const Home = () => {
         <meta property="og:image:height" content="630" />
         <meta
           property="og:image:alt"
-          content="QllmSoft Custom Software Development Company"
+          content="QllmSoft Custom Software Development Company Logo"
         />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:locale:alternate" content="en_GB" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="QllmSoft | Custom Software Development Company"
+          content="Custom Software Development Company | QllmSoft"
         />
         <meta
           name="twitter:description"
-          content="Custom enterprise software, mobile apps, and AI-powered digital solutions delivered to global businesses."
+          content="Custom web applications, mobile apps, and AI-powered solutions built for businesses worldwide."
         />
         <meta
           name="twitter:image"
           content="https://qllmsoft.com/images/qllmsoft-web-desktop-mobile-app-logo-hd.jpg"
         />
-        <meta
-          name="twitter:image:alt"
-          content="QllmSoft Software Development Company"
-        />
 
-        {/* JSON-LD — these were defined above but never rendered before;
-            this is the fix for the GSC "missing itemReviewed / missing
-            author / invalid object type" review-snippet errors. */}
+        {/* JSON-LD Schemas */}
         <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaFounder)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaWebsite)}</script>
@@ -474,10 +444,10 @@ const Home = () => {
       </Helmet>
 
       <main className="home-page" id="main-content" role="main">
-        {/* ── HERO ── */}
+        {/* HERO SECTION */}
         <HeroSlider />
 
-        {/* ── ABOUT ── */}
+        {/* ABOUT SECTION */}
         <section
           className="section about-section bg-light"
           ref={aboutRef}
@@ -486,57 +456,44 @@ const Home = () => {
           <div className="container">
             <div className="about-content">
               <div
-                className={`about-image animate__animated ${aboutInView ? "animate__fadeInLeft" : ""}`}
+                className={`about-image animate__animated ${
+                  aboutInView ? "animate__fadeInLeft" : ""
+                }`}
               >
                 <img
                   src={AboutImg}
-                  alt="QllmSoft software development team delivering custom enterprise digital solutions for global businesses"
+                  alt="QllmSoft custom software development team engineering enterprise web and mobile applications"
                   width="600"
                   height="400"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
 
               <div
-                className={`about-text animate__animated ${aboutInView ? "animate__fadeInRight" : ""}`}
+                className={`about-text animate__animated ${
+                  aboutInView ? "animate__fadeInRight" : ""
+                }`}
               >
-                {/* SINGLE H1 for the entire page, solution-first, global keyword targeting */}
-                <h1 id="about-heading">
-                A Custom Software Development Company That Builds What Your Business Actually Needs
-                </h1>
+                {/* Secondary Heading for Section Scannability */}
+                <h2 id="about-heading" className="section-title">
+                  Enterprise Software Built Around Your Actual Business Workflows
+                </h2>
 
                 <p className="direct-answer">
-                QllmSoft is a <strong>custom software development company</strong> that designs,
-  builds, and scales web, mobile, and AI-powered applications for businesses
-  across four continents. We plan the architecture, write the code, and own
-  delivery end to end, with fixed scope and no hidden charges.
+                  QllmSoft is a <strong>custom software development company</strong> that
+                  engineers, builds, and scales web applications, enterprise platforms, mobile
+                  apps, and AI-powered automation tools for businesses globally. We manage system
+                  architecture and development end-to-end under fixed-price scopes.
                 </p>
 
                 <p>
-                Since 2015, the team has been
-  designing, building, and scaling enterprise-grade digital solutions covering
-  internal business platforms, customer-facing web applications, mobile apps,
-  and AI-powered automation systems.
+                  Since 2015, our team has delivered over 50 production-grade solutions across 
+                  financial management, healthcare, logistics, document automation, and eCommerce.
                 </p>
 
                 <p>
-                The work spans web design and development, digital marketing, system
-  integration, API development, and AI tooling, covering the full technology
-  stack from architecture through to production deployment. Every project is
-  scoped precisely, priced transparently, and delivered without hidden charges
-  or scope creep.
-                </p>
-
-                <p>
-                More than 50 production-grade solutions have been delivered since 2015,
-  covering financial management platforms, document management systems, HR and
-  payroll software, healthcare systems, eCommerce platforms, and warehouse
-  automation, all built around real operational workflows and verified
-  business logic.
-                </p>
-
-                <p>
-                The delivery record is independently verified on{" "}
+                  Our delivery track record is independently verified on{" "}
                   <a
                     href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
                     target="_blank"
@@ -554,13 +511,13 @@ const Home = () => {
                   >
                     Freelancer (5-Star Rating)
                   </a>
-                  . Our reputation is built on delivery, not promises.
+                  .
                 </p>
 
                 <Link
                   to="/about"
                   className="btn btn-primary"
-                  aria-label="Learn more about QllmSoft custom software development company"
+                  aria-label="Learn more about QllmSoft custom software development services"
                 >
                   Learn More About Us
                 </Link>
@@ -568,227 +525,194 @@ const Home = () => {
             </div>
           </div>
         </section>
+     
+{/* ── SERVICES SECTION ── */}
+<section
+  className="section services-section"
+  ref={servicesRef}
+  aria-labelledby="services-heading"
+>
+  <div className="container">
+    <div className="section-title">
+      <h2 id="services-heading">
+        Custom Software Development Services Built for Business Scale
+      </h2>
+      <p>
+        We build tailor-made enterprise web applications, cross-platform mobile apps, cloud backend architectures, and AI-driven workflow automations. Every platform is custom-engineered to match your operational workflows—no generic templates or rigid frameworks.
+      </p>
+    </div>
 
-        {/* ── SERVICES ── */}
-        <section
-          className="section services-section"
-          ref={servicesRef}
-          aria-labelledby="services-heading"
-          itemScope
-          itemType="https://schema.org/Service"
-        >
-          <div className="container">
-            <div className="section-title">
-              <h2 id="services-heading">
-                QllmSoft | A Custom Software Development Company
-              </h2>
-              <p>
-                We solve real business problems with custom-built software. Whether the goal
-                is digitising an internal workflow, launching a customer-facing platform,
-                automating repetitive operations, or building a mobile experience from
-                scratch, QllmSoft engineers the right solution around your goals, not a
-                template stretched to fit.
-              </p>
-            </div>
-
-            <div className="services-grid">
-              {homeServices.map((service, index) => {
-                const animation =
-                  index < 2 ? "animate__fadeInLeft" : "animate__fadeInRight";
-                return (
-                  <div
-                    key={service.id}
-                    className={`animate__animated ${servicesInView ? animation : ""}`}
-                  >
-                    <ServiceCard service={service} />
-                  </div>
-                );
-              })}
-            </div>
-
-            <div style={{ textAlign: "center", marginTop: "32px" }}>
-              <Link
-                to="/services"
-                className="btn btn-primary"
-                aria-label="View all QllmSoft software development services"
-              >
-                View All Services
-              </Link>
-            </div>
+    <div className="services-grid">
+      {homeServices.map((service, index) => {
+        const animation =
+          index < 2 ? "animate__fadeInLeft" : "animate__fadeInRight";
+        return (
+          <div
+            key={service.id}
+            className={`animate__animated ${servicesInView ? animation : ""}`}
+          >
+            <ServiceCard service={service} />
           </div>
-        </section>
+        );
+      })}
+    </div>
 
-        {/* ── WHY CHOOSE US ── */}
-        <section className="section why-section" aria-labelledby="why-heading">
-          <div className="container">
-            <div className="section-title">
-              <h2 id="why-heading">
-              Why Businesses Choose QllmSoft as Their Software Development Partner
-              </h2>
-              <p>
-                Companies across the globe, specially in USA and Gulf choose QllmSoft
-                because we deliver software that works in production. Our
-                approach combines deep technical expertise with the structured delivery
-                discipline that enterprise teams depend on.
-              </p>
-            </div>
-
-            <div className="why-grid">
-              <article className="why-card">
-                <h3>Real Solutions Beyond Templates</h3>
-                <p>
-                  We never adapt pre-built tools or templates to fit your problem. Every
-                  solution is designed from scratch around your specific workflows, users, and
-                  business objectives, giving you software that fits the way your team works
-                  and grows naturally with your operations.
-                </p>
-              </article>
-
-              <article className="why-card">
-                <h3>Fixed-Price Delivery With No Hidden Charges</h3>
-                <p>
-                  Every project begins with a detailed written scope and a fixed price
-                  committed before a single line of code is written. No hourly billing
-                  surprises, no scope creep invoices, and no post-launch charges for features
-                  that should have been included from day one.
-                </p>
-              </article>
-
-              <article className="why-card">
-                <h3>Security and Quality Built In From the Start</h3>
-                <p>
-                  Security is designed into the architecture from day one, not added as an
-                  afterthought. We follow{" "}
-                  <a
-                    href="https://owasp.org/www-project-top-ten/"
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
-                    aria-label="OWASP Top 10 security standard, external reference"
-                  >
-                    OWASP Top 10
-                  </a>{" "}
-                  standards across every web application, API, and mobile app we deliver,
-                  protecting your users, your data, and your business from the most critical
-                  attack vectors.
-                </p>
-              </article>
-
-              <article className="why-card">
-                <h3>Long-Term Technology Partnership</h3>
-                <p>
-                  We do not disappear after launch. Every QllmSoft project includes
-                  structured post-launch support, performance monitoring, and ongoing feature
-                  development, making us the long-term technology partner your business can
-                  rely on as it evolves and grows.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPANY INFO ── */}
-        <section
-          className="section company-info-section"
-          aria-labelledby="company-info-heading"
-          itemScope
-          itemType="https://schema.org/Organization"
-        >
-          <div className="container">
-            <div className="company-info-inner">
-
-              {/* ── Left: prose ── */}
-              <div className="company-info-text">
-                <h2 id="company-info-heading">
-                A Decade of Enterprise Software Delivery
-                </h2>
-
-                <p>
-                QllmSoft was founded with
-  one objective: build software that solves real operational problems for
-  businesses, not software that looks good in a pitch deck and falls apart in
-  production. Over the past decade, that focus has produced more than{" "}
-  <strong>50 enterprise-grade solutions</strong> shipped to clients, spanning finance, healthcare, education,
-  logistics, eCommerce, and SaaS.
-                </p>
-
-                <p>
-                  The company is led by{" "}
-                  <strong itemProp="founder" itemScope itemType="https://schema.org/Person">
-                    <a
-                      itemProp="url"
-                      href="https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Zain Ul Abedin, Founder and CEO of QllmSoft, LinkedIn profile"
-                    >
-                      <span itemProp="name">Zain Ul Abedin</span>
-                    </a>
-                    , Founder and CEO
-                  </strong>
-                  , with a senior engineering team that covers full-stack web development, mobile
-                  engineering, cloud infrastructure, API design, and AI integration. Every client
-                  engagement is managed with a structured delivery process, written scopes, fixed
-                  pricing, weekly progress reviews, and complete documentation handed over at
-                  launch.
-                </p>
-
-                <p>
-                  Our track record is independently verified. A{" "}
-                  <a
-                    href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="QllmSoft Upwork profile, 100% Job Success Score"
-                  >
-                    100% Job Success Score on Upwork
-                  </a>{" "}
-                  and a{" "}
-                  <a
-                    href="https://www.freelancer.com/u/mrprogrmmr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="QllmSoft Freelancer profile, 5-star rating"
-                  >
-                    5-star rating on Freelancer
-                  </a>{" "}
-                  reflect successful engagements where the software was delivered on scope, on
-                  time, and without post-launch surprises. That consistency is not accidental, it
-                  is the result of a decade of refining how enterprise software development should
-                  actually be done.
-                </p>
-              </div>
-
-              <div className="company-info-stats" aria-label="QllmSoft company facts">
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="10 plus years of experience">10+</span>
-    <span className="ci-stat-label">Years of Experience</span>
+    <div style={{ textAlign: "center", marginTop: "32px" }}>
+      <Link
+        to="/services"
+        className="btn btn-primary"
+        aria-label="Explore all custom software development services by QllmSoft"
+      >
+        View All Services
+      </Link>
+    </div>
   </div>
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="50 plus projects delivered">50+</span>
-    <span className="ci-stat-label">Projects Delivered</span>
+</section>
+
+{/* ── WHY CHOOSE US SECTION ── */}
+<section className="section why-section" aria-labelledby="why-heading">
+  <div className="container">
+    <div className="section-title">
+      <h2 id="why-heading">
+        Why Enterprise Teams Partner with QllmSoft for Software Engineering
+      </h2>
+      <p>
+        Businesses across North America, the UK, and the Gulf region (UAE, Saudi Arabia) rely on QllmSoft for production-grade software delivery. We combine deep technical stack expertise with rigorous engineering discipline.
+      </p>
+    </div>
+
+    <div className="why-grid">
+      <article className="why-card">
+        <h3>Tailor-Made Solutions (Zero Templates)</h3>
+        <p>
+          We build systems designed around your unique business operations, customer journeys, and scaling requirements. You receive clean, proprietary codebases engineered for security, speed, and maintainability.
+        </p>
+      </article>
+
+      <article className="why-card">
+        <h3>Fixed-Price Delivery & Guaranteed IP Transfer</h3>
+        <p>
+          Every engagement operates under a transparent, fixed-scope contract with zero surprise invoices. Upon project completion, full intellectual property (IP) and codebase ownership are completely transferred to your business.
+        </p>
+      </article>
+
+      <article className="why-card">
+        <h3>OWASP Security Standards & QA Testing</h3>
+        <p>
+          Security is built into our development cycle from day one. We adhere to strict{" "}
+          <a
+            href="https://owasp.org/www-project-top-ten/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Read about OWASP Top 10 Web Application Security Risks"
+          >
+            OWASP Top 10 security standards
+          </a>{" "}
+          and conduct functional, load, and penetration testing prior to deployment.
+        </p>
+      </article>
+
+      <article className="why-card">
+        <h3>Long Term Support & Scalability</h3>
+        <p>
+          We provide post launch application monitoring, cloud infrastructure maintenance, continuous security patching, and ongoing feature development to support your long-term expansion.
+        </p>
+      </article>
+    </div>
   </div>
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="50 plus global clients">50+</span>
-    <span className="ci-stat-label">Global Clients</span>
-  </div>
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="100 percent job success on Upwork">100%</span>
-    <span className="ci-stat-label">Upwork Job Success</span>
-  </div>
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="5 star verified rating">5★</span>
-    <span className="ci-stat-label">Verified Rating</span>
-  </div>
-  <div className="ci-stat">
-    <span className="ci-stat-number" aria-label="47 plus verified reviews">47+</span>
-    <span className="ci-stat-label">Verified Reviews</span>
-  </div>
-</div>
+</section>
 
 
-            </div>
-          </div>
-        </section>
+
+{/* ── COMPANY INFO SECTION ── */}
+<section
+  className="section company-info-section"
+  aria-labelledby="company-info-heading"
+>
+  <div className="container">
+    <div className="company-info-inner">
+
+      {/* ── Left: Narrative Prose ── */}
+      <div className="company-info-text">
+        <h2 id="company-info-heading">
+          A Decade of Enterprise Software Delivery & Proven Execution
+        </h2>
+
+        <p>
+          QllmSoft was founded to solve complex business challenges with production-ready software. Over the past decade, our engineering team has shipped more than{" "}
+          <strong>50 enterprise-grade digital solutions</strong> across finance, healthcare, education, logistics, eCommerce, and SaaS platforms worldwide[cite: 1].
+        </p>
+
+        <p>
+          Founded and led by{" "}
+          <strong>
+            <a
+              href="https://www.linkedin.com/in/zain-ul-abedin-b09a613b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Zain Ul Abedin, Founder and CEO of QllmSoft LinkedIn Profile"
+            >
+              Zain Ul Abedin
+            </a>
+            , Founder & CEO
+          </strong>
+          , our full-stack engineering team specializes in web development, mobile app development, cloud infrastructure, API integration, and custom AI software. Every project follows a disciplined delivery process: defined scopes, fixed pricing, sprint demos, and complete IP transfer upon launch[cite: 1].
+        </p>
+
+        <p>
+          Our track record is independently verified across global platforms: a{" "}
+          <a
+            href="https://www.upwork.com/freelancers/~0170e20f8803389a86"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Verify QllmSoft 100% Job Success Score on Upwork"
+          >
+            100% Job Success Score on Upwork
+          </a>{" "}
+          and a{" "}
+          <a
+            href="https://www.freelancer.com/u/mrprogrmmr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View QllmSoft 5-star rating on Freelancer"
+          >
+            5-star rating on Freelancer
+          </a>{" "}
+          confirm our commitment to on-time delivery without scope creep[cite: 1].
+        </p>
+      </div>
+
+      {/* ── Right: Key Metrics Grid ── */}
+      <div className="company-info-stats" aria-label="QllmSoft performance metrics">
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="10 plus years of experience">10+</span>
+          <span className="ci-stat-label">Years of Experience</span>
+        </div>
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="50 plus enterprise projects delivered">50+</span>
+          <span className="ci-stat-label">Projects Delivered</span>
+        </div>
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="50 plus global clients served">50+</span>
+          <span className="ci-stat-label">Global Clients</span>
+        </div>
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="100 percent job success score on Upwork">100%</span>
+          <span className="ci-stat-label">Upwork Success</span>
+        </div>
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="5 star verified rating">5★</span>
+          <span className="ci-stat-label">Verified Rating</span>
+        </div>
+        <div className="ci-stat">
+          <span className="ci-stat-number" aria-label="47 plus client reviews">47+</span>
+          <span className="ci-stat-label">Client Reviews</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         {/* ── PROCESS ── */}
         <section className="section" aria-labelledby="process-heading">

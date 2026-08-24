@@ -88,43 +88,45 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import heroVideo from "../assets/corporate-office.mp4";
+
 import "./HeroSlider.css";
 
 const HeroSlider = () => {
   return (
     <section className="hero-video-wrapper">
-      {/* Background Video */}
+      {/* Background Video with Poster Fallback */}
       <video
         className="hero-video"
         autoPlay
         muted
         loop
         playsInline
-        preload="metadata"
-        
+        preload="auto"
+       
       >
         <source src={heroVideo} type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
 
-      {/* Overlay */}
+      {/* Dark Gradient Overlay */}
       <div className="hero-overlay"></div>
 
-      {/* Content */}
+      {/* Hero Content */}
       <div className="hero-content">
-  <h1 className="hero-title">
-    Custom Software Development and AI Integration for Businesses Worldwide
-  </h1>
+        <h1 className="hero-title">
+          Custom Software Development and AI Integration for Businesses Worldwide
+        </h1>
 
-  <p className="hero-subtitle">
-    QllmSoft builds secure, scalable enterprise web applications, internal
-    business systems, mobile apps, and AI-powered digital solutions for
-    growing businesses across four continents.
-  </p>
+        <p className="hero-subtitle">
+          QllmSoft builds secure, scalable enterprise web applications, internal
+          business systems, mobile apps, and AI-powered digital solutions for
+          growing businesses across four continents.
+        </p>
 
-  <Link to="/Services" className="hero-btn">
-    Explore Our Services
-  </Link>
-</div>
+        <Link to="/services" className="hero-btn" aria-label="Explore QllmSoft services">
+          Explore Our Services
+        </Link>
+      </div>
     </section>
   );
 };
